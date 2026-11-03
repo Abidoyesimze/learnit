@@ -74,13 +74,23 @@ Never commit `.env`. Only `.env.example` is tracked.
 ### Contracts
 
 ```bash
+git submodule update --init --recursive   # forge-std and OpenZeppelin
 cd contracts
-forge install            # OpenZeppelin
 forge build
 forge test
 ```
 
-Deploy scripts for Celo testnet (dev G$) and mainnet are in `contracts/script`. See the comments at the top of each script for the env vars it needs.
+Deploy (Celo testnet with dev G$, or mainnet with tiny caps):
+
+```bash
+export DEPLOYER_PRIVATE_KEY=... ADMIN=0x... GUARDIAN=0x... SIGNER=0x... UBI_ADDRESS=0x...
+forge script script/DeployTestnet.s.sol --rpc-url $CELO_TESTNET_RPC_URL --broadcast   # also needs DEV_IDENTITY
+forge script script/DeployMainnet.s.sol --rpc-url $CELO_RPC_URL --broadcast --verify
+```
+
+Then fund the pool (`approve` + `deposit`), call `createCohort(start, min, max)` as admin, and put the printed addresses in `.env`. `ADMIN` and `GUARDIAN` should be a Safe multisig on mainnet.
+
+Contract notes: `RewardsPool` pays EIP-712 vouchers with daily and weekly caps per whitelisted root and a global daily budget. `StreakVault` runs 7-day cohorts; the signer marks finishers and settles 70% of forfeits to finishers, 20% to the pool, 10% to the UBI address. G$ transfer fees are handled by recording the amount actually received.
 
 ## Contributing
 

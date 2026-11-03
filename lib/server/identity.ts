@@ -16,6 +16,7 @@ export async function readVerification(address: `0x${string}`): Promise<Verifica
     publicClient.readContract({ address: ADDR.identity, abi: identityAbi, functionName: "authenticationPeriod" }),
   ]);
   const hasRoot = root !== ZERO;
-  const verifiedUntil = last > 0n ? new Date(Number(last + period) * 1000) : null;
+  // authenticationPeriod is in days (same as the GoodDollar SDK).
+  const verifiedUntil = last > 0n ? new Date((Number(last) + Number(period) * 86400) * 1000) : null;
   return { verified: Boolean(whitelisted) && hasRoot, root: hasRoot ? root : null, verifiedUntil };
 }
