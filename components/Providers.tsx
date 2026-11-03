@@ -20,7 +20,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <PrivyProvider
       appId={appId}
       config={{
-        loginMethods: ["google", "wallet"],
+        loginMethods: ["email", "wallet"],
         appearance: { theme: "light", accentColor: "#FFD60A", walletList: ["detected_wallets", "wallet_connect"] },
         embeddedWallets: { ethereum: { createOnLogin: "users-without-wallets" } },
         defaultChain: celo,

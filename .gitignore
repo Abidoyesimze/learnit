@@ -11,3 +11,4 @@ contracts/broadcast
 .vercel
 dist
 .astro
+.neon

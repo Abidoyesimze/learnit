@@ -1,6 +1,6 @@
 // After a cohort ends: work out who finished all 7 days, mark them on-chain, then settle.
-//   npx tsx --env-file=.env scripts/finalize-cohort.ts <cohortId>          (dry run, prints the plan)
-//   npx tsx --env-file=.env scripts/finalize-cohort.ts <cohortId> --send   (sends markFinished + settle)
+//   npx tsx --env-file=.env scripts/finalize-cohort.mts <cohortId>          (dry run, prints the plan)
+//   npx tsx --env-file=.env scripts/finalize-cohort.mts <cohortId> --send   (sends markFinished + settle)
 // SIGNER_PRIVATE_KEY must hold the vault's SIGNER_ROLE.
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";

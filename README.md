@@ -97,7 +97,7 @@ Contract notes: `RewardsPool` pays EIP-712 vouchers with daily and weekly caps p
 
 ## Operations
 
-- **Finalise a stake cohort** after it ends: `npx tsx --env-file=.env scripts/finalize-cohort.ts <id>` prints who finished all 7 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
+- **Finalise a stake cohort** after it ends: `npx tsx --env-file=.env scripts/finalize-cohort.mts <id>` prints who finished all 7 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
 - **Known MVP limits:** lesson answers are checked one at a time for instant feedback, so a determined user could probe answers; the 80% and 90-second rules, per-lesson daily reward limit and the pool's caps bound the damage. The signer key lives in an env var; move it to a KMS before raising limits.
 
 ## Contributing

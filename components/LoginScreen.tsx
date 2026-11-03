@@ -1,6 +1,6 @@
 "use client";
 import { usePrivy } from "@privy-io/react-auth";
-import { GoogleLogo, Wallet } from "@phosphor-icons/react";
+import { EnvelopeSimple, Wallet } from "@phosphor-icons/react";
 
 export function LoginScreen() {
   const { login } = usePrivy();
@@ -16,10 +16,10 @@ export function LoginScreen() {
         <button onClick={() => login({ loginMethods: ["wallet"] })} className="flex w-full items-center justify-center gap-2 rounded-full border border-ink px-5 py-4 font-semibold transition active:scale-[0.98]">
           <Wallet size={20} weight="bold" /> Connect wallet
         </button>
-        <button onClick={() => login({ loginMethods: ["google"] })} className="flex w-full items-center justify-center gap-2 rounded-full bg-yellow px-5 py-4 font-semibold text-[#111] transition active:scale-[0.98]">
-          <GoogleLogo size={20} weight="bold" /> Continue with Google
+        <button onClick={() => login({ loginMethods: ["email"] })} className="flex w-full items-center justify-center gap-2 rounded-full bg-yellow px-5 py-4 font-semibold text-[#111] transition active:scale-[0.98]">
+          <EnvelopeSimple size={20} weight="bold" /> Continue with email
         </button>
-        <p className="pt-2 text-xs text-muted">Google sign-in creates a wallet for you. GoodDollar verification is tied to the wallet.</p>
+        <p className="pt-2 text-xs text-muted">Email sign-in creates a wallet for you. GoodDollar verification is tied to the wallet.</p>
       </div>
     </main>
   );
