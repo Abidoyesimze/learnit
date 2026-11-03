@@ -11,8 +11,10 @@ Learn French or Spanish in short daily lessons and earn small G$ rewards for rea
 3. **Verify** with GoodDollar face verification. Anyone can do lessons for free; only verified users can claim, earn or stake.
 4. **Claim your daily G$ UBI** on the home screen, then go straight to today's lesson.
 5. **Do a lesson** (10 to 12 exercises: multiple choice, translate by picking words, match pairs). Grading is server-side. Pass at 80% accuracy and 90 seconds or more.
-6. **Earn**: a pass returns a signed EIP-712 voucher you redeem on the `RewardsPool` contract (max 3 lessons a day, plus a first-time checkpoint pass).
+6. **Earn**: a pass returns a signed EIP-712 voucher you redeem on the `RewardsPool` contract (max 3 lessons a day, plus a first-time checkpoint pass). Suspicious patterns (boundary-timed perfect scores, inhuman pace) hold the reward for review instead of issuing it.
 7. **Stake** G$ on a 7-day streak challenge with `StreakVault`. Finishers get their stake back plus a share of forfeits.
+8. **Keep your streak**: miss a day and it resets, unless you've banked a freeze (earned automatically every 7-day milestone, capped at 2) to auto-cover one missed day.
+9. **League**: passing a lesson or checkpoint puts you in this week's ~30-person group. Points: 10 per distinct lesson passed, 30 per checkpoint. Top 3 in your group split a G$ bonus when the week ends.
 
 Full product spec: [`docs/LearnIt-PRD-v0.2.docx`](docs/LearnIt-PRD-v0.2.docx).
 
@@ -23,10 +25,10 @@ frontend/    Next.js 14 app (App Router, Tailwind, PWA). Pages, components, clie
              app/api/* are thin route files that re-export handlers from the backend.
 backend/     Server logic as a workspace package (@learnit/backend):
                src/handlers/   one file per API endpoint
-               src/             auth, grading, streaks, vouchers, cohorts, identity, Prisma client
+               src/             auth, grading, streaks, vouchers, cohorts, leagues, abuse checks, identity, Prisma client
                src/content/     lesson JSON and its typed schema (fr, es)
                prisma/          database schema
-               scripts/         content generator, cohort finaliser, Neon check
+               scripts/         content generator, cohort finaliser, league finaliser, Neon check
                tests/           vitest
 contracts/   Foundry project: RewardsPool, StreakVault, tests, deploy scripts
 docs/        PRD
@@ -90,11 +92,18 @@ If `db:push` fails with "Can't reach database server", the database is waking up
 | `GAS_TOPUP_CELO` | CELO sent per verified user, once (default 0.05) |
 | `LESSON_REWARD_G`, `CHECKPOINT_REWARD_G`, `DAILY_CAP_G` | Reward sizes in G$. Keep `DAILY_CAP_G` equal to the pool's `dailyCap` |
 | `VAULT_DEPLOY_BLOCK` | Block the `StreakVault` was deployed at (for reading Staked events) |
+| `LEAGUE_BONUS_1_G`, `LEAGUE_BONUS_2_G`, `LEAGUE_BONUS_3_G` | Weekly league bonus for rank 1, 2, 3 in a group (G$) |
+| `NEXT_PUBLIC_NETWORK` | `mainnet` (default) or `testnet` (Celo Alfajores) |
 | `NEXT_PUBLIC_CELO_RPC_URL` | Celo RPC endpoint |
 | `NEXT_PUBLIC_REWARDS_POOL_ADDRESS`, `NEXT_PUBLIC_STREAK_VAULT_ADDRESS` | Deployed contracts |
-| `NEXT_PUBLIC_GOODDOLLAR_TOKEN_ADDRESS`, `NEXT_PUBLIC_IDENTITY_ADDRESS` | G$ and GoodDollar Identity (defaults are Celo mainnet) |
+| `NEXT_PUBLIC_GOODDOLLAR_TOKEN_ADDRESS`, `NEXT_PUBLIC_IDENTITY_ADDRESS`, `NEXT_PUBLIC_UBI_SCHEME_ADDRESS` | G$, GoodDollar Identity and the UBI scheme (defaults are Celo mainnet; required with no default on testnet) |
+| `NEXT_PUBLIC_GOODDOLLAR_SDK_ENV` | citizen-sdk's `env` option. Defaults to `production` on mainnet, `staging` on testnet |
 
 Never commit `.env`. Only `.env.example` is tracked. Privy: enable **Email** login and add your local and production URLs as allowed origins.
+
+### Testnet
+
+Setting `NEXT_PUBLIC_NETWORK=testnet` switches the app to Celo Alfajores: `useGoodSdk`, wagmi/Privy's chain config, and all on-chain reads point at Alfajores, and `GOODDOLLAR_SDK_ENV` defaults to `staging` for citizen-sdk. This repo does not guess GoodDollar's dev contract addresses (they change), so on testnet you must set `NEXT_PUBLIC_IDENTITY_ADDRESS`, `NEXT_PUBLIC_GOODDOLLAR_TOKEN_ADDRESS` and `NEXT_PUBLIC_UBI_SCHEME_ADDRESS` yourself from [GoodDollar's docs](https://docs.gooddollar.org), and deploy `RewardsPool`/`StreakVault` with `DeployTestnet.s.sol`'s `DEV_IDENTITY`. If `staging` turns out not to match what your installed `@goodsdks/citizen-sdk` version expects, override it with `NEXT_PUBLIC_GOODDOLLAR_SDK_ENV`.
 
 ### Contracts
 
@@ -119,7 +128,9 @@ Then fund the pool (`approve` + `deposit`), call `createCohort(start, min, max)`
 ## Operations
 
 - **Finalise a stake cohort** after it ends: `npm run cohort:finalize -w @learnit/backend -- <id>` prints who finished all 7 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
-- **Known MVP limits:** lesson answers are checked one at a time for instant feedback, so a determined user could probe answers; the 80% and 90-second rules, the per-lesson daily reward limit and the pool's caps bound the damage. The signer key lives in an env var; move it to a KMS before raising limits.
+- **Finalise a league week** after it ends: `npm run league:finalize -w @learnit/backend -- <weekKey>` prints each group's top 3 (dry run); `weekKey` is the Monday the week started (e.g. `2026-10-27`), defaults to last week. Add `--send` to sign and record bonus vouchers.
+- **Review flagged accounts**: rows in `abuse_flags` (reason `boundary-timed-perfect-streak` or `high-velocity`) mark a reward that was withheld pending review; nothing is automated beyond withholding the voucher, so check `AbuseFlag`/`User.flagged` manually (e.g. via `db:studio`) before deciding whether to pay it out some other way.
+- **Known MVP limits:** lesson answers are checked one at a time for instant feedback, so a determined user could probe answers; the 80% and 90-second rules, the per-lesson daily reward limit, the anomaly checks and the pool's caps bound the damage. The signer key lives in an env var; move it to a KMS before raising limits.
 
 ## Contributing
 
@@ -143,4 +154,4 @@ Found a security issue in the contracts or voucher flow? Please do not open a pu
 
 ## License
 
-MIT (to be confirmed by the maintainer).
+[MIT](LICENSE)

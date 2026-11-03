@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home01Icon, BookOpen01Icon, Coins01Icon, LockIcon } from "hugeicons-react";
+import { Home01Icon, BookOpen01Icon, Coins01Icon, LockIcon, RankingIcon } from "hugeicons-react";
 
 const tabs = [
   { href: "/", label: "Home", Icon: Home01Icon },
   { href: "/learn", label: "Learn", Icon: BookOpen01Icon },
+  { href: "/league", label: "League", Icon: RankingIcon },
   { href: "/earn", label: "Earn", Icon: Coins01Icon },
   { href: "/stake", label: "Stake", Icon: LockIcon },
 ];
@@ -14,7 +15,7 @@ export function TabBar() {
   const path = usePathname();
   return (
     <nav className="fixed inset-x-0 bottom-0 border-t border-line bg-paper pb-[env(safe-area-inset-bottom)]" aria-label="Main">
-      <ul className="mx-auto grid max-w-md grid-cols-4">
+      <ul className="mx-auto grid max-w-md grid-cols-5">
         {tabs.map(({ href, label, Icon }) => {
           const on = href === "/" ? path === "/" : path.startsWith(href);
           return (

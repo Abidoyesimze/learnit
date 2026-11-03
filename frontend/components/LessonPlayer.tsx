@@ -11,7 +11,7 @@ type Loaded = { id: string; title: string; speechLang: string; token: string; ex
 type Pair = { target: string; english: string };
 type Ans = number | string[] | Pair[];
 type Feedback = { correct: boolean; answer: unknown };
-type Result = { passed: boolean; accuracy: number; durationS: number; minSeconds: number; tooFast: boolean; missedWordIds: string[]; streak: number; firstCheckpointPass: boolean; attemptId: string; voucher: { amount: string } | null };
+type Result = { passed: boolean; accuracy: number; durationS: number; minSeconds: number; tooFast: boolean; missedWordIds: string[]; streak: number; firstCheckpointPass: boolean; attemptId: string; voucher: { amount: string } | null; reviewPending: boolean };
 
 const isCheckpoint = (id: string) => id.endsWith("-cp");
 
@@ -179,6 +179,7 @@ function Results({ r, id }: { r: Result; id: string }) {
       </div>
       <div className="grid gap-3">
         {r.voucher && <Link href="/earn" className="rounded-card border border-ink p-4 text-center font-semibold">You earned {fmtGD(r.voucher.amount)} G$. Claim it</Link>}
+        {r.passed && !r.voucher && r.reviewPending && <p className="rounded-card border border-line p-4 text-center text-sm text-muted">Your reward is being reviewed. It will show up in Earn once that clears.</p>}
         <Link href="/learn" className="rounded-full bg-yellow px-5 py-4 text-center font-semibold text-[#111]">{r.passed ? "Continue" : "Back to lessons"}</Link>
       </div>
     </main>

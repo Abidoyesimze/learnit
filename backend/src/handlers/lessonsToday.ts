@@ -1,15 +1,15 @@
 import { requireUser, authFail } from "../auth";
 import { db } from "../db";
 import { streakFor } from "../attempts";
-import { UNITS } from "../lessons";
+import { currentUnitFor } from "../lessons";
 import type { Lang } from "../content/schema";
 
 export async function GET(req: Request) {
   try {
     const user = await requireUser(req);
-    const unit = UNITS[(user.course === "es" ? "es" : "fr") as Lang];
     const passed = await db.lessonAttempt.findMany({ where: { userId: user.id, passed: true }, select: { lessonId: true, kind: true } });
     const passedSet = new Set(passed.map((p) => p.lessonId));
+    const unit = currentUnitFor((user.course === "es" ? "es" : "fr") as Lang, passedSet);
     const next = unit.lessons.find((l) => !passedSet.has(l.id)) ?? null;
     const allLessons = unit.lessons.every((l) => passedSet.has(l.id));
     const lastFail = await db.lessonAttempt.findFirst({ where: { userId: user.id, lessonId: unit.checkpoint.id, passed: false }, orderBy: { createdAt: "desc" } });
@@ -20,7 +20,7 @@ export async function GET(req: Request) {
       lessons: unit.lessons.map((l) => ({ id: l.id, title: l.title, theme: l.theme, passed: passedSet.has(l.id), isNext: l.id === next?.id })),
       nextLessonId: next?.id ?? null,
       checkpoint: { id: unit.checkpoint.id, unlocked: allLessons, passed: passedSet.has(unit.checkpoint.id), cooldownUntil },
-      streak: st.streak, todayDone: st.todayDone,
+      streak: st.streak, todayDone: st.todayDone, freezesRemaining: st.freezesRemaining,
     });
   } catch (e) { return authFail(e); }
 }

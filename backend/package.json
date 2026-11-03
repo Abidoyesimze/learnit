@@ -14,7 +14,8 @@
     "db:push": "dotenv -e ../.env -- prisma db push",
     "db:studio": "dotenv -e ../.env -- prisma studio",
     "neon:check": "tsx --env-file=../.env scripts/neon-check.mts",
-    "cohort:finalize": "tsx --env-file=../.env scripts/finalize-cohort.mts"
+    "cohort:finalize": "tsx --env-file=../.env scripts/finalize-cohort.mts",
+    "league:finalize": "tsx --env-file=../.env scripts/finalize-league.mts"
   },
   "prisma": { "schema": "prisma/schema.prisma" },
   "dependencies": {

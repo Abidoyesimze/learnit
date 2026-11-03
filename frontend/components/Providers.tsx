@@ -3,11 +3,12 @@ import { PrivyProvider } from "@privy-io/react-auth";
 import { WagmiProvider, createConfig } from "@privy-io/wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { http } from "viem";
-import { celo } from "viem/chains";
 import { useEffect, useState } from "react";
-import { RPC_URL } from "@learnit/backend/chain";
+import { CHAIN, RPC_URL } from "@learnit/backend/chain";
 
-const wagmiConfig = createConfig({ chains: [celo], transports: { [celo.id]: http(RPC_URL) } });
+// CHAIN is one of two chains picked at runtime by env var, so its static type is a union; wagmi's
+// transports map type demands both branches' ids unless we tell it which one actually applies here.
+const wagmiConfig = createConfig({ chains: [CHAIN], transports: { [CHAIN.id]: http(RPC_URL) } as never });
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [qc] = useState(() => new QueryClient());
@@ -23,8 +24,8 @@ export function Providers({ children }: { children: React.ReactNode }) {
         loginMethods: ["email", "wallet"],
         appearance: { theme: "light", accentColor: "#FFD60A", walletList: ["detected_wallets", "wallet_connect"] },
         embeddedWallets: { ethereum: { createOnLogin: "users-without-wallets" } },
-        defaultChain: celo,
-        supportedChains: [celo],
+        defaultChain: CHAIN,
+        supportedChains: [CHAIN],
         externalWallets: {},
       }}
     >

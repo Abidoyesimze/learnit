@@ -2,7 +2,6 @@ import { parseAbi, parseEventLogs, erc20Abi } from "viem";
 import { publicClient } from "./identity";
 import { ADDR } from "./chain";
 
-export const UBI_SCHEME = "0x43d72Ff17701B2DA814620735C39C620Ce0ea4A1" as const;
 const ubiAbi = parseAbi([
   "function checkEntitlement(address _member) view returns (uint256)",
   "function periodStart() view returns (uint256)",
@@ -14,9 +13,9 @@ export type UbiStatus = { claimable: string; canClaim: boolean; nextClaimAt: num
 /** Entitlement is 0 once claimed today. Next claim = start of the next UBI day (same rule as the SDK's nextClaimTime). */
 export async function readUbiStatus(address: `0x${string}`): Promise<UbiStatus> {
   const [entitlement, periodStart, day] = await Promise.all([
-    publicClient.readContract({ address: UBI_SCHEME, abi: ubiAbi, functionName: "checkEntitlement", args: [address] }),
-    publicClient.readContract({ address: UBI_SCHEME, abi: ubiAbi, functionName: "periodStart" }),
-    publicClient.readContract({ address: UBI_SCHEME, abi: ubiAbi, functionName: "currentDay" }),
+    publicClient.readContract({ address: ADDR.ubiScheme, abi: ubiAbi, functionName: "checkEntitlement", args: [address] }),
+    publicClient.readContract({ address: ADDR.ubiScheme, abi: ubiAbi, functionName: "periodStart" }),
+    publicClient.readContract({ address: ADDR.ubiScheme, abi: ubiAbi, functionName: "currentDay" }),
   ]);
   const now = Math.floor(Date.now() / 1000);
   let next = Number(periodStart) + Number(day) * 86400;

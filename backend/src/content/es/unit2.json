@@ -1,0 +1,1978 @@
+{
+  "lang": "es",
+  "unit": 2,
+  "level": "A1",
+  "title": "Spanish, Unit 2",
+  "speechLang": "es-ES",
+  "lessons": [
+    {
+      "id": "es-u2-l1",
+      "title": "Family",
+      "theme": "family",
+      "exercises": [
+        {
+          "id": "es-u2-w1-te",
+          "type": "mc",
+          "prompt": "What does \"la familia\" mean?",
+          "speak": "la familia",
+          "options": [
+            "sister",
+            "son",
+            "family",
+            "child"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w1"
+        },
+        {
+          "id": "es-u2-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"mother\"?",
+          "options": [
+            "el niño",
+            "la hija",
+            "la madre",
+            "el hijo"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w2"
+        },
+        {
+          "id": "es-u2-w3-te",
+          "type": "mc",
+          "prompt": "What does \"el padre\" mean?",
+          "speak": "el padre",
+          "options": [
+            "father",
+            "child",
+            "mother",
+            "sister"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w3"
+        },
+        {
+          "id": "es-u2-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u2-w4",
+              "target": "el hermano",
+              "english": "brother"
+            },
+            {
+              "wordId": "es-u2-w8",
+              "target": "el niño",
+              "english": "child"
+            },
+            {
+              "wordId": "es-u2-w6",
+              "target": "el hijo",
+              "english": "son"
+            },
+            {
+              "wordId": "es-u2-w3",
+              "target": "el padre",
+              "english": "father"
+            }
+          ]
+        },
+        {
+          "id": "es-u2-l1-s1",
+          "type": "translate",
+          "prompt": "This is my family",
+          "answer": [
+            "Esta",
+            "es",
+            "mi",
+            "familia"
+          ],
+          "bank": [
+            "es",
+            "familia",
+            "padre",
+            "Esta",
+            "madre",
+            "mi"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"brother\"?",
+          "options": [
+            "la hija",
+            "el hermano",
+            "el padre",
+            "la madre"
+          ],
+          "answer": 1,
+          "wordId": "es-u2-w4"
+        },
+        {
+          "id": "es-u2-w5-te",
+          "type": "mc",
+          "prompt": "What does \"la hermana\" mean?",
+          "speak": "la hermana",
+          "options": [
+            "mother",
+            "daughter",
+            "sister",
+            "brother"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w5"
+        },
+        {
+          "id": "es-u2-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"son\"?",
+          "options": [
+            "el hijo",
+            "la madre",
+            "la hermana",
+            "el hermano"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w6"
+        },
+        {
+          "id": "es-u2-l1-s2",
+          "type": "translate",
+          "prompt": "My brother is tall",
+          "answer": [
+            "Mi",
+            "hermano",
+            "es",
+            "alto"
+          ],
+          "bank": [
+            "alto",
+            "hermana",
+            "Mi",
+            "es",
+            "hermano",
+            "bajo"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w7-te",
+          "type": "mc",
+          "prompt": "What does \"la hija\" mean?",
+          "speak": "la hija",
+          "options": [
+            "son",
+            "sister",
+            "daughter",
+            "father"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w7"
+        },
+        {
+          "id": "es-u2-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"child\"?",
+          "options": [
+            "la familia",
+            "el niño",
+            "el hijo",
+            "el padre"
+          ],
+          "answer": 1,
+          "wordId": "es-u2-w8"
+        },
+        {
+          "id": "es-u2-l1-s3",
+          "type": "translate",
+          "prompt": "I have two sisters",
+          "answer": [
+            "Tengo",
+            "dos",
+            "hermanas"
+          ],
+          "bank": [
+            "tres",
+            "hermanas",
+            "Tengo",
+            "hermanos",
+            "dos"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u2-l2",
+      "title": "Time and daily routine",
+      "theme": "time and daily routine",
+      "exercises": [
+        {
+          "id": "es-u2-w9-te",
+          "type": "mc",
+          "prompt": "What does \"hoy\" mean?",
+          "speak": "hoy",
+          "options": [
+            "today",
+            "tomorrow",
+            "to sleep",
+            "to wake up"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w9"
+        },
+        {
+          "id": "es-u2-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"tomorrow\"?",
+          "options": [
+            "dormir",
+            "siempre",
+            "mañana",
+            "despertarse"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w10"
+        },
+        {
+          "id": "es-u2-w11-te",
+          "type": "mc",
+          "prompt": "What does \"ayer\" mean?",
+          "speak": "ayer",
+          "options": [
+            "night",
+            "today",
+            "yesterday",
+            "to sleep"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w11"
+        },
+        {
+          "id": "es-u2-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u2-w12",
+              "target": "la mañana",
+              "english": "morning"
+            },
+            {
+              "wordId": "es-u2-w13",
+              "target": "la noche",
+              "english": "night"
+            },
+            {
+              "wordId": "es-u2-w9",
+              "target": "hoy",
+              "english": "today"
+            },
+            {
+              "wordId": "es-u2-w10",
+              "target": "mañana",
+              "english": "tomorrow"
+            }
+          ]
+        },
+        {
+          "id": "es-u2-l2-s1",
+          "type": "translate",
+          "prompt": "I wake up early",
+          "answer": [
+            "Me",
+            "despierto",
+            "temprano"
+          ],
+          "bank": [
+            "Me",
+            "temprano",
+            "dormir",
+            "tarde",
+            "despierto"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"morning\"?",
+          "options": [
+            "siempre",
+            "dormir",
+            "la mañana",
+            "despertarse"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w12"
+        },
+        {
+          "id": "es-u2-w13-te",
+          "type": "mc",
+          "prompt": "What does \"la noche\" mean?",
+          "speak": "la noche",
+          "options": [
+            "morning",
+            "today",
+            "to sleep",
+            "night"
+          ],
+          "answer": 3,
+          "wordId": "es-u2-w13"
+        },
+        {
+          "id": "es-u2-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"to wake up\"?",
+          "options": [
+            "ayer",
+            "siempre",
+            "despertarse",
+            "mañana"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w14"
+        },
+        {
+          "id": "es-u2-l2-s2",
+          "type": "translate",
+          "prompt": "See you tomorrow",
+          "answer": [
+            "Hasta",
+            "mañana"
+          ],
+          "bank": [
+            "ayer",
+            "siempre",
+            "Hasta",
+            "mañana"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w15-te",
+          "type": "mc",
+          "prompt": "What does \"dormir\" mean?",
+          "speak": "dormir",
+          "options": [
+            "to wake up",
+            "today",
+            "to sleep",
+            "night"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w15"
+        },
+        {
+          "id": "es-u2-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"always\"?",
+          "options": [
+            "hoy",
+            "mañana",
+            "la noche",
+            "siempre"
+          ],
+          "answer": 3,
+          "wordId": "es-u2-w16"
+        },
+        {
+          "id": "es-u2-l2-s3",
+          "type": "translate",
+          "prompt": "I sleep at night",
+          "answer": [
+            "Duermo",
+            "por",
+            "la",
+            "noche"
+          ],
+          "bank": [
+            "la",
+            "por",
+            "noche",
+            "Duermo",
+            "siempre",
+            "mañana"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u2-l3",
+      "title": "Travel and transport",
+      "theme": "travel and transport",
+      "exercises": [
+        {
+          "id": "es-u2-w17-te",
+          "type": "mc",
+          "prompt": "What does \"el aeropuerto\" mean?",
+          "speak": "el aeropuerto",
+          "options": [
+            "the train",
+            "to travel",
+            "the suitcase",
+            "the airport"
+          ],
+          "answer": 3,
+          "wordId": "es-u2-w17"
+        },
+        {
+          "id": "es-u2-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"the ticket\"?",
+          "options": [
+            "el boleto",
+            "el carro",
+            "la maleta",
+            "el pasaporte"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w18"
+        },
+        {
+          "id": "es-u2-w19-te",
+          "type": "mc",
+          "prompt": "What does \"el tren\" mean?",
+          "speak": "el tren",
+          "options": [
+            "to travel",
+            "the airport",
+            "the train",
+            "the passport"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w19"
+        },
+        {
+          "id": "es-u2-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u2-w17",
+              "target": "el aeropuerto",
+              "english": "the airport"
+            },
+            {
+              "wordId": "es-u2-w21",
+              "target": "el carro",
+              "english": "the car"
+            },
+            {
+              "wordId": "es-u2-w24",
+              "target": "el pasaporte",
+              "english": "the passport"
+            },
+            {
+              "wordId": "es-u2-w19",
+              "target": "el tren",
+              "english": "the train"
+            }
+          ]
+        },
+        {
+          "id": "es-u2-l3-s1",
+          "type": "translate",
+          "prompt": "I would like a ticket",
+          "answer": [
+            "Quiero",
+            "un",
+            "boleto"
+          ],
+          "bank": [
+            "maleta",
+            "boleto",
+            "un",
+            "pasaporte",
+            "Quiero"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"the bus\"?",
+          "options": [
+            "el autobús",
+            "el pasaporte",
+            "el carro",
+            "el aeropuerto"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w20"
+        },
+        {
+          "id": "es-u2-w21-te",
+          "type": "mc",
+          "prompt": "What does \"el carro\" mean?",
+          "speak": "el carro",
+          "options": [
+            "the suitcase",
+            "the train",
+            "the airport",
+            "the car"
+          ],
+          "answer": 3,
+          "wordId": "es-u2-w21"
+        },
+        {
+          "id": "es-u2-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"to travel\"?",
+          "options": [
+            "viajar",
+            "el aeropuerto",
+            "el pasaporte",
+            "el boleto"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w22"
+        },
+        {
+          "id": "es-u2-l3-s2",
+          "type": "translate",
+          "prompt": "Where is the airport",
+          "answer": [
+            "Dónde",
+            "está",
+            "el",
+            "aeropuerto"
+          ],
+          "bank": [
+            "Dónde",
+            "está",
+            "aeropuerto",
+            "el",
+            "estación",
+            "lejos"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w23-te",
+          "type": "mc",
+          "prompt": "What does \"la maleta\" mean?",
+          "speak": "la maleta",
+          "options": [
+            "the suitcase",
+            "the ticket",
+            "the train",
+            "the airport"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w23"
+        },
+        {
+          "id": "es-u2-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"the passport\"?",
+          "options": [
+            "el tren",
+            "el carro",
+            "el pasaporte",
+            "el aeropuerto"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w24"
+        },
+        {
+          "id": "es-u2-l3-s3",
+          "type": "translate",
+          "prompt": "I am traveling by train",
+          "answer": [
+            "Viajo",
+            "en",
+            "tren"
+          ],
+          "bank": [
+            "tren",
+            "Viajo",
+            "autobús",
+            "carro",
+            "en"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u2-l4",
+      "title": "Weather",
+      "theme": "weather",
+      "exercises": [
+        {
+          "id": "es-u2-w25-te",
+          "type": "mc",
+          "prompt": "What does \"el clima\" mean?",
+          "speak": "el clima",
+          "options": [
+            "rain",
+            "cloud",
+            "the weather",
+            "the storm"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w25"
+        },
+        {
+          "id": "es-u2-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"sun\"?",
+          "options": [
+            "el sol",
+            "el clima",
+            "la nube",
+            "el viento"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w26"
+        },
+        {
+          "id": "es-u2-w27-te",
+          "type": "mc",
+          "prompt": "What does \"la lluvia\" mean?",
+          "speak": "la lluvia",
+          "options": [
+            "wind",
+            "hot",
+            "rain",
+            "sun"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w27"
+        },
+        {
+          "id": "es-u2-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u2-w27",
+              "target": "la lluvia",
+              "english": "rain"
+            },
+            {
+              "wordId": "es-u2-w29",
+              "target": "frío",
+              "english": "cold"
+            },
+            {
+              "wordId": "es-u2-w26",
+              "target": "el sol",
+              "english": "sun"
+            },
+            {
+              "wordId": "es-u2-w31",
+              "target": "la nube",
+              "english": "cloud"
+            }
+          ]
+        },
+        {
+          "id": "es-u2-l4-s1",
+          "type": "translate",
+          "prompt": "It is hot today",
+          "answer": [
+            "Hace",
+            "calor",
+            "hoy"
+          ],
+          "bank": [
+            "hoy",
+            "Hace",
+            "frío",
+            "calor",
+            "mañana"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"hot\"?",
+          "options": [
+            "la nube",
+            "caluroso",
+            "el clima",
+            "la tormenta"
+          ],
+          "answer": 1,
+          "wordId": "es-u2-w28"
+        },
+        {
+          "id": "es-u2-w29-te",
+          "type": "mc",
+          "prompt": "What does \"frío\" mean?",
+          "speak": "frío",
+          "options": [
+            "sun",
+            "the weather",
+            "cold",
+            "rain"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w29"
+        },
+        {
+          "id": "es-u2-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"wind\"?",
+          "options": [
+            "el viento",
+            "el clima",
+            "la lluvia",
+            "la nube"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w30"
+        },
+        {
+          "id": "es-u2-l4-s2",
+          "type": "translate",
+          "prompt": "It is raining",
+          "answer": [
+            "Está",
+            "lloviendo"
+          ],
+          "bank": [
+            "viento",
+            "lloviendo",
+            "nieve",
+            "Está"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w31-te",
+          "type": "mc",
+          "prompt": "What does \"la nube\" mean?",
+          "speak": "la nube",
+          "options": [
+            "the weather",
+            "wind",
+            "cloud",
+            "the storm"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w31"
+        },
+        {
+          "id": "es-u2-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"the storm\"?",
+          "options": [
+            "frío",
+            "caluroso",
+            "la tormenta",
+            "el viento"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w32"
+        },
+        {
+          "id": "es-u2-l4-s3",
+          "type": "translate",
+          "prompt": "I like the sun",
+          "answer": [
+            "Me",
+            "gusta",
+            "el",
+            "sol"
+          ],
+          "bank": [
+            "nube",
+            "sol",
+            "lluvia",
+            "gusta",
+            "Me",
+            "el"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u2-l5",
+      "title": "Restaurant",
+      "theme": "restaurant",
+      "exercises": [
+        {
+          "id": "es-u2-w33-te",
+          "type": "mc",
+          "prompt": "What does \"el restaurante\" mean?",
+          "speak": "el restaurante",
+          "options": [
+            "the waiter",
+            "the restaurant",
+            "the table",
+            "the menu"
+          ],
+          "answer": 1,
+          "wordId": "es-u2-w33"
+        },
+        {
+          "id": "es-u2-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"the menu\"?",
+          "options": [
+            "delicioso",
+            "la cuenta",
+            "el menú",
+            "la mesa"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w34"
+        },
+        {
+          "id": "es-u2-w35-te",
+          "type": "mc",
+          "prompt": "What does \"la cuenta\" mean?",
+          "speak": "la cuenta",
+          "options": [
+            "the restaurant",
+            "the table",
+            "the menu",
+            "the bill"
+          ],
+          "answer": 3,
+          "wordId": "es-u2-w35"
+        },
+        {
+          "id": "es-u2-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u2-w34",
+              "target": "el menú",
+              "english": "the menu"
+            },
+            {
+              "wordId": "es-u2-w36",
+              "target": "pedir",
+              "english": "to order"
+            },
+            {
+              "wordId": "es-u2-w40",
+              "target": "el postre",
+              "english": "the dessert"
+            },
+            {
+              "wordId": "es-u2-w35",
+              "target": "la cuenta",
+              "english": "the bill"
+            }
+          ]
+        },
+        {
+          "id": "es-u2-l5-s1",
+          "type": "translate",
+          "prompt": "The bill please",
+          "answer": [
+            "La",
+            "cuenta",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "por",
+            "gracias",
+            "La",
+            "favor",
+            "cuenta",
+            "menú"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"to order\"?",
+          "options": [
+            "el mesero",
+            "pedir",
+            "la cuenta",
+            "el restaurante"
+          ],
+          "answer": 1,
+          "wordId": "es-u2-w36"
+        },
+        {
+          "id": "es-u2-w37-te",
+          "type": "mc",
+          "prompt": "What does \"delicioso\" mean?",
+          "speak": "delicioso",
+          "options": [
+            "to order",
+            "the waiter",
+            "the bill",
+            "delicious"
+          ],
+          "answer": 3,
+          "wordId": "es-u2-w37"
+        },
+        {
+          "id": "es-u2-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"the waiter\"?",
+          "options": [
+            "pedir",
+            "el mesero",
+            "la mesa",
+            "el postre"
+          ],
+          "answer": 1,
+          "wordId": "es-u2-w38"
+        },
+        {
+          "id": "es-u2-l5-s2",
+          "type": "translate",
+          "prompt": "I would like to order",
+          "answer": [
+            "Quiero",
+            "pedir"
+          ],
+          "bank": [
+            "comprar",
+            "pagar",
+            "Quiero",
+            "pedir"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u2-w39-te",
+          "type": "mc",
+          "prompt": "What does \"la mesa\" mean?",
+          "speak": "la mesa",
+          "options": [
+            "the restaurant",
+            "the bill",
+            "the table",
+            "the waiter"
+          ],
+          "answer": 2,
+          "wordId": "es-u2-w39"
+        },
+        {
+          "id": "es-u2-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"the dessert\"?",
+          "options": [
+            "el postre",
+            "delicioso",
+            "la cuenta",
+            "el mesero"
+          ],
+          "answer": 0,
+          "wordId": "es-u2-w40"
+        },
+        {
+          "id": "es-u2-l5-s3",
+          "type": "translate",
+          "prompt": "This is delicious",
+          "answer": [
+            "Esto",
+            "está",
+            "delicioso"
+          ],
+          "bank": [
+            "malo",
+            "está",
+            "Esto",
+            "bueno",
+            "delicioso"
+          ],
+          "wordIds": []
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "es-u2-cp",
+    "title": "Unit 2 checkpoint",
+    "pool": [
+      {
+        "id": "es-cp-es-u2-w1",
+        "type": "mc",
+        "prompt": "What does \"la familia\" mean?",
+        "speak": "la familia",
+        "options": [
+          "rain",
+          "the bus",
+          "morning",
+          "family"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w1"
+      },
+      {
+        "id": "es-cp-es-u2-w2",
+        "type": "mc",
+        "prompt": "How do you say \"mother\"?",
+        "options": [
+          "la madre",
+          "caluroso",
+          "el pasaporte",
+          "el menú"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w2"
+      },
+      {
+        "id": "es-cp-es-u2-w3",
+        "type": "mc",
+        "prompt": "What does \"el padre\" mean?",
+        "speak": "el padre",
+        "options": [
+          "always",
+          "son",
+          "cold",
+          "father"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w3"
+      },
+      {
+        "id": "es-cp-es-u2-w4",
+        "type": "mc",
+        "prompt": "How do you say \"brother\"?",
+        "options": [
+          "viajar",
+          "la tormenta",
+          "el pasaporte",
+          "el hermano"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w4"
+      },
+      {
+        "id": "es-cp-es-u2-w5",
+        "type": "mc",
+        "prompt": "What does \"la hermana\" mean?",
+        "speak": "la hermana",
+        "options": [
+          "to order",
+          "morning",
+          "the menu",
+          "sister"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w5"
+      },
+      {
+        "id": "es-cp-es-u2-w6",
+        "type": "mc",
+        "prompt": "How do you say \"son\"?",
+        "options": [
+          "el aeropuerto",
+          "la hermana",
+          "la hija",
+          "el hijo"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w6"
+      },
+      {
+        "id": "es-cp-es-u2-w7",
+        "type": "mc",
+        "prompt": "What does \"la hija\" mean?",
+        "speak": "la hija",
+        "options": [
+          "night",
+          "the weather",
+          "daughter",
+          "the ticket"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w7"
+      },
+      {
+        "id": "es-cp-es-u2-w8",
+        "type": "mc",
+        "prompt": "How do you say \"child\"?",
+        "options": [
+          "el hijo",
+          "mañana",
+          "la mañana",
+          "el niño"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w8"
+      },
+      {
+        "id": "es-cp-es-u2-w9",
+        "type": "mc",
+        "prompt": "What does \"hoy\" mean?",
+        "speak": "hoy",
+        "options": [
+          "sister",
+          "the dessert",
+          "the suitcase",
+          "today"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w9"
+      },
+      {
+        "id": "es-cp-es-u2-w10",
+        "type": "mc",
+        "prompt": "How do you say \"tomorrow\"?",
+        "options": [
+          "la maleta",
+          "mañana",
+          "el mesero",
+          "el restaurante"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w10"
+      },
+      {
+        "id": "es-cp-es-u2-w11",
+        "type": "mc",
+        "prompt": "What does \"ayer\" mean?",
+        "speak": "ayer",
+        "options": [
+          "yesterday",
+          "the restaurant",
+          "the storm",
+          "father"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w11"
+      },
+      {
+        "id": "es-cp-es-u2-w12",
+        "type": "mc",
+        "prompt": "How do you say \"morning\"?",
+        "options": [
+          "el niño",
+          "la mañana",
+          "la lluvia",
+          "la tormenta"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w12"
+      },
+      {
+        "id": "es-cp-es-u2-w13",
+        "type": "mc",
+        "prompt": "What does \"la noche\" mean?",
+        "speak": "la noche",
+        "options": [
+          "son",
+          "night",
+          "wind",
+          "the ticket"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w13"
+      },
+      {
+        "id": "es-cp-es-u2-w14",
+        "type": "mc",
+        "prompt": "How do you say \"to wake up\"?",
+        "options": [
+          "el mesero",
+          "el carro",
+          "despertarse",
+          "viajar"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w14"
+      },
+      {
+        "id": "es-cp-es-u2-w15",
+        "type": "mc",
+        "prompt": "What does \"dormir\" mean?",
+        "speak": "dormir",
+        "options": [
+          "the weather",
+          "today",
+          "to sleep",
+          "rain"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w15"
+      },
+      {
+        "id": "es-cp-es-u2-w16",
+        "type": "mc",
+        "prompt": "How do you say \"always\"?",
+        "options": [
+          "el niño",
+          "la maleta",
+          "siempre",
+          "el mesero"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w16"
+      },
+      {
+        "id": "es-cp-es-u2-w17",
+        "type": "mc",
+        "prompt": "What does \"el aeropuerto\" mean?",
+        "speak": "el aeropuerto",
+        "options": [
+          "the waiter",
+          "delicious",
+          "to sleep",
+          "the airport"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w17"
+      },
+      {
+        "id": "es-cp-es-u2-w18",
+        "type": "mc",
+        "prompt": "How do you say \"the ticket\"?",
+        "options": [
+          "el boleto",
+          "la noche",
+          "la cuenta",
+          "el viento"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w18"
+      },
+      {
+        "id": "es-cp-es-u2-w19",
+        "type": "mc",
+        "prompt": "What does \"el tren\" mean?",
+        "speak": "el tren",
+        "options": [
+          "the train",
+          "wind",
+          "the suitcase",
+          "the passport"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w19"
+      },
+      {
+        "id": "es-cp-es-u2-w20",
+        "type": "mc",
+        "prompt": "How do you say \"the bus\"?",
+        "options": [
+          "despertarse",
+          "la cuenta",
+          "el autobús",
+          "el postre"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w20"
+      },
+      {
+        "id": "es-cp-es-u2-w21",
+        "type": "mc",
+        "prompt": "What does \"el carro\" mean?",
+        "speak": "el carro",
+        "options": [
+          "the car",
+          "cold",
+          "son",
+          "cloud"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w21"
+      },
+      {
+        "id": "es-cp-es-u2-w22",
+        "type": "mc",
+        "prompt": "How do you say \"to travel\"?",
+        "options": [
+          "la mesa",
+          "el aeropuerto",
+          "dormir",
+          "viajar"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w22"
+      },
+      {
+        "id": "es-cp-es-u2-w23",
+        "type": "mc",
+        "prompt": "What does \"la maleta\" mean?",
+        "speak": "la maleta",
+        "options": [
+          "the bus",
+          "the table",
+          "the suitcase",
+          "night"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w23"
+      },
+      {
+        "id": "es-cp-es-u2-w24",
+        "type": "mc",
+        "prompt": "How do you say \"the passport\"?",
+        "options": [
+          "la lluvia",
+          "el boleto",
+          "la noche",
+          "el pasaporte"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w24"
+      },
+      {
+        "id": "es-cp-es-u2-w25",
+        "type": "mc",
+        "prompt": "What does \"el clima\" mean?",
+        "speak": "el clima",
+        "options": [
+          "the weather",
+          "the storm",
+          "delicious",
+          "hot"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w25"
+      },
+      {
+        "id": "es-cp-es-u2-w26",
+        "type": "mc",
+        "prompt": "How do you say \"sun\"?",
+        "options": [
+          "la maleta",
+          "el sol",
+          "frío",
+          "el mesero"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w26"
+      },
+      {
+        "id": "es-cp-es-u2-w27",
+        "type": "mc",
+        "prompt": "What does \"la lluvia\" mean?",
+        "speak": "la lluvia",
+        "options": [
+          "rain",
+          "to sleep",
+          "cloud",
+          "the airport"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w27"
+      },
+      {
+        "id": "es-cp-es-u2-w28",
+        "type": "mc",
+        "prompt": "How do you say \"hot\"?",
+        "options": [
+          "la tormenta",
+          "caluroso",
+          "hoy",
+          "el hermano"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w28"
+      },
+      {
+        "id": "es-cp-es-u2-w29",
+        "type": "mc",
+        "prompt": "What does \"frío\" mean?",
+        "speak": "frío",
+        "options": [
+          "cold",
+          "the bill",
+          "the weather",
+          "hot"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w29"
+      },
+      {
+        "id": "es-cp-es-u2-w30",
+        "type": "mc",
+        "prompt": "How do you say \"wind\"?",
+        "options": [
+          "el viento",
+          "la nube",
+          "despertarse",
+          "el tren"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w30"
+      },
+      {
+        "id": "es-cp-es-u2-w31",
+        "type": "mc",
+        "prompt": "What does \"la nube\" mean?",
+        "speak": "la nube",
+        "options": [
+          "cloud",
+          "to wake up",
+          "sun",
+          "the train"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w31"
+      },
+      {
+        "id": "es-cp-es-u2-w32",
+        "type": "mc",
+        "prompt": "How do you say \"the storm\"?",
+        "options": [
+          "el mesero",
+          "la tormenta",
+          "la noche",
+          "pedir"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w32"
+      },
+      {
+        "id": "es-cp-es-u2-w33",
+        "type": "mc",
+        "prompt": "What does \"el restaurante\" mean?",
+        "speak": "el restaurante",
+        "options": [
+          "the suitcase",
+          "cloud",
+          "morning",
+          "the restaurant"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w33"
+      },
+      {
+        "id": "es-cp-es-u2-w34",
+        "type": "mc",
+        "prompt": "How do you say \"the menu\"?",
+        "options": [
+          "el sol",
+          "el aeropuerto",
+          "el menú",
+          "el carro"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w34"
+      },
+      {
+        "id": "es-cp-es-u2-w35",
+        "type": "mc",
+        "prompt": "What does \"la cuenta\" mean?",
+        "speak": "la cuenta",
+        "options": [
+          "the waiter",
+          "cloud",
+          "daughter",
+          "the bill"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w35"
+      },
+      {
+        "id": "es-cp-es-u2-w36",
+        "type": "mc",
+        "prompt": "How do you say \"to order\"?",
+        "options": [
+          "el menú",
+          "la hermana",
+          "pedir",
+          "la noche"
+        ],
+        "answer": 2,
+        "wordId": "es-u2-w36"
+      },
+      {
+        "id": "es-cp-es-u2-w37",
+        "type": "mc",
+        "prompt": "What does \"delicioso\" mean?",
+        "speak": "delicioso",
+        "options": [
+          "cloud",
+          "delicious",
+          "hot",
+          "brother"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w37"
+      },
+      {
+        "id": "es-cp-es-u2-w38",
+        "type": "mc",
+        "prompt": "How do you say \"the waiter\"?",
+        "options": [
+          "el mesero",
+          "frío",
+          "el pasaporte",
+          "el postre"
+        ],
+        "answer": 0,
+        "wordId": "es-u2-w38"
+      },
+      {
+        "id": "es-cp-es-u2-w39",
+        "type": "mc",
+        "prompt": "What does \"la mesa\" mean?",
+        "speak": "la mesa",
+        "options": [
+          "tomorrow",
+          "the restaurant",
+          "mother",
+          "the table"
+        ],
+        "answer": 3,
+        "wordId": "es-u2-w39"
+      },
+      {
+        "id": "es-cp-es-u2-w40",
+        "type": "mc",
+        "prompt": "How do you say \"the dessert\"?",
+        "options": [
+          "despertarse",
+          "el postre",
+          "el mesero",
+          "el padre"
+        ],
+        "answer": 1,
+        "wordId": "es-u2-w40"
+      },
+      {
+        "id": "es-cp-u2-l1-s1",
+        "type": "translate",
+        "prompt": "This is my family",
+        "answer": [
+          "Esta",
+          "es",
+          "mi",
+          "familia"
+        ],
+        "bank": [
+          "Esta",
+          "familia",
+          "padre",
+          "mi",
+          "es",
+          "madre"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l1-s2",
+        "type": "translate",
+        "prompt": "My brother is tall",
+        "answer": [
+          "Mi",
+          "hermano",
+          "es",
+          "alto"
+        ],
+        "bank": [
+          "alto",
+          "hermana",
+          "bajo",
+          "hermano",
+          "Mi",
+          "es"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l1-s3",
+        "type": "translate",
+        "prompt": "I have two sisters",
+        "answer": [
+          "Tengo",
+          "dos",
+          "hermanas"
+        ],
+        "bank": [
+          "Tengo",
+          "hermanas",
+          "hermanos",
+          "tres",
+          "dos"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l2-s1",
+        "type": "translate",
+        "prompt": "I wake up early",
+        "answer": [
+          "Me",
+          "despierto",
+          "temprano"
+        ],
+        "bank": [
+          "temprano",
+          "Me",
+          "despierto",
+          "dormir",
+          "tarde"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l2-s2",
+        "type": "translate",
+        "prompt": "See you tomorrow",
+        "answer": [
+          "Hasta",
+          "mañana"
+        ],
+        "bank": [
+          "Hasta",
+          "ayer",
+          "mañana",
+          "siempre"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l2-s3",
+        "type": "translate",
+        "prompt": "I sleep at night",
+        "answer": [
+          "Duermo",
+          "por",
+          "la",
+          "noche"
+        ],
+        "bank": [
+          "mañana",
+          "por",
+          "la",
+          "noche",
+          "Duermo",
+          "siempre"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l3-s1",
+        "type": "translate",
+        "prompt": "I would like a ticket",
+        "answer": [
+          "Quiero",
+          "un",
+          "boleto"
+        ],
+        "bank": [
+          "maleta",
+          "Quiero",
+          "boleto",
+          "un",
+          "pasaporte"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l3-s2",
+        "type": "translate",
+        "prompt": "Where is the airport",
+        "answer": [
+          "Dónde",
+          "está",
+          "el",
+          "aeropuerto"
+        ],
+        "bank": [
+          "estación",
+          "Dónde",
+          "aeropuerto",
+          "está",
+          "el",
+          "lejos"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l3-s3",
+        "type": "translate",
+        "prompt": "I am traveling by train",
+        "answer": [
+          "Viajo",
+          "en",
+          "tren"
+        ],
+        "bank": [
+          "autobús",
+          "tren",
+          "Viajo",
+          "en",
+          "carro"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l4-s1",
+        "type": "translate",
+        "prompt": "It is hot today",
+        "answer": [
+          "Hace",
+          "calor",
+          "hoy"
+        ],
+        "bank": [
+          "calor",
+          "Hace",
+          "hoy",
+          "mañana",
+          "frío"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l4-s2",
+        "type": "translate",
+        "prompt": "It is raining",
+        "answer": [
+          "Está",
+          "lloviendo"
+        ],
+        "bank": [
+          "nieve",
+          "Está",
+          "lloviendo",
+          "viento"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l4-s3",
+        "type": "translate",
+        "prompt": "I like the sun",
+        "answer": [
+          "Me",
+          "gusta",
+          "el",
+          "sol"
+        ],
+        "bank": [
+          "Me",
+          "nube",
+          "el",
+          "lluvia",
+          "gusta",
+          "sol"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l5-s1",
+        "type": "translate",
+        "prompt": "The bill please",
+        "answer": [
+          "La",
+          "cuenta",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "La",
+          "favor",
+          "cuenta",
+          "por",
+          "gracias",
+          "menú"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l5-s2",
+        "type": "translate",
+        "prompt": "I would like to order",
+        "answer": [
+          "Quiero",
+          "pedir"
+        ],
+        "bank": [
+          "comprar",
+          "pedir",
+          "Quiero",
+          "pagar"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-l5-s3",
+        "type": "translate",
+        "prompt": "This is delicious",
+        "answer": [
+          "Esto",
+          "está",
+          "delicioso"
+        ],
+        "bank": [
+          "delicioso",
+          "está",
+          "Esto",
+          "bueno",
+          "malo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u2-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u2-w3",
+            "target": "el padre",
+            "english": "father"
+          },
+          {
+            "wordId": "es-u2-w8",
+            "target": "el niño",
+            "english": "child"
+          },
+          {
+            "wordId": "es-u2-w7",
+            "target": "la hija",
+            "english": "daughter"
+          },
+          {
+            "wordId": "es-u2-w2",
+            "target": "la madre",
+            "english": "mother"
+          },
+          {
+            "wordId": "es-u2-w1",
+            "target": "la familia",
+            "english": "family"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u2-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u2-w9",
+            "target": "hoy",
+            "english": "today"
+          },
+          {
+            "wordId": "es-u2-w13",
+            "target": "la noche",
+            "english": "night"
+          },
+          {
+            "wordId": "es-u2-w15",
+            "target": "dormir",
+            "english": "to sleep"
+          },
+          {
+            "wordId": "es-u2-w12",
+            "target": "la mañana",
+            "english": "morning"
+          },
+          {
+            "wordId": "es-u2-w11",
+            "target": "ayer",
+            "english": "yesterday"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u2-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u2-w19",
+            "target": "el tren",
+            "english": "the train"
+          },
+          {
+            "wordId": "es-u2-w20",
+            "target": "el autobús",
+            "english": "the bus"
+          },
+          {
+            "wordId": "es-u2-w23",
+            "target": "la maleta",
+            "english": "the suitcase"
+          },
+          {
+            "wordId": "es-u2-w18",
+            "target": "el boleto",
+            "english": "the ticket"
+          },
+          {
+            "wordId": "es-u2-w21",
+            "target": "el carro",
+            "english": "the car"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u2-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u2-w29",
+            "target": "frío",
+            "english": "cold"
+          },
+          {
+            "wordId": "es-u2-w32",
+            "target": "la tormenta",
+            "english": "the storm"
+          },
+          {
+            "wordId": "es-u2-w27",
+            "target": "la lluvia",
+            "english": "rain"
+          },
+          {
+            "wordId": "es-u2-w25",
+            "target": "el clima",
+            "english": "the weather"
+          },
+          {
+            "wordId": "es-u2-w30",
+            "target": "el viento",
+            "english": "wind"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u2-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u2-w33",
+            "target": "el restaurante",
+            "english": "the restaurant"
+          },
+          {
+            "wordId": "es-u2-w38",
+            "target": "el mesero",
+            "english": "the waiter"
+          },
+          {
+            "wordId": "es-u2-w35",
+            "target": "la cuenta",
+            "english": "the bill"
+          },
+          {
+            "wordId": "es-u2-w39",
+            "target": "la mesa",
+            "english": "the table"
+          },
+          {
+            "wordId": "es-u2-w37",
+            "target": "delicioso",
+            "english": "delicious"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}
