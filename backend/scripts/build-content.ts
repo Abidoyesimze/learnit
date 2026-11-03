@@ -1,0 +1,55 @@
+// Generates src/content/{fr,es}/unit1.json from scripts/vocab.ts. Run from the repo root: npm run content
+import { writeFileSync } from "node:fs";
+import { FR, ES, type LessonData } from "./vocab";
+import { UnitSchema, type Exercise, type Lang } from "../src/content/schema";
+
+function rng(seed: number) { let s = seed >>> 0; return () => ((s = (s * 1664525 + 1013904223) >>> 0) / 2 ** 32); }
+function shuffle<T>(a: T[], r: () => number) { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
+
+function build(lang: Lang, data: LessonData[]) {
+  const r = rng(lang === "fr" ? 11 : 29);
+  const all = data.flatMap((l, li) => l.words.map((w, wi) => ({ id: `${lang}-w${li * 8 + wi + 1}`, t: w[0], e: w[1], li })));
+  const speechLang = lang === "fr" ? "fr-FR" : "es-ES";
+
+  const mc = (w: (typeof all)[number], idx: number, pool: typeof all): Exercise => {
+    const toEnglish = idx % 2 === 0;
+    const others = shuffle(pool.filter((p) => p.id !== w.id), r).slice(0, 3);
+    const opts = shuffle([w, ...others], r);
+    return {
+      id: `${w.id}-${toEnglish ? "te" : "et"}`, type: "mc", wordId: w.id,
+      prompt: toEnglish ? `What does "${w.t}" mean?` : `How do you say "${w.e}"?`,
+      speak: toEnglish ? w.t : undefined,
+      options: opts.map((o) => (toEnglish ? o.e : o.t)),
+      answer: opts.findIndex((o) => o.id === w.id),
+    };
+  };
+  const tr = (li: number, si: number): Exercise => {
+    const s = data[li].sentences[si];
+    return { id: `${lang}-l${li + 1}-s${si + 1}`, type: "translate", prompt: s.english, answer: s.target,
+      bank: shuffle([...s.target, ...s.extra], r), wordIds: [] };
+  };
+  const match = (id: string, ws: typeof all): Exercise => ({ id, type: "match", prompt: "Match the pairs",
+    pairs: ws.map((w) => ({ wordId: w.id, target: w.t, english: w.e })) });
+
+  const lessons = data.map((l, li) => {
+    const ws = all.filter((w) => w.li === li);
+    const m = (i: number) => mc(ws[i], i, ws);
+    const exercises: Exercise[] = [m(0), m(1), m(2), match(`${lang}-l${li + 1}-m`, shuffle(ws, r).slice(0, 4)), tr(li, 0), m(3), m(4), m(5), tr(li, 1), m(6), m(7), tr(li, 2)];
+    return { id: `${lang}-u1-l${li + 1}`, title: l.title, theme: l.theme, exercises };
+  });
+
+  const pool: Exercise[] = [
+    ...all.map((w, i) => ({ ...mc(w, i, all), id: `${lang}-cp-${w.id}` })),
+    ...data.flatMap((_, li) => [0, 1, 2].map((si) => ({ ...tr(li, si), id: `${lang}-cp-l${li + 1}-s${si + 1}` }))),
+    ...data.map((_, li) => match(`${lang}-cp-m${li + 1}`, shuffle(all.filter((w) => w.li === li), r).slice(0, 5))),
+  ];
+  const unit = { lang, unit: 1, level: "A1" as const, title: lang === "fr" ? "French, Unit 1" : "Spanish, Unit 1", speechLang, lessons,
+    checkpoint: { id: `${lang}-u1-cp`, title: "Unit 1 checkpoint", pool, draw: 20 } };
+  return UnitSchema.parse(unit);
+}
+
+for (const [lang, data] of [["fr", FR], ["es", ES]] as const) {
+  const u = build(lang, data);
+  writeFileSync(`src/content/${lang}/unit1.json`, JSON.stringify(u, null, 2) + "\n");
+  console.log(lang, "lessons", u.lessons.length, "pool", u.checkpoint.pool.length);
+}

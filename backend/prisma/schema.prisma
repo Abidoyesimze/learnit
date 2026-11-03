@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")          // pooled (PgBouncer), for app traffic
+  directUrl = env("DATABASE_URL_UNPOOLED") // direct, for db push / migrations
+}
+
+model User {
+  id              String   @id @default(cuid())
+  privyUserId     String   @unique
+  wallet          String   @unique
+  whitelistedRoot String?
+  verifiedUntil   DateTime?
+  gasTopupTx      String?
+  timezone        String   @default("UTC")
+  course          String   @default("fr")
+  onboardedAt     DateTime?
+  createdAt       DateTime @default(now())
+
+  ubiClaims       UbiClaim[]
+  attempts        LessonAttempt[]
+  streakDays      StreakDay[]
+  stakes          Stake[]
+
+  @@map("users")
+}
+
+model UbiClaim {
+  id        String   @id @default(cuid())
+  userId    String
+  txHash    String   @unique
+  amount    String
+  claimedAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@index([userId, claimedAt])
+  @@map("ubi_claims")
+}
+
+model LessonAttempt {
+  id         String   @id @default(cuid())
+  userId     String
+  lessonId   String
+  kind       String   @default("lesson") // lesson | checkpoint
+  score      Float
+  durationS  Int
+  passed     Boolean
+  localDate  String   // YYYY-MM-DD in the user's timezone
+  startKey   String?  @unique // userId:targetId:startedAt, blocks replaying one start token
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id])
+
+  @@index([userId, localDate])
+  @@map("lesson_attempts")
+}
+
+model StreakDay {
+  id      String @id @default(cuid())
+  userId  String
+  date    String // YYYY-MM-DD in the user's timezone
+  user    User   @relation(fields: [userId], references: [id])
+
+  @@unique([userId, date])
+  @@map("streak_days")
+}
+
+model Voucher {
+  id        String   @id @default(cuid())
+  root      String
+  amount    String   // wei, as a decimal string
+  nonce     String   @unique
+  expiry    Int      // unix seconds
+  reason    String   // lesson | checkpoint
+  sourceId  String   @unique // attempt id that earned it
+  signature String
+  status    String   @default("issued") // issued | claimed | expired
+  createdAt DateTime @default(now())
+
+  @@index([root, status])
+  @@map("vouchers")
+}
+
+model Cohort {
+  id        Int      @id // matches the on-chain cohortId
+  lengthDays Int     @default(7)
+  startAt   DateTime
+  endAt     DateTime
+  minStake  String
+  maxStake  String
+  status    String   @default("open") // open | running | ended | settled
+  stakes    Stake[]
+
+  @@map("cohorts")
+}
+
+model Stake {
+  id             String  @id @default(cuid())
+  cohortId       Int
+  userId         String
+  amountReceived String
+  txHash         String?
+  finished       Boolean @default(false)
+  withdrawn      Boolean @default(false)
+  cohort         Cohort  @relation(fields: [cohortId], references: [id])
+  user           User    @relation(fields: [userId], references: [id])
+
+  @@unique([cohortId, userId])
+  @@map("stakes")
+}

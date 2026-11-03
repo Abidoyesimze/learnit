@@ -1,0 +1,37 @@
+{
+  "name": "@learnit/frontend",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run prisma:generate -w @learnit/backend && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@goodsdks/citizen-sdk": "^1.2.7",
+    "@learnit/backend": "*",
+    "@privy-io/react-auth": "^3.51.0",
+    "@privy-io/wagmi": "^4.0.19",
+    "@tanstack/react-query": "^5.0.0",
+    "flag-icons": "^7.0.0",
+    "geist": "^1.9.0",
+    "hugeicons-react": "latest",
+    "motion": "^12.0.0",
+    "next": "14.2.35",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "viem": "2.57.5",
+    "wagmi": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5"
+  }
+}
