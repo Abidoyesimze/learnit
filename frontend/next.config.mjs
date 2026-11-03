@@ -10,7 +10,7 @@ nextEnv.loadEnvConfig(root, process.env.NODE_ENV !== "production", console, true
 const nextConfig = {
   reactStrictMode: true,
   transpilePackages: ["@learnit/backend"],
-  outputFileTracingRoot: root,
+  experimental: { outputFileTracingRoot: root },
   webpack: (config) => {
     config.resolve.fallback = { ...config.resolve.fallback, fs: false, net: false, tls: false };
     config.externals.push("pino-pretty", "lokijs", "encoding");
