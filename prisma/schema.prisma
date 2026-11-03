@@ -47,6 +47,7 @@ model LessonAttempt {
   durationS  Int
   passed     Boolean
   localDate  String   // YYYY-MM-DD in the user's timezone
+  startKey   String?  @unique // userId:targetId:startedAt, blocks replaying one start token
   createdAt  DateTime @default(now())
   user       User     @relation(fields: [userId], references: [id])
 

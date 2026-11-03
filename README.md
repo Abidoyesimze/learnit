@@ -60,6 +60,7 @@ npm run dev              # http://localhost:3000
 | `DATABASE_URL` | Postgres connection string |
 | `NEXT_PUBLIC_PRIVY_APP_ID` | Privy app id (public) |
 | `PRIVY_APP_SECRET` | Privy app secret (server only) |
+| `APP_SECRET` | Random string used to sign lesson start tokens (falls back to the signer key) |
 | `SIGNER_PRIVATE_KEY` | Key that signs reward vouchers and marks finishers. Server only. Never commit it |
 | `GASDROP_PRIVATE_KEY` | Funded wallet that sends the one-time CELO top-up. Tiny balance only |
 | `NEXT_PUBLIC_CELO_RPC_URL` | Celo RPC endpoint |

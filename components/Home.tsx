@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
+import { useEffect } from "react";
 import { usePrivy } from "@privy-io/react-auth";
+import { useApi } from "@/lib/useApi";
 import { useMe } from "@/lib/useMe";
 import { short } from "@/lib/format";
 import { VerifyCard } from "./VerifyCard";
@@ -9,6 +11,12 @@ import { ClaimCard } from "./ClaimCard";
 export function Home() {
   const { logout } = usePrivy();
   const { data: me, isLoading, error } = useMe();
+  const api = useApi();
+  useEffect(() => {
+    // Streak days follow the learner's own timezone.
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (me && tz && me.timezone !== tz) api("/api/me", { method: "PATCH", body: JSON.stringify({ timezone: tz }) }).catch(() => {});
+  }, [me, api]);
   return (
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <header className="mb-6 flex items-center justify-between">
