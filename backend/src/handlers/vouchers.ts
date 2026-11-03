@@ -1,5 +1,5 @@
 import { requireUser, authFail } from "../auth";
-import { readVerification } from "../identity";
+import { readVerificationCached as readVerification } from "../identity";
 import { refreshVouchers, earnedTodayUtc, rewardConfig, publicVoucher } from "../vouchers";
 
 export async function GET(req: Request) {

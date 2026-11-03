@@ -1,6 +1,8 @@
 import { PrivyClient } from "@privy-io/server-auth";
 import { getAddress } from "viem";
-import { db } from "./db";
+import { db, userCache } from "./db";
+
+const USER_TTL_MS = 20_000;
 
 let _privy: PrivyClient | null = null;
 function privy() {
@@ -24,8 +26,10 @@ export async function requireUser(req: Request) {
   } catch {
     throw new AuthError("Invalid token");
   }
+  const hit = userCache.get(userId);
+  if (hit && Date.now() - hit.at < USER_TTL_MS) return hit.user;
   const existing = await db.user.findUnique({ where: { privyUserId: userId } });
-  if (existing) return existing;
+  if (existing) { userCache.set(userId, { at: Date.now(), user: existing }); return existing; }
   const pu = await privy().getUser(userId);
   const wallet = pu.wallet?.address ?? pu.linkedAccounts.find((a) => a.type === "wallet")?.address;
   if (!wallet) throw new AuthError("No wallet linked");

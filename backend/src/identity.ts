@@ -7,6 +7,17 @@ const ZERO = "0x0000000000000000000000000000000000000000";
 
 export type Verification = { verified: boolean; root: `0x${string}` | null; verifiedUntil: Date | null };
 
+const vCache = new Map<string, { at: number; v: Verification }>();
+
+/** Verified results are cached for 60s (4 RPC reads each). Negatives are never cached so a fresh face check shows up at once. */
+export async function readVerificationCached(address: `0x${string}`): Promise<Verification> {
+  const hit = vCache.get(address);
+  if (hit && Date.now() - hit.at < 60_000) return hit.v;
+  const v = await readVerification(address);
+  if (v.verified) vCache.set(address, { at: Date.now(), v });
+  return v;
+}
+
 /** Reads GoodDollar Identity on Celo: whitelisted root and the expiry (lastAuthenticated + authenticationPeriod). */
 export async function readVerification(address: `0x${string}`): Promise<Verification> {
   const [whitelisted, root, last, period] = await Promise.all([

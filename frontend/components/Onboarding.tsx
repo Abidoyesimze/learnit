@@ -1,14 +1,10 @@
 "use client";
 import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { ArrowRight01Icon, Coins01Icon, BookOpen01Icon, Loading03Icon, LockIcon, Tick02Icon } from "hugeicons-react";
+import { ArrowRight01Icon, Coins01Icon, BookOpen01Icon, Loading03Icon, LockIcon } from "hugeicons-react";
 import { useApi } from "@/lib/useApi";
-
-type Course = "fr" | "es";
-const LANGS: { code: Course; flag: string; name: string; native: string }[] = [
-  { code: "fr", flag: "fi-fr", name: "French", native: "Français" },
-  { code: "es", flag: "fi-es", name: "Spanish", native: "Español" },
-];
+import { LanguageCards } from "./LanguageCards";
+import type { Course } from "@/lib/languages";
 
 const HOW: { Icon: typeof Coins01Icon; title: string; body: string }[] = [
   { Icon: Coins01Icon, title: "Claim your daily G$", body: "Verified GoodDollar users claim their UBI here, then start a lesson." },
@@ -46,21 +42,7 @@ export function Onboarding() {
           <div className="mt-10 flex-1">
             <h1 className="text-4xl font-bold leading-[1.05] tracking-tighter">What do you want to learn?</h1>
             <p className="mt-3 max-w-[34ch] text-muted">Pick one to start. You can switch any time.</p>
-            <div role="radiogroup" aria-label="Language" className="mt-8 grid gap-3">
-              {LANGS.map((l) => {
-                const on = course === l.code;
-                return (
-                  <button key={l.code} role="radio" aria-checked={on} onClick={() => setCourse(l.code)}
-                    className={`flex items-center gap-4 rounded-card border p-4 text-left transition active:scale-[0.99] ${on ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>
-                    <span className={`fi ${l.flag} !h-12 !w-16 shrink-0 rounded-md border border-black/10 bg-cover`} aria-hidden />
-                    <span className="flex-1">
-                      <span lang={l.code} className="block text-2xl font-bold tracking-tight">{l.native}</span>
-                    </span>
-                    {on && <Tick02Icon size={22} strokeWidth={2} />}
-                  </button>
-                );
-              })}
-            </div>
+            <div className="mt-8"><LanguageCards value={course} onSelect={setCourse} /></div>
           </div>
           <button onClick={() => setStep(1)} disabled={!course} className="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 font-semibold text-paper transition active:scale-[0.98] disabled:opacity-30">
             Continue <ArrowRight01Icon size={20} strokeWidth={1.75} />

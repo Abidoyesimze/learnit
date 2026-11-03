@@ -1,15 +1,15 @@
 import { db } from "../db";
 import { requireUser, authFail } from "../auth";
-import { readVerification } from "../identity";
+import { readVerificationCached as readVerification } from "../identity";
 
 export async function GET(req: Request) {
   try {
     const user = await requireUser(req);
     const v = await readVerification(user.wallet as `0x${string}`);
-    const updated = await db.user.update({
-      where: { id: user.id },
-      data: { whitelistedRoot: v.root, verifiedUntil: v.verifiedUntil },
-    });
+    const changed = user.whitelistedRoot !== v.root || (user.verifiedUntil?.getTime() ?? null) !== (v.verifiedUntil?.getTime() ?? null);
+    const updated = changed
+      ? await db.user.update({ where: { id: user.id }, data: { whitelistedRoot: v.root, verifiedUntil: v.verifiedUntil } })
+      : user;
     return Response.json({
       wallet: updated.wallet,
       verified: v.verified && (!v.verifiedUntil || v.verifiedUntil > new Date()),

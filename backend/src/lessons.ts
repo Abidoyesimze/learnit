@@ -50,7 +50,7 @@ export function seededDraw<T>(pool: T[], seed: number, n: number): T[] {
 export type PublicExercise =
   | { id: string; type: "mc"; prompt: string; speak?: string; options: string[] }
   | { id: string; type: "translate"; prompt: string; bank: string[] }
-  | { id: string; type: "match"; prompt: string; left: string[]; right: string[] };
+  | { id: string; type: "match"; prompt: string; left: string[]; right: string[]; pairs: { target: string; english: string }[] };
 
 /** Removes answers before sending to the client. Match right column is reshuffled by a seed. */
 export function toPublic(ex: Exercise, seed = 1): PublicExercise {
@@ -58,5 +58,6 @@ export function toPublic(ex: Exercise, seed = 1): PublicExercise {
   if (ex.type === "translate") return { id: ex.id, type: "translate", prompt: ex.prompt, bank: ex.bank };
   const left = ex.pairs.map((p) => p.target);
   const right = seededDraw(ex.pairs.map((p) => p.english), seed + ex.id.length, ex.pairs.length);
-  return { id: ex.id, type: "match", prompt: ex.prompt, left, right };
+  // Match is checked on the device for instant feedback; the final grade is still computed on the server from what is submitted.
+  return { id: ex.id, type: "match", prompt: ex.prompt, left, right, pairs: ex.pairs.map((p) => ({ target: p.target, english: p.english })) };
 }

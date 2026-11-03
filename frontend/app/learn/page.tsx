@@ -3,10 +3,11 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePrivy } from "@privy-io/react-auth";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { Tick02Icon, LockIcon, FireIcon, SnowIcon } from "hugeicons-react";
 import { useApi } from "@/lib/useApi";
 import { TabBar } from "@/components/TabBar";
+import { LanguageChip } from "@/components/LanguageChip";
 
 type Today = { course: "fr" | "es"; unitTitle: string; lessons: { id: string; title: string; theme: string; passed: boolean; isNext: boolean }[]; nextLessonId: string | null; checkpoint: { id: string; unlocked: boolean; passed: boolean; cooldownUntil: string | null }; streak: number; todayDone: boolean; freezesRemaining: number };
 
@@ -14,24 +15,17 @@ export default function Learn() {
   const { ready, authenticated } = usePrivy();
   const router = useRouter();
   const api = useApi();
-  const qc = useQueryClient();
   useEffect(() => { if (ready && !authenticated) router.replace("/"); }, [ready, authenticated, router]);
   const { data } = useQuery({ queryKey: ["today"], queryFn: () => api<Today>("/api/lessons/today"), enabled: ready && authenticated });
-  async function setCourse(course: "fr" | "es") { await api("/api/me", { method: "PATCH", body: JSON.stringify({ course }) }); await qc.invalidateQueries({ queryKey: ["today"] }); await qc.invalidateQueries({ queryKey: ["me"] }); }
   return (
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <header className="mb-6 flex items-center justify-between">
-        <Link href="/" className="text-lg font-bold tracking-tight">LearnIt</Link>
+        <LanguageChip />
         <span className="flex items-center gap-3 font-mono text-sm">
           {!!data?.freezesRemaining && <span className="flex items-center gap-1" title="Streak freezes"><SnowIcon size={16} strokeWidth={1.75} /> {data.freezesRemaining}</span>}
           <span className="flex items-center gap-1"><FireIcon size={18} strokeWidth={1.75} /> {data?.streak ?? 0}</span>
         </span>
       </header>
-      <div className="mb-6 grid grid-cols-2 gap-2 rounded-full border border-line p-1" role="tablist">
-        {(["fr", "es"] as const).map((c) => (
-          <button key={c} role="tab" aria-selected={data?.course === c} onClick={() => setCourse(c)} className={`rounded-full py-2 text-sm font-semibold ${data?.course === c ? "bg-yellow text-[#111]" : ""}`}><span className={`fi ${c === "fr" ? "fi-fr" : "fi-es"} mr-2 rounded-sm`} aria-hidden />{c === "fr" ? "French" : "Spanish"}</button>
-        ))}
-      </div>
       <h1 className="text-3xl font-bold tracking-tighter">{data?.unitTitle ?? " "}</h1>
       <ul className="mt-4 grid gap-3">
         {!data && [0, 1, 2].map((i) => <li key={i} className="h-16 animate-pulse rounded-card bg-line" />)}

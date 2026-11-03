@@ -11,7 +11,7 @@ import { CHAIN, RPC_URL } from "@learnit/backend/chain";
 const wagmiConfig = createConfig({ chains: [CHAIN], transports: { [CHAIN.id]: http(RPC_URL) } as never });
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const [qc] = useState(() => new QueryClient());
+  const [qc] = useState(() => new QueryClient({ defaultOptions: { queries: { staleTime: 60_000, gcTime: 10 * 60_000, refetchOnWindowFocus: false, retry: 1 } } }));
   useEffect(() => {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") navigator.serviceWorker.register("/sw.js").catch(() => {});
   }, []);

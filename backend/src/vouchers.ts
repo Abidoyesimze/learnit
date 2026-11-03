@@ -3,7 +3,7 @@ import { privateKeyToAccount } from "viem/accounts";
 import { randomBytes } from "node:crypto";
 import type { User } from "@prisma/client";
 import { db } from "./db";
-import { publicClient, readVerification } from "./identity";
+import { publicClient, readVerificationCached as readVerification } from "./identity";
 import { ADDR, CHAIN_ID } from "./chain";
 import { rewardsPoolAbi } from "./abis";
 

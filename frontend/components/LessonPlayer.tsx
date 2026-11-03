@@ -2,16 +2,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
-import { VolumeHighIcon, Tick02Icon, Cancel01Icon } from "hugeicons-react";
+import { VolumeHighIcon, VolumeOffIcon, Tick02Icon, Cancel01Icon } from "hugeicons-react";
 import { useApi } from "@/lib/useApi";
 import type { PublicExercise } from "@learnit/backend/lessons";
 import { fmtGD } from "@learnit/backend/format";
+import { playCorrect, playWrong, soundEnabled, setSoundEnabled } from "@/lib/sounds";
 
 type Loaded = { id: string; title: string; speechLang: string; token: string; exercises: PublicExercise[] };
 type Pair = { target: string; english: string };
 type Ans = number | string[] | Pair[];
 type Feedback = { correct: boolean; answer: unknown };
-type Result = { passed: boolean; accuracy: number; durationS: number; minSeconds: number; tooFast: boolean; missedWordIds: string[]; streak: number; firstCheckpointPass: boolean; attemptId: string; voucher: { amount: string } | null; reviewPending: boolean };
+type Result = { passed: boolean; accuracy: number; durationS: number; minSeconds: number; tooFast: boolean; missedWordIds: string[]; streak: number; attemptId: string; voucherPending: boolean; reviewPending: boolean };
 
 const isCheckpoint = (id: string) => id.endsWith("-cp");
 
@@ -35,6 +36,9 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
   const missed = useRef<number[]>([]);
+  const firstRef = useRef<Record<string, Ans>>({}); // mirrors `first` so submit never reads a stale value
+  const [sound, setSound] = useState(true);
+  useEffect(() => setSound(soundEnabled()), []);
   const base = isCheckpoint(id) ? `/api/checkpoints/${id}` : `/api/lessons/${id}`;
 
   useEffect(() => {
@@ -44,16 +48,26 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
   const ex = data && queue[pos] !== undefined ? data.exercises[queue[pos]] : null;
   useEffect(() => { if (ex?.type === "mc" && ex.speak && data) speak(ex.speak, data.speechLang); }, [ex, data]);
 
+  const record = useCallback((exId: string, answer: Ans) => {
+    if (exId in firstRef.current) return;
+    firstRef.current = { ...firstRef.current, [exId]: answer };
+    setFirst(firstRef.current);
+  }, []);
+
   const check = useCallback(async () => {
     if (!data || !ex || cur === null) return;
     setBusy(true);
     try {
-      const r = await api<Feedback>(`/api/lessons/${data.id}/check`, { method: "POST", body: JSON.stringify({ token: data.token, exerciseId: ex.id, answer: cur }) });
-      setFirst((f) => (ex.id in f ? f : { ...f, [ex.id]: cur }));
+      // Plain fetch: this endpoint needs no login token, only the signed start token, so it skips the auth round trip.
+      const res = await fetch(`/api/lessons/${data.id}/check`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ token: data.token, exerciseId: ex.id, answer: cur }) });
+      if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error ?? "Check failed");
+      const r = (await res.json()) as Feedback;
+      r.correct ? playCorrect() : playWrong();
+      record(ex.id, cur);
       if (!r.correct && !missed.current.includes(queue[pos])) missed.current.push(queue[pos]);
       setFb(r);
     } catch (e) { setErr(e instanceof Error ? e.message : "Check failed"); } finally { setBusy(false); }
-  }, [api, data, ex, cur, queue, pos]);
+  }, [data, ex, cur, queue, pos, record]);
 
   const submit = useCallback(async (answers: Record<string, Ans>) => {
     if (!data) return;
@@ -71,8 +85,16 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
     const again = missed.current;
     missed.current = [];
     if (again.length) { setQueue(again); setPos(0); return; }
-    void submit(first);
-  }, [data, pos, queue, first, submit]);
+    void submit(firstRef.current);
+  }, [data, pos, queue, submit]);
+
+  /** Match pairs are checked on the device, so finishing one needs no Check button and no network call. */
+  const matchDone = useCallback((answer: Pair[], mistake: boolean) => {
+    if (!ex) return;
+    record(ex.id, answer);
+    if (mistake && !missed.current.includes(queue[pos])) missed.current.push(queue[pos]);
+    next();
+  }, [ex, record, queue, pos, next]);
 
   if (err && !data) return <p role="alert" className="p-6 text-sm">{err} <Link className="underline" href="/learn">Back</Link></p>;
   if (!data) return <div className="mx-auto max-w-md p-6"><div className="h-6 w-full animate-pulse rounded bg-line" /></div>;
@@ -88,6 +110,9 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
         <div className="h-3 flex-1 overflow-hidden rounded-full bg-line" role="progressbar" aria-valuenow={done} aria-valuemax={total}>
           <div className="h-full rounded-full bg-yellow transition-[width] duration-300" style={{ width: `${(done / total) * 100}%` }} />
         </div>
+        <button onClick={() => { const on = !sound; setSound(on); setSoundEnabled(on); if (on) playCorrect(); }} aria-label={sound ? "Mute sounds" : "Turn sounds on"} aria-pressed={!sound} className="p-2">
+          {sound ? <VolumeHighIcon size={20} strokeWidth={1.75} /> : <VolumeOffIcon size={20} strokeWidth={1.75} />}
+        </button>
       </header>
       <section className="flex flex-1 flex-col justify-center py-6">
         <h1 className="text-2xl font-bold leading-tight tracking-tight">{ex.type === "translate" ? "Translate this sentence" : ex.prompt}</h1>
@@ -98,10 +123,10 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
         <div className="mt-6">
           {ex.type === "mc" && <Mc key={ex.id} ex={ex} onChange={setCur} locked={!!fb} />}
           {ex.type === "translate" && <Translate key={ex.id} ex={ex} onChange={setCur} locked={!!fb} />}
-          {ex.type === "match" && <Match key={ex.id} ex={ex} onChange={setCur} locked={!!fb} />}
+          {ex.type === "match" && <Match key={ex.id} ex={ex} onFinish={matchDone} />}
         </div>
       </section>
-      {!fb && <button onClick={check} disabled={cur === null || busy} className="w-full rounded-full bg-ink px-5 py-4 font-semibold text-paper transition active:scale-[0.98] disabled:opacity-30">Check</button>}
+      {!fb && ex.type !== "match" && <button onClick={check} disabled={cur === null || busy} className="w-full rounded-full bg-ink px-5 py-4 font-semibold text-paper transition active:scale-[0.98] disabled:opacity-30">Check</button>}
       {fb && (
         <motion.div initial={reduce ? false : { y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 26 }}
           className={`-mx-4 -mb-6 rounded-t-card p-5 pb-8 ${fb.correct ? "bg-yellow text-[#111]" : "bg-ink text-paper"}`} role="status">
@@ -147,26 +172,62 @@ function Translate({ ex, onChange, locked }: { ex: Extract<PublicExercise, { typ
   );
 }
 
-function Match({ ex, onChange, locked }: { ex: Extract<PublicExercise, { type: "match" }>; onChange: (a: Ans) => void; locked: boolean }) {
+function Match({ ex, onFinish }: { ex: Extract<PublicExercise, { type: "match" }>; onFinish: (answer: Pair[], mistake: boolean) => void }) {
   const [left, setLeft] = useState<string | null>(null);
-  const [pairs, setPairs] = useState<Pair[]>([]);
-  const usedL = useMemo(() => new Set(pairs.map((p) => p.target)), [pairs]);
-  const usedR = useMemo(() => new Set(pairs.map((p) => p.english)), [pairs]);
-  const pickRight = (r: string) => {
+  const [matched, setMatched] = useState<string[]>([]);
+  const [wrong, setWrong] = useState<string | null>(null);
+  const firstChoice = useRef<Record<string, string>>({});
+  const mistake = useRef(false);
+  const truth = useMemo(() => Object.fromEntries(ex.pairs.map((p) => [p.target, p.english])), [ex]);
+  const doneRight = useMemo(() => new Set(matched.map((l) => truth[l])), [matched, truth]);
+
+  function pickRight(r: string) {
     if (!left) return;
-    const np = [...pairs, { target: left, english: r }];
-    setPairs(np); setLeft(null);
-    if (np.length === ex.left.length) onChange(np);
-  };
+    if (!(left in firstChoice.current)) firstChoice.current[left] = r; // only the first try counts towards accuracy
+    if (truth[left] === r) {
+      playCorrect();
+      const m = [...matched, left];
+      setMatched(m); setLeft(null);
+      if (m.length === ex.left.length) setTimeout(() => onFinish(ex.left.map((t) => ({ target: t, english: firstChoice.current[t] })), mistake.current), 450);
+    } else {
+      mistake.current = true;
+      playWrong();
+      setWrong(r); setLeft(null);
+      setTimeout(() => setWrong(null), 450);
+    }
+  }
   return (
     <div className="grid grid-cols-2 gap-3">
-      <div className="grid gap-3">{ex.left.map((l) => <button key={l} disabled={locked || usedL.has(l)} onClick={() => setLeft(l)} className={`rounded-card border px-3 py-3 font-medium disabled:opacity-30 ${left === l ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>{l}</button>)}</div>
-      <div className="grid gap-3">{ex.right.map((r) => <button key={r} disabled={locked || usedR.has(r) || !left} onClick={() => pickRight(r)} className="rounded-card border border-line px-3 py-3 font-medium disabled:opacity-30">{r}</button>)}</div>
+      <div className="grid gap-3">
+        {ex.left.map((l) => {
+          const ok = matched.includes(l);
+          return <button key={l} disabled={ok} onClick={() => setLeft(l)} aria-pressed={left === l} className={`rounded-card border px-3 py-3 font-medium transition active:scale-[0.98] ${ok ? "border-ink bg-yellow text-[#111] opacity-60" : left === l ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>{l}</button>;
+        })}
+      </div>
+      <div className="grid gap-3">
+        {ex.right.map((r) => {
+          const ok = doneRight.has(r);
+          return <button key={r} disabled={ok || !left} onClick={() => pickRight(r)} className={`rounded-card border px-3 py-3 font-medium transition active:scale-[0.98] disabled:opacity-40 ${ok ? "border-ink bg-yellow text-[#111] opacity-60" : wrong === r ? "border-ink bg-ink text-paper" : "border-line"}`}>{r}</button>;
+        })}
+      </div>
     </div>
   );
 }
 
 function Results({ r, id }: { r: Result; id: string }) {
+  const api = useApi();
+  const [voucher, setVoucher] = useState<{ amount: string } | null>(null);
+  const [pending, setPending] = useState(r.voucherPending);
+  const [review, setReview] = useState(r.reviewPending);
+  useEffect(() => {
+    if (!r.voucherPending) return;
+    let dead = false;
+    api<{ voucher: { amount: string } | null; reviewPending: boolean }>("/api/vouchers/issue", { method: "POST", body: JSON.stringify({ attemptId: r.attemptId }) })
+      .then((x) => { if (!dead) { setVoucher(x.voucher); setReview(x.reviewPending); } })
+      .catch(() => {})
+      .finally(() => { if (!dead) setPending(false); });
+    return () => { dead = true; };
+  }, [api, r]);
   return (
     <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col justify-between px-4 pb-8 pt-16">
       <div>
@@ -178,8 +239,9 @@ function Results({ r, id }: { r: Result; id: string }) {
         </p>
       </div>
       <div className="grid gap-3">
-        {r.voucher && <Link href="/earn" className="rounded-card border border-ink p-4 text-center font-semibold">You earned {fmtGD(r.voucher.amount)} G$. Claim it</Link>}
-        {r.passed && !r.voucher && r.reviewPending && <p className="rounded-card border border-line p-4 text-center text-sm text-muted">Your reward is being reviewed. It will show up in Earn once that clears.</p>}
+        {pending && <p className="rounded-card border border-line p-4 text-center text-sm text-muted">Working out your reward...</p>}
+        {voucher && <Link href="/earn" className="rounded-card border border-ink p-4 text-center font-semibold">You earned {fmtGD(voucher.amount)} G$. Claim it</Link>}
+        {r.passed && !pending && !voucher && review && <p className="rounded-card border border-line p-4 text-center text-sm text-muted">Your reward is being reviewed. It will show up in Earn once that clears.</p>}
         <Link href="/learn" className="rounded-full bg-yellow px-5 py-4 text-center font-semibold text-[#111]">{r.passed ? "Continue" : "Back to lessons"}</Link>
       </div>
     </main>

@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { requireUser, authFail } from "../auth";
 import { findLesson, findCheckpoint, seededDraw } from "../lessons";
 import { readStart } from "../token";
 import { gradeExercise, type Answer } from "../grading";
@@ -11,13 +10,12 @@ function reveal(ex: Exercise) {
   return ex.type === "mc" ? ex.answer : ex.type === "translate" ? ex.answer : ex.pairs.map((p) => ({ target: p.target, english: p.english }));
 }
 
-/** Instant feedback only. The final grade always comes from /submit. Works for lessons and checkpoints. */
+/** Instant feedback only. No auth or database: the HMAC-signed start token (bound to the user, 6h expiry) is the credential. The final grade always comes from /submit. Works for lessons and checkpoints. */
 export async function POST(req: Request, { params }: { params: { id: string } }) {
   try {
-    const user = await requireUser(req);
     const b = Body.parse(await req.json());
     const start = readStart(b.token);
-    if (!start || start.userId !== user.id || start.targetId !== params.id) return Response.json({ error: "Invalid token" }, { status: 400 });
+    if (!start || start.targetId !== params.id || Date.now() - start.startedAt > 6 * 3600_000) return Response.json({ error: "Invalid token" }, { status: 400 });
     let pool: Exercise[] = [];
     const l = findLesson(params.id);
     if (l) pool = l.lesson.exercises;
@@ -28,6 +26,7 @@ export async function POST(req: Request, { params }: { params: { id: string } })
     return Response.json({ correct: r.correct, answer: reveal(ex) });
   } catch (e) {
     if (e instanceof z.ZodError) return Response.json({ error: "Bad request" }, { status: 400 });
-    return authFail(e);
+    console.error(e);
+    return Response.json({ error: "Server error" }, { status: 500 });
   }
 }

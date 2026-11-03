@@ -15,6 +15,23 @@ function runtimeUrl() {
   return add.length ? u + (u.includes("?") ? "&" : "?") + add.join("&") : u;
 }
 
-const g = globalThis as unknown as { prisma?: PrismaClient };
-export const db = g.prisma ?? new PrismaClient({ datasources: { db: { url: runtimeUrl() } } });
+/** Short-lived cache of user rows so auth does not cost a database round trip on every request. Cleared on any user write. */
+export const userCache = new Map<string, { at: number; user: import("@prisma/client").User }>();
+
+function create() {
+  return new PrismaClient({ datasources: { db: { url: runtimeUrl() } } }).$extends({
+    query: {
+      user: {
+        async $allOperations({ operation, args, query }) {
+          const r = await query(args);
+          if (/^(create|update|upsert|delete)/.test(operation)) userCache.clear();
+          return r;
+        },
+      },
+    },
+  });
+}
+
+const g = globalThis as unknown as { prisma?: ReturnType<typeof create> };
+export const db = g.prisma ?? create();
 if (process.env.NODE_ENV !== "production") g.prisma = db;
