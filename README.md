@@ -24,7 +24,7 @@ Full product spec: [`docs/LearnIt-PRD-v0.2.docx`](docs/LearnIt-PRD-v0.2.docx).
 | API | Next.js route handlers under `app/api`, Privy access token checked on every route |
 | Database | Postgres (Neon or Railway) via Prisma |
 | Contracts | Solidity 0.8.x, Foundry, OpenZeppelin, in `/contracts` |
-| Identity and UBI | `@gooddollar/web3sdk-v2`, GoodDollar Identity contract on Celo |
+| Identity and UBI | `@goodsdks/citizen-sdk`, GoodDollar Identity contract on Celo |
 
 Design: white, black and one yellow accent. Geist type. Mobile first.
 

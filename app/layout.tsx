@@ -4,6 +4,8 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 
+export const dynamic = "force-dynamic"; // Privy needs a real app id at runtime, not at build
+
 export const metadata: Metadata = {
   title: "LearnIt",
   description: "Learn French and Spanish. Earn G$.",
