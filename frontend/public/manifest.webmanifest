@@ -1,7 +1,7 @@
 {
   "name": "LearnIt",
   "short_name": "LearnIt",
-  "description": "Learn French and Spanish. Earn G$.",
+  "description": "Learn a language. Earn G$.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fafafa",

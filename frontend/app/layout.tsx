@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic"; // Privy needs a real app id at runtime,
 
 export const metadata: Metadata = {
   title: "LearnIt",
-  description: "Learn French and Spanish. Earn G$.",
+  description: "Learn a language. Earn G$.",
   manifest: "/manifest.webmanifest",
 };
 export const viewport: Viewport = { themeColor: "#ffd60a", width: "device-width", initialScale: 1, viewportFit: "cover" };
