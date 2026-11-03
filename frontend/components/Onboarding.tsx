@@ -54,7 +54,7 @@ export function Onboarding() {
                     className={`flex items-center gap-4 rounded-card border p-4 text-left transition active:scale-[0.99] ${on ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>
                     <span className={`fi ${l.flag} !h-12 !w-16 shrink-0 rounded-md border border-black/10 bg-cover`} aria-hidden />
                     <span className="flex-1">
-                      <span className="block text-xl font-bold tracking-tight">{l.name} <span className={`text-base font-medium ${on ? "" : "text-muted"}`}>{l.native}</span></span>
+                      <span lang={l.code} className="block text-2xl font-bold tracking-tight">{l.native}</span>
                     </span>
                     {on && <Tick02Icon size={22} strokeWidth={2} />}
                   </button>
@@ -85,7 +85,7 @@ export function Onboarding() {
           {err && <p role="alert" className="mb-2 text-sm font-medium">{err}</p>}
           <div className="mt-6 grid gap-3">
             <button onClick={finish} disabled={busy} className="flex w-full items-center justify-center gap-2 rounded-full bg-yellow px-5 py-4 font-semibold text-[#111] transition active:scale-[0.98] disabled:opacity-60">
-              {busy && <Loading03Icon className="animate-spin" size={18} strokeWidth={1.75} />} Start learning {course === "es" ? "Spanish" : "French"}
+              {busy && <Loading03Icon className="animate-spin" size={18} strokeWidth={1.75} />} Start learning
             </button>
             <button onClick={() => setStep(0)} disabled={busy} className="py-2 text-sm text-muted underline-offset-4 hover:underline">Back</button>
           </div>
