@@ -29,18 +29,24 @@ abstract contract DeployBase is Script {
         address guardian = vm.envAddress("GUARDIAN");
         address signer = vm.envAddress("SIGNER");
         address ubi = vm.envAddress("UBI_ADDRESS");
+        uint256 deployerKey = vm.envUint("DEPLOYER_PRIVATE_KEY");
+        // Derived explicitly rather than read from ambient msg.sender: inside a script, msg.sender
+        // at this point is forge's internal caller of run(), not the broadcasting key, even inside
+        // vm.startBroadcast. Using msg.sender here would grant DEFAULT_ADMIN_ROLE to an address
+        // nobody holds the key for, permanently locking the contracts out of admin control.
+        address deployer = vm.addr(deployerKey);
 
-        vm.startBroadcast(vm.envUint("DEPLOYER_PRIVATE_KEY"));
-        RewardsPool pool = new RewardsPool(IERC20(cfg.token), IIdentity(cfg.identity), msg.sender, guardian, signer);
+        vm.startBroadcast(deployerKey);
+        RewardsPool pool = new RewardsPool(IERC20(cfg.token), IIdentity(cfg.identity), deployer, guardian, signer);
         pool.setCaps(cfg.dailyCap, cfg.weeklyCap);
         pool.setDailyBudget(cfg.dailyBudget);
-        StreakVault vault = new StreakVault(IERC20(cfg.token), IIdentity(cfg.identity), IRewardsPool(address(pool)), ubi, msg.sender, guardian, signer);
+        StreakVault vault = new StreakVault(IERC20(cfg.token), IIdentity(cfg.identity), IRewardsPool(address(pool)), ubi, deployer, guardian, signer);
         // hand admin over to ADMIN (a multisig on mainnet)
-        if (admin != msg.sender) {
+        if (admin != deployer) {
             pool.grantRole(pool.DEFAULT_ADMIN_ROLE(), admin);
-            pool.renounceRole(pool.DEFAULT_ADMIN_ROLE(), msg.sender);
+            pool.renounceRole(pool.DEFAULT_ADMIN_ROLE(), deployer);
             vault.grantRole(vault.DEFAULT_ADMIN_ROLE(), admin);
-            vault.renounceRole(vault.DEFAULT_ADMIN_ROLE(), msg.sender);
+            vault.renounceRole(vault.DEFAULT_ADMIN_ROLE(), deployer);
         }
         vm.stopBroadcast();
 
