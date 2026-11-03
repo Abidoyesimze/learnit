@@ -5,12 +5,13 @@ import { motion, useReducedMotion } from "motion/react";
 import { SpeakerHigh, Check, X } from "@phosphor-icons/react";
 import { useApi } from "@/lib/useApi";
 import type { PublicExercise } from "@/lib/content";
+import { fmtGD } from "@/lib/format";
 
 type Loaded = { id: string; title: string; speechLang: string; token: string; exercises: PublicExercise[] };
 type Pair = { target: string; english: string };
 type Ans = number | string[] | Pair[];
 type Feedback = { correct: boolean; answer: unknown };
-type Result = { passed: boolean; accuracy: number; durationS: number; minSeconds: number; tooFast: boolean; missedWordIds: string[]; streak: number; firstCheckpointPass: boolean; attemptId: string };
+type Result = { passed: boolean; accuracy: number; durationS: number; minSeconds: number; tooFast: boolean; missedWordIds: string[]; streak: number; firstCheckpointPass: boolean; attemptId: string; voucher: { amount: string } | null };
 
 const isCheckpoint = (id: string) => id.endsWith("-cp");
 
@@ -177,6 +178,7 @@ function Results({ r, id }: { r: Result; id: string }) {
         </p>
       </div>
       <div className="grid gap-3">
+        {r.voucher && <Link href="/earn" className="rounded-card border border-ink p-4 text-center font-semibold">You earned {fmtGD(r.voucher.amount)} G$. Claim it</Link>}
         <Link href="/learn" className="rounded-full bg-yellow px-5 py-4 text-center font-semibold text-[#111]">{r.passed ? "Continue" : "Back to lessons"}</Link>
       </div>
     </main>

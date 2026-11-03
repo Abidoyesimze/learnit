@@ -72,7 +72,7 @@ model Voucher {
   nonce     String   @unique
   expiry    Int      // unix seconds
   reason    String   // lesson | checkpoint
-  sourceId  String   // attempt id that earned it
+  sourceId  String   @unique // attempt id that earned it
   signature String
   status    String   @default("issued") // issued | claimed | expired
   createdAt DateTime @default(now())

@@ -61,8 +61,11 @@ npm run dev              # http://localhost:3000
 | `NEXT_PUBLIC_PRIVY_APP_ID` | Privy app id (public) |
 | `PRIVY_APP_SECRET` | Privy app secret (server only) |
 | `APP_SECRET` | Random string used to sign lesson start tokens (falls back to the signer key) |
+| `LESSON_REWARD_G`, `CHECKPOINT_REWARD_G`, `DAILY_CAP_G` | Reward sizes in G$. Keep `DAILY_CAP_G` equal to the pool's `dailyCap` |
+| `VAULT_DEPLOY_BLOCK` | Block the `StreakVault` was deployed at (for reading Staked events) |
 | `SIGNER_PRIVATE_KEY` | Key that signs reward vouchers and marks finishers. Server only. Never commit it |
 | `GASDROP_PRIVATE_KEY` | Funded wallet that sends the one-time CELO top-up. Tiny balance only |
+| `GAS_TOPUP_CELO` | CELO sent per verified user, once (default 0.05) |
 | `NEXT_PUBLIC_CELO_RPC_URL` | Celo RPC endpoint |
 | `NEXT_PUBLIC_REWARDS_POOL_ADDRESS` | Deployed `RewardsPool` |
 | `NEXT_PUBLIC_STREAK_VAULT_ADDRESS` | Deployed `StreakVault` |
@@ -91,6 +94,11 @@ forge script script/DeployMainnet.s.sol --rpc-url $CELO_RPC_URL --broadcast --ve
 Then fund the pool (`approve` + `deposit`), call `createCohort(start, min, max)` as admin, and put the printed addresses in `.env`. `ADMIN` and `GUARDIAN` should be a Safe multisig on mainnet.
 
 Contract notes: `RewardsPool` pays EIP-712 vouchers with daily and weekly caps per whitelisted root and a global daily budget. `StreakVault` runs 7-day cohorts; the signer marks finishers and settles 70% of forfeits to finishers, 20% to the pool, 10% to the UBI address. G$ transfer fees are handled by recording the amount actually received.
+
+## Operations
+
+- **Finalise a stake cohort** after it ends: `npx tsx --env-file=.env scripts/finalize-cohort.ts <id>` prints who finished all 7 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
+- **Known MVP limits:** lesson answers are checked one at a time for instant feedback, so a determined user could probe answers; the 80% and 90-second rules, per-lesson daily reward limit and the pool's caps bound the damage. The signer key lives in an env var; move it to a KMS before raising limits.
 
 ## Contributing
 

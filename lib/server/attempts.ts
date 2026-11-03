@@ -4,6 +4,7 @@ import { db } from "./db";
 import { readStart, type Start } from "./token";
 import { gradeAll, isPass, MIN_SECONDS, type Answer } from "@/lib/grading";
 import { localDate, streakCount } from "@/lib/streak";
+import { issueVoucher, publicVoucher } from "./vouchers";
 
 export async function streakFor(user: User) {
   const days = await db.streakDay.findMany({ where: { userId: user.id }, select: { date: true } });
@@ -39,10 +40,12 @@ export async function submitAttempt(opts: {
   });
   if (passed) await db.streakDay.upsert({ where: { userId_date: { userId: opts.user.id, date } }, create: { userId: opts.user.id, date }, update: {} });
   const st = await streakFor(opts.user);
+  const voucher = passed ? await issueVoucher(opts.user, attempt, firstCheckpointPass).catch((e) => { console.error("voucher", e); return null; }) : null;
   return {
     attemptId: attempt.id, passed, accuracy, durationS, minSeconds: MIN_SECONDS, missedWordIds,
     tooFast: accuracy >= 0.8 && durationS < MIN_SECONDS,
     results: results.map((r) => ({ id: r.id, correct: r.correct })),
     firstCheckpointPass, streak: st.streak,
+    voucher: voucher ? publicVoucher(voucher) : null,
   };
 }

@@ -6,6 +6,7 @@ import { usePrivy } from "@privy-io/react-auth";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Check, Lock, Fire } from "@phosphor-icons/react";
 import { useApi } from "@/lib/useApi";
+import { TabBar } from "@/components/TabBar";
 
 type Today = { course: "fr" | "es"; unitTitle: string; lessons: { id: string; title: string; theme: string; passed: boolean; isNext: boolean }[]; nextLessonId: string | null; checkpoint: { id: string; unlocked: boolean; passed: boolean; cooldownUntil: string | null }; streak: number; todayDone: boolean };
 
@@ -49,6 +50,7 @@ export default function Learn() {
           </li>
         )}
       </ul>
+      <TabBar />
     </main>
   );
 }
