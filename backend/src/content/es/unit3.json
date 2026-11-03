@@ -1,0 +1,2010 @@
+{
+  "lang": "es",
+  "unit": 3,
+  "level": "A1",
+  "title": "Spanish, Unit 3",
+  "speechLang": "es-ES",
+  "lessons": [
+    {
+      "id": "es-u3-l1",
+      "title": "Work and jobs",
+      "theme": "work and jobs",
+      "exercises": [
+        {
+          "id": "es-u3-w1-te",
+          "type": "mc",
+          "prompt": "What does \"el trabajo\" mean?",
+          "speak": "el trabajo",
+          "options": [
+            "the office",
+            "the job",
+            "the salary",
+            "to work"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w1"
+        },
+        {
+          "id": "es-u3-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"the office\"?",
+          "options": [
+            "la oficina",
+            "el trabajo",
+            "trabajar",
+            "ocupado"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w2"
+        },
+        {
+          "id": "es-u3-w3-te",
+          "type": "mc",
+          "prompt": "What does \"el jefe\" mean?",
+          "speak": "el jefe",
+          "options": [
+            "the boss",
+            "the job",
+            "the salary",
+            "the office"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w3"
+        },
+        {
+          "id": "es-u3-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u3-w8",
+              "target": "ocupado",
+              "english": "busy"
+            },
+            {
+              "wordId": "es-u3-w2",
+              "target": "la oficina",
+              "english": "the office"
+            },
+            {
+              "wordId": "es-u3-w6",
+              "target": "trabajar",
+              "english": "to work"
+            },
+            {
+              "wordId": "es-u3-w5",
+              "target": "la reunión",
+              "english": "the meeting"
+            }
+          ]
+        },
+        {
+          "id": "es-u3-l1-s1",
+          "type": "translate",
+          "prompt": "I work every day",
+          "answer": [
+            "Trabajo",
+            "todos",
+            "los",
+            "días"
+          ],
+          "bank": [
+            "oficina",
+            "días",
+            "Trabajo",
+            "todos",
+            "siempre",
+            "los"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"the colleague\"?",
+          "options": [
+            "la oficina",
+            "el salario",
+            "el colega",
+            "el trabajo"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w4"
+        },
+        {
+          "id": "es-u3-w5-te",
+          "type": "mc",
+          "prompt": "What does \"la reunión\" mean?",
+          "speak": "la reunión",
+          "options": [
+            "the job",
+            "the office",
+            "the meeting",
+            "the boss"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w5"
+        },
+        {
+          "id": "es-u3-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"to work\"?",
+          "options": [
+            "el salario",
+            "el colega",
+            "el jefe",
+            "trabajar"
+          ],
+          "answer": 3,
+          "wordId": "es-u3-w6"
+        },
+        {
+          "id": "es-u3-l1-s2",
+          "type": "translate",
+          "prompt": "I have a meeting",
+          "answer": [
+            "Tengo",
+            "una",
+            "reunión"
+          ],
+          "bank": [
+            "una",
+            "jefe",
+            "colega",
+            "reunión",
+            "Tengo"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w7-te",
+          "type": "mc",
+          "prompt": "What does \"el salario\" mean?",
+          "speak": "el salario",
+          "options": [
+            "busy",
+            "the salary",
+            "the colleague",
+            "the office"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w7"
+        },
+        {
+          "id": "es-u3-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"busy\"?",
+          "options": [
+            "el trabajo",
+            "el jefe",
+            "ocupado",
+            "el salario"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w8"
+        },
+        {
+          "id": "es-u3-l1-s3",
+          "type": "translate",
+          "prompt": "I am very busy",
+          "answer": [
+            "Estoy",
+            "muy",
+            "ocupado"
+          ],
+          "bank": [
+            "cansado",
+            "ocupado",
+            "Estoy",
+            "feliz",
+            "muy"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u3-l2",
+      "title": "Phone calls",
+      "theme": "phone calls",
+      "exercises": [
+        {
+          "id": "es-u3-w9-te",
+          "type": "mc",
+          "prompt": "What does \"el teléfono\" mean?",
+          "speak": "el teléfono",
+          "options": [
+            "later",
+            "to wait",
+            "to call",
+            "the phone"
+          ],
+          "answer": 3,
+          "wordId": "es-u3-w9"
+        },
+        {
+          "id": "es-u3-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"to call\"?",
+          "options": [
+            "más tarde",
+            "llamar",
+            "el teléfono",
+            "el número"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w10"
+        },
+        {
+          "id": "es-u3-w11-te",
+          "type": "mc",
+          "prompt": "What does \"el número\" mean?",
+          "speak": "el número",
+          "options": [
+            "a message",
+            "to answer",
+            "the number",
+            "to call"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w11"
+        },
+        {
+          "id": "es-u3-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u3-w12",
+              "target": "responder",
+              "english": "to answer"
+            },
+            {
+              "wordId": "es-u3-w9",
+              "target": "el teléfono",
+              "english": "the phone"
+            },
+            {
+              "wordId": "es-u3-w10",
+              "target": "llamar",
+              "english": "to call"
+            },
+            {
+              "wordId": "es-u3-w16",
+              "target": "más tarde",
+              "english": "later"
+            }
+          ]
+        },
+        {
+          "id": "es-u3-l2-s1",
+          "type": "translate",
+          "prompt": "I will call you later",
+          "answer": [
+            "Te",
+            "llamo",
+            "más",
+            "tarde"
+          ],
+          "bank": [
+            "más",
+            "mañana",
+            "llamo",
+            "tarde",
+            "ahora",
+            "Te"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"to answer\"?",
+          "options": [
+            "responder",
+            "esperar",
+            "el número",
+            "más tarde"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w12"
+        },
+        {
+          "id": "es-u3-w13-te",
+          "type": "mc",
+          "prompt": "What does \"un mensaje\" mean?",
+          "speak": "un mensaje",
+          "options": [
+            "to answer",
+            "the phone",
+            "a message",
+            "to hang up"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w13"
+        },
+        {
+          "id": "es-u3-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"to wait\"?",
+          "options": [
+            "el teléfono",
+            "un mensaje",
+            "el número",
+            "esperar"
+          ],
+          "answer": 3,
+          "wordId": "es-u3-w14"
+        },
+        {
+          "id": "es-u3-l2-s2",
+          "type": "translate",
+          "prompt": "Please wait a moment",
+          "answer": [
+            "Espere",
+            "un",
+            "momento",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "por",
+            "responda",
+            "momento",
+            "cuelgue",
+            "favor",
+            "un",
+            "Espere"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w15-te",
+          "type": "mc",
+          "prompt": "What does \"colgar\" mean?",
+          "speak": "colgar",
+          "options": [
+            "to hang up",
+            "later",
+            "to call",
+            "a message"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w15"
+        },
+        {
+          "id": "es-u3-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"later\"?",
+          "options": [
+            "esperar",
+            "el número",
+            "el teléfono",
+            "más tarde"
+          ],
+          "answer": 3,
+          "wordId": "es-u3-w16"
+        },
+        {
+          "id": "es-u3-l2-s3",
+          "type": "translate",
+          "prompt": "Leave a message",
+          "answer": [
+            "Deje",
+            "un",
+            "mensaje"
+          ],
+          "bank": [
+            "teléfono",
+            "número",
+            "mensaje",
+            "Deje",
+            "un"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u3-l3",
+      "title": "Shopping and clothes",
+      "theme": "shopping and clothes",
+      "exercises": [
+        {
+          "id": "es-u3-w17-te",
+          "type": "mc",
+          "prompt": "What does \"la camisa\" mean?",
+          "speak": "la camisa",
+          "options": [
+            "the color",
+            "the shirt",
+            "big",
+            "the dress"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w17"
+        },
+        {
+          "id": "es-u3-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"the shoes\"?",
+          "options": [
+            "pequeño",
+            "la camisa",
+            "probarse",
+            "los zapatos"
+          ],
+          "answer": 3,
+          "wordId": "es-u3-w18"
+        },
+        {
+          "id": "es-u3-w19-te",
+          "type": "mc",
+          "prompt": "What does \"la talla\" mean?",
+          "speak": "la talla",
+          "options": [
+            "to try on",
+            "the size",
+            "small",
+            "big"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w19"
+        },
+        {
+          "id": "es-u3-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u3-w18",
+              "target": "los zapatos",
+              "english": "the shoes"
+            },
+            {
+              "wordId": "es-u3-w17",
+              "target": "la camisa",
+              "english": "the shirt"
+            },
+            {
+              "wordId": "es-u3-w22",
+              "target": "el vestido",
+              "english": "the dress"
+            },
+            {
+              "wordId": "es-u3-w20",
+              "target": "probarse",
+              "english": "to try on"
+            }
+          ]
+        },
+        {
+          "id": "es-u3-l3-s1",
+          "type": "translate",
+          "prompt": "I want to try this on",
+          "answer": [
+            "Quiero",
+            "probarme",
+            "esto"
+          ],
+          "bank": [
+            "probarme",
+            "comprar",
+            "camisa",
+            "Quiero",
+            "esto"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"to try on\"?",
+          "options": [
+            "probarse",
+            "pequeño",
+            "la camisa",
+            "la talla"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w20"
+        },
+        {
+          "id": "es-u3-w21-te",
+          "type": "mc",
+          "prompt": "What does \"el color\" mean?",
+          "speak": "el color",
+          "options": [
+            "big",
+            "the size",
+            "the color",
+            "the shoes"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w21"
+        },
+        {
+          "id": "es-u3-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"the dress\"?",
+          "options": [
+            "pequeño",
+            "el vestido",
+            "probarse",
+            "el color"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w22"
+        },
+        {
+          "id": "es-u3-l3-s2",
+          "type": "translate",
+          "prompt": "This shirt is too big",
+          "answer": [
+            "Esta",
+            "camisa",
+            "es",
+            "muy",
+            "grande"
+          ],
+          "bank": [
+            "camisa",
+            "vestido",
+            "muy",
+            "Esta",
+            "es",
+            "pequeña",
+            "grande"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w23-te",
+          "type": "mc",
+          "prompt": "What does \"grande\" mean?",
+          "speak": "grande",
+          "options": [
+            "the dress",
+            "big",
+            "the shoes",
+            "to try on"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w23"
+        },
+        {
+          "id": "es-u3-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"small\"?",
+          "options": [
+            "el vestido",
+            "la camisa",
+            "el color",
+            "pequeño"
+          ],
+          "answer": 3,
+          "wordId": "es-u3-w24"
+        },
+        {
+          "id": "es-u3-l3-s3",
+          "type": "translate",
+          "prompt": "I like this color",
+          "answer": [
+            "Me",
+            "gusta",
+            "este",
+            "color"
+          ],
+          "bank": [
+            "color",
+            "este",
+            "gusta",
+            "talla",
+            "Me",
+            "vestido"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u3-l4",
+      "title": "Health and body",
+      "theme": "health and body",
+      "exercises": [
+        {
+          "id": "es-u3-w25-te",
+          "type": "mc",
+          "prompt": "What does \"la cabeza\" mean?",
+          "speak": "la cabeza",
+          "options": [
+            "the head",
+            "the pain",
+            "the stomach",
+            "the doctor"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w25"
+        },
+        {
+          "id": "es-u3-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"the hand\"?",
+          "options": [
+            "enfermo",
+            "la cabeza",
+            "la mano",
+            "el dolor"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w26"
+        },
+        {
+          "id": "es-u3-w27-te",
+          "type": "mc",
+          "prompt": "What does \"el estómago\" mean?",
+          "speak": "el estómago",
+          "options": [
+            "the pain",
+            "the head",
+            "the stomach",
+            "the hand"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w27"
+        },
+        {
+          "id": "es-u3-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u3-w29",
+              "target": "el médico",
+              "english": "the doctor"
+            },
+            {
+              "wordId": "es-u3-w30",
+              "target": "la farmacia",
+              "english": "the pharmacy"
+            },
+            {
+              "wordId": "es-u3-w25",
+              "target": "la cabeza",
+              "english": "the head"
+            },
+            {
+              "wordId": "es-u3-w28",
+              "target": "enfermo",
+              "english": "sick"
+            }
+          ]
+        },
+        {
+          "id": "es-u3-l4-s1",
+          "type": "translate",
+          "prompt": "I am sick",
+          "answer": [
+            "Estoy",
+            "enfermo"
+          ],
+          "bank": [
+            "Estoy",
+            "enfermo",
+            "feliz",
+            "cansado"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"sick\"?",
+          "options": [
+            "sentirse",
+            "enfermo",
+            "el dolor",
+            "la mano"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w28"
+        },
+        {
+          "id": "es-u3-w29-te",
+          "type": "mc",
+          "prompt": "What does \"el médico\" mean?",
+          "speak": "el médico",
+          "options": [
+            "to feel",
+            "the head",
+            "sick",
+            "the doctor"
+          ],
+          "answer": 3,
+          "wordId": "es-u3-w29"
+        },
+        {
+          "id": "es-u3-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"the pharmacy\"?",
+          "options": [
+            "la farmacia",
+            "el estómago",
+            "la cabeza",
+            "enfermo"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w30"
+        },
+        {
+          "id": "es-u3-l4-s2",
+          "type": "translate",
+          "prompt": "My head hurts",
+          "answer": [
+            "Me",
+            "duele",
+            "la",
+            "cabeza"
+          ],
+          "bank": [
+            "duele",
+            "estómago",
+            "Me",
+            "la",
+            "cabeza",
+            "mano"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w31-te",
+          "type": "mc",
+          "prompt": "What does \"el dolor\" mean?",
+          "speak": "el dolor",
+          "options": [
+            "the stomach",
+            "the hand",
+            "the pain",
+            "the pharmacy"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w31"
+        },
+        {
+          "id": "es-u3-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"to feel\"?",
+          "options": [
+            "el médico",
+            "la farmacia",
+            "sentirse",
+            "la cabeza"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w32"
+        },
+        {
+          "id": "es-u3-l4-s3",
+          "type": "translate",
+          "prompt": "I need a doctor",
+          "answer": [
+            "Necesito",
+            "un",
+            "médico"
+          ],
+          "bank": [
+            "dolor",
+            "médico",
+            "farmacia",
+            "Necesito",
+            "un"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "es-u3-l5",
+      "title": "House and home",
+      "theme": "house and home",
+      "exercises": [
+        {
+          "id": "es-u3-w33-te",
+          "type": "mc",
+          "prompt": "What does \"la casa\" mean?",
+          "speak": "la casa",
+          "options": [
+            "the door",
+            "the house",
+            "the key",
+            "the kitchen"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w33"
+        },
+        {
+          "id": "es-u3-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"the room\"?",
+          "options": [
+            "la ventana",
+            "la habitación",
+            "la llave",
+            "el vecino"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w34"
+        },
+        {
+          "id": "es-u3-w35-te",
+          "type": "mc",
+          "prompt": "What does \"la cocina\" mean?",
+          "speak": "la cocina",
+          "options": [
+            "the house",
+            "the kitchen",
+            "the window",
+            "clean"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w35"
+        },
+        {
+          "id": "es-u3-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-u3-w35",
+              "target": "la cocina",
+              "english": "the kitchen"
+            },
+            {
+              "wordId": "es-u3-w40",
+              "target": "el vecino",
+              "english": "the neighbor"
+            },
+            {
+              "wordId": "es-u3-w36",
+              "target": "la puerta",
+              "english": "the door"
+            },
+            {
+              "wordId": "es-u3-w39",
+              "target": "limpio",
+              "english": "clean"
+            }
+          ]
+        },
+        {
+          "id": "es-u3-l5-s1",
+          "type": "translate",
+          "prompt": "Where is the key",
+          "answer": [
+            "Dónde",
+            "está",
+            "la",
+            "llave"
+          ],
+          "bank": [
+            "está",
+            "ventana",
+            "llave",
+            "puerta",
+            "Dónde",
+            "la"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"the door\"?",
+          "options": [
+            "la puerta",
+            "limpio",
+            "la llave",
+            "la cocina"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w36"
+        },
+        {
+          "id": "es-u3-w37-te",
+          "type": "mc",
+          "prompt": "What does \"la ventana\" mean?",
+          "speak": "la ventana",
+          "options": [
+            "the window",
+            "the key",
+            "the house",
+            "the neighbor"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w37"
+        },
+        {
+          "id": "es-u3-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"the key\"?",
+          "options": [
+            "la llave",
+            "la casa",
+            "la habitación",
+            "la ventana"
+          ],
+          "answer": 0,
+          "wordId": "es-u3-w38"
+        },
+        {
+          "id": "es-u3-l5-s2",
+          "type": "translate",
+          "prompt": "The house is clean",
+          "answer": [
+            "La",
+            "casa",
+            "está",
+            "limpia"
+          ],
+          "bank": [
+            "está",
+            "sucia",
+            "casa",
+            "La",
+            "habitación",
+            "limpia"
+          ],
+          "wordIds": []
+        },
+        {
+          "id": "es-u3-w39-te",
+          "type": "mc",
+          "prompt": "What does \"limpio\" mean?",
+          "speak": "limpio",
+          "options": [
+            "the room",
+            "clean",
+            "the neighbor",
+            "the window"
+          ],
+          "answer": 1,
+          "wordId": "es-u3-w39"
+        },
+        {
+          "id": "es-u3-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"the neighbor\"?",
+          "options": [
+            "la puerta",
+            "la cocina",
+            "el vecino",
+            "limpio"
+          ],
+          "answer": 2,
+          "wordId": "es-u3-w40"
+        },
+        {
+          "id": "es-u3-l5-s3",
+          "type": "translate",
+          "prompt": "Open the window please",
+          "answer": [
+            "Abra",
+            "la",
+            "ventana",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "la",
+            "puerta",
+            "ventana",
+            "cierre",
+            "Abra",
+            "favor",
+            "por"
+          ],
+          "wordIds": []
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "es-u3-cp",
+    "title": "Unit 3 checkpoint",
+    "pool": [
+      {
+        "id": "es-cp-es-u3-w1",
+        "type": "mc",
+        "prompt": "What does \"el trabajo\" mean?",
+        "speak": "el trabajo",
+        "options": [
+          "the pain",
+          "to try on",
+          "the salary",
+          "the job"
+        ],
+        "answer": 3,
+        "wordId": "es-u3-w1"
+      },
+      {
+        "id": "es-cp-es-u3-w2",
+        "type": "mc",
+        "prompt": "How do you say \"the office\"?",
+        "options": [
+          "la talla",
+          "la oficina",
+          "la reunión",
+          "el salario"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w2"
+      },
+      {
+        "id": "es-cp-es-u3-w3",
+        "type": "mc",
+        "prompt": "What does \"el jefe\" mean?",
+        "speak": "el jefe",
+        "options": [
+          "the room",
+          "the boss",
+          "the meeting",
+          "the stomach"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w3"
+      },
+      {
+        "id": "es-cp-es-u3-w4",
+        "type": "mc",
+        "prompt": "How do you say \"the colleague\"?",
+        "options": [
+          "la talla",
+          "el colega",
+          "los zapatos",
+          "el salario"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w4"
+      },
+      {
+        "id": "es-cp-es-u3-w5",
+        "type": "mc",
+        "prompt": "What does \"la reunión\" mean?",
+        "speak": "la reunión",
+        "options": [
+          "the colleague",
+          "a message",
+          "the shirt",
+          "the meeting"
+        ],
+        "answer": 3,
+        "wordId": "es-u3-w5"
+      },
+      {
+        "id": "es-cp-es-u3-w6",
+        "type": "mc",
+        "prompt": "How do you say \"to work\"?",
+        "options": [
+          "la ventana",
+          "trabajar",
+          "la cocina",
+          "la reunión"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w6"
+      },
+      {
+        "id": "es-cp-es-u3-w7",
+        "type": "mc",
+        "prompt": "What does \"el salario\" mean?",
+        "speak": "el salario",
+        "options": [
+          "the phone",
+          "the key",
+          "the salary",
+          "to work"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w7"
+      },
+      {
+        "id": "es-cp-es-u3-w8",
+        "type": "mc",
+        "prompt": "How do you say \"busy\"?",
+        "options": [
+          "la cabeza",
+          "ocupado",
+          "probarse",
+          "la reunión"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w8"
+      },
+      {
+        "id": "es-cp-es-u3-w9",
+        "type": "mc",
+        "prompt": "What does \"el teléfono\" mean?",
+        "speak": "el teléfono",
+        "options": [
+          "the phone",
+          "the office",
+          "sick",
+          "the stomach"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w9"
+      },
+      {
+        "id": "es-cp-es-u3-w10",
+        "type": "mc",
+        "prompt": "How do you say \"to call\"?",
+        "options": [
+          "un mensaje",
+          "llamar",
+          "más tarde",
+          "los zapatos"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w10"
+      },
+      {
+        "id": "es-cp-es-u3-w11",
+        "type": "mc",
+        "prompt": "What does \"el número\" mean?",
+        "speak": "el número",
+        "options": [
+          "the number",
+          "the dress",
+          "to call",
+          "the stomach"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w11"
+      },
+      {
+        "id": "es-cp-es-u3-w12",
+        "type": "mc",
+        "prompt": "How do you say \"to answer\"?",
+        "options": [
+          "el estómago",
+          "responder",
+          "la cocina",
+          "la casa"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w12"
+      },
+      {
+        "id": "es-cp-es-u3-w13",
+        "type": "mc",
+        "prompt": "What does \"un mensaje\" mean?",
+        "speak": "un mensaje",
+        "options": [
+          "busy",
+          "the meeting",
+          "a message",
+          "big"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w13"
+      },
+      {
+        "id": "es-cp-es-u3-w14",
+        "type": "mc",
+        "prompt": "How do you say \"to wait\"?",
+        "options": [
+          "esperar",
+          "sentirse",
+          "el vestido",
+          "la cabeza"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w14"
+      },
+      {
+        "id": "es-cp-es-u3-w15",
+        "type": "mc",
+        "prompt": "What does \"colgar\" mean?",
+        "speak": "colgar",
+        "options": [
+          "to hang up",
+          "the hand",
+          "the kitchen",
+          "the window"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w15"
+      },
+      {
+        "id": "es-cp-es-u3-w16",
+        "type": "mc",
+        "prompt": "How do you say \"later\"?",
+        "options": [
+          "más tarde",
+          "responder",
+          "esperar",
+          "el vestido"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w16"
+      },
+      {
+        "id": "es-cp-es-u3-w17",
+        "type": "mc",
+        "prompt": "What does \"la camisa\" mean?",
+        "speak": "la camisa",
+        "options": [
+          "the window",
+          "the shirt",
+          "the key",
+          "the phone"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w17"
+      },
+      {
+        "id": "es-cp-es-u3-w18",
+        "type": "mc",
+        "prompt": "How do you say \"the shoes\"?",
+        "options": [
+          "la oficina",
+          "los zapatos",
+          "el vecino",
+          "la mano"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w18"
+      },
+      {
+        "id": "es-cp-es-u3-w19",
+        "type": "mc",
+        "prompt": "What does \"la talla\" mean?",
+        "speak": "la talla",
+        "options": [
+          "the room",
+          "the window",
+          "to answer",
+          "the size"
+        ],
+        "answer": 3,
+        "wordId": "es-u3-w19"
+      },
+      {
+        "id": "es-cp-es-u3-w20",
+        "type": "mc",
+        "prompt": "How do you say \"to try on\"?",
+        "options": [
+          "el número",
+          "el vecino",
+          "probarse",
+          "el médico"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w20"
+      },
+      {
+        "id": "es-cp-es-u3-w21",
+        "type": "mc",
+        "prompt": "What does \"el color\" mean?",
+        "speak": "el color",
+        "options": [
+          "the pharmacy",
+          "the color",
+          "the number",
+          "clean"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w21"
+      },
+      {
+        "id": "es-cp-es-u3-w22",
+        "type": "mc",
+        "prompt": "How do you say \"the dress\"?",
+        "options": [
+          "el vestido",
+          "la cabeza",
+          "la llave",
+          "la puerta"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w22"
+      },
+      {
+        "id": "es-cp-es-u3-w23",
+        "type": "mc",
+        "prompt": "What does \"grande\" mean?",
+        "speak": "grande",
+        "options": [
+          "the color",
+          "big",
+          "busy",
+          "sick"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w23"
+      },
+      {
+        "id": "es-cp-es-u3-w24",
+        "type": "mc",
+        "prompt": "How do you say \"small\"?",
+        "options": [
+          "la farmacia",
+          "pequeño",
+          "la casa",
+          "probarse"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w24"
+      },
+      {
+        "id": "es-cp-es-u3-w25",
+        "type": "mc",
+        "prompt": "What does \"la cabeza\" mean?",
+        "speak": "la cabeza",
+        "options": [
+          "the salary",
+          "sick",
+          "the meeting",
+          "the head"
+        ],
+        "answer": 3,
+        "wordId": "es-u3-w25"
+      },
+      {
+        "id": "es-cp-es-u3-w26",
+        "type": "mc",
+        "prompt": "How do you say \"the hand\"?",
+        "options": [
+          "el número",
+          "llamar",
+          "la mano",
+          "la puerta"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w26"
+      },
+      {
+        "id": "es-cp-es-u3-w27",
+        "type": "mc",
+        "prompt": "What does \"el estómago\" mean?",
+        "speak": "el estómago",
+        "options": [
+          "the pharmacy",
+          "the dress",
+          "the stomach",
+          "the job"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w27"
+      },
+      {
+        "id": "es-cp-es-u3-w28",
+        "type": "mc",
+        "prompt": "How do you say \"sick\"?",
+        "options": [
+          "limpio",
+          "enfermo",
+          "los zapatos",
+          "ocupado"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w28"
+      },
+      {
+        "id": "es-cp-es-u3-w29",
+        "type": "mc",
+        "prompt": "What does \"el médico\" mean?",
+        "speak": "el médico",
+        "options": [
+          "to answer",
+          "big",
+          "the doctor",
+          "the door"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w29"
+      },
+      {
+        "id": "es-cp-es-u3-w30",
+        "type": "mc",
+        "prompt": "How do you say \"the pharmacy\"?",
+        "options": [
+          "la farmacia",
+          "la mano",
+          "un mensaje",
+          "el estómago"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w30"
+      },
+      {
+        "id": "es-cp-es-u3-w31",
+        "type": "mc",
+        "prompt": "What does \"el dolor\" mean?",
+        "speak": "el dolor",
+        "options": [
+          "the boss",
+          "the color",
+          "the pain",
+          "the hand"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w31"
+      },
+      {
+        "id": "es-cp-es-u3-w32",
+        "type": "mc",
+        "prompt": "How do you say \"to feel\"?",
+        "options": [
+          "el vestido",
+          "sentirse",
+          "el médico",
+          "el salario"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w32"
+      },
+      {
+        "id": "es-cp-es-u3-w33",
+        "type": "mc",
+        "prompt": "What does \"la casa\" mean?",
+        "speak": "la casa",
+        "options": [
+          "to call",
+          "a message",
+          "the boss",
+          "the house"
+        ],
+        "answer": 3,
+        "wordId": "es-u3-w33"
+      },
+      {
+        "id": "es-cp-es-u3-w34",
+        "type": "mc",
+        "prompt": "How do you say \"the room\"?",
+        "options": [
+          "la habitación",
+          "sentirse",
+          "la mano",
+          "la cabeza"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w34"
+      },
+      {
+        "id": "es-cp-es-u3-w35",
+        "type": "mc",
+        "prompt": "What does \"la cocina\" mean?",
+        "speak": "la cocina",
+        "options": [
+          "to answer",
+          "the kitchen",
+          "to call",
+          "the room"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w35"
+      },
+      {
+        "id": "es-cp-es-u3-w36",
+        "type": "mc",
+        "prompt": "How do you say \"the door\"?",
+        "options": [
+          "la camisa",
+          "el número",
+          "la puerta",
+          "sentirse"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w36"
+      },
+      {
+        "id": "es-cp-es-u3-w37",
+        "type": "mc",
+        "prompt": "What does \"la ventana\" mean?",
+        "speak": "la ventana",
+        "options": [
+          "the shoes",
+          "the meeting",
+          "the job",
+          "the window"
+        ],
+        "answer": 3,
+        "wordId": "es-u3-w37"
+      },
+      {
+        "id": "es-cp-es-u3-w38",
+        "type": "mc",
+        "prompt": "How do you say \"the key\"?",
+        "options": [
+          "la llave",
+          "la mano",
+          "grande",
+          "la casa"
+        ],
+        "answer": 0,
+        "wordId": "es-u3-w38"
+      },
+      {
+        "id": "es-cp-es-u3-w39",
+        "type": "mc",
+        "prompt": "What does \"limpio\" mean?",
+        "speak": "limpio",
+        "options": [
+          "the kitchen",
+          "clean",
+          "the dress",
+          "the size"
+        ],
+        "answer": 1,
+        "wordId": "es-u3-w39"
+      },
+      {
+        "id": "es-cp-es-u3-w40",
+        "type": "mc",
+        "prompt": "How do you say \"the neighbor\"?",
+        "options": [
+          "la oficina",
+          "el número",
+          "el vecino",
+          "el colega"
+        ],
+        "answer": 2,
+        "wordId": "es-u3-w40"
+      },
+      {
+        "id": "es-cp-u3-l1-s1",
+        "type": "translate",
+        "prompt": "I work every day",
+        "answer": [
+          "Trabajo",
+          "todos",
+          "los",
+          "días"
+        ],
+        "bank": [
+          "siempre",
+          "días",
+          "oficina",
+          "Trabajo",
+          "los",
+          "todos"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l1-s2",
+        "type": "translate",
+        "prompt": "I have a meeting",
+        "answer": [
+          "Tengo",
+          "una",
+          "reunión"
+        ],
+        "bank": [
+          "reunión",
+          "colega",
+          "una",
+          "jefe",
+          "Tengo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l1-s3",
+        "type": "translate",
+        "prompt": "I am very busy",
+        "answer": [
+          "Estoy",
+          "muy",
+          "ocupado"
+        ],
+        "bank": [
+          "feliz",
+          "muy",
+          "Estoy",
+          "cansado",
+          "ocupado"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l2-s1",
+        "type": "translate",
+        "prompt": "I will call you later",
+        "answer": [
+          "Te",
+          "llamo",
+          "más",
+          "tarde"
+        ],
+        "bank": [
+          "más",
+          "ahora",
+          "tarde",
+          "Te",
+          "mañana",
+          "llamo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l2-s2",
+        "type": "translate",
+        "prompt": "Please wait a moment",
+        "answer": [
+          "Espere",
+          "un",
+          "momento",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "responda",
+          "cuelgue",
+          "momento",
+          "Espere",
+          "un",
+          "favor",
+          "por"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l2-s3",
+        "type": "translate",
+        "prompt": "Leave a message",
+        "answer": [
+          "Deje",
+          "un",
+          "mensaje"
+        ],
+        "bank": [
+          "un",
+          "número",
+          "Deje",
+          "mensaje",
+          "teléfono"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l3-s1",
+        "type": "translate",
+        "prompt": "I want to try this on",
+        "answer": [
+          "Quiero",
+          "probarme",
+          "esto"
+        ],
+        "bank": [
+          "probarme",
+          "esto",
+          "comprar",
+          "Quiero",
+          "camisa"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l3-s2",
+        "type": "translate",
+        "prompt": "This shirt is too big",
+        "answer": [
+          "Esta",
+          "camisa",
+          "es",
+          "muy",
+          "grande"
+        ],
+        "bank": [
+          "pequeña",
+          "camisa",
+          "Esta",
+          "es",
+          "grande",
+          "muy",
+          "vestido"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l3-s3",
+        "type": "translate",
+        "prompt": "I like this color",
+        "answer": [
+          "Me",
+          "gusta",
+          "este",
+          "color"
+        ],
+        "bank": [
+          "talla",
+          "este",
+          "gusta",
+          "vestido",
+          "Me",
+          "color"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l4-s1",
+        "type": "translate",
+        "prompt": "I am sick",
+        "answer": [
+          "Estoy",
+          "enfermo"
+        ],
+        "bank": [
+          "feliz",
+          "enfermo",
+          "cansado",
+          "Estoy"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l4-s2",
+        "type": "translate",
+        "prompt": "My head hurts",
+        "answer": [
+          "Me",
+          "duele",
+          "la",
+          "cabeza"
+        ],
+        "bank": [
+          "estómago",
+          "cabeza",
+          "mano",
+          "duele",
+          "la",
+          "Me"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l4-s3",
+        "type": "translate",
+        "prompt": "I need a doctor",
+        "answer": [
+          "Necesito",
+          "un",
+          "médico"
+        ],
+        "bank": [
+          "farmacia",
+          "Necesito",
+          "médico",
+          "dolor",
+          "un"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l5-s1",
+        "type": "translate",
+        "prompt": "Where is the key",
+        "answer": [
+          "Dónde",
+          "está",
+          "la",
+          "llave"
+        ],
+        "bank": [
+          "la",
+          "puerta",
+          "llave",
+          "está",
+          "Dónde",
+          "ventana"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l5-s2",
+        "type": "translate",
+        "prompt": "The house is clean",
+        "answer": [
+          "La",
+          "casa",
+          "está",
+          "limpia"
+        ],
+        "bank": [
+          "casa",
+          "sucia",
+          "limpia",
+          "habitación",
+          "está",
+          "La"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-l5-s3",
+        "type": "translate",
+        "prompt": "Open the window please",
+        "answer": [
+          "Abra",
+          "la",
+          "ventana",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "cierre",
+          "la",
+          "puerta",
+          "favor",
+          "Abra",
+          "por",
+          "ventana"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-cp-u3-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u3-w8",
+            "target": "ocupado",
+            "english": "busy"
+          },
+          {
+            "wordId": "es-u3-w7",
+            "target": "el salario",
+            "english": "the salary"
+          },
+          {
+            "wordId": "es-u3-w1",
+            "target": "el trabajo",
+            "english": "the job"
+          },
+          {
+            "wordId": "es-u3-w5",
+            "target": "la reunión",
+            "english": "the meeting"
+          },
+          {
+            "wordId": "es-u3-w3",
+            "target": "el jefe",
+            "english": "the boss"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u3-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u3-w11",
+            "target": "el número",
+            "english": "the number"
+          },
+          {
+            "wordId": "es-u3-w14",
+            "target": "esperar",
+            "english": "to wait"
+          },
+          {
+            "wordId": "es-u3-w10",
+            "target": "llamar",
+            "english": "to call"
+          },
+          {
+            "wordId": "es-u3-w15",
+            "target": "colgar",
+            "english": "to hang up"
+          },
+          {
+            "wordId": "es-u3-w13",
+            "target": "un mensaje",
+            "english": "a message"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u3-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u3-w21",
+            "target": "el color",
+            "english": "the color"
+          },
+          {
+            "wordId": "es-u3-w24",
+            "target": "pequeño",
+            "english": "small"
+          },
+          {
+            "wordId": "es-u3-w22",
+            "target": "el vestido",
+            "english": "the dress"
+          },
+          {
+            "wordId": "es-u3-w17",
+            "target": "la camisa",
+            "english": "the shirt"
+          },
+          {
+            "wordId": "es-u3-w19",
+            "target": "la talla",
+            "english": "the size"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u3-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u3-w27",
+            "target": "el estómago",
+            "english": "the stomach"
+          },
+          {
+            "wordId": "es-u3-w28",
+            "target": "enfermo",
+            "english": "sick"
+          },
+          {
+            "wordId": "es-u3-w26",
+            "target": "la mano",
+            "english": "the hand"
+          },
+          {
+            "wordId": "es-u3-w31",
+            "target": "el dolor",
+            "english": "the pain"
+          },
+          {
+            "wordId": "es-u3-w32",
+            "target": "sentirse",
+            "english": "to feel"
+          }
+        ]
+      },
+      {
+        "id": "es-cp-u3-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-u3-w38",
+            "target": "la llave",
+            "english": "the key"
+          },
+          {
+            "wordId": "es-u3-w39",
+            "target": "limpio",
+            "english": "clean"
+          },
+          {
+            "wordId": "es-u3-w35",
+            "target": "la cocina",
+            "english": "the kitchen"
+          },
+          {
+            "wordId": "es-u3-w40",
+            "target": "el vecino",
+            "english": "the neighbor"
+          },
+          {
+            "wordId": "es-u3-w36",
+            "target": "la puerta",
+            "english": "the door"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}
