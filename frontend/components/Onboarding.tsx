@@ -5,9 +5,9 @@ import { ArrowRight01Icon, Coins01Icon, BookOpen01Icon, Loading03Icon, LockIcon,
 import { useApi } from "@/lib/useApi";
 
 type Course = "fr" | "es";
-const LANGS: { code: Course; flag: string; name: string; native: string; note: string }[] = [
-  { code: "fr", flag: "fi-fr", name: "French", native: "Français", note: "For work and trade across West and Central Africa" },
-  { code: "es", flag: "fi-es", name: "Spanish", native: "Español", note: "Latin American Spanish for work, travel and remote teams" },
+const LANGS: { code: Course; flag: string; name: string; native: string }[] = [
+  { code: "fr", flag: "fi-fr", name: "French", native: "Français" },
+  { code: "es", flag: "fi-es", name: "Spanish", native: "Español" },
 ];
 
 const HOW: { Icon: typeof Coins01Icon; title: string; body: string }[] = [
@@ -55,7 +55,6 @@ export function Onboarding() {
                     <span className={`fi ${l.flag} !h-12 !w-16 shrink-0 rounded-md border border-black/10 bg-cover`} aria-hidden />
                     <span className="flex-1">
                       <span className="block text-xl font-bold tracking-tight">{l.name} <span className={`text-base font-medium ${on ? "" : "text-muted"}`}>{l.native}</span></span>
-                      <span className={`mt-0.5 block text-sm ${on ? "" : "text-muted"}`}>{l.note}</span>
                     </span>
                     {on && <Tick02Icon size={22} strokeWidth={2} />}
                   </button>
