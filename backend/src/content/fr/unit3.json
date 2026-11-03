@@ -7,7 +7,7 @@
   "lessons": [
     {
       "id": "fr-u3-l1",
-      "title": "Work and jobs",
+      "title": "Work and jobs, part 1",
       "theme": "work and jobs",
       "exercises": [
         {
@@ -38,6 +38,33 @@
           "wordId": "fr-u3-w2"
         },
         {
+          "id": "fr-u3-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w1",
+              "target": "le travail",
+              "english": "the job"
+            },
+            {
+              "wordId": "fr-u3-w2",
+              "target": "le bureau",
+              "english": "the office"
+            },
+            {
+              "wordId": "fr-u3-w3",
+              "target": "le patron",
+              "english": "the boss"
+            },
+            {
+              "wordId": "fr-u3-w4",
+              "target": "le collègue",
+              "english": "the colleague"
+            }
+          ]
+        },
+        {
           "id": "fr-u3-w3-te",
           "type": "mc",
           "prompt": "What does \"le patron\" mean?",
@@ -52,31 +79,17 @@
           "wordId": "fr-u3-w3"
         },
         {
-          "id": "fr-u3-l1-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-u3-w1",
-              "target": "le travail",
-              "english": "the job"
-            },
-            {
-              "wordId": "fr-u3-w7",
-              "target": "le salaire",
-              "english": "the salary"
-            },
-            {
-              "wordId": "fr-u3-w5",
-              "target": "la réunion",
-              "english": "the meeting"
-            },
-            {
-              "wordId": "fr-u3-w2",
-              "target": "le bureau",
-              "english": "the office"
-            }
-          ]
+          "id": "fr-u3-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"the colleague\"?",
+          "options": [
+            "le travail",
+            "le salaire",
+            "le collègue",
+            "la réunion"
+          ],
+          "answer": 2,
+          "wordId": "fr-u3-w4"
         },
         {
           "id": "fr-u3-l1-s1",
@@ -91,40 +104,34 @@
           ],
           "bank": [
             "Je",
-            "tous",
             "les",
-            "souvent",
+            "travaille",
             "jours",
             "bureau",
-            "travaille"
+            "tous",
+            "souvent"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u3-w4-et",
-          "type": "mc",
-          "prompt": "How do you say \"the colleague\"?",
-          "options": [
-            "le travail",
-            "le salaire",
-            "le bureau",
-            "le collègue"
-          ],
-          "answer": 3,
-          "wordId": "fr-u3-w4"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u3-l2",
+      "title": "Work and jobs, part 2",
+      "theme": "work and jobs",
+      "exercises": [
         {
           "id": "fr-u3-w5-te",
           "type": "mc",
           "prompt": "What does \"la réunion\" mean?",
           "speak": "la réunion",
           "options": [
-            "the meeting",
             "the colleague",
-            "to work",
-            "the salary"
+            "the boss",
+            "the job",
+            "the meeting"
           ],
-          "answer": 0,
+          "answer": 3,
           "wordId": "fr-u3-w5"
         },
         {
@@ -132,13 +139,67 @@
           "type": "mc",
           "prompt": "How do you say \"to work\"?",
           "options": [
-            "le salaire",
+            "la réunion",
             "occupé",
             "travailler",
-            "la réunion"
+            "le collègue"
           ],
           "answer": 2,
           "wordId": "fr-u3-w6"
+        },
+        {
+          "id": "fr-u3-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w5",
+              "target": "la réunion",
+              "english": "the meeting"
+            },
+            {
+              "wordId": "fr-u3-w6",
+              "target": "travailler",
+              "english": "to work"
+            },
+            {
+              "wordId": "fr-u3-w7",
+              "target": "le salaire",
+              "english": "the salary"
+            },
+            {
+              "wordId": "fr-u3-w8",
+              "target": "occupé",
+              "english": "busy"
+            }
+          ]
+        },
+        {
+          "id": "fr-u3-w7-te",
+          "type": "mc",
+          "prompt": "What does \"le salaire\" mean?",
+          "speak": "le salaire",
+          "options": [
+            "busy",
+            "the salary",
+            "the boss",
+            "the colleague"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w7"
+        },
+        {
+          "id": "fr-u3-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"busy\"?",
+          "options": [
+            "le bureau",
+            "occupé",
+            "le salaire",
+            "la réunion"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w8"
         },
         {
           "id": "fr-u3-l1-s2",
@@ -150,66 +211,19 @@
             "réunion"
           ],
           "bank": [
-            "patron",
-            "une",
             "collègue",
+            "réunion",
             "J'ai",
-            "réunion"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u3-w7-te",
-          "type": "mc",
-          "prompt": "What does \"le salaire\" mean?",
-          "speak": "le salaire",
-          "options": [
-            "to work",
-            "the salary",
-            "the job",
-            "the office"
-          ],
-          "answer": 1,
-          "wordId": "fr-u3-w7"
-        },
-        {
-          "id": "fr-u3-w8-et",
-          "type": "mc",
-          "prompt": "How do you say \"busy\"?",
-          "options": [
-            "la réunion",
-            "occupé",
-            "le bureau",
-            "travailler"
-          ],
-          "answer": 1,
-          "wordId": "fr-u3-w8"
-        },
-        {
-          "id": "fr-u3-l1-s3",
-          "type": "translate",
-          "prompt": "I am very busy",
-          "answer": [
-            "Je",
-            "suis",
-            "très",
-            "occupé"
-          ],
-          "bank": [
-            "fatigué",
-            "content",
-            "suis",
-            "très",
-            "occupé",
-            "Je"
+            "une",
+            "patron"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u3-l2",
-      "title": "Phone calls",
+      "id": "fr-u3-l3",
+      "title": "Phone calls, part 1",
       "theme": "phone calls",
       "exercises": [
         {
@@ -218,10 +232,10 @@
           "prompt": "What does \"le téléphone\" mean?",
           "speak": "le téléphone",
           "options": [
-            "a message",
-            "later",
+            "to answer",
+            "to hang up",
             "the phone",
-            "to call"
+            "a message"
           ],
           "answer": 2,
           "wordId": "fr-u3-w9"
@@ -231,13 +245,40 @@
           "type": "mc",
           "prompt": "How do you say \"to call\"?",
           "options": [
-            "le téléphone",
             "plus tard",
-            "un message",
-            "appeler"
+            "appeler",
+            "le téléphone",
+            "raccrocher"
           ],
-          "answer": 3,
+          "answer": 1,
           "wordId": "fr-u3-w10"
+        },
+        {
+          "id": "fr-u3-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w9",
+              "target": "le téléphone",
+              "english": "the phone"
+            },
+            {
+              "wordId": "fr-u3-w10",
+              "target": "appeler",
+              "english": "to call"
+            },
+            {
+              "wordId": "fr-u3-w11",
+              "target": "le numéro",
+              "english": "the number"
+            },
+            {
+              "wordId": "fr-u3-w12",
+              "target": "répondre",
+              "english": "to answer"
+            }
+          ]
         },
         {
           "id": "fr-u3-w11-te",
@@ -245,40 +286,26 @@
           "prompt": "What does \"le numéro\" mean?",
           "speak": "le numéro",
           "options": [
-            "the phone",
-            "to wait",
             "the number",
-            "to answer"
+            "a message",
+            "to wait",
+            "the phone"
           ],
-          "answer": 2,
+          "answer": 0,
           "wordId": "fr-u3-w11"
         },
         {
-          "id": "fr-u3-l2-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-u3-w10",
-              "target": "appeler",
-              "english": "to call"
-            },
-            {
-              "wordId": "fr-u3-w16",
-              "target": "plus tard",
-              "english": "later"
-            },
-            {
-              "wordId": "fr-u3-w14",
-              "target": "attendre",
-              "english": "to wait"
-            },
-            {
-              "wordId": "fr-u3-w13",
-              "target": "un message",
-              "english": "a message"
-            }
-          ]
+          "id": "fr-u3-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"to answer\"?",
+          "options": [
+            "le numéro",
+            "répondre",
+            "attendre",
+            "le téléphone"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w12"
         },
         {
           "id": "fr-u3-l2-s1",
@@ -292,41 +319,35 @@
             "tard"
           ],
           "bank": [
-            "appelle",
-            "Je",
-            "maintenant",
-            "tard",
             "demain",
+            "appelle",
+            "maintenant",
             "vous",
+            "tard",
+            "Je",
             "plus"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u3-w12-et",
-          "type": "mc",
-          "prompt": "How do you say \"to answer\"?",
-          "options": [
-            "un message",
-            "plus tard",
-            "répondre",
-            "raccrocher"
-          ],
-          "answer": 2,
-          "wordId": "fr-u3-w12"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u3-l4",
+      "title": "Phone calls, part 2",
+      "theme": "phone calls",
+      "exercises": [
         {
           "id": "fr-u3-w13-te",
           "type": "mc",
           "prompt": "What does \"un message\" mean?",
           "speak": "un message",
           "options": [
+            "the number",
             "a message",
-            "to call",
-            "to answer",
-            "to wait"
+            "to hang up",
+            "to call"
           ],
-          "answer": 0,
+          "answer": 1,
           "wordId": "fr-u3-w13"
         },
         {
@@ -334,13 +355,67 @@
           "type": "mc",
           "prompt": "How do you say \"to wait\"?",
           "options": [
+            "appeler",
             "raccrocher",
-            "le numéro",
             "répondre",
             "attendre"
           ],
           "answer": 3,
           "wordId": "fr-u3-w14"
+        },
+        {
+          "id": "fr-u3-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w13",
+              "target": "un message",
+              "english": "a message"
+            },
+            {
+              "wordId": "fr-u3-w14",
+              "target": "attendre",
+              "english": "to wait"
+            },
+            {
+              "wordId": "fr-u3-w15",
+              "target": "raccrocher",
+              "english": "to hang up"
+            },
+            {
+              "wordId": "fr-u3-w16",
+              "target": "plus tard",
+              "english": "later"
+            }
+          ]
+        },
+        {
+          "id": "fr-u3-w15-te",
+          "type": "mc",
+          "prompt": "What does \"raccrocher\" mean?",
+          "speak": "raccrocher",
+          "options": [
+            "to hang up",
+            "a message",
+            "to answer",
+            "to wait"
+          ],
+          "answer": 0,
+          "wordId": "fr-u3-w15"
+        },
+        {
+          "id": "fr-u3-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"later\"?",
+          "options": [
+            "attendre",
+            "le numéro",
+            "plus tard",
+            "un message"
+          ],
+          "answer": 2,
+          "wordId": "fr-u3-w16"
         },
         {
           "id": "fr-u3-l2-s2",
@@ -355,67 +430,22 @@
             "plaît"
           ],
           "bank": [
-            "un",
-            "s'il",
             "moment",
             "raccrochez",
             "vous",
+            "s'il",
             "Attendez",
             "répondez",
-            "plaît"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u3-w15-te",
-          "type": "mc",
-          "prompt": "What does \"raccrocher\" mean?",
-          "speak": "raccrocher",
-          "options": [
-            "to answer",
-            "later",
-            "to hang up",
-            "to wait"
-          ],
-          "answer": 2,
-          "wordId": "fr-u3-w15"
-        },
-        {
-          "id": "fr-u3-w16-et",
-          "type": "mc",
-          "prompt": "How do you say \"later\"?",
-          "options": [
-            "plus tard",
-            "le numéro",
-            "répondre",
-            "un message"
-          ],
-          "answer": 0,
-          "wordId": "fr-u3-w16"
-        },
-        {
-          "id": "fr-u3-l2-s3",
-          "type": "translate",
-          "prompt": "Leave a message",
-          "answer": [
-            "Laissez",
-            "un",
-            "message"
-          ],
-          "bank": [
-            "numéro",
-            "téléphone",
-            "message",
-            "un",
-            "Laissez"
+            "plaît",
+            "un"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u3-l3",
-      "title": "Shopping and clothes",
+      "id": "fr-u3-l5",
+      "title": "Shopping and clothes, part 1",
       "theme": "shopping and clothes",
       "exercises": [
         {
@@ -424,10 +454,10 @@
           "prompt": "What does \"la chemise\" mean?",
           "speak": "la chemise",
           "options": [
-            "to try on",
+            "the color",
             "the shirt",
-            "small",
-            "the shoes"
+            "the dress",
+            "big"
           ],
           "answer": 1,
           "wordId": "fr-u3-w17"
@@ -437,13 +467,40 @@
           "type": "mc",
           "prompt": "How do you say \"the shoes\"?",
           "options": [
-            "la taille",
-            "grand",
-            "petit",
-            "les chaussures"
+            "la couleur",
+            "les chaussures",
+            "essayer",
+            "grand"
           ],
-          "answer": 3,
+          "answer": 1,
           "wordId": "fr-u3-w18"
+        },
+        {
+          "id": "fr-u3-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w17",
+              "target": "la chemise",
+              "english": "the shirt"
+            },
+            {
+              "wordId": "fr-u3-w18",
+              "target": "les chaussures",
+              "english": "the shoes"
+            },
+            {
+              "wordId": "fr-u3-w19",
+              "target": "la taille",
+              "english": "the size"
+            },
+            {
+              "wordId": "fr-u3-w20",
+              "target": "essayer",
+              "english": "to try on"
+            }
+          ]
         },
         {
           "id": "fr-u3-w19-te",
@@ -452,39 +509,25 @@
           "speak": "la taille",
           "options": [
             "the shoes",
-            "to try on",
             "the size",
-            "the shirt"
+            "the dress",
+            "big"
           ],
-          "answer": 2,
+          "answer": 1,
           "wordId": "fr-u3-w19"
         },
         {
-          "id": "fr-u3-l3-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-u3-w23",
-              "target": "grand",
-              "english": "big"
-            },
-            {
-              "wordId": "fr-u3-w21",
-              "target": "la couleur",
-              "english": "the color"
-            },
-            {
-              "wordId": "fr-u3-w17",
-              "target": "la chemise",
-              "english": "the shirt"
-            },
-            {
-              "wordId": "fr-u3-w22",
-              "target": "la robe",
-              "english": "the dress"
-            }
-          ]
+          "id": "fr-u3-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"to try on\"?",
+          "options": [
+            "la chemise",
+            "essayer",
+            "la taille",
+            "petit"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w20"
         },
         {
           "id": "fr-u3-l3-s1",
@@ -497,38 +540,32 @@
             "ça"
           ],
           "bank": [
-            "acheter",
-            "Je",
+            "essayer",
             "veux",
-            "ça",
             "chemise",
-            "essayer"
+            "Je",
+            "ça",
+            "acheter"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u3-w20-et",
-          "type": "mc",
-          "prompt": "How do you say \"to try on\"?",
-          "options": [
-            "les chaussures",
-            "essayer",
-            "la chemise",
-            "petit"
-          ],
-          "answer": 1,
-          "wordId": "fr-u3-w20"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u3-l6",
+      "title": "Shopping and clothes, part 2",
+      "theme": "shopping and clothes",
+      "exercises": [
         {
           "id": "fr-u3-w21-te",
           "type": "mc",
           "prompt": "What does \"la couleur\" mean?",
           "speak": "la couleur",
           "options": [
-            "big",
             "the shoes",
+            "the size",
             "the color",
-            "the size"
+            "the shirt"
           ],
           "answer": 2,
           "wordId": "fr-u3-w21"
@@ -538,13 +575,67 @@
           "type": "mc",
           "prompt": "How do you say \"the dress\"?",
           "options": [
+            "la chemise",
+            "la robe",
+            "la couleur",
+            "petit"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w22"
+        },
+        {
+          "id": "fr-u3-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w21",
+              "target": "la couleur",
+              "english": "the color"
+            },
+            {
+              "wordId": "fr-u3-w22",
+              "target": "la robe",
+              "english": "the dress"
+            },
+            {
+              "wordId": "fr-u3-w23",
+              "target": "grand",
+              "english": "big"
+            },
+            {
+              "wordId": "fr-u3-w24",
+              "target": "petit",
+              "english": "small"
+            }
+          ]
+        },
+        {
+          "id": "fr-u3-w23-te",
+          "type": "mc",
+          "prompt": "What does \"grand\" mean?",
+          "speak": "grand",
+          "options": [
+            "the color",
+            "big",
+            "the shirt",
+            "to try on"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w23"
+        },
+        {
+          "id": "fr-u3-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"small\"?",
+          "options": [
             "la robe",
             "les chaussures",
-            "la chemise",
-            "la taille"
+            "grand",
+            "petit"
           ],
-          "answer": 0,
-          "wordId": "fr-u3-w22"
+          "answer": 3,
+          "wordId": "fr-u3-w24"
         },
         {
           "id": "fr-u3-l3-s2",
@@ -558,66 +649,21 @@
             "grande"
           ],
           "bank": [
-            "trop",
-            "chemise",
             "Cette",
+            "robe",
+            "est",
+            "trop",
             "grande",
-            "petite",
-            "robe",
-            "est"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u3-w23-te",
-          "type": "mc",
-          "prompt": "What does \"grand\" mean?",
-          "speak": "grand",
-          "options": [
-            "big",
-            "the size",
-            "to try on",
-            "small"
-          ],
-          "answer": 0,
-          "wordId": "fr-u3-w23"
-        },
-        {
-          "id": "fr-u3-w24-et",
-          "type": "mc",
-          "prompt": "How do you say \"small\"?",
-          "options": [
-            "la robe",
-            "grand",
-            "la taille",
-            "petit"
-          ],
-          "answer": 3,
-          "wordId": "fr-u3-w24"
-        },
-        {
-          "id": "fr-u3-l3-s3",
-          "type": "translate",
-          "prompt": "I like this color",
-          "answer": [
-            "J'aime",
-            "cette",
-            "couleur"
-          ],
-          "bank": [
-            "taille",
-            "couleur",
-            "robe",
-            "J'aime",
-            "cette"
+            "chemise",
+            "petite"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u3-l4",
-      "title": "Health and body",
+      "id": "fr-u3-l7",
+      "title": "Health and body, part 1",
       "theme": "health and body",
       "exercises": [
         {
@@ -626,12 +672,12 @@
           "prompt": "What does \"la tête\" mean?",
           "speak": "la tête",
           "options": [
-            "the doctor",
-            "the pain",
+            "the head",
             "sick",
-            "the head"
+            "the doctor",
+            "the hand"
           ],
-          "answer": 3,
+          "answer": 0,
           "wordId": "fr-u3-w25"
         },
         {
@@ -639,13 +685,40 @@
           "type": "mc",
           "prompt": "How do you say \"the hand\"?",
           "options": [
+            "malade",
             "se sentir",
-            "le médecin",
-            "la tête",
+            "le ventre",
             "la main"
           ],
           "answer": 3,
           "wordId": "fr-u3-w26"
+        },
+        {
+          "id": "fr-u3-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w25",
+              "target": "la tête",
+              "english": "the head"
+            },
+            {
+              "wordId": "fr-u3-w26",
+              "target": "la main",
+              "english": "the hand"
+            },
+            {
+              "wordId": "fr-u3-w27",
+              "target": "le ventre",
+              "english": "the stomach"
+            },
+            {
+              "wordId": "fr-u3-w28",
+              "target": "malade",
+              "english": "sick"
+            }
+          ]
         },
         {
           "id": "fr-u3-w27-te",
@@ -653,40 +726,26 @@
           "prompt": "What does \"le ventre\" mean?",
           "speak": "le ventre",
           "options": [
+            "the doctor",
+            "the hand",
             "the stomach",
-            "the head",
-            "the pain",
-            "sick"
+            "to feel"
           ],
-          "answer": 0,
+          "answer": 2,
           "wordId": "fr-u3-w27"
         },
         {
-          "id": "fr-u3-l4-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-u3-w27",
-              "target": "le ventre",
-              "english": "the stomach"
-            },
-            {
-              "wordId": "fr-u3-w31",
-              "target": "la douleur",
-              "english": "the pain"
-            },
-            {
-              "wordId": "fr-u3-w30",
-              "target": "la pharmacie",
-              "english": "the pharmacy"
-            },
-            {
-              "wordId": "fr-u3-w26",
-              "target": "la main",
-              "english": "the hand"
-            }
-          ]
+          "id": "fr-u3-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"sick\"?",
+          "options": [
+            "se sentir",
+            "malade",
+            "le médecin",
+            "la douleur"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w28"
         },
         {
           "id": "fr-u3-l4-s1",
@@ -700,37 +759,31 @@
           "bank": [
             "fatigué",
             "malade",
-            "content",
             "Je",
-            "suis"
+            "suis",
+            "content"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u3-w28-et",
-          "type": "mc",
-          "prompt": "How do you say \"sick\"?",
-          "options": [
-            "le médecin",
-            "la tête",
-            "la pharmacie",
-            "malade"
-          ],
-          "answer": 3,
-          "wordId": "fr-u3-w28"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u3-l8",
+      "title": "Health and body, part 2",
+      "theme": "health and body",
+      "exercises": [
         {
           "id": "fr-u3-w29-te",
           "type": "mc",
           "prompt": "What does \"le médecin\" mean?",
           "speak": "le médecin",
           "options": [
-            "the doctor",
             "the stomach",
-            "the pain",
-            "the head"
+            "the hand",
+            "the doctor",
+            "sick"
           ],
-          "answer": 0,
+          "answer": 2,
           "wordId": "fr-u3-w29"
         },
         {
@@ -738,13 +791,67 @@
           "type": "mc",
           "prompt": "How do you say \"the pharmacy\"?",
           "options": [
+            "malade",
             "se sentir",
-            "la main",
             "la pharmacie",
-            "malade"
+            "la douleur"
           ],
           "answer": 2,
           "wordId": "fr-u3-w30"
+        },
+        {
+          "id": "fr-u3-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w29",
+              "target": "le médecin",
+              "english": "the doctor"
+            },
+            {
+              "wordId": "fr-u3-w30",
+              "target": "la pharmacie",
+              "english": "the pharmacy"
+            },
+            {
+              "wordId": "fr-u3-w31",
+              "target": "la douleur",
+              "english": "the pain"
+            },
+            {
+              "wordId": "fr-u3-w32",
+              "target": "se sentir",
+              "english": "to feel"
+            }
+          ]
+        },
+        {
+          "id": "fr-u3-w31-te",
+          "type": "mc",
+          "prompt": "What does \"la douleur\" mean?",
+          "speak": "la douleur",
+          "options": [
+            "the head",
+            "the pain",
+            "the stomach",
+            "the hand"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w31"
+        },
+        {
+          "id": "fr-u3-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"to feel\"?",
+          "options": [
+            "le médecin",
+            "malade",
+            "se sentir",
+            "la main"
+          ],
+          "answer": 2,
+          "wordId": "fr-u3-w32"
         },
         {
           "id": "fr-u3-l4-s2",
@@ -758,68 +865,21 @@
             "tête"
           ],
           "bank": [
+            "main",
             "à",
+            "mal",
             "tête",
             "J'ai",
-            "la",
-            "mal",
-            "main",
-            "ventre"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u3-w31-te",
-          "type": "mc",
-          "prompt": "What does \"la douleur\" mean?",
-          "speak": "la douleur",
-          "options": [
-            "the pain",
-            "to feel",
-            "the hand",
-            "the stomach"
-          ],
-          "answer": 0,
-          "wordId": "fr-u3-w31"
-        },
-        {
-          "id": "fr-u3-w32-et",
-          "type": "mc",
-          "prompt": "How do you say \"to feel\"?",
-          "options": [
-            "se sentir",
-            "la pharmacie",
-            "la main",
-            "malade"
-          ],
-          "answer": 0,
-          "wordId": "fr-u3-w32"
-        },
-        {
-          "id": "fr-u3-l4-s3",
-          "type": "translate",
-          "prompt": "I need a doctor",
-          "answer": [
-            "J'ai",
-            "besoin",
-            "d'un",
-            "médecin"
-          ],
-          "bank": [
-            "pharmacie",
-            "douleur",
-            "d'un",
-            "médecin",
-            "besoin",
-            "J'ai"
+            "ventre",
+            "la"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u3-l5",
-      "title": "House and home",
+      "id": "fr-u3-l9",
+      "title": "House and home, part 1",
       "theme": "house and home",
       "exercises": [
         {
@@ -829,9 +889,9 @@
           "speak": "la maison",
           "options": [
             "the house",
-            "the kitchen",
-            "the door",
-            "the window"
+            "the key",
+            "the room",
+            "the kitchen"
           ],
           "answer": 0,
           "wordId": "fr-u3-w33"
@@ -841,47 +901,33 @@
           "type": "mc",
           "prompt": "How do you say \"the room\"?",
           "options": [
+            "la clé",
+            "la fenêtre",
             "la cuisine",
-            "la maison",
-            "propre",
             "la chambre"
           ],
           "answer": 3,
           "wordId": "fr-u3-w34"
         },
         {
-          "id": "fr-u3-w35-te",
-          "type": "mc",
-          "prompt": "What does \"la cuisine\" mean?",
-          "speak": "la cuisine",
-          "options": [
-            "clean",
-            "the neighbor",
-            "the room",
-            "the kitchen"
-          ],
-          "answer": 3,
-          "wordId": "fr-u3-w35"
-        },
-        {
-          "id": "fr-u3-l5-m",
+          "id": "fr-u3-l9-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "fr-u3-w40",
-              "target": "le voisin",
-              "english": "the neighbor"
+              "wordId": "fr-u3-w33",
+              "target": "la maison",
+              "english": "the house"
             },
             {
-              "wordId": "fr-u3-w37",
-              "target": "la fenêtre",
-              "english": "the window"
+              "wordId": "fr-u3-w34",
+              "target": "la chambre",
+              "english": "the room"
             },
             {
-              "wordId": "fr-u3-w39",
-              "target": "propre",
-              "english": "clean"
+              "wordId": "fr-u3-w35",
+              "target": "la cuisine",
+              "english": "the kitchen"
             },
             {
               "wordId": "fr-u3-w36",
@@ -889,6 +935,33 @@
               "english": "the door"
             }
           ]
+        },
+        {
+          "id": "fr-u3-w35-te",
+          "type": "mc",
+          "prompt": "What does \"la cuisine\" mean?",
+          "speak": "la cuisine",
+          "options": [
+            "the window",
+            "the kitchen",
+            "clean",
+            "the door"
+          ],
+          "answer": 1,
+          "wordId": "fr-u3-w35"
+        },
+        {
+          "id": "fr-u3-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"the door\"?",
+          "options": [
+            "la cuisine",
+            "propre",
+            "la porte",
+            "le voisin"
+          ],
+          "answer": 2,
+          "wordId": "fr-u3-w36"
         },
         {
           "id": "fr-u3-l5-s1",
@@ -901,40 +974,34 @@
             "clé"
           ],
           "bank": [
-            "fenêtre",
             "Où",
             "porte",
+            "fenêtre",
+            "la",
             "est",
-            "clé",
-            "la"
+            "clé"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u3-w36-et",
-          "type": "mc",
-          "prompt": "How do you say \"the door\"?",
-          "options": [
-            "la porte",
-            "la cuisine",
-            "la maison",
-            "propre"
-          ],
-          "answer": 0,
-          "wordId": "fr-u3-w36"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u3-l10",
+      "title": "House and home, part 2",
+      "theme": "house and home",
+      "exercises": [
         {
           "id": "fr-u3-w37-te",
           "type": "mc",
           "prompt": "What does \"la fenêtre\" mean?",
           "speak": "la fenêtre",
           "options": [
+            "the neighbor",
             "the window",
-            "the kitchen",
-            "the key",
-            "the house"
+            "clean",
+            "the door"
           ],
-          "answer": 0,
+          "answer": 1,
           "wordId": "fr-u3-w37"
         },
         {
@@ -942,13 +1009,67 @@
           "type": "mc",
           "prompt": "How do you say \"the key\"?",
           "options": [
-            "la fenêtre",
+            "la clé",
+            "la maison",
             "la porte",
-            "le voisin",
-            "la clé"
+            "la cuisine"
           ],
-          "answer": 3,
+          "answer": 0,
           "wordId": "fr-u3-w38"
+        },
+        {
+          "id": "fr-u3-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u3-w37",
+              "target": "la fenêtre",
+              "english": "the window"
+            },
+            {
+              "wordId": "fr-u3-w38",
+              "target": "la clé",
+              "english": "the key"
+            },
+            {
+              "wordId": "fr-u3-w39",
+              "target": "propre",
+              "english": "clean"
+            },
+            {
+              "wordId": "fr-u3-w40",
+              "target": "le voisin",
+              "english": "the neighbor"
+            }
+          ]
+        },
+        {
+          "id": "fr-u3-w39-te",
+          "type": "mc",
+          "prompt": "What does \"propre\" mean?",
+          "speak": "propre",
+          "options": [
+            "the kitchen",
+            "the room",
+            "clean",
+            "the window"
+          ],
+          "answer": 2,
+          "wordId": "fr-u3-w39"
+        },
+        {
+          "id": "fr-u3-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"the neighbor\"?",
+          "options": [
+            "la cuisine",
+            "la chambre",
+            "le voisin",
+            "propre"
+          ],
+          "answer": 2,
+          "wordId": "fr-u3-w40"
         },
         {
           "id": "fr-u3-l5-s2",
@@ -961,63 +1082,12 @@
             "propre"
           ],
           "bank": [
-            "chambre",
-            "sale",
-            "maison",
+            "La",
             "propre",
+            "maison",
+            "sale",
             "est",
-            "La"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u3-w39-te",
-          "type": "mc",
-          "prompt": "What does \"propre\" mean?",
-          "speak": "propre",
-          "options": [
-            "the neighbor",
-            "the house",
-            "clean",
-            "the door"
-          ],
-          "answer": 2,
-          "wordId": "fr-u3-w39"
-        },
-        {
-          "id": "fr-u3-w40-et",
-          "type": "mc",
-          "prompt": "How do you say \"the neighbor\"?",
-          "options": [
-            "la maison",
-            "le voisin",
-            "la clé",
-            "propre"
-          ],
-          "answer": 1,
-          "wordId": "fr-u3-w40"
-        },
-        {
-          "id": "fr-u3-l5-s3",
-          "type": "translate",
-          "prompt": "Open the window please",
-          "answer": [
-            "Ouvrez",
-            "la",
-            "fenêtre",
-            "s'il",
-            "vous",
-            "plaît"
-          ],
-          "bank": [
-            "s'il",
-            "porte",
-            "plaît",
-            "fermez",
-            "la",
-            "vous",
-            "Ouvrez",
-            "fenêtre"
+            "chambre"
           ],
           "wordIds": []
         }
@@ -1034,12 +1104,12 @@
         "prompt": "What does \"le travail\" mean?",
         "speak": "le travail",
         "options": [
-          "busy",
-          "sick",
+          "the head",
           "the job",
-          "to call"
+          "to wait",
+          "the shirt"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-u3-w1"
       },
       {
@@ -1048,9 +1118,9 @@
         "prompt": "How do you say \"the office\"?",
         "options": [
           "la réunion",
-          "le collègue",
+          "le travail",
           "le bureau",
-          "se sentir"
+          "la main"
         ],
         "answer": 2,
         "wordId": "fr-u3-w2"
@@ -1061,12 +1131,12 @@
         "prompt": "What does \"le patron\" mean?",
         "speak": "le patron",
         "options": [
+          "sick",
           "the boss",
-          "the job",
-          "to feel",
-          "the pharmacy"
+          "the phone",
+          "to hang up"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-u3-w3"
       },
       {
@@ -1074,12 +1144,12 @@
         "type": "mc",
         "prompt": "How do you say \"the colleague\"?",
         "options": [
+          "la clé",
+          "le voisin",
           "le collègue",
-          "le numéro",
-          "la maison",
-          "la pharmacie"
+          "le numéro"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-u3-w4"
       },
       {
@@ -1088,12 +1158,12 @@
         "prompt": "What does \"la réunion\" mean?",
         "speak": "la réunion",
         "options": [
-          "the meeting",
           "the shoes",
-          "the neighbor",
-          "busy"
+          "sick",
+          "later",
+          "the meeting"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-u3-w5"
       },
       {
@@ -1101,12 +1171,12 @@
         "type": "mc",
         "prompt": "How do you say \"to work\"?",
         "options": [
-          "le patron",
-          "travailler",
-          "la fenêtre",
-          "propre"
+          "la pharmacie",
+          "le bureau",
+          "la couleur",
+          "travailler"
         ],
-        "answer": 1,
+        "answer": 3,
         "wordId": "fr-u3-w6"
       },
       {
@@ -1115,12 +1185,12 @@
         "prompt": "What does \"le salaire\" mean?",
         "speak": "le salaire",
         "options": [
-          "the hand",
-          "the kitchen",
-          "the pharmacy",
-          "the salary"
+          "the salary",
+          "the number",
+          "the phone",
+          "the hand"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "fr-u3-w7"
       },
       {
@@ -1128,12 +1198,12 @@
         "type": "mc",
         "prompt": "How do you say \"busy\"?",
         "options": [
-          "le médecin",
           "la douleur",
           "occupé",
-          "la porte"
+          "le téléphone",
+          "la maison"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-u3-w8"
       },
       {
@@ -1142,12 +1212,12 @@
         "prompt": "What does \"le téléphone\" mean?",
         "speak": "le téléphone",
         "options": [
-          "the pharmacy",
-          "to answer",
-          "the phone",
-          "the key"
+          "the shoes",
+          "the job",
+          "the number",
+          "the phone"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "fr-u3-w9"
       },
       {
@@ -1155,12 +1225,12 @@
         "type": "mc",
         "prompt": "How do you say \"to call\"?",
         "options": [
-          "la fenêtre",
           "appeler",
-          "occupé",
-          "le patron"
+          "le numéro",
+          "plus tard",
+          "le ventre"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-u3-w10"
       },
       {
@@ -1169,12 +1239,12 @@
         "prompt": "What does \"le numéro\" mean?",
         "speak": "le numéro",
         "options": [
-          "the head",
-          "the job",
-          "clean",
-          "the number"
+          "the door",
+          "the stomach",
+          "the number",
+          "big"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u3-w11"
       },
       {
@@ -1182,12 +1252,12 @@
         "type": "mc",
         "prompt": "How do you say \"to answer\"?",
         "options": [
+          "occupé",
           "répondre",
-          "la douleur",
-          "le voisin",
-          "le patron"
+          "essayer",
+          "la réunion"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-u3-w12"
       },
       {
@@ -1196,10 +1266,10 @@
         "prompt": "What does \"un message\" mean?",
         "speak": "un message",
         "options": [
-          "to hang up",
-          "to call",
+          "the shoes",
+          "the job",
           "a message",
-          "the key"
+          "the size"
         ],
         "answer": 2,
         "wordId": "fr-u3-w13"
@@ -1209,12 +1279,12 @@
         "type": "mc",
         "prompt": "How do you say \"to wait\"?",
         "options": [
+          "la chambre",
+          "le collègue",
           "attendre",
-          "la clé",
-          "la couleur",
-          "la réunion"
+          "petit"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-u3-w14"
       },
       {
@@ -1223,12 +1293,12 @@
         "prompt": "What does \"raccrocher\" mean?",
         "speak": "raccrocher",
         "options": [
-          "the meeting",
           "to hang up",
-          "to wait",
-          "the boss"
+          "the office",
+          "the pharmacy",
+          "to call"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-u3-w15"
       },
       {
@@ -1236,9 +1306,9 @@
         "type": "mc",
         "prompt": "How do you say \"later\"?",
         "options": [
-          "la main",
-          "la robe",
-          "occupé",
+          "la chemise",
+          "travailler",
+          "la maison",
           "plus tard"
         ],
         "answer": 3,
@@ -1251,9 +1321,9 @@
         "speak": "la chemise",
         "options": [
           "the shirt",
-          "the dress",
-          "to work",
-          "busy"
+          "to answer",
+          "the salary",
+          "the hand"
         ],
         "answer": 0,
         "wordId": "fr-u3-w17"
@@ -1263,12 +1333,12 @@
         "type": "mc",
         "prompt": "How do you say \"the shoes\"?",
         "options": [
-          "se sentir",
-          "le patron",
+          "le travail",
           "les chaussures",
-          "la réunion"
+          "la couleur",
+          "travailler"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-u3-w18"
       },
       {
@@ -1277,9 +1347,9 @@
         "prompt": "What does \"la taille\" mean?",
         "speak": "la taille",
         "options": [
-          "the room",
-          "the key",
-          "the boss",
+          "sick",
+          "to answer",
+          "big",
           "the size"
         ],
         "answer": 3,
@@ -1290,12 +1360,12 @@
         "type": "mc",
         "prompt": "How do you say \"to try on\"?",
         "options": [
-          "la robe",
-          "le travail",
-          "essayer",
-          "grand"
+          "appeler",
+          "le collègue",
+          "propre",
+          "essayer"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "fr-u3-w20"
       },
       {
@@ -1304,10 +1374,10 @@
         "prompt": "What does \"la couleur\" mean?",
         "speak": "la couleur",
         "options": [
-          "the kitchen",
-          "the color",
           "the job",
-          "to hang up"
+          "the color",
+          "the hand",
+          "sick"
         ],
         "answer": 1,
         "wordId": "fr-u3-w21"
@@ -1318,11 +1388,11 @@
         "prompt": "How do you say \"the dress\"?",
         "options": [
           "la main",
-          "la robe",
-          "répondre",
-          "le patron"
+          "le patron",
+          "le téléphone",
+          "la robe"
         ],
-        "answer": 1,
+        "answer": 3,
         "wordId": "fr-u3-w22"
       },
       {
@@ -1331,12 +1401,12 @@
         "prompt": "What does \"grand\" mean?",
         "speak": "grand",
         "options": [
-          "the office",
           "big",
-          "the window",
-          "the number"
+          "the boss",
+          "the number",
+          "to try on"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-u3-w23"
       },
       {
@@ -1344,10 +1414,10 @@
         "type": "mc",
         "prompt": "How do you say \"small\"?",
         "options": [
-          "la chemise",
+          "se sentir",
           "petit",
-          "les chaussures",
-          "occupé"
+          "propre",
+          "appeler"
         ],
         "answer": 1,
         "wordId": "fr-u3-w24"
@@ -1358,10 +1428,10 @@
         "prompt": "What does \"la tête\" mean?",
         "speak": "la tête",
         "options": [
-          "the dress",
+          "the meeting",
           "the head",
-          "the door",
-          "the room"
+          "the key",
+          "the dress"
         ],
         "answer": 1,
         "wordId": "fr-u3-w25"
@@ -1371,12 +1441,12 @@
         "type": "mc",
         "prompt": "How do you say \"the hand\"?",
         "options": [
-          "la maison",
           "la main",
-          "plus tard",
-          "la pharmacie"
+          "la pharmacie",
+          "appeler",
+          "la robe"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-u3-w26"
       },
       {
@@ -1385,10 +1455,10 @@
         "prompt": "What does \"le ventre\" mean?",
         "speak": "le ventre",
         "options": [
-          "big",
-          "the stomach",
           "later",
-          "small"
+          "the stomach",
+          "big",
+          "the job"
         ],
         "answer": 1,
         "wordId": "fr-u3-w27"
@@ -1398,12 +1468,12 @@
         "type": "mc",
         "prompt": "How do you say \"sick\"?",
         "options": [
-          "le numéro",
-          "petit",
-          "la robe",
-          "malade"
+          "malade",
+          "la cuisine",
+          "la porte",
+          "le ventre"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "fr-u3-w28"
       },
       {
@@ -1413,9 +1483,9 @@
         "speak": "le médecin",
         "options": [
           "the doctor",
-          "the head",
-          "to hang up",
-          "the room"
+          "the shirt",
+          "the office",
+          "the hand"
         ],
         "answer": 0,
         "wordId": "fr-u3-w29"
@@ -1425,12 +1495,12 @@
         "type": "mc",
         "prompt": "How do you say \"the pharmacy\"?",
         "options": [
-          "les chaussures",
-          "le ventre",
-          "le numéro",
-          "la pharmacie"
+          "se sentir",
+          "le patron",
+          "la pharmacie",
+          "la clé"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u3-w30"
       },
       {
@@ -1439,12 +1509,12 @@
         "prompt": "What does \"la douleur\" mean?",
         "speak": "la douleur",
         "options": [
-          "the pain",
-          "the door",
           "the hand",
-          "the phone"
+          "the door",
+          "clean",
+          "the pain"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-u3-w31"
       },
       {
@@ -1452,12 +1522,12 @@
         "type": "mc",
         "prompt": "How do you say \"to feel\"?",
         "options": [
-          "malade",
-          "la clé",
-          "la douleur",
-          "se sentir"
+          "la robe",
+          "la maison",
+          "se sentir",
+          "la tête"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u3-w32"
       },
       {
@@ -1466,10 +1536,10 @@
         "prompt": "What does \"la maison\" mean?",
         "speak": "la maison",
         "options": [
-          "to answer",
-          "to work",
+          "the office",
+          "the neighbor",
           "the house",
-          "the door"
+          "clean"
         ],
         "answer": 2,
         "wordId": "fr-u3-w33"
@@ -1479,12 +1549,12 @@
         "type": "mc",
         "prompt": "How do you say \"the room\"?",
         "options": [
-          "la porte",
           "appeler",
           "la chambre",
-          "la douleur"
+          "grand",
+          "répondre"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-u3-w34"
       },
       {
@@ -1493,8 +1563,8 @@
         "prompt": "What does \"la cuisine\" mean?",
         "speak": "la cuisine",
         "options": [
-          "the size",
-          "the hand",
+          "to wait",
+          "the shoes",
           "the kitchen",
           "the stomach"
         ],
@@ -1506,12 +1576,12 @@
         "type": "mc",
         "prompt": "How do you say \"the door\"?",
         "options": [
-          "propre",
-          "un message",
-          "la porte",
-          "la chemise"
+          "la couleur",
+          "occupé",
+          "essayer",
+          "la porte"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "fr-u3-w36"
       },
       {
@@ -1521,9 +1591,9 @@
         "speak": "la fenêtre",
         "options": [
           "the window",
-          "the key",
-          "the job",
-          "the colleague"
+          "to answer",
+          "to work",
+          "a message"
         ],
         "answer": 0,
         "wordId": "fr-u3-w37"
@@ -1534,8 +1604,8 @@
         "prompt": "How do you say \"the key\"?",
         "options": [
           "la clé",
-          "petit",
-          "un message",
+          "le salaire",
+          "plus tard",
           "la taille"
         ],
         "answer": 0,
@@ -1547,12 +1617,12 @@
         "prompt": "What does \"propre\" mean?",
         "speak": "propre",
         "options": [
+          "the hand",
           "clean",
-          "to call",
-          "the door",
-          "the window"
+          "later",
+          "the boss"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-u3-w39"
       },
       {
@@ -1560,12 +1630,12 @@
         "type": "mc",
         "prompt": "How do you say \"the neighbor\"?",
         "options": [
-          "le médecin",
           "le voisin",
-          "le collègue",
-          "la cuisine"
+          "malade",
+          "le patron",
+          "la couleur"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-u3-w40"
       },
       {
@@ -1580,13 +1650,13 @@
           "jours"
         ],
         "bank": [
-          "souvent",
-          "les",
           "tous",
-          "Je",
-          "bureau",
+          "souvent",
+          "travaille",
           "jours",
-          "travaille"
+          "les",
+          "Je",
+          "bureau"
         ],
         "wordIds": []
       },
@@ -1600,11 +1670,11 @@
           "réunion"
         ],
         "bank": [
-          "J'ai",
           "collègue",
-          "une",
           "patron",
-          "réunion"
+          "une",
+          "réunion",
+          "J'ai"
         ],
         "wordIds": []
       },
@@ -1621,10 +1691,10 @@
         "bank": [
           "fatigué",
           "Je",
-          "suis",
           "content",
+          "très",
           "occupé",
-          "très"
+          "suis"
         ],
         "wordIds": []
       },
@@ -1640,12 +1710,12 @@
           "tard"
         ],
         "bank": [
-          "Je",
-          "tard",
           "vous",
           "appelle",
+          "Je",
           "demain",
           "maintenant",
+          "tard",
           "plus"
         ],
         "wordIds": []
@@ -1663,14 +1733,14 @@
           "plaît"
         ],
         "bank": [
+          "s'il",
+          "un",
+          "répondez",
+          "raccrochez",
           "Attendez",
           "plaît",
-          "moment",
-          "raccrochez",
-          "un",
           "vous",
-          "répondez",
-          "s'il"
+          "moment"
         ],
         "wordIds": []
       },
@@ -1684,11 +1754,11 @@
           "message"
         ],
         "bank": [
-          "message",
           "numéro",
+          "message",
+          "téléphone",
           "un",
-          "Laissez",
-          "téléphone"
+          "Laissez"
         ],
         "wordIds": []
       },
@@ -1703,12 +1773,12 @@
           "ça"
         ],
         "bank": [
-          "veux",
-          "acheter",
-          "essayer",
           "Je",
+          "chemise",
+          "veux",
           "ça",
-          "chemise"
+          "essayer",
+          "acheter"
         ],
         "wordIds": []
       },
@@ -1724,13 +1794,13 @@
           "grande"
         ],
         "bank": [
-          "petite",
           "Cette",
-          "trop",
-          "chemise",
-          "robe",
+          "petite",
           "est",
-          "grande"
+          "robe",
+          "trop",
+          "grande",
+          "chemise"
         ],
         "wordIds": []
       },
@@ -1744,11 +1814,11 @@
           "couleur"
         ],
         "bank": [
-          "robe",
-          "taille",
-          "J'aime",
           "couleur",
-          "cette"
+          "taille",
+          "cette",
+          "robe",
+          "J'aime"
         ],
         "wordIds": []
       },
@@ -1762,10 +1832,10 @@
           "malade"
         ],
         "bank": [
-          "Je",
           "fatigué",
           "content",
           "malade",
+          "Je",
           "suis"
         ],
         "wordIds": []
@@ -1782,13 +1852,13 @@
           "tête"
         ],
         "bank": [
-          "à",
-          "tête",
-          "main",
           "mal",
-          "ventre",
           "la",
-          "J'ai"
+          "à",
+          "main",
+          "tête",
+          "J'ai",
+          "ventre"
         ],
         "wordIds": []
       },
@@ -1803,12 +1873,12 @@
           "médecin"
         ],
         "bank": [
+          "douleur",
           "besoin",
-          "pharmacie",
-          "d'un",
-          "J'ai",
           "médecin",
-          "douleur"
+          "J'ai",
+          "pharmacie",
+          "d'un"
         ],
         "wordIds": []
       },
@@ -1825,8 +1895,8 @@
         "bank": [
           "porte",
           "la",
-          "clé",
           "est",
+          "clé",
           "Où",
           "fenêtre"
         ],
@@ -1843,12 +1913,12 @@
           "propre"
         ],
         "bank": [
-          "propre",
-          "est",
+          "La",
           "sale",
           "chambre",
-          "La",
-          "maison"
+          "est",
+          "maison",
+          "propre"
         ],
         "wordIds": []
       },
@@ -1865,14 +1935,14 @@
           "plaît"
         ],
         "bank": [
-          "fermez",
-          "fenêtre",
+          "Ouvrez",
+          "la",
+          "porte",
           "s'il",
           "plaît",
-          "vous",
-          "Ouvrez",
-          "porte",
-          "la"
+          "fenêtre",
+          "fermez",
+          "vous"
         ],
         "wordIds": []
       },
@@ -1882,21 +1952,6 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u3-w6",
-            "target": "travailler",
-            "english": "to work"
-          },
-          {
-            "wordId": "fr-u3-w7",
-            "target": "le salaire",
-            "english": "the salary"
-          },
-          {
-            "wordId": "fr-u3-w2",
-            "target": "le bureau",
-            "english": "the office"
-          },
-          {
             "wordId": "fr-u3-w1",
             "target": "le travail",
             "english": "the job"
@@ -1905,6 +1960,21 @@
             "wordId": "fr-u3-w8",
             "target": "occupé",
             "english": "busy"
+          },
+          {
+            "wordId": "fr-u3-w2",
+            "target": "le bureau",
+            "english": "the office"
+          },
+          {
+            "wordId": "fr-u3-w7",
+            "target": "le salaire",
+            "english": "the salary"
+          },
+          {
+            "wordId": "fr-u3-w5",
+            "target": "la réunion",
+            "english": "the meeting"
           }
         ]
       },
@@ -1914,9 +1984,9 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u3-w9",
-            "target": "le téléphone",
-            "english": "the phone"
+            "wordId": "fr-u3-w11",
+            "target": "le numéro",
+            "english": "the number"
           },
           {
             "wordId": "fr-u3-w12",
@@ -1924,19 +1994,19 @@
             "english": "to answer"
           },
           {
-            "wordId": "fr-u3-w11",
-            "target": "le numéro",
-            "english": "the number"
-          },
-          {
-            "wordId": "fr-u3-w14",
-            "target": "attendre",
-            "english": "to wait"
+            "wordId": "fr-u3-w15",
+            "target": "raccrocher",
+            "english": "to hang up"
           },
           {
             "wordId": "fr-u3-w10",
             "target": "appeler",
             "english": "to call"
+          },
+          {
+            "wordId": "fr-u3-w9",
+            "target": "le téléphone",
+            "english": "the phone"
           }
         ]
       },
@@ -1946,24 +2016,24 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u3-w22",
-            "target": "la robe",
-            "english": "the dress"
-          },
-          {
-            "wordId": "fr-u3-w24",
-            "target": "petit",
-            "english": "small"
-          },
-          {
             "wordId": "fr-u3-w21",
             "target": "la couleur",
             "english": "the color"
           },
           {
+            "wordId": "fr-u3-w20",
+            "target": "essayer",
+            "english": "to try on"
+          },
+          {
             "wordId": "fr-u3-w18",
             "target": "les chaussures",
             "english": "the shoes"
+          },
+          {
+            "wordId": "fr-u3-w19",
+            "target": "la taille",
+            "english": "the size"
           },
           {
             "wordId": "fr-u3-w23",
@@ -1978,9 +2048,14 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u3-w32",
-            "target": "se sentir",
-            "english": "to feel"
+            "wordId": "fr-u3-w29",
+            "target": "le médecin",
+            "english": "the doctor"
+          },
+          {
+            "wordId": "fr-u3-w31",
+            "target": "la douleur",
+            "english": "the pain"
           },
           {
             "wordId": "fr-u3-w30",
@@ -1988,19 +2063,14 @@
             "english": "the pharmacy"
           },
           {
-            "wordId": "fr-u3-w25",
-            "target": "la tête",
-            "english": "the head"
+            "wordId": "fr-u3-w32",
+            "target": "se sentir",
+            "english": "to feel"
           },
           {
-            "wordId": "fr-u3-w29",
-            "target": "le médecin",
-            "english": "the doctor"
-          },
-          {
-            "wordId": "fr-u3-w28",
-            "target": "malade",
-            "english": "sick"
+            "wordId": "fr-u3-w26",
+            "target": "la main",
+            "english": "the hand"
           }
         ]
       },
@@ -2010,9 +2080,9 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u3-w33",
-            "target": "la maison",
-            "english": "the house"
+            "wordId": "fr-u3-w36",
+            "target": "la porte",
+            "english": "the door"
           },
           {
             "wordId": "fr-u3-w38",
@@ -2020,14 +2090,14 @@
             "english": "the key"
           },
           {
-            "wordId": "fr-u3-w35",
-            "target": "la cuisine",
-            "english": "the kitchen"
+            "wordId": "fr-u3-w40",
+            "target": "le voisin",
+            "english": "the neighbor"
           },
           {
-            "wordId": "fr-u3-w37",
-            "target": "la fenêtre",
-            "english": "the window"
+            "wordId": "fr-u3-w33",
+            "target": "la maison",
+            "english": "the house"
           },
           {
             "wordId": "fr-u3-w39",

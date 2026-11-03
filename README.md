@@ -10,7 +10,7 @@ Learn French or Spanish in short daily lessons and earn small G$ rewards for rea
 2. **Onboard**: pick French or Spanish, see how it works.
 3. **Verify** with GoodDollar face verification. Anyone can do lessons for free; only verified users can claim, earn or stake.
 4. **Claim your daily G$ UBI** on the home screen, then go straight to today's lesson.
-5. **Do a lesson** (10 to 12 exercises: multiple choice, translate by picking words, match pairs). Grading is server-side. Pass at 80% accuracy and 90 seconds or more.
+5. **Do a lesson** (6 questions: multiple choice, translate by picking words, match pairs). Each theme is split into two short parts. Grading is server-side. Pass at 80% accuracy and 40 seconds or more.
 6. **Earn**: a pass returns a signed EIP-712 voucher you redeem on the `RewardsPool` contract (max 3 lessons a day, plus a first-time checkpoint pass). Suspicious patterns (boundary-timed perfect scores, inhuman pace) hold the reward for review instead of issuing it.
 7. **Stake** G$ on a 7-day streak challenge with `StreakVault`. Finishers get their stake back plus a share of forfeits.
 8. **Keep your streak**: miss a day and it resets, unless you've banked a freeze (earned automatically every 7-day milestone, capped at 2) to auto-cover one missed day.
@@ -130,7 +130,7 @@ Then fund the pool (`approve` + `deposit`), call `createCohort(start, min, max)`
 - **Finalise a stake cohort** after it ends: `npm run cohort:finalize -w @learnit/backend -- <id>` prints who finished all 7 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
 - **Finalise a league week** after it ends: `npm run league:finalize -w @learnit/backend -- <weekKey>` prints each group's top 3 (dry run); `weekKey` is the Monday the week started (e.g. `2026-10-27`), defaults to last week. Add `--send` to sign and record bonus vouchers.
 - **Review flagged accounts**: rows in `abuse_flags` (reason `boundary-timed-perfect-streak` or `high-velocity`) mark a reward that was withheld pending review; nothing is automated beyond withholding the voucher, so check `AbuseFlag`/`User.flagged` manually (e.g. via `db:studio`) before deciding whether to pay it out some other way.
-- **Known MVP limits:** lesson answers are checked one at a time for instant feedback, so a determined user could probe answers; the 80% and 90-second rules, the per-lesson daily reward limit, the anomaly checks and the pool's caps bound the damage. The signer key lives in an env var; move it to a KMS before raising limits.
+- **Known MVP limits:** lesson answers are checked one at a time for instant feedback, so a determined user could probe answers; the 80% and 40-second rules, the per-lesson daily reward limit, the anomaly checks and the pool's caps bound the damage. The signer key lives in an env var; move it to a KMS before raising limits.
 
 ## Contributing
 

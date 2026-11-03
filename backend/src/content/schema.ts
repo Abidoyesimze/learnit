@@ -41,7 +41,7 @@ export const LessonSchema = z.object({
   id: z.string(),
   title: z.string(),
   theme: z.string(),
-  exercises: z.array(ExerciseSchema).min(10).max(12),
+  exercises: z.array(ExerciseSchema).min(5).max(12),
 });
 
 export const CheckpointSchema = z.object({
@@ -58,7 +58,7 @@ export const UnitSchema = z.object({
   level: z.literal("A1"),
   title: z.string(),
   speechLang: z.string(),
-  lessons: z.array(LessonSchema).length(5),
+  lessons: z.array(LessonSchema).length(10),
   checkpoint: CheckpointSchema,
 });
 export type Unit = z.infer<typeof UnitSchema>;

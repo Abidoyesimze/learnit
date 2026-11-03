@@ -2,7 +2,7 @@ import type { Exercise } from "./content/schema";
 
 export type Answer = number | string[] | { target: string; english: string }[];
 export const PASS_ACCURACY = 0.8;
-export const MIN_SECONDS = 90;
+export const MIN_SECONDS = 40; // ~6 questions at a realistic pace; was 90 for 12-question lessons
 
 export type ExerciseResult = { id: string; score: number; correct: boolean; wordIds: string[] };
 

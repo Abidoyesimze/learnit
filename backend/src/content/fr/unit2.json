@@ -7,7 +7,7 @@
   "lessons": [
     {
       "id": "fr-u2-l1",
-      "title": "Family",
+      "title": "Family, part 1",
       "theme": "family",
       "exercises": [
         {
@@ -38,6 +38,33 @@
           "wordId": "fr-u2-w2"
         },
         {
+          "id": "fr-u2-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w1",
+              "target": "la famille",
+              "english": "family"
+            },
+            {
+              "wordId": "fr-u2-w2",
+              "target": "la mère",
+              "english": "mother"
+            },
+            {
+              "wordId": "fr-u2-w3",
+              "target": "le père",
+              "english": "father"
+            },
+            {
+              "wordId": "fr-u2-w4",
+              "target": "le frère",
+              "english": "brother"
+            }
+          ]
+        },
+        {
           "id": "fr-u2-w3-te",
           "type": "mc",
           "prompt": "What does \"le père\" mean?",
@@ -52,31 +79,17 @@
           "wordId": "fr-u2-w3"
         },
         {
-          "id": "fr-u2-l1-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-u2-w8",
-              "target": "l'enfant",
-              "english": "child"
-            },
-            {
-              "wordId": "fr-u2-w2",
-              "target": "la mère",
-              "english": "mother"
-            },
-            {
-              "wordId": "fr-u2-w7",
-              "target": "la fille",
-              "english": "daughter"
-            },
-            {
-              "wordId": "fr-u2-w6",
-              "target": "le fils",
-              "english": "son"
-            }
-          ]
+          "id": "fr-u2-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"brother\"?",
+          "options": [
+            "le fils",
+            "l'enfant",
+            "le frère",
+            "la mère"
+          ],
+          "answer": 2,
+          "wordId": "fr-u2-w4"
         },
         {
           "id": "fr-u2-l1-s1",
@@ -88,27 +101,21 @@
             "famille"
           ],
           "bank": [
-            "famille",
-            "C'est",
-            "mère",
             "père",
-            "ma"
+            "ma",
+            "mère",
+            "C'est",
+            "famille"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u2-w4-et",
-          "type": "mc",
-          "prompt": "How do you say \"brother\"?",
-          "options": [
-            "le frère",
-            "la sœur",
-            "le fils",
-            "la mère"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w4"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u2-l2",
+      "title": "Family, part 2",
+      "theme": "family",
+      "exercises": [
         {
           "id": "fr-u2-w5-te",
           "type": "mc",
@@ -116,8 +123,8 @@
           "speak": "la sœur",
           "options": [
             "sister",
-            "family",
             "father",
+            "mother",
             "child"
           ],
           "answer": 0,
@@ -128,13 +135,67 @@
           "type": "mc",
           "prompt": "How do you say \"son\"?",
           "options": [
-            "la famille",
             "le fils",
-            "le père",
-            "le frère"
+            "la sœur",
+            "la fille",
+            "la mère"
           ],
-          "answer": 1,
+          "answer": 0,
           "wordId": "fr-u2-w6"
+        },
+        {
+          "id": "fr-u2-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w5",
+              "target": "la sœur",
+              "english": "sister"
+            },
+            {
+              "wordId": "fr-u2-w6",
+              "target": "le fils",
+              "english": "son"
+            },
+            {
+              "wordId": "fr-u2-w7",
+              "target": "la fille",
+              "english": "daughter"
+            },
+            {
+              "wordId": "fr-u2-w8",
+              "target": "l'enfant",
+              "english": "child"
+            }
+          ]
+        },
+        {
+          "id": "fr-u2-w7-te",
+          "type": "mc",
+          "prompt": "What does \"la fille\" mean?",
+          "speak": "la fille",
+          "options": [
+            "family",
+            "son",
+            "brother",
+            "daughter"
+          ],
+          "answer": 3,
+          "wordId": "fr-u2-w7"
+        },
+        {
+          "id": "fr-u2-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"child\"?",
+          "options": [
+            "le père",
+            "la sœur",
+            "la mère",
+            "l'enfant"
+          ],
+          "answer": 3,
+          "wordId": "fr-u2-w8"
         },
         {
           "id": "fr-u2-l1-s2",
@@ -147,65 +208,20 @@
             "grand"
           ],
           "bank": [
-            "est",
-            "petit",
             "frère",
             "Mon",
+            "petit",
             "grand",
+            "est",
             "sœur"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u2-w7-te",
-          "type": "mc",
-          "prompt": "What does \"la fille\" mean?",
-          "speak": "la fille",
-          "options": [
-            "daughter",
-            "father",
-            "brother",
-            "sister"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w7"
-        },
-        {
-          "id": "fr-u2-w8-et",
-          "type": "mc",
-          "prompt": "How do you say \"child\"?",
-          "options": [
-            "la mère",
-            "la sœur",
-            "l'enfant",
-            "le fils"
-          ],
-          "answer": 2,
-          "wordId": "fr-u2-w8"
-        },
-        {
-          "id": "fr-u2-l1-s3",
-          "type": "translate",
-          "prompt": "I have two sisters",
-          "answer": [
-            "J'ai",
-            "deux",
-            "sœurs"
-          ],
-          "bank": [
-            "deux",
-            "sœurs",
-            "trois",
-            "frères",
-            "J'ai"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u2-l2",
-      "title": "Time and daily routine",
+      "id": "fr-u2-l3",
+      "title": "Time and daily routine, part 1",
       "theme": "time and daily routine",
       "exercises": [
         {
@@ -214,12 +230,12 @@
           "prompt": "What does \"aujourd'hui\" mean?",
           "speak": "aujourd'hui",
           "options": [
-            "always",
+            "yesterday",
             "tomorrow",
-            "morning",
-            "today"
+            "today",
+            "always"
           ],
-          "answer": 3,
+          "answer": 2,
           "wordId": "fr-u2-w9"
         },
         {
@@ -227,42 +243,23 @@
           "type": "mc",
           "prompt": "How do you say \"tomorrow\"?",
           "options": [
-            "aujourd'hui",
-            "la nuit",
+            "dormir",
             "demain",
-            "le matin"
+            "se réveiller",
+            "toujours"
           ],
-          "answer": 2,
+          "answer": 1,
           "wordId": "fr-u2-w10"
         },
         {
-          "id": "fr-u2-w11-te",
-          "type": "mc",
-          "prompt": "What does \"hier\" mean?",
-          "speak": "hier",
-          "options": [
-            "tomorrow",
-            "yesterday",
-            "night",
-            "today"
-          ],
-          "answer": 1,
-          "wordId": "fr-u2-w11"
-        },
-        {
-          "id": "fr-u2-l2-m",
+          "id": "fr-u2-l3-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "fr-u2-w14",
-              "target": "se réveiller",
-              "english": "to wake up"
-            },
-            {
-              "wordId": "fr-u2-w11",
-              "target": "hier",
-              "english": "yesterday"
+              "wordId": "fr-u2-w9",
+              "target": "aujourd'hui",
+              "english": "today"
             },
             {
               "wordId": "fr-u2-w10",
@@ -270,11 +267,43 @@
               "english": "tomorrow"
             },
             {
-              "wordId": "fr-u2-w9",
-              "target": "aujourd'hui",
-              "english": "today"
+              "wordId": "fr-u2-w11",
+              "target": "hier",
+              "english": "yesterday"
+            },
+            {
+              "wordId": "fr-u2-w12",
+              "target": "le matin",
+              "english": "morning"
             }
           ]
+        },
+        {
+          "id": "fr-u2-w11-te",
+          "type": "mc",
+          "prompt": "What does \"hier\" mean?",
+          "speak": "hier",
+          "options": [
+            "to sleep",
+            "yesterday",
+            "today",
+            "morning"
+          ],
+          "answer": 1,
+          "wordId": "fr-u2-w11"
+        },
+        {
+          "id": "fr-u2-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"morning\"?",
+          "options": [
+            "dormir",
+            "aujourd'hui",
+            "le matin",
+            "toujours"
+          ],
+          "answer": 2,
+          "wordId": "fr-u2-w12"
         },
         {
           "id": "fr-u2-l2-s1",
@@ -287,40 +316,34 @@
             "tôt"
           ],
           "bank": [
-            "tard",
-            "dormir",
-            "tôt",
             "Je",
+            "tôt",
+            "me",
+            "dormir",
             "réveille",
-            "me"
+            "tard"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u2-w12-et",
-          "type": "mc",
-          "prompt": "How do you say \"morning\"?",
-          "options": [
-            "le matin",
-            "demain",
-            "aujourd'hui",
-            "la nuit"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w12"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u2-l4",
+      "title": "Time and daily routine, part 2",
+      "theme": "time and daily routine",
+      "exercises": [
         {
           "id": "fr-u2-w13-te",
           "type": "mc",
           "prompt": "What does \"la nuit\" mean?",
           "speak": "la nuit",
           "options": [
-            "always",
             "morning",
-            "night",
-            "to wake up"
+            "tomorrow",
+            "to sleep",
+            "night"
           ],
-          "answer": 2,
+          "answer": 3,
           "wordId": "fr-u2-w13"
         },
         {
@@ -328,13 +351,67 @@
           "type": "mc",
           "prompt": "How do you say \"to wake up\"?",
           "options": [
+            "se réveiller",
+            "demain",
+            "aujourd'hui",
+            "le matin"
+          ],
+          "answer": 0,
+          "wordId": "fr-u2-w14"
+        },
+        {
+          "id": "fr-u2-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w13",
+              "target": "la nuit",
+              "english": "night"
+            },
+            {
+              "wordId": "fr-u2-w14",
+              "target": "se réveiller",
+              "english": "to wake up"
+            },
+            {
+              "wordId": "fr-u2-w15",
+              "target": "dormir",
+              "english": "to sleep"
+            },
+            {
+              "wordId": "fr-u2-w16",
+              "target": "toujours",
+              "english": "always"
+            }
+          ]
+        },
+        {
+          "id": "fr-u2-w15-te",
+          "type": "mc",
+          "prompt": "What does \"dormir\" mean?",
+          "speak": "dormir",
+          "options": [
+            "always",
+            "morning",
+            "to sleep",
+            "night"
+          ],
+          "answer": 2,
+          "wordId": "fr-u2-w15"
+        },
+        {
+          "id": "fr-u2-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"always\"?",
+          "options": [
             "le matin",
-            "toujours",
+            "dormir",
             "hier",
-            "se réveiller"
+            "toujours"
           ],
           "answer": 3,
-          "wordId": "fr-u2-w14"
+          "wordId": "fr-u2-w16"
         },
         {
           "id": "fr-u2-l2-s2",
@@ -351,59 +428,12 @@
             "À"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u2-w15-te",
-          "type": "mc",
-          "prompt": "What does \"dormir\" mean?",
-          "speak": "dormir",
-          "options": [
-            "to sleep",
-            "always",
-            "night",
-            "yesterday"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w15"
-        },
-        {
-          "id": "fr-u2-w16-et",
-          "type": "mc",
-          "prompt": "How do you say \"always\"?",
-          "options": [
-            "toujours",
-            "demain",
-            "le matin",
-            "se réveiller"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w16"
-        },
-        {
-          "id": "fr-u2-l2-s3",
-          "type": "translate",
-          "prompt": "I sleep at night",
-          "answer": [
-            "Je",
-            "dors",
-            "la",
-            "nuit"
-          ],
-          "bank": [
-            "toujours",
-            "Je",
-            "dors",
-            "la",
-            "nuit",
-            "matin"
-          ],
-          "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u2-l3",
-      "title": "Travel and transport",
+      "id": "fr-u2-l5",
+      "title": "Travel and transport, part 1",
       "theme": "travel and transport",
       "exercises": [
         {
@@ -413,9 +443,9 @@
           "speak": "l'aéroport",
           "options": [
             "the airport",
-            "the car",
-            "the ticket",
-            "the train"
+            "the passport",
+            "to travel",
+            "the bus"
           ],
           "answer": 0,
           "wordId": "fr-u2-w17"
@@ -425,13 +455,40 @@
           "type": "mc",
           "prompt": "How do you say \"the ticket\"?",
           "options": [
-            "la voiture",
             "le billet",
-            "la valise",
-            "le train"
+            "le train",
+            "la voiture",
+            "la valise"
           ],
-          "answer": 1,
+          "answer": 0,
           "wordId": "fr-u2-w18"
+        },
+        {
+          "id": "fr-u2-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w17",
+              "target": "l'aéroport",
+              "english": "the airport"
+            },
+            {
+              "wordId": "fr-u2-w18",
+              "target": "le billet",
+              "english": "the ticket"
+            },
+            {
+              "wordId": "fr-u2-w19",
+              "target": "le train",
+              "english": "the train"
+            },
+            {
+              "wordId": "fr-u2-w20",
+              "target": "le bus",
+              "english": "the bus"
+            }
+          ]
         },
         {
           "id": "fr-u2-w19-te",
@@ -439,40 +496,26 @@
           "prompt": "What does \"le train\" mean?",
           "speak": "le train",
           "options": [
-            "the ticket",
-            "to travel",
             "the train",
-            "the bus"
+            "the passport",
+            "the bus",
+            "the airport"
           ],
-          "answer": 2,
+          "answer": 0,
           "wordId": "fr-u2-w19"
         },
         {
-          "id": "fr-u2-l3-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-u2-w18",
-              "target": "le billet",
-              "english": "the ticket"
-            },
-            {
-              "wordId": "fr-u2-w20",
-              "target": "le bus",
-              "english": "the bus"
-            },
-            {
-              "wordId": "fr-u2-w24",
-              "target": "le passeport",
-              "english": "the passport"
-            },
-            {
-              "wordId": "fr-u2-w23",
-              "target": "la valise",
-              "english": "the suitcase"
-            }
-          ]
+          "id": "fr-u2-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"the bus\"?",
+          "options": [
+            "la valise",
+            "le bus",
+            "le passeport",
+            "l'aéroport"
+          ],
+          "answer": 1,
+          "wordId": "fr-u2-w20"
         },
         {
           "id": "fr-u2-l3-s1",
@@ -485,36 +528,30 @@
             "billet"
           ],
           "bank": [
-            "billet",
-            "un",
-            "passeport",
             "voudrais",
             "Je",
+            "billet",
+            "passeport",
+            "un",
             "valise"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u2-w20-et",
-          "type": "mc",
-          "prompt": "How do you say \"the bus\"?",
-          "options": [
-            "la voiture",
-            "le train",
-            "l'aéroport",
-            "le bus"
-          ],
-          "answer": 3,
-          "wordId": "fr-u2-w20"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u2-l6",
+      "title": "Travel and transport, part 2",
+      "theme": "travel and transport",
+      "exercises": [
         {
           "id": "fr-u2-w21-te",
           "type": "mc",
           "prompt": "What does \"la voiture\" mean?",
           "speak": "la voiture",
           "options": [
-            "the airport",
             "the ticket",
+            "to travel",
             "the car",
             "the train"
           ],
@@ -526,13 +563,67 @@
           "type": "mc",
           "prompt": "How do you say \"to travel\"?",
           "options": [
-            "la valise",
-            "le bus",
-            "voyager",
-            "la voiture"
+            "le train",
+            "le passeport",
+            "la voiture",
+            "voyager"
           ],
-          "answer": 2,
+          "answer": 3,
           "wordId": "fr-u2-w22"
+        },
+        {
+          "id": "fr-u2-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w21",
+              "target": "la voiture",
+              "english": "the car"
+            },
+            {
+              "wordId": "fr-u2-w22",
+              "target": "voyager",
+              "english": "to travel"
+            },
+            {
+              "wordId": "fr-u2-w23",
+              "target": "la valise",
+              "english": "the suitcase"
+            },
+            {
+              "wordId": "fr-u2-w24",
+              "target": "le passeport",
+              "english": "the passport"
+            }
+          ]
+        },
+        {
+          "id": "fr-u2-w23-te",
+          "type": "mc",
+          "prompt": "What does \"la valise\" mean?",
+          "speak": "la valise",
+          "options": [
+            "the suitcase",
+            "the passport",
+            "the car",
+            "the bus"
+          ],
+          "answer": 0,
+          "wordId": "fr-u2-w23"
+        },
+        {
+          "id": "fr-u2-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"the passport\"?",
+          "options": [
+            "le passeport",
+            "la voiture",
+            "l'aéroport",
+            "le train"
+          ],
+          "answer": 0,
+          "wordId": "fr-u2-w24"
         },
         {
           "id": "fr-u2-l3-s2",
@@ -544,66 +635,19 @@
             "l'aéroport"
           ],
           "bank": [
-            "Où",
-            "gare",
             "loin",
+            "gare",
             "est",
+            "Où",
             "l'aéroport"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u2-w23-te",
-          "type": "mc",
-          "prompt": "What does \"la valise\" mean?",
-          "speak": "la valise",
-          "options": [
-            "the train",
-            "the ticket",
-            "the suitcase",
-            "to travel"
-          ],
-          "answer": 2,
-          "wordId": "fr-u2-w23"
-        },
-        {
-          "id": "fr-u2-w24-et",
-          "type": "mc",
-          "prompt": "How do you say \"the passport\"?",
-          "options": [
-            "la voiture",
-            "voyager",
-            "le passeport",
-            "la valise"
-          ],
-          "answer": 2,
-          "wordId": "fr-u2-w24"
-        },
-        {
-          "id": "fr-u2-l3-s3",
-          "type": "translate",
-          "prompt": "I am traveling by train",
-          "answer": [
-            "Je",
-            "voyage",
-            "en",
-            "train"
-          ],
-          "bank": [
-            "Je",
-            "bus",
-            "voiture",
-            "voyage",
-            "en",
-            "train"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u2-l4",
-      "title": "Weather",
+      "id": "fr-u2-l7",
+      "title": "Weather, part 1",
       "theme": "weather",
       "exercises": [
         {
@@ -612,9 +656,9 @@
           "prompt": "What does \"le temps\" mean?",
           "speak": "le temps",
           "options": [
-            "cold",
+            "cloud",
             "sun",
-            "rain",
+            "wind",
             "the weather"
           ],
           "answer": 3,
@@ -626,41 +670,27 @@
           "prompt": "How do you say \"sun\"?",
           "options": [
             "la tempête",
-            "le temps",
             "le soleil",
-            "le nuage"
+            "la pluie",
+            "le vent"
           ],
-          "answer": 2,
+          "answer": 1,
           "wordId": "fr-u2-w26"
         },
         {
-          "id": "fr-u2-w27-te",
-          "type": "mc",
-          "prompt": "What does \"la pluie\" mean?",
-          "speak": "la pluie",
-          "options": [
-            "rain",
-            "the storm",
-            "hot",
-            "cloud"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w27"
-        },
-        {
-          "id": "fr-u2-l4-m",
+          "id": "fr-u2-l7-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "fr-u2-w29",
-              "target": "froid",
-              "english": "cold"
+              "wordId": "fr-u2-w25",
+              "target": "le temps",
+              "english": "the weather"
             },
             {
-              "wordId": "fr-u2-w30",
-              "target": "le vent",
-              "english": "wind"
+              "wordId": "fr-u2-w26",
+              "target": "le soleil",
+              "english": "sun"
             },
             {
               "wordId": "fr-u2-w27",
@@ -675,6 +705,33 @@
           ]
         },
         {
+          "id": "fr-u2-w27-te",
+          "type": "mc",
+          "prompt": "What does \"la pluie\" mean?",
+          "speak": "la pluie",
+          "options": [
+            "hot",
+            "cold",
+            "rain",
+            "cloud"
+          ],
+          "answer": 2,
+          "wordId": "fr-u2-w27"
+        },
+        {
+          "id": "fr-u2-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"hot\"?",
+          "options": [
+            "chaud",
+            "le nuage",
+            "le vent",
+            "froid"
+          ],
+          "answer": 0,
+          "wordId": "fr-u2-w28"
+        },
+        {
           "id": "fr-u2-l4-s1",
           "type": "translate",
           "prompt": "It is hot today",
@@ -685,38 +742,32 @@
             "aujourd'hui"
           ],
           "bank": [
+            "Il",
             "aujourd'hui",
             "fait",
-            "froid",
             "demain",
-            "Il",
-            "chaud"
+            "chaud",
+            "froid"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u2-w28-et",
-          "type": "mc",
-          "prompt": "How do you say \"hot\"?",
-          "options": [
-            "chaud",
-            "froid",
-            "le nuage",
-            "la tempête"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w28"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u2-l8",
+      "title": "Weather, part 2",
+      "theme": "weather",
+      "exercises": [
         {
           "id": "fr-u2-w29-te",
           "type": "mc",
           "prompt": "What does \"froid\" mean?",
           "speak": "froid",
           "options": [
+            "wind",
             "rain",
-            "the storm",
             "cold",
-            "sun"
+            "cloud"
           ],
           "answer": 2,
           "wordId": "fr-u2-w29"
@@ -726,13 +777,67 @@
           "type": "mc",
           "prompt": "How do you say \"wind\"?",
           "options": [
-            "le nuage",
             "le vent",
-            "chaud",
-            "le soleil"
+            "la pluie",
+            "la tempête",
+            "chaud"
           ],
-          "answer": 1,
+          "answer": 0,
           "wordId": "fr-u2-w30"
+        },
+        {
+          "id": "fr-u2-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w29",
+              "target": "froid",
+              "english": "cold"
+            },
+            {
+              "wordId": "fr-u2-w30",
+              "target": "le vent",
+              "english": "wind"
+            },
+            {
+              "wordId": "fr-u2-w31",
+              "target": "le nuage",
+              "english": "cloud"
+            },
+            {
+              "wordId": "fr-u2-w32",
+              "target": "la tempête",
+              "english": "the storm"
+            }
+          ]
+        },
+        {
+          "id": "fr-u2-w31-te",
+          "type": "mc",
+          "prompt": "What does \"le nuage\" mean?",
+          "speak": "le nuage",
+          "options": [
+            "cloud",
+            "the weather",
+            "cold",
+            "sun"
+          ],
+          "answer": 0,
+          "wordId": "fr-u2-w31"
+        },
+        {
+          "id": "fr-u2-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"the storm\"?",
+          "options": [
+            "chaud",
+            "froid",
+            "le nuage",
+            "la tempête"
+          ],
+          "answer": 3,
+          "wordId": "fr-u2-w32"
         },
         {
           "id": "fr-u2-l4-s2",
@@ -745,61 +850,16 @@
           "bank": [
             "Il",
             "vent",
-            "neige",
-            "pleut"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u2-w31-te",
-          "type": "mc",
-          "prompt": "What does \"le nuage\" mean?",
-          "speak": "le nuage",
-          "options": [
-            "the weather",
-            "cloud",
-            "rain",
-            "cold"
-          ],
-          "answer": 1,
-          "wordId": "fr-u2-w31"
-        },
-        {
-          "id": "fr-u2-w32-et",
-          "type": "mc",
-          "prompt": "How do you say \"the storm\"?",
-          "options": [
-            "le soleil",
-            "chaud",
-            "le nuage",
-            "la tempête"
-          ],
-          "answer": 3,
-          "wordId": "fr-u2-w32"
-        },
-        {
-          "id": "fr-u2-l4-s3",
-          "type": "translate",
-          "prompt": "I like the sun",
-          "answer": [
-            "J'aime",
-            "le",
-            "soleil"
-          ],
-          "bank": [
-            "pluie",
-            "nuage",
-            "J'aime",
-            "le",
-            "soleil"
+            "pleut",
+            "neige"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u2-l5",
-      "title": "Restaurant",
+      "id": "fr-u2-l9",
+      "title": "Restaurant, part 1",
       "theme": "restaurant",
       "exercises": [
         {
@@ -808,9 +868,9 @@
           "prompt": "What does \"le restaurant\" mean?",
           "speak": "le restaurant",
           "options": [
-            "the bill",
-            "to order",
             "the table",
+            "the bill",
+            "the menu",
             "the restaurant"
           ],
           "answer": 3,
@@ -821,13 +881,40 @@
           "type": "mc",
           "prompt": "How do you say \"the menu\"?",
           "options": [
-            "la table",
-            "le menu",
+            "commander",
             "délicieux",
-            "commander"
+            "l'addition",
+            "le menu"
           ],
-          "answer": 1,
+          "answer": 3,
           "wordId": "fr-u2-w34"
+        },
+        {
+          "id": "fr-u2-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w33",
+              "target": "le restaurant",
+              "english": "the restaurant"
+            },
+            {
+              "wordId": "fr-u2-w34",
+              "target": "le menu",
+              "english": "the menu"
+            },
+            {
+              "wordId": "fr-u2-w35",
+              "target": "l'addition",
+              "english": "the bill"
+            },
+            {
+              "wordId": "fr-u2-w36",
+              "target": "commander",
+              "english": "to order"
+            }
+          ]
         },
         {
           "id": "fr-u2-w35-te",
@@ -835,40 +922,26 @@
           "prompt": "What does \"l'addition\" mean?",
           "speak": "l'addition",
           "options": [
-            "the waiter",
             "the bill",
             "the restaurant",
-            "the table"
+            "delicious",
+            "the dessert"
           ],
-          "answer": 1,
+          "answer": 0,
           "wordId": "fr-u2-w35"
         },
         {
-          "id": "fr-u2-l5-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-u2-w37",
-              "target": "délicieux",
-              "english": "delicious"
-            },
-            {
-              "wordId": "fr-u2-w40",
-              "target": "le dessert",
-              "english": "the dessert"
-            },
-            {
-              "wordId": "fr-u2-w38",
-              "target": "le serveur",
-              "english": "the waiter"
-            },
-            {
-              "wordId": "fr-u2-w35",
-              "target": "l'addition",
-              "english": "the bill"
-            }
-          ]
+          "id": "fr-u2-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"to order\"?",
+          "options": [
+            "le menu",
+            "le serveur",
+            "commander",
+            "la table"
+          ],
+          "answer": 2,
+          "wordId": "fr-u2-w36"
         },
         {
           "id": "fr-u2-l5-s1",
@@ -882,37 +955,31 @@
           ],
           "bank": [
             "menu",
+            "s'il",
             "L'addition",
-            "plaît",
-            "merci",
             "vous",
-            "s'il"
+            "merci",
+            "plaît"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-u2-w36-et",
-          "type": "mc",
-          "prompt": "How do you say \"to order\"?",
-          "options": [
-            "le menu",
-            "le restaurant",
-            "le serveur",
-            "commander"
-          ],
-          "answer": 3,
-          "wordId": "fr-u2-w36"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u2-l10",
+      "title": "Restaurant, part 2",
+      "theme": "restaurant",
+      "exercises": [
         {
           "id": "fr-u2-w37-te",
           "type": "mc",
           "prompt": "What does \"délicieux\" mean?",
           "speak": "délicieux",
           "options": [
-            "the menu",
+            "the restaurant",
             "delicious",
-            "the bill",
-            "to order"
+            "the table",
+            "the bill"
           ],
           "answer": 1,
           "wordId": "fr-u2-w37"
@@ -922,13 +989,67 @@
           "type": "mc",
           "prompt": "How do you say \"the waiter\"?",
           "options": [
-            "le dessert",
-            "le restaurant",
-            "la table",
+            "commander",
+            "le menu",
+            "délicieux",
             "le serveur"
           ],
           "answer": 3,
           "wordId": "fr-u2-w38"
+        },
+        {
+          "id": "fr-u2-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-u2-w37",
+              "target": "délicieux",
+              "english": "delicious"
+            },
+            {
+              "wordId": "fr-u2-w38",
+              "target": "le serveur",
+              "english": "the waiter"
+            },
+            {
+              "wordId": "fr-u2-w39",
+              "target": "la table",
+              "english": "the table"
+            },
+            {
+              "wordId": "fr-u2-w40",
+              "target": "le dessert",
+              "english": "the dessert"
+            }
+          ]
+        },
+        {
+          "id": "fr-u2-w39-te",
+          "type": "mc",
+          "prompt": "What does \"la table\" mean?",
+          "speak": "la table",
+          "options": [
+            "the table",
+            "the menu",
+            "the waiter",
+            "delicious"
+          ],
+          "answer": 0,
+          "wordId": "fr-u2-w39"
+        },
+        {
+          "id": "fr-u2-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"the dessert\"?",
+          "options": [
+            "l'addition",
+            "le dessert",
+            "le restaurant",
+            "commander"
+          ],
+          "answer": 1,
+          "wordId": "fr-u2-w40"
         },
         {
           "id": "fr-u2-l5-s2",
@@ -940,54 +1061,11 @@
             "commander"
           ],
           "bank": [
-            "Je",
+            "voudrais",
             "commander",
+            "Je",
             "acheter",
-            "payer",
-            "voudrais"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-u2-w39-te",
-          "type": "mc",
-          "prompt": "What does \"la table\" mean?",
-          "speak": "la table",
-          "options": [
-            "the restaurant",
-            "the menu",
-            "the table",
-            "to order"
-          ],
-          "answer": 2,
-          "wordId": "fr-u2-w39"
-        },
-        {
-          "id": "fr-u2-w40-et",
-          "type": "mc",
-          "prompt": "How do you say \"the dessert\"?",
-          "options": [
-            "le dessert",
-            "la table",
-            "le menu",
-            "le restaurant"
-          ],
-          "answer": 0,
-          "wordId": "fr-u2-w40"
-        },
-        {
-          "id": "fr-u2-l5-s3",
-          "type": "translate",
-          "prompt": "This is delicious",
-          "answer": [
-            "C'est",
-            "délicieux"
-          ],
-          "bank": [
-            "bon",
-            "délicieux",
-            "C'est",
-            "mauvais"
+            "payer"
           ],
           "wordIds": []
         }
@@ -1004,12 +1082,12 @@
         "prompt": "What does \"la famille\" mean?",
         "speak": "la famille",
         "options": [
-          "wind",
-          "son",
-          "the menu",
-          "family"
+          "the bill",
+          "child",
+          "family",
+          "father"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u2-w1"
       },
       {
@@ -1017,12 +1095,12 @@
         "type": "mc",
         "prompt": "How do you say \"mother\"?",
         "options": [
-          "la mère",
-          "la fille",
-          "la tempête",
-          "l'addition"
+          "aujourd'hui",
+          "la sœur",
+          "le matin",
+          "la mère"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-u2-w2"
       },
       {
@@ -1031,12 +1109,12 @@
         "prompt": "What does \"le père\" mean?",
         "speak": "le père",
         "options": [
-          "brother",
-          "cold",
-          "morning",
-          "father"
+          "tomorrow",
+          "the ticket",
+          "father",
+          "the car"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u2-w3"
       },
       {
@@ -1044,12 +1122,12 @@
         "type": "mc",
         "prompt": "How do you say \"brother\"?",
         "options": [
-          "la pluie",
-          "la famille",
-          "l'aéroport",
-          "le frère"
+          "le temps",
+          "hier",
+          "le frère",
+          "la voiture"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u2-w4"
       },
       {
@@ -1058,12 +1136,12 @@
         "prompt": "What does \"la sœur\" mean?",
         "speak": "la sœur",
         "options": [
-          "the menu",
-          "cloud",
-          "the storm",
-          "sister"
+          "sister",
+          "family",
+          "to sleep",
+          "the ticket"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "fr-u2-w5"
       },
       {
@@ -1071,12 +1149,12 @@
         "type": "mc",
         "prompt": "How do you say \"son\"?",
         "options": [
+          "la mère",
           "le fils",
-          "froid",
-          "la voiture",
-          "le frère"
+          "le restaurant",
+          "la voiture"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-u2-w6"
       },
       {
@@ -1085,12 +1163,12 @@
         "prompt": "What does \"la fille\" mean?",
         "speak": "la fille",
         "options": [
-          "cloud",
-          "daughter",
+          "the ticket",
           "rain",
-          "the bill"
+          "sister",
+          "daughter"
         ],
-        "answer": 1,
+        "answer": 3,
         "wordId": "fr-u2-w7"
       },
       {
@@ -1098,12 +1176,12 @@
         "type": "mc",
         "prompt": "How do you say \"child\"?",
         "options": [
+          "le menu",
+          "le vent",
           "l'enfant",
-          "aujourd'hui",
-          "le restaurant",
-          "voyager"
+          "chaud"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-u2-w8"
       },
       {
@@ -1112,12 +1190,12 @@
         "prompt": "What does \"aujourd'hui\" mean?",
         "speak": "aujourd'hui",
         "options": [
-          "the suitcase",
-          "the weather",
-          "the table",
-          "today"
+          "today",
+          "son",
+          "sister",
+          "child"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "fr-u2-w9"
       },
       {
@@ -1125,9 +1203,9 @@
         "type": "mc",
         "prompt": "How do you say \"tomorrow\"?",
         "options": [
-          "le billet",
-          "le restaurant",
-          "dormir",
+          "la voiture",
+          "le train",
+          "la nuit",
           "demain"
         ],
         "answer": 3,
@@ -1139,10 +1217,10 @@
         "prompt": "What does \"hier\" mean?",
         "speak": "hier",
         "options": [
-          "brother",
+          "today",
           "yesterday",
-          "the ticket",
-          "sister"
+          "sister",
+          "wind"
         ],
         "answer": 1,
         "wordId": "fr-u2-w11"
@@ -1152,12 +1230,12 @@
         "type": "mc",
         "prompt": "How do you say \"morning\"?",
         "options": [
-          "toujours",
+          "la table",
+          "la fille",
           "le matin",
-          "se réveiller",
-          "le père"
+          "commander"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "fr-u2-w12"
       },
       {
@@ -1166,12 +1244,12 @@
         "prompt": "What does \"la nuit\" mean?",
         "speak": "la nuit",
         "options": [
-          "sister",
-          "yesterday",
+          "the waiter",
           "night",
-          "the ticket"
+          "to order",
+          "the weather"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-u2-w13"
       },
       {
@@ -1179,12 +1257,12 @@
         "type": "mc",
         "prompt": "How do you say \"to wake up\"?",
         "options": [
+          "le soleil",
+          "commander",
           "se réveiller",
-          "l'aéroport",
-          "la tempête",
-          "la nuit"
+          "la famille"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-u2-w14"
       },
       {
@@ -1193,12 +1271,12 @@
         "prompt": "What does \"dormir\" mean?",
         "speak": "dormir",
         "options": [
-          "sun",
-          "to sleep",
-          "son",
-          "today"
+          "father",
+          "yesterday",
+          "the waiter",
+          "to sleep"
         ],
-        "answer": 1,
+        "answer": 3,
         "wordId": "fr-u2-w15"
       },
       {
@@ -1206,12 +1284,12 @@
         "type": "mc",
         "prompt": "How do you say \"always\"?",
         "options": [
+          "voyager",
+          "le restaurant",
           "toujours",
-          "la mère",
-          "le train",
-          "l'enfant"
+          "la tempête"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-u2-w16"
       },
       {
@@ -1221,9 +1299,9 @@
         "speak": "l'aéroport",
         "options": [
           "the airport",
-          "hot",
-          "son",
-          "family"
+          "the storm",
+          "always",
+          "cold"
         ],
         "answer": 0,
         "wordId": "fr-u2-w17"
@@ -1233,12 +1311,12 @@
         "type": "mc",
         "prompt": "How do you say \"the ticket\"?",
         "options": [
-          "la voiture",
-          "le passeport",
-          "froid",
-          "le billet"
+          "la nuit",
+          "le fils",
+          "le billet",
+          "le soleil"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u2-w18"
       },
       {
@@ -1247,12 +1325,12 @@
         "prompt": "What does \"le train\" mean?",
         "speak": "le train",
         "options": [
-          "morning",
-          "the suitcase",
-          "the train",
-          "rain"
+          "night",
+          "the waiter",
+          "brother",
+          "the train"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "fr-u2-w19"
       },
       {
@@ -1260,12 +1338,12 @@
         "type": "mc",
         "prompt": "How do you say \"the bus\"?",
         "options": [
-          "le billet",
+          "dormir",
+          "le menu",
           "le bus",
-          "la pluie",
-          "la nuit"
+          "commander"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "fr-u2-w20"
       },
       {
@@ -1274,10 +1352,10 @@
         "prompt": "What does \"la voiture\" mean?",
         "speak": "la voiture",
         "options": [
-          "hot",
           "cloud",
+          "delicious",
           "the car",
-          "the airport"
+          "night"
         ],
         "answer": 2,
         "wordId": "fr-u2-w21"
@@ -1287,9 +1365,9 @@
         "type": "mc",
         "prompt": "How do you say \"to travel\"?",
         "options": [
+          "la pluie",
           "dormir",
-          "le fils",
-          "le soleil",
+          "commander",
           "voyager"
         ],
         "answer": 3,
@@ -1301,12 +1379,12 @@
         "prompt": "What does \"la valise\" mean?",
         "speak": "la valise",
         "options": [
+          "the passport",
           "cold",
-          "the suitcase",
-          "the dessert",
-          "night"
+          "sister",
+          "the suitcase"
         ],
-        "answer": 1,
+        "answer": 3,
         "wordId": "fr-u2-w23"
       },
       {
@@ -1315,9 +1393,9 @@
         "prompt": "How do you say \"the passport\"?",
         "options": [
           "le passeport",
-          "le train",
-          "le bus",
-          "toujours"
+          "dormir",
+          "la valise",
+          "le billet"
         ],
         "answer": 0,
         "wordId": "fr-u2-w24"
@@ -1328,12 +1406,12 @@
         "prompt": "What does \"le temps\" mean?",
         "speak": "le temps",
         "options": [
-          "son",
-          "mother",
-          "father",
-          "the weather"
+          "tomorrow",
+          "the weather",
+          "the train",
+          "sister"
         ],
-        "answer": 3,
+        "answer": 1,
         "wordId": "fr-u2-w25"
       },
       {
@@ -1341,12 +1419,12 @@
         "type": "mc",
         "prompt": "How do you say \"sun\"?",
         "options": [
-          "demain",
-          "le frère",
           "le soleil",
-          "la pluie"
+          "la mère",
+          "voyager",
+          "la table"
         ],
-        "answer": 2,
+        "answer": 0,
         "wordId": "fr-u2-w26"
       },
       {
@@ -1355,12 +1433,12 @@
         "prompt": "What does \"la pluie\" mean?",
         "speak": "la pluie",
         "options": [
-          "the menu",
-          "rain",
-          "to travel",
-          "yesterday"
+          "sister",
+          "cloud",
+          "to order",
+          "rain"
         ],
-        "answer": 1,
+        "answer": 3,
         "wordId": "fr-u2-w27"
       },
       {
@@ -1368,12 +1446,12 @@
         "type": "mc",
         "prompt": "How do you say \"hot\"?",
         "options": [
-          "chaud",
-          "le vent",
+          "le père",
           "hier",
-          "dormir"
+          "chaud",
+          "le bus"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-u2-w28"
       },
       {
@@ -1382,9 +1460,9 @@
         "prompt": "What does \"froid\" mean?",
         "speak": "froid",
         "options": [
-          "to order",
+          "the passport",
           "cold",
-          "to travel",
+          "family",
           "the waiter"
         ],
         "answer": 1,
@@ -1395,12 +1473,12 @@
         "type": "mc",
         "prompt": "How do you say \"wind\"?",
         "options": [
-          "voyager",
+          "le frère",
+          "la voiture",
           "le vent",
-          "le père",
-          "la table"
+          "voyager"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "fr-u2-w30"
       },
       {
@@ -1409,12 +1487,12 @@
         "prompt": "What does \"le nuage\" mean?",
         "speak": "le nuage",
         "options": [
-          "the passport",
-          "night",
           "cloud",
-          "the bus"
+          "the bus",
+          "the weather",
+          "the dessert"
         ],
-        "answer": 2,
+        "answer": 0,
         "wordId": "fr-u2-w31"
       },
       {
@@ -1422,12 +1500,12 @@
         "type": "mc",
         "prompt": "How do you say \"the storm\"?",
         "options": [
-          "le menu",
-          "le train",
+          "le frère",
           "la tempête",
-          "le père"
+          "la fille",
+          "la voiture"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-u2-w32"
       },
       {
@@ -1436,12 +1514,12 @@
         "prompt": "What does \"le restaurant\" mean?",
         "speak": "le restaurant",
         "options": [
-          "the car",
-          "tomorrow",
-          "to sleep",
-          "the restaurant"
+          "the storm",
+          "the train",
+          "the restaurant",
+          "cloud"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u2-w33"
       },
       {
@@ -1449,12 +1527,12 @@
         "type": "mc",
         "prompt": "How do you say \"the menu\"?",
         "options": [
-          "le serveur",
+          "la nuit",
+          "dormir",
           "le menu",
-          "la famille",
-          "la fille"
+          "le bus"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "fr-u2-w34"
       },
       {
@@ -1463,12 +1541,12 @@
         "prompt": "What does \"l'addition\" mean?",
         "speak": "l'addition",
         "options": [
-          "the bill",
-          "hot",
-          "the bus",
-          "sun"
+          "today",
+          "the table",
+          "rain",
+          "the bill"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-u2-w35"
       },
       {
@@ -1476,12 +1554,12 @@
         "type": "mc",
         "prompt": "How do you say \"to order\"?",
         "options": [
-          "commander",
-          "la pluie",
           "l'addition",
-          "le train"
+          "le frère",
+          "commander",
+          "aujourd'hui"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-u2-w36"
       },
       {
@@ -1490,12 +1568,12 @@
         "prompt": "What does \"délicieux\" mean?",
         "speak": "délicieux",
         "options": [
-          "morning",
-          "the ticket",
-          "delicious",
-          "the car"
+          "sister",
+          "the car",
+          "the suitcase",
+          "delicious"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "fr-u2-w37"
       },
       {
@@ -1503,12 +1581,12 @@
         "type": "mc",
         "prompt": "How do you say \"the waiter\"?",
         "options": [
-          "le dessert",
+          "le temps",
+          "toujours",
           "le serveur",
-          "la valise",
-          "commander"
+          "demain"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "fr-u2-w38"
       },
       {
@@ -1518,9 +1596,9 @@
         "speak": "la table",
         "options": [
           "the table",
-          "the suitcase",
-          "the waiter",
-          "rain"
+          "the dessert",
+          "brother",
+          "hot"
         ],
         "answer": 0,
         "wordId": "fr-u2-w39"
@@ -1530,12 +1608,12 @@
         "type": "mc",
         "prompt": "How do you say \"the dessert\"?",
         "options": [
-          "toujours",
-          "la tempête",
-          "la nuit",
-          "le dessert"
+          "la table",
+          "le nuage",
+          "le dessert",
+          "voyager"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-u2-w40"
       },
       {
@@ -1548,11 +1626,11 @@
           "famille"
         ],
         "bank": [
-          "C'est",
-          "ma",
-          "mère",
           "père",
-          "famille"
+          "ma",
+          "famille",
+          "mère",
+          "C'est"
         ],
         "wordIds": []
       },
@@ -1567,12 +1645,12 @@
           "grand"
         ],
         "bank": [
-          "sœur",
           "frère",
-          "Mon",
-          "petit",
           "grand",
-          "est"
+          "sœur",
+          "est",
+          "petit",
+          "Mon"
         ],
         "wordIds": []
       },
@@ -1586,11 +1664,11 @@
           "sœurs"
         ],
         "bank": [
-          "sœurs",
-          "trois",
           "deux",
-          "frères",
-          "J'ai"
+          "sœurs",
+          "J'ai",
+          "trois",
+          "frères"
         ],
         "wordIds": []
       },
@@ -1605,12 +1683,12 @@
           "tôt"
         ],
         "bank": [
+          "tôt",
           "me",
-          "tard",
           "Je",
-          "dormir",
           "réveille",
-          "tôt"
+          "tard",
+          "dormir"
         ],
         "wordIds": []
       },
@@ -1623,10 +1701,10 @@
           "demain"
         ],
         "bank": [
-          "demain",
           "toujours",
           "hier",
-          "À"
+          "À",
+          "demain"
         ],
         "wordIds": []
       },
@@ -1641,12 +1719,12 @@
           "nuit"
         ],
         "bank": [
-          "Je",
           "dors",
-          "matin",
-          "nuit",
+          "la",
           "toujours",
-          "la"
+          "Je",
+          "nuit",
+          "matin"
         ],
         "wordIds": []
       },
@@ -1661,10 +1739,10 @@
           "billet"
         ],
         "bank": [
-          "passeport",
-          "billet",
           "valise",
+          "billet",
           "un",
+          "passeport",
           "Je",
           "voudrais"
         ],
@@ -1681,10 +1759,10 @@
         ],
         "bank": [
           "est",
-          "Où",
           "gare",
-          "loin",
-          "l'aéroport"
+          "Où",
+          "l'aéroport",
+          "loin"
         ],
         "wordIds": []
       },
@@ -1699,12 +1777,12 @@
           "train"
         ],
         "bank": [
-          "voyage",
-          "bus",
-          "Je",
           "voiture",
+          "Je",
           "train",
-          "en"
+          "bus",
+          "en",
+          "voyage"
         ],
         "wordIds": []
       },
@@ -1719,12 +1797,12 @@
           "aujourd'hui"
         ],
         "bank": [
-          "fait",
-          "chaud",
-          "froid",
           "aujourd'hui",
           "Il",
-          "demain"
+          "fait",
+          "demain",
+          "chaud",
+          "froid"
         ],
         "wordIds": []
       },
@@ -1737,10 +1815,10 @@
           "pleut"
         ],
         "bank": [
-          "Il",
           "neige",
-          "vent",
-          "pleut"
+          "Il",
+          "pleut",
+          "vent"
         ],
         "wordIds": []
       },
@@ -1755,10 +1833,10 @@
         ],
         "bank": [
           "pluie",
-          "J'aime",
-          "le",
           "soleil",
-          "nuage"
+          "nuage",
+          "le",
+          "J'aime"
         ],
         "wordIds": []
       },
@@ -1774,11 +1852,11 @@
         ],
         "bank": [
           "vous",
-          "merci",
           "s'il",
-          "L'addition",
+          "plaît",
           "menu",
-          "plaît"
+          "merci",
+          "L'addition"
         ],
         "wordIds": []
       },
@@ -1792,11 +1870,11 @@
           "commander"
         ],
         "bank": [
-          "voudrais",
           "commander",
-          "acheter",
+          "Je",
+          "voudrais",
           "payer",
-          "Je"
+          "acheter"
         ],
         "wordIds": []
       },
@@ -1811,8 +1889,8 @@
         "bank": [
           "délicieux",
           "C'est",
-          "mauvais",
-          "bon"
+          "bon",
+          "mauvais"
         ],
         "wordIds": []
       },
@@ -1822,29 +1900,29 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u2-w3",
-            "target": "le père",
-            "english": "father"
-          },
-          {
-            "wordId": "fr-u2-w1",
-            "target": "la famille",
-            "english": "family"
-          },
-          {
-            "wordId": "fr-u2-w7",
-            "target": "la fille",
-            "english": "daughter"
-          },
-          {
-            "wordId": "fr-u2-w6",
-            "target": "le fils",
-            "english": "son"
+            "wordId": "fr-u2-w4",
+            "target": "le frère",
+            "english": "brother"
           },
           {
             "wordId": "fr-u2-w5",
             "target": "la sœur",
             "english": "sister"
+          },
+          {
+            "wordId": "fr-u2-w2",
+            "target": "la mère",
+            "english": "mother"
+          },
+          {
+            "wordId": "fr-u2-w8",
+            "target": "l'enfant",
+            "english": "child"
+          },
+          {
+            "wordId": "fr-u2-w3",
+            "target": "le père",
+            "english": "father"
           }
         ]
       },
@@ -1854,9 +1932,9 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u2-w13",
-            "target": "la nuit",
-            "english": "night"
+            "wordId": "fr-u2-w15",
+            "target": "dormir",
+            "english": "to sleep"
           },
           {
             "wordId": "fr-u2-w11",
@@ -1864,19 +1942,19 @@
             "english": "yesterday"
           },
           {
-            "wordId": "fr-u2-w12",
-            "target": "le matin",
-            "english": "morning"
-          },
-          {
             "wordId": "fr-u2-w16",
             "target": "toujours",
             "english": "always"
           },
           {
-            "wordId": "fr-u2-w10",
-            "target": "demain",
-            "english": "tomorrow"
+            "wordId": "fr-u2-w12",
+            "target": "le matin",
+            "english": "morning"
+          },
+          {
+            "wordId": "fr-u2-w14",
+            "target": "se réveiller",
+            "english": "to wake up"
           }
         ]
       },
@@ -1886,19 +1964,19 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u2-w18",
-            "target": "le billet",
-            "english": "the ticket"
-          },
-          {
             "wordId": "fr-u2-w19",
             "target": "le train",
             "english": "the train"
           },
           {
-            "wordId": "fr-u2-w22",
-            "target": "voyager",
-            "english": "to travel"
+            "wordId": "fr-u2-w18",
+            "target": "le billet",
+            "english": "the ticket"
+          },
+          {
+            "wordId": "fr-u2-w21",
+            "target": "la voiture",
+            "english": "the car"
           },
           {
             "wordId": "fr-u2-w17",
@@ -1906,9 +1984,9 @@
             "english": "the airport"
           },
           {
-            "wordId": "fr-u2-w23",
-            "target": "la valise",
-            "english": "the suitcase"
+            "wordId": "fr-u2-w24",
+            "target": "le passeport",
+            "english": "the passport"
           }
         ]
       },
@@ -1923,9 +2001,9 @@
             "english": "sun"
           },
           {
-            "wordId": "fr-u2-w32",
-            "target": "la tempête",
-            "english": "the storm"
+            "wordId": "fr-u2-w27",
+            "target": "la pluie",
+            "english": "rain"
           },
           {
             "wordId": "fr-u2-w25",
@@ -1933,14 +2011,14 @@
             "english": "the weather"
           },
           {
-            "wordId": "fr-u2-w27",
-            "target": "la pluie",
-            "english": "rain"
+            "wordId": "fr-u2-w32",
+            "target": "la tempête",
+            "english": "the storm"
           },
           {
-            "wordId": "fr-u2-w30",
-            "target": "le vent",
-            "english": "wind"
+            "wordId": "fr-u2-w31",
+            "target": "le nuage",
+            "english": "cloud"
           }
         ]
       },
@@ -1950,19 +2028,14 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-u2-w39",
-            "target": "la table",
-            "english": "the table"
-          },
-          {
             "wordId": "fr-u2-w35",
             "target": "l'addition",
             "english": "the bill"
           },
           {
-            "wordId": "fr-u2-w37",
-            "target": "délicieux",
-            "english": "delicious"
+            "wordId": "fr-u2-w39",
+            "target": "la table",
+            "english": "the table"
           },
           {
             "wordId": "fr-u2-w33",
@@ -1970,9 +2043,14 @@
             "english": "the restaurant"
           },
           {
-            "wordId": "fr-u2-w38",
-            "target": "le serveur",
-            "english": "the waiter"
+            "wordId": "fr-u2-w36",
+            "target": "commander",
+            "english": "to order"
+          },
+          {
+            "wordId": "fr-u2-w40",
+            "target": "le dessert",
+            "english": "the dessert"
           }
         ]
       }

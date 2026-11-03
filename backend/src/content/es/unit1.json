@@ -7,7 +7,7 @@
   "lessons": [
     {
       "id": "es-u1-l1",
-      "title": "Greetings",
+      "title": "Greetings, part 1",
       "theme": "greetings",
       "exercises": [
         {
@@ -38,6 +38,33 @@
           "wordId": "es-w2"
         },
         {
+          "id": "es-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-w1",
+              "target": "hola",
+              "english": "hello"
+            },
+            {
+              "wordId": "es-w2",
+              "target": "buenos días",
+              "english": "good morning"
+            },
+            {
+              "wordId": "es-w3",
+              "target": "buenas tardes",
+              "english": "good afternoon"
+            },
+            {
+              "wordId": "es-w4",
+              "target": "adiós",
+              "english": "goodbye"
+            }
+          ]
+        },
+        {
           "id": "es-w3-te",
           "type": "mc",
           "prompt": "What does \"buenas tardes\" mean?",
@@ -52,31 +79,17 @@
           "wordId": "es-w3"
         },
         {
-          "id": "es-l1-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "es-w4",
-              "target": "adiós",
-              "english": "goodbye"
-            },
-            {
-              "wordId": "es-w5",
-              "target": "gracias",
-              "english": "thank you"
-            },
-            {
-              "wordId": "es-w6",
-              "target": "por favor",
-              "english": "please"
-            },
-            {
-              "wordId": "es-w3",
-              "target": "buenas tardes",
-              "english": "good afternoon"
-            }
-          ]
+          "id": "es-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"goodbye\"?",
+          "options": [
+            "por favor",
+            "adiós",
+            "buenas tardes",
+            "gracias"
+          ],
+          "answer": 1,
+          "wordId": "es-w4"
         },
         {
           "id": "es-l1-s1",
@@ -89,40 +102,34 @@
             "Diego"
           ],
           "bank": [
-            "soy",
-            "llamo",
-            "Hola",
-            "eres",
             "me",
-            "Diego"
+            "Diego",
+            "soy",
+            "eres",
+            "Hola",
+            "llamo"
           ],
           "wordIds": []
-        },
-        {
-          "id": "es-w4-et",
-          "type": "mc",
-          "prompt": "How do you say \"goodbye\"?",
-          "options": [
-            "mucho gusto",
-            "buenos días",
-            "hola",
-            "adiós"
-          ],
-          "answer": 3,
-          "wordId": "es-w4"
-        },
+        }
+      ]
+    },
+    {
+      "id": "es-u1-l2",
+      "title": "Greetings, part 2",
+      "theme": "greetings",
+      "exercises": [
         {
           "id": "es-w5-te",
           "type": "mc",
           "prompt": "What does \"gracias\" mean?",
           "speak": "gracias",
           "options": [
-            "yes",
+            "thank you",
+            "goodbye",
             "good morning",
-            "good afternoon",
-            "thank you"
+            "hello"
           ],
-          "answer": 3,
+          "answer": 0,
           "wordId": "es-w5"
         },
         {
@@ -130,13 +137,67 @@
           "type": "mc",
           "prompt": "How do you say \"please\"?",
           "options": [
-            "buenos días",
             "por favor",
-            "buenas tardes",
-            "gracias"
+            "adiós",
+            "gracias",
+            "buenas tardes"
+          ],
+          "answer": 0,
+          "wordId": "es-w6"
+        },
+        {
+          "id": "es-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-w5",
+              "target": "gracias",
+              "english": "thank you"
+            },
+            {
+              "wordId": "es-w6",
+              "target": "por favor",
+              "english": "please"
+            },
+            {
+              "wordId": "es-w7",
+              "target": "sí",
+              "english": "yes"
+            },
+            {
+              "wordId": "es-w8",
+              "target": "mucho gusto",
+              "english": "nice to meet you"
+            }
+          ]
+        },
+        {
+          "id": "es-w7-te",
+          "type": "mc",
+          "prompt": "What does \"sí\" mean?",
+          "speak": "sí",
+          "options": [
+            "nice to meet you",
+            "yes",
+            "good afternoon",
+            "goodbye"
           ],
           "answer": 1,
-          "wordId": "es-w6"
+          "wordId": "es-w7"
+        },
+        {
+          "id": "es-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"nice to meet you\"?",
+          "options": [
+            "buenas tardes",
+            "sí",
+            "hola",
+            "mucho gusto"
+          ],
+          "answer": 3,
+          "wordId": "es-w8"
         },
         {
           "id": "es-l1-s2",
@@ -148,62 +209,19 @@
             "usted"
           ],
           "bank": [
-            "Cómo",
-            "usted",
             "dónde",
+            "está",
+            "usted",
             "gracias",
-            "está"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "es-w7-te",
-          "type": "mc",
-          "prompt": "What does \"sí\" mean?",
-          "speak": "sí",
-          "options": [
-            "hello",
-            "goodbye",
-            "yes",
-            "good morning"
-          ],
-          "answer": 2,
-          "wordId": "es-w7"
-        },
-        {
-          "id": "es-w8-et",
-          "type": "mc",
-          "prompt": "How do you say \"nice to meet you\"?",
-          "options": [
-            "gracias",
-            "buenas tardes",
-            "mucho gusto",
-            "buenos días"
-          ],
-          "answer": 2,
-          "wordId": "es-w8"
-        },
-        {
-          "id": "es-l1-s3",
-          "type": "translate",
-          "prompt": "Thank you very much",
-          "answer": [
-            "Muchas",
-            "gracias"
-          ],
-          "bank": [
-            "hola",
-            "gracias",
-            "Muchas",
-            "poco"
+            "Cómo"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "es-u1-l2",
-      "title": "Numbers",
+      "id": "es-u1-l3",
+      "title": "Numbers, part 1",
       "theme": "numbers",
       "exercises": [
         {
@@ -212,12 +230,12 @@
           "prompt": "What does \"uno\" mean?",
           "speak": "uno",
           "options": [
-            "two",
-            "ten",
+            "six",
+            "one",
             "twenty",
-            "one"
+            "four"
           ],
-          "answer": 3,
+          "answer": 1,
           "wordId": "es-w9"
         },
         {
@@ -225,42 +243,23 @@
           "type": "mc",
           "prompt": "How do you say \"two\"?",
           "options": [
+            "cinco",
             "diez",
-            "uno",
             "dos",
-            "tres"
+            "uno"
           ],
           "answer": 2,
           "wordId": "es-w10"
         },
         {
-          "id": "es-w11-te",
-          "type": "mc",
-          "prompt": "What does \"tres\" mean?",
-          "speak": "tres",
-          "options": [
-            "one",
-            "six",
-            "ten",
-            "three"
-          ],
-          "answer": 3,
-          "wordId": "es-w11"
-        },
-        {
-          "id": "es-l2-m",
+          "id": "es-l3-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "es-w12",
-              "target": "cuatro",
-              "english": "four"
-            },
-            {
-              "wordId": "es-w15",
-              "target": "diez",
-              "english": "ten"
+              "wordId": "es-w9",
+              "target": "uno",
+              "english": "one"
             },
             {
               "wordId": "es-w10",
@@ -268,11 +267,43 @@
               "english": "two"
             },
             {
-              "wordId": "es-w16",
-              "target": "veinte",
-              "english": "twenty"
+              "wordId": "es-w11",
+              "target": "tres",
+              "english": "three"
+            },
+            {
+              "wordId": "es-w12",
+              "target": "cuatro",
+              "english": "four"
             }
           ]
+        },
+        {
+          "id": "es-w11-te",
+          "type": "mc",
+          "prompt": "What does \"tres\" mean?",
+          "speak": "tres",
+          "options": [
+            "two",
+            "three",
+            "six",
+            "one"
+          ],
+          "answer": 1,
+          "wordId": "es-w11"
+        },
+        {
+          "id": "es-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"four\"?",
+          "options": [
+            "uno",
+            "seis",
+            "cuatro",
+            "tres"
+          ],
+          "answer": 2,
+          "wordId": "es-w12"
         },
         {
           "id": "es-l2-s1",
@@ -284,36 +315,30 @@
             "hermanos"
           ],
           "bank": [
-            "tres",
+            "hermanos",
             "hermanas",
-            "Tengo",
+            "tres",
             "dos",
-            "hermanos"
+            "Tengo"
           ],
           "wordIds": []
-        },
-        {
-          "id": "es-w12-et",
-          "type": "mc",
-          "prompt": "How do you say \"four\"?",
-          "options": [
-            "cuatro",
-            "uno",
-            "cinco",
-            "tres"
-          ],
-          "answer": 0,
-          "wordId": "es-w12"
-        },
+        }
+      ]
+    },
+    {
+      "id": "es-u1-l4",
+      "title": "Numbers, part 2",
+      "theme": "numbers",
+      "exercises": [
         {
           "id": "es-w13-te",
           "type": "mc",
           "prompt": "What does \"cinco\" mean?",
           "speak": "cinco",
           "options": [
-            "four",
             "one",
-            "two",
+            "ten",
+            "four",
             "five"
           ],
           "answer": 3,
@@ -324,13 +349,67 @@
           "type": "mc",
           "prompt": "How do you say \"six\"?",
           "options": [
-            "veinte",
-            "uno",
             "seis",
-            "diez"
+            "uno",
+            "cinco",
+            "veinte"
           ],
-          "answer": 2,
+          "answer": 0,
           "wordId": "es-w14"
+        },
+        {
+          "id": "es-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-w13",
+              "target": "cinco",
+              "english": "five"
+            },
+            {
+              "wordId": "es-w14",
+              "target": "seis",
+              "english": "six"
+            },
+            {
+              "wordId": "es-w15",
+              "target": "diez",
+              "english": "ten"
+            },
+            {
+              "wordId": "es-w16",
+              "target": "veinte",
+              "english": "twenty"
+            }
+          ]
+        },
+        {
+          "id": "es-w15-te",
+          "type": "mc",
+          "prompt": "What does \"diez\" mean?",
+          "speak": "diez",
+          "options": [
+            "two",
+            "ten",
+            "three",
+            "one"
+          ],
+          "answer": 1,
+          "wordId": "es-w15"
+        },
+        {
+          "id": "es-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"twenty\"?",
+          "options": [
+            "cinco",
+            "dos",
+            "uno",
+            "veinte"
+          ],
+          "answer": 3,
+          "wordId": "es-w16"
         },
         {
           "id": "es-l2-s2",
@@ -342,64 +421,19 @@
             "tres"
           ],
           "bank": [
+            "días",
             "las",
             "Son",
-            "cuatro",
-            "días",
-            "tres"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "es-w15-te",
-          "type": "mc",
-          "prompt": "What does \"diez\" mean?",
-          "speak": "diez",
-          "options": [
-            "ten",
-            "two",
-            "five",
-            "one"
-          ],
-          "answer": 0,
-          "wordId": "es-w15"
-        },
-        {
-          "id": "es-w16-et",
-          "type": "mc",
-          "prompt": "How do you say \"twenty\"?",
-          "options": [
-            "uno",
-            "dos",
-            "cuatro",
-            "veinte"
-          ],
-          "answer": 3,
-          "wordId": "es-w16"
-        },
-        {
-          "id": "es-l2-s3",
-          "type": "translate",
-          "prompt": "I am ten years old",
-          "answer": [
-            "Tengo",
-            "diez",
-            "años"
-          ],
-          "bank": [
-            "años",
-            "diez",
-            "Tengo",
-            "meses",
-            "veinte"
+            "tres",
+            "cuatro"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "es-u1-l3",
-      "title": "Market and money",
+      "id": "es-u1-l5",
+      "title": "Market and money, part 1",
       "theme": "market and money",
       "exercises": [
         {
@@ -408,12 +442,12 @@
           "prompt": "What does \"el mercado\" mean?",
           "speak": "el mercado",
           "options": [
-            "the price",
-            "money",
-            "to pay",
-            "the market"
+            "how much",
+            "the market",
+            "expensive",
+            "to pay"
           ],
-          "answer": 3,
+          "answer": 1,
           "wordId": "es-w17"
         },
         {
@@ -421,37 +455,23 @@
           "type": "mc",
           "prompt": "How do you say \"how much\"?",
           "options": [
-            "comprar",
             "cuánto",
             "caro",
+            "comprar",
             "el mercado"
           ],
-          "answer": 1,
+          "answer": 0,
           "wordId": "es-w18"
         },
         {
-          "id": "es-w19-te",
-          "type": "mc",
-          "prompt": "What does \"caro\" mean?",
-          "speak": "caro",
-          "options": [
-            "the price",
-            "expensive",
-            "money",
-            "how much"
-          ],
-          "answer": 1,
-          "wordId": "es-w19"
-        },
-        {
-          "id": "es-l3-m",
+          "id": "es-l5-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "es-w24",
-              "target": "el precio",
-              "english": "the price"
+              "wordId": "es-w17",
+              "target": "el mercado",
+              "english": "the market"
             },
             {
               "wordId": "es-w18",
@@ -459,16 +479,43 @@
               "english": "how much"
             },
             {
-              "wordId": "es-w21",
-              "target": "el dinero",
-              "english": "money"
+              "wordId": "es-w19",
+              "target": "caro",
+              "english": "expensive"
             },
             {
-              "wordId": "es-w17",
-              "target": "el mercado",
-              "english": "the market"
+              "wordId": "es-w20",
+              "target": "barato",
+              "english": "cheap"
             }
           ]
+        },
+        {
+          "id": "es-w19-te",
+          "type": "mc",
+          "prompt": "What does \"caro\" mean?",
+          "speak": "caro",
+          "options": [
+            "money",
+            "the price",
+            "the market",
+            "expensive"
+          ],
+          "answer": 3,
+          "wordId": "es-w19"
+        },
+        {
+          "id": "es-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"cheap\"?",
+          "options": [
+            "comprar",
+            "cuánto",
+            "barato",
+            "el dinero"
+          ],
+          "answer": 2,
+          "wordId": "es-w20"
         },
         {
           "id": "es-l3-s1",
@@ -480,37 +527,31 @@
           ],
           "bank": [
             "caro",
-            "cuesta",
             "Cuánto",
+            "cuesta",
             "compro"
           ],
           "wordIds": []
-        },
-        {
-          "id": "es-w20-et",
-          "type": "mc",
-          "prompt": "How do you say \"cheap\"?",
-          "options": [
-            "el dinero",
-            "barato",
-            "el mercado",
-            "cuánto"
-          ],
-          "answer": 1,
-          "wordId": "es-w20"
-        },
+        }
+      ]
+    },
+    {
+      "id": "es-u1-l6",
+      "title": "Market and money, part 2",
+      "theme": "market and money",
+      "exercises": [
         {
           "id": "es-w21-te",
           "type": "mc",
           "prompt": "What does \"el dinero\" mean?",
           "speak": "el dinero",
           "options": [
+            "the price",
             "money",
-            "expensive",
             "cheap",
-            "the price"
+            "how much"
           ],
-          "answer": 0,
+          "answer": 1,
           "wordId": "es-w21"
         },
         {
@@ -518,13 +559,67 @@
           "type": "mc",
           "prompt": "How do you say \"to buy\"?",
           "options": [
-            "el precio",
-            "el dinero",
+            "cuánto",
             "comprar",
-            "cuánto"
+            "pagar",
+            "el mercado"
           ],
-          "answer": 2,
+          "answer": 1,
           "wordId": "es-w22"
+        },
+        {
+          "id": "es-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-w21",
+              "target": "el dinero",
+              "english": "money"
+            },
+            {
+              "wordId": "es-w22",
+              "target": "comprar",
+              "english": "to buy"
+            },
+            {
+              "wordId": "es-w23",
+              "target": "pagar",
+              "english": "to pay"
+            },
+            {
+              "wordId": "es-w24",
+              "target": "el precio",
+              "english": "the price"
+            }
+          ]
+        },
+        {
+          "id": "es-w23-te",
+          "type": "mc",
+          "prompt": "What does \"pagar\" mean?",
+          "speak": "pagar",
+          "options": [
+            "money",
+            "how much",
+            "the market",
+            "to pay"
+          ],
+          "answer": 3,
+          "wordId": "es-w23"
+        },
+        {
+          "id": "es-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"the price\"?",
+          "options": [
+            "el precio",
+            "barato",
+            "caro",
+            "comprar"
+          ],
+          "answer": 0,
+          "wordId": "es-w24"
         },
         {
           "id": "es-l3-s2",
@@ -536,62 +631,19 @@
             "caro"
           ],
           "bank": [
-            "bueno",
-            "muy",
+            "poco",
             "caro",
+            "muy",
             "Es",
-            "poco"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "es-w23-te",
-          "type": "mc",
-          "prompt": "What does \"pagar\" mean?",
-          "speak": "pagar",
-          "options": [
-            "the price",
-            "to pay",
-            "money",
-            "how much"
-          ],
-          "answer": 1,
-          "wordId": "es-w23"
-        },
-        {
-          "id": "es-w24-et",
-          "type": "mc",
-          "prompt": "How do you say \"the price\"?",
-          "options": [
-            "el dinero",
-            "el precio",
-            "cuánto",
-            "el mercado"
-          ],
-          "answer": 1,
-          "wordId": "es-w24"
-        },
-        {
-          "id": "es-l3-s3",
-          "type": "translate",
-          "prompt": "I want to pay",
-          "answer": [
-            "Quiero",
-            "pagar"
-          ],
-          "bank": [
-            "comprar",
-            "pagar",
-            "tú",
-            "Quiero"
+            "bueno"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "es-u1-l4",
-      "title": "Directions",
+      "id": "es-u1-l7",
+      "title": "Directions, part 1",
       "theme": "directions",
       "exercises": [
         {
@@ -600,12 +652,12 @@
           "prompt": "What does \"a la izquierda\" mean?",
           "speak": "a la izquierda",
           "options": [
-            "on the left",
-            "far",
             "on the right",
-            "straight ahead"
+            "straight ahead",
+            "on the left",
+            "the street"
           ],
-          "answer": 0,
+          "answer": 2,
           "wordId": "es-w25"
         },
         {
@@ -613,13 +665,40 @@
           "type": "mc",
           "prompt": "How do you say \"on the right\"?",
           "options": [
-            "dónde",
+            "a la izquierda",
             "la estación",
-            "la calle",
+            "lejos",
             "a la derecha"
           ],
           "answer": 3,
           "wordId": "es-w26"
+        },
+        {
+          "id": "es-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-w25",
+              "target": "a la izquierda",
+              "english": "on the left"
+            },
+            {
+              "wordId": "es-w26",
+              "target": "a la derecha",
+              "english": "on the right"
+            },
+            {
+              "wordId": "es-w27",
+              "target": "derecho",
+              "english": "straight ahead"
+            },
+            {
+              "wordId": "es-w28",
+              "target": "la calle",
+              "english": "the street"
+            }
+          ]
         },
         {
           "id": "es-w27-te",
@@ -627,40 +706,26 @@
           "prompt": "What does \"derecho\" mean?",
           "speak": "derecho",
           "options": [
-            "near",
-            "on the right",
             "straight ahead",
+            "the station",
+            "on the left",
             "where"
           ],
-          "answer": 2,
+          "answer": 0,
           "wordId": "es-w27"
         },
         {
-          "id": "es-l4-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "es-w26",
-              "target": "a la derecha",
-              "english": "on the right"
-            },
-            {
-              "wordId": "es-w32",
-              "target": "la estación",
-              "english": "the station"
-            },
-            {
-              "wordId": "es-w28",
-              "target": "la calle",
-              "english": "the street"
-            },
-            {
-              "wordId": "es-w30",
-              "target": "lejos",
-              "english": "far"
-            }
-          ]
+          "id": "es-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"the street\"?",
+          "options": [
+            "la calle",
+            "derecho",
+            "lejos",
+            "a la derecha"
+          ],
+          "answer": 0,
+          "wordId": "es-w28"
         },
         {
           "id": "es-l4-s1",
@@ -673,40 +738,34 @@
             "estación"
           ],
           "bank": [
-            "calle",
-            "lejos",
             "Dónde",
-            "la",
+            "calle",
             "está",
-            "estación"
+            "la",
+            "estación",
+            "lejos"
           ],
           "wordIds": []
-        },
-        {
-          "id": "es-w28-et",
-          "type": "mc",
-          "prompt": "How do you say \"the street\"?",
-          "options": [
-            "lejos",
-            "la calle",
-            "derecho",
-            "cerca"
-          ],
-          "answer": 1,
-          "wordId": "es-w28"
-        },
+        }
+      ]
+    },
+    {
+      "id": "es-u1-l8",
+      "title": "Directions, part 2",
+      "theme": "directions",
+      "exercises": [
         {
           "id": "es-w29-te",
           "type": "mc",
           "prompt": "What does \"cerca\" mean?",
           "speak": "cerca",
           "options": [
+            "far",
             "near",
-            "where",
-            "the street",
-            "on the right"
+            "the station",
+            "the street"
           ],
-          "answer": 0,
+          "answer": 1,
           "wordId": "es-w29"
         },
         {
@@ -714,13 +773,67 @@
           "type": "mc",
           "prompt": "How do you say \"far\"?",
           "options": [
+            "a la derecha",
+            "lejos",
+            "cerca",
+            "la calle"
+          ],
+          "answer": 1,
+          "wordId": "es-w30"
+        },
+        {
+          "id": "es-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-w29",
+              "target": "cerca",
+              "english": "near"
+            },
+            {
+              "wordId": "es-w30",
+              "target": "lejos",
+              "english": "far"
+            },
+            {
+              "wordId": "es-w31",
+              "target": "dónde",
+              "english": "where"
+            },
+            {
+              "wordId": "es-w32",
+              "target": "la estación",
+              "english": "the station"
+            }
+          ]
+        },
+        {
+          "id": "es-w31-te",
+          "type": "mc",
+          "prompt": "What does \"dónde\" mean?",
+          "speak": "dónde",
+          "options": [
+            "the street",
+            "on the right",
+            "where",
+            "straight ahead"
+          ],
+          "answer": 2,
+          "wordId": "es-w31"
+        },
+        {
+          "id": "es-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"the station\"?",
+          "options": [
             "dónde",
-            "la estación",
             "la calle",
-            "lejos"
+            "derecho",
+            "la estación"
           ],
           "answer": 3,
-          "wordId": "es-w30"
+          "wordId": "es-w32"
         },
         {
           "id": "es-l4-s2",
@@ -733,67 +846,20 @@
             "izquierda"
           ],
           "bank": [
-            "a",
-            "Gire",
-            "todo",
             "derecha",
-            "la",
-            "izquierda"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "es-w31-te",
-          "type": "mc",
-          "prompt": "What does \"dónde\" mean?",
-          "speak": "dónde",
-          "options": [
-            "where",
-            "straight ahead",
-            "the station",
-            "on the right"
-          ],
-          "answer": 0,
-          "wordId": "es-w31"
-        },
-        {
-          "id": "es-w32-et",
-          "type": "mc",
-          "prompt": "How do you say \"the station\"?",
-          "options": [
-            "la calle",
-            "cerca",
-            "la estación",
-            "a la derecha"
-          ],
-          "answer": 2,
-          "wordId": "es-w32"
-        },
-        {
-          "id": "es-l4-s3",
-          "type": "translate",
-          "prompt": "It is far from here",
-          "answer": [
-            "Está",
-            "lejos",
-            "de",
-            "aquí"
-          ],
-          "bank": [
-            "Está",
-            "lejos",
-            "dónde",
-            "cerca",
-            "aquí",
-            "de"
+            "izquierda",
+            "Gire",
+            "a",
+            "todo",
+            "la"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "es-u1-l5",
-      "title": "Food",
+      "id": "es-u1-l9",
+      "title": "Food, part 1",
       "theme": "food",
       "exercises": [
         {
@@ -802,12 +868,12 @@
           "prompt": "What does \"el pan\" mean?",
           "speak": "el pan",
           "options": [
-            "banana",
-            "fish",
-            "chicken",
-            "bread"
+            "I am hungry",
+            "rice",
+            "bread",
+            "coffee"
           ],
-          "answer": 3,
+          "answer": 2,
           "wordId": "es-w33"
         },
         {
@@ -816,7 +882,7 @@
           "prompt": "How do you say \"water\"?",
           "options": [
             "el agua",
-            "el pescado",
+            "tengo hambre",
             "el pollo",
             "el café"
           ],
@@ -824,24 +890,15 @@
           "wordId": "es-w34"
         },
         {
-          "id": "es-w35-te",
-          "type": "mc",
-          "prompt": "What does \"el arroz\" mean?",
-          "speak": "el arroz",
-          "options": [
-            "rice",
-            "bread",
-            "I am hungry",
-            "coffee"
-          ],
-          "answer": 0,
-          "wordId": "es-w35"
-        },
-        {
-          "id": "es-l5-m",
+          "id": "es-l9-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
+            {
+              "wordId": "es-w33",
+              "target": "el pan",
+              "english": "bread"
+            },
             {
               "wordId": "es-w34",
               "target": "el agua",
@@ -856,13 +913,35 @@
               "wordId": "es-w36",
               "target": "el pollo",
               "english": "chicken"
-            },
-            {
-              "wordId": "es-w38",
-              "target": "la banana",
-              "english": "banana"
             }
           ]
+        },
+        {
+          "id": "es-w35-te",
+          "type": "mc",
+          "prompt": "What does \"el arroz\" mean?",
+          "speak": "el arroz",
+          "options": [
+            "rice",
+            "water",
+            "chicken",
+            "banana"
+          ],
+          "answer": 0,
+          "wordId": "es-w35"
+        },
+        {
+          "id": "es-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"chicken\"?",
+          "options": [
+            "el pollo",
+            "la banana",
+            "el arroz",
+            "el agua"
+          ],
+          "answer": 0,
+          "wordId": "es-w36"
         },
         {
           "id": "es-l5-s1",
@@ -873,38 +952,32 @@
             "agua"
           ],
           "bank": [
-            "Quiero",
-            "tú",
+            "agua",
             "pan",
-            "agua"
+            "tú",
+            "Quiero"
           ],
           "wordIds": []
-        },
-        {
-          "id": "es-w36-et",
-          "type": "mc",
-          "prompt": "How do you say \"chicken\"?",
-          "options": [
-            "el pollo",
-            "el agua",
-            "el arroz",
-            "el pescado"
-          ],
-          "answer": 0,
-          "wordId": "es-w36"
-        },
+        }
+      ]
+    },
+    {
+      "id": "es-u1-l10",
+      "title": "Food, part 2",
+      "theme": "food",
+      "exercises": [
         {
           "id": "es-w37-te",
           "type": "mc",
           "prompt": "What does \"el pescado\" mean?",
           "speak": "el pescado",
           "options": [
-            "chicken",
-            "fish",
+            "coffee",
+            "bread",
             "water",
-            "I am hungry"
+            "fish"
           ],
-          "answer": 1,
+          "answer": 3,
           "wordId": "es-w37"
         },
         {
@@ -912,13 +985,67 @@
           "type": "mc",
           "prompt": "How do you say \"banana\"?",
           "options": [
-            "la banana",
-            "el pan",
+            "el café",
             "el arroz",
-            "el café"
+            "la banana",
+            "el pescado"
+          ],
+          "answer": 2,
+          "wordId": "es-w38"
+        },
+        {
+          "id": "es-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-w37",
+              "target": "el pescado",
+              "english": "fish"
+            },
+            {
+              "wordId": "es-w38",
+              "target": "la banana",
+              "english": "banana"
+            },
+            {
+              "wordId": "es-w39",
+              "target": "el café",
+              "english": "coffee"
+            },
+            {
+              "wordId": "es-w40",
+              "target": "tengo hambre",
+              "english": "I am hungry"
+            }
+          ]
+        },
+        {
+          "id": "es-w39-te",
+          "type": "mc",
+          "prompt": "What does \"el café\" mean?",
+          "speak": "el café",
+          "options": [
+            "coffee",
+            "bread",
+            "rice",
+            "I am hungry"
           ],
           "answer": 0,
-          "wordId": "es-w38"
+          "wordId": "es-w39"
+        },
+        {
+          "id": "es-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"I am hungry\"?",
+          "options": [
+            "la banana",
+            "el pan",
+            "tengo hambre",
+            "el agua"
+          ],
+          "answer": 2,
+          "wordId": "es-w40"
         },
         {
           "id": "es-l5-s2",
@@ -931,59 +1058,12 @@
             "rico"
           ],
           "bank": [
-            "pescado",
-            "malo",
+            "arroz",
             "rico",
+            "está",
+            "malo",
             "El",
-            "arroz",
-            "está"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "es-w39-te",
-          "type": "mc",
-          "prompt": "What does \"el café\" mean?",
-          "speak": "el café",
-          "options": [
-            "bread",
-            "I am hungry",
-            "coffee",
-            "fish"
-          ],
-          "answer": 2,
-          "wordId": "es-w39"
-        },
-        {
-          "id": "es-w40-et",
-          "type": "mc",
-          "prompt": "How do you say \"I am hungry\"?",
-          "options": [
-            "el arroz",
-            "tengo hambre",
-            "la banana",
-            "el café"
-          ],
-          "answer": 1,
-          "wordId": "es-w40"
-        },
-        {
-          "id": "es-l5-s3",
-          "type": "translate",
-          "prompt": "I like rice",
-          "answer": [
-            "Me",
-            "gusta",
-            "el",
-            "arroz"
-          ],
-          "bank": [
-            "Me",
-            "pollo",
-            "arroz",
-            "la",
-            "gusta",
-            "el"
+            "pescado"
           ],
           "wordIds": []
         }
@@ -1000,12 +1080,12 @@
         "prompt": "What does \"hola\" mean?",
         "speak": "hola",
         "options": [
-          "fish",
-          "good morning",
-          "expensive",
-          "hello"
+          "one",
+          "the market",
+          "hello",
+          "rice"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "es-w1"
       },
       {
@@ -1014,9 +1094,9 @@
         "prompt": "How do you say \"good morning\"?",
         "options": [
           "buenos días",
-          "seis",
-          "sí",
-          "tengo hambre"
+          "el dinero",
+          "barato",
+          "gracias"
         ],
         "answer": 0,
         "wordId": "es-w2"
@@ -1029,8 +1109,8 @@
         "options": [
           "good afternoon",
           "the price",
-          "two",
-          "bread"
+          "on the right",
+          "coffee"
         ],
         "answer": 0,
         "wordId": "es-w3"
@@ -1040,12 +1120,12 @@
         "type": "mc",
         "prompt": "How do you say \"goodbye\"?",
         "options": [
-          "buenas tardes",
-          "a la derecha",
+          "el café",
           "adiós",
-          "a la izquierda"
+          "uno",
+          "cuatro"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "es-w4"
       },
       {
@@ -1054,9 +1134,9 @@
         "prompt": "What does \"gracias\" mean?",
         "speak": "gracias",
         "options": [
-          "please",
-          "goodbye",
-          "far",
+          "fish",
+          "two",
+          "to buy",
           "thank you"
         ],
         "answer": 3,
@@ -1067,12 +1147,12 @@
         "type": "mc",
         "prompt": "How do you say \"please\"?",
         "options": [
-          "el agua",
-          "el arroz",
-          "por favor",
-          "cinco"
+          "a la izquierda",
+          "el pollo",
+          "el precio",
+          "por favor"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "es-w6"
       },
       {
@@ -1081,12 +1161,12 @@
         "prompt": "What does \"sí\" mean?",
         "speak": "sí",
         "options": [
-          "twenty",
-          "on the right",
-          "two",
-          "yes"
+          "banana",
+          "yes",
+          "five",
+          "thank you"
         ],
-        "answer": 3,
+        "answer": 1,
         "wordId": "es-w7"
       },
       {
@@ -1094,12 +1174,12 @@
         "type": "mc",
         "prompt": "How do you say \"nice to meet you\"?",
         "options": [
+          "sí",
+          "mucho gusto",
           "a la derecha",
-          "la estación",
-          "adiós",
-          "mucho gusto"
+          "diez"
         ],
-        "answer": 3,
+        "answer": 1,
         "wordId": "es-w8"
       },
       {
@@ -1108,12 +1188,12 @@
         "prompt": "What does \"uno\" mean?",
         "speak": "uno",
         "options": [
-          "the street",
-          "near",
+          "far",
           "one",
-          "hello"
+          "hello",
+          "water"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "es-w9"
       },
       {
@@ -1121,12 +1201,12 @@
         "type": "mc",
         "prompt": "How do you say \"two\"?",
         "options": [
-          "buenos días",
           "comprar",
-          "a la izquierda",
-          "dos"
+          "dos",
+          "derecho",
+          "uno"
         ],
-        "answer": 3,
+        "answer": 1,
         "wordId": "es-w10"
       },
       {
@@ -1135,12 +1215,12 @@
         "prompt": "What does \"tres\" mean?",
         "speak": "tres",
         "options": [
-          "expensive",
-          "the street",
           "three",
-          "please"
+          "expensive",
+          "good afternoon",
+          "ten"
         ],
-        "answer": 2,
+        "answer": 0,
         "wordId": "es-w11"
       },
       {
@@ -1148,12 +1228,12 @@
         "type": "mc",
         "prompt": "How do you say \"four\"?",
         "options": [
+          "cuánto",
           "cuatro",
-          "dónde",
-          "hola",
-          "la calle"
+          "cerca",
+          "a la derecha"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "es-w12"
       },
       {
@@ -1162,12 +1242,12 @@
         "prompt": "What does \"cinco\" mean?",
         "speak": "cinco",
         "options": [
-          "to buy",
           "five",
-          "straight ahead",
+          "cheap",
+          "six",
           "the price"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "es-w13"
       },
       {
@@ -1175,9 +1255,9 @@
         "type": "mc",
         "prompt": "How do you say \"six\"?",
         "options": [
-          "a la izquierda",
-          "barato",
-          "diez",
+          "sí",
+          "la calle",
+          "el mercado",
           "seis"
         ],
         "answer": 3,
@@ -1189,12 +1269,12 @@
         "prompt": "What does \"diez\" mean?",
         "speak": "diez",
         "options": [
-          "far",
-          "twenty",
-          "expensive",
-          "ten"
+          "ten",
+          "the street",
+          "thank you",
+          "fish"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "es-w15"
       },
       {
@@ -1202,12 +1282,12 @@
         "type": "mc",
         "prompt": "How do you say \"twenty\"?",
         "options": [
-          "el arroz",
           "veinte",
-          "tres",
-          "buenos días"
+          "cuánto",
+          "dónde",
+          "a la derecha"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "es-w16"
       },
       {
@@ -1216,12 +1296,12 @@
         "prompt": "What does \"el mercado\" mean?",
         "speak": "el mercado",
         "options": [
-          "yes",
-          "good afternoon",
-          "the station",
-          "the market"
+          "near",
+          "where",
+          "the market",
+          "water"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "es-w17"
       },
       {
@@ -1229,12 +1309,12 @@
         "type": "mc",
         "prompt": "How do you say \"how much\"?",
         "options": [
-          "uno",
+          "tengo hambre",
+          "dónde",
           "cuánto",
-          "el arroz",
-          "hola"
+          "sí"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "es-w18"
       },
       {
@@ -1243,12 +1323,12 @@
         "prompt": "What does \"caro\" mean?",
         "speak": "caro",
         "options": [
+          "one",
           "expensive",
-          "money",
-          "the station",
-          "on the right"
+          "banana",
+          "five"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "es-w19"
       },
       {
@@ -1257,9 +1337,9 @@
         "prompt": "How do you say \"cheap\"?",
         "options": [
           "barato",
-          "la calle",
-          "cinco",
-          "tengo hambre"
+          "el dinero",
+          "a la derecha",
+          "el pescado"
         ],
         "answer": 0,
         "wordId": "es-w20"
@@ -1270,12 +1350,12 @@
         "prompt": "What does \"el dinero\" mean?",
         "speak": "el dinero",
         "options": [
-          "water",
-          "thank you",
-          "bread",
-          "money"
+          "money",
+          "please",
+          "straight ahead",
+          "bread"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "es-w21"
       },
       {
@@ -1283,12 +1363,12 @@
         "type": "mc",
         "prompt": "How do you say \"to buy\"?",
         "options": [
-          "el arroz",
-          "veinte",
+          "lejos",
           "comprar",
-          "lejos"
+          "la banana",
+          "barato"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "es-w22"
       },
       {
@@ -1297,12 +1377,12 @@
         "prompt": "What does \"pagar\" mean?",
         "speak": "pagar",
         "options": [
-          "the station",
           "to pay",
-          "hello",
-          "on the left"
+          "far",
+          "bread",
+          "good afternoon"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "es-w23"
       },
       {
@@ -1310,12 +1390,12 @@
         "type": "mc",
         "prompt": "How do you say \"the price\"?",
         "options": [
+          "hola",
           "el precio",
-          "cinco",
-          "barato",
-          "buenos días"
+          "el pescado",
+          "el agua"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "es-w24"
       },
       {
@@ -1324,12 +1404,12 @@
         "prompt": "What does \"a la izquierda\" mean?",
         "speak": "a la izquierda",
         "options": [
-          "coffee",
-          "far",
-          "straight ahead",
-          "on the left"
+          "to pay",
+          "water",
+          "on the left",
+          "far"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "es-w25"
       },
       {
@@ -1337,9 +1417,9 @@
         "type": "mc",
         "prompt": "How do you say \"on the right\"?",
         "options": [
-          "el pan",
-          "hola",
-          "por favor",
+          "sí",
+          "barato",
+          "el arroz",
           "a la derecha"
         ],
         "answer": 3,
@@ -1351,9 +1431,9 @@
         "prompt": "What does \"derecho\" mean?",
         "speak": "derecho",
         "options": [
-          "the market",
-          "nice to meet you",
-          "far",
+          "cheap",
+          "good afternoon",
+          "water",
           "straight ahead"
         ],
         "answer": 3,
@@ -1364,12 +1444,12 @@
         "type": "mc",
         "prompt": "How do you say \"the street\"?",
         "options": [
-          "uno",
           "la calle",
-          "cinco",
-          "barato"
+          "por favor",
+          "el café",
+          "mucho gusto"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "es-w28"
       },
       {
@@ -1378,10 +1458,10 @@
         "prompt": "What does \"cerca\" mean?",
         "speak": "cerca",
         "options": [
-          "to pay",
-          "expensive",
+          "water",
+          "chicken",
           "near",
-          "bread"
+          "the street"
         ],
         "answer": 2,
         "wordId": "es-w29"
@@ -1391,12 +1471,12 @@
         "type": "mc",
         "prompt": "How do you say \"far\"?",
         "options": [
+          "la estación",
+          "el mercado",
           "lejos",
-          "la calle",
-          "buenos días",
-          "hola"
+          "sí"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "es-w30"
       },
       {
@@ -1405,12 +1485,12 @@
         "prompt": "What does \"dónde\" mean?",
         "speak": "dónde",
         "options": [
-          "the street",
-          "two",
+          "straight ahead",
           "where",
-          "three"
+          "far",
+          "please"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "es-w31"
       },
       {
@@ -1418,12 +1498,12 @@
         "type": "mc",
         "prompt": "How do you say \"the station\"?",
         "options": [
-          "tengo hambre",
-          "cuánto",
-          "la estación",
-          "el agua"
+          "gracias",
+          "el café",
+          "el pollo",
+          "la estación"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "es-w32"
       },
       {
@@ -1432,12 +1512,12 @@
         "prompt": "What does \"el pan\" mean?",
         "speak": "el pan",
         "options": [
-          "bread",
-          "coffee",
-          "chicken",
-          "the station"
+          "money",
+          "water",
+          "please",
+          "bread"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "es-w33"
       },
       {
@@ -1445,12 +1525,12 @@
         "type": "mc",
         "prompt": "How do you say \"water\"?",
         "options": [
-          "cinco",
-          "caro",
-          "el agua",
-          "hola"
+          "buenas tardes",
+          "cuánto",
+          "comprar",
+          "el agua"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "es-w34"
       },
       {
@@ -1459,12 +1539,12 @@
         "prompt": "What does \"el arroz\" mean?",
         "speak": "el arroz",
         "options": [
-          "near",
-          "rice",
-          "to buy",
-          "far"
+          "three",
+          "yes",
+          "please",
+          "rice"
         ],
-        "answer": 1,
+        "answer": 3,
         "wordId": "es-w35"
       },
       {
@@ -1472,12 +1552,12 @@
         "type": "mc",
         "prompt": "How do you say \"chicken\"?",
         "options": [
-          "hola",
           "el pollo",
-          "veinte",
-          "diez"
+          "tengo hambre",
+          "derecho",
+          "por favor"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "es-w36"
       },
       {
@@ -1486,12 +1566,12 @@
         "prompt": "What does \"el pescado\" mean?",
         "speak": "el pescado",
         "options": [
-          "fish",
-          "four",
-          "rice",
-          "money"
+          "nice to meet you",
+          "the price",
+          "please",
+          "fish"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "es-w37"
       },
       {
@@ -1499,10 +1579,10 @@
         "type": "mc",
         "prompt": "How do you say \"banana\"?",
         "options": [
-          "el agua",
-          "comprar",
+          "tres",
+          "cuánto",
           "la banana",
-          "uno"
+          "adiós"
         ],
         "answer": 2,
         "wordId": "es-w38"
@@ -1513,10 +1593,10 @@
         "prompt": "What does \"el café\" mean?",
         "speak": "el café",
         "options": [
-          "expensive",
+          "nice to meet you",
           "coffee",
-          "good morning",
-          "far"
+          "expensive",
+          "to pay"
         ],
         "answer": 1,
         "wordId": "es-w39"
@@ -1526,12 +1606,12 @@
         "type": "mc",
         "prompt": "How do you say \"I am hungry\"?",
         "options": [
-          "hola",
-          "el café",
-          "el mercado",
-          "tengo hambre"
+          "el pollo",
+          "a la izquierda",
+          "tengo hambre",
+          "hola"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "es-w40"
       },
       {
@@ -1545,12 +1625,12 @@
           "Diego"
         ],
         "bank": [
-          "llamo",
-          "soy",
           "me",
+          "llamo",
+          "Hola",
           "eres",
-          "Diego",
-          "Hola"
+          "soy",
+          "Diego"
         ],
         "wordIds": []
       },
@@ -1565,9 +1645,9 @@
         ],
         "bank": [
           "Cómo",
+          "dónde",
           "está",
           "gracias",
-          "dónde",
           "usted"
         ],
         "wordIds": []
@@ -1581,10 +1661,10 @@
           "gracias"
         ],
         "bank": [
-          "poco",
           "Muchas",
-          "gracias",
-          "hola"
+          "hola",
+          "poco",
+          "gracias"
         ],
         "wordIds": []
       },
@@ -1598,11 +1678,11 @@
           "hermanos"
         ],
         "bank": [
+          "hermanos",
           "dos",
-          "hermanas",
           "tres",
           "Tengo",
-          "hermanos"
+          "hermanas"
         ],
         "wordIds": []
       },
@@ -1616,11 +1696,11 @@
           "tres"
         ],
         "bank": [
-          "tres",
           "las",
-          "días",
+          "cuatro",
+          "tres",
           "Son",
-          "cuatro"
+          "días"
         ],
         "wordIds": []
       },
@@ -1635,10 +1715,10 @@
         ],
         "bank": [
           "años",
-          "meses",
+          "diez",
           "Tengo",
           "veinte",
-          "diez"
+          "meses"
         ],
         "wordIds": []
       },
@@ -1651,10 +1731,10 @@
           "cuesta"
         ],
         "bank": [
-          "Cuánto",
           "compro",
-          "cuesta",
-          "caro"
+          "caro",
+          "Cuánto",
+          "cuesta"
         ],
         "wordIds": []
       },
@@ -1668,11 +1748,11 @@
           "caro"
         ],
         "bank": [
-          "muy",
           "poco",
+          "Es",
           "bueno",
           "caro",
-          "Es"
+          "muy"
         ],
         "wordIds": []
       },
@@ -1685,10 +1765,10 @@
           "pagar"
         ],
         "bank": [
-          "pagar",
-          "comprar",
+          "Quiero",
           "tú",
-          "Quiero"
+          "comprar",
+          "pagar"
         ],
         "wordIds": []
       },
@@ -1703,11 +1783,11 @@
           "estación"
         ],
         "bank": [
+          "calle",
+          "lejos",
+          "está",
           "estación",
           "Dónde",
-          "calle",
-          "está",
-          "lejos",
           "la"
         ],
         "wordIds": []
@@ -1723,11 +1803,11 @@
           "izquierda"
         ],
         "bank": [
-          "derecha",
+          "todo",
           "a",
           "Gire",
+          "derecha",
           "izquierda",
-          "todo",
           "la"
         ],
         "wordIds": []
@@ -1743,12 +1823,12 @@
           "aquí"
         ],
         "bank": [
-          "aquí",
-          "cerca",
-          "lejos",
           "Está",
+          "de",
+          "lejos",
           "dónde",
-          "de"
+          "aquí",
+          "cerca"
         ],
         "wordIds": []
       },
@@ -1761,8 +1841,8 @@
           "agua"
         ],
         "bank": [
-          "Quiero",
           "tú",
+          "Quiero",
           "agua",
           "pan"
         ],
@@ -1779,12 +1859,12 @@
           "rico"
         ],
         "bank": [
-          "pescado",
-          "El",
           "arroz",
-          "está",
           "rico",
-          "malo"
+          "malo",
+          "pescado",
+          "está",
+          "El"
         ],
         "wordIds": []
       },
@@ -1800,11 +1880,11 @@
         ],
         "bank": [
           "arroz",
-          "Me",
-          "pollo",
-          "el",
+          "la",
           "gusta",
-          "la"
+          "Me",
+          "el",
+          "pollo"
         ],
         "wordIds": []
       },
@@ -1814,9 +1894,9 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "es-w3",
-            "target": "buenas tardes",
-            "english": "good afternoon"
+            "wordId": "es-w7",
+            "target": "sí",
+            "english": "yes"
           },
           {
             "wordId": "es-w6",
@@ -1824,19 +1904,19 @@
             "english": "please"
           },
           {
+            "wordId": "es-w2",
+            "target": "buenos días",
+            "english": "good morning"
+          },
+          {
             "wordId": "es-w1",
             "target": "hola",
             "english": "hello"
           },
           {
-            "wordId": "es-w4",
-            "target": "adiós",
-            "english": "goodbye"
-          },
-          {
-            "wordId": "es-w2",
-            "target": "buenos días",
-            "english": "good morning"
+            "wordId": "es-w3",
+            "target": "buenas tardes",
+            "english": "good afternoon"
           }
         ]
       },
@@ -1845,16 +1925,6 @@
         "type": "match",
         "prompt": "Match the pairs",
         "pairs": [
-          {
-            "wordId": "es-w15",
-            "target": "diez",
-            "english": "ten"
-          },
-          {
-            "wordId": "es-w14",
-            "target": "seis",
-            "english": "six"
-          },
           {
             "wordId": "es-w10",
             "target": "dos",
@@ -1866,9 +1936,19 @@
             "english": "four"
           },
           {
-            "wordId": "es-w9",
-            "target": "uno",
-            "english": "one"
+            "wordId": "es-w15",
+            "target": "diez",
+            "english": "ten"
+          },
+          {
+            "wordId": "es-w14",
+            "target": "seis",
+            "english": "six"
+          },
+          {
+            "wordId": "es-w16",
+            "target": "veinte",
+            "english": "twenty"
           }
         ]
       },
@@ -1878,29 +1958,29 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "es-w18",
-            "target": "cuánto",
-            "english": "how much"
-          },
-          {
             "wordId": "es-w24",
             "target": "el precio",
             "english": "the price"
           },
           {
-            "wordId": "es-w23",
-            "target": "pagar",
-            "english": "to pay"
+            "wordId": "es-w17",
+            "target": "el mercado",
+            "english": "the market"
           },
           {
-            "wordId": "es-w19",
-            "target": "caro",
-            "english": "expensive"
+            "wordId": "es-w22",
+            "target": "comprar",
+            "english": "to buy"
           },
           {
             "wordId": "es-w21",
             "target": "el dinero",
             "english": "money"
+          },
+          {
+            "wordId": "es-w19",
+            "target": "caro",
+            "english": "expensive"
           }
         ]
       },
@@ -1910,29 +1990,29 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
+            "wordId": "es-w27",
+            "target": "derecho",
+            "english": "straight ahead"
+          },
+          {
+            "wordId": "es-w28",
+            "target": "la calle",
+            "english": "the street"
+          },
+          {
             "wordId": "es-w26",
             "target": "a la derecha",
             "english": "on the right"
           },
           {
-            "wordId": "es-w30",
-            "target": "lejos",
-            "english": "far"
+            "wordId": "es-w29",
+            "target": "cerca",
+            "english": "near"
           },
           {
-            "wordId": "es-w25",
-            "target": "a la izquierda",
-            "english": "on the left"
-          },
-          {
-            "wordId": "es-w31",
-            "target": "dónde",
-            "english": "where"
-          },
-          {
-            "wordId": "es-w27",
-            "target": "derecho",
-            "english": "straight ahead"
+            "wordId": "es-w32",
+            "target": "la estación",
+            "english": "the station"
           }
         ]
       },
@@ -1942,9 +2022,14 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "es-w40",
-            "target": "tengo hambre",
-            "english": "I am hungry"
+            "wordId": "es-w33",
+            "target": "el pan",
+            "english": "bread"
+          },
+          {
+            "wordId": "es-w38",
+            "target": "la banana",
+            "english": "banana"
           },
           {
             "wordId": "es-w36",
@@ -1952,19 +2037,14 @@
             "english": "chicken"
           },
           {
-            "wordId": "es-w37",
-            "target": "el pescado",
-            "english": "fish"
-          },
-          {
-            "wordId": "es-w33",
-            "target": "el pan",
-            "english": "bread"
-          },
-          {
             "wordId": "es-w34",
             "target": "el agua",
             "english": "water"
+          },
+          {
+            "wordId": "es-w39",
+            "target": "el café",
+            "english": "coffee"
           }
         ]
       }

@@ -9,10 +9,10 @@ import { rewardsPoolAbi } from "./abis";
 
 const g = (name: string, d: string) => parseUnits(process.env[name] || d, 18);
 export const rewardConfig = () => ({
-  lesson: g("LESSON_REWARD_G", "0.5"),
+  lesson: g("LESSON_REWARD_G", "0.25"),
   checkpoint: g("CHECKPOINT_REWARD_G", "2"),
   dailyCap: g("DAILY_CAP_G", "2"), // keep equal to RewardsPool.dailyCap
-  maxLessonsPerDay: 3,
+  maxLessonsPerDay: 6,
   expirySeconds: 7 * 86400,
   leagueBonus: [g("LEAGUE_BONUS_1_G", "3"), g("LEAGUE_BONUS_2_G", "2"), g("LEAGUE_BONUS_3_G", "1")] as const, // rank 1, 2, 3
 });

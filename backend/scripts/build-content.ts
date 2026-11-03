@@ -1,4 +1,4 @@
-// Generates src/content/{fr,es}/unit{N}.json from scripts/vocab.ts. Run from the repo root: npm run content
+// Generates src/content/{fr,es}/unit{N}.json from scripts/vocab.ts (10 short lessons per unit, 6 questions each). Run from the repo root: npm run content
 import { writeFileSync } from "node:fs";
 import { FR, ES, FR_UNIT2, ES_UNIT2, FR_UNIT3, ES_UNIT3, type LessonData } from "./vocab";
 import { UnitSchema, type Exercise, type Lang } from "../src/content/schema";
@@ -35,11 +35,16 @@ function build(lang: Lang, data: LessonData[], unitNum = 1) {
   const match = (id: string, ws: typeof all): Exercise => ({ id, type: "match", prompt: "Match the pairs",
     pairs: ws.map((w) => ({ wordId: w.id, target: w.t, english: w.e })) });
 
-  const lessons = data.map((l, li) => {
+  // Each theme (8 words) becomes two short lessons of 6 questions: 4 multiple choice, 1 match (4 pairs), 1 translate.
+  const lessons = data.flatMap((l, li) => {
     const ws = all.filter((w) => w.li === li);
-    const m = (i: number) => mc(ws[i], i, ws);
-    const exercises: Exercise[] = [m(0), m(1), m(2), match(`${lang}-${uid}l${li + 1}-m`, shuffle(ws, r).slice(0, 4)), tr(li, 0), m(3), m(4), m(5), tr(li, 1), m(6), m(7), tr(li, 2)];
-    return { id: `${lang}-u${unitNum}-l${li + 1}`, title: l.title, theme: l.theme, exercises };
+    return [0, 1].map((half) => {
+      const hw = ws.slice(half * 4, half * 4 + 4);
+      const no = li * 2 + half + 1;
+      const m = (i: number) => mc(hw[i], i, ws);
+      const exercises: Exercise[] = [m(0), m(1), match(`${lang}-${uid}l${no}-m`, hw), m(2), m(3), tr(li, half)];
+      return { id: `${lang}-u${unitNum}-l${no}`, title: `${l.title}, part ${half + 1}`, theme: l.theme, exercises };
+    });
   });
 
   const pool: Exercise[] = [

@@ -7,7 +7,7 @@
   "lessons": [
     {
       "id": "fr-u1-l1",
-      "title": "Greetings",
+      "title": "Greetings, part 1",
       "theme": "greetings",
       "exercises": [
         {
@@ -38,6 +38,33 @@
           "wordId": "fr-w2"
         },
         {
+          "id": "fr-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-w1",
+              "target": "bonjour",
+              "english": "hello"
+            },
+            {
+              "wordId": "fr-w2",
+              "target": "bonsoir",
+              "english": "good evening"
+            },
+            {
+              "wordId": "fr-w3",
+              "target": "salut",
+              "english": "hi"
+            },
+            {
+              "wordId": "fr-w4",
+              "target": "merci",
+              "english": "thank you"
+            }
+          ]
+        },
+        {
           "id": "fr-w3-te",
           "type": "mc",
           "prompt": "What does \"salut\" mean?",
@@ -52,31 +79,17 @@
           "wordId": "fr-w3"
         },
         {
-          "id": "fr-l1-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w2",
-              "target": "bonsoir",
-              "english": "good evening"
-            },
-            {
-              "wordId": "fr-w8",
-              "target": "non",
-              "english": "no"
-            },
-            {
-              "wordId": "fr-w4",
-              "target": "merci",
-              "english": "thank you"
-            },
-            {
-              "wordId": "fr-w7",
-              "target": "oui",
-              "english": "yes"
-            }
-          ]
+          "id": "fr-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"thank you\"?",
+          "options": [
+            "oui",
+            "bonsoir",
+            "non",
+            "merci"
+          ],
+          "answer": 3,
+          "wordId": "fr-w4"
         },
         {
           "id": "fr-l1-s1",
@@ -89,40 +102,34 @@
             "Amara"
           ],
           "bank": [
-            "suis",
-            "je",
             "tu",
-            "Bonjour",
+            "m'appelle",
+            "suis",
             "Amara",
-            "m'appelle"
+            "je",
+            "Bonjour"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-w4-et",
-          "type": "mc",
-          "prompt": "How do you say \"thank you\"?",
-          "options": [
-            "salut",
-            "oui",
-            "bonjour",
-            "merci"
-          ],
-          "answer": 3,
-          "wordId": "fr-w4"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u1-l2",
+      "title": "Greetings, part 2",
+      "theme": "greetings",
+      "exercises": [
         {
           "id": "fr-w5-te",
           "type": "mc",
           "prompt": "What does \"s'il vous plaît\" mean?",
           "speak": "s'il vous plaît",
           "options": [
-            "no",
             "hello",
             "please",
-            "goodbye"
+            "good evening",
+            "thank you"
           ],
-          "answer": 2,
+          "answer": 1,
           "wordId": "fr-w5"
         },
         {
@@ -130,13 +137,67 @@
           "type": "mc",
           "prompt": "How do you say \"goodbye\"?",
           "options": [
-            "bonjour",
-            "merci",
             "non",
+            "s'il vous plaît",
+            "oui",
             "au revoir"
           ],
           "answer": 3,
           "wordId": "fr-w6"
+        },
+        {
+          "id": "fr-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-w5",
+              "target": "s'il vous plaît",
+              "english": "please"
+            },
+            {
+              "wordId": "fr-w6",
+              "target": "au revoir",
+              "english": "goodbye"
+            },
+            {
+              "wordId": "fr-w7",
+              "target": "oui",
+              "english": "yes"
+            },
+            {
+              "wordId": "fr-w8",
+              "target": "non",
+              "english": "no"
+            }
+          ]
+        },
+        {
+          "id": "fr-w7-te",
+          "type": "mc",
+          "prompt": "What does \"oui\" mean?",
+          "speak": "oui",
+          "options": [
+            "goodbye",
+            "thank you",
+            "yes",
+            "hi"
+          ],
+          "answer": 2,
+          "wordId": "fr-w7"
+        },
+        {
+          "id": "fr-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"no\"?",
+          "options": [
+            "bonjour",
+            "s'il vous plaît",
+            "non",
+            "oui"
+          ],
+          "answer": 2,
+          "wordId": "fr-w8"
         },
         {
           "id": "fr-l1-s2",
@@ -147,61 +208,18 @@
             "allez-vous"
           ],
           "bank": [
-            "où",
-            "merci",
+            "allez-vous",
             "Comment",
-            "allez-vous"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-w7-te",
-          "type": "mc",
-          "prompt": "What does \"oui\" mean?",
-          "speak": "oui",
-          "options": [
-            "no",
-            "please",
-            "goodbye",
-            "yes"
-          ],
-          "answer": 3,
-          "wordId": "fr-w7"
-        },
-        {
-          "id": "fr-w8-et",
-          "type": "mc",
-          "prompt": "How do you say \"no\"?",
-          "options": [
-            "non",
-            "salut",
-            "au revoir",
-            "merci"
-          ],
-          "answer": 0,
-          "wordId": "fr-w8"
-        },
-        {
-          "id": "fr-l1-s3",
-          "type": "translate",
-          "prompt": "Thank you very much",
-          "answer": [
-            "Merci",
-            "beaucoup"
-          ],
-          "bank": [
-            "beaucoup",
-            "Merci",
-            "peu",
-            "bonjour"
+            "merci",
+            "où"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u1-l2",
-      "title": "Numbers",
+      "id": "fr-u1-l3",
+      "title": "Numbers, part 1",
       "theme": "numbers",
       "exercises": [
         {
@@ -211,9 +229,9 @@
           "speak": "un",
           "options": [
             "one",
-            "twenty",
-            "five",
-            "ten"
+            "ten",
+            "two",
+            "six"
           ],
           "answer": 0,
           "wordId": "fr-w9"
@@ -223,13 +241,40 @@
           "type": "mc",
           "prompt": "How do you say \"two\"?",
           "options": [
+            "deux",
             "six",
-            "dix",
-            "vingt",
-            "deux"
+            "quatre",
+            "dix"
           ],
-          "answer": 3,
+          "answer": 0,
           "wordId": "fr-w10"
+        },
+        {
+          "id": "fr-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-w9",
+              "target": "un",
+              "english": "one"
+            },
+            {
+              "wordId": "fr-w10",
+              "target": "deux",
+              "english": "two"
+            },
+            {
+              "wordId": "fr-w11",
+              "target": "trois",
+              "english": "three"
+            },
+            {
+              "wordId": "fr-w12",
+              "target": "quatre",
+              "english": "four"
+            }
+          ]
         },
         {
           "id": "fr-w11-te",
@@ -237,23 +282,88 @@
           "prompt": "What does \"trois\" mean?",
           "speak": "trois",
           "options": [
-            "three",
-            "ten",
+            "six",
             "one",
-            "two"
+            "three",
+            "four"
           ],
-          "answer": 0,
+          "answer": 2,
           "wordId": "fr-w11"
         },
         {
-          "id": "fr-l2-m",
+          "id": "fr-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"four\"?",
+          "options": [
+            "deux",
+            "un",
+            "dix",
+            "quatre"
+          ],
+          "answer": 3,
+          "wordId": "fr-w12"
+        },
+        {
+          "id": "fr-l2-s1",
+          "type": "translate",
+          "prompt": "I have two brothers",
+          "answer": [
+            "J'ai",
+            "deux",
+            "frères"
+          ],
+          "bank": [
+            "frères",
+            "sœurs",
+            "deux",
+            "J'ai",
+            "trois"
+          ],
+          "wordIds": []
+        }
+      ]
+    },
+    {
+      "id": "fr-u1-l4",
+      "title": "Numbers, part 2",
+      "theme": "numbers",
+      "exercises": [
+        {
+          "id": "fr-w13-te",
+          "type": "mc",
+          "prompt": "What does \"cinq\" mean?",
+          "speak": "cinq",
+          "options": [
+            "five",
+            "three",
+            "two",
+            "four"
+          ],
+          "answer": 0,
+          "wordId": "fr-w13"
+        },
+        {
+          "id": "fr-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"six\"?",
+          "options": [
+            "cinq",
+            "six",
+            "un",
+            "vingt"
+          ],
+          "answer": 1,
+          "wordId": "fr-w14"
+        },
+        {
+          "id": "fr-l4-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "fr-w16",
-              "target": "vingt",
-              "english": "twenty"
+              "wordId": "fr-w13",
+              "target": "cinq",
+              "english": "five"
             },
             {
               "wordId": "fr-w14",
@@ -266,69 +376,38 @@
               "english": "ten"
             },
             {
-              "wordId": "fr-w13",
-              "target": "cinq",
-              "english": "five"
+              "wordId": "fr-w16",
+              "target": "vingt",
+              "english": "twenty"
             }
           ]
         },
         {
-          "id": "fr-l2-s1",
-          "type": "translate",
-          "prompt": "I have two brothers",
-          "answer": [
-            "J'ai",
-            "deux",
-            "frères"
-          ],
-          "bank": [
-            "sœurs",
-            "J'ai",
-            "deux",
-            "trois",
-            "frères"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-w12-et",
+          "id": "fr-w15-te",
           "type": "mc",
-          "prompt": "How do you say \"four\"?",
+          "prompt": "What does \"dix\" mean?",
+          "speak": "dix",
           "options": [
-            "deux",
-            "quatre",
-            "dix",
-            "un"
+            "five",
+            "ten",
+            "six",
+            "one"
           ],
           "answer": 1,
-          "wordId": "fr-w12"
+          "wordId": "fr-w15"
         },
         {
-          "id": "fr-w13-te",
+          "id": "fr-w16-et",
           "type": "mc",
-          "prompt": "What does \"cinq\" mean?",
-          "speak": "cinq",
+          "prompt": "How do you say \"twenty\"?",
           "options": [
-            "one",
-            "ten",
-            "five",
-            "four"
-          ],
-          "answer": 2,
-          "wordId": "fr-w13"
-        },
-        {
-          "id": "fr-w14-et",
-          "type": "mc",
-          "prompt": "How do you say \"six\"?",
-          "options": [
+            "trois",
             "deux",
-            "cinq",
-            "six",
-            "un"
+            "un",
+            "vingt"
           ],
-          "answer": 2,
-          "wordId": "fr-w14"
+          "answer": 3,
+          "wordId": "fr-w16"
         },
         {
           "id": "fr-l2-s2",
@@ -342,64 +421,19 @@
           ],
           "bank": [
             "jours",
-            "Il",
             "quatre",
-            "est",
+            "Il",
             "trois",
+            "est",
             "heures"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-w15-te",
-          "type": "mc",
-          "prompt": "What does \"dix\" mean?",
-          "speak": "dix",
-          "options": [
-            "two",
-            "ten",
-            "twenty",
-            "three"
-          ],
-          "answer": 1,
-          "wordId": "fr-w15"
-        },
-        {
-          "id": "fr-w16-et",
-          "type": "mc",
-          "prompt": "How do you say \"twenty\"?",
-          "options": [
-            "vingt",
-            "dix",
-            "six",
-            "quatre"
-          ],
-          "answer": 0,
-          "wordId": "fr-w16"
-        },
-        {
-          "id": "fr-l2-s3",
-          "type": "translate",
-          "prompt": "I am ten years old",
-          "answer": [
-            "J'ai",
-            "dix",
-            "ans"
-          ],
-          "bank": [
-            "dix",
-            "ans",
-            "mois",
-            "vingt",
-            "J'ai"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u1-l3",
-      "title": "Market and money",
+      "id": "fr-u1-l5",
+      "title": "Market and money, part 1",
       "theme": "market and money",
       "exercises": [
         {
@@ -408,10 +442,10 @@
           "prompt": "What does \"le marché\" mean?",
           "speak": "le marché",
           "options": [
-            "to pay",
-            "to buy",
+            "cheap",
+            "expensive",
             "the market",
-            "cheap"
+            "the price"
           ],
           "answer": 2,
           "wordId": "fr-w17"
@@ -421,38 +455,19 @@
           "type": "mc",
           "prompt": "How do you say \"how much\"?",
           "options": [
-            "acheter",
+            "le prix",
+            "combien",
             "l'argent",
-            "payer",
-            "combien"
+            "acheter"
           ],
-          "answer": 3,
+          "answer": 1,
           "wordId": "fr-w18"
         },
         {
-          "id": "fr-w19-te",
-          "type": "mc",
-          "prompt": "What does \"cher\" mean?",
-          "speak": "cher",
-          "options": [
-            "the market",
-            "to pay",
-            "money",
-            "expensive"
-          ],
-          "answer": 3,
-          "wordId": "fr-w19"
-        },
-        {
-          "id": "fr-l3-m",
+          "id": "fr-l5-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
-            {
-              "wordId": "fr-w19",
-              "target": "cher",
-              "english": "expensive"
-            },
             {
               "wordId": "fr-w17",
               "target": "le marché",
@@ -464,11 +479,43 @@
               "english": "how much"
             },
             {
-              "wordId": "fr-w24",
-              "target": "le prix",
-              "english": "the price"
+              "wordId": "fr-w19",
+              "target": "cher",
+              "english": "expensive"
+            },
+            {
+              "wordId": "fr-w20",
+              "target": "pas cher",
+              "english": "cheap"
             }
           ]
+        },
+        {
+          "id": "fr-w19-te",
+          "type": "mc",
+          "prompt": "What does \"cher\" mean?",
+          "speak": "cher",
+          "options": [
+            "how much",
+            "to buy",
+            "expensive",
+            "cheap"
+          ],
+          "answer": 2,
+          "wordId": "fr-w19"
+        },
+        {
+          "id": "fr-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"cheap\"?",
+          "options": [
+            "payer",
+            "pas cher",
+            "le prix",
+            "cher"
+          ],
+          "answer": 1,
+          "wordId": "fr-w20"
         },
         {
           "id": "fr-l3-s1",
@@ -480,39 +527,33 @@
             "coûte"
           ],
           "bank": [
-            "ça",
-            "Combien",
-            "coûte",
             "achète",
-            "cher"
+            "cher",
+            "coûte",
+            "ça",
+            "Combien"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-w20-et",
-          "type": "mc",
-          "prompt": "How do you say \"cheap\"?",
-          "options": [
-            "combien",
-            "pas cher",
-            "le prix",
-            "cher"
-          ],
-          "answer": 1,
-          "wordId": "fr-w20"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u1-l6",
+      "title": "Market and money, part 2",
+      "theme": "market and money",
+      "exercises": [
         {
           "id": "fr-w21-te",
           "type": "mc",
           "prompt": "What does \"l'argent\" mean?",
           "speak": "l'argent",
           "options": [
-            "money",
             "the market",
-            "how much",
-            "expensive"
+            "expensive",
+            "the price",
+            "money"
           ],
-          "answer": 0,
+          "answer": 3,
           "wordId": "fr-w21"
         },
         {
@@ -520,13 +561,67 @@
           "type": "mc",
           "prompt": "How do you say \"to buy\"?",
           "options": [
-            "combien",
             "acheter",
-            "pas cher",
+            "cher",
+            "combien",
             "le marché"
           ],
-          "answer": 1,
+          "answer": 0,
           "wordId": "fr-w22"
+        },
+        {
+          "id": "fr-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-w21",
+              "target": "l'argent",
+              "english": "money"
+            },
+            {
+              "wordId": "fr-w22",
+              "target": "acheter",
+              "english": "to buy"
+            },
+            {
+              "wordId": "fr-w23",
+              "target": "payer",
+              "english": "to pay"
+            },
+            {
+              "wordId": "fr-w24",
+              "target": "le prix",
+              "english": "the price"
+            }
+          ]
+        },
+        {
+          "id": "fr-w23-te",
+          "type": "mc",
+          "prompt": "What does \"payer\" mean?",
+          "speak": "payer",
+          "options": [
+            "expensive",
+            "to pay",
+            "how much",
+            "to buy"
+          ],
+          "answer": 1,
+          "wordId": "fr-w23"
+        },
+        {
+          "id": "fr-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"the price\"?",
+          "options": [
+            "combien",
+            "payer",
+            "cher",
+            "le prix"
+          ],
+          "answer": 3,
+          "wordId": "fr-w24"
         },
         {
           "id": "fr-l3-s2",
@@ -538,64 +633,19 @@
             "cher"
           ],
           "bank": [
-            "peu",
             "cher",
-            "trop",
             "C'est",
-            "bon"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-w23-te",
-          "type": "mc",
-          "prompt": "What does \"payer\" mean?",
-          "speak": "payer",
-          "options": [
-            "to buy",
-            "the price",
-            "expensive",
-            "to pay"
-          ],
-          "answer": 3,
-          "wordId": "fr-w23"
-        },
-        {
-          "id": "fr-w24-et",
-          "type": "mc",
-          "prompt": "How do you say \"the price\"?",
-          "options": [
-            "le marché",
-            "pas cher",
-            "le prix",
-            "l'argent"
-          ],
-          "answer": 2,
-          "wordId": "fr-w24"
-        },
-        {
-          "id": "fr-l3-s3",
-          "type": "translate",
-          "prompt": "I would like to pay",
-          "answer": [
-            "Je",
-            "voudrais",
-            "payer"
-          ],
-          "bank": [
-            "payer",
-            "voudrais",
-            "Je",
-            "acheter",
-            "tu"
+            "bon",
+            "trop",
+            "peu"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u1-l4",
-      "title": "Directions",
+      "id": "fr-u1-l7",
+      "title": "Directions, part 1",
       "theme": "directions",
       "exercises": [
         {
@@ -604,12 +654,12 @@
           "prompt": "What does \"à gauche\" mean?",
           "speak": "à gauche",
           "options": [
-            "the street",
-            "far",
             "on the right",
-            "on the left"
+            "the station",
+            "on the left",
+            "far"
           ],
-          "answer": 3,
+          "answer": 2,
           "wordId": "fr-w25"
         },
         {
@@ -617,37 +667,28 @@
           "type": "mc",
           "prompt": "How do you say \"on the right\"?",
           "options": [
-            "à droite",
-            "loin",
+            "près",
             "la gare",
-            "à gauche"
+            "à droite",
+            "la rue"
           ],
-          "answer": 0,
+          "answer": 2,
           "wordId": "fr-w26"
         },
         {
-          "id": "fr-w27-te",
-          "type": "mc",
-          "prompt": "What does \"tout droit\" mean?",
-          "speak": "tout droit",
-          "options": [
-            "the station",
-            "straight ahead",
-            "on the right",
-            "the street"
-          ],
-          "answer": 1,
-          "wordId": "fr-w27"
-        },
-        {
-          "id": "fr-l4-m",
+          "id": "fr-l7-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "fr-w32",
-              "target": "la gare",
-              "english": "the station"
+              "wordId": "fr-w25",
+              "target": "à gauche",
+              "english": "on the left"
+            },
+            {
+              "wordId": "fr-w26",
+              "target": "à droite",
+              "english": "on the right"
             },
             {
               "wordId": "fr-w27",
@@ -658,13 +699,35 @@
               "wordId": "fr-w28",
               "target": "la rue",
               "english": "the street"
-            },
-            {
-              "wordId": "fr-w31",
-              "target": "où",
-              "english": "where"
             }
           ]
+        },
+        {
+          "id": "fr-w27-te",
+          "type": "mc",
+          "prompt": "What does \"tout droit\" mean?",
+          "speak": "tout droit",
+          "options": [
+            "on the left",
+            "straight ahead",
+            "the station",
+            "the street"
+          ],
+          "answer": 1,
+          "wordId": "fr-w27"
+        },
+        {
+          "id": "fr-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"the street\"?",
+          "options": [
+            "la gare",
+            "la rue",
+            "à droite",
+            "tout droit"
+          ],
+          "answer": 1,
+          "wordId": "fr-w28"
         },
         {
           "id": "fr-l4-s1",
@@ -677,40 +740,34 @@
             "gare"
           ],
           "bank": [
-            "la",
-            "Où",
             "gare",
+            "loin",
             "est",
-            "rue",
-            "loin"
+            "Où",
+            "la",
+            "rue"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-w28-et",
-          "type": "mc",
-          "prompt": "How do you say \"the street\"?",
-          "options": [
-            "la rue",
-            "près",
-            "tout droit",
-            "loin"
-          ],
-          "answer": 0,
-          "wordId": "fr-w28"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u1-l8",
+      "title": "Directions, part 2",
+      "theme": "directions",
+      "exercises": [
         {
           "id": "fr-w29-te",
           "type": "mc",
           "prompt": "What does \"près\" mean?",
           "speak": "près",
           "options": [
-            "on the right",
-            "the station",
             "near",
-            "straight ahead"
+            "far",
+            "the station",
+            "on the left"
           ],
-          "answer": 2,
+          "answer": 0,
           "wordId": "fr-w29"
         },
         {
@@ -718,13 +775,67 @@
           "type": "mc",
           "prompt": "How do you say \"far\"?",
           "options": [
+            "la gare",
             "loin",
-            "tout droit",
-            "près",
-            "à droite"
+            "à droite",
+            "tout droit"
+          ],
+          "answer": 1,
+          "wordId": "fr-w30"
+        },
+        {
+          "id": "fr-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-w29",
+              "target": "près",
+              "english": "near"
+            },
+            {
+              "wordId": "fr-w30",
+              "target": "loin",
+              "english": "far"
+            },
+            {
+              "wordId": "fr-w31",
+              "target": "où",
+              "english": "where"
+            },
+            {
+              "wordId": "fr-w32",
+              "target": "la gare",
+              "english": "the station"
+            }
+          ]
+        },
+        {
+          "id": "fr-w31-te",
+          "type": "mc",
+          "prompt": "What does \"où\" mean?",
+          "speak": "où",
+          "options": [
+            "where",
+            "the street",
+            "straight ahead",
+            "on the right"
           ],
           "answer": 0,
-          "wordId": "fr-w30"
+          "wordId": "fr-w31"
+        },
+        {
+          "id": "fr-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"the station\"?",
+          "options": [
+            "près",
+            "loin",
+            "à gauche",
+            "la gare"
+          ],
+          "answer": 3,
+          "wordId": "fr-w32"
         },
         {
           "id": "fr-l4-s2",
@@ -736,64 +847,19 @@
             "gauche"
           ],
           "bank": [
+            "Tournez",
             "à",
-            "tout",
             "droite",
-            "gauche",
-            "Tournez"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-w31-te",
-          "type": "mc",
-          "prompt": "What does \"où\" mean?",
-          "speak": "où",
-          "options": [
-            "far",
-            "the station",
-            "where",
-            "on the left"
-          ],
-          "answer": 2,
-          "wordId": "fr-w31"
-        },
-        {
-          "id": "fr-w32-et",
-          "type": "mc",
-          "prompt": "How do you say \"the station\"?",
-          "options": [
-            "où",
-            "à droite",
-            "la gare",
-            "à gauche"
-          ],
-          "answer": 2,
-          "wordId": "fr-w32"
-        },
-        {
-          "id": "fr-l4-s3",
-          "type": "translate",
-          "prompt": "It is far from here",
-          "answer": [
-            "C'est",
-            "loin",
-            "d'ici"
-          ],
-          "bank": [
-            "C'est",
-            "loin",
-            "où",
-            "près",
-            "d'ici"
+            "tout",
+            "gauche"
           ],
           "wordIds": []
         }
       ]
     },
     {
-      "id": "fr-u1-l5",
-      "title": "Food",
+      "id": "fr-u1-l9",
+      "title": "Food, part 1",
       "theme": "food",
       "exercises": [
         {
@@ -802,12 +868,12 @@
           "prompt": "What does \"le pain\" mean?",
           "speak": "le pain",
           "options": [
-            "bread",
-            "I am hungry",
+            "chicken",
             "fish",
-            "chicken"
+            "I am hungry",
+            "bread"
           ],
-          "answer": 0,
+          "answer": 3,
           "wordId": "fr-w33"
         },
         {
@@ -815,30 +881,16 @@
           "type": "mc",
           "prompt": "How do you say \"water\"?",
           "options": [
-            "l'eau",
-            "la banane",
             "le café",
-            "le pain"
+            "l'eau",
+            "le poisson",
+            "le poulet"
           ],
-          "answer": 0,
+          "answer": 1,
           "wordId": "fr-w34"
         },
         {
-          "id": "fr-w35-te",
-          "type": "mc",
-          "prompt": "What does \"le riz\" mean?",
-          "speak": "le riz",
-          "options": [
-            "I am hungry",
-            "rice",
-            "fish",
-            "chicken"
-          ],
-          "answer": 1,
-          "wordId": "fr-w35"
-        },
-        {
-          "id": "fr-l5-m",
+          "id": "fr-l9-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
@@ -848,21 +900,48 @@
               "english": "bread"
             },
             {
-              "wordId": "fr-w36",
-              "target": "le poulet",
-              "english": "chicken"
-            },
-            {
-              "wordId": "fr-w40",
-              "target": "j'ai faim",
-              "english": "I am hungry"
+              "wordId": "fr-w34",
+              "target": "l'eau",
+              "english": "water"
             },
             {
               "wordId": "fr-w35",
               "target": "le riz",
               "english": "rice"
+            },
+            {
+              "wordId": "fr-w36",
+              "target": "le poulet",
+              "english": "chicken"
             }
           ]
+        },
+        {
+          "id": "fr-w35-te",
+          "type": "mc",
+          "prompt": "What does \"le riz\" mean?",
+          "speak": "le riz",
+          "options": [
+            "bread",
+            "rice",
+            "fish",
+            "chicken"
+          ],
+          "answer": 1,
+          "wordId": "fr-w35"
+        },
+        {
+          "id": "fr-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"chicken\"?",
+          "options": [
+            "le pain",
+            "le poisson",
+            "le poulet",
+            "le café"
+          ],
+          "answer": 2,
+          "wordId": "fr-w36"
         },
         {
           "id": "fr-l5-s1",
@@ -875,40 +954,34 @@
             "l'eau"
           ],
           "bank": [
-            "l'eau",
             "Je",
             "de",
-            "pain",
+            "tu",
+            "l'eau",
             "voudrais",
-            "tu"
+            "pain"
           ],
           "wordIds": []
-        },
-        {
-          "id": "fr-w36-et",
-          "type": "mc",
-          "prompt": "How do you say \"chicken\"?",
-          "options": [
-            "le pain",
-            "le poulet",
-            "le poisson",
-            "l'eau"
-          ],
-          "answer": 1,
-          "wordId": "fr-w36"
-        },
+        }
+      ]
+    },
+    {
+      "id": "fr-u1-l10",
+      "title": "Food, part 2",
+      "theme": "food",
+      "exercises": [
         {
           "id": "fr-w37-te",
           "type": "mc",
           "prompt": "What does \"le poisson\" mean?",
           "speak": "le poisson",
           "options": [
-            "I am hungry",
-            "banana",
+            "fish",
+            "coffee",
             "rice",
-            "fish"
+            "bread"
           ],
-          "answer": 3,
+          "answer": 0,
           "wordId": "fr-w37"
         },
         {
@@ -917,12 +990,66 @@
           "prompt": "How do you say \"banana\"?",
           "options": [
             "la banane",
-            "le pain",
             "le poisson",
-            "le riz"
+            "j'ai faim",
+            "le pain"
           ],
           "answer": 0,
           "wordId": "fr-w38"
+        },
+        {
+          "id": "fr-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-w37",
+              "target": "le poisson",
+              "english": "fish"
+            },
+            {
+              "wordId": "fr-w38",
+              "target": "la banane",
+              "english": "banana"
+            },
+            {
+              "wordId": "fr-w39",
+              "target": "le café",
+              "english": "coffee"
+            },
+            {
+              "wordId": "fr-w40",
+              "target": "j'ai faim",
+              "english": "I am hungry"
+            }
+          ]
+        },
+        {
+          "id": "fr-w39-te",
+          "type": "mc",
+          "prompt": "What does \"le café\" mean?",
+          "speak": "le café",
+          "options": [
+            "bread",
+            "water",
+            "rice",
+            "coffee"
+          ],
+          "answer": 3,
+          "wordId": "fr-w39"
+        },
+        {
+          "id": "fr-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"I am hungry\"?",
+          "options": [
+            "j'ai faim",
+            "la banane",
+            "l'eau",
+            "le poisson"
+          ],
+          "answer": 0,
+          "wordId": "fr-w40"
         },
         {
           "id": "fr-l5-s2",
@@ -935,57 +1062,12 @@
             "bon"
           ],
           "bank": [
-            "mauvais",
             "bon",
-            "poisson",
-            "riz",
             "Le",
-            "est"
-          ],
-          "wordIds": []
-        },
-        {
-          "id": "fr-w39-te",
-          "type": "mc",
-          "prompt": "What does \"le café\" mean?",
-          "speak": "le café",
-          "options": [
-            "I am hungry",
-            "fish",
-            "coffee",
-            "water"
-          ],
-          "answer": 2,
-          "wordId": "fr-w39"
-        },
-        {
-          "id": "fr-w40-et",
-          "type": "mc",
-          "prompt": "How do you say \"I am hungry\"?",
-          "options": [
-            "le poulet",
-            "j'ai faim",
-            "l'eau",
-            "le pain"
-          ],
-          "answer": 1,
-          "wordId": "fr-w40"
-        },
-        {
-          "id": "fr-l5-s3",
-          "type": "translate",
-          "prompt": "I like rice",
-          "answer": [
-            "J'aime",
-            "le",
-            "riz"
-          ],
-          "bank": [
-            "poulet",
-            "le",
-            "J'aime",
+            "est",
             "riz",
-            "la"
+            "poisson",
+            "mauvais"
           ],
           "wordIds": []
         }
@@ -1002,12 +1084,12 @@
         "prompt": "What does \"bonjour\" mean?",
         "speak": "bonjour",
         "options": [
-          "hi",
-          "rice",
-          "where",
-          "hello"
+          "six",
+          "the station",
+          "hello",
+          "hi"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-w1"
       },
       {
@@ -1016,9 +1098,9 @@
         "prompt": "How do you say \"good evening\"?",
         "options": [
           "bonsoir",
-          "vingt",
-          "le poulet",
-          "bonjour"
+          "trois",
+          "bonjour",
+          "vingt"
         ],
         "answer": 0,
         "wordId": "fr-w2"
@@ -1030,9 +1112,9 @@
         "speak": "salut",
         "options": [
           "hi",
-          "I am hungry",
-          "cheap",
-          "coffee"
+          "yes",
+          "the station",
+          "the street"
         ],
         "answer": 0,
         "wordId": "fr-w3"
@@ -1042,10 +1124,10 @@
         "type": "mc",
         "prompt": "How do you say \"thank you\"?",
         "options": [
-          "bonjour",
-          "oui",
+          "s'il vous plaît",
+          "la banane",
           "merci",
-          "près"
+          "salut"
         ],
         "answer": 2,
         "wordId": "fr-w4"
@@ -1056,12 +1138,12 @@
         "prompt": "What does \"s'il vous plaît\" mean?",
         "speak": "s'il vous plaît",
         "options": [
-          "two",
-          "I am hungry",
-          "please",
-          "rice"
+          "one",
+          "hello",
+          "expensive",
+          "please"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "fr-w5"
       },
       {
@@ -1069,12 +1151,12 @@
         "type": "mc",
         "prompt": "How do you say \"goodbye\"?",
         "options": [
-          "le marché",
-          "acheter",
           "au revoir",
-          "j'ai faim"
+          "près",
+          "à droite",
+          "quatre"
         ],
-        "answer": 2,
+        "answer": 0,
         "wordId": "fr-w6"
       },
       {
@@ -1083,12 +1165,12 @@
         "prompt": "What does \"oui\" mean?",
         "speak": "oui",
         "options": [
-          "the market",
           "hello",
-          "ten",
-          "yes"
+          "yes",
+          "banana",
+          "two"
         ],
-        "answer": 3,
+        "answer": 1,
         "wordId": "fr-w7"
       },
       {
@@ -1096,10 +1178,10 @@
         "type": "mc",
         "prompt": "How do you say \"no\"?",
         "options": [
-          "à droite",
-          "la rue",
+          "payer",
+          "la gare",
           "non",
-          "vingt"
+          "acheter"
         ],
         "answer": 2,
         "wordId": "fr-w8"
@@ -1110,12 +1192,12 @@
         "prompt": "What does \"un\" mean?",
         "speak": "un",
         "options": [
-          "fish",
-          "the market",
+          "rice",
           "one",
-          "four"
+          "chicken",
+          "good evening"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-w9"
       },
       {
@@ -1123,12 +1205,12 @@
         "type": "mc",
         "prompt": "How do you say \"two\"?",
         "options": [
-          "cinq",
-          "le pain",
-          "bonsoir",
-          "deux"
+          "deux",
+          "la rue",
+          "le café",
+          "le poisson"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "fr-w10"
       },
       {
@@ -1137,12 +1219,12 @@
         "prompt": "What does \"trois\" mean?",
         "speak": "trois",
         "options": [
+          "yes",
           "three",
-          "expensive",
-          "good evening",
-          "twenty"
+          "thank you",
+          "the price"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-w11"
       },
       {
@@ -1150,12 +1232,12 @@
         "type": "mc",
         "prompt": "How do you say \"four\"?",
         "options": [
-          "bonsoir",
+          "tout droit",
+          "le poisson",
           "quatre",
-          "la gare",
-          "l'eau"
+          "salut"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "fr-w12"
       },
       {
@@ -1164,12 +1246,12 @@
         "prompt": "What does \"cinq\" mean?",
         "speak": "cinq",
         "options": [
-          "bread",
-          "hello",
+          "no",
           "five",
-          "how much"
+          "banana",
+          "coffee"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-w13"
       },
       {
@@ -1177,12 +1259,12 @@
         "type": "mc",
         "prompt": "How do you say \"six\"?",
         "options": [
-          "tout droit",
-          "j'ai faim",
+          "l'eau",
           "six",
-          "près"
+          "deux",
+          "au revoir"
         ],
-        "answer": 2,
+        "answer": 1,
         "wordId": "fr-w14"
       },
       {
@@ -1191,12 +1273,12 @@
         "prompt": "What does \"dix\" mean?",
         "speak": "dix",
         "options": [
+          "expensive",
+          "three",
           "ten",
-          "water",
-          "fish",
-          "I am hungry"
+          "coffee"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-w15"
       },
       {
@@ -1204,12 +1286,12 @@
         "type": "mc",
         "prompt": "How do you say \"twenty\"?",
         "options": [
-          "combien",
-          "cinq",
-          "à droite",
-          "vingt"
+          "vingt",
+          "quatre",
+          "j'ai faim",
+          "dix"
         ],
-        "answer": 3,
+        "answer": 0,
         "wordId": "fr-w16"
       },
       {
@@ -1218,12 +1300,12 @@
         "prompt": "What does \"le marché\" mean?",
         "speak": "le marché",
         "options": [
-          "goodbye",
           "the market",
-          "five",
-          "the street"
+          "fish",
+          "where",
+          "rice"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-w17"
       },
       {
@@ -1231,12 +1313,12 @@
         "type": "mc",
         "prompt": "How do you say \"how much\"?",
         "options": [
-          "merci",
-          "deux",
-          "non",
-          "combien"
+          "cher",
+          "acheter",
+          "combien",
+          "le pain"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-w18"
       },
       {
@@ -1245,12 +1327,12 @@
         "prompt": "What does \"cher\" mean?",
         "speak": "cher",
         "options": [
+          "money",
           "expensive",
-          "rice",
-          "coffee",
-          "the street"
+          "good evening",
+          "the market"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-w19"
       },
       {
@@ -1258,12 +1340,12 @@
         "type": "mc",
         "prompt": "How do you say \"cheap\"?",
         "options": [
-          "pas cher",
-          "à gauche",
-          "dix",
-          "la banane"
+          "loin",
+          "deux",
+          "le pain",
+          "pas cher"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-w20"
       },
       {
@@ -1272,12 +1354,12 @@
         "prompt": "What does \"l'argent\" mean?",
         "speak": "l'argent",
         "options": [
-          "money",
-          "to pay",
-          "hi",
-          "yes"
+          "to buy",
+          "three",
+          "chicken",
+          "money"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-w21"
       },
       {
@@ -1285,12 +1367,12 @@
         "type": "mc",
         "prompt": "How do you say \"to buy\"?",
         "options": [
+          "trois",
+          "vingt",
           "acheter",
-          "bonsoir",
-          "le riz",
-          "loin"
+          "le marché"
         ],
-        "answer": 0,
+        "answer": 2,
         "wordId": "fr-w22"
       },
       {
@@ -1299,12 +1381,12 @@
         "prompt": "What does \"payer\" mean?",
         "speak": "payer",
         "options": [
-          "cheap",
-          "three",
-          "coffee",
-          "to pay"
+          "near",
+          "to pay",
+          "thank you",
+          "coffee"
         ],
-        "answer": 3,
+        "answer": 1,
         "wordId": "fr-w23"
       },
       {
@@ -1313,9 +1395,9 @@
         "prompt": "How do you say \"the price\"?",
         "options": [
           "le prix",
-          "l'argent",
-          "le poulet",
-          "salut"
+          "le marché",
+          "le riz",
+          "deux"
         ],
         "answer": 0,
         "wordId": "fr-w24"
@@ -1326,12 +1408,12 @@
         "prompt": "What does \"à gauche\" mean?",
         "speak": "à gauche",
         "options": [
-          "I am hungry",
-          "six",
-          "on the left",
-          "to buy"
+          "the market",
+          "two",
+          "please",
+          "on the left"
         ],
-        "answer": 2,
+        "answer": 3,
         "wordId": "fr-w25"
       },
       {
@@ -1339,9 +1421,9 @@
         "type": "mc",
         "prompt": "How do you say \"on the right\"?",
         "options": [
+          "la rue",
+          "pas cher",
           "trois",
-          "acheter",
-          "quatre",
           "à droite"
         ],
         "answer": 3,
@@ -1353,12 +1435,12 @@
         "prompt": "What does \"tout droit\" mean?",
         "speak": "tout droit",
         "options": [
-          "two",
-          "good evening",
+          "coffee",
           "goodbye",
-          "straight ahead"
+          "straight ahead",
+          "on the right"
         ],
-        "answer": 3,
+        "answer": 2,
         "wordId": "fr-w27"
       },
       {
@@ -1366,12 +1448,12 @@
         "type": "mc",
         "prompt": "How do you say \"the street\"?",
         "options": [
-          "s'il vous plaît",
-          "le café",
           "la rue",
-          "cinq"
+          "à droite",
+          "le poisson",
+          "au revoir"
         ],
-        "answer": 2,
+        "answer": 0,
         "wordId": "fr-w28"
       },
       {
@@ -1380,12 +1462,12 @@
         "prompt": "What does \"près\" mean?",
         "speak": "près",
         "options": [
+          "how much",
           "near",
-          "cheap",
-          "water",
-          "hi"
+          "thank you",
+          "yes"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-w29"
       },
       {
@@ -1393,12 +1475,12 @@
         "type": "mc",
         "prompt": "How do you say \"far\"?",
         "options": [
-          "combien",
           "loin",
-          "au revoir",
-          "la gare"
+          "la banane",
+          "un",
+          "s'il vous plaît"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-w30"
       },
       {
@@ -1407,10 +1489,10 @@
         "prompt": "What does \"où\" mean?",
         "speak": "où",
         "options": [
-          "ten",
-          "chicken",
+          "the price",
+          "one",
           "where",
-          "hello"
+          "straight ahead"
         ],
         "answer": 2,
         "wordId": "fr-w31"
@@ -1420,12 +1502,12 @@
         "type": "mc",
         "prompt": "How do you say \"the station\"?",
         "options": [
-          "la gare",
-          "j'ai faim",
-          "au revoir",
-          "le marché"
+          "la banane",
+          "s'il vous plaît",
+          "près",
+          "la gare"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-w32"
       },
       {
@@ -1434,12 +1516,12 @@
         "prompt": "What does \"le pain\" mean?",
         "speak": "le pain",
         "options": [
-          "bread",
-          "banana",
-          "to pay",
-          "rice"
+          "yes",
+          "twenty",
+          "five",
+          "bread"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-w33"
       },
       {
@@ -1447,12 +1529,12 @@
         "type": "mc",
         "prompt": "How do you say \"water\"?",
         "options": [
-          "le riz",
-          "dix",
           "l'eau",
-          "où"
+          "dix",
+          "non",
+          "j'ai faim"
         ],
-        "answer": 2,
+        "answer": 0,
         "wordId": "fr-w34"
       },
       {
@@ -1461,12 +1543,12 @@
         "prompt": "What does \"le riz\" mean?",
         "speak": "le riz",
         "options": [
-          "two",
           "rice",
-          "the price",
-          "the station"
+          "hi",
+          "chicken",
+          "goodbye"
         ],
-        "answer": 1,
+        "answer": 0,
         "wordId": "fr-w35"
       },
       {
@@ -1474,12 +1556,12 @@
         "type": "mc",
         "prompt": "How do you say \"chicken\"?",
         "options": [
-          "six",
+          "cinq",
+          "dix",
           "le poulet",
-          "bonsoir",
-          "au revoir"
+          "le prix"
         ],
-        "answer": 1,
+        "answer": 2,
         "wordId": "fr-w36"
       },
       {
@@ -1488,12 +1570,12 @@
         "prompt": "What does \"le poisson\" mean?",
         "speak": "le poisson",
         "options": [
+          "four",
           "fish",
-          "to buy",
-          "thank you",
-          "where"
+          "the street",
+          "bread"
         ],
-        "answer": 0,
+        "answer": 1,
         "wordId": "fr-w37"
       },
       {
@@ -1501,12 +1583,12 @@
         "type": "mc",
         "prompt": "How do you say \"banana\"?",
         "options": [
-          "j'ai faim",
-          "dix",
-          "cher",
-          "la banane"
+          "cinq",
+          "la banane",
+          "oui",
+          "le café"
         ],
-        "answer": 3,
+        "answer": 1,
         "wordId": "fr-w38"
       },
       {
@@ -1515,12 +1597,12 @@
         "prompt": "What does \"le café\" mean?",
         "speak": "le café",
         "options": [
-          "coffee",
-          "on the right",
-          "hello",
-          "the market"
+          "ten",
+          "far",
+          "money",
+          "coffee"
         ],
-        "answer": 0,
+        "answer": 3,
         "wordId": "fr-w39"
       },
       {
@@ -1528,10 +1610,10 @@
         "type": "mc",
         "prompt": "How do you say \"I am hungry\"?",
         "options": [
-          "le prix",
+          "au revoir",
           "j'ai faim",
-          "à droite",
-          "trois"
+          "le café",
+          "non"
         ],
         "answer": 1,
         "wordId": "fr-w40"
@@ -1547,12 +1629,12 @@
           "Amara"
         ],
         "bank": [
-          "Amara",
           "suis",
           "je",
+          "Amara",
           "m'appelle",
-          "Bonjour",
-          "tu"
+          "tu",
+          "Bonjour"
         ],
         "wordIds": []
       },
@@ -1565,9 +1647,9 @@
           "allez-vous"
         ],
         "bank": [
+          "où",
           "allez-vous",
           "Comment",
-          "où",
           "merci"
         ],
         "wordIds": []
@@ -1581,10 +1663,10 @@
           "beaucoup"
         ],
         "bank": [
-          "bonjour",
-          "peu",
           "Merci",
-          "beaucoup"
+          "bonjour",
+          "beaucoup",
+          "peu"
         ],
         "wordIds": []
       },
@@ -1598,10 +1680,10 @@
           "frères"
         ],
         "bank": [
-          "sœurs",
-          "trois",
           "deux",
+          "sœurs",
           "J'ai",
+          "trois",
           "frères"
         ],
         "wordIds": []
@@ -1617,11 +1699,11 @@
           "heures"
         ],
         "bank": [
+          "jours",
+          "quatre",
+          "Il",
           "heures",
           "trois",
-          "quatre",
-          "jours",
-          "Il",
           "est"
         ],
         "wordIds": []
@@ -1636,10 +1718,10 @@
           "ans"
         ],
         "bank": [
-          "vingt",
           "J'ai",
-          "ans",
           "dix",
+          "vingt",
+          "ans",
           "mois"
         ],
         "wordIds": []
@@ -1654,11 +1736,11 @@
           "coûte"
         ],
         "bank": [
-          "ça",
-          "achète",
           "Combien",
-          "coûte",
-          "cher"
+          "ça",
+          "cher",
+          "achète",
+          "coûte"
         ],
         "wordIds": []
       },
@@ -1672,11 +1754,11 @@
           "cher"
         ],
         "bank": [
+          "cher",
+          "trop",
           "bon",
           "C'est",
-          "peu",
-          "cher",
-          "trop"
+          "peu"
         ],
         "wordIds": []
       },
@@ -1692,9 +1774,9 @@
         "bank": [
           "tu",
           "acheter",
+          "payer",
           "Je",
-          "voudrais",
-          "payer"
+          "voudrais"
         ],
         "wordIds": []
       },
@@ -1709,12 +1791,12 @@
           "gare"
         ],
         "bank": [
+          "loin",
+          "rue",
+          "gare",
           "est",
           "la",
-          "gare",
-          "Où",
-          "loin",
-          "rue"
+          "Où"
         ],
         "wordIds": []
       },
@@ -1728,11 +1810,11 @@
           "gauche"
         ],
         "bank": [
-          "droite",
           "Tournez",
           "tout",
+          "à",
           "gauche",
-          "à"
+          "droite"
         ],
         "wordIds": []
       },
@@ -1747,10 +1829,10 @@
         ],
         "bank": [
           "C'est",
-          "près",
           "d'ici",
-          "où",
-          "loin"
+          "loin",
+          "près",
+          "où"
         ],
         "wordIds": []
       },
@@ -1765,9 +1847,9 @@
           "l'eau"
         ],
         "bank": [
-          "voudrais",
-          "Je",
           "pain",
+          "Je",
+          "voudrais",
           "de",
           "tu",
           "l'eau"
@@ -1785,12 +1867,12 @@
           "bon"
         ],
         "bank": [
-          "est",
+          "bon",
           "mauvais",
           "poisson",
-          "riz",
-          "bon",
-          "Le"
+          "est",
+          "Le",
+          "riz"
         ],
         "wordIds": []
       },
@@ -1804,11 +1886,11 @@
           "riz"
         ],
         "bank": [
+          "le",
           "poulet",
-          "la",
           "J'aime",
           "riz",
-          "le"
+          "la"
         ],
         "wordIds": []
       },
@@ -1818,9 +1900,9 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-w1",
-            "target": "bonjour",
-            "english": "hello"
+            "wordId": "fr-w6",
+            "target": "au revoir",
+            "english": "goodbye"
           },
           {
             "wordId": "fr-w3",
@@ -1828,9 +1910,9 @@
             "english": "hi"
           },
           {
-            "wordId": "fr-w2",
-            "target": "bonsoir",
-            "english": "good evening"
+            "wordId": "fr-w8",
+            "target": "non",
+            "english": "no"
           },
           {
             "wordId": "fr-w5",
@@ -1838,9 +1920,9 @@
             "english": "please"
           },
           {
-            "wordId": "fr-w4",
-            "target": "merci",
-            "english": "thank you"
+            "wordId": "fr-w2",
+            "target": "bonsoir",
+            "english": "good evening"
           }
         ]
       },
@@ -1850,9 +1932,9 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-w9",
-            "target": "un",
-            "english": "one"
+            "wordId": "fr-w13",
+            "target": "cinq",
+            "english": "five"
           },
           {
             "wordId": "fr-w15",
@@ -1860,19 +1942,19 @@
             "english": "ten"
           },
           {
-            "wordId": "fr-w14",
-            "target": "six",
-            "english": "six"
-          },
-          {
-            "wordId": "fr-w11",
-            "target": "trois",
-            "english": "three"
-          },
-          {
             "wordId": "fr-w10",
             "target": "deux",
             "english": "two"
+          },
+          {
+            "wordId": "fr-w12",
+            "target": "quatre",
+            "english": "four"
+          },
+          {
+            "wordId": "fr-w14",
+            "target": "six",
+            "english": "six"
           }
         ]
       },
@@ -1882,29 +1964,29 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-w21",
-            "target": "l'argent",
-            "english": "money"
-          },
-          {
             "wordId": "fr-w19",
             "target": "cher",
             "english": "expensive"
           },
           {
-            "wordId": "fr-w17",
-            "target": "le marché",
-            "english": "the market"
+            "wordId": "fr-w20",
+            "target": "pas cher",
+            "english": "cheap"
+          },
+          {
+            "wordId": "fr-w23",
+            "target": "payer",
+            "english": "to pay"
+          },
+          {
+            "wordId": "fr-w18",
+            "target": "combien",
+            "english": "how much"
           },
           {
             "wordId": "fr-w24",
             "target": "le prix",
             "english": "the price"
-          },
-          {
-            "wordId": "fr-w20",
-            "target": "pas cher",
-            "english": "cheap"
           }
         ]
       },
@@ -1914,6 +1996,21 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
+            "wordId": "fr-w30",
+            "target": "loin",
+            "english": "far"
+          },
+          {
+            "wordId": "fr-w32",
+            "target": "la gare",
+            "english": "the station"
+          },
+          {
+            "wordId": "fr-w29",
+            "target": "près",
+            "english": "near"
+          },
+          {
             "wordId": "fr-w25",
             "target": "à gauche",
             "english": "on the left"
@@ -1922,21 +2019,6 @@
             "wordId": "fr-w26",
             "target": "à droite",
             "english": "on the right"
-          },
-          {
-            "wordId": "fr-w28",
-            "target": "la rue",
-            "english": "the street"
-          },
-          {
-            "wordId": "fr-w27",
-            "target": "tout droit",
-            "english": "straight ahead"
-          },
-          {
-            "wordId": "fr-w32",
-            "target": "la gare",
-            "english": "the station"
           }
         ]
       },
@@ -1946,19 +2028,19 @@
         "prompt": "Match the pairs",
         "pairs": [
           {
+            "wordId": "fr-w38",
+            "target": "la banane",
+            "english": "banana"
+          },
+          {
             "wordId": "fr-w35",
             "target": "le riz",
             "english": "rice"
           },
           {
-            "wordId": "fr-w40",
-            "target": "j'ai faim",
-            "english": "I am hungry"
-          },
-          {
-            "wordId": "fr-w33",
-            "target": "le pain",
-            "english": "bread"
+            "wordId": "fr-w36",
+            "target": "le poulet",
+            "english": "chicken"
           },
           {
             "wordId": "fr-w37",
@@ -1966,9 +2048,9 @@
             "english": "fish"
           },
           {
-            "wordId": "fr-w36",
-            "target": "le poulet",
-            "english": "chicken"
+            "wordId": "fr-w34",
+            "target": "l'eau",
+            "english": "water"
           }
         ]
       }

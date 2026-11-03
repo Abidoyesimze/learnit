@@ -9,7 +9,7 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     const hit = findCheckpoint(params.id);
     if (!hit) return Response.json({ error: "Not found" }, { status: 404 });
     const passed = await db.lessonAttempt.findMany({ where: { userId: user.id, passed: true, kind: "lesson", lessonId: { in: hit.unit.lessons.map((l) => l.id) } }, select: { lessonId: true }, distinct: ["lessonId"] });
-    if (passed.length < hit.unit.lessons.length) return Response.json({ error: "Pass all five lessons first" }, { status: 403 });
+    if (passed.length < hit.unit.lessons.length) return Response.json({ error: "Pass all the lessons first" }, { status: 403 });
     const lastFail = await db.lessonAttempt.findFirst({ where: { userId: user.id, lessonId: hit.checkpoint.id, passed: false }, orderBy: { createdAt: "desc" } });
     if (lastFail && Date.now() - lastFail.createdAt.getTime() < 86400_000)
       return Response.json({ error: "Cooldown after a failed attempt", cooldownUntil: new Date(lastFail.createdAt.getTime() + 86400_000).toISOString() }, { status: 429 });
