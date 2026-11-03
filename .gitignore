@@ -9,3 +9,5 @@ contracts/broadcast
 *.tsbuildinfo
 .DS_Store
 .vercel
+dist
+.astro
