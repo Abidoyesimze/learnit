@@ -1,19 +1,40 @@
-import fr from "./content/fr/unit1.json";
-import es from "./content/es/unit1.json";
+import fr1 from "./content/fr/unit1.json";
+import fr2 from "./content/fr/unit2.json";
+import fr3 from "./content/fr/unit3.json";
+import es1 from "./content/es/unit1.json";
+import es2 from "./content/es/unit2.json";
+import es3 from "./content/es/unit3.json";
 import { UnitSchema, type Exercise, type Lang, type Unit } from "./content/schema";
 
-export const UNITS: Record<Lang, Unit> = { fr: UnitSchema.parse(fr), es: UnitSchema.parse(es) };
+/** Each language's units in order. A course is just this list walked front to back. */
+export const COURSES: Record<Lang, Unit[]> = {
+  fr: [fr1, fr2, fr3].map((u) => UnitSchema.parse(u)),
+  es: [es1, es2, es3].map((u) => UnitSchema.parse(u)),
+};
+
+/** The unit a learner is currently working through: the first with an unfinished lesson or
+ *  checkpoint, or the last unit once everything is done. */
+export function currentUnitFor(course: Lang, passedIds: Set<string>): Unit {
+  const units = COURSES[course];
+  for (const u of units) {
+    if (!u.lessons.every((l) => passedIds.has(l.id)) || !passedIds.has(u.checkpoint.id)) return u;
+  }
+  return units[units.length - 1];
+}
 
 export function findLesson(id: string) {
   for (const lang of ["fr", "es"] as const) {
-    const u = UNITS[lang];
-    const l = u.lessons.find((x) => x.id === id);
-    if (l) return { lang, unit: u, lesson: l };
+    for (const u of COURSES[lang]) {
+      const l = u.lessons.find((x) => x.id === id);
+      if (l) return { lang, unit: u, lesson: l };
+    }
   }
   return null;
 }
 export function findCheckpoint(id: string) {
-  for (const lang of ["fr", "es"] as const) if (UNITS[lang].checkpoint.id === id) return { lang, unit: UNITS[lang], checkpoint: UNITS[lang].checkpoint };
+  for (const lang of ["fr", "es"] as const) {
+    for (const u of COURSES[lang]) if (u.checkpoint.id === id) return { lang, unit: u, checkpoint: u.checkpoint };
+  }
   return null;
 }
 

@@ -14,6 +14,7 @@ export const rewardConfig = () => ({
   dailyCap: g("DAILY_CAP_G", "2"), // keep equal to RewardsPool.dailyCap
   maxLessonsPerDay: 3,
   expirySeconds: 7 * 86400,
+  leagueBonus: [g("LEAGUE_BONUS_1_G", "3"), g("LEAGUE_BONUS_2_G", "2"), g("LEAGUE_BONUS_3_G", "1")] as const, // rank 1, 2, 3
 });
 
 const voucherTypes = {
@@ -66,6 +67,24 @@ export async function issueVoucher(user: User, attempt: { id: string; lessonId: 
   });
   return db.voucher.create({
     data: { root: v.root, amount: amount.toString(), nonce: nonce.toString(), expiry: Number(expiry), reason: attempt.kind, sourceId: attempt.id, signature },
+  });
+}
+
+/** Signs and records a weekly league bonus voucher for a verified root. `sourceId` is the LeagueBonus row id. */
+export async function issueLeagueVoucher(root: `0x${string}`, amount: bigint, sourceId: string) {
+  const key = process.env.SIGNER_PRIVATE_KEY as Hex | undefined;
+  if (!key || !ADDR.rewardsPool) return null;
+  const cfg = rewardConfig();
+  const nonce = BigInt("0x" + randomBytes(16).toString("hex"));
+  const expiry = BigInt(Math.floor(Date.now() / 1000) + cfg.expirySeconds);
+  const account = privateKeyToAccount(key);
+  const signature = await account.signTypedData({
+    domain: { name: "LearnItRewards", version: "1", chainId: CHAIN_ID, verifyingContract: ADDR.rewardsPool },
+    types: voucherTypes, primaryType: "Voucher",
+    message: { root, amount, nonce, expiry },
+  });
+  return db.voucher.create({
+    data: { root, amount: amount.toString(), nonce: nonce.toString(), expiry: Number(expiry), reason: "league", sourceId, signature },
   });
 }
 

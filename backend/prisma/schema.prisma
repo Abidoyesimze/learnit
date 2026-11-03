@@ -18,12 +18,16 @@ model User {
   timezone        String   @default("UTC")
   course          String   @default("fr")
   onboardedAt     DateTime?
+  streakFreezes   Int      @default(0) // banked freezes, earned at streak milestones, auto-spent to cover one missed day
+  flagged         Boolean  @default(false) // set when an AbuseFlag is raised; reviewed manually, does not block learning
   createdAt       DateTime @default(now())
 
   ubiClaims       UbiClaim[]
   attempts        LessonAttempt[]
   streakDays      StreakDay[]
   stakes          Stake[]
+  leagueMemberships LeagueMembership[]
+  abuseFlags      AbuseFlag[]
 
   @@map("users")
 }
@@ -58,10 +62,11 @@ model LessonAttempt {
 }
 
 model StreakDay {
-  id      String @id @default(cuid())
+  id      String  @id @default(cuid())
   userId  String
-  date    String // YYYY-MM-DD in the user's timezone
-  user    User   @relation(fields: [userId], references: [id])
+  date    String  // YYYY-MM-DD in the user's timezone
+  frozen  Boolean @default(false) // backfilled by a streak freeze instead of an actual lesson pass
+  user    User    @relation(fields: [userId], references: [id])
 
   @@unique([userId, date])
   @@map("streak_days")
@@ -73,7 +78,7 @@ model Voucher {
   amount    String   // wei, as a decimal string
   nonce     String   @unique
   expiry    Int      // unix seconds
-  reason    String   // lesson | checkpoint
+  reason    String   // lesson | checkpoint | league
   sourceId  String   @unique // attempt id that earned it
   signature String
   status    String   @default("issued") // issued | claimed | expired
@@ -109,4 +114,42 @@ model Stake {
 
   @@unique([cohortId, userId])
   @@map("stakes")
+}
+
+model LeagueMembership {
+  id         String  @id @default(cuid())
+  userId     String
+  weekKey    String  // ISO week, Monday-start UTC, e.g. "2026-W45"
+  groupIndex Int     // which ~30-person group within that week
+  user       User    @relation(fields: [userId], references: [id])
+
+  @@unique([userId, weekKey])
+  @@index([weekKey, groupIndex])
+  @@map("league_memberships")
+}
+
+model LeagueBonus {
+  id         String   @id @default(cuid())
+  userId     String
+  weekKey    String
+  groupIndex Int
+  rank       Int      // 1, 2 or 3
+  amount     String   // wei
+  settledAt  DateTime @default(now())
+
+  @@unique([userId, weekKey])
+  @@map("league_bonuses")
+}
+
+model AbuseFlag {
+  id        String   @id @default(cuid())
+  userId    String
+  attemptId String
+  reason    String
+  resolved  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@index([userId, resolved])
+  @@map("abuse_flags")
 }
