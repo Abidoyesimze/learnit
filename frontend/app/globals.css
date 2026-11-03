@@ -21,3 +21,10 @@ html { background: var(--paper); color: var(--ink); }
 body { min-height: 100dvh; font-family: var(--font-geist-sans), system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
 :focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* Loading skeletons: a soft sweep, off under prefers-reduced-motion (rule above). */
+.skeleton { position: relative; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, var(--paper)); }
+.skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--paper) 55%, transparent), transparent); animation: skeleton-sweep 1.4s ease-in-out infinite; }
+.skeleton-on-yellow { background: rgb(0 0 0 / 0.1); }
+.skeleton-on-yellow::after { background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.35), transparent); }
+@keyframes skeleton-sweep { to { transform: translateX(100%); } }

@@ -11,6 +11,7 @@ import { ADDR } from "@learnit/backend/chain";
 import { fmtGD } from "@learnit/backend/format";
 import { TabBar } from "@/components/TabBar";
 import { useAuthGate } from "@/components/useAuthGate";
+import { StakeSkeleton } from "@/components/Skeletons";
 
 type Cohort = { id: number; start: number; end: number; min: string; max: string; pot: string; settled: boolean; joinable: boolean; members: number; mine: { stake: string; finished: boolean; withdrawn: boolean; payout: string } | null; progress: { required: string[]; done: boolean[]; completed: number } | null };
 
@@ -58,12 +59,12 @@ export default function Stake() {
     await pc.waitForTransactionReceipt({ hash: h });
   });
 
+  if (!data) return <StakeSkeleton />;
   return (
     <main className="mx-auto max-w-md px-4 pb-28 pt-6">
       <h1 className="text-3xl font-bold tracking-tighter">Stake</h1>
       <p className="mt-1 text-sm text-muted">Put G$ behind a 7-day streak. Keep your streak, keep your G$. Miss a day and your stake goes to the finishers.</p>
       {me && !me.verified && <p className="mt-4 rounded-card border border-ink p-4 text-sm">Only verified users can stake. Verify with GoodDollar on the home screen.</p>}
-      {!data && <div className="mt-6 h-40 animate-pulse rounded-card bg-line" />}
       {data && !c && <p className="mt-6 text-sm text-muted">No open challenge right now. A new one starts every week.</p>}
       {c && (
         <section className="mt-6 rounded-card border border-ink p-5">

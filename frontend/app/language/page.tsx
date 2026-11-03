@@ -7,6 +7,7 @@ import { useApi } from "@/lib/useApi";
 import { useMe } from "@/lib/useMe";
 import { LanguageCards } from "@/components/LanguageCards";
 import { useAuthGate } from "@/components/useAuthGate";
+import { LanguageSkeleton } from "@/components/Skeletons";
 import type { Course } from "@/lib/languages";
 
 export default function ChangeLanguage() {
@@ -28,7 +29,7 @@ export default function ChangeLanguage() {
     } catch (e) { setErr(e instanceof Error ? e.message : "Could not switch language"); setBusy(false); }
   }
 
-  if (!ok) return null;
+  if (!ok || !me) return <LanguageSkeleton />;
   return (
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <button onClick={() => router.back()} aria-label="Back" className="-ml-2 p-2"><ArrowLeft01Icon size={24} strokeWidth={1.75} /></button>

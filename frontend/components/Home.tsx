@@ -11,6 +11,7 @@ import { VerifyCard } from "./VerifyCard";
 import { ClaimCard } from "./ClaimCard";
 import { TabBar } from "./TabBar";
 import { GasCard } from "./GasCard";
+import { ClaimCardSkeleton, LessonCardSkeleton } from "./Skeletons";
 import { LanguageChip } from "./LanguageChip";
 
 export function Home() {
@@ -30,7 +31,7 @@ export function Home() {
         <LanguageChip />
         <button onClick={logout} className="font-mono text-xs text-muted underline-offset-4 hover:underline">{me ? short(me.wallet) : "Sign out"}</button>
       </header>
-      {isLoading && <div className="h-44 animate-pulse rounded-card bg-line" />}
+      {isLoading && <><ClaimCardSkeleton /><LessonCardSkeleton /></>}
       {error && <p role="alert" className="text-sm">Could not load your account. Pull to retry.</p>}
       {me && (me.verified ? <ClaimCard /> : <VerifyCard />)}
       {me && me.verified && !me.gasTopupDone && <GasCard />}

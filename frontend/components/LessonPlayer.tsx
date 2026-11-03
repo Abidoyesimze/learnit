@@ -6,6 +6,7 @@ import { VolumeHighIcon, VolumeOffIcon, Tick02Icon, Cancel01Icon } from "hugeico
 import { useApi } from "@/lib/useApi";
 import type { PublicExercise } from "@learnit/backend/lessons";
 import { fmtGD } from "@learnit/backend/format";
+import { LessonSkeleton } from "./Skeletons";
 import { playCorrect, playWrong, soundEnabled, setSoundEnabled } from "@/lib/sounds";
 
 type Loaded = { id: string; title: string; speechLang: string; token: string; exercises: PublicExercise[] };
@@ -97,7 +98,7 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
   }, [ex, record, queue, pos, next]);
 
   if (err && !data) return <p role="alert" className="p-6 text-sm">{err} <Link className="underline" href="/learn">Back</Link></p>;
-  if (!data) return <div className="mx-auto max-w-md p-6"><div className="h-6 w-full animate-pulse rounded bg-line" /></div>;
+  if (!data) return <LessonSkeleton />;
   if (result) return <Results r={result} id={id} />;
   if (!ex) return <p className="p-6 text-sm">Submitting...</p>;
 

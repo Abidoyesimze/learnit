@@ -9,6 +9,7 @@ import { ADDR } from "@learnit/backend/chain";
 import { fmtGD } from "@learnit/backend/format";
 import { TabBar } from "@/components/TabBar";
 import { useAuthGate } from "@/components/useAuthGate";
+import { EarnSkeleton } from "@/components/Skeletons";
 
 type V = { id: string; root: `0x${string}`; amount: string; nonce: string; expiry: number; signature: `0x${string}`; reason: string };
 type Data = { verified: boolean; vouchers: V[]; earnedToday: string; dailyCap: string; capRemaining: string };
@@ -39,6 +40,7 @@ export default function Earn() {
     } catch (e) { setErr(e instanceof Error ? e.message.split("\n")[0] : "Claim failed"); } finally { setBusy(false); }
   }
 
+  if (!data) return <EarnSkeleton />;
   const total = data?.vouchers.reduce((s, v) => s + BigInt(v.amount), 0n) ?? 0n;
   return (
     <main className="mx-auto max-w-md px-4 pb-28 pt-6">
@@ -50,7 +52,6 @@ export default function Earn() {
       </section>
       {data && !data.verified && <p className="mt-4 text-sm">Verify with GoodDollar on the home screen to earn.</p>}
       <h2 className="mt-8 text-lg font-bold">Ready to claim</h2>
-      {!data && <div className="mt-3 h-16 animate-pulse rounded-card bg-line" />}
       {data?.verified && data.vouchers.length === 0 && <p className="mt-2 text-sm text-muted">Pass a lesson to earn G$. Rewards show up here.</p>}
       <ul className="mt-3 grid gap-3">
         {data?.vouchers.map((v) => (

@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { MedalFirstPlaceIcon, MedalSecondPlaceIcon, MedalThirdPlaceIcon } from "hugeicons-react";
 import { useApi } from "@/lib/useApi";
 import { TabBar } from "@/components/TabBar";
+import { LeagueSkeleton } from "@/components/Skeletons";
 import { useAuthGate } from "@/components/useAuthGate";
 
 type Row = { you: boolean; wallet: string; points: number; rank: number };
@@ -20,11 +21,11 @@ export default function League() {
   const api = useApi();
   const { data } = useQuery({ queryKey: ["league"], queryFn: () => api<Board>("/api/league"), enabled: ok });
 
+  if (!data) return <LeagueSkeleton />;
   return (
     <main className="mx-auto max-w-md px-4 pb-28 pt-6">
       <h1 className="text-3xl font-bold tracking-tighter">League</h1>
       <p className="mt-1 text-sm text-muted">Your weekly group. The top 3 by points share a G$ bonus when the week ends.</p>
-      {!data && <div className="mt-6 h-64 animate-pulse rounded-card bg-line" />}
       {data && !data.joined && (
         <p className="mt-6 rounded-card border border-line p-5 text-sm text-muted">Pass a lesson today to join this week&apos;s group.</p>
       )}

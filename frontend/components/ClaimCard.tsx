@@ -6,6 +6,7 @@ import { Loading03Icon } from "hugeicons-react";
 import { useApi } from "@/lib/useApi";
 import { useGoodSdk } from "@/lib/useGoodSdk";
 import { fmtGD } from "@learnit/backend/format";
+import { ClaimCardSkeleton } from "./Skeletons";
 
 type Status = { claimable: string; canClaim: boolean; nextClaimAt: number | null; lastClaimTx: string | null };
 
@@ -48,12 +49,12 @@ export function ClaimCard() {
     } finally { setBusy(false); }
   }
 
+  if (isLoading || !data) return <ClaimCardSkeleton />;
+
   return (
     <section className="rounded-card bg-yellow p-5 text-[#111]">
       <p className="text-sm font-medium">Daily G$</p>
-      {isLoading || !data ? (
-        <div className="mt-2 h-12 w-40 animate-pulse rounded-input bg-black/10" />
-      ) : data.canClaim ? (
+      {data.canClaim ? (
         <>
           <p className="mt-1 font-mono text-5xl font-semibold tracking-tight">{fmtGD(data.claimable)}</p>
           <p className="text-sm">ready to claim today</p>
