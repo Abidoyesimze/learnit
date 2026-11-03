@@ -28,10 +28,7 @@ export function Home() {
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <header className="mb-6 flex items-center justify-between">
         <LanguageChip />
-        <div className="flex items-center gap-3">
-          <span className="rounded-full border border-line px-2 py-0.5 text-[11px] font-medium">Beta</span>
-          <button onClick={logout} className="font-mono text-xs text-muted underline-offset-4 hover:underline">{me ? short(me.wallet) : "Sign out"}</button>
-        </div>
+        <button onClick={logout} className="font-mono text-xs text-muted underline-offset-4 hover:underline">{me ? short(me.wallet) : "Sign out"}</button>
       </header>
       {isLoading && <div className="h-44 animate-pulse rounded-card bg-line" />}
       {error && <p role="alert" className="text-sm">Could not load your account. Pull to retry.</p>}

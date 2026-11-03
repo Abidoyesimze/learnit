@@ -11,8 +11,7 @@ export function LoginScreen() {
   return (
     <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col justify-between px-4 pb-8 pt-10">
       <div>
-        <span className="inline-block rounded-full border border-line px-3 py-1 text-xs font-medium">Beta</span>
-        <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tighter">Learn French and Spanish. Earn G$.</h1>
+        <h1 className="text-4xl font-bold leading-[1.05] tracking-tighter">Learn French and Spanish. Earn G$.</h1>
         <p className="mt-4 max-w-[32ch] text-base text-muted">Under ten minutes a day. Pass your lessons, keep your streak, get paid in G$.</p>
       </div>
       <div className="mx-auto my-4 grid aspect-square h-[min(300px,34dvh)] place-items-center"><Globe /></div>
