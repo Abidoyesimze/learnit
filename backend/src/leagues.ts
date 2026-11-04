@@ -1,6 +1,7 @@
 import type { User } from "@prisma/client";
 import { db } from "./db";
 import { weekKey } from "./streak";
+import { nameFor, avatarUrlFor } from "./profile";
 
 export const GROUP_SIZE = 30;
 export const POINTS_PER_LESSON = 10;
@@ -55,17 +56,17 @@ export async function pointsForWeek(userIds: string[], key: string): Promise<Map
   return points;
 }
 
-export type LeagueRow = { userId: string; wallet: string; points: number; rank: number };
+export type LeagueRow = { userId: string; wallet: string; name: string; avatarUrl: string | null; points: number; rank: number };
 
 /** The learner's current-week group leaderboard, or null if they haven't joined one yet (no activity this week). */
 export async function leaderboardFor(user: User): Promise<{ weekKey: string; groupIndex: number; rows: LeagueRow[]; endsAt: string } | null> {
   const key = currentWeekKey();
   const mine = await db.leagueMembership.findUnique({ where: { userId_weekKey: { userId: user.id, weekKey: key } } });
   if (!mine) return null;
-  const members = await db.leagueMembership.findMany({ where: { weekKey: key, groupIndex: mine.groupIndex }, include: { user: { select: { id: true, wallet: true } } } });
+  const members = await db.leagueMembership.findMany({ where: { weekKey: key, groupIndex: mine.groupIndex }, include: { user: { select: { id: true, wallet: true, username: true, displayName: true, hasAvatar: true, avatarVersion: true } } } });
   const points = await pointsForWeek(members.map((m) => m.userId), key);
   const rows = members
-    .map((m) => ({ userId: m.userId, wallet: m.user.wallet, points: points.get(m.userId) ?? 0 }))
+    .map((m) => ({ userId: m.userId, wallet: m.user.wallet, name: nameFor(m.user), avatarUrl: avatarUrlFor(m.user), points: points.get(m.userId) ?? 0 }))
     .sort((a, b) => b.points - a.points)
     .map((r, i) => ({ ...r, rank: i + 1 }));
   return { weekKey: key, groupIndex: mine.groupIndex, rows, endsAt: weekRange(key).end.toISOString() };

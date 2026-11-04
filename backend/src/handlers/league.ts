@@ -11,7 +11,7 @@ export async function GET(req: Request) {
       joined: true,
       weekKey: board.weekKey,
       endsAt: board.endsAt,
-      rows: board.rows.map((r) => ({ you: r.userId === user.id, wallet: short(r.wallet), points: r.points, rank: r.rank })),
+      rows: board.rows.map((r) => ({ you: r.userId === user.id, wallet: short(r.wallet), name: r.name, avatarUrl: r.avatarUrl, points: r.points, rank: r.rank })),
     });
   } catch (e) { return authFail(e); }
 }

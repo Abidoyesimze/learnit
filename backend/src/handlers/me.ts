@@ -1,6 +1,7 @@
 import { db } from "../db";
 import { requireUser, authFail } from "../auth";
 import { readVerificationCached as readVerification } from "../identity";
+import { avatarUrlFor } from "../profile";
 
 export async function GET(req: Request) {
   try {
@@ -11,7 +12,12 @@ export async function GET(req: Request) {
       ? await db.user.update({ where: { id: user.id }, data: { whitelistedRoot: v.root, verifiedUntil: v.verifiedUntil } })
       : user;
     return Response.json({
+      id: updated.id,
       wallet: updated.wallet,
+      username: updated.username,
+      displayName: updated.displayName,
+      bio: updated.bio,
+      avatarUrl: avatarUrlFor(updated),
       verified: v.verified && (!v.verifiedUntil || v.verifiedUntil > new Date()),
       root: v.root,
       verifiedUntil: v.verifiedUntil,

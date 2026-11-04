@@ -4,6 +4,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { ArrowRight01Icon, Coins01Icon, BookOpen01Icon, Loading03Icon, LockIcon } from "hugeicons-react";
 import { useApi } from "@/lib/useApi";
 import { LanguageCards } from "./LanguageCards";
+import { ProfileEditor } from "./ProfileEditor";
 import type { Course } from "@/lib/languages";
 
 const HOW: { Icon: typeof Coins01Icon; title: string; body: string }[] = [
@@ -15,7 +16,7 @@ const HOW: { Icon: typeof Coins01Icon; title: string; body: string }[] = [
 export function Onboarding() {
   const api = useApi();
   const qc = useQueryClient();
-  const [step, setStep] = useState<0 | 1>(0);
+  const [step, setStep] = useState<0 | 1 | 2>(0);
   const [course, setCourse] = useState<Course | null>(null);
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
@@ -33,8 +34,8 @@ export function Onboarding() {
 
   return (
     <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col px-4 pb-8 pt-10">
-      <div className="flex items-center gap-2" aria-label={`Step ${step + 1} of 2`}>
-        {[0, 1].map((i) => <span key={i} className={`h-1.5 flex-1 rounded-full ${i <= step ? "bg-yellow" : "bg-line"}`} />)}
+      <div className="flex items-center gap-2" aria-label={`Step ${step + 1} of 3`}>
+        {[0, 1, 2].map((i) => <span key={i} className={`h-1.5 flex-1 rounded-full ${i <= step ? "bg-yellow" : "bg-line"}`} />)}
       </div>
 
       {step === 0 && (
@@ -51,6 +52,18 @@ export function Onboarding() {
       )}
 
       {step === 1 && (
+        <div className="mt-10 flex-1">
+          <h1 className="text-4xl font-bold leading-[1.05] tracking-tighter">Set up your profile</h1>
+          <p className="mt-3 max-w-[34ch] text-muted">Add a photo and a username. You can skip this and do it later.</p>
+          <div className="mt-8"><ProfileEditor submitLabel="Continue" allowSkipSave onDone={() => setStep(2)} /></div>
+          <div className="mt-2 flex items-center justify-between">
+            <button onClick={() => setStep(0)} className="py-2 text-sm text-muted underline-offset-4 hover:underline">Back</button>
+            <button onClick={() => setStep(2)} className="py-2 text-sm font-medium underline underline-offset-4">Skip for now</button>
+          </div>
+        </div>
+      )}
+
+      {step === 2 && (
         <>
           <div className="mt-10 flex-1">
             <h1 className="text-4xl font-bold leading-[1.05] tracking-tighter">How LearnIt works</h1>
@@ -69,7 +82,7 @@ export function Onboarding() {
             <button onClick={finish} disabled={busy} className="flex w-full items-center justify-center gap-2 rounded-full bg-yellow px-5 py-4 font-semibold text-[#111] transition active:scale-[0.98] disabled:opacity-60">
               {busy && <Loading03Icon className="animate-spin" size={18} strokeWidth={1.75} />} Start learning
             </button>
-            <button onClick={() => setStep(0)} disabled={busy} className="py-2 text-sm text-muted underline-offset-4 hover:underline">Back</button>
+            <button onClick={() => setStep(1)} disabled={busy} className="py-2 text-sm text-muted underline-offset-4 hover:underline">Back</button>
           </div>
         </>
       )}

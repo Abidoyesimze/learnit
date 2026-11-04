@@ -4,9 +4,10 @@ import { MedalFirstPlaceIcon, MedalSecondPlaceIcon, MedalThirdPlaceIcon } from "
 import { useApi } from "@/lib/useApi";
 import { TabBar } from "@/components/TabBar";
 import { LeagueSkeleton } from "@/components/Skeletons";
+import { Avatar } from "@/components/Avatar";
 import { useAuthGate } from "@/components/useAuthGate";
 
-type Row = { you: boolean; wallet: string; points: number; rank: number };
+type Row = { you: boolean; wallet: string; name: string; avatarUrl: string | null; points: number; rank: number };
 type Board = { joined: false } | { joined: true; weekKey: string; endsAt: string; rows: Row[] };
 
 const medal = (rank: number) => (rank === 1 ? MedalFirstPlaceIcon : rank === 2 ? MedalSecondPlaceIcon : rank === 3 ? MedalThirdPlaceIcon : null);
@@ -39,7 +40,8 @@ export default function League() {
                 <li key={r.wallet + r.rank} className={`flex items-center gap-3 rounded-card border p-4 ${r.you ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>
                   <span className="w-6 text-center font-mono text-sm font-semibold">{r.rank}</span>
                   {Medal ? <Medal size={20} strokeWidth={1.75} /> : <span className="w-5" />}
-                  <span className="flex-1 truncate font-mono text-sm">{r.wallet}{r.you ? " (you)" : ""}</span>
+                  <Avatar src={r.avatarUrl} name={r.name} size={32} />
+                  <span className="flex-1 truncate text-sm font-medium">{r.name}{r.you ? " (you)" : ""}</span>
                   <span className="font-mono text-sm font-semibold">{r.points} pts</span>
                 </li>
               );

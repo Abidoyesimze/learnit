@@ -2,20 +2,18 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { usePrivy } from "@privy-io/react-auth";
 import { useApi } from "@/lib/useApi";
 import { useMe } from "@/lib/useMe";
-import { short } from "@learnit/backend/format";
 import { langOf } from "@/lib/languages";
 import { VerifyCard } from "./VerifyCard";
 import { ClaimCard } from "./ClaimCard";
 import { TabBar } from "./TabBar";
 import { GasCard } from "./GasCard";
-import { ClaimCardSkeleton, LessonCardSkeleton } from "./Skeletons";
+import { ClaimCardSkeleton, LessonCardSkeleton, Sk } from "./Skeletons";
 import { LanguageChip } from "./LanguageChip";
+import { Avatar } from "./Avatar";
 
 export function Home() {
-  const { logout } = usePrivy();
   const { data: me, isLoading, error } = useMe();
   const api = useApi();
   const qc = useQueryClient();
@@ -29,7 +27,9 @@ export function Home() {
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <header className="mb-6 flex items-center justify-between">
         <LanguageChip />
-        <button onClick={logout} className="font-mono text-xs text-muted underline-offset-4 hover:underline">{me ? short(me.wallet) : "Sign out"}</button>
+        {me ? (
+          <Link href="/profile" aria-label="Your profile" className="rounded-full transition active:scale-[0.96]"><Avatar src={me.avatarUrl} name={me.displayName || me.username || "You"} size={40} /></Link>
+        ) : <Sk className="h-10 w-10 rounded-full" />}
       </header>
       {isLoading && <><ClaimCardSkeleton /><LessonCardSkeleton /></>}
       {error && <p role="alert" className="text-sm">Could not load your account. Pull to retry.</p>}
