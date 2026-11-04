@@ -9,9 +9,10 @@ import { VerifyCard } from "./VerifyCard";
 import { ClaimCard } from "./ClaimCard";
 import { TabBar } from "./TabBar";
 import { GasCard } from "./GasCard";
-import { ClaimCardSkeleton, LessonCardSkeleton, Sk } from "./Skeletons";
+import { ClaimCardSkeleton, LessonCardSkeleton } from "./Skeletons";
 import { LanguageChip } from "./LanguageChip";
-import { Avatar } from "./Avatar";
+import { ProfileMenu } from "./ProfileMenu";
+import { InstallPrompt } from "./InstallPrompt";
 
 export function Home() {
   const { data: me, isLoading, error } = useMe();
@@ -27,9 +28,7 @@ export function Home() {
     <main className="mx-auto max-w-md px-4 pb-24 pt-6">
       <header className="mb-6 flex items-center justify-between">
         <LanguageChip />
-        {me ? (
-          <Link href="/profile" aria-label="Your profile" className="rounded-full transition active:scale-[0.96]"><Avatar src={me.avatarUrl} name={me.displayName || me.username || "You"} size={40} /></Link>
-        ) : <Sk className="h-10 w-10 rounded-full" />}
+        <ProfileMenu />
       </header>
       {isLoading && <><ClaimCardSkeleton /><LessonCardSkeleton /></>}
       {error && <p role="alert" className="text-sm">Could not load your account. Pull to retry.</p>}
@@ -44,6 +43,7 @@ export function Home() {
           <span aria-hidden className="text-xl">&rarr;</span>
         </Link>
       )}
+      {me && <InstallPrompt />}
       <TabBar />
     </main>
   );

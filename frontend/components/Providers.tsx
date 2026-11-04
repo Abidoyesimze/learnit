@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { http } from "viem";
 import { useEffect, useState } from "react";
 import { CHAIN, RPC_URL } from "@learnit/backend/chain";
+import { startInstallListener } from "@/lib/install";
 
 // CHAIN is one of two chains picked at runtime by env var, so its static type is a union; wagmi's
 // transports map type demands both branches' ids unless we tell it which one actually applies here.
@@ -13,6 +14,7 @@ const wagmiConfig = createConfig({ chains: [CHAIN], transports: { [CHAIN.id]: ht
 export function Providers({ children }: { children: React.ReactNode }) {
   const [qc] = useState(() => new QueryClient({ defaultOptions: { queries: { staleTime: 60_000, gcTime: 10 * 60_000, refetchOnWindowFocus: false, retry: 1 } } }));
   useEffect(() => {
+    startInstallListener(); // catch the browser's install offer before any screen asks for it
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") navigator.serviceWorker.register("/sw.js").catch(() => {});
   }, []);
   const appId = process.env.NEXT_PUBLIC_PRIVY_APP_ID;

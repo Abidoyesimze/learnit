@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "LearnIt",
   description: "Learn a language. Earn G$.",
   manifest: "/manifest.webmanifest",
+  icons: { icon: [{ url: "/icon-192.png", sizes: "192x192", type: "image/png" }, { url: "/icon.svg", type: "image/svg+xml" }], apple: "/apple-touch-icon.png" },
+  appleWebApp: { capable: true, title: "LearnIt", statusBarStyle: "default" },
 };
 export const viewport: Viewport = { themeColor: "#ffd60a", width: "device-width", initialScale: 1, viewportFit: "cover" };
 
