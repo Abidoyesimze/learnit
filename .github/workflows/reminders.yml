@@ -1,0 +1,24 @@
+# Hourly trigger for daily-reminder pushes. Vercel Hobby only allows daily crons,
+# so GitHub Actions calls the endpoint instead. The handler is idempotent
+# (lastSentDate), so a late or repeated run never double-sends.
+name: Reminders
+
+on:
+  schedule:
+    - cron: "5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Call reminders endpoint
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          set -euo pipefail
+          curl --fail-with-body --silent --show-error --max-time 60 --retry 2 \
+            -H "Authorization: Bearer ${CRON_SECRET}" \
+            "${APP_URL%/}/api/cron/reminders"

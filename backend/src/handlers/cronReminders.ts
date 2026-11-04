@@ -12,7 +12,7 @@ const authorized = (req: Request) => {
 };
 
 /**
- * Run every hour (Vercel Cron sends the Authorization header from CRON_SECRET).
+ * Run every hour by .github/workflows/reminders.yml (sends Authorization: Bearer CRON_SECRET).
  * Sends today's reminder to anyone whose chosen hour it is, who has not learned yet today.
  */
 export async function GET(req: Request) {
