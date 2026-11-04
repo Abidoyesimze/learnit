@@ -1,0 +1,2237 @@
+{
+  "lang": "es",
+  "unit": 8,
+  "level": "A1",
+  "title": "Shopping and travel",
+  "blurb": "Shop, travel and get help when you need it.",
+  "speechLang": "es-ES",
+  "lessons": [
+    {
+      "id": "es-a1-u8-l1",
+      "title": "Prices, part 1",
+      "theme": "prices",
+      "exercises": [
+        {
+          "id": "es-a1u8-w1-te",
+          "type": "mc",
+          "prompt": "What does \"el precio\" mean?",
+          "speak": "el precio",
+          "options": [
+            "cheap",
+            "money",
+            "card",
+            "price"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w1"
+        },
+        {
+          "id": "es-a1u8-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"expensive\"?",
+          "options": [
+            "el dinero",
+            "caro",
+            "barato",
+            "pagar"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u8-w2"
+        },
+        {
+          "id": "es-a1-u8-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w1",
+              "target": "el precio",
+              "english": "price"
+            },
+            {
+              "wordId": "es-a1u8-w2",
+              "target": "caro",
+              "english": "expensive"
+            },
+            {
+              "wordId": "es-a1u8-w3",
+              "target": "barato",
+              "english": "cheap"
+            },
+            {
+              "wordId": "es-a1u8-w4",
+              "target": "comprar",
+              "english": "to buy"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w3-te",
+          "type": "mc",
+          "prompt": "What does \"barato\" mean?",
+          "speak": "barato",
+          "options": [
+            "to pay",
+            "card",
+            "change",
+            "cheap"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w3"
+        },
+        {
+          "id": "es-a1u8-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"to buy\"?",
+          "options": [
+            "la tarjeta",
+            "caro",
+            "comprar",
+            "pagar"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w4"
+        },
+        {
+          "id": "es-a1-u8-l1-s",
+          "type": "translate",
+          "prompt": "It is very expensive",
+          "answer": [
+            "Es",
+            "muy",
+            "caro"
+          ],
+          "bank": [
+            "caro",
+            "muy",
+            "barato",
+            "Es",
+            "poco"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el precio",
+          "english": "price"
+        },
+        {
+          "target": "caro",
+          "english": "expensive"
+        },
+        {
+          "target": "barato",
+          "english": "cheap"
+        },
+        {
+          "target": "comprar",
+          "english": "to buy"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l2",
+      "title": "Prices, part 2",
+      "theme": "prices",
+      "exercises": [
+        {
+          "id": "es-a1u8-w5-te",
+          "type": "mc",
+          "prompt": "What does \"pagar\" mean?",
+          "speak": "pagar",
+          "options": [
+            "price",
+            "change",
+            "money",
+            "to pay"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w5"
+        },
+        {
+          "id": "es-a1u8-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"money\"?",
+          "options": [
+            "la tarjeta",
+            "caro",
+            "el dinero",
+            "pagar"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w6"
+        },
+        {
+          "id": "es-a1-u8-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w5",
+              "target": "pagar",
+              "english": "to pay"
+            },
+            {
+              "wordId": "es-a1u8-w6",
+              "target": "el dinero",
+              "english": "money"
+            },
+            {
+              "wordId": "es-a1u8-w7",
+              "target": "la tarjeta",
+              "english": "card"
+            },
+            {
+              "wordId": "es-a1u8-w8",
+              "target": "el cambio",
+              "english": "change"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w7-te",
+          "type": "mc",
+          "prompt": "What does \"la tarjeta\" mean?",
+          "speak": "la tarjeta",
+          "options": [
+            "price",
+            "expensive",
+            "to pay",
+            "card"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w7"
+        },
+        {
+          "id": "es-a1u8-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"change\"?",
+          "options": [
+            "la tarjeta",
+            "el dinero",
+            "pagar",
+            "el cambio"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w8"
+        },
+        {
+          "id": "es-a1-u8-l2-s",
+          "type": "translate",
+          "prompt": "How much does it cost",
+          "answer": [
+            "Cuánto",
+            "cuesta"
+          ],
+          "bank": [
+            "caro",
+            "Cuánto",
+            "cuesta",
+            "precio"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "pagar",
+          "english": "to pay"
+        },
+        {
+          "target": "el dinero",
+          "english": "money"
+        },
+        {
+          "target": "la tarjeta",
+          "english": "card"
+        },
+        {
+          "target": "el cambio",
+          "english": "change"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l3",
+      "title": "Clothes, part 1",
+      "theme": "clothes",
+      "exercises": [
+        {
+          "id": "es-a1u8-w9-te",
+          "type": "mc",
+          "prompt": "What does \"la camisa\" mean?",
+          "speak": "la camisa",
+          "options": [
+            "dress",
+            "shirt",
+            "trousers",
+            "jacket"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u8-w9"
+        },
+        {
+          "id": "es-a1u8-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"trousers\"?",
+          "options": [
+            "el sombrero",
+            "los calcetines",
+            "los pantalones",
+            "el vestido"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w10"
+        },
+        {
+          "id": "es-a1-u8-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w9",
+              "target": "la camisa",
+              "english": "shirt"
+            },
+            {
+              "wordId": "es-a1u8-w10",
+              "target": "los pantalones",
+              "english": "trousers"
+            },
+            {
+              "wordId": "es-a1u8-w11",
+              "target": "el vestido",
+              "english": "dress"
+            },
+            {
+              "wordId": "es-a1u8-w12",
+              "target": "los zapatos",
+              "english": "shoes"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w11-te",
+          "type": "mc",
+          "prompt": "What does \"el vestido\" mean?",
+          "speak": "el vestido",
+          "options": [
+            "jacket",
+            "hat",
+            "dress",
+            "socks"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w11"
+        },
+        {
+          "id": "es-a1u8-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"shoes\"?",
+          "options": [
+            "los calcetines",
+            "el abrigo",
+            "el vestido",
+            "los zapatos"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w12"
+        },
+        {
+          "id": "es-a1-u8-l3-s",
+          "type": "translate",
+          "prompt": "I like this dress",
+          "answer": [
+            "Me",
+            "gusta",
+            "este",
+            "vestido"
+          ],
+          "bank": [
+            "este",
+            "Me",
+            "gusta",
+            "chaqueta",
+            "vestido",
+            "camisa"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la camisa",
+          "english": "shirt"
+        },
+        {
+          "target": "los pantalones",
+          "english": "trousers"
+        },
+        {
+          "target": "el vestido",
+          "english": "dress"
+        },
+        {
+          "target": "los zapatos",
+          "english": "shoes"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l4",
+      "title": "Clothes, part 2",
+      "theme": "clothes",
+      "exercises": [
+        {
+          "id": "es-a1u8-w13-te",
+          "type": "mc",
+          "prompt": "What does \"el sombrero\" mean?",
+          "speak": "el sombrero",
+          "options": [
+            "hat",
+            "shoes",
+            "shirt",
+            "socks"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w13"
+        },
+        {
+          "id": "es-a1u8-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"coat\"?",
+          "options": [
+            "el abrigo",
+            "la chaqueta",
+            "la camisa",
+            "el vestido"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w14"
+        },
+        {
+          "id": "es-a1-u8-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w13",
+              "target": "el sombrero",
+              "english": "hat"
+            },
+            {
+              "wordId": "es-a1u8-w14",
+              "target": "el abrigo",
+              "english": "coat"
+            },
+            {
+              "wordId": "es-a1u8-w15",
+              "target": "la chaqueta",
+              "english": "jacket"
+            },
+            {
+              "wordId": "es-a1u8-w16",
+              "target": "los calcetines",
+              "english": "socks"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w15-te",
+          "type": "mc",
+          "prompt": "What does \"la chaqueta\" mean?",
+          "speak": "la chaqueta",
+          "options": [
+            "coat",
+            "socks",
+            "jacket",
+            "dress"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w15"
+        },
+        {
+          "id": "es-a1u8-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"socks\"?",
+          "options": [
+            "la camisa",
+            "los calcetines",
+            "la chaqueta",
+            "los pantalones"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u8-w16"
+        },
+        {
+          "id": "es-a1-u8-l4-s",
+          "type": "translate",
+          "prompt": "The coat is black",
+          "answer": [
+            "El",
+            "abrigo",
+            "es",
+            "negro"
+          ],
+          "bank": [
+            "sombrero",
+            "El",
+            "abrigo",
+            "negro",
+            "rojo",
+            "es"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el sombrero",
+          "english": "hat"
+        },
+        {
+          "target": "el abrigo",
+          "english": "coat"
+        },
+        {
+          "target": "la chaqueta",
+          "english": "jacket"
+        },
+        {
+          "target": "los calcetines",
+          "english": "socks"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l5",
+      "title": "Hotel and travel, part 1",
+      "theme": "hotel and travel",
+      "exercises": [
+        {
+          "id": "es-a1u8-w17-te",
+          "type": "mc",
+          "prompt": "What does \"el hotel\" mean?",
+          "speak": "el hotel",
+          "options": [
+            "passport",
+            "ticket",
+            "hotel",
+            "to leave"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w17"
+        },
+        {
+          "id": "es-a1u8-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"booking\"?",
+          "options": [
+            "la reserva",
+            "llegar",
+            "el hotel",
+            "la maleta"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w18"
+        },
+        {
+          "id": "es-a1-u8-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w17",
+              "target": "el hotel",
+              "english": "hotel"
+            },
+            {
+              "wordId": "es-a1u8-w18",
+              "target": "la reserva",
+              "english": "booking"
+            },
+            {
+              "wordId": "es-a1u8-w19",
+              "target": "el pasaporte",
+              "english": "passport"
+            },
+            {
+              "wordId": "es-a1u8-w20",
+              "target": "el billete",
+              "english": "ticket"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w19-te",
+          "type": "mc",
+          "prompt": "What does \"el pasaporte\" mean?",
+          "speak": "el pasaporte",
+          "options": [
+            "passport",
+            "hotel",
+            "suitcase",
+            "ticket"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w19"
+        },
+        {
+          "id": "es-a1u8-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"ticket\"?",
+          "options": [
+            "el pasaporte",
+            "el hotel",
+            "el billete",
+            "la maleta"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w20"
+        },
+        {
+          "id": "es-a1-u8-l5-s",
+          "type": "translate",
+          "prompt": "Here is my passport",
+          "answer": [
+            "Aquí",
+            "está",
+            "mi",
+            "pasaporte"
+          ],
+          "bank": [
+            "pasaporte",
+            "mi",
+            "billete",
+            "hotel",
+            "está",
+            "Aquí"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el hotel",
+          "english": "hotel"
+        },
+        {
+          "target": "la reserva",
+          "english": "booking"
+        },
+        {
+          "target": "el pasaporte",
+          "english": "passport"
+        },
+        {
+          "target": "el billete",
+          "english": "ticket"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l6",
+      "title": "Hotel and travel, part 2",
+      "theme": "hotel and travel",
+      "exercises": [
+        {
+          "id": "es-a1u8-w21-te",
+          "type": "mc",
+          "prompt": "What does \"la maleta\" mean?",
+          "speak": "la maleta",
+          "options": [
+            "to leave",
+            "to arrive",
+            "suitcase",
+            "passport"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w21"
+        },
+        {
+          "id": "es-a1u8-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"trip\"?",
+          "options": [
+            "el pasaporte",
+            "el hotel",
+            "la reserva",
+            "el viaje"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w22"
+        },
+        {
+          "id": "es-a1-u8-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w21",
+              "target": "la maleta",
+              "english": "suitcase"
+            },
+            {
+              "wordId": "es-a1u8-w22",
+              "target": "el viaje",
+              "english": "trip"
+            },
+            {
+              "wordId": "es-a1u8-w23",
+              "target": "llegar",
+              "english": "to arrive"
+            },
+            {
+              "wordId": "es-a1u8-w24",
+              "target": "salir",
+              "english": "to leave"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w23-te",
+          "type": "mc",
+          "prompt": "What does \"llegar\" mean?",
+          "speak": "llegar",
+          "options": [
+            "to arrive",
+            "ticket",
+            "suitcase",
+            "to leave"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w23"
+        },
+        {
+          "id": "es-a1u8-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"to leave\"?",
+          "options": [
+            "llegar",
+            "salir",
+            "el billete",
+            "el hotel"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u8-w24"
+        },
+        {
+          "id": "es-a1-u8-l6-s",
+          "type": "translate",
+          "prompt": "The train leaves tomorrow",
+          "answer": [
+            "El",
+            "tren",
+            "sale",
+            "mañana"
+          ],
+          "bank": [
+            "tren",
+            "viaje",
+            "llega",
+            "sale",
+            "mañana",
+            "El"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la maleta",
+          "english": "suitcase"
+        },
+        {
+          "target": "el viaje",
+          "english": "trip"
+        },
+        {
+          "target": "llegar",
+          "english": "to arrive"
+        },
+        {
+          "target": "salir",
+          "english": "to leave"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l7",
+      "title": "Getting help, part 1",
+      "theme": "getting help",
+      "exercises": [
+        {
+          "id": "es-a1u8-w25-te",
+          "type": "mc",
+          "prompt": "What does \"socorro\" mean?",
+          "speak": "socorro",
+          "options": [
+            "I need",
+            "help me",
+            "do you speak English",
+            "help"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w25"
+        },
+        {
+          "id": "es-a1u8-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"help me\"?",
+          "options": [
+            "socorro",
+            "habla inglés",
+            "ayúdeme",
+            "necesito"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w26"
+        },
+        {
+          "id": "es-a1-u8-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w25",
+              "target": "socorro",
+              "english": "help"
+            },
+            {
+              "wordId": "es-a1u8-w26",
+              "target": "ayúdeme",
+              "english": "help me"
+            },
+            {
+              "wordId": "es-a1u8-w27",
+              "target": "estoy perdido",
+              "english": "I am lost"
+            },
+            {
+              "wordId": "es-a1u8-w28",
+              "target": "el médico",
+              "english": "doctor"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w27-te",
+          "type": "mc",
+          "prompt": "What does \"estoy perdido\" mean?",
+          "speak": "estoy perdido",
+          "options": [
+            "I need",
+            "help me",
+            "help",
+            "I am lost"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w27"
+        },
+        {
+          "id": "es-a1u8-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"doctor\"?",
+          "options": [
+            "socorro",
+            "la emergencia",
+            "el médico",
+            "ayúdeme"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w28"
+        },
+        {
+          "id": "es-a1-u8-l7-s",
+          "type": "translate",
+          "prompt": "Help me, please",
+          "answer": [
+            "Ayúdeme",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "por",
+            "favor",
+            "policía",
+            "Ayúdeme",
+            "socorro"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "socorro",
+          "english": "help"
+        },
+        {
+          "target": "ayúdeme",
+          "english": "help me"
+        },
+        {
+          "target": "estoy perdido",
+          "english": "I am lost"
+        },
+        {
+          "target": "el médico",
+          "english": "doctor"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l8",
+      "title": "Getting help, part 2",
+      "theme": "getting help",
+      "exercises": [
+        {
+          "id": "es-a1u8-w29-te",
+          "type": "mc",
+          "prompt": "What does \"la policía\" mean?",
+          "speak": "la policía",
+          "options": [
+            "help me",
+            "police",
+            "emergency",
+            "help"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u8-w29"
+        },
+        {
+          "id": "es-a1u8-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"emergency\"?",
+          "options": [
+            "estoy perdido",
+            "necesito",
+            "la emergencia",
+            "habla inglés"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w30"
+        },
+        {
+          "id": "es-a1-u8-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w29",
+              "target": "la policía",
+              "english": "police"
+            },
+            {
+              "wordId": "es-a1u8-w30",
+              "target": "la emergencia",
+              "english": "emergency"
+            },
+            {
+              "wordId": "es-a1u8-w31",
+              "target": "necesito",
+              "english": "I need"
+            },
+            {
+              "wordId": "es-a1u8-w32",
+              "target": "habla inglés",
+              "english": "do you speak English"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w31-te",
+          "type": "mc",
+          "prompt": "What does \"necesito\" mean?",
+          "speak": "necesito",
+          "options": [
+            "help me",
+            "doctor",
+            "I am lost",
+            "I need"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w31"
+        },
+        {
+          "id": "es-a1u8-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"do you speak English\"?",
+          "options": [
+            "ayúdeme",
+            "socorro",
+            "habla inglés",
+            "necesito"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w32"
+        },
+        {
+          "id": "es-a1-u8-l8-s",
+          "type": "translate",
+          "prompt": "I am lost",
+          "answer": [
+            "Estoy",
+            "perdido"
+          ],
+          "bank": [
+            "perdido",
+            "emergencia",
+            "necesito",
+            "Estoy"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la policía",
+          "english": "police"
+        },
+        {
+          "target": "la emergencia",
+          "english": "emergency"
+        },
+        {
+          "target": "necesito",
+          "english": "I need"
+        },
+        {
+          "target": "habla inglés",
+          "english": "do you speak English"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l9",
+      "title": "Getting by, part 1",
+      "theme": "getting by",
+      "exercises": [
+        {
+          "id": "es-a1u8-w33-te",
+          "type": "mc",
+          "prompt": "What does \"hable despacio\" mean?",
+          "speak": "hable despacio",
+          "options": [
+            "what is this",
+            "speak slowly",
+            "that is all",
+            "please repeat"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u8-w33"
+        },
+        {
+          "id": "es-a1u8-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"please repeat\"?",
+          "options": [
+            "repita por favor",
+            "buena suerte",
+            "hable despacio",
+            "puede ayudarme"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w34"
+        },
+        {
+          "id": "es-a1-u8-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w33",
+              "target": "hable despacio",
+              "english": "speak slowly"
+            },
+            {
+              "wordId": "es-a1u8-w34",
+              "target": "repita por favor",
+              "english": "please repeat"
+            },
+            {
+              "wordId": "es-a1u8-w35",
+              "target": "qué es esto",
+              "english": "what is this"
+            },
+            {
+              "wordId": "es-a1u8-w36",
+              "target": "cómo se dice",
+              "english": "how do you say"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w35-te",
+          "type": "mc",
+          "prompt": "What does \"qué es esto\" mean?",
+          "speak": "qué es esto",
+          "options": [
+            "how do you say",
+            "I am looking for",
+            "what is this",
+            "can you help me"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w35"
+        },
+        {
+          "id": "es-a1u8-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"how do you say\"?",
+          "options": [
+            "repita por favor",
+            "busco",
+            "qué es esto",
+            "cómo se dice"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w36"
+        },
+        {
+          "id": "es-a1-u8-l9-s",
+          "type": "translate",
+          "prompt": "Speak slowly, please",
+          "answer": [
+            "Hable",
+            "despacio",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "busco",
+            "Hable",
+            "despacio",
+            "repita",
+            "por",
+            "favor"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "hable despacio",
+          "english": "speak slowly"
+        },
+        {
+          "target": "repita por favor",
+          "english": "please repeat"
+        },
+        {
+          "target": "qué es esto",
+          "english": "what is this"
+        },
+        {
+          "target": "cómo se dice",
+          "english": "how do you say"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u8-l10",
+      "title": "Getting by, part 2",
+      "theme": "getting by",
+      "exercises": [
+        {
+          "id": "es-a1u8-w37-te",
+          "type": "mc",
+          "prompt": "What does \"busco\" mean?",
+          "speak": "busco",
+          "options": [
+            "how do you say",
+            "that is all",
+            "please repeat",
+            "I am looking for"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u8-w37"
+        },
+        {
+          "id": "es-a1u8-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"that is all\"?",
+          "options": [
+            "eso es todo",
+            "repita por favor",
+            "hable despacio",
+            "buena suerte"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w38"
+        },
+        {
+          "id": "es-a1-u8-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u8-w37",
+              "target": "busco",
+              "english": "I am looking for"
+            },
+            {
+              "wordId": "es-a1u8-w38",
+              "target": "eso es todo",
+              "english": "that is all"
+            },
+            {
+              "wordId": "es-a1u8-w39",
+              "target": "buena suerte",
+              "english": "good luck"
+            },
+            {
+              "wordId": "es-a1u8-w40",
+              "target": "puede ayudarme",
+              "english": "can you help me"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u8-w39-te",
+          "type": "mc",
+          "prompt": "What does \"buena suerte\" mean?",
+          "speak": "buena suerte",
+          "options": [
+            "can you help me",
+            "speak slowly",
+            "good luck",
+            "how do you say"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u8-w39"
+        },
+        {
+          "id": "es-a1u8-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"can you help me\"?",
+          "options": [
+            "puede ayudarme",
+            "eso es todo",
+            "busco",
+            "cómo se dice"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u8-w40"
+        },
+        {
+          "id": "es-a1-u8-l10-s",
+          "type": "translate",
+          "prompt": "I am looking for the station",
+          "answer": [
+            "Busco",
+            "la",
+            "estación"
+          ],
+          "bank": [
+            "Busco",
+            "suerte",
+            "la",
+            "estación",
+            "todo"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "busco",
+          "english": "I am looking for"
+        },
+        {
+          "target": "eso es todo",
+          "english": "that is all"
+        },
+        {
+          "target": "buena suerte",
+          "english": "good luck"
+        },
+        {
+          "target": "puede ayudarme",
+          "english": "can you help me"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "es-a1-u8-cp",
+    "title": "Unit 8 checkpoint",
+    "pool": [
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w1",
+        "type": "mc",
+        "prompt": "What does \"el precio\" mean?",
+        "speak": "el precio",
+        "options": [
+          "jacket",
+          "to pay",
+          "ticket",
+          "price"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u8-w1"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w2",
+        "type": "mc",
+        "prompt": "How do you say \"expensive\"?",
+        "options": [
+          "eso es todo",
+          "caro",
+          "el médico",
+          "el viaje"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w2"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w3",
+        "type": "mc",
+        "prompt": "What does \"barato\" mean?",
+        "speak": "barato",
+        "options": [
+          "doctor",
+          "cheap",
+          "police",
+          "can you help me"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w3"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w4",
+        "type": "mc",
+        "prompt": "How do you say \"to buy\"?",
+        "options": [
+          "los pantalones",
+          "comprar",
+          "la chaqueta",
+          "estoy perdido"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w4"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w5",
+        "type": "mc",
+        "prompt": "What does \"pagar\" mean?",
+        "speak": "pagar",
+        "options": [
+          "to arrive",
+          "to pay",
+          "card",
+          "change"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w5"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w6",
+        "type": "mc",
+        "prompt": "How do you say \"money\"?",
+        "options": [
+          "la chaqueta",
+          "el dinero",
+          "pagar",
+          "la policía"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w6"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w7",
+        "type": "mc",
+        "prompt": "What does \"la tarjeta\" mean?",
+        "speak": "la tarjeta",
+        "options": [
+          "coat",
+          "money",
+          "card",
+          "dress"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w7"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w8",
+        "type": "mc",
+        "prompt": "How do you say \"change\"?",
+        "options": [
+          "caro",
+          "el cambio",
+          "salir",
+          "la maleta"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w8"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w9",
+        "type": "mc",
+        "prompt": "What does \"la camisa\" mean?",
+        "speak": "la camisa",
+        "options": [
+          "doctor",
+          "I am lost",
+          "shirt",
+          "expensive"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w9"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w10",
+        "type": "mc",
+        "prompt": "How do you say \"trousers\"?",
+        "options": [
+          "los pantalones",
+          "el billete",
+          "el precio",
+          "comprar"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w10"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w11",
+        "type": "mc",
+        "prompt": "What does \"el vestido\" mean?",
+        "speak": "el vestido",
+        "options": [
+          "good luck",
+          "I am lost",
+          "dress",
+          "booking"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w11"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w12",
+        "type": "mc",
+        "prompt": "How do you say \"shoes\"?",
+        "options": [
+          "el precio",
+          "los zapatos",
+          "la maleta",
+          "salir"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w12"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w13",
+        "type": "mc",
+        "prompt": "What does \"el sombrero\" mean?",
+        "speak": "el sombrero",
+        "options": [
+          "socks",
+          "hat",
+          "I am lost",
+          "doctor"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w13"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w14",
+        "type": "mc",
+        "prompt": "How do you say \"coat\"?",
+        "options": [
+          "el abrigo",
+          "el vestido",
+          "barato",
+          "el pasaporte"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w14"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w15",
+        "type": "mc",
+        "prompt": "What does \"la chaqueta\" mean?",
+        "speak": "la chaqueta",
+        "options": [
+          "booking",
+          "emergency",
+          "jacket",
+          "hat"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w15"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w16",
+        "type": "mc",
+        "prompt": "How do you say \"socks\"?",
+        "options": [
+          "los calcetines",
+          "la policía",
+          "necesito",
+          "la maleta"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w16"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w17",
+        "type": "mc",
+        "prompt": "What does \"el hotel\" mean?",
+        "speak": "el hotel",
+        "options": [
+          "I need",
+          "hotel",
+          "that is all",
+          "suitcase"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w17"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w18",
+        "type": "mc",
+        "prompt": "How do you say \"booking\"?",
+        "options": [
+          "la reserva",
+          "el hotel",
+          "el viaje",
+          "barato"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w18"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w19",
+        "type": "mc",
+        "prompt": "What does \"el pasaporte\" mean?",
+        "speak": "el pasaporte",
+        "options": [
+          "police",
+          "to leave",
+          "passport",
+          "change"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w19"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w20",
+        "type": "mc",
+        "prompt": "How do you say \"ticket\"?",
+        "options": [
+          "socorro",
+          "los zapatos",
+          "la camisa",
+          "el billete"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u8-w20"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w21",
+        "type": "mc",
+        "prompt": "What does \"la maleta\" mean?",
+        "speak": "la maleta",
+        "options": [
+          "suitcase",
+          "to arrive",
+          "socks",
+          "I need"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w21"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w22",
+        "type": "mc",
+        "prompt": "How do you say \"trip\"?",
+        "options": [
+          "el viaje",
+          "la policía",
+          "cómo se dice",
+          "el cambio"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w22"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w23",
+        "type": "mc",
+        "prompt": "What does \"llegar\" mean?",
+        "speak": "llegar",
+        "options": [
+          "I need",
+          "help",
+          "that is all",
+          "to arrive"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u8-w23"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w24",
+        "type": "mc",
+        "prompt": "How do you say \"to leave\"?",
+        "options": [
+          "repita por favor",
+          "la maleta",
+          "salir",
+          "puede ayudarme"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w24"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w25",
+        "type": "mc",
+        "prompt": "What does \"socorro\" mean?",
+        "speak": "socorro",
+        "options": [
+          "that is all",
+          "help",
+          "price",
+          "speak slowly"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w25"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w26",
+        "type": "mc",
+        "prompt": "How do you say \"help me\"?",
+        "options": [
+          "puede ayudarme",
+          "la maleta",
+          "ayúdeme",
+          "el pasaporte"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w26"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w27",
+        "type": "mc",
+        "prompt": "What does \"estoy perdido\" mean?",
+        "speak": "estoy perdido",
+        "options": [
+          "trip",
+          "ticket",
+          "I am lost",
+          "shirt"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w27"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w28",
+        "type": "mc",
+        "prompt": "How do you say \"doctor\"?",
+        "options": [
+          "necesito",
+          "socorro",
+          "busco",
+          "el médico"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u8-w28"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w29",
+        "type": "mc",
+        "prompt": "What does \"la policía\" mean?",
+        "speak": "la policía",
+        "options": [
+          "police",
+          "shirt",
+          "to buy",
+          "what is this"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w29"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w30",
+        "type": "mc",
+        "prompt": "How do you say \"emergency\"?",
+        "options": [
+          "el vestido",
+          "buena suerte",
+          "la policía",
+          "la emergencia"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u8-w30"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w31",
+        "type": "mc",
+        "prompt": "What does \"necesito\" mean?",
+        "speak": "necesito",
+        "options": [
+          "I need",
+          "that is all",
+          "police",
+          "to arrive"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w31"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w32",
+        "type": "mc",
+        "prompt": "How do you say \"do you speak English\"?",
+        "options": [
+          "el cambio",
+          "la chaqueta",
+          "habla inglés",
+          "hable despacio"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w32"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w33",
+        "type": "mc",
+        "prompt": "What does \"hable despacio\" mean?",
+        "speak": "hable despacio",
+        "options": [
+          "speak slowly",
+          "expensive",
+          "dress",
+          "doctor"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w33"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w34",
+        "type": "mc",
+        "prompt": "How do you say \"please repeat\"?",
+        "options": [
+          "el sombrero",
+          "repita por favor",
+          "buena suerte",
+          "la maleta"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u8-w34"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w35",
+        "type": "mc",
+        "prompt": "What does \"qué es esto\" mean?",
+        "speak": "qué es esto",
+        "options": [
+          "what is this",
+          "police",
+          "trip",
+          "doctor"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w35"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w36",
+        "type": "mc",
+        "prompt": "How do you say \"how do you say\"?",
+        "options": [
+          "habla inglés",
+          "necesito",
+          "cómo se dice",
+          "la camisa"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w36"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w37",
+        "type": "mc",
+        "prompt": "What does \"busco\" mean?",
+        "speak": "busco",
+        "options": [
+          "I am looking for",
+          "help me",
+          "how do you say",
+          "suitcase"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u8-w37"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w38",
+        "type": "mc",
+        "prompt": "How do you say \"that is all\"?",
+        "options": [
+          "el viaje",
+          "caro",
+          "el sombrero",
+          "eso es todo"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u8-w38"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w39",
+        "type": "mc",
+        "prompt": "What does \"buena suerte\" mean?",
+        "speak": "buena suerte",
+        "options": [
+          "to pay",
+          "doctor",
+          "shirt",
+          "good luck"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u8-w39"
+      },
+      {
+        "id": "es-a1-u8-cp-es-a1u8-w40",
+        "type": "mc",
+        "prompt": "How do you say \"can you help me\"?",
+        "options": [
+          "necesito",
+          "los zapatos",
+          "puede ayudarme",
+          "ayúdeme"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u8-w40"
+      },
+      {
+        "id": "es-a1-u8-cp-l1-s1",
+        "type": "translate",
+        "prompt": "How much does it cost",
+        "answer": [
+          "Cuánto",
+          "cuesta"
+        ],
+        "bank": [
+          "cuesta",
+          "precio",
+          "Cuánto",
+          "caro"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l1-s2",
+        "type": "translate",
+        "prompt": "It is very expensive",
+        "answer": [
+          "Es",
+          "muy",
+          "caro"
+        ],
+        "bank": [
+          "barato",
+          "caro",
+          "muy",
+          "poco",
+          "Es"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l1-s3",
+        "type": "translate",
+        "prompt": "I want to pay",
+        "answer": [
+          "Quiero",
+          "pagar"
+        ],
+        "bank": [
+          "Quiero",
+          "dinero",
+          "pagar",
+          "comprar"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I like this dress",
+        "answer": [
+          "Me",
+          "gusta",
+          "este",
+          "vestido"
+        ],
+        "bank": [
+          "Me",
+          "este",
+          "gusta",
+          "vestido",
+          "chaqueta",
+          "camisa"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l2-s2",
+        "type": "translate",
+        "prompt": "The coat is black",
+        "answer": [
+          "El",
+          "abrigo",
+          "es",
+          "negro"
+        ],
+        "bank": [
+          "negro",
+          "es",
+          "abrigo",
+          "sombrero",
+          "El",
+          "rojo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l2-s3",
+        "type": "translate",
+        "prompt": "I would like some shoes",
+        "answer": [
+          "Quisiera",
+          "unos",
+          "zapatos"
+        ],
+        "bank": [
+          "calcetines",
+          "zapatos",
+          "Quisiera",
+          "pantalones",
+          "unos"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l3-s1",
+        "type": "translate",
+        "prompt": "I have a booking",
+        "answer": [
+          "Tengo",
+          "una",
+          "reserva"
+        ],
+        "bank": [
+          "reserva",
+          "maleta",
+          "una",
+          "billete",
+          "Tengo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l3-s2",
+        "type": "translate",
+        "prompt": "Here is my passport",
+        "answer": [
+          "Aquí",
+          "está",
+          "mi",
+          "pasaporte"
+        ],
+        "bank": [
+          "hotel",
+          "mi",
+          "billete",
+          "pasaporte",
+          "está",
+          "Aquí"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l3-s3",
+        "type": "translate",
+        "prompt": "The train leaves tomorrow",
+        "answer": [
+          "El",
+          "tren",
+          "sale",
+          "mañana"
+        ],
+        "bank": [
+          "llega",
+          "sale",
+          "viaje",
+          "mañana",
+          "El",
+          "tren"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l4-s1",
+        "type": "translate",
+        "prompt": "Help me, please",
+        "answer": [
+          "Ayúdeme",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "Ayúdeme",
+          "socorro",
+          "policía",
+          "favor",
+          "por"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l4-s2",
+        "type": "translate",
+        "prompt": "I am lost",
+        "answer": [
+          "Estoy",
+          "perdido"
+        ],
+        "bank": [
+          "perdido",
+          "necesito",
+          "emergencia",
+          "Estoy"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l4-s3",
+        "type": "translate",
+        "prompt": "I need a doctor",
+        "answer": [
+          "Necesito",
+          "un",
+          "médico"
+        ],
+        "bank": [
+          "policía",
+          "Necesito",
+          "perdido",
+          "un",
+          "médico"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l5-s1",
+        "type": "translate",
+        "prompt": "I am looking for the station",
+        "answer": [
+          "Busco",
+          "la",
+          "estación"
+        ],
+        "bank": [
+          "la",
+          "estación",
+          "todo",
+          "Busco",
+          "suerte"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l5-s2",
+        "type": "translate",
+        "prompt": "Speak slowly, please",
+        "answer": [
+          "Hable",
+          "despacio",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "por",
+          "busco",
+          "favor",
+          "Hable",
+          "repita",
+          "despacio"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-l5-s3",
+        "type": "translate",
+        "prompt": "What is this",
+        "answer": [
+          "Qué",
+          "es",
+          "esto"
+        ],
+        "bank": [
+          "cómo",
+          "todo",
+          "Qué",
+          "esto",
+          "es"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u8-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u8-w7",
+            "target": "la tarjeta",
+            "english": "card"
+          },
+          {
+            "wordId": "es-a1u8-w4",
+            "target": "comprar",
+            "english": "to buy"
+          },
+          {
+            "wordId": "es-a1u8-w1",
+            "target": "el precio",
+            "english": "price"
+          },
+          {
+            "wordId": "es-a1u8-w2",
+            "target": "caro",
+            "english": "expensive"
+          },
+          {
+            "wordId": "es-a1u8-w3",
+            "target": "barato",
+            "english": "cheap"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u8-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u8-w15",
+            "target": "la chaqueta",
+            "english": "jacket"
+          },
+          {
+            "wordId": "es-a1u8-w10",
+            "target": "los pantalones",
+            "english": "trousers"
+          },
+          {
+            "wordId": "es-a1u8-w9",
+            "target": "la camisa",
+            "english": "shirt"
+          },
+          {
+            "wordId": "es-a1u8-w11",
+            "target": "el vestido",
+            "english": "dress"
+          },
+          {
+            "wordId": "es-a1u8-w12",
+            "target": "los zapatos",
+            "english": "shoes"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u8-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u8-w17",
+            "target": "el hotel",
+            "english": "hotel"
+          },
+          {
+            "wordId": "es-a1u8-w20",
+            "target": "el billete",
+            "english": "ticket"
+          },
+          {
+            "wordId": "es-a1u8-w18",
+            "target": "la reserva",
+            "english": "booking"
+          },
+          {
+            "wordId": "es-a1u8-w19",
+            "target": "el pasaporte",
+            "english": "passport"
+          },
+          {
+            "wordId": "es-a1u8-w24",
+            "target": "salir",
+            "english": "to leave"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u8-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u8-w28",
+            "target": "el médico",
+            "english": "doctor"
+          },
+          {
+            "wordId": "es-a1u8-w27",
+            "target": "estoy perdido",
+            "english": "I am lost"
+          },
+          {
+            "wordId": "es-a1u8-w30",
+            "target": "la emergencia",
+            "english": "emergency"
+          },
+          {
+            "wordId": "es-a1u8-w31",
+            "target": "necesito",
+            "english": "I need"
+          },
+          {
+            "wordId": "es-a1u8-w32",
+            "target": "habla inglés",
+            "english": "do you speak English"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u8-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u8-w39",
+            "target": "buena suerte",
+            "english": "good luck"
+          },
+          {
+            "wordId": "es-a1u8-w34",
+            "target": "repita por favor",
+            "english": "please repeat"
+          },
+          {
+            "wordId": "es-a1u8-w33",
+            "target": "hable despacio",
+            "english": "speak slowly"
+          },
+          {
+            "wordId": "es-a1u8-w37",
+            "target": "busco",
+            "english": "I am looking for"
+          },
+          {
+            "wordId": "es-a1u8-w36",
+            "target": "cómo se dice",
+            "english": "how do you say"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

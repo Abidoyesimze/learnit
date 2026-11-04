@@ -1,0 +1,2251 @@
+{
+  "lang": "es",
+  "unit": 7,
+  "level": "A1",
+  "title": "Describing things",
+  "blurb": "Describe people, feelings and the weather.",
+  "speechLang": "es-ES",
+  "lessons": [
+    {
+      "id": "es-a1-u7-l1",
+      "title": "Opposites, part 1",
+      "theme": "opposites",
+      "exercises": [
+        {
+          "id": "es-a1u7-w1-te",
+          "type": "mc",
+          "prompt": "What does \"grande\" mean?",
+          "speak": "grande",
+          "options": [
+            "bad",
+            "big",
+            "old",
+            "good"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w1"
+        },
+        {
+          "id": "es-a1u7-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"small\"?",
+          "options": [
+            "bueno",
+            "frío",
+            "caliente",
+            "pequeño"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u7-w2"
+        },
+        {
+          "id": "es-a1-u7-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w1",
+              "target": "grande",
+              "english": "big"
+            },
+            {
+              "wordId": "es-a1u7-w2",
+              "target": "pequeño",
+              "english": "small"
+            },
+            {
+              "wordId": "es-a1u7-w3",
+              "target": "bueno",
+              "english": "good"
+            },
+            {
+              "wordId": "es-a1u7-w4",
+              "target": "malo",
+              "english": "bad"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w3-te",
+          "type": "mc",
+          "prompt": "What does \"bueno\" mean?",
+          "speak": "bueno",
+          "options": [
+            "bad",
+            "good",
+            "hot",
+            "small"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w3"
+        },
+        {
+          "id": "es-a1u7-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"bad\"?",
+          "options": [
+            "nuevo",
+            "pequeño",
+            "malo",
+            "frío"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w4"
+        },
+        {
+          "id": "es-a1-u7-l1-s",
+          "type": "translate",
+          "prompt": "The house is big",
+          "answer": [
+            "La",
+            "casa",
+            "es",
+            "grande"
+          ],
+          "bank": [
+            "nueva",
+            "La",
+            "casa",
+            "grande",
+            "pequeña",
+            "es"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "grande",
+          "english": "big"
+        },
+        {
+          "target": "pequeño",
+          "english": "small"
+        },
+        {
+          "target": "bueno",
+          "english": "good"
+        },
+        {
+          "target": "malo",
+          "english": "bad"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l2",
+      "title": "Opposites, part 2",
+      "theme": "opposites",
+      "exercises": [
+        {
+          "id": "es-a1u7-w5-te",
+          "type": "mc",
+          "prompt": "What does \"nuevo\" mean?",
+          "speak": "nuevo",
+          "options": [
+            "new",
+            "cold",
+            "hot",
+            "bad"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w5"
+        },
+        {
+          "id": "es-a1u7-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"old\"?",
+          "options": [
+            "bueno",
+            "caliente",
+            "viejo",
+            "pequeño"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w6"
+        },
+        {
+          "id": "es-a1-u7-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w5",
+              "target": "nuevo",
+              "english": "new"
+            },
+            {
+              "wordId": "es-a1u7-w6",
+              "target": "viejo",
+              "english": "old"
+            },
+            {
+              "wordId": "es-a1u7-w7",
+              "target": "caliente",
+              "english": "hot"
+            },
+            {
+              "wordId": "es-a1u7-w8",
+              "target": "frío",
+              "english": "cold"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w7-te",
+          "type": "mc",
+          "prompt": "What does \"caliente\" mean?",
+          "speak": "caliente",
+          "options": [
+            "good",
+            "bad",
+            "hot",
+            "small"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w7"
+        },
+        {
+          "id": "es-a1u7-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"cold\"?",
+          "options": [
+            "pequeño",
+            "frío",
+            "malo",
+            "grande"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w8"
+        },
+        {
+          "id": "es-a1-u7-l2-s",
+          "type": "translate",
+          "prompt": "The coffee is hot",
+          "answer": [
+            "El",
+            "café",
+            "está",
+            "caliente"
+          ],
+          "bank": [
+            "frío",
+            "bueno",
+            "café",
+            "caliente",
+            "El",
+            "está"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "nuevo",
+          "english": "new"
+        },
+        {
+          "target": "viejo",
+          "english": "old"
+        },
+        {
+          "target": "caliente",
+          "english": "hot"
+        },
+        {
+          "target": "frío",
+          "english": "cold"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l3",
+      "title": "Feelings, part 1",
+      "theme": "feelings",
+      "exercises": [
+        {
+          "id": "es-a1u7-w9-te",
+          "type": "mc",
+          "prompt": "What does \"contento\" mean?",
+          "speak": "contento",
+          "options": [
+            "happy",
+            "sad",
+            "sick",
+            "free"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w9"
+        },
+        {
+          "id": "es-a1u7-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"sad\"?",
+          "options": [
+            "triste",
+            "listo",
+            "enfermo",
+            "enojado"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w10"
+        },
+        {
+          "id": "es-a1-u7-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w9",
+              "target": "contento",
+              "english": "happy"
+            },
+            {
+              "wordId": "es-a1u7-w10",
+              "target": "triste",
+              "english": "sad"
+            },
+            {
+              "wordId": "es-a1u7-w11",
+              "target": "cansado",
+              "english": "tired"
+            },
+            {
+              "wordId": "es-a1u7-w12",
+              "target": "enojado",
+              "english": "angry"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w11-te",
+          "type": "mc",
+          "prompt": "What does \"cansado\" mean?",
+          "speak": "cansado",
+          "options": [
+            "angry",
+            "free",
+            "tired",
+            "sick"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w11"
+        },
+        {
+          "id": "es-a1u7-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"angry\"?",
+          "options": [
+            "enojado",
+            "libre",
+            "ocupado",
+            "contento"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w12"
+        },
+        {
+          "id": "es-a1-u7-l3-s",
+          "type": "translate",
+          "prompt": "I am happy",
+          "answer": [
+            "Estoy",
+            "contento"
+          ],
+          "bank": [
+            "triste",
+            "Estoy",
+            "cansado",
+            "contento"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "contento",
+          "english": "happy"
+        },
+        {
+          "target": "triste",
+          "english": "sad"
+        },
+        {
+          "target": "cansado",
+          "english": "tired"
+        },
+        {
+          "target": "enojado",
+          "english": "angry"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l4",
+      "title": "Feelings, part 2",
+      "theme": "feelings",
+      "exercises": [
+        {
+          "id": "es-a1u7-w13-te",
+          "type": "mc",
+          "prompt": "What does \"enfermo\" mean?",
+          "speak": "enfermo",
+          "options": [
+            "busy",
+            "ready",
+            "sick",
+            "free"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w13"
+        },
+        {
+          "id": "es-a1u7-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"ready\"?",
+          "options": [
+            "listo",
+            "enfermo",
+            "enojado",
+            "libre"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w14"
+        },
+        {
+          "id": "es-a1-u7-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w13",
+              "target": "enfermo",
+              "english": "sick"
+            },
+            {
+              "wordId": "es-a1u7-w14",
+              "target": "listo",
+              "english": "ready"
+            },
+            {
+              "wordId": "es-a1u7-w15",
+              "target": "ocupado",
+              "english": "busy"
+            },
+            {
+              "wordId": "es-a1u7-w16",
+              "target": "libre",
+              "english": "free"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w15-te",
+          "type": "mc",
+          "prompt": "What does \"ocupado\" mean?",
+          "speak": "ocupado",
+          "options": [
+            "ready",
+            "busy",
+            "tired",
+            "happy"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w15"
+        },
+        {
+          "id": "es-a1u7-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"free\"?",
+          "options": [
+            "listo",
+            "libre",
+            "triste",
+            "cansado"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w16"
+        },
+        {
+          "id": "es-a1-u7-l4-s",
+          "type": "translate",
+          "prompt": "He is tired",
+          "answer": [
+            "Él",
+            "está",
+            "cansado"
+          ],
+          "bank": [
+            "listo",
+            "enfermo",
+            "está",
+            "Él",
+            "cansado"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "enfermo",
+          "english": "sick"
+        },
+        {
+          "target": "listo",
+          "english": "ready"
+        },
+        {
+          "target": "ocupado",
+          "english": "busy"
+        },
+        {
+          "target": "libre",
+          "english": "free"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l5",
+      "title": "The body, part 1",
+      "theme": "the body",
+      "exercises": [
+        {
+          "id": "es-a1u7-w17-te",
+          "type": "mc",
+          "prompt": "What does \"la cabeza\" mean?",
+          "speak": "la cabeza",
+          "options": [
+            "foot",
+            "mouth",
+            "eyes",
+            "head"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u7-w17"
+        },
+        {
+          "id": "es-a1u7-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"hand\"?",
+          "options": [
+            "la cabeza",
+            "el brazo",
+            "la mano",
+            "la espalda"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w18"
+        },
+        {
+          "id": "es-a1-u7-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w17",
+              "target": "la cabeza",
+              "english": "head"
+            },
+            {
+              "wordId": "es-a1u7-w18",
+              "target": "la mano",
+              "english": "hand"
+            },
+            {
+              "wordId": "es-a1u7-w19",
+              "target": "el pie",
+              "english": "foot"
+            },
+            {
+              "wordId": "es-a1u7-w20",
+              "target": "los ojos",
+              "english": "eyes"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w19-te",
+          "type": "mc",
+          "prompt": "What does \"el pie\" mean?",
+          "speak": "el pie",
+          "options": [
+            "nose",
+            "eyes",
+            "back",
+            "foot"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u7-w19"
+        },
+        {
+          "id": "es-a1u7-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"eyes\"?",
+          "options": [
+            "la cabeza",
+            "el pie",
+            "los ojos",
+            "la nariz"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w20"
+        },
+        {
+          "id": "es-a1-u7-l5-s",
+          "type": "translate",
+          "prompt": "I have a headache",
+          "answer": [
+            "Me",
+            "duele",
+            "la",
+            "cabeza"
+          ],
+          "bank": [
+            "mano",
+            "la",
+            "Me",
+            "pie",
+            "cabeza",
+            "duele"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la cabeza",
+          "english": "head"
+        },
+        {
+          "target": "la mano",
+          "english": "hand"
+        },
+        {
+          "target": "el pie",
+          "english": "foot"
+        },
+        {
+          "target": "los ojos",
+          "english": "eyes"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l6",
+      "title": "The body, part 2",
+      "theme": "the body",
+      "exercises": [
+        {
+          "id": "es-a1u7-w21-te",
+          "type": "mc",
+          "prompt": "What does \"la boca\" mean?",
+          "speak": "la boca",
+          "options": [
+            "hand",
+            "mouth",
+            "arm",
+            "nose"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w21"
+        },
+        {
+          "id": "es-a1u7-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"nose\"?",
+          "options": [
+            "la mano",
+            "la cabeza",
+            "la nariz",
+            "el pie"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w22"
+        },
+        {
+          "id": "es-a1-u7-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w21",
+              "target": "la boca",
+              "english": "mouth"
+            },
+            {
+              "wordId": "es-a1u7-w22",
+              "target": "la nariz",
+              "english": "nose"
+            },
+            {
+              "wordId": "es-a1u7-w23",
+              "target": "el brazo",
+              "english": "arm"
+            },
+            {
+              "wordId": "es-a1u7-w24",
+              "target": "la espalda",
+              "english": "back"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w23-te",
+          "type": "mc",
+          "prompt": "What does \"el brazo\" mean?",
+          "speak": "el brazo",
+          "options": [
+            "hand",
+            "eyes",
+            "arm",
+            "nose"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w23"
+        },
+        {
+          "id": "es-a1u7-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"back\"?",
+          "options": [
+            "la espalda",
+            "el pie",
+            "la boca",
+            "el brazo"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w24"
+        },
+        {
+          "id": "es-a1-u7-l6-s",
+          "type": "translate",
+          "prompt": "He has blue eyes",
+          "answer": [
+            "Él",
+            "tiene",
+            "los",
+            "ojos",
+            "azules"
+          ],
+          "bank": [
+            "azules",
+            "tiene",
+            "ojos",
+            "nariz",
+            "boca",
+            "los",
+            "Él"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la boca",
+          "english": "mouth"
+        },
+        {
+          "target": "la nariz",
+          "english": "nose"
+        },
+        {
+          "target": "el brazo",
+          "english": "arm"
+        },
+        {
+          "target": "la espalda",
+          "english": "back"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l7",
+      "title": "Weather, part 1",
+      "theme": "weather",
+      "exercises": [
+        {
+          "id": "es-a1u7-w25-te",
+          "type": "mc",
+          "prompt": "What does \"hace buen tiempo\" mean?",
+          "speak": "hace buen tiempo",
+          "options": [
+            "it is hot",
+            "the weather is nice",
+            "wind",
+            "sun"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w25"
+        },
+        {
+          "id": "es-a1u7-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"it is raining\"?",
+          "options": [
+            "hace calor",
+            "el viento",
+            "llueve",
+            "el sol"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w26"
+        },
+        {
+          "id": "es-a1-u7-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w25",
+              "target": "hace buen tiempo",
+              "english": "the weather is nice"
+            },
+            {
+              "wordId": "es-a1u7-w26",
+              "target": "llueve",
+              "english": "it is raining"
+            },
+            {
+              "wordId": "es-a1u7-w27",
+              "target": "hace calor",
+              "english": "it is hot"
+            },
+            {
+              "wordId": "es-a1u7-w28",
+              "target": "hace frío",
+              "english": "it is cold"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w27-te",
+          "type": "mc",
+          "prompt": "What does \"hace calor\" mean?",
+          "speak": "hace calor",
+          "options": [
+            "snow",
+            "it is cold",
+            "it is raining",
+            "it is hot"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u7-w27"
+        },
+        {
+          "id": "es-a1u7-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"it is cold\"?",
+          "options": [
+            "hace frío",
+            "llueve",
+            "la lluvia",
+            "el viento"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w28"
+        },
+        {
+          "id": "es-a1-u7-l7-s",
+          "type": "translate",
+          "prompt": "The weather is nice today",
+          "answer": [
+            "Hace",
+            "buen",
+            "tiempo",
+            "hoy"
+          ],
+          "bank": [
+            "tiempo",
+            "frío",
+            "Hace",
+            "llueve",
+            "buen",
+            "hoy"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "hace buen tiempo",
+          "english": "the weather is nice"
+        },
+        {
+          "target": "llueve",
+          "english": "it is raining"
+        },
+        {
+          "target": "hace calor",
+          "english": "it is hot"
+        },
+        {
+          "target": "hace frío",
+          "english": "it is cold"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l8",
+      "title": "Weather, part 2",
+      "theme": "weather",
+      "exercises": [
+        {
+          "id": "es-a1u7-w29-te",
+          "type": "mc",
+          "prompt": "What does \"el sol\" mean?",
+          "speak": "el sol",
+          "options": [
+            "sun",
+            "wind",
+            "rain",
+            "snow"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w29"
+        },
+        {
+          "id": "es-a1u7-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"rain\"?",
+          "options": [
+            "llueve",
+            "el viento",
+            "la lluvia",
+            "el sol"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w30"
+        },
+        {
+          "id": "es-a1-u7-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w29",
+              "target": "el sol",
+              "english": "sun"
+            },
+            {
+              "wordId": "es-a1u7-w30",
+              "target": "la lluvia",
+              "english": "rain"
+            },
+            {
+              "wordId": "es-a1u7-w31",
+              "target": "el viento",
+              "english": "wind"
+            },
+            {
+              "wordId": "es-a1u7-w32",
+              "target": "la nieve",
+              "english": "snow"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w31-te",
+          "type": "mc",
+          "prompt": "What does \"el viento\" mean?",
+          "speak": "el viento",
+          "options": [
+            "rain",
+            "it is cold",
+            "the weather is nice",
+            "wind"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u7-w31"
+        },
+        {
+          "id": "es-a1u7-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"snow\"?",
+          "options": [
+            "la nieve",
+            "llueve",
+            "hace frío",
+            "hace buen tiempo"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w32"
+        },
+        {
+          "id": "es-a1-u7-l8-s",
+          "type": "translate",
+          "prompt": "It is raining here",
+          "answer": [
+            "Llueve",
+            "aquí"
+          ],
+          "bank": [
+            "sol",
+            "nieve",
+            "aquí",
+            "Llueve"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el sol",
+          "english": "sun"
+        },
+        {
+          "target": "la lluvia",
+          "english": "rain"
+        },
+        {
+          "target": "el viento",
+          "english": "wind"
+        },
+        {
+          "target": "la nieve",
+          "english": "snow"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l9",
+      "title": "More describing words, part 1",
+      "theme": "more describing words",
+      "exercises": [
+        {
+          "id": "es-a1u7-w33-te",
+          "type": "mc",
+          "prompt": "What does \"bonito\" mean?",
+          "speak": "bonito",
+          "options": [
+            "easy",
+            "fast",
+            "pretty",
+            "beautiful"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w33"
+        },
+        {
+          "id": "es-a1u7-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"beautiful\"?",
+          "options": [
+            "hermoso",
+            "fácil",
+            "largo",
+            "corto"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u7-w34"
+        },
+        {
+          "id": "es-a1-u7-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w33",
+              "target": "bonito",
+              "english": "pretty"
+            },
+            {
+              "wordId": "es-a1u7-w34",
+              "target": "hermoso",
+              "english": "beautiful"
+            },
+            {
+              "wordId": "es-a1u7-w35",
+              "target": "fácil",
+              "english": "easy"
+            },
+            {
+              "wordId": "es-a1u7-w36",
+              "target": "difícil",
+              "english": "difficult"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w35-te",
+          "type": "mc",
+          "prompt": "What does \"fácil\" mean?",
+          "speak": "fácil",
+          "options": [
+            "fast",
+            "long",
+            "difficult",
+            "easy"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u7-w35"
+        },
+        {
+          "id": "es-a1u7-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"difficult\"?",
+          "options": [
+            "bonito",
+            "corto",
+            "difícil",
+            "hermoso"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w36"
+        },
+        {
+          "id": "es-a1-u7-l9-s",
+          "type": "translate",
+          "prompt": "It is easy",
+          "answer": [
+            "Es",
+            "fácil"
+          ],
+          "bank": [
+            "lento",
+            "difícil",
+            "fácil",
+            "Es"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "bonito",
+          "english": "pretty"
+        },
+        {
+          "target": "hermoso",
+          "english": "beautiful"
+        },
+        {
+          "target": "fácil",
+          "english": "easy"
+        },
+        {
+          "target": "difícil",
+          "english": "difficult"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u7-l10",
+      "title": "More describing words, part 2",
+      "theme": "more describing words",
+      "exercises": [
+        {
+          "id": "es-a1u7-w37-te",
+          "type": "mc",
+          "prompt": "What does \"rápido\" mean?",
+          "speak": "rápido",
+          "options": [
+            "long",
+            "fast",
+            "pretty",
+            "slow"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w37"
+        },
+        {
+          "id": "es-a1u7-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"slow\"?",
+          "options": [
+            "fácil",
+            "rápido",
+            "lento",
+            "bonito"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u7-w38"
+        },
+        {
+          "id": "es-a1-u7-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u7-w37",
+              "target": "rápido",
+              "english": "fast"
+            },
+            {
+              "wordId": "es-a1u7-w38",
+              "target": "lento",
+              "english": "slow"
+            },
+            {
+              "wordId": "es-a1u7-w39",
+              "target": "largo",
+              "english": "long"
+            },
+            {
+              "wordId": "es-a1u7-w40",
+              "target": "corto",
+              "english": "short"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u7-w39-te",
+          "type": "mc",
+          "prompt": "What does \"largo\" mean?",
+          "speak": "largo",
+          "options": [
+            "slow",
+            "long",
+            "easy",
+            "beautiful"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w39"
+        },
+        {
+          "id": "es-a1u7-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"short\"?",
+          "options": [
+            "rápido",
+            "corto",
+            "bonito",
+            "difícil"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u7-w40"
+        },
+        {
+          "id": "es-a1-u7-l10-s",
+          "type": "translate",
+          "prompt": "The train is fast",
+          "answer": [
+            "El",
+            "tren",
+            "es",
+            "rápido"
+          ],
+          "bank": [
+            "largo",
+            "es",
+            "El",
+            "rápido",
+            "lento",
+            "tren"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "rápido",
+          "english": "fast"
+        },
+        {
+          "target": "lento",
+          "english": "slow"
+        },
+        {
+          "target": "largo",
+          "english": "long"
+        },
+        {
+          "target": "corto",
+          "english": "short"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "es-a1-u7-cp",
+    "title": "Unit 7 checkpoint",
+    "pool": [
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w1",
+        "type": "mc",
+        "prompt": "What does \"grande\" mean?",
+        "speak": "grande",
+        "options": [
+          "bad",
+          "big",
+          "wind",
+          "sun"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w1"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w2",
+        "type": "mc",
+        "prompt": "How do you say \"small\"?",
+        "options": [
+          "listo",
+          "contento",
+          "grande",
+          "pequeño"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w2"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w3",
+        "type": "mc",
+        "prompt": "What does \"bueno\" mean?",
+        "speak": "bueno",
+        "options": [
+          "it is hot",
+          "good",
+          "eyes",
+          "it is raining"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w3"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w4",
+        "type": "mc",
+        "prompt": "How do you say \"bad\"?",
+        "options": [
+          "la cabeza",
+          "hace frío",
+          "malo",
+          "la lluvia"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u7-w4"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w5",
+        "type": "mc",
+        "prompt": "What does \"nuevo\" mean?",
+        "speak": "nuevo",
+        "options": [
+          "new",
+          "arm",
+          "busy",
+          "it is cold"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w5"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w6",
+        "type": "mc",
+        "prompt": "How do you say \"old\"?",
+        "options": [
+          "ocupado",
+          "viejo",
+          "el pie",
+          "fácil"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w6"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w7",
+        "type": "mc",
+        "prompt": "What does \"caliente\" mean?",
+        "speak": "caliente",
+        "options": [
+          "hot",
+          "small",
+          "long",
+          "sad"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w7"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w8",
+        "type": "mc",
+        "prompt": "How do you say \"cold\"?",
+        "options": [
+          "hermoso",
+          "frío",
+          "hace buen tiempo",
+          "la mano"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w8"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w9",
+        "type": "mc",
+        "prompt": "What does \"contento\" mean?",
+        "speak": "contento",
+        "options": [
+          "happy",
+          "sun",
+          "the weather is nice",
+          "free"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w9"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w10",
+        "type": "mc",
+        "prompt": "How do you say \"sad\"?",
+        "options": [
+          "contento",
+          "listo",
+          "frío",
+          "triste"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w10"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w11",
+        "type": "mc",
+        "prompt": "What does \"cansado\" mean?",
+        "speak": "cansado",
+        "options": [
+          "free",
+          "tired",
+          "fast",
+          "busy"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w11"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w12",
+        "type": "mc",
+        "prompt": "How do you say \"angry\"?",
+        "options": [
+          "frío",
+          "enojado",
+          "ocupado",
+          "rápido"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w12"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w13",
+        "type": "mc",
+        "prompt": "What does \"enfermo\" mean?",
+        "speak": "enfermo",
+        "options": [
+          "eyes",
+          "hot",
+          "long",
+          "sick"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w13"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w14",
+        "type": "mc",
+        "prompt": "How do you say \"ready\"?",
+        "options": [
+          "hace buen tiempo",
+          "listo",
+          "bueno",
+          "lento"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w14"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w15",
+        "type": "mc",
+        "prompt": "What does \"ocupado\" mean?",
+        "speak": "ocupado",
+        "options": [
+          "rain",
+          "busy",
+          "head",
+          "ready"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w15"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w16",
+        "type": "mc",
+        "prompt": "How do you say \"free\"?",
+        "options": [
+          "grande",
+          "libre",
+          "el viento",
+          "nuevo"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w16"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w17",
+        "type": "mc",
+        "prompt": "What does \"la cabeza\" mean?",
+        "speak": "la cabeza",
+        "options": [
+          "the weather is nice",
+          "pretty",
+          "snow",
+          "head"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w17"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w18",
+        "type": "mc",
+        "prompt": "How do you say \"hand\"?",
+        "options": [
+          "la nariz",
+          "el brazo",
+          "la mano",
+          "enfermo"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u7-w18"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w19",
+        "type": "mc",
+        "prompt": "What does \"el pie\" mean?",
+        "speak": "el pie",
+        "options": [
+          "head",
+          "free",
+          "rain",
+          "foot"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w19"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w20",
+        "type": "mc",
+        "prompt": "How do you say \"eyes\"?",
+        "options": [
+          "viejo",
+          "los ojos",
+          "malo",
+          "el pie"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w20"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w21",
+        "type": "mc",
+        "prompt": "What does \"la boca\" mean?",
+        "speak": "la boca",
+        "options": [
+          "mouth",
+          "happy",
+          "eyes",
+          "tired"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w21"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w22",
+        "type": "mc",
+        "prompt": "How do you say \"nose\"?",
+        "options": [
+          "el sol",
+          "grande",
+          "la nariz",
+          "frío"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u7-w22"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w23",
+        "type": "mc",
+        "prompt": "What does \"el brazo\" mean?",
+        "speak": "el brazo",
+        "options": [
+          "foot",
+          "arm",
+          "happy",
+          "free"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w23"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w24",
+        "type": "mc",
+        "prompt": "How do you say \"back\"?",
+        "options": [
+          "la espalda",
+          "hace buen tiempo",
+          "ocupado",
+          "el sol"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w24"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w25",
+        "type": "mc",
+        "prompt": "What does \"hace buen tiempo\" mean?",
+        "speak": "hace buen tiempo",
+        "options": [
+          "sun",
+          "foot",
+          "the weather is nice",
+          "easy"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u7-w25"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w26",
+        "type": "mc",
+        "prompt": "How do you say \"it is raining\"?",
+        "options": [
+          "el viento",
+          "caliente",
+          "llueve",
+          "hace buen tiempo"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u7-w26"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w27",
+        "type": "mc",
+        "prompt": "What does \"hace calor\" mean?",
+        "speak": "hace calor",
+        "options": [
+          "eyes",
+          "ready",
+          "nose",
+          "it is hot"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w27"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w28",
+        "type": "mc",
+        "prompt": "How do you say \"it is cold\"?",
+        "options": [
+          "libre",
+          "ocupado",
+          "el brazo",
+          "hace frío"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w28"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w29",
+        "type": "mc",
+        "prompt": "What does \"el sol\" mean?",
+        "speak": "el sol",
+        "options": [
+          "hot",
+          "mouth",
+          "long",
+          "sun"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w29"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w30",
+        "type": "mc",
+        "prompt": "How do you say \"rain\"?",
+        "options": [
+          "la lluvia",
+          "la nieve",
+          "triste",
+          "la boca"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w30"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w31",
+        "type": "mc",
+        "prompt": "What does \"el viento\" mean?",
+        "speak": "el viento",
+        "options": [
+          "foot",
+          "wind",
+          "small",
+          "sick"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w31"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w32",
+        "type": "mc",
+        "prompt": "How do you say \"snow\"?",
+        "options": [
+          "la nieve",
+          "corto",
+          "contento",
+          "la lluvia"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w32"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w33",
+        "type": "mc",
+        "prompt": "What does \"bonito\" mean?",
+        "speak": "bonito",
+        "options": [
+          "sick",
+          "tired",
+          "pretty",
+          "beautiful"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u7-w33"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w34",
+        "type": "mc",
+        "prompt": "How do you say \"beautiful\"?",
+        "options": [
+          "hermoso",
+          "enojado",
+          "bonito",
+          "ocupado"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w34"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w35",
+        "type": "mc",
+        "prompt": "What does \"fácil\" mean?",
+        "speak": "fácil",
+        "options": [
+          "easy",
+          "back",
+          "head",
+          "happy"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w35"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w36",
+        "type": "mc",
+        "prompt": "How do you say \"difficult\"?",
+        "options": [
+          "hace frío",
+          "el sol",
+          "la boca",
+          "difícil"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u7-w36"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w37",
+        "type": "mc",
+        "prompt": "What does \"rápido\" mean?",
+        "speak": "rápido",
+        "options": [
+          "fast",
+          "sun",
+          "sick",
+          "beautiful"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u7-w37"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w38",
+        "type": "mc",
+        "prompt": "How do you say \"slow\"?",
+        "options": [
+          "caliente",
+          "lento",
+          "fácil",
+          "ocupado"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w38"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w39",
+        "type": "mc",
+        "prompt": "What does \"largo\" mean?",
+        "speak": "largo",
+        "options": [
+          "arm",
+          "long",
+          "ready",
+          "it is hot"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u7-w39"
+      },
+      {
+        "id": "es-a1-u7-cp-es-a1u7-w40",
+        "type": "mc",
+        "prompt": "How do you say \"short\"?",
+        "options": [
+          "hace calor",
+          "viejo",
+          "corto",
+          "frío"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u7-w40"
+      },
+      {
+        "id": "es-a1-u7-cp-l1-s1",
+        "type": "translate",
+        "prompt": "The house is big",
+        "answer": [
+          "La",
+          "casa",
+          "es",
+          "grande"
+        ],
+        "bank": [
+          "casa",
+          "grande",
+          "La",
+          "nueva",
+          "pequeña",
+          "es"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l1-s2",
+        "type": "translate",
+        "prompt": "The coffee is hot",
+        "answer": [
+          "El",
+          "café",
+          "está",
+          "caliente"
+        ],
+        "bank": [
+          "El",
+          "café",
+          "frío",
+          "está",
+          "caliente",
+          "bueno"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l1-s3",
+        "type": "translate",
+        "prompt": "The bread is good",
+        "answer": [
+          "El",
+          "pan",
+          "es",
+          "bueno"
+        ],
+        "bank": [
+          "viejo",
+          "malo",
+          "bueno",
+          "es",
+          "El",
+          "pan"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I am happy",
+        "answer": [
+          "Estoy",
+          "contento"
+        ],
+        "bank": [
+          "contento",
+          "Estoy",
+          "cansado",
+          "triste"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l2-s2",
+        "type": "translate",
+        "prompt": "He is tired",
+        "answer": [
+          "Él",
+          "está",
+          "cansado"
+        ],
+        "bank": [
+          "cansado",
+          "enfermo",
+          "Él",
+          "listo",
+          "está"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l2-s3",
+        "type": "translate",
+        "prompt": "She is busy",
+        "answer": [
+          "Ella",
+          "está",
+          "ocupada"
+        ],
+        "bank": [
+          "está",
+          "Ella",
+          "ocupada",
+          "enojada",
+          "libre"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l3-s1",
+        "type": "translate",
+        "prompt": "I have a headache",
+        "answer": [
+          "Me",
+          "duele",
+          "la",
+          "cabeza"
+        ],
+        "bank": [
+          "cabeza",
+          "duele",
+          "mano",
+          "Me",
+          "pie",
+          "la"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l3-s2",
+        "type": "translate",
+        "prompt": "He has blue eyes",
+        "answer": [
+          "Él",
+          "tiene",
+          "los",
+          "ojos",
+          "azules"
+        ],
+        "bank": [
+          "boca",
+          "nariz",
+          "tiene",
+          "Él",
+          "los",
+          "azules",
+          "ojos"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l3-s3",
+        "type": "translate",
+        "prompt": "My hand is cold",
+        "answer": [
+          "Mi",
+          "mano",
+          "está",
+          "fría"
+        ],
+        "bank": [
+          "espalda",
+          "Mi",
+          "está",
+          "fría",
+          "brazo",
+          "mano"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l4-s1",
+        "type": "translate",
+        "prompt": "The weather is nice today",
+        "answer": [
+          "Hace",
+          "buen",
+          "tiempo",
+          "hoy"
+        ],
+        "bank": [
+          "frío",
+          "tiempo",
+          "hoy",
+          "buen",
+          "Hace",
+          "llueve"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l4-s2",
+        "type": "translate",
+        "prompt": "It is raining here",
+        "answer": [
+          "Llueve",
+          "aquí"
+        ],
+        "bank": [
+          "sol",
+          "nieve",
+          "aquí",
+          "Llueve"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l4-s3",
+        "type": "translate",
+        "prompt": "I like the sun",
+        "answer": [
+          "Me",
+          "gusta",
+          "el",
+          "sol"
+        ],
+        "bank": [
+          "Me",
+          "gusta",
+          "sol",
+          "lluvia",
+          "el",
+          "viento"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l5-s1",
+        "type": "translate",
+        "prompt": "It is easy",
+        "answer": [
+          "Es",
+          "fácil"
+        ],
+        "bank": [
+          "lento",
+          "difícil",
+          "Es",
+          "fácil"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l5-s2",
+        "type": "translate",
+        "prompt": "The train is fast",
+        "answer": [
+          "El",
+          "tren",
+          "es",
+          "rápido"
+        ],
+        "bank": [
+          "largo",
+          "lento",
+          "es",
+          "tren",
+          "rápido",
+          "El"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-l5-s3",
+        "type": "translate",
+        "prompt": "The dress is pretty",
+        "answer": [
+          "El",
+          "vestido",
+          "es",
+          "bonito"
+        ],
+        "bank": [
+          "corto",
+          "El",
+          "hermoso",
+          "es",
+          "vestido",
+          "bonito"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u7-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u7-w4",
+            "target": "malo",
+            "english": "bad"
+          },
+          {
+            "wordId": "es-a1u7-w6",
+            "target": "viejo",
+            "english": "old"
+          },
+          {
+            "wordId": "es-a1u7-w5",
+            "target": "nuevo",
+            "english": "new"
+          },
+          {
+            "wordId": "es-a1u7-w8",
+            "target": "frío",
+            "english": "cold"
+          },
+          {
+            "wordId": "es-a1u7-w7",
+            "target": "caliente",
+            "english": "hot"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u7-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u7-w10",
+            "target": "triste",
+            "english": "sad"
+          },
+          {
+            "wordId": "es-a1u7-w9",
+            "target": "contento",
+            "english": "happy"
+          },
+          {
+            "wordId": "es-a1u7-w14",
+            "target": "listo",
+            "english": "ready"
+          },
+          {
+            "wordId": "es-a1u7-w12",
+            "target": "enojado",
+            "english": "angry"
+          },
+          {
+            "wordId": "es-a1u7-w15",
+            "target": "ocupado",
+            "english": "busy"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u7-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u7-w19",
+            "target": "el pie",
+            "english": "foot"
+          },
+          {
+            "wordId": "es-a1u7-w22",
+            "target": "la nariz",
+            "english": "nose"
+          },
+          {
+            "wordId": "es-a1u7-w21",
+            "target": "la boca",
+            "english": "mouth"
+          },
+          {
+            "wordId": "es-a1u7-w20",
+            "target": "los ojos",
+            "english": "eyes"
+          },
+          {
+            "wordId": "es-a1u7-w17",
+            "target": "la cabeza",
+            "english": "head"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u7-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u7-w29",
+            "target": "el sol",
+            "english": "sun"
+          },
+          {
+            "wordId": "es-a1u7-w30",
+            "target": "la lluvia",
+            "english": "rain"
+          },
+          {
+            "wordId": "es-a1u7-w25",
+            "target": "hace buen tiempo",
+            "english": "the weather is nice"
+          },
+          {
+            "wordId": "es-a1u7-w26",
+            "target": "llueve",
+            "english": "it is raining"
+          },
+          {
+            "wordId": "es-a1u7-w31",
+            "target": "el viento",
+            "english": "wind"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u7-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u7-w34",
+            "target": "hermoso",
+            "english": "beautiful"
+          },
+          {
+            "wordId": "es-a1u7-w38",
+            "target": "lento",
+            "english": "slow"
+          },
+          {
+            "wordId": "es-a1u7-w37",
+            "target": "rápido",
+            "english": "fast"
+          },
+          {
+            "wordId": "es-a1u7-w35",
+            "target": "fácil",
+            "english": "easy"
+          },
+          {
+            "wordId": "es-a1u7-w40",
+            "target": "corto",
+            "english": "short"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

@@ -42,6 +42,8 @@ export const LessonSchema = z.object({
   title: z.string(),
   theme: z.string(),
   exercises: z.array(ExerciseSchema).min(5).max(12),
+  /** The new words this lesson teaches, shown on a "new words" card before any question. */
+  intro: z.array(z.object({ target: z.string(), english: z.string() })).max(6).optional(),
 });
 
 export const CheckpointSchema = z.object({
@@ -57,6 +59,7 @@ export const UnitSchema = z.object({
   unit: z.number().int(),
   level: z.literal("A1"),
   title: z.string(),
+  blurb: z.string().default(""),
   speechLang: z.string(),
   lessons: z.array(LessonSchema).length(10),
   checkpoint: CheckpointSchema,

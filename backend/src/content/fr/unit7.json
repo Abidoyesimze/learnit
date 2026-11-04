@@ -1,0 +1,2261 @@
+{
+  "lang": "fr",
+  "unit": 7,
+  "level": "A1",
+  "title": "Describing things",
+  "blurb": "Describe people, feelings and the weather.",
+  "speechLang": "fr-FR",
+  "lessons": [
+    {
+      "id": "fr-a1-u7-l1",
+      "title": "Opposites, part 1",
+      "theme": "opposites",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w1-te",
+          "type": "mc",
+          "prompt": "What does \"grand\" mean?",
+          "speak": "grand",
+          "options": [
+            "good",
+            "big",
+            "new",
+            "small"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w1"
+        },
+        {
+          "id": "fr-a1u7-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"small\"?",
+          "options": [
+            "vieux",
+            "bon",
+            "petit",
+            "chaud"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w2"
+        },
+        {
+          "id": "fr-a1-u7-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w1",
+              "target": "grand",
+              "english": "big"
+            },
+            {
+              "wordId": "fr-a1u7-w2",
+              "target": "petit",
+              "english": "small"
+            },
+            {
+              "wordId": "fr-a1u7-w3",
+              "target": "bon",
+              "english": "good"
+            },
+            {
+              "wordId": "fr-a1u7-w4",
+              "target": "mauvais",
+              "english": "bad"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w3-te",
+          "type": "mc",
+          "prompt": "What does \"bon\" mean?",
+          "speak": "bon",
+          "options": [
+            "good",
+            "bad",
+            "hot",
+            "big"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w3"
+        },
+        {
+          "id": "fr-a1u7-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"bad\"?",
+          "options": [
+            "nouveau",
+            "chaud",
+            "mauvais",
+            "petit"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w4"
+        },
+        {
+          "id": "fr-a1-u7-l1-s",
+          "type": "translate",
+          "prompt": "The bread is good",
+          "answer": [
+            "Le",
+            "pain",
+            "est",
+            "bon"
+          ],
+          "bank": [
+            "bon",
+            "pain",
+            "mauvais",
+            "est",
+            "vieux",
+            "Le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "grand",
+          "english": "big"
+        },
+        {
+          "target": "petit",
+          "english": "small"
+        },
+        {
+          "target": "bon",
+          "english": "good"
+        },
+        {
+          "target": "mauvais",
+          "english": "bad"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l2",
+      "title": "Opposites, part 2",
+      "theme": "opposites",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w5-te",
+          "type": "mc",
+          "prompt": "What does \"nouveau\" mean?",
+          "speak": "nouveau",
+          "options": [
+            "hot",
+            "new",
+            "bad",
+            "cold"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w5"
+        },
+        {
+          "id": "fr-a1u7-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"old\"?",
+          "options": [
+            "petit",
+            "grand",
+            "bon",
+            "vieux"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w6"
+        },
+        {
+          "id": "fr-a1-u7-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w5",
+              "target": "nouveau",
+              "english": "new"
+            },
+            {
+              "wordId": "fr-a1u7-w6",
+              "target": "vieux",
+              "english": "old"
+            },
+            {
+              "wordId": "fr-a1u7-w7",
+              "target": "chaud",
+              "english": "hot"
+            },
+            {
+              "wordId": "fr-a1u7-w8",
+              "target": "froid",
+              "english": "cold"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w7-te",
+          "type": "mc",
+          "prompt": "What does \"chaud\" mean?",
+          "speak": "chaud",
+          "options": [
+            "bad",
+            "hot",
+            "cold",
+            "good"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w7"
+        },
+        {
+          "id": "fr-a1u7-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"cold\"?",
+          "options": [
+            "nouveau",
+            "chaud",
+            "grand",
+            "froid"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w8"
+        },
+        {
+          "id": "fr-a1-u7-l2-s",
+          "type": "translate",
+          "prompt": "The coffee is hot",
+          "answer": [
+            "Le",
+            "café",
+            "est",
+            "chaud"
+          ],
+          "bank": [
+            "café",
+            "chaud",
+            "est",
+            "froid",
+            "bon",
+            "Le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "nouveau",
+          "english": "new"
+        },
+        {
+          "target": "vieux",
+          "english": "old"
+        },
+        {
+          "target": "chaud",
+          "english": "hot"
+        },
+        {
+          "target": "froid",
+          "english": "cold"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l3",
+      "title": "Feelings, part 1",
+      "theme": "feelings",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w9-te",
+          "type": "mc",
+          "prompt": "What does \"content\" mean?",
+          "speak": "content",
+          "options": [
+            "ready",
+            "sad",
+            "happy",
+            "free"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w9"
+        },
+        {
+          "id": "fr-a1u7-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"sad\"?",
+          "options": [
+            "en colère",
+            "prêt",
+            "triste",
+            "content"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w10"
+        },
+        {
+          "id": "fr-a1-u7-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w9",
+              "target": "content",
+              "english": "happy"
+            },
+            {
+              "wordId": "fr-a1u7-w10",
+              "target": "triste",
+              "english": "sad"
+            },
+            {
+              "wordId": "fr-a1u7-w11",
+              "target": "fatigué",
+              "english": "tired"
+            },
+            {
+              "wordId": "fr-a1u7-w12",
+              "target": "en colère",
+              "english": "angry"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w11-te",
+          "type": "mc",
+          "prompt": "What does \"fatigué\" mean?",
+          "speak": "fatigué",
+          "options": [
+            "sad",
+            "tired",
+            "sick",
+            "angry"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w11"
+        },
+        {
+          "id": "fr-a1u7-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"angry\"?",
+          "options": [
+            "libre",
+            "triste",
+            "occupé",
+            "en colère"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w12"
+        },
+        {
+          "id": "fr-a1-u7-l3-s",
+          "type": "translate",
+          "prompt": "I am happy",
+          "answer": [
+            "Je",
+            "suis",
+            "content"
+          ],
+          "bank": [
+            "fatigué",
+            "triste",
+            "Je",
+            "suis",
+            "content"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "content",
+          "english": "happy"
+        },
+        {
+          "target": "triste",
+          "english": "sad"
+        },
+        {
+          "target": "fatigué",
+          "english": "tired"
+        },
+        {
+          "target": "en colère",
+          "english": "angry"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l4",
+      "title": "Feelings, part 2",
+      "theme": "feelings",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w13-te",
+          "type": "mc",
+          "prompt": "What does \"malade\" mean?",
+          "speak": "malade",
+          "options": [
+            "sick",
+            "angry",
+            "sad",
+            "ready"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w13"
+        },
+        {
+          "id": "fr-a1u7-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"ready\"?",
+          "options": [
+            "triste",
+            "prêt",
+            "malade",
+            "libre"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w14"
+        },
+        {
+          "id": "fr-a1-u7-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w13",
+              "target": "malade",
+              "english": "sick"
+            },
+            {
+              "wordId": "fr-a1u7-w14",
+              "target": "prêt",
+              "english": "ready"
+            },
+            {
+              "wordId": "fr-a1u7-w15",
+              "target": "occupé",
+              "english": "busy"
+            },
+            {
+              "wordId": "fr-a1u7-w16",
+              "target": "libre",
+              "english": "free"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w15-te",
+          "type": "mc",
+          "prompt": "What does \"occupé\" mean?",
+          "speak": "occupé",
+          "options": [
+            "tired",
+            "sick",
+            "angry",
+            "busy"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w15"
+        },
+        {
+          "id": "fr-a1u7-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"free\"?",
+          "options": [
+            "occupé",
+            "content",
+            "fatigué",
+            "libre"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w16"
+        },
+        {
+          "id": "fr-a1-u7-l4-s",
+          "type": "translate",
+          "prompt": "He is tired",
+          "answer": [
+            "Il",
+            "est",
+            "fatigué"
+          ],
+          "bank": [
+            "fatigué",
+            "prêt",
+            "malade",
+            "est",
+            "Il"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "malade",
+          "english": "sick"
+        },
+        {
+          "target": "prêt",
+          "english": "ready"
+        },
+        {
+          "target": "occupé",
+          "english": "busy"
+        },
+        {
+          "target": "libre",
+          "english": "free"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l5",
+      "title": "The body, part 1",
+      "theme": "the body",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w17-te",
+          "type": "mc",
+          "prompt": "What does \"la tête\" mean?",
+          "speak": "la tête",
+          "options": [
+            "nose",
+            "mouth",
+            "head",
+            "back"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w17"
+        },
+        {
+          "id": "fr-a1u7-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"hand\"?",
+          "options": [
+            "la tête",
+            "la main",
+            "les yeux",
+            "la bouche"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w18"
+        },
+        {
+          "id": "fr-a1-u7-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w17",
+              "target": "la tête",
+              "english": "head"
+            },
+            {
+              "wordId": "fr-a1u7-w18",
+              "target": "la main",
+              "english": "hand"
+            },
+            {
+              "wordId": "fr-a1u7-w19",
+              "target": "le pied",
+              "english": "foot"
+            },
+            {
+              "wordId": "fr-a1u7-w20",
+              "target": "les yeux",
+              "english": "eyes"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w19-te",
+          "type": "mc",
+          "prompt": "What does \"le pied\" mean?",
+          "speak": "le pied",
+          "options": [
+            "arm",
+            "foot",
+            "nose",
+            "hand"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w19"
+        },
+        {
+          "id": "fr-a1u7-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"eyes\"?",
+          "options": [
+            "le nez",
+            "les yeux",
+            "la main",
+            "le dos"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w20"
+        },
+        {
+          "id": "fr-a1-u7-l5-s",
+          "type": "translate",
+          "prompt": "I have a headache",
+          "answer": [
+            "J'ai",
+            "mal",
+            "à",
+            "la",
+            "tête"
+          ],
+          "bank": [
+            "main",
+            "pied",
+            "à",
+            "mal",
+            "J'ai",
+            "tête",
+            "la"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la tête",
+          "english": "head"
+        },
+        {
+          "target": "la main",
+          "english": "hand"
+        },
+        {
+          "target": "le pied",
+          "english": "foot"
+        },
+        {
+          "target": "les yeux",
+          "english": "eyes"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l6",
+      "title": "The body, part 2",
+      "theme": "the body",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w21-te",
+          "type": "mc",
+          "prompt": "What does \"la bouche\" mean?",
+          "speak": "la bouche",
+          "options": [
+            "hand",
+            "head",
+            "mouth",
+            "nose"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w21"
+        },
+        {
+          "id": "fr-a1u7-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"nose\"?",
+          "options": [
+            "la bouche",
+            "la main",
+            "le nez",
+            "la tête"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w22"
+        },
+        {
+          "id": "fr-a1-u7-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w21",
+              "target": "la bouche",
+              "english": "mouth"
+            },
+            {
+              "wordId": "fr-a1u7-w22",
+              "target": "le nez",
+              "english": "nose"
+            },
+            {
+              "wordId": "fr-a1u7-w23",
+              "target": "le bras",
+              "english": "arm"
+            },
+            {
+              "wordId": "fr-a1u7-w24",
+              "target": "le dos",
+              "english": "back"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w23-te",
+          "type": "mc",
+          "prompt": "What does \"le bras\" mean?",
+          "speak": "le bras",
+          "options": [
+            "mouth",
+            "arm",
+            "foot",
+            "hand"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w23"
+        },
+        {
+          "id": "fr-a1u7-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"back\"?",
+          "options": [
+            "la tête",
+            "la bouche",
+            "le nez",
+            "le dos"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w24"
+        },
+        {
+          "id": "fr-a1-u7-l6-s",
+          "type": "translate",
+          "prompt": "He has blue eyes",
+          "answer": [
+            "Il",
+            "a",
+            "les",
+            "yeux",
+            "bleus"
+          ],
+          "bank": [
+            "Il",
+            "les",
+            "a",
+            "nez",
+            "yeux",
+            "bleus",
+            "bouche"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la bouche",
+          "english": "mouth"
+        },
+        {
+          "target": "le nez",
+          "english": "nose"
+        },
+        {
+          "target": "le bras",
+          "english": "arm"
+        },
+        {
+          "target": "le dos",
+          "english": "back"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l7",
+      "title": "Weather, part 1",
+      "theme": "weather",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w25-te",
+          "type": "mc",
+          "prompt": "What does \"il fait beau\" mean?",
+          "speak": "il fait beau",
+          "options": [
+            "wind",
+            "it is cold",
+            "it is hot",
+            "the weather is nice"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w25"
+        },
+        {
+          "id": "fr-a1u7-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"it is raining\"?",
+          "options": [
+            "la pluie",
+            "le soleil",
+            "il pleut",
+            "la neige"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w26"
+        },
+        {
+          "id": "fr-a1-u7-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w25",
+              "target": "il fait beau",
+              "english": "the weather is nice"
+            },
+            {
+              "wordId": "fr-a1u7-w26",
+              "target": "il pleut",
+              "english": "it is raining"
+            },
+            {
+              "wordId": "fr-a1u7-w27",
+              "target": "il fait chaud",
+              "english": "it is hot"
+            },
+            {
+              "wordId": "fr-a1u7-w28",
+              "target": "il fait froid",
+              "english": "it is cold"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w27-te",
+          "type": "mc",
+          "prompt": "What does \"il fait chaud\" mean?",
+          "speak": "il fait chaud",
+          "options": [
+            "it is hot",
+            "it is raining",
+            "the weather is nice",
+            "snow"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w27"
+        },
+        {
+          "id": "fr-a1u7-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"it is cold\"?",
+          "options": [
+            "la pluie",
+            "il fait froid",
+            "le vent",
+            "la neige"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w28"
+        },
+        {
+          "id": "fr-a1-u7-l7-s",
+          "type": "translate",
+          "prompt": "The weather is nice today",
+          "answer": [
+            "Il",
+            "fait",
+            "beau",
+            "aujourd'hui"
+          ],
+          "bank": [
+            "aujourd'hui",
+            "pleut",
+            "beau",
+            "fait",
+            "froid",
+            "Il"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "il fait beau",
+          "english": "the weather is nice"
+        },
+        {
+          "target": "il pleut",
+          "english": "it is raining"
+        },
+        {
+          "target": "il fait chaud",
+          "english": "it is hot"
+        },
+        {
+          "target": "il fait froid",
+          "english": "it is cold"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l8",
+      "title": "Weather, part 2",
+      "theme": "weather",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w29-te",
+          "type": "mc",
+          "prompt": "What does \"le soleil\" mean?",
+          "speak": "le soleil",
+          "options": [
+            "sun",
+            "rain",
+            "it is cold",
+            "snow"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w29"
+        },
+        {
+          "id": "fr-a1u7-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"rain\"?",
+          "options": [
+            "la pluie",
+            "il fait chaud",
+            "il fait beau",
+            "le soleil"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w30"
+        },
+        {
+          "id": "fr-a1-u7-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w29",
+              "target": "le soleil",
+              "english": "sun"
+            },
+            {
+              "wordId": "fr-a1u7-w30",
+              "target": "la pluie",
+              "english": "rain"
+            },
+            {
+              "wordId": "fr-a1u7-w31",
+              "target": "le vent",
+              "english": "wind"
+            },
+            {
+              "wordId": "fr-a1u7-w32",
+              "target": "la neige",
+              "english": "snow"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w31-te",
+          "type": "mc",
+          "prompt": "What does \"le vent\" mean?",
+          "speak": "le vent",
+          "options": [
+            "rain",
+            "snow",
+            "it is raining",
+            "wind"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w31"
+        },
+        {
+          "id": "fr-a1u7-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"snow\"?",
+          "options": [
+            "la neige",
+            "la pluie",
+            "il fait chaud",
+            "il pleut"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w32"
+        },
+        {
+          "id": "fr-a1-u7-l8-s",
+          "type": "translate",
+          "prompt": "It is raining here",
+          "answer": [
+            "Il",
+            "pleut",
+            "ici"
+          ],
+          "bank": [
+            "Il",
+            "pleut",
+            "soleil",
+            "ici",
+            "neige"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le soleil",
+          "english": "sun"
+        },
+        {
+          "target": "la pluie",
+          "english": "rain"
+        },
+        {
+          "target": "le vent",
+          "english": "wind"
+        },
+        {
+          "target": "la neige",
+          "english": "snow"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l9",
+      "title": "More describing words, part 1",
+      "theme": "more describing words",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w33-te",
+          "type": "mc",
+          "prompt": "What does \"beau\" mean?",
+          "speak": "beau",
+          "options": [
+            "beautiful",
+            "difficult",
+            "short",
+            "pretty"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w33"
+        },
+        {
+          "id": "fr-a1u7-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"pretty\"?",
+          "options": [
+            "joli",
+            "court",
+            "rapide",
+            "beau"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w34"
+        },
+        {
+          "id": "fr-a1-u7-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w33",
+              "target": "beau",
+              "english": "beautiful"
+            },
+            {
+              "wordId": "fr-a1u7-w34",
+              "target": "joli",
+              "english": "pretty"
+            },
+            {
+              "wordId": "fr-a1u7-w35",
+              "target": "facile",
+              "english": "easy"
+            },
+            {
+              "wordId": "fr-a1u7-w36",
+              "target": "difficile",
+              "english": "difficult"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w35-te",
+          "type": "mc",
+          "prompt": "What does \"facile\" mean?",
+          "speak": "facile",
+          "options": [
+            "pretty",
+            "easy",
+            "long",
+            "beautiful"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w35"
+        },
+        {
+          "id": "fr-a1u7-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"difficult\"?",
+          "options": [
+            "joli",
+            "court",
+            "difficile",
+            "rapide"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w36"
+        },
+        {
+          "id": "fr-a1-u7-l9-s",
+          "type": "translate",
+          "prompt": "It is easy",
+          "answer": [
+            "C'est",
+            "facile"
+          ],
+          "bank": [
+            "C'est",
+            "facile",
+            "lent",
+            "difficile"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "beau",
+          "english": "beautiful"
+        },
+        {
+          "target": "joli",
+          "english": "pretty"
+        },
+        {
+          "target": "facile",
+          "english": "easy"
+        },
+        {
+          "target": "difficile",
+          "english": "difficult"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u7-l10",
+      "title": "More describing words, part 2",
+      "theme": "more describing words",
+      "exercises": [
+        {
+          "id": "fr-a1u7-w37-te",
+          "type": "mc",
+          "prompt": "What does \"rapide\" mean?",
+          "speak": "rapide",
+          "options": [
+            "beautiful",
+            "fast",
+            "short",
+            "slow"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u7-w37"
+        },
+        {
+          "id": "fr-a1u7-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"slow\"?",
+          "options": [
+            "beau",
+            "difficile",
+            "rapide",
+            "lent"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u7-w38"
+        },
+        {
+          "id": "fr-a1-u7-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u7-w37",
+              "target": "rapide",
+              "english": "fast"
+            },
+            {
+              "wordId": "fr-a1u7-w38",
+              "target": "lent",
+              "english": "slow"
+            },
+            {
+              "wordId": "fr-a1u7-w39",
+              "target": "long",
+              "english": "long"
+            },
+            {
+              "wordId": "fr-a1u7-w40",
+              "target": "court",
+              "english": "short"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u7-w39-te",
+          "type": "mc",
+          "prompt": "What does \"long\" mean?",
+          "speak": "long",
+          "options": [
+            "long",
+            "beautiful",
+            "pretty",
+            "slow"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u7-w39"
+        },
+        {
+          "id": "fr-a1u7-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"short\"?",
+          "options": [
+            "long",
+            "lent",
+            "court",
+            "facile"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u7-w40"
+        },
+        {
+          "id": "fr-a1-u7-l10-s",
+          "type": "translate",
+          "prompt": "The train is fast",
+          "answer": [
+            "Le",
+            "train",
+            "est",
+            "rapide"
+          ],
+          "bank": [
+            "est",
+            "train",
+            "lent",
+            "rapide",
+            "long",
+            "Le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "rapide",
+          "english": "fast"
+        },
+        {
+          "target": "lent",
+          "english": "slow"
+        },
+        {
+          "target": "long",
+          "english": "long"
+        },
+        {
+          "target": "court",
+          "english": "short"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "fr-a1-u7-cp",
+    "title": "Unit 7 checkpoint",
+    "pool": [
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w1",
+        "type": "mc",
+        "prompt": "What does \"grand\" mean?",
+        "speak": "grand",
+        "options": [
+          "hand",
+          "big",
+          "head",
+          "fast"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w1"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w2",
+        "type": "mc",
+        "prompt": "How do you say \"small\"?",
+        "options": [
+          "occupé",
+          "joli",
+          "petit",
+          "le dos"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w2"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w3",
+        "type": "mc",
+        "prompt": "What does \"bon\" mean?",
+        "speak": "bon",
+        "options": [
+          "foot",
+          "old",
+          "cold",
+          "good"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u7-w3"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w4",
+        "type": "mc",
+        "prompt": "How do you say \"bad\"?",
+        "options": [
+          "en colère",
+          "rapide",
+          "mauvais",
+          "la neige"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w4"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w5",
+        "type": "mc",
+        "prompt": "What does \"nouveau\" mean?",
+        "speak": "nouveau",
+        "options": [
+          "foot",
+          "long",
+          "short",
+          "new"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u7-w5"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w6",
+        "type": "mc",
+        "prompt": "How do you say \"old\"?",
+        "options": [
+          "grand",
+          "joli",
+          "vieux",
+          "facile"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w6"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w7",
+        "type": "mc",
+        "prompt": "What does \"chaud\" mean?",
+        "speak": "chaud",
+        "options": [
+          "good",
+          "tired",
+          "hot",
+          "happy"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w7"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w8",
+        "type": "mc",
+        "prompt": "How do you say \"cold\"?",
+        "options": [
+          "froid",
+          "beau",
+          "long",
+          "la main"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w8"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w9",
+        "type": "mc",
+        "prompt": "What does \"content\" mean?",
+        "speak": "content",
+        "options": [
+          "wind",
+          "happy",
+          "fast",
+          "pretty"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w9"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w10",
+        "type": "mc",
+        "prompt": "How do you say \"sad\"?",
+        "options": [
+          "occupé",
+          "la bouche",
+          "lent",
+          "triste"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u7-w10"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w11",
+        "type": "mc",
+        "prompt": "What does \"fatigué\" mean?",
+        "speak": "fatigué",
+        "options": [
+          "long",
+          "arm",
+          "tired",
+          "slow"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w11"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w12",
+        "type": "mc",
+        "prompt": "How do you say \"angry\"?",
+        "options": [
+          "nouveau",
+          "la tête",
+          "il fait froid",
+          "en colère"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u7-w12"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w13",
+        "type": "mc",
+        "prompt": "What does \"malade\" mean?",
+        "speak": "malade",
+        "options": [
+          "arm",
+          "sick",
+          "nose",
+          "bad"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w13"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w14",
+        "type": "mc",
+        "prompt": "How do you say \"ready\"?",
+        "options": [
+          "le pied",
+          "prêt",
+          "vieux",
+          "mauvais"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w14"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w15",
+        "type": "mc",
+        "prompt": "What does \"occupé\" mean?",
+        "speak": "occupé",
+        "options": [
+          "sick",
+          "it is hot",
+          "busy",
+          "head"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w15"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w16",
+        "type": "mc",
+        "prompt": "How do you say \"free\"?",
+        "options": [
+          "les yeux",
+          "libre",
+          "fatigué",
+          "froid"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w16"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w17",
+        "type": "mc",
+        "prompt": "What does \"la tête\" mean?",
+        "speak": "la tête",
+        "options": [
+          "pretty",
+          "head",
+          "snow",
+          "foot"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w17"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w18",
+        "type": "mc",
+        "prompt": "How do you say \"hand\"?",
+        "options": [
+          "mauvais",
+          "le dos",
+          "la main",
+          "la neige"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w18"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w19",
+        "type": "mc",
+        "prompt": "What does \"le pied\" mean?",
+        "speak": "le pied",
+        "options": [
+          "foot",
+          "head",
+          "ready",
+          "hot"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w19"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w20",
+        "type": "mc",
+        "prompt": "How do you say \"eyes\"?",
+        "options": [
+          "facile",
+          "la pluie",
+          "les yeux",
+          "libre"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w20"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w21",
+        "type": "mc",
+        "prompt": "What does \"la bouche\" mean?",
+        "speak": "la bouche",
+        "options": [
+          "mouth",
+          "busy",
+          "foot",
+          "the weather is nice"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w21"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w22",
+        "type": "mc",
+        "prompt": "How do you say \"nose\"?",
+        "options": [
+          "il fait chaud",
+          "le nez",
+          "chaud",
+          "il pleut"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w22"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w23",
+        "type": "mc",
+        "prompt": "What does \"le bras\" mean?",
+        "speak": "le bras",
+        "options": [
+          "foot",
+          "old",
+          "arm",
+          "big"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w23"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w24",
+        "type": "mc",
+        "prompt": "How do you say \"back\"?",
+        "options": [
+          "le pied",
+          "le dos",
+          "en colère",
+          "il fait chaud"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w24"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w25",
+        "type": "mc",
+        "prompt": "What does \"il fait beau\" mean?",
+        "speak": "il fait beau",
+        "options": [
+          "short",
+          "the weather is nice",
+          "slow",
+          "bad"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w25"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w26",
+        "type": "mc",
+        "prompt": "How do you say \"it is raining\"?",
+        "options": [
+          "la main",
+          "il pleut",
+          "court",
+          "le dos"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w26"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w27",
+        "type": "mc",
+        "prompt": "What does \"il fait chaud\" mean?",
+        "speak": "il fait chaud",
+        "options": [
+          "it is cold",
+          "hand",
+          "nose",
+          "it is hot"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u7-w27"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w28",
+        "type": "mc",
+        "prompt": "How do you say \"it is cold\"?",
+        "options": [
+          "il fait froid",
+          "bon",
+          "la main",
+          "la pluie"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w28"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w29",
+        "type": "mc",
+        "prompt": "What does \"le soleil\" mean?",
+        "speak": "le soleil",
+        "options": [
+          "beautiful",
+          "sun",
+          "sad",
+          "mouth"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w29"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w30",
+        "type": "mc",
+        "prompt": "How do you say \"rain\"?",
+        "options": [
+          "le vent",
+          "occupé",
+          "la pluie",
+          "malade"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w30"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w31",
+        "type": "mc",
+        "prompt": "What does \"le vent\" mean?",
+        "speak": "le vent",
+        "options": [
+          "wind",
+          "the weather is nice",
+          "it is raining",
+          "big"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w31"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w32",
+        "type": "mc",
+        "prompt": "How do you say \"snow\"?",
+        "options": [
+          "il pleut",
+          "difficile",
+          "la neige",
+          "la bouche"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u7-w32"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w33",
+        "type": "mc",
+        "prompt": "What does \"beau\" mean?",
+        "speak": "beau",
+        "options": [
+          "good",
+          "beautiful",
+          "it is hot",
+          "mouth"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w33"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w34",
+        "type": "mc",
+        "prompt": "How do you say \"pretty\"?",
+        "options": [
+          "la tête",
+          "joli",
+          "triste",
+          "la pluie"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u7-w34"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w35",
+        "type": "mc",
+        "prompt": "What does \"facile\" mean?",
+        "speak": "facile",
+        "options": [
+          "easy",
+          "nose",
+          "snow",
+          "short"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w35"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w36",
+        "type": "mc",
+        "prompt": "How do you say \"difficult\"?",
+        "options": [
+          "il fait chaud",
+          "la neige",
+          "bon",
+          "difficile"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u7-w36"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w37",
+        "type": "mc",
+        "prompt": "What does \"rapide\" mean?",
+        "speak": "rapide",
+        "options": [
+          "fast",
+          "pretty",
+          "slow",
+          "old"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w37"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w38",
+        "type": "mc",
+        "prompt": "How do you say \"slow\"?",
+        "options": [
+          "triste",
+          "prêt",
+          "chaud",
+          "lent"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u7-w38"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w39",
+        "type": "mc",
+        "prompt": "What does \"long\" mean?",
+        "speak": "long",
+        "options": [
+          "long",
+          "beautiful",
+          "the weather is nice",
+          "free"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w39"
+      },
+      {
+        "id": "fr-a1-u7-cp-fr-a1u7-w40",
+        "type": "mc",
+        "prompt": "How do you say \"short\"?",
+        "options": [
+          "court",
+          "la main",
+          "lent",
+          "le nez"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u7-w40"
+      },
+      {
+        "id": "fr-a1-u7-cp-l1-s1",
+        "type": "translate",
+        "prompt": "The house is big",
+        "answer": [
+          "La",
+          "maison",
+          "est",
+          "grande"
+        ],
+        "bank": [
+          "petite",
+          "maison",
+          "grande",
+          "La",
+          "neuve",
+          "est"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l1-s2",
+        "type": "translate",
+        "prompt": "The coffee is hot",
+        "answer": [
+          "Le",
+          "café",
+          "est",
+          "chaud"
+        ],
+        "bank": [
+          "froid",
+          "Le",
+          "chaud",
+          "café",
+          "bon",
+          "est"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l1-s3",
+        "type": "translate",
+        "prompt": "The bread is good",
+        "answer": [
+          "Le",
+          "pain",
+          "est",
+          "bon"
+        ],
+        "bank": [
+          "mauvais",
+          "vieux",
+          "Le",
+          "bon",
+          "est",
+          "pain"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I am happy",
+        "answer": [
+          "Je",
+          "suis",
+          "content"
+        ],
+        "bank": [
+          "Je",
+          "suis",
+          "fatigué",
+          "triste",
+          "content"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l2-s2",
+        "type": "translate",
+        "prompt": "He is tired",
+        "answer": [
+          "Il",
+          "est",
+          "fatigué"
+        ],
+        "bank": [
+          "fatigué",
+          "malade",
+          "Il",
+          "prêt",
+          "est"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l2-s3",
+        "type": "translate",
+        "prompt": "She is busy",
+        "answer": [
+          "Elle",
+          "est",
+          "occupée"
+        ],
+        "bank": [
+          "colère",
+          "libre",
+          "Elle",
+          "occupée",
+          "est"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l3-s1",
+        "type": "translate",
+        "prompt": "I have a headache",
+        "answer": [
+          "J'ai",
+          "mal",
+          "à",
+          "la",
+          "tête"
+        ],
+        "bank": [
+          "main",
+          "tête",
+          "J'ai",
+          "mal",
+          "pied",
+          "la",
+          "à"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l3-s2",
+        "type": "translate",
+        "prompt": "He has blue eyes",
+        "answer": [
+          "Il",
+          "a",
+          "les",
+          "yeux",
+          "bleus"
+        ],
+        "bank": [
+          "yeux",
+          "bouche",
+          "a",
+          "bleus",
+          "nez",
+          "les",
+          "Il"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l3-s3",
+        "type": "translate",
+        "prompt": "My hand is cold",
+        "answer": [
+          "Ma",
+          "main",
+          "est",
+          "froide"
+        ],
+        "bank": [
+          "froide",
+          "main",
+          "dos",
+          "Ma",
+          "bras",
+          "est"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l4-s1",
+        "type": "translate",
+        "prompt": "The weather is nice today",
+        "answer": [
+          "Il",
+          "fait",
+          "beau",
+          "aujourd'hui"
+        ],
+        "bank": [
+          "froid",
+          "beau",
+          "aujourd'hui",
+          "pleut",
+          "fait",
+          "Il"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l4-s2",
+        "type": "translate",
+        "prompt": "It is raining here",
+        "answer": [
+          "Il",
+          "pleut",
+          "ici"
+        ],
+        "bank": [
+          "pleut",
+          "Il",
+          "ici",
+          "neige",
+          "soleil"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l4-s3",
+        "type": "translate",
+        "prompt": "I like the sun",
+        "answer": [
+          "J'aime",
+          "le",
+          "soleil"
+        ],
+        "bank": [
+          "vent",
+          "pluie",
+          "J'aime",
+          "le",
+          "soleil"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l5-s1",
+        "type": "translate",
+        "prompt": "It is easy",
+        "answer": [
+          "C'est",
+          "facile"
+        ],
+        "bank": [
+          "difficile",
+          "facile",
+          "C'est",
+          "lent"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l5-s2",
+        "type": "translate",
+        "prompt": "The train is fast",
+        "answer": [
+          "Le",
+          "train",
+          "est",
+          "rapide"
+        ],
+        "bank": [
+          "long",
+          "est",
+          "lent",
+          "rapide",
+          "train",
+          "Le"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-l5-s3",
+        "type": "translate",
+        "prompt": "The dress is pretty",
+        "answer": [
+          "La",
+          "robe",
+          "est",
+          "jolie"
+        ],
+        "bank": [
+          "beau",
+          "est",
+          "robe",
+          "court",
+          "jolie",
+          "La"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u7-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u7-w4",
+            "target": "mauvais",
+            "english": "bad"
+          },
+          {
+            "wordId": "fr-a1u7-w7",
+            "target": "chaud",
+            "english": "hot"
+          },
+          {
+            "wordId": "fr-a1u7-w2",
+            "target": "petit",
+            "english": "small"
+          },
+          {
+            "wordId": "fr-a1u7-w1",
+            "target": "grand",
+            "english": "big"
+          },
+          {
+            "wordId": "fr-a1u7-w3",
+            "target": "bon",
+            "english": "good"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u7-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u7-w11",
+            "target": "fatigué",
+            "english": "tired"
+          },
+          {
+            "wordId": "fr-a1u7-w16",
+            "target": "libre",
+            "english": "free"
+          },
+          {
+            "wordId": "fr-a1u7-w15",
+            "target": "occupé",
+            "english": "busy"
+          },
+          {
+            "wordId": "fr-a1u7-w13",
+            "target": "malade",
+            "english": "sick"
+          },
+          {
+            "wordId": "fr-a1u7-w12",
+            "target": "en colère",
+            "english": "angry"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u7-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u7-w19",
+            "target": "le pied",
+            "english": "foot"
+          },
+          {
+            "wordId": "fr-a1u7-w21",
+            "target": "la bouche",
+            "english": "mouth"
+          },
+          {
+            "wordId": "fr-a1u7-w23",
+            "target": "le bras",
+            "english": "arm"
+          },
+          {
+            "wordId": "fr-a1u7-w22",
+            "target": "le nez",
+            "english": "nose"
+          },
+          {
+            "wordId": "fr-a1u7-w24",
+            "target": "le dos",
+            "english": "back"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u7-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u7-w32",
+            "target": "la neige",
+            "english": "snow"
+          },
+          {
+            "wordId": "fr-a1u7-w28",
+            "target": "il fait froid",
+            "english": "it is cold"
+          },
+          {
+            "wordId": "fr-a1u7-w30",
+            "target": "la pluie",
+            "english": "rain"
+          },
+          {
+            "wordId": "fr-a1u7-w26",
+            "target": "il pleut",
+            "english": "it is raining"
+          },
+          {
+            "wordId": "fr-a1u7-w27",
+            "target": "il fait chaud",
+            "english": "it is hot"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u7-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u7-w33",
+            "target": "beau",
+            "english": "beautiful"
+          },
+          {
+            "wordId": "fr-a1u7-w37",
+            "target": "rapide",
+            "english": "fast"
+          },
+          {
+            "wordId": "fr-a1u7-w34",
+            "target": "joli",
+            "english": "pretty"
+          },
+          {
+            "wordId": "fr-a1u7-w38",
+            "target": "lent",
+            "english": "slow"
+          },
+          {
+            "wordId": "fr-a1u7-w36",
+            "target": "difficile",
+            "english": "difficult"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

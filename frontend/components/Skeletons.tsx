@@ -64,11 +64,14 @@ export function LessonRowsSkeleton({ rows = 6 }: { rows?: number }) {
 }
 
 export function LearnSkeleton() {
+  const off = [0, 34, 56, 34, 0];
   return (
     <main className={page}>
       <HeaderSk right="w-16" />
-      <Sk className="h-9 w-48 rounded" />
-      <LessonRowsSkeleton />
+      <Sk className="h-24 w-full rounded-card" />
+      <div className="mt-6 flex flex-col items-center gap-5" aria-hidden="true">
+        {off.map((x, i) => <div key={i} style={{ transform: `translateX(${x}px)` }}><Sk className="h-[72px] w-[72px] rounded-full" /></div>)}
+      </div>
       <TabBar />
     </main>
   );

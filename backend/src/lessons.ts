@@ -1,15 +1,10 @@
-import fr1 from "./content/fr/unit1.json";
-import fr2 from "./content/fr/unit2.json";
-import fr3 from "./content/fr/unit3.json";
-import es1 from "./content/es/unit1.json";
-import es2 from "./content/es/unit2.json";
-import es3 from "./content/es/unit3.json";
+import { RAW_UNITS } from "./content";
 import { UnitSchema, type Exercise, type Lang, type Unit } from "./content/schema";
 
-/** Each language's units in order. A course is just this list walked front to back. */
+/** Each language's units in order (A1, 8 units). A course is just this list walked front to back. */
 export const COURSES: Record<Lang, Unit[]> = {
-  fr: [fr1, fr2, fr3].map((u) => UnitSchema.parse(u)),
-  es: [es1, es2, es3].map((u) => UnitSchema.parse(u)),
+  fr: RAW_UNITS.fr.map((u) => UnitSchema.parse(u)),
+  es: RAW_UNITS.es.map((u) => UnitSchema.parse(u)),
 };
 
 /** The unit a learner is currently working through: the first with an unfinished lesson or

@@ -1,0 +1,2275 @@
+{
+  "lang": "fr",
+  "unit": 5,
+  "level": "A1",
+  "title": "Around town",
+  "blurb": "Find places, ask the way and ask questions.",
+  "speechLang": "fr-FR",
+  "lessons": [
+    {
+      "id": "fr-a1-u5-l1",
+      "title": "Places, part 1",
+      "theme": "places",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w1-te",
+          "type": "mc",
+          "prompt": "What does \"la maison\" mean?",
+          "speak": "la maison",
+          "options": [
+            "house",
+            "park",
+            "school",
+            "restaurant"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w1"
+        },
+        {
+          "id": "fr-a1u5-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"school\"?",
+          "options": [
+            "le magasin",
+            "l'hôpital",
+            "la banque",
+            "l'école"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w2"
+        },
+        {
+          "id": "fr-a1-u5-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w1",
+              "target": "la maison",
+              "english": "house"
+            },
+            {
+              "wordId": "fr-a1u5-w2",
+              "target": "l'école",
+              "english": "school"
+            },
+            {
+              "wordId": "fr-a1u5-w3",
+              "target": "le magasin",
+              "english": "shop"
+            },
+            {
+              "wordId": "fr-a1u5-w4",
+              "target": "le restaurant",
+              "english": "restaurant"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w3-te",
+          "type": "mc",
+          "prompt": "What does \"le magasin\" mean?",
+          "speak": "le magasin",
+          "options": [
+            "restaurant",
+            "bank",
+            "shop",
+            "market"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w3"
+        },
+        {
+          "id": "fr-a1u5-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"restaurant\"?",
+          "options": [
+            "le marché",
+            "l'hôpital",
+            "le restaurant",
+            "le magasin"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w4"
+        },
+        {
+          "id": "fr-a1-u5-l1-s",
+          "type": "translate",
+          "prompt": "I am at home",
+          "answer": [
+            "Je",
+            "suis",
+            "à",
+            "la",
+            "maison"
+          ],
+          "bank": [
+            "parc",
+            "Je",
+            "maison",
+            "école",
+            "à",
+            "suis",
+            "la"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la maison",
+          "english": "house"
+        },
+        {
+          "target": "l'école",
+          "english": "school"
+        },
+        {
+          "target": "le magasin",
+          "english": "shop"
+        },
+        {
+          "target": "le restaurant",
+          "english": "restaurant"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l2",
+      "title": "Places, part 2",
+      "theme": "places",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w5-te",
+          "type": "mc",
+          "prompt": "What does \"l'hôpital\" mean?",
+          "speak": "l'hôpital",
+          "options": [
+            "hospital",
+            "house",
+            "school",
+            "restaurant"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w5"
+        },
+        {
+          "id": "fr-a1u5-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"bank\"?",
+          "options": [
+            "l'hôpital",
+            "la banque",
+            "le parc",
+            "l'école"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u5-w6"
+        },
+        {
+          "id": "fr-a1-u5-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w5",
+              "target": "l'hôpital",
+              "english": "hospital"
+            },
+            {
+              "wordId": "fr-a1u5-w6",
+              "target": "la banque",
+              "english": "bank"
+            },
+            {
+              "wordId": "fr-a1u5-w7",
+              "target": "le marché",
+              "english": "market"
+            },
+            {
+              "wordId": "fr-a1u5-w8",
+              "target": "le parc",
+              "english": "park"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w7-te",
+          "type": "mc",
+          "prompt": "What does \"le marché\" mean?",
+          "speak": "le marché",
+          "options": [
+            "house",
+            "school",
+            "market",
+            "park"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w7"
+        },
+        {
+          "id": "fr-a1u5-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"park\"?",
+          "options": [
+            "le restaurant",
+            "l'école",
+            "le marché",
+            "le parc"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w8"
+        },
+        {
+          "id": "fr-a1-u5-l2-s",
+          "type": "translate",
+          "prompt": "She is at school",
+          "answer": [
+            "Elle",
+            "est",
+            "à",
+            "l'école"
+          ],
+          "bank": [
+            "Elle",
+            "magasin",
+            "à",
+            "l'école",
+            "est",
+            "hôpital"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "l'hôpital",
+          "english": "hospital"
+        },
+        {
+          "target": "la banque",
+          "english": "bank"
+        },
+        {
+          "target": "le marché",
+          "english": "market"
+        },
+        {
+          "target": "le parc",
+          "english": "park"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l3",
+      "title": "Getting around, part 1",
+      "theme": "getting around",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w9-te",
+          "type": "mc",
+          "prompt": "What does \"la rue\" mean?",
+          "speak": "la rue",
+          "options": [
+            "airport",
+            "train",
+            "car",
+            "street"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w9"
+        },
+        {
+          "id": "fr-a1u5-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"station\"?",
+          "options": [
+            "la voiture",
+            "le taxi",
+            "la gare",
+            "le train"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w10"
+        },
+        {
+          "id": "fr-a1-u5-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w9",
+              "target": "la rue",
+              "english": "street"
+            },
+            {
+              "wordId": "fr-a1u5-w10",
+              "target": "la gare",
+              "english": "station"
+            },
+            {
+              "wordId": "fr-a1u5-w11",
+              "target": "l'aéroport",
+              "english": "airport"
+            },
+            {
+              "wordId": "fr-a1u5-w12",
+              "target": "le bus",
+              "english": "bus"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w11-te",
+          "type": "mc",
+          "prompt": "What does \"l'aéroport\" mean?",
+          "speak": "l'aéroport",
+          "options": [
+            "train",
+            "taxi",
+            "bus",
+            "airport"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w11"
+        },
+        {
+          "id": "fr-a1u5-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"bus\"?",
+          "options": [
+            "la gare",
+            "la voiture",
+            "le bus",
+            "le taxi"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w12"
+        },
+        {
+          "id": "fr-a1-u5-l3-s",
+          "type": "translate",
+          "prompt": "A taxi, please",
+          "answer": [
+            "Un",
+            "taxi",
+            "s'il",
+            "vous",
+            "plaît"
+          ],
+          "bank": [
+            "vous",
+            "train",
+            "bus",
+            "plaît",
+            "Un",
+            "s'il",
+            "taxi"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la rue",
+          "english": "street"
+        },
+        {
+          "target": "la gare",
+          "english": "station"
+        },
+        {
+          "target": "l'aéroport",
+          "english": "airport"
+        },
+        {
+          "target": "le bus",
+          "english": "bus"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l4",
+      "title": "Getting around, part 2",
+      "theme": "getting around",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w13-te",
+          "type": "mc",
+          "prompt": "What does \"le taxi\" mean?",
+          "speak": "le taxi",
+          "options": [
+            "taxi",
+            "bus",
+            "car",
+            "street"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w13"
+        },
+        {
+          "id": "fr-a1u5-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"train\"?",
+          "options": [
+            "l'aéroport",
+            "la gare",
+            "le train",
+            "le taxi"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w14"
+        },
+        {
+          "id": "fr-a1-u5-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w13",
+              "target": "le taxi",
+              "english": "taxi"
+            },
+            {
+              "wordId": "fr-a1u5-w14",
+              "target": "le train",
+              "english": "train"
+            },
+            {
+              "wordId": "fr-a1u5-w15",
+              "target": "la voiture",
+              "english": "car"
+            },
+            {
+              "wordId": "fr-a1u5-w16",
+              "target": "le vélo",
+              "english": "bicycle"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w15-te",
+          "type": "mc",
+          "prompt": "What does \"la voiture\" mean?",
+          "speak": "la voiture",
+          "options": [
+            "car",
+            "bus",
+            "train",
+            "airport"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w15"
+        },
+        {
+          "id": "fr-a1u5-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"bicycle\"?",
+          "options": [
+            "le bus",
+            "le vélo",
+            "la gare",
+            "le taxi"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u5-w16"
+        },
+        {
+          "id": "fr-a1-u5-l4-s",
+          "type": "translate",
+          "prompt": "I take the bus",
+          "answer": [
+            "Je",
+            "prends",
+            "le",
+            "bus"
+          ],
+          "bank": [
+            "voiture",
+            "prends",
+            "bus",
+            "Je",
+            "taxi",
+            "le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le taxi",
+          "english": "taxi"
+        },
+        {
+          "target": "le train",
+          "english": "train"
+        },
+        {
+          "target": "la voiture",
+          "english": "car"
+        },
+        {
+          "target": "le vélo",
+          "english": "bicycle"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l5",
+      "title": "Directions, part 1",
+      "theme": "directions",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w17-te",
+          "type": "mc",
+          "prompt": "What does \"à gauche\" mean?",
+          "speak": "à gauche",
+          "options": [
+            "here",
+            "near",
+            "there",
+            "on the left"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w17"
+        },
+        {
+          "id": "fr-a1u5-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"on the right\"?",
+          "options": [
+            "en face de",
+            "là",
+            "à droite",
+            "près"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w18"
+        },
+        {
+          "id": "fr-a1-u5-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w17",
+              "target": "à gauche",
+              "english": "on the left"
+            },
+            {
+              "wordId": "fr-a1u5-w18",
+              "target": "à droite",
+              "english": "on the right"
+            },
+            {
+              "wordId": "fr-a1u5-w19",
+              "target": "tout droit",
+              "english": "straight ahead"
+            },
+            {
+              "wordId": "fr-a1u5-w20",
+              "target": "près",
+              "english": "near"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w19-te",
+          "type": "mc",
+          "prompt": "What does \"tout droit\" mean?",
+          "speak": "tout droit",
+          "options": [
+            "far",
+            "straight ahead",
+            "on the right",
+            "here"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u5-w19"
+        },
+        {
+          "id": "fr-a1u5-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"near\"?",
+          "options": [
+            "près",
+            "loin",
+            "tout droit",
+            "ici"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w20"
+        },
+        {
+          "id": "fr-a1-u5-l5-s",
+          "type": "translate",
+          "prompt": "It is straight ahead",
+          "answer": [
+            "C'est",
+            "tout",
+            "droit"
+          ],
+          "bank": [
+            "C'est",
+            "tout",
+            "près",
+            "droit",
+            "là"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "à gauche",
+          "english": "on the left"
+        },
+        {
+          "target": "à droite",
+          "english": "on the right"
+        },
+        {
+          "target": "tout droit",
+          "english": "straight ahead"
+        },
+        {
+          "target": "près",
+          "english": "near"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l6",
+      "title": "Directions, part 2",
+      "theme": "directions",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w21-te",
+          "type": "mc",
+          "prompt": "What does \"loin\" mean?",
+          "speak": "loin",
+          "options": [
+            "on the left",
+            "near",
+            "far",
+            "straight ahead"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w21"
+        },
+        {
+          "id": "fr-a1u5-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"here\"?",
+          "options": [
+            "ici",
+            "à droite",
+            "près",
+            "à gauche"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w22"
+        },
+        {
+          "id": "fr-a1-u5-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w21",
+              "target": "loin",
+              "english": "far"
+            },
+            {
+              "wordId": "fr-a1u5-w22",
+              "target": "ici",
+              "english": "here"
+            },
+            {
+              "wordId": "fr-a1u5-w23",
+              "target": "là",
+              "english": "there"
+            },
+            {
+              "wordId": "fr-a1u5-w24",
+              "target": "en face de",
+              "english": "opposite"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w23-te",
+          "type": "mc",
+          "prompt": "What does \"là\" mean?",
+          "speak": "là",
+          "options": [
+            "there",
+            "straight ahead",
+            "opposite",
+            "on the left"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w23"
+        },
+        {
+          "id": "fr-a1u5-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"opposite\"?",
+          "options": [
+            "à gauche",
+            "en face de",
+            "là",
+            "tout droit"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u5-w24"
+        },
+        {
+          "id": "fr-a1-u5-l6-s",
+          "type": "translate",
+          "prompt": "Turn left",
+          "answer": [
+            "Tournez",
+            "à",
+            "gauche"
+          ],
+          "bank": [
+            "loin",
+            "à",
+            "gauche",
+            "Tournez",
+            "droite"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "loin",
+          "english": "far"
+        },
+        {
+          "target": "ici",
+          "english": "here"
+        },
+        {
+          "target": "là",
+          "english": "there"
+        },
+        {
+          "target": "en face de",
+          "english": "opposite"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l7",
+      "title": "Where is it, part 1",
+      "theme": "where is it",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w25-te",
+          "type": "mc",
+          "prompt": "What does \"où\" mean?",
+          "speak": "où",
+          "options": [
+            "city",
+            "it is",
+            "there is",
+            "where"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w25"
+        },
+        {
+          "id": "fr-a1u5-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"there is\"?",
+          "options": [
+            "le centre-ville",
+            "il y a",
+            "le pays",
+            "le village"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u5-w26"
+        },
+        {
+          "id": "fr-a1-u5-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w25",
+              "target": "où",
+              "english": "where"
+            },
+            {
+              "wordId": "fr-a1u5-w26",
+              "target": "il y a",
+              "english": "there is"
+            },
+            {
+              "wordId": "fr-a1u5-w27",
+              "target": "la ville",
+              "english": "city"
+            },
+            {
+              "wordId": "fr-a1u5-w28",
+              "target": "le village",
+              "english": "village"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w27-te",
+          "type": "mc",
+          "prompt": "What does \"la ville\" mean?",
+          "speak": "la ville",
+          "options": [
+            "there is",
+            "city centre",
+            "map",
+            "city"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w27"
+        },
+        {
+          "id": "fr-a1u5-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"village\"?",
+          "options": [
+            "le village",
+            "c'est",
+            "le centre-ville",
+            "la ville"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w28"
+        },
+        {
+          "id": "fr-a1-u5-l7-s",
+          "type": "translate",
+          "prompt": "There is a park",
+          "answer": [
+            "Il",
+            "y",
+            "a",
+            "un",
+            "parc"
+          ],
+          "bank": [
+            "parc",
+            "pays",
+            "Il",
+            "un",
+            "village",
+            "a",
+            "y"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "où",
+          "english": "where"
+        },
+        {
+          "target": "il y a",
+          "english": "there is"
+        },
+        {
+          "target": "la ville",
+          "english": "city"
+        },
+        {
+          "target": "le village",
+          "english": "village"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l8",
+      "title": "Where is it, part 2",
+      "theme": "where is it",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w29-te",
+          "type": "mc",
+          "prompt": "What does \"le pays\" mean?",
+          "speak": "le pays",
+          "options": [
+            "it is",
+            "where",
+            "village",
+            "country"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w29"
+        },
+        {
+          "id": "fr-a1u5-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"city centre\"?",
+          "options": [
+            "la ville",
+            "où",
+            "le centre-ville",
+            "le pays"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w30"
+        },
+        {
+          "id": "fr-a1-u5-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w29",
+              "target": "le pays",
+              "english": "country"
+            },
+            {
+              "wordId": "fr-a1u5-w30",
+              "target": "le centre-ville",
+              "english": "city centre"
+            },
+            {
+              "wordId": "fr-a1u5-w31",
+              "target": "la carte",
+              "english": "map"
+            },
+            {
+              "wordId": "fr-a1u5-w32",
+              "target": "c'est",
+              "english": "it is"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w31-te",
+          "type": "mc",
+          "prompt": "What does \"la carte\" mean?",
+          "speak": "la carte",
+          "options": [
+            "map",
+            "city",
+            "city centre",
+            "there is"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w31"
+        },
+        {
+          "id": "fr-a1u5-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"it is\"?",
+          "options": [
+            "le village",
+            "c'est",
+            "la ville",
+            "où"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u5-w32"
+        },
+        {
+          "id": "fr-a1-u5-l8-s",
+          "type": "translate",
+          "prompt": "Where is the station",
+          "answer": [
+            "Où",
+            "est",
+            "la",
+            "gare"
+          ],
+          "bank": [
+            "la",
+            "ville",
+            "est",
+            "Où",
+            "gare",
+            "carte"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le pays",
+          "english": "country"
+        },
+        {
+          "target": "le centre-ville",
+          "english": "city centre"
+        },
+        {
+          "target": "la carte",
+          "english": "map"
+        },
+        {
+          "target": "c'est",
+          "english": "it is"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l9",
+      "title": "Question words, part 1",
+      "theme": "question words",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w33-te",
+          "type": "mc",
+          "prompt": "What does \"qui\" mean?",
+          "speak": "qui",
+          "options": [
+            "who",
+            "what",
+            "how",
+            "which"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w33"
+        },
+        {
+          "id": "fr-a1u5-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"what\"?",
+          "options": [
+            "d'où",
+            "combien",
+            "pourquoi",
+            "que"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w34"
+        },
+        {
+          "id": "fr-a1-u5-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w33",
+              "target": "qui",
+              "english": "who"
+            },
+            {
+              "wordId": "fr-a1u5-w34",
+              "target": "que",
+              "english": "what"
+            },
+            {
+              "wordId": "fr-a1u5-w35",
+              "target": "quand",
+              "english": "when"
+            },
+            {
+              "wordId": "fr-a1u5-w36",
+              "target": "pourquoi",
+              "english": "why"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w35-te",
+          "type": "mc",
+          "prompt": "What does \"quand\" mean?",
+          "speak": "quand",
+          "options": [
+            "which",
+            "from where",
+            "who",
+            "when"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w35"
+        },
+        {
+          "id": "fr-a1u5-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"why\"?",
+          "options": [
+            "d'où",
+            "comment",
+            "quand",
+            "pourquoi"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w36"
+        },
+        {
+          "id": "fr-a1-u5-l9-s",
+          "type": "translate",
+          "prompt": "When is the train",
+          "answer": [
+            "Quand",
+            "est",
+            "le",
+            "train"
+          ],
+          "bank": [
+            "qui",
+            "Quand",
+            "comment",
+            "est",
+            "train",
+            "le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "qui",
+          "english": "who"
+        },
+        {
+          "target": "que",
+          "english": "what"
+        },
+        {
+          "target": "quand",
+          "english": "when"
+        },
+        {
+          "target": "pourquoi",
+          "english": "why"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u5-l10",
+      "title": "Question words, part 2",
+      "theme": "question words",
+      "exercises": [
+        {
+          "id": "fr-a1u5-w37-te",
+          "type": "mc",
+          "prompt": "What does \"comment\" mean?",
+          "speak": "comment",
+          "options": [
+            "how",
+            "from where",
+            "how much",
+            "why"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u5-w37"
+        },
+        {
+          "id": "fr-a1u5-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"how much\"?",
+          "options": [
+            "quel",
+            "comment",
+            "d'où",
+            "combien"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w38"
+        },
+        {
+          "id": "fr-a1-u5-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u5-w37",
+              "target": "comment",
+              "english": "how"
+            },
+            {
+              "wordId": "fr-a1u5-w38",
+              "target": "combien",
+              "english": "how much"
+            },
+            {
+              "wordId": "fr-a1u5-w39",
+              "target": "quel",
+              "english": "which"
+            },
+            {
+              "wordId": "fr-a1u5-w40",
+              "target": "d'où",
+              "english": "from where"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u5-w39-te",
+          "type": "mc",
+          "prompt": "What does \"quel\" mean?",
+          "speak": "quel",
+          "options": [
+            "from where",
+            "what",
+            "which",
+            "why"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u5-w39"
+        },
+        {
+          "id": "fr-a1u5-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"from where\"?",
+          "options": [
+            "combien",
+            "que",
+            "qui",
+            "d'où"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u5-w40"
+        },
+        {
+          "id": "fr-a1-u5-l10-s",
+          "type": "translate",
+          "prompt": "How much does it cost",
+          "answer": [
+            "Combien",
+            "ça",
+            "coûte"
+          ],
+          "bank": [
+            "pourquoi",
+            "coûte",
+            "quel",
+            "Combien",
+            "ça"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "comment",
+          "english": "how"
+        },
+        {
+          "target": "combien",
+          "english": "how much"
+        },
+        {
+          "target": "quel",
+          "english": "which"
+        },
+        {
+          "target": "d'où",
+          "english": "from where"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "fr-a1-u5-cp",
+    "title": "Unit 5 checkpoint",
+    "pool": [
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w1",
+        "type": "mc",
+        "prompt": "What does \"la maison\" mean?",
+        "speak": "la maison",
+        "options": [
+          "from where",
+          "car",
+          "station",
+          "house"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w1"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w2",
+        "type": "mc",
+        "prompt": "How do you say \"school\"?",
+        "options": [
+          "quand",
+          "en face de",
+          "le bus",
+          "l'école"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w2"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w3",
+        "type": "mc",
+        "prompt": "What does \"le magasin\" mean?",
+        "speak": "le magasin",
+        "options": [
+          "country",
+          "shop",
+          "airport",
+          "there"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w3"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w4",
+        "type": "mc",
+        "prompt": "How do you say \"restaurant\"?",
+        "options": [
+          "le pays",
+          "le marché",
+          "loin",
+          "le restaurant"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w4"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w5",
+        "type": "mc",
+        "prompt": "What does \"l'hôpital\" mean?",
+        "speak": "l'hôpital",
+        "options": [
+          "on the left",
+          "market",
+          "hospital",
+          "why"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u5-w5"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w6",
+        "type": "mc",
+        "prompt": "How do you say \"bank\"?",
+        "options": [
+          "c'est",
+          "à droite",
+          "la banque",
+          "le bus"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u5-w6"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w7",
+        "type": "mc",
+        "prompt": "What does \"le marché\" mean?",
+        "speak": "le marché",
+        "options": [
+          "market",
+          "bank",
+          "opposite",
+          "car"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w7"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w8",
+        "type": "mc",
+        "prompt": "How do you say \"park\"?",
+        "options": [
+          "à gauche",
+          "le parc",
+          "la voiture",
+          "là"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w8"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w9",
+        "type": "mc",
+        "prompt": "What does \"la rue\" mean?",
+        "speak": "la rue",
+        "options": [
+          "how much",
+          "shop",
+          "street",
+          "city centre"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u5-w9"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w10",
+        "type": "mc",
+        "prompt": "How do you say \"station\"?",
+        "options": [
+          "la gare",
+          "à gauche",
+          "combien",
+          "où"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w10"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w11",
+        "type": "mc",
+        "prompt": "What does \"l'aéroport\" mean?",
+        "speak": "l'aéroport",
+        "options": [
+          "city",
+          "there is",
+          "on the left",
+          "airport"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w11"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w12",
+        "type": "mc",
+        "prompt": "How do you say \"bus\"?",
+        "options": [
+          "loin",
+          "le bus",
+          "le magasin",
+          "le train"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w12"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w13",
+        "type": "mc",
+        "prompt": "What does \"le taxi\" mean?",
+        "speak": "le taxi",
+        "options": [
+          "park",
+          "taxi",
+          "city",
+          "bus"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w13"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w14",
+        "type": "mc",
+        "prompt": "How do you say \"train\"?",
+        "options": [
+          "la maison",
+          "ici",
+          "c'est",
+          "le train"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w14"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w15",
+        "type": "mc",
+        "prompt": "What does \"la voiture\" mean?",
+        "speak": "la voiture",
+        "options": [
+          "restaurant",
+          "bicycle",
+          "why",
+          "car"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w15"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w16",
+        "type": "mc",
+        "prompt": "How do you say \"bicycle\"?",
+        "options": [
+          "à droite",
+          "comment",
+          "le pays",
+          "le vélo"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w16"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w17",
+        "type": "mc",
+        "prompt": "What does \"à gauche\" mean?",
+        "speak": "à gauche",
+        "options": [
+          "park",
+          "on the left",
+          "how much",
+          "shop"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w17"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w18",
+        "type": "mc",
+        "prompt": "How do you say \"on the right\"?",
+        "options": [
+          "c'est",
+          "le centre-ville",
+          "à droite",
+          "la gare"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u5-w18"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w19",
+        "type": "mc",
+        "prompt": "What does \"tout droit\" mean?",
+        "speak": "tout droit",
+        "options": [
+          "how much",
+          "when",
+          "who",
+          "straight ahead"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w19"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w20",
+        "type": "mc",
+        "prompt": "How do you say \"near\"?",
+        "options": [
+          "près",
+          "la rue",
+          "combien",
+          "à droite"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w20"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w21",
+        "type": "mc",
+        "prompt": "What does \"loin\" mean?",
+        "speak": "loin",
+        "options": [
+          "where",
+          "far",
+          "taxi",
+          "there"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w21"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w22",
+        "type": "mc",
+        "prompt": "How do you say \"here\"?",
+        "options": [
+          "combien",
+          "le pays",
+          "le marché",
+          "ici"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w22"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w23",
+        "type": "mc",
+        "prompt": "What does \"là\" mean?",
+        "speak": "là",
+        "options": [
+          "train",
+          "who",
+          "here",
+          "there"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w23"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w24",
+        "type": "mc",
+        "prompt": "How do you say \"opposite\"?",
+        "options": [
+          "en face de",
+          "la maison",
+          "le taxi",
+          "près"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w24"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w25",
+        "type": "mc",
+        "prompt": "What does \"où\" mean?",
+        "speak": "où",
+        "options": [
+          "there",
+          "school",
+          "car",
+          "where"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w25"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w26",
+        "type": "mc",
+        "prompt": "How do you say \"there is\"?",
+        "options": [
+          "le village",
+          "l'hôpital",
+          "le taxi",
+          "il y a"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w26"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w27",
+        "type": "mc",
+        "prompt": "What does \"la ville\" mean?",
+        "speak": "la ville",
+        "options": [
+          "from where",
+          "far",
+          "taxi",
+          "city"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w27"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w28",
+        "type": "mc",
+        "prompt": "How do you say \"village\"?",
+        "options": [
+          "le village",
+          "le magasin",
+          "près",
+          "il y a"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w28"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w29",
+        "type": "mc",
+        "prompt": "What does \"le pays\" mean?",
+        "speak": "le pays",
+        "options": [
+          "restaurant",
+          "country",
+          "map",
+          "why"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w29"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w30",
+        "type": "mc",
+        "prompt": "How do you say \"city centre\"?",
+        "options": [
+          "le centre-ville",
+          "il y a",
+          "le magasin",
+          "à gauche"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w30"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w31",
+        "type": "mc",
+        "prompt": "What does \"la carte\" mean?",
+        "speak": "la carte",
+        "options": [
+          "station",
+          "taxi",
+          "map",
+          "city centre"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u5-w31"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w32",
+        "type": "mc",
+        "prompt": "How do you say \"it is\"?",
+        "options": [
+          "quand",
+          "la maison",
+          "le centre-ville",
+          "c'est"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w32"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w33",
+        "type": "mc",
+        "prompt": "What does \"qui\" mean?",
+        "speak": "qui",
+        "options": [
+          "country",
+          "car",
+          "on the right",
+          "who"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w33"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w34",
+        "type": "mc",
+        "prompt": "How do you say \"what\"?",
+        "options": [
+          "la carte",
+          "que",
+          "loin",
+          "à gauche"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w34"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w35",
+        "type": "mc",
+        "prompt": "What does \"quand\" mean?",
+        "speak": "quand",
+        "options": [
+          "which",
+          "car",
+          "when",
+          "street"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u5-w35"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w36",
+        "type": "mc",
+        "prompt": "How do you say \"why\"?",
+        "options": [
+          "pourquoi",
+          "c'est",
+          "ici",
+          "l'école"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w36"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w37",
+        "type": "mc",
+        "prompt": "What does \"comment\" mean?",
+        "speak": "comment",
+        "options": [
+          "how",
+          "why",
+          "straight ahead",
+          "when"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w37"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w38",
+        "type": "mc",
+        "prompt": "How do you say \"how much\"?",
+        "options": [
+          "combien",
+          "le marché",
+          "près",
+          "la voiture"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u5-w38"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w39",
+        "type": "mc",
+        "prompt": "What does \"quel\" mean?",
+        "speak": "quel",
+        "options": [
+          "train",
+          "which",
+          "why",
+          "market"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u5-w39"
+      },
+      {
+        "id": "fr-a1-u5-cp-fr-a1u5-w40",
+        "type": "mc",
+        "prompt": "How do you say \"from where\"?",
+        "options": [
+          "le taxi",
+          "le vélo",
+          "la maison",
+          "d'où"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u5-w40"
+      },
+      {
+        "id": "fr-a1-u5-cp-l1-s1",
+        "type": "translate",
+        "prompt": "I am at home",
+        "answer": [
+          "Je",
+          "suis",
+          "à",
+          "la",
+          "maison"
+        ],
+        "bank": [
+          "maison",
+          "suis",
+          "parc",
+          "école",
+          "à",
+          "Je",
+          "la"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l1-s2",
+        "type": "translate",
+        "prompt": "The restaurant is here",
+        "answer": [
+          "Le",
+          "restaurant",
+          "est",
+          "ici"
+        ],
+        "bank": [
+          "banque",
+          "restaurant",
+          "Le",
+          "marché",
+          "est",
+          "ici"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l1-s3",
+        "type": "translate",
+        "prompt": "She is at school",
+        "answer": [
+          "Elle",
+          "est",
+          "à",
+          "l'école"
+        ],
+        "bank": [
+          "magasin",
+          "hôpital",
+          "l'école",
+          "Elle",
+          "à",
+          "est"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l2-s1",
+        "type": "translate",
+        "prompt": "A taxi, please",
+        "answer": [
+          "Un",
+          "taxi",
+          "s'il",
+          "vous",
+          "plaît"
+        ],
+        "bank": [
+          "taxi",
+          "s'il",
+          "vous",
+          "plaît",
+          "Un",
+          "bus",
+          "train"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l2-s2",
+        "type": "translate",
+        "prompt": "The train is here",
+        "answer": [
+          "Le",
+          "train",
+          "est",
+          "ici"
+        ],
+        "bank": [
+          "vélo",
+          "gare",
+          "est",
+          "ici",
+          "train",
+          "Le"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l2-s3",
+        "type": "translate",
+        "prompt": "I take the bus",
+        "answer": [
+          "Je",
+          "prends",
+          "le",
+          "bus"
+        ],
+        "bank": [
+          "prends",
+          "taxi",
+          "voiture",
+          "bus",
+          "le",
+          "Je"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l3-s1",
+        "type": "translate",
+        "prompt": "Turn left",
+        "answer": [
+          "Tournez",
+          "à",
+          "gauche"
+        ],
+        "bank": [
+          "à",
+          "Tournez",
+          "loin",
+          "gauche",
+          "droite"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l3-s2",
+        "type": "translate",
+        "prompt": "It is straight ahead",
+        "answer": [
+          "C'est",
+          "tout",
+          "droit"
+        ],
+        "bank": [
+          "là",
+          "droit",
+          "C'est",
+          "tout",
+          "près"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l3-s3",
+        "type": "translate",
+        "prompt": "The station is far from here",
+        "answer": [
+          "La",
+          "gare",
+          "est",
+          "loin",
+          "d'ici"
+        ],
+        "bank": [
+          "loin",
+          "face",
+          "près",
+          "gare",
+          "est",
+          "d'ici",
+          "La"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l4-s1",
+        "type": "translate",
+        "prompt": "Where is the station",
+        "answer": [
+          "Où",
+          "est",
+          "la",
+          "gare"
+        ],
+        "bank": [
+          "est",
+          "Où",
+          "gare",
+          "carte",
+          "ville",
+          "la"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l4-s2",
+        "type": "translate",
+        "prompt": "There is a park",
+        "answer": [
+          "Il",
+          "y",
+          "a",
+          "un",
+          "parc"
+        ],
+        "bank": [
+          "pays",
+          "a",
+          "parc",
+          "un",
+          "y",
+          "Il",
+          "village"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l4-s3",
+        "type": "translate",
+        "prompt": "The map is here",
+        "answer": [
+          "La",
+          "carte",
+          "est",
+          "ici"
+        ],
+        "bank": [
+          "pays",
+          "est",
+          "où",
+          "carte",
+          "La",
+          "ici"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l5-s1",
+        "type": "translate",
+        "prompt": "Who is it",
+        "answer": [
+          "Qui",
+          "est-ce"
+        ],
+        "bank": [
+          "Qui",
+          "quand",
+          "que",
+          "est-ce"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l5-s2",
+        "type": "translate",
+        "prompt": "How much does it cost",
+        "answer": [
+          "Combien",
+          "ça",
+          "coûte"
+        ],
+        "bank": [
+          "pourquoi",
+          "ça",
+          "Combien",
+          "quel",
+          "coûte"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-l5-s3",
+        "type": "translate",
+        "prompt": "When is the train",
+        "answer": [
+          "Quand",
+          "est",
+          "le",
+          "train"
+        ],
+        "bank": [
+          "qui",
+          "le",
+          "est",
+          "train",
+          "comment",
+          "Quand"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u5-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u5-w5",
+            "target": "l'hôpital",
+            "english": "hospital"
+          },
+          {
+            "wordId": "fr-a1u5-w2",
+            "target": "l'école",
+            "english": "school"
+          },
+          {
+            "wordId": "fr-a1u5-w6",
+            "target": "la banque",
+            "english": "bank"
+          },
+          {
+            "wordId": "fr-a1u5-w8",
+            "target": "le parc",
+            "english": "park"
+          },
+          {
+            "wordId": "fr-a1u5-w4",
+            "target": "le restaurant",
+            "english": "restaurant"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u5-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u5-w12",
+            "target": "le bus",
+            "english": "bus"
+          },
+          {
+            "wordId": "fr-a1u5-w13",
+            "target": "le taxi",
+            "english": "taxi"
+          },
+          {
+            "wordId": "fr-a1u5-w10",
+            "target": "la gare",
+            "english": "station"
+          },
+          {
+            "wordId": "fr-a1u5-w9",
+            "target": "la rue",
+            "english": "street"
+          },
+          {
+            "wordId": "fr-a1u5-w15",
+            "target": "la voiture",
+            "english": "car"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u5-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u5-w18",
+            "target": "à droite",
+            "english": "on the right"
+          },
+          {
+            "wordId": "fr-a1u5-w22",
+            "target": "ici",
+            "english": "here"
+          },
+          {
+            "wordId": "fr-a1u5-w24",
+            "target": "en face de",
+            "english": "opposite"
+          },
+          {
+            "wordId": "fr-a1u5-w21",
+            "target": "loin",
+            "english": "far"
+          },
+          {
+            "wordId": "fr-a1u5-w17",
+            "target": "à gauche",
+            "english": "on the left"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u5-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u5-w30",
+            "target": "le centre-ville",
+            "english": "city centre"
+          },
+          {
+            "wordId": "fr-a1u5-w27",
+            "target": "la ville",
+            "english": "city"
+          },
+          {
+            "wordId": "fr-a1u5-w26",
+            "target": "il y a",
+            "english": "there is"
+          },
+          {
+            "wordId": "fr-a1u5-w28",
+            "target": "le village",
+            "english": "village"
+          },
+          {
+            "wordId": "fr-a1u5-w32",
+            "target": "c'est",
+            "english": "it is"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u5-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u5-w40",
+            "target": "d'où",
+            "english": "from where"
+          },
+          {
+            "wordId": "fr-a1u5-w39",
+            "target": "quel",
+            "english": "which"
+          },
+          {
+            "wordId": "fr-a1u5-w37",
+            "target": "comment",
+            "english": "how"
+          },
+          {
+            "wordId": "fr-a1u5-w33",
+            "target": "qui",
+            "english": "who"
+          },
+          {
+            "wordId": "fr-a1u5-w35",
+            "target": "quand",
+            "english": "when"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

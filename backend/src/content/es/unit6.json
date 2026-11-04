@@ -1,0 +1,2257 @@
+{
+  "lang": "es",
+  "unit": 6,
+  "level": "A1",
+  "title": "Everyday life",
+  "blurb": "Talk about what you do, your home and your day.",
+  "speechLang": "es-ES",
+  "lessons": [
+    {
+      "id": "es-a1-u6-l1",
+      "title": "Common verbs, part 1",
+      "theme": "common verbs",
+      "exercises": [
+        {
+          "id": "es-a1u6-w1-te",
+          "type": "mc",
+          "prompt": "What does \"comer\" mean?",
+          "speak": "comer",
+          "options": [
+            "to go",
+            "to eat",
+            "to sleep",
+            "to see"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u6-w1"
+        },
+        {
+          "id": "es-a1u6-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"to drink\"?",
+          "options": [
+            "beber",
+            "dormir",
+            "hablar",
+            "ver"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w2"
+        },
+        {
+          "id": "es-a1-u6-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w1",
+              "target": "comer",
+              "english": "to eat"
+            },
+            {
+              "wordId": "es-a1u6-w2",
+              "target": "beber",
+              "english": "to drink"
+            },
+            {
+              "wordId": "es-a1u6-w3",
+              "target": "dormir",
+              "english": "to sleep"
+            },
+            {
+              "wordId": "es-a1u6-w4",
+              "target": "ir",
+              "english": "to go"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w3-te",
+          "type": "mc",
+          "prompt": "What does \"dormir\" mean?",
+          "speak": "dormir",
+          "options": [
+            "to drink",
+            "to speak",
+            "to come",
+            "to sleep"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w3"
+        },
+        {
+          "id": "es-a1u6-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"to go\"?",
+          "options": [
+            "comer",
+            "venir",
+            "hablar",
+            "ir"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w4"
+        },
+        {
+          "id": "es-a1-u6-l1-s",
+          "type": "translate",
+          "prompt": "I want to eat",
+          "answer": [
+            "Quiero",
+            "comer"
+          ],
+          "bank": [
+            "beber",
+            "dormir",
+            "comer",
+            "Quiero"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "comer",
+          "english": "to eat"
+        },
+        {
+          "target": "beber",
+          "english": "to drink"
+        },
+        {
+          "target": "dormir",
+          "english": "to sleep"
+        },
+        {
+          "target": "ir",
+          "english": "to go"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l2",
+      "title": "Common verbs, part 2",
+      "theme": "common verbs",
+      "exercises": [
+        {
+          "id": "es-a1u6-w5-te",
+          "type": "mc",
+          "prompt": "What does \"venir\" mean?",
+          "speak": "venir",
+          "options": [
+            "to come",
+            "to speak",
+            "to drink",
+            "to do or make"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w5"
+        },
+        {
+          "id": "es-a1u6-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"to do or make\"?",
+          "options": [
+            "hacer",
+            "venir",
+            "ver",
+            "ir"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w6"
+        },
+        {
+          "id": "es-a1-u6-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w5",
+              "target": "venir",
+              "english": "to come"
+            },
+            {
+              "wordId": "es-a1u6-w6",
+              "target": "hacer",
+              "english": "to do or make"
+            },
+            {
+              "wordId": "es-a1u6-w7",
+              "target": "ver",
+              "english": "to see"
+            },
+            {
+              "wordId": "es-a1u6-w8",
+              "target": "hablar",
+              "english": "to speak"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w7-te",
+          "type": "mc",
+          "prompt": "What does \"ver\" mean?",
+          "speak": "ver",
+          "options": [
+            "to drink",
+            "to eat",
+            "to see",
+            "to do or make"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w7"
+        },
+        {
+          "id": "es-a1u6-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"to speak\"?",
+          "options": [
+            "comer",
+            "hablar",
+            "ver",
+            "ir"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u6-w8"
+        },
+        {
+          "id": "es-a1-u6-l2-s",
+          "type": "translate",
+          "prompt": "You want to drink",
+          "answer": [
+            "Quieres",
+            "beber"
+          ],
+          "bank": [
+            "hacer",
+            "hablar",
+            "Quieres",
+            "beber"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "venir",
+          "english": "to come"
+        },
+        {
+          "target": "hacer",
+          "english": "to do or make"
+        },
+        {
+          "target": "ver",
+          "english": "to see"
+        },
+        {
+          "target": "hablar",
+          "english": "to speak"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l3",
+      "title": "More verbs, part 1",
+      "theme": "more verbs",
+      "exercises": [
+        {
+          "id": "es-a1u6-w9-te",
+          "type": "mc",
+          "prompt": "What does \"tener\" mean?",
+          "speak": "tener",
+          "options": [
+            "to need",
+            "to read",
+            "to have",
+            "to be able to"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w9"
+        },
+        {
+          "id": "es-a1u6-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"to be\"?",
+          "options": [
+            "poder",
+            "saber",
+            "ser",
+            "necesitar"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w10"
+        },
+        {
+          "id": "es-a1-u6-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w9",
+              "target": "tener",
+              "english": "to have"
+            },
+            {
+              "wordId": "es-a1u6-w10",
+              "target": "ser",
+              "english": "to be"
+            },
+            {
+              "wordId": "es-a1u6-w11",
+              "target": "querer",
+              "english": "to want"
+            },
+            {
+              "wordId": "es-a1u6-w12",
+              "target": "poder",
+              "english": "to be able to"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w11-te",
+          "type": "mc",
+          "prompt": "What does \"querer\" mean?",
+          "speak": "querer",
+          "options": [
+            "to write",
+            "to want",
+            "to have",
+            "to know"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u6-w11"
+        },
+        {
+          "id": "es-a1u6-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"to be able to\"?",
+          "options": [
+            "ser",
+            "tener",
+            "poder",
+            "querer"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w12"
+        },
+        {
+          "id": "es-a1-u6-l3-s",
+          "type": "translate",
+          "prompt": "I want a coffee",
+          "answer": [
+            "Quiero",
+            "un",
+            "café"
+          ],
+          "bank": [
+            "puedo",
+            "Quiero",
+            "sé",
+            "un",
+            "café"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "tener",
+          "english": "to have"
+        },
+        {
+          "target": "ser",
+          "english": "to be"
+        },
+        {
+          "target": "querer",
+          "english": "to want"
+        },
+        {
+          "target": "poder",
+          "english": "to be able to"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l4",
+      "title": "More verbs, part 2",
+      "theme": "more verbs",
+      "exercises": [
+        {
+          "id": "es-a1u6-w13-te",
+          "type": "mc",
+          "prompt": "What does \"saber\" mean?",
+          "speak": "saber",
+          "options": [
+            "to know",
+            "to read",
+            "to need",
+            "to be"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w13"
+        },
+        {
+          "id": "es-a1u6-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"to read\"?",
+          "options": [
+            "leer",
+            "necesitar",
+            "escribir",
+            "poder"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w14"
+        },
+        {
+          "id": "es-a1-u6-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w13",
+              "target": "saber",
+              "english": "to know"
+            },
+            {
+              "wordId": "es-a1u6-w14",
+              "target": "leer",
+              "english": "to read"
+            },
+            {
+              "wordId": "es-a1u6-w15",
+              "target": "escribir",
+              "english": "to write"
+            },
+            {
+              "wordId": "es-a1u6-w16",
+              "target": "necesitar",
+              "english": "to need"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w15-te",
+          "type": "mc",
+          "prompt": "What does \"escribir\" mean?",
+          "speak": "escribir",
+          "options": [
+            "to want",
+            "to need",
+            "to be able to",
+            "to write"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w15"
+        },
+        {
+          "id": "es-a1u6-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"to need\"?",
+          "options": [
+            "poder",
+            "querer",
+            "leer",
+            "necesitar"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w16"
+        },
+        {
+          "id": "es-a1-u6-l4-s",
+          "type": "translate",
+          "prompt": "I can read",
+          "answer": [
+            "Puedo",
+            "leer"
+          ],
+          "bank": [
+            "Puedo",
+            "leer",
+            "saber",
+            "escribir"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "saber",
+          "english": "to know"
+        },
+        {
+          "target": "leer",
+          "english": "to read"
+        },
+        {
+          "target": "escribir",
+          "english": "to write"
+        },
+        {
+          "target": "necesitar",
+          "english": "to need"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l5",
+      "title": "At home, part 1",
+      "theme": "at home",
+      "exercises": [
+        {
+          "id": "es-a1u6-w17-te",
+          "type": "mc",
+          "prompt": "What does \"la puerta\" mean?",
+          "speak": "la puerta",
+          "options": [
+            "door",
+            "kitchen",
+            "bed",
+            "bedroom"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w17"
+        },
+        {
+          "id": "es-a1u6-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"window\"?",
+          "options": [
+            "la cocina",
+            "la mesa",
+            "la puerta",
+            "la ventana"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w18"
+        },
+        {
+          "id": "es-a1-u6-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w17",
+              "target": "la puerta",
+              "english": "door"
+            },
+            {
+              "wordId": "es-a1u6-w18",
+              "target": "la ventana",
+              "english": "window"
+            },
+            {
+              "wordId": "es-a1u6-w19",
+              "target": "la mesa",
+              "english": "table"
+            },
+            {
+              "wordId": "es-a1u6-w20",
+              "target": "la silla",
+              "english": "chair"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w19-te",
+          "type": "mc",
+          "prompt": "What does \"la mesa\" mean?",
+          "speak": "la mesa",
+          "options": [
+            "chair",
+            "kitchen",
+            "table",
+            "window"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w19"
+        },
+        {
+          "id": "es-a1u6-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"chair\"?",
+          "options": [
+            "el dormitorio",
+            "la cama",
+            "la puerta",
+            "la silla"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w20"
+        },
+        {
+          "id": "es-a1-u6-l5-s",
+          "type": "translate",
+          "prompt": "The door is here",
+          "answer": [
+            "La",
+            "puerta",
+            "está",
+            "aquí"
+          ],
+          "bank": [
+            "está",
+            "La",
+            "puerta",
+            "ventana",
+            "aquí",
+            "cama"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la puerta",
+          "english": "door"
+        },
+        {
+          "target": "la ventana",
+          "english": "window"
+        },
+        {
+          "target": "la mesa",
+          "english": "table"
+        },
+        {
+          "target": "la silla",
+          "english": "chair"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l6",
+      "title": "At home, part 2",
+      "theme": "at home",
+      "exercises": [
+        {
+          "id": "es-a1u6-w21-te",
+          "type": "mc",
+          "prompt": "What does \"la cama\" mean?",
+          "speak": "la cama",
+          "options": [
+            "bed",
+            "door",
+            "bedroom",
+            "kitchen"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w21"
+        },
+        {
+          "id": "es-a1u6-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"kitchen\"?",
+          "options": [
+            "la mesa",
+            "la cocina",
+            "el baño",
+            "el dormitorio"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u6-w22"
+        },
+        {
+          "id": "es-a1-u6-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w21",
+              "target": "la cama",
+              "english": "bed"
+            },
+            {
+              "wordId": "es-a1u6-w22",
+              "target": "la cocina",
+              "english": "kitchen"
+            },
+            {
+              "wordId": "es-a1u6-w23",
+              "target": "el dormitorio",
+              "english": "bedroom"
+            },
+            {
+              "wordId": "es-a1u6-w24",
+              "target": "el baño",
+              "english": "bathroom"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w23-te",
+          "type": "mc",
+          "prompt": "What does \"el dormitorio\" mean?",
+          "speak": "el dormitorio",
+          "options": [
+            "window",
+            "kitchen",
+            "bathroom",
+            "bedroom"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w23"
+        },
+        {
+          "id": "es-a1u6-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"bathroom\"?",
+          "options": [
+            "el dormitorio",
+            "el baño",
+            "la cama",
+            "la ventana"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u6-w24"
+        },
+        {
+          "id": "es-a1-u6-l6-s",
+          "type": "translate",
+          "prompt": "I am in the kitchen",
+          "answer": [
+            "Estoy",
+            "en",
+            "la",
+            "cocina"
+          ],
+          "bank": [
+            "mesa",
+            "la",
+            "Estoy",
+            "dormitorio",
+            "en",
+            "cocina"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la cama",
+          "english": "bed"
+        },
+        {
+          "target": "la cocina",
+          "english": "kitchen"
+        },
+        {
+          "target": "el dormitorio",
+          "english": "bedroom"
+        },
+        {
+          "target": "el baño",
+          "english": "bathroom"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l7",
+      "title": "Things I use, part 1",
+      "theme": "things i use",
+      "exercises": [
+        {
+          "id": "es-a1u6-w25-te",
+          "type": "mc",
+          "prompt": "What does \"el teléfono\" mean?",
+          "speak": "el teléfono",
+          "options": [
+            "television",
+            "computer",
+            "keys",
+            "phone"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w25"
+        },
+        {
+          "id": "es-a1u6-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"computer\"?",
+          "options": [
+            "la computadora",
+            "las llaves",
+            "el bolígrafo",
+            "la música"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w26"
+        },
+        {
+          "id": "es-a1-u6-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w25",
+              "target": "el teléfono",
+              "english": "phone"
+            },
+            {
+              "wordId": "es-a1u6-w26",
+              "target": "la computadora",
+              "english": "computer"
+            },
+            {
+              "wordId": "es-a1u6-w27",
+              "target": "el libro",
+              "english": "book"
+            },
+            {
+              "wordId": "es-a1u6-w28",
+              "target": "el bolígrafo",
+              "english": "pen"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w27-te",
+          "type": "mc",
+          "prompt": "What does \"el libro\" mean?",
+          "speak": "el libro",
+          "options": [
+            "bag",
+            "television",
+            "music",
+            "book"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w27"
+        },
+        {
+          "id": "es-a1u6-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"pen\"?",
+          "options": [
+            "la televisión",
+            "la música",
+            "el bolígrafo",
+            "el libro"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w28"
+        },
+        {
+          "id": "es-a1-u6-l7-s",
+          "type": "translate",
+          "prompt": "The book is on the table",
+          "answer": [
+            "El",
+            "libro",
+            "está",
+            "en",
+            "la",
+            "mesa"
+          ],
+          "bank": [
+            "la",
+            "bolígrafo",
+            "en",
+            "El",
+            "mesa",
+            "libro",
+            "silla",
+            "está"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el teléfono",
+          "english": "phone"
+        },
+        {
+          "target": "la computadora",
+          "english": "computer"
+        },
+        {
+          "target": "el libro",
+          "english": "book"
+        },
+        {
+          "target": "el bolígrafo",
+          "english": "pen"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l8",
+      "title": "Things I use, part 2",
+      "theme": "things i use",
+      "exercises": [
+        {
+          "id": "es-a1u6-w29-te",
+          "type": "mc",
+          "prompt": "What does \"la bolsa\" mean?",
+          "speak": "la bolsa",
+          "options": [
+            "book",
+            "television",
+            "bag",
+            "computer"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w29"
+        },
+        {
+          "id": "es-a1u6-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"keys\"?",
+          "options": [
+            "las llaves",
+            "el teléfono",
+            "el bolígrafo",
+            "la televisión"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w30"
+        },
+        {
+          "id": "es-a1-u6-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w29",
+              "target": "la bolsa",
+              "english": "bag"
+            },
+            {
+              "wordId": "es-a1u6-w30",
+              "target": "las llaves",
+              "english": "keys"
+            },
+            {
+              "wordId": "es-a1u6-w31",
+              "target": "la televisión",
+              "english": "television"
+            },
+            {
+              "wordId": "es-a1u6-w32",
+              "target": "la música",
+              "english": "music"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w31-te",
+          "type": "mc",
+          "prompt": "What does \"la televisión\" mean?",
+          "speak": "la televisión",
+          "options": [
+            "keys",
+            "bag",
+            "phone",
+            "television"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w31"
+        },
+        {
+          "id": "es-a1u6-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"music\"?",
+          "options": [
+            "las llaves",
+            "el bolígrafo",
+            "la computadora",
+            "la música"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u6-w32"
+        },
+        {
+          "id": "es-a1-u6-l8-s",
+          "type": "translate",
+          "prompt": "I like music",
+          "answer": [
+            "Me",
+            "gusta",
+            "la",
+            "música"
+          ],
+          "bank": [
+            "la",
+            "televisión",
+            "Me",
+            "música",
+            "llaves",
+            "gusta"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la bolsa",
+          "english": "bag"
+        },
+        {
+          "target": "las llaves",
+          "english": "keys"
+        },
+        {
+          "target": "la televisión",
+          "english": "television"
+        },
+        {
+          "target": "la música",
+          "english": "music"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l9",
+      "title": "My day, part 1",
+      "theme": "my day",
+      "exercises": [
+        {
+          "id": "es-a1u6-w33-te",
+          "type": "mc",
+          "prompt": "What does \"despertarse\" mean?",
+          "speak": "despertarse",
+          "options": [
+            "to cook",
+            "to study",
+            "to wake up",
+            "to go home"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w33"
+        },
+        {
+          "id": "es-a1u6-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"to wash\"?",
+          "options": [
+            "descansar",
+            "acostarse",
+            "lavarse",
+            "estudiar"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w34"
+        },
+        {
+          "id": "es-a1-u6-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w33",
+              "target": "despertarse",
+              "english": "to wake up"
+            },
+            {
+              "wordId": "es-a1u6-w34",
+              "target": "lavarse",
+              "english": "to wash"
+            },
+            {
+              "wordId": "es-a1u6-w35",
+              "target": "trabajar",
+              "english": "to work"
+            },
+            {
+              "wordId": "es-a1u6-w36",
+              "target": "estudiar",
+              "english": "to study"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w35-te",
+          "type": "mc",
+          "prompt": "What does \"trabajar\" mean?",
+          "speak": "trabajar",
+          "options": [
+            "to go home",
+            "to work",
+            "to study",
+            "to cook"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u6-w35"
+        },
+        {
+          "id": "es-a1u6-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"to study\"?",
+          "options": [
+            "estudiar",
+            "volver a casa",
+            "descansar",
+            "despertarse"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w36"
+        },
+        {
+          "id": "es-a1-u6-l9-s",
+          "type": "translate",
+          "prompt": "I work in the morning",
+          "answer": [
+            "Trabajo",
+            "por",
+            "la",
+            "mañana"
+          ],
+          "bank": [
+            "mañana",
+            "por",
+            "la",
+            "Trabajo",
+            "estudio",
+            "cocino"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "despertarse",
+          "english": "to wake up"
+        },
+        {
+          "target": "lavarse",
+          "english": "to wash"
+        },
+        {
+          "target": "trabajar",
+          "english": "to work"
+        },
+        {
+          "target": "estudiar",
+          "english": "to study"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u6-l10",
+      "title": "My day, part 2",
+      "theme": "my day",
+      "exercises": [
+        {
+          "id": "es-a1u6-w37-te",
+          "type": "mc",
+          "prompt": "What does \"volver a casa\" mean?",
+          "speak": "volver a casa",
+          "options": [
+            "to wake up",
+            "to go home",
+            "to cook",
+            "to rest"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u6-w37"
+        },
+        {
+          "id": "es-a1u6-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"to cook\"?",
+          "options": [
+            "volver a casa",
+            "trabajar",
+            "cocinar",
+            "acostarse"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w38"
+        },
+        {
+          "id": "es-a1-u6-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u6-w37",
+              "target": "volver a casa",
+              "english": "to go home"
+            },
+            {
+              "wordId": "es-a1u6-w38",
+              "target": "cocinar",
+              "english": "to cook"
+            },
+            {
+              "wordId": "es-a1u6-w39",
+              "target": "acostarse",
+              "english": "to go to bed"
+            },
+            {
+              "wordId": "es-a1u6-w40",
+              "target": "descansar",
+              "english": "to rest"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u6-w39-te",
+          "type": "mc",
+          "prompt": "What does \"acostarse\" mean?",
+          "speak": "acostarse",
+          "options": [
+            "to go to bed",
+            "to wake up",
+            "to rest",
+            "to wash"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u6-w39"
+        },
+        {
+          "id": "es-a1u6-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"to rest\"?",
+          "options": [
+            "acostarse",
+            "estudiar",
+            "descansar",
+            "cocinar"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u6-w40"
+        },
+        {
+          "id": "es-a1-u6-l10-s",
+          "type": "translate",
+          "prompt": "She studies in the afternoon",
+          "answer": [
+            "Ella",
+            "estudia",
+            "por",
+            "la",
+            "tarde"
+          ],
+          "bank": [
+            "tarde",
+            "vuelve",
+            "Ella",
+            "cocina",
+            "por",
+            "la",
+            "estudia"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "volver a casa",
+          "english": "to go home"
+        },
+        {
+          "target": "cocinar",
+          "english": "to cook"
+        },
+        {
+          "target": "acostarse",
+          "english": "to go to bed"
+        },
+        {
+          "target": "descansar",
+          "english": "to rest"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "es-a1-u6-cp",
+    "title": "Unit 6 checkpoint",
+    "pool": [
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w1",
+        "type": "mc",
+        "prompt": "What does \"comer\" mean?",
+        "speak": "comer",
+        "options": [
+          "bedroom",
+          "to eat",
+          "to work",
+          "to go"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w1"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w2",
+        "type": "mc",
+        "prompt": "How do you say \"to drink\"?",
+        "options": [
+          "querer",
+          "la música",
+          "beber",
+          "la cocina"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w2"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w3",
+        "type": "mc",
+        "prompt": "What does \"dormir\" mean?",
+        "speak": "dormir",
+        "options": [
+          "to sleep",
+          "kitchen",
+          "to read",
+          "to want"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w3"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w4",
+        "type": "mc",
+        "prompt": "How do you say \"to go\"?",
+        "options": [
+          "ir",
+          "lavarse",
+          "descansar",
+          "hacer"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w4"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w5",
+        "type": "mc",
+        "prompt": "What does \"venir\" mean?",
+        "speak": "venir",
+        "options": [
+          "music",
+          "to come",
+          "bedroom",
+          "table"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w5"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w6",
+        "type": "mc",
+        "prompt": "How do you say \"to do or make\"?",
+        "options": [
+          "acostarse",
+          "hacer",
+          "estudiar",
+          "necesitar"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w6"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w7",
+        "type": "mc",
+        "prompt": "What does \"ver\" mean?",
+        "speak": "ver",
+        "options": [
+          "to see",
+          "television",
+          "to have",
+          "to want"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w7"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w8",
+        "type": "mc",
+        "prompt": "How do you say \"to speak\"?",
+        "options": [
+          "descansar",
+          "hablar",
+          "volver a casa",
+          "ir"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w8"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w9",
+        "type": "mc",
+        "prompt": "What does \"tener\" mean?",
+        "speak": "tener",
+        "options": [
+          "to have",
+          "to come",
+          "to speak",
+          "music"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w9"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w10",
+        "type": "mc",
+        "prompt": "How do you say \"to be\"?",
+        "options": [
+          "ser",
+          "despertarse",
+          "poder",
+          "querer"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w10"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w11",
+        "type": "mc",
+        "prompt": "What does \"querer\" mean?",
+        "speak": "querer",
+        "options": [
+          "door",
+          "to sleep",
+          "to want",
+          "table"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w11"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w12",
+        "type": "mc",
+        "prompt": "How do you say \"to be able to\"?",
+        "options": [
+          "poder",
+          "la música",
+          "lavarse",
+          "la silla"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w12"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w13",
+        "type": "mc",
+        "prompt": "What does \"saber\" mean?",
+        "speak": "saber",
+        "options": [
+          "to wash",
+          "to rest",
+          "to know",
+          "window"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w13"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w14",
+        "type": "mc",
+        "prompt": "How do you say \"to read\"?",
+        "options": [
+          "la cocina",
+          "leer",
+          "ver",
+          "volver a casa"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w14"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w15",
+        "type": "mc",
+        "prompt": "What does \"escribir\" mean?",
+        "speak": "escribir",
+        "options": [
+          "music",
+          "to study",
+          "to go",
+          "to write"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w15"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w16",
+        "type": "mc",
+        "prompt": "How do you say \"to need\"?",
+        "options": [
+          "necesitar",
+          "la puerta",
+          "descansar",
+          "la música"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w16"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w17",
+        "type": "mc",
+        "prompt": "What does \"la puerta\" mean?",
+        "speak": "la puerta",
+        "options": [
+          "to go",
+          "to work",
+          "door",
+          "to eat"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w17"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w18",
+        "type": "mc",
+        "prompt": "How do you say \"window\"?",
+        "options": [
+          "la cocina",
+          "poder",
+          "la ventana",
+          "la cama"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w18"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w19",
+        "type": "mc",
+        "prompt": "What does \"la mesa\" mean?",
+        "speak": "la mesa",
+        "options": [
+          "table",
+          "music",
+          "kitchen",
+          "to see"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w19"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w20",
+        "type": "mc",
+        "prompt": "How do you say \"chair\"?",
+        "options": [
+          "la silla",
+          "la cama",
+          "el dormitorio",
+          "la puerta"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w20"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w21",
+        "type": "mc",
+        "prompt": "What does \"la cama\" mean?",
+        "speak": "la cama",
+        "options": [
+          "to speak",
+          "to see",
+          "computer",
+          "bed"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w21"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w22",
+        "type": "mc",
+        "prompt": "How do you say \"kitchen\"?",
+        "options": [
+          "la cocina",
+          "hacer",
+          "estudiar",
+          "lavarse"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w22"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w23",
+        "type": "mc",
+        "prompt": "What does \"el dormitorio\" mean?",
+        "speak": "el dormitorio",
+        "options": [
+          "book",
+          "to know",
+          "to speak",
+          "bedroom"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w23"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w24",
+        "type": "mc",
+        "prompt": "How do you say \"bathroom\"?",
+        "options": [
+          "lavarse",
+          "trabajar",
+          "beber",
+          "el baño"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w24"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w25",
+        "type": "mc",
+        "prompt": "What does \"el teléfono\" mean?",
+        "speak": "el teléfono",
+        "options": [
+          "phone",
+          "to rest",
+          "to study",
+          "to know"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w25"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w26",
+        "type": "mc",
+        "prompt": "How do you say \"computer\"?",
+        "options": [
+          "poder",
+          "ir",
+          "la cocina",
+          "la computadora"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w26"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w27",
+        "type": "mc",
+        "prompt": "What does \"el libro\" mean?",
+        "speak": "el libro",
+        "options": [
+          "book",
+          "chair",
+          "to eat",
+          "to be"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u6-w27"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w28",
+        "type": "mc",
+        "prompt": "How do you say \"pen\"?",
+        "options": [
+          "tener",
+          "la puerta",
+          "el bolígrafo",
+          "comer"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w28"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w29",
+        "type": "mc",
+        "prompt": "What does \"la bolsa\" mean?",
+        "speak": "la bolsa",
+        "options": [
+          "to be able to",
+          "bag",
+          "to speak",
+          "to drink"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w29"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w30",
+        "type": "mc",
+        "prompt": "How do you say \"keys\"?",
+        "options": [
+          "poder",
+          "saber",
+          "las llaves",
+          "dormir"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w30"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w31",
+        "type": "mc",
+        "prompt": "What does \"la televisión\" mean?",
+        "speak": "la televisión",
+        "options": [
+          "to study",
+          "television",
+          "to see",
+          "door"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w31"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w32",
+        "type": "mc",
+        "prompt": "How do you say \"music\"?",
+        "options": [
+          "escribir",
+          "tener",
+          "el baño",
+          "la música"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w32"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w33",
+        "type": "mc",
+        "prompt": "What does \"despertarse\" mean?",
+        "speak": "despertarse",
+        "options": [
+          "bedroom",
+          "table",
+          "to wake up",
+          "to wash"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w33"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w34",
+        "type": "mc",
+        "prompt": "How do you say \"to wash\"?",
+        "options": [
+          "volver a casa",
+          "ver",
+          "la mesa",
+          "lavarse"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w34"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w35",
+        "type": "mc",
+        "prompt": "What does \"trabajar\" mean?",
+        "speak": "trabajar",
+        "options": [
+          "to wash",
+          "pen",
+          "to work",
+          "music"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w35"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w36",
+        "type": "mc",
+        "prompt": "How do you say \"to study\"?",
+        "options": [
+          "la cama",
+          "tener",
+          "la bolsa",
+          "estudiar"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w36"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w37",
+        "type": "mc",
+        "prompt": "What does \"volver a casa\" mean?",
+        "speak": "volver a casa",
+        "options": [
+          "to write",
+          "to see",
+          "to go home",
+          "to drink"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w37"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w38",
+        "type": "mc",
+        "prompt": "How do you say \"to cook\"?",
+        "options": [
+          "dormir",
+          "la silla",
+          "cocinar",
+          "el baño"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u6-w38"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w39",
+        "type": "mc",
+        "prompt": "What does \"acostarse\" mean?",
+        "speak": "acostarse",
+        "options": [
+          "bedroom",
+          "chair",
+          "to write",
+          "to go to bed"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u6-w39"
+      },
+      {
+        "id": "es-a1-u6-cp-es-a1u6-w40",
+        "type": "mc",
+        "prompt": "How do you say \"to rest\"?",
+        "options": [
+          "saber",
+          "descansar",
+          "la cama",
+          "cocinar"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u6-w40"
+      },
+      {
+        "id": "es-a1-u6-cp-l1-s1",
+        "type": "translate",
+        "prompt": "I want to eat",
+        "answer": [
+          "Quiero",
+          "comer"
+        ],
+        "bank": [
+          "dormir",
+          "beber",
+          "comer",
+          "Quiero"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l1-s2",
+        "type": "translate",
+        "prompt": "We are going to the park",
+        "answer": [
+          "Vamos",
+          "al",
+          "parque"
+        ],
+        "bank": [
+          "ver",
+          "al",
+          "parque",
+          "venimos",
+          "Vamos"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l1-s3",
+        "type": "translate",
+        "prompt": "You want to drink",
+        "answer": [
+          "Quieres",
+          "beber"
+        ],
+        "bank": [
+          "hablar",
+          "Quieres",
+          "hacer",
+          "beber"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I want a coffee",
+        "answer": [
+          "Quiero",
+          "un",
+          "café"
+        ],
+        "bank": [
+          "un",
+          "café",
+          "sé",
+          "Quiero",
+          "puedo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l2-s2",
+        "type": "translate",
+        "prompt": "I can read",
+        "answer": [
+          "Puedo",
+          "leer"
+        ],
+        "bank": [
+          "Puedo",
+          "leer",
+          "saber",
+          "escribir"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l2-s3",
+        "type": "translate",
+        "prompt": "You know how to write",
+        "answer": [
+          "Sabes",
+          "escribir"
+        ],
+        "bank": [
+          "Sabes",
+          "leer",
+          "quiero",
+          "escribir"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l3-s1",
+        "type": "translate",
+        "prompt": "The door is here",
+        "answer": [
+          "La",
+          "puerta",
+          "está",
+          "aquí"
+        ],
+        "bank": [
+          "aquí",
+          "puerta",
+          "ventana",
+          "cama",
+          "está",
+          "La"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l3-s2",
+        "type": "translate",
+        "prompt": "I am in the kitchen",
+        "answer": [
+          "Estoy",
+          "en",
+          "la",
+          "cocina"
+        ],
+        "bank": [
+          "mesa",
+          "en",
+          "cocina",
+          "la",
+          "Estoy",
+          "dormitorio"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l3-s3",
+        "type": "translate",
+        "prompt": "The bed is big",
+        "answer": [
+          "La",
+          "cama",
+          "es",
+          "grande"
+        ],
+        "bank": [
+          "es",
+          "La",
+          "grande",
+          "pequeña",
+          "silla",
+          "cama"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l4-s1",
+        "type": "translate",
+        "prompt": "Where is my phone",
+        "answer": [
+          "Dónde",
+          "está",
+          "mi",
+          "teléfono"
+        ],
+        "bank": [
+          "teléfono",
+          "mi",
+          "bolsa",
+          "está",
+          "libro",
+          "Dónde"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l4-s2",
+        "type": "translate",
+        "prompt": "I like music",
+        "answer": [
+          "Me",
+          "gusta",
+          "la",
+          "música"
+        ],
+        "bank": [
+          "la",
+          "Me",
+          "televisión",
+          "llaves",
+          "música",
+          "gusta"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l4-s3",
+        "type": "translate",
+        "prompt": "The book is on the table",
+        "answer": [
+          "El",
+          "libro",
+          "está",
+          "en",
+          "la",
+          "mesa"
+        ],
+        "bank": [
+          "libro",
+          "silla",
+          "mesa",
+          "la",
+          "en",
+          "está",
+          "El",
+          "bolígrafo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l5-s1",
+        "type": "translate",
+        "prompt": "I work in the morning",
+        "answer": [
+          "Trabajo",
+          "por",
+          "la",
+          "mañana"
+        ],
+        "bank": [
+          "Trabajo",
+          "por",
+          "cocino",
+          "estudio",
+          "la",
+          "mañana"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l5-s2",
+        "type": "translate",
+        "prompt": "She studies in the afternoon",
+        "answer": [
+          "Ella",
+          "estudia",
+          "por",
+          "la",
+          "tarde"
+        ],
+        "bank": [
+          "cocina",
+          "por",
+          "Ella",
+          "vuelve",
+          "tarde",
+          "estudia",
+          "la"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-l5-s3",
+        "type": "translate",
+        "prompt": "I go to bed at night",
+        "answer": [
+          "Me",
+          "acuesto",
+          "por",
+          "la",
+          "noche"
+        ],
+        "bank": [
+          "la",
+          "por",
+          "acuesto",
+          "noche",
+          "Me",
+          "levanto",
+          "lavo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u6-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u6-w3",
+            "target": "dormir",
+            "english": "to sleep"
+          },
+          {
+            "wordId": "es-a1u6-w6",
+            "target": "hacer",
+            "english": "to do or make"
+          },
+          {
+            "wordId": "es-a1u6-w8",
+            "target": "hablar",
+            "english": "to speak"
+          },
+          {
+            "wordId": "es-a1u6-w1",
+            "target": "comer",
+            "english": "to eat"
+          },
+          {
+            "wordId": "es-a1u6-w4",
+            "target": "ir",
+            "english": "to go"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u6-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u6-w10",
+            "target": "ser",
+            "english": "to be"
+          },
+          {
+            "wordId": "es-a1u6-w12",
+            "target": "poder",
+            "english": "to be able to"
+          },
+          {
+            "wordId": "es-a1u6-w9",
+            "target": "tener",
+            "english": "to have"
+          },
+          {
+            "wordId": "es-a1u6-w15",
+            "target": "escribir",
+            "english": "to write"
+          },
+          {
+            "wordId": "es-a1u6-w13",
+            "target": "saber",
+            "english": "to know"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u6-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u6-w23",
+            "target": "el dormitorio",
+            "english": "bedroom"
+          },
+          {
+            "wordId": "es-a1u6-w18",
+            "target": "la ventana",
+            "english": "window"
+          },
+          {
+            "wordId": "es-a1u6-w21",
+            "target": "la cama",
+            "english": "bed"
+          },
+          {
+            "wordId": "es-a1u6-w22",
+            "target": "la cocina",
+            "english": "kitchen"
+          },
+          {
+            "wordId": "es-a1u6-w24",
+            "target": "el baño",
+            "english": "bathroom"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u6-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u6-w29",
+            "target": "la bolsa",
+            "english": "bag"
+          },
+          {
+            "wordId": "es-a1u6-w28",
+            "target": "el bolígrafo",
+            "english": "pen"
+          },
+          {
+            "wordId": "es-a1u6-w27",
+            "target": "el libro",
+            "english": "book"
+          },
+          {
+            "wordId": "es-a1u6-w32",
+            "target": "la música",
+            "english": "music"
+          },
+          {
+            "wordId": "es-a1u6-w31",
+            "target": "la televisión",
+            "english": "television"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u6-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u6-w36",
+            "target": "estudiar",
+            "english": "to study"
+          },
+          {
+            "wordId": "es-a1u6-w34",
+            "target": "lavarse",
+            "english": "to wash"
+          },
+          {
+            "wordId": "es-a1u6-w33",
+            "target": "despertarse",
+            "english": "to wake up"
+          },
+          {
+            "wordId": "es-a1u6-w38",
+            "target": "cocinar",
+            "english": "to cook"
+          },
+          {
+            "wordId": "es-a1u6-w39",
+            "target": "acostarse",
+            "english": "to go to bed"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

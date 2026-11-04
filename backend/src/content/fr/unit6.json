@@ -1,0 +1,2275 @@
+{
+  "lang": "fr",
+  "unit": 6,
+  "level": "A1",
+  "title": "Everyday life",
+  "blurb": "Talk about what you do, your home and your day.",
+  "speechLang": "fr-FR",
+  "lessons": [
+    {
+      "id": "fr-a1-u6-l1",
+      "title": "Common verbs, part 1",
+      "theme": "common verbs",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w1-te",
+          "type": "mc",
+          "prompt": "What does \"manger\" mean?",
+          "speak": "manger",
+          "options": [
+            "to sleep",
+            "to speak",
+            "to eat",
+            "to come"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u6-w1"
+        },
+        {
+          "id": "fr-a1u6-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"to drink\"?",
+          "options": [
+            "boire",
+            "aller",
+            "voir",
+            "faire"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w2"
+        },
+        {
+          "id": "fr-a1-u6-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w1",
+              "target": "manger",
+              "english": "to eat"
+            },
+            {
+              "wordId": "fr-a1u6-w2",
+              "target": "boire",
+              "english": "to drink"
+            },
+            {
+              "wordId": "fr-a1u6-w3",
+              "target": "dormir",
+              "english": "to sleep"
+            },
+            {
+              "wordId": "fr-a1u6-w4",
+              "target": "aller",
+              "english": "to go"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w3-te",
+          "type": "mc",
+          "prompt": "What does \"dormir\" mean?",
+          "speak": "dormir",
+          "options": [
+            "to drink",
+            "to speak",
+            "to come",
+            "to sleep"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w3"
+        },
+        {
+          "id": "fr-a1u6-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"to go\"?",
+          "options": [
+            "venir",
+            "voir",
+            "dormir",
+            "aller"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w4"
+        },
+        {
+          "id": "fr-a1-u6-l1-s",
+          "type": "translate",
+          "prompt": "We are going to the park",
+          "answer": [
+            "Nous",
+            "allons",
+            "au",
+            "parc"
+          ],
+          "bank": [
+            "au",
+            "allons",
+            "voir",
+            "Nous",
+            "parc",
+            "venons"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "manger",
+          "english": "to eat"
+        },
+        {
+          "target": "boire",
+          "english": "to drink"
+        },
+        {
+          "target": "dormir",
+          "english": "to sleep"
+        },
+        {
+          "target": "aller",
+          "english": "to go"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l2",
+      "title": "Common verbs, part 2",
+      "theme": "common verbs",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w5-te",
+          "type": "mc",
+          "prompt": "What does \"venir\" mean?",
+          "speak": "venir",
+          "options": [
+            "to speak",
+            "to come",
+            "to drink",
+            "to eat"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w5"
+        },
+        {
+          "id": "fr-a1u6-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"to do or make\"?",
+          "options": [
+            "parler",
+            "dormir",
+            "boire",
+            "faire"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w6"
+        },
+        {
+          "id": "fr-a1-u6-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w5",
+              "target": "venir",
+              "english": "to come"
+            },
+            {
+              "wordId": "fr-a1u6-w6",
+              "target": "faire",
+              "english": "to do or make"
+            },
+            {
+              "wordId": "fr-a1u6-w7",
+              "target": "voir",
+              "english": "to see"
+            },
+            {
+              "wordId": "fr-a1u6-w8",
+              "target": "parler",
+              "english": "to speak"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w7-te",
+          "type": "mc",
+          "prompt": "What does \"voir\" mean?",
+          "speak": "voir",
+          "options": [
+            "to see",
+            "to speak",
+            "to go",
+            "to eat"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w7"
+        },
+        {
+          "id": "fr-a1u6-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"to speak\"?",
+          "options": [
+            "manger",
+            "boire",
+            "parler",
+            "voir"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u6-w8"
+        },
+        {
+          "id": "fr-a1-u6-l2-s",
+          "type": "translate",
+          "prompt": "I want to eat",
+          "answer": [
+            "Je",
+            "veux",
+            "manger"
+          ],
+          "bank": [
+            "boire",
+            "manger",
+            "veux",
+            "dormir",
+            "Je"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "venir",
+          "english": "to come"
+        },
+        {
+          "target": "faire",
+          "english": "to do or make"
+        },
+        {
+          "target": "voir",
+          "english": "to see"
+        },
+        {
+          "target": "parler",
+          "english": "to speak"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l3",
+      "title": "More verbs, part 1",
+      "theme": "more verbs",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w9-te",
+          "type": "mc",
+          "prompt": "What does \"avoir\" mean?",
+          "speak": "avoir",
+          "options": [
+            "to like",
+            "to have",
+            "to want",
+            "to write"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w9"
+        },
+        {
+          "id": "fr-a1u6-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"to be\"?",
+          "options": [
+            "être",
+            "vouloir",
+            "pouvoir",
+            "savoir"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w10"
+        },
+        {
+          "id": "fr-a1-u6-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w9",
+              "target": "avoir",
+              "english": "to have"
+            },
+            {
+              "wordId": "fr-a1u6-w10",
+              "target": "être",
+              "english": "to be"
+            },
+            {
+              "wordId": "fr-a1u6-w11",
+              "target": "vouloir",
+              "english": "to want"
+            },
+            {
+              "wordId": "fr-a1u6-w12",
+              "target": "pouvoir",
+              "english": "to be able to"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w11-te",
+          "type": "mc",
+          "prompt": "What does \"vouloir\" mean?",
+          "speak": "vouloir",
+          "options": [
+            "to want",
+            "to know",
+            "to be",
+            "to have"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w11"
+        },
+        {
+          "id": "fr-a1u6-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"to be able to\"?",
+          "options": [
+            "vouloir",
+            "pouvoir",
+            "savoir",
+            "être"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w12"
+        },
+        {
+          "id": "fr-a1-u6-l3-s",
+          "type": "translate",
+          "prompt": "I want a coffee",
+          "answer": [
+            "Je",
+            "veux",
+            "un",
+            "café"
+          ],
+          "bank": [
+            "Je",
+            "veux",
+            "peux",
+            "café",
+            "sais",
+            "un"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "avoir",
+          "english": "to have"
+        },
+        {
+          "target": "être",
+          "english": "to be"
+        },
+        {
+          "target": "vouloir",
+          "english": "to want"
+        },
+        {
+          "target": "pouvoir",
+          "english": "to be able to"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l4",
+      "title": "More verbs, part 2",
+      "theme": "more verbs",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w13-te",
+          "type": "mc",
+          "prompt": "What does \"savoir\" mean?",
+          "speak": "savoir",
+          "options": [
+            "to like",
+            "to be",
+            "to read",
+            "to know"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w13"
+        },
+        {
+          "id": "fr-a1u6-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"to read\"?",
+          "options": [
+            "lire",
+            "écrire",
+            "savoir",
+            "pouvoir"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w14"
+        },
+        {
+          "id": "fr-a1-u6-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w13",
+              "target": "savoir",
+              "english": "to know"
+            },
+            {
+              "wordId": "fr-a1u6-w14",
+              "target": "lire",
+              "english": "to read"
+            },
+            {
+              "wordId": "fr-a1u6-w15",
+              "target": "écrire",
+              "english": "to write"
+            },
+            {
+              "wordId": "fr-a1u6-w16",
+              "target": "aimer",
+              "english": "to like"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w15-te",
+          "type": "mc",
+          "prompt": "What does \"écrire\" mean?",
+          "speak": "écrire",
+          "options": [
+            "to be",
+            "to write",
+            "to want",
+            "to read"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w15"
+        },
+        {
+          "id": "fr-a1u6-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"to like\"?",
+          "options": [
+            "aimer",
+            "vouloir",
+            "lire",
+            "savoir"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w16"
+        },
+        {
+          "id": "fr-a1-u6-l4-s",
+          "type": "translate",
+          "prompt": "You know how to write",
+          "answer": [
+            "Tu",
+            "sais",
+            "écrire"
+          ],
+          "bank": [
+            "écrire",
+            "Tu",
+            "lire",
+            "veux",
+            "sais"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "savoir",
+          "english": "to know"
+        },
+        {
+          "target": "lire",
+          "english": "to read"
+        },
+        {
+          "target": "écrire",
+          "english": "to write"
+        },
+        {
+          "target": "aimer",
+          "english": "to like"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l5",
+      "title": "At home, part 1",
+      "theme": "at home",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w17-te",
+          "type": "mc",
+          "prompt": "What does \"la porte\" mean?",
+          "speak": "la porte",
+          "options": [
+            "door",
+            "chair",
+            "bed",
+            "kitchen"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w17"
+        },
+        {
+          "id": "fr-a1u6-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"window\"?",
+          "options": [
+            "la fenêtre",
+            "la porte",
+            "la chaise",
+            "la cuisine"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w18"
+        },
+        {
+          "id": "fr-a1-u6-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w17",
+              "target": "la porte",
+              "english": "door"
+            },
+            {
+              "wordId": "fr-a1u6-w18",
+              "target": "la fenêtre",
+              "english": "window"
+            },
+            {
+              "wordId": "fr-a1u6-w19",
+              "target": "la table",
+              "english": "table"
+            },
+            {
+              "wordId": "fr-a1u6-w20",
+              "target": "la chaise",
+              "english": "chair"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w19-te",
+          "type": "mc",
+          "prompt": "What does \"la table\" mean?",
+          "speak": "la table",
+          "options": [
+            "bathroom",
+            "bed",
+            "bedroom",
+            "table"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w19"
+        },
+        {
+          "id": "fr-a1u6-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"chair\"?",
+          "options": [
+            "la salle de bain",
+            "la cuisine",
+            "la chaise",
+            "la porte"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u6-w20"
+        },
+        {
+          "id": "fr-a1-u6-l5-s",
+          "type": "translate",
+          "prompt": "The door is here",
+          "answer": [
+            "La",
+            "porte",
+            "est",
+            "ici"
+          ],
+          "bank": [
+            "est",
+            "porte",
+            "fenêtre",
+            "La",
+            "ici",
+            "lit"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la porte",
+          "english": "door"
+        },
+        {
+          "target": "la fenêtre",
+          "english": "window"
+        },
+        {
+          "target": "la table",
+          "english": "table"
+        },
+        {
+          "target": "la chaise",
+          "english": "chair"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l6",
+      "title": "At home, part 2",
+      "theme": "at home",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w21-te",
+          "type": "mc",
+          "prompt": "What does \"le lit\" mean?",
+          "speak": "le lit",
+          "options": [
+            "bathroom",
+            "bedroom",
+            "bed",
+            "chair"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u6-w21"
+        },
+        {
+          "id": "fr-a1u6-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"kitchen\"?",
+          "options": [
+            "le lit",
+            "la salle de bain",
+            "la porte",
+            "la cuisine"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w22"
+        },
+        {
+          "id": "fr-a1-u6-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w21",
+              "target": "le lit",
+              "english": "bed"
+            },
+            {
+              "wordId": "fr-a1u6-w22",
+              "target": "la cuisine",
+              "english": "kitchen"
+            },
+            {
+              "wordId": "fr-a1u6-w23",
+              "target": "la chambre",
+              "english": "bedroom"
+            },
+            {
+              "wordId": "fr-a1u6-w24",
+              "target": "la salle de bain",
+              "english": "bathroom"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w23-te",
+          "type": "mc",
+          "prompt": "What does \"la chambre\" mean?",
+          "speak": "la chambre",
+          "options": [
+            "bed",
+            "bedroom",
+            "chair",
+            "kitchen"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w23"
+        },
+        {
+          "id": "fr-a1u6-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"bathroom\"?",
+          "options": [
+            "la salle de bain",
+            "la cuisine",
+            "le lit",
+            "la fenêtre"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w24"
+        },
+        {
+          "id": "fr-a1-u6-l6-s",
+          "type": "translate",
+          "prompt": "I am in the kitchen",
+          "answer": [
+            "Je",
+            "suis",
+            "dans",
+            "la",
+            "cuisine"
+          ],
+          "bank": [
+            "suis",
+            "chambre",
+            "table",
+            "Je",
+            "la",
+            "dans",
+            "cuisine"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le lit",
+          "english": "bed"
+        },
+        {
+          "target": "la cuisine",
+          "english": "kitchen"
+        },
+        {
+          "target": "la chambre",
+          "english": "bedroom"
+        },
+        {
+          "target": "la salle de bain",
+          "english": "bathroom"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l7",
+      "title": "Things I use, part 1",
+      "theme": "things i use",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w25-te",
+          "type": "mc",
+          "prompt": "What does \"le téléphone\" mean?",
+          "speak": "le téléphone",
+          "options": [
+            "book",
+            "pen",
+            "phone",
+            "computer"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u6-w25"
+        },
+        {
+          "id": "fr-a1u6-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"computer\"?",
+          "options": [
+            "le livre",
+            "le téléphone",
+            "la musique",
+            "l'ordinateur"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w26"
+        },
+        {
+          "id": "fr-a1-u6-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w25",
+              "target": "le téléphone",
+              "english": "phone"
+            },
+            {
+              "wordId": "fr-a1u6-w26",
+              "target": "l'ordinateur",
+              "english": "computer"
+            },
+            {
+              "wordId": "fr-a1u6-w27",
+              "target": "le livre",
+              "english": "book"
+            },
+            {
+              "wordId": "fr-a1u6-w28",
+              "target": "le stylo",
+              "english": "pen"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w27-te",
+          "type": "mc",
+          "prompt": "What does \"le livre\" mean?",
+          "speak": "le livre",
+          "options": [
+            "book",
+            "computer",
+            "bag",
+            "pen"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w27"
+        },
+        {
+          "id": "fr-a1u6-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"pen\"?",
+          "options": [
+            "la musique",
+            "le livre",
+            "les clés",
+            "le stylo"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w28"
+        },
+        {
+          "id": "fr-a1-u6-l7-s",
+          "type": "translate",
+          "prompt": "I like music",
+          "answer": [
+            "J'aime",
+            "la",
+            "musique"
+          ],
+          "bank": [
+            "télévision",
+            "la",
+            "clés",
+            "J'aime",
+            "musique"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le téléphone",
+          "english": "phone"
+        },
+        {
+          "target": "l'ordinateur",
+          "english": "computer"
+        },
+        {
+          "target": "le livre",
+          "english": "book"
+        },
+        {
+          "target": "le stylo",
+          "english": "pen"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l8",
+      "title": "Things I use, part 2",
+      "theme": "things i use",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w29-te",
+          "type": "mc",
+          "prompt": "What does \"le sac\" mean?",
+          "speak": "le sac",
+          "options": [
+            "phone",
+            "music",
+            "bag",
+            "keys"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u6-w29"
+        },
+        {
+          "id": "fr-a1u6-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"keys\"?",
+          "options": [
+            "le sac",
+            "les clés",
+            "le téléphone",
+            "la musique"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w30"
+        },
+        {
+          "id": "fr-a1-u6-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w29",
+              "target": "le sac",
+              "english": "bag"
+            },
+            {
+              "wordId": "fr-a1u6-w30",
+              "target": "les clés",
+              "english": "keys"
+            },
+            {
+              "wordId": "fr-a1u6-w31",
+              "target": "la télévision",
+              "english": "television"
+            },
+            {
+              "wordId": "fr-a1u6-w32",
+              "target": "la musique",
+              "english": "music"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w31-te",
+          "type": "mc",
+          "prompt": "What does \"la télévision\" mean?",
+          "speak": "la télévision",
+          "options": [
+            "bag",
+            "music",
+            "television",
+            "phone"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u6-w31"
+        },
+        {
+          "id": "fr-a1u6-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"music\"?",
+          "options": [
+            "le sac",
+            "la musique",
+            "la télévision",
+            "les clés"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w32"
+        },
+        {
+          "id": "fr-a1-u6-l8-s",
+          "type": "translate",
+          "prompt": "The book is on the table",
+          "answer": [
+            "Le",
+            "livre",
+            "est",
+            "sur",
+            "la",
+            "table"
+          ],
+          "bank": [
+            "stylo",
+            "Le",
+            "est",
+            "sur",
+            "livre",
+            "la",
+            "table",
+            "chaise"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le sac",
+          "english": "bag"
+        },
+        {
+          "target": "les clés",
+          "english": "keys"
+        },
+        {
+          "target": "la télévision",
+          "english": "television"
+        },
+        {
+          "target": "la musique",
+          "english": "music"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l9",
+      "title": "My day, part 1",
+      "theme": "my day",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w33-te",
+          "type": "mc",
+          "prompt": "What does \"se réveiller\" mean?",
+          "speak": "se réveiller",
+          "options": [
+            "to rest",
+            "to wake up",
+            "to cook",
+            "to wash"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w33"
+        },
+        {
+          "id": "fr-a1u6-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"to wash\"?",
+          "options": [
+            "se réveiller",
+            "se laver",
+            "se reposer",
+            "rentrer"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w34"
+        },
+        {
+          "id": "fr-a1-u6-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w33",
+              "target": "se réveiller",
+              "english": "to wake up"
+            },
+            {
+              "wordId": "fr-a1u6-w34",
+              "target": "se laver",
+              "english": "to wash"
+            },
+            {
+              "wordId": "fr-a1u6-w35",
+              "target": "travailler",
+              "english": "to work"
+            },
+            {
+              "wordId": "fr-a1u6-w36",
+              "target": "étudier",
+              "english": "to study"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w35-te",
+          "type": "mc",
+          "prompt": "What does \"travailler\" mean?",
+          "speak": "travailler",
+          "options": [
+            "to wash",
+            "to rest",
+            "to wake up",
+            "to work"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w35"
+        },
+        {
+          "id": "fr-a1u6-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"to study\"?",
+          "options": [
+            "se coucher",
+            "rentrer",
+            "se réveiller",
+            "étudier"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w36"
+        },
+        {
+          "id": "fr-a1-u6-l9-s",
+          "type": "translate",
+          "prompt": "I work in the morning",
+          "answer": [
+            "Je",
+            "travaille",
+            "le",
+            "matin"
+          ],
+          "bank": [
+            "étudie",
+            "Je",
+            "matin",
+            "travaille",
+            "cuisine",
+            "le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "se réveiller",
+          "english": "to wake up"
+        },
+        {
+          "target": "se laver",
+          "english": "to wash"
+        },
+        {
+          "target": "travailler",
+          "english": "to work"
+        },
+        {
+          "target": "étudier",
+          "english": "to study"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u6-l10",
+      "title": "My day, part 2",
+      "theme": "my day",
+      "exercises": [
+        {
+          "id": "fr-a1u6-w37-te",
+          "type": "mc",
+          "prompt": "What does \"rentrer\" mean?",
+          "speak": "rentrer",
+          "options": [
+            "to work",
+            "to go home",
+            "to study",
+            "to go to bed"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w37"
+        },
+        {
+          "id": "fr-a1u6-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"to cook\"?",
+          "options": [
+            "étudier",
+            "se coucher",
+            "travailler",
+            "cuisiner"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u6-w38"
+        },
+        {
+          "id": "fr-a1-u6-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u6-w37",
+              "target": "rentrer",
+              "english": "to go home"
+            },
+            {
+              "wordId": "fr-a1u6-w38",
+              "target": "cuisiner",
+              "english": "to cook"
+            },
+            {
+              "wordId": "fr-a1u6-w39",
+              "target": "se coucher",
+              "english": "to go to bed"
+            },
+            {
+              "wordId": "fr-a1u6-w40",
+              "target": "se reposer",
+              "english": "to rest"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u6-w39-te",
+          "type": "mc",
+          "prompt": "What does \"se coucher\" mean?",
+          "speak": "se coucher",
+          "options": [
+            "to go to bed",
+            "to wash",
+            "to go home",
+            "to work"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u6-w39"
+        },
+        {
+          "id": "fr-a1u6-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"to rest\"?",
+          "options": [
+            "rentrer",
+            "se reposer",
+            "étudier",
+            "cuisiner"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u6-w40"
+        },
+        {
+          "id": "fr-a1-u6-l10-s",
+          "type": "translate",
+          "prompt": "She studies in the evening",
+          "answer": [
+            "Elle",
+            "étudie",
+            "le",
+            "soir"
+          ],
+          "bank": [
+            "étudie",
+            "Elle",
+            "cuisine",
+            "rentre",
+            "soir",
+            "le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "rentrer",
+          "english": "to go home"
+        },
+        {
+          "target": "cuisiner",
+          "english": "to cook"
+        },
+        {
+          "target": "se coucher",
+          "english": "to go to bed"
+        },
+        {
+          "target": "se reposer",
+          "english": "to rest"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "fr-a1-u6-cp",
+    "title": "Unit 6 checkpoint",
+    "pool": [
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w1",
+        "type": "mc",
+        "prompt": "What does \"manger\" mean?",
+        "speak": "manger",
+        "options": [
+          "window",
+          "to eat",
+          "book",
+          "to drink"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w1"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w2",
+        "type": "mc",
+        "prompt": "How do you say \"to drink\"?",
+        "options": [
+          "boire",
+          "manger",
+          "écrire",
+          "vouloir"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u6-w2"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w3",
+        "type": "mc",
+        "prompt": "What does \"dormir\" mean?",
+        "speak": "dormir",
+        "options": [
+          "to be",
+          "to go",
+          "to sleep",
+          "to want"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w3"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w4",
+        "type": "mc",
+        "prompt": "How do you say \"to go\"?",
+        "options": [
+          "aller",
+          "se réveiller",
+          "cuisiner",
+          "écrire"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u6-w4"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w5",
+        "type": "mc",
+        "prompt": "What does \"venir\" mean?",
+        "speak": "venir",
+        "options": [
+          "to speak",
+          "to see",
+          "to come",
+          "television"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w5"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w6",
+        "type": "mc",
+        "prompt": "How do you say \"to do or make\"?",
+        "options": [
+          "aller",
+          "pouvoir",
+          "la chambre",
+          "faire"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u6-w6"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w7",
+        "type": "mc",
+        "prompt": "What does \"voir\" mean?",
+        "speak": "voir",
+        "options": [
+          "to go home",
+          "phone",
+          "to see",
+          "to be"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w7"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w8",
+        "type": "mc",
+        "prompt": "How do you say \"to speak\"?",
+        "options": [
+          "manger",
+          "se laver",
+          "parler",
+          "lire"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w8"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w9",
+        "type": "mc",
+        "prompt": "What does \"avoir\" mean?",
+        "speak": "avoir",
+        "options": [
+          "to study",
+          "to have",
+          "to want",
+          "to eat"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w9"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w10",
+        "type": "mc",
+        "prompt": "How do you say \"to be\"?",
+        "options": [
+          "pouvoir",
+          "être",
+          "le lit",
+          "écrire"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w10"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w11",
+        "type": "mc",
+        "prompt": "What does \"vouloir\" mean?",
+        "speak": "vouloir",
+        "options": [
+          "to go to bed",
+          "phone",
+          "to want",
+          "bedroom"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w11"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w12",
+        "type": "mc",
+        "prompt": "How do you say \"to be able to\"?",
+        "options": [
+          "la table",
+          "la salle de bain",
+          "venir",
+          "pouvoir"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u6-w12"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w13",
+        "type": "mc",
+        "prompt": "What does \"savoir\" mean?",
+        "speak": "savoir",
+        "options": [
+          "to do or make",
+          "to know",
+          "chair",
+          "to study"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w13"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w14",
+        "type": "mc",
+        "prompt": "How do you say \"to read\"?",
+        "options": [
+          "la porte",
+          "lire",
+          "travailler",
+          "cuisiner"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w14"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w15",
+        "type": "mc",
+        "prompt": "What does \"écrire\" mean?",
+        "speak": "écrire",
+        "options": [
+          "to write",
+          "television",
+          "kitchen",
+          "to drink"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u6-w15"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w16",
+        "type": "mc",
+        "prompt": "How do you say \"to like\"?",
+        "options": [
+          "la chambre",
+          "aimer",
+          "la salle de bain",
+          "le livre"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w16"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w17",
+        "type": "mc",
+        "prompt": "What does \"la porte\" mean?",
+        "speak": "la porte",
+        "options": [
+          "chair",
+          "door",
+          "to study",
+          "bathroom"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w17"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w18",
+        "type": "mc",
+        "prompt": "How do you say \"window\"?",
+        "options": [
+          "la fenêtre",
+          "être",
+          "le lit",
+          "savoir"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u6-w18"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w19",
+        "type": "mc",
+        "prompt": "What does \"la table\" mean?",
+        "speak": "la table",
+        "options": [
+          "kitchen",
+          "music",
+          "table",
+          "chair"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w19"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w20",
+        "type": "mc",
+        "prompt": "How do you say \"chair\"?",
+        "options": [
+          "la chaise",
+          "venir",
+          "les clés",
+          "le lit"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u6-w20"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w21",
+        "type": "mc",
+        "prompt": "What does \"le lit\" mean?",
+        "speak": "le lit",
+        "options": [
+          "phone",
+          "music",
+          "to be",
+          "bed"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u6-w21"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w22",
+        "type": "mc",
+        "prompt": "How do you say \"kitchen\"?",
+        "options": [
+          "la cuisine",
+          "se reposer",
+          "la fenêtre",
+          "manger"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u6-w22"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w23",
+        "type": "mc",
+        "prompt": "What does \"la chambre\" mean?",
+        "speak": "la chambre",
+        "options": [
+          "to go",
+          "bag",
+          "to wash",
+          "bedroom"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u6-w23"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w24",
+        "type": "mc",
+        "prompt": "How do you say \"bathroom\"?",
+        "options": [
+          "la salle de bain",
+          "l'ordinateur",
+          "cuisiner",
+          "le sac"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u6-w24"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w25",
+        "type": "mc",
+        "prompt": "What does \"le téléphone\" mean?",
+        "speak": "le téléphone",
+        "options": [
+          "to come",
+          "phone",
+          "computer",
+          "to go"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w25"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w26",
+        "type": "mc",
+        "prompt": "How do you say \"computer\"?",
+        "options": [
+          "la fenêtre",
+          "vouloir",
+          "la cuisine",
+          "l'ordinateur"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u6-w26"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w27",
+        "type": "mc",
+        "prompt": "What does \"le livre\" mean?",
+        "speak": "le livre",
+        "options": [
+          "to eat",
+          "bed",
+          "book",
+          "kitchen"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w27"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w28",
+        "type": "mc",
+        "prompt": "How do you say \"pen\"?",
+        "options": [
+          "parler",
+          "le lit",
+          "l'ordinateur",
+          "le stylo"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u6-w28"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w29",
+        "type": "mc",
+        "prompt": "What does \"le sac\" mean?",
+        "speak": "le sac",
+        "options": [
+          "to wake up",
+          "computer",
+          "bag",
+          "to do or make"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w29"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w30",
+        "type": "mc",
+        "prompt": "How do you say \"keys\"?",
+        "options": [
+          "savoir",
+          "le sac",
+          "les clés",
+          "la cuisine"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w30"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w31",
+        "type": "mc",
+        "prompt": "What does \"la télévision\" mean?",
+        "speak": "la télévision",
+        "options": [
+          "to go to bed",
+          "to like",
+          "to be",
+          "television"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u6-w31"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w32",
+        "type": "mc",
+        "prompt": "How do you say \"music\"?",
+        "options": [
+          "voir",
+          "la musique",
+          "le lit",
+          "avoir"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w32"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w33",
+        "type": "mc",
+        "prompt": "What does \"se réveiller\" mean?",
+        "speak": "se réveiller",
+        "options": [
+          "kitchen",
+          "pen",
+          "to wake up",
+          "bathroom"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w33"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w34",
+        "type": "mc",
+        "prompt": "How do you say \"to wash\"?",
+        "options": [
+          "manger",
+          "se laver",
+          "faire",
+          "la salle de bain"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w34"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w35",
+        "type": "mc",
+        "prompt": "What does \"travailler\" mean?",
+        "speak": "travailler",
+        "options": [
+          "to wash",
+          "to read",
+          "to work",
+          "chair"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w35"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w36",
+        "type": "mc",
+        "prompt": "How do you say \"to study\"?",
+        "options": [
+          "écrire",
+          "parler",
+          "étudier",
+          "rentrer"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w36"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w37",
+        "type": "mc",
+        "prompt": "What does \"rentrer\" mean?",
+        "speak": "rentrer",
+        "options": [
+          "to wake up",
+          "to go home",
+          "music",
+          "to know"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u6-w37"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w38",
+        "type": "mc",
+        "prompt": "How do you say \"to cook\"?",
+        "options": [
+          "la chambre",
+          "la chaise",
+          "cuisiner",
+          "la fenêtre"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w38"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w39",
+        "type": "mc",
+        "prompt": "What does \"se coucher\" mean?",
+        "speak": "se coucher",
+        "options": [
+          "bed",
+          "pen",
+          "to go to bed",
+          "to drink"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w39"
+      },
+      {
+        "id": "fr-a1-u6-cp-fr-a1u6-w40",
+        "type": "mc",
+        "prompt": "How do you say \"to rest\"?",
+        "options": [
+          "vouloir",
+          "écrire",
+          "se reposer",
+          "aimer"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u6-w40"
+      },
+      {
+        "id": "fr-a1-u6-cp-l1-s1",
+        "type": "translate",
+        "prompt": "I want to eat",
+        "answer": [
+          "Je",
+          "veux",
+          "manger"
+        ],
+        "bank": [
+          "dormir",
+          "boire",
+          "veux",
+          "Je",
+          "manger"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l1-s2",
+        "type": "translate",
+        "prompt": "We are going to the park",
+        "answer": [
+          "Nous",
+          "allons",
+          "au",
+          "parc"
+        ],
+        "bank": [
+          "Nous",
+          "voir",
+          "allons",
+          "au",
+          "parc",
+          "venons"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l1-s3",
+        "type": "translate",
+        "prompt": "You want to drink",
+        "answer": [
+          "Tu",
+          "veux",
+          "boire"
+        ],
+        "bank": [
+          "parler",
+          "Tu",
+          "veux",
+          "faire",
+          "boire"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I want a coffee",
+        "answer": [
+          "Je",
+          "veux",
+          "un",
+          "café"
+        ],
+        "bank": [
+          "café",
+          "sais",
+          "veux",
+          "peux",
+          "un",
+          "Je"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l2-s2",
+        "type": "translate",
+        "prompt": "I can read",
+        "answer": [
+          "Je",
+          "peux",
+          "lire"
+        ],
+        "bank": [
+          "écrire",
+          "savoir",
+          "lire",
+          "peux",
+          "Je"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l2-s3",
+        "type": "translate",
+        "prompt": "You know how to write",
+        "answer": [
+          "Tu",
+          "sais",
+          "écrire"
+        ],
+        "bank": [
+          "écrire",
+          "lire",
+          "Tu",
+          "veux",
+          "sais"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l3-s1",
+        "type": "translate",
+        "prompt": "The door is here",
+        "answer": [
+          "La",
+          "porte",
+          "est",
+          "ici"
+        ],
+        "bank": [
+          "fenêtre",
+          "est",
+          "lit",
+          "porte",
+          "ici",
+          "La"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l3-s2",
+        "type": "translate",
+        "prompt": "I am in the kitchen",
+        "answer": [
+          "Je",
+          "suis",
+          "dans",
+          "la",
+          "cuisine"
+        ],
+        "bank": [
+          "suis",
+          "chambre",
+          "cuisine",
+          "table",
+          "Je",
+          "la",
+          "dans"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l3-s3",
+        "type": "translate",
+        "prompt": "The bed is big",
+        "answer": [
+          "Le",
+          "lit",
+          "est",
+          "grand"
+        ],
+        "bank": [
+          "petit",
+          "est",
+          "lit",
+          "chaise",
+          "Le",
+          "grand"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l4-s1",
+        "type": "translate",
+        "prompt": "Where is my phone",
+        "answer": [
+          "Où",
+          "est",
+          "mon",
+          "téléphone"
+        ],
+        "bank": [
+          "est",
+          "téléphone",
+          "mon",
+          "Où",
+          "livre",
+          "sac"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l4-s2",
+        "type": "translate",
+        "prompt": "I like music",
+        "answer": [
+          "J'aime",
+          "la",
+          "musique"
+        ],
+        "bank": [
+          "la",
+          "J'aime",
+          "télévision",
+          "musique",
+          "clés"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l4-s3",
+        "type": "translate",
+        "prompt": "The book is on the table",
+        "answer": [
+          "Le",
+          "livre",
+          "est",
+          "sur",
+          "la",
+          "table"
+        ],
+        "bank": [
+          "chaise",
+          "table",
+          "est",
+          "livre",
+          "stylo",
+          "sur",
+          "la",
+          "Le"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l5-s1",
+        "type": "translate",
+        "prompt": "I work in the morning",
+        "answer": [
+          "Je",
+          "travaille",
+          "le",
+          "matin"
+        ],
+        "bank": [
+          "étudie",
+          "le",
+          "cuisine",
+          "matin",
+          "Je",
+          "travaille"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l5-s2",
+        "type": "translate",
+        "prompt": "She studies in the evening",
+        "answer": [
+          "Elle",
+          "étudie",
+          "le",
+          "soir"
+        ],
+        "bank": [
+          "étudie",
+          "cuisine",
+          "rentre",
+          "soir",
+          "le",
+          "Elle"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-l5-s3",
+        "type": "translate",
+        "prompt": "I go to bed at night",
+        "answer": [
+          "Je",
+          "me",
+          "couche",
+          "la",
+          "nuit"
+        ],
+        "bank": [
+          "nuit",
+          "lave",
+          "la",
+          "Je",
+          "me",
+          "couche",
+          "lève"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u6-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u6-w3",
+            "target": "dormir",
+            "english": "to sleep"
+          },
+          {
+            "wordId": "fr-a1u6-w5",
+            "target": "venir",
+            "english": "to come"
+          },
+          {
+            "wordId": "fr-a1u6-w2",
+            "target": "boire",
+            "english": "to drink"
+          },
+          {
+            "wordId": "fr-a1u6-w1",
+            "target": "manger",
+            "english": "to eat"
+          },
+          {
+            "wordId": "fr-a1u6-w4",
+            "target": "aller",
+            "english": "to go"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u6-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u6-w14",
+            "target": "lire",
+            "english": "to read"
+          },
+          {
+            "wordId": "fr-a1u6-w12",
+            "target": "pouvoir",
+            "english": "to be able to"
+          },
+          {
+            "wordId": "fr-a1u6-w11",
+            "target": "vouloir",
+            "english": "to want"
+          },
+          {
+            "wordId": "fr-a1u6-w16",
+            "target": "aimer",
+            "english": "to like"
+          },
+          {
+            "wordId": "fr-a1u6-w13",
+            "target": "savoir",
+            "english": "to know"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u6-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u6-w22",
+            "target": "la cuisine",
+            "english": "kitchen"
+          },
+          {
+            "wordId": "fr-a1u6-w17",
+            "target": "la porte",
+            "english": "door"
+          },
+          {
+            "wordId": "fr-a1u6-w24",
+            "target": "la salle de bain",
+            "english": "bathroom"
+          },
+          {
+            "wordId": "fr-a1u6-w19",
+            "target": "la table",
+            "english": "table"
+          },
+          {
+            "wordId": "fr-a1u6-w21",
+            "target": "le lit",
+            "english": "bed"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u6-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u6-w28",
+            "target": "le stylo",
+            "english": "pen"
+          },
+          {
+            "wordId": "fr-a1u6-w27",
+            "target": "le livre",
+            "english": "book"
+          },
+          {
+            "wordId": "fr-a1u6-w30",
+            "target": "les clés",
+            "english": "keys"
+          },
+          {
+            "wordId": "fr-a1u6-w31",
+            "target": "la télévision",
+            "english": "television"
+          },
+          {
+            "wordId": "fr-a1u6-w26",
+            "target": "l'ordinateur",
+            "english": "computer"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u6-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u6-w37",
+            "target": "rentrer",
+            "english": "to go home"
+          },
+          {
+            "wordId": "fr-a1u6-w39",
+            "target": "se coucher",
+            "english": "to go to bed"
+          },
+          {
+            "wordId": "fr-a1u6-w40",
+            "target": "se reposer",
+            "english": "to rest"
+          },
+          {
+            "wordId": "fr-a1u6-w33",
+            "target": "se réveiller",
+            "english": "to wake up"
+          },
+          {
+            "wordId": "fr-a1u6-w35",
+            "target": "travailler",
+            "english": "to work"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

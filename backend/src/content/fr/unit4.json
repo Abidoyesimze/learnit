@@ -1,0 +1,2275 @@
+{
+  "lang": "fr",
+  "unit": 4,
+  "level": "A1",
+  "title": "Food and drink",
+  "blurb": "Order a drink, a meal and say what you like.",
+  "speechLang": "fr-FR",
+  "lessons": [
+    {
+      "id": "fr-a1-u4-l1",
+      "title": "Drinks, part 1",
+      "theme": "drinks",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w1-te",
+          "type": "mc",
+          "prompt": "What does \"l'eau\" mean?",
+          "speak": "l'eau",
+          "options": [
+            "coffee",
+            "lemonade",
+            "water",
+            "juice"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w1"
+        },
+        {
+          "id": "fr-a1u4-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"coffee\"?",
+          "options": [
+            "le café",
+            "le vin",
+            "le thé",
+            "le lait"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w2"
+        },
+        {
+          "id": "fr-a1-u4-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w1",
+              "target": "l'eau",
+              "english": "water"
+            },
+            {
+              "wordId": "fr-a1u4-w2",
+              "target": "le café",
+              "english": "coffee"
+            },
+            {
+              "wordId": "fr-a1u4-w3",
+              "target": "le thé",
+              "english": "tea"
+            },
+            {
+              "wordId": "fr-a1u4-w4",
+              "target": "le lait",
+              "english": "milk"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w3-te",
+          "type": "mc",
+          "prompt": "What does \"le thé\" mean?",
+          "speak": "le thé",
+          "options": [
+            "juice",
+            "water",
+            "lemonade",
+            "tea"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w3"
+        },
+        {
+          "id": "fr-a1u4-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"milk\"?",
+          "options": [
+            "le jus",
+            "le thé",
+            "le lait",
+            "l'eau"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w4"
+        },
+        {
+          "id": "fr-a1-u4-l1-s",
+          "type": "translate",
+          "prompt": "A coffee, please",
+          "answer": [
+            "Un",
+            "café",
+            "s'il",
+            "vous",
+            "plaît"
+          ],
+          "bank": [
+            "vous",
+            "Un",
+            "lait",
+            "s'il",
+            "thé",
+            "plaît",
+            "café"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "l'eau",
+          "english": "water"
+        },
+        {
+          "target": "le café",
+          "english": "coffee"
+        },
+        {
+          "target": "le thé",
+          "english": "tea"
+        },
+        {
+          "target": "le lait",
+          "english": "milk"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l2",
+      "title": "Drinks, part 2",
+      "theme": "drinks",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w5-te",
+          "type": "mc",
+          "prompt": "What does \"le jus\" mean?",
+          "speak": "le jus",
+          "options": [
+            "wine",
+            "juice",
+            "beer",
+            "milk"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w5"
+        },
+        {
+          "id": "fr-a1u4-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"wine\"?",
+          "options": [
+            "la bière",
+            "le jus",
+            "le thé",
+            "le vin"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w6"
+        },
+        {
+          "id": "fr-a1-u4-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w5",
+              "target": "le jus",
+              "english": "juice"
+            },
+            {
+              "wordId": "fr-a1u4-w6",
+              "target": "le vin",
+              "english": "wine"
+            },
+            {
+              "wordId": "fr-a1u4-w7",
+              "target": "la bière",
+              "english": "beer"
+            },
+            {
+              "wordId": "fr-a1u4-w8",
+              "target": "la limonade",
+              "english": "lemonade"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w7-te",
+          "type": "mc",
+          "prompt": "What does \"la bière\" mean?",
+          "speak": "la bière",
+          "options": [
+            "lemonade",
+            "milk",
+            "tea",
+            "beer"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w7"
+        },
+        {
+          "id": "fr-a1u4-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"lemonade\"?",
+          "options": [
+            "le jus",
+            "la limonade",
+            "le lait",
+            "le vin"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w8"
+        },
+        {
+          "id": "fr-a1-u4-l2-s",
+          "type": "translate",
+          "prompt": "I would like some water",
+          "answer": [
+            "Je",
+            "voudrais",
+            "de",
+            "l'eau"
+          ],
+          "bank": [
+            "de",
+            "voudrais",
+            "café",
+            "Je",
+            "l'eau",
+            "thé"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le jus",
+          "english": "juice"
+        },
+        {
+          "target": "le vin",
+          "english": "wine"
+        },
+        {
+          "target": "la bière",
+          "english": "beer"
+        },
+        {
+          "target": "la limonade",
+          "english": "lemonade"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l3",
+      "title": "Basic foods, part 1",
+      "theme": "basic foods",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w9-te",
+          "type": "mc",
+          "prompt": "What does \"le pain\" mean?",
+          "speak": "le pain",
+          "options": [
+            "rice",
+            "soup",
+            "cheese",
+            "bread"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w9"
+        },
+        {
+          "id": "fr-a1u4-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"rice\"?",
+          "options": [
+            "le riz",
+            "la soupe",
+            "le pain",
+            "le poulet"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w10"
+        },
+        {
+          "id": "fr-a1-u4-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w9",
+              "target": "le pain",
+              "english": "bread"
+            },
+            {
+              "wordId": "fr-a1u4-w10",
+              "target": "le riz",
+              "english": "rice"
+            },
+            {
+              "wordId": "fr-a1u4-w11",
+              "target": "le fromage",
+              "english": "cheese"
+            },
+            {
+              "wordId": "fr-a1u4-w12",
+              "target": "l'œuf",
+              "english": "egg"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w11-te",
+          "type": "mc",
+          "prompt": "What does \"le fromage\" mean?",
+          "speak": "le fromage",
+          "options": [
+            "chicken",
+            "meat",
+            "cheese",
+            "rice"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w11"
+        },
+        {
+          "id": "fr-a1u4-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"egg\"?",
+          "options": [
+            "l'œuf",
+            "le fromage",
+            "le pain",
+            "le poulet"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w12"
+        },
+        {
+          "id": "fr-a1-u4-l3-s",
+          "type": "translate",
+          "prompt": "I like rice",
+          "answer": [
+            "J'aime",
+            "le",
+            "riz"
+          ],
+          "bank": [
+            "riz",
+            "le",
+            "soupe",
+            "J'aime",
+            "pain"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le pain",
+          "english": "bread"
+        },
+        {
+          "target": "le riz",
+          "english": "rice"
+        },
+        {
+          "target": "le fromage",
+          "english": "cheese"
+        },
+        {
+          "target": "l'œuf",
+          "english": "egg"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l4",
+      "title": "Basic foods, part 2",
+      "theme": "basic foods",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w13-te",
+          "type": "mc",
+          "prompt": "What does \"le poulet\" mean?",
+          "speak": "le poulet",
+          "options": [
+            "soup",
+            "rice",
+            "fish",
+            "chicken"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w13"
+        },
+        {
+          "id": "fr-a1u4-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"fish\"?",
+          "options": [
+            "le riz",
+            "le poisson",
+            "le poulet",
+            "le pain"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w14"
+        },
+        {
+          "id": "fr-a1-u4-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w13",
+              "target": "le poulet",
+              "english": "chicken"
+            },
+            {
+              "wordId": "fr-a1u4-w14",
+              "target": "le poisson",
+              "english": "fish"
+            },
+            {
+              "wordId": "fr-a1u4-w15",
+              "target": "la viande",
+              "english": "meat"
+            },
+            {
+              "wordId": "fr-a1u4-w16",
+              "target": "la soupe",
+              "english": "soup"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w15-te",
+          "type": "mc",
+          "prompt": "What does \"la viande\" mean?",
+          "speak": "la viande",
+          "options": [
+            "meat",
+            "fish",
+            "chicken",
+            "bread"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w15"
+        },
+        {
+          "id": "fr-a1u4-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"soup\"?",
+          "options": [
+            "la soupe",
+            "le poulet",
+            "l'œuf",
+            "le riz"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w16"
+        },
+        {
+          "id": "fr-a1-u4-l4-s",
+          "type": "translate",
+          "prompt": "Bread and cheese",
+          "answer": [
+            "Du",
+            "pain",
+            "et",
+            "du",
+            "fromage"
+          ],
+          "bank": [
+            "riz",
+            "du",
+            "Du",
+            "fromage",
+            "œuf",
+            "pain",
+            "et"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le poulet",
+          "english": "chicken"
+        },
+        {
+          "target": "le poisson",
+          "english": "fish"
+        },
+        {
+          "target": "la viande",
+          "english": "meat"
+        },
+        {
+          "target": "la soupe",
+          "english": "soup"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l5",
+      "title": "Fruit and vegetables, part 1",
+      "theme": "fruit and vegetables",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w17-te",
+          "type": "mc",
+          "prompt": "What does \"la pomme\" mean?",
+          "speak": "la pomme",
+          "options": [
+            "orange",
+            "tomato",
+            "salad",
+            "apple"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w17"
+        },
+        {
+          "id": "fr-a1u4-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"banana\"?",
+          "options": [
+            "l'orange",
+            "la pomme",
+            "la banane",
+            "la tomate"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w18"
+        },
+        {
+          "id": "fr-a1-u4-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w17",
+              "target": "la pomme",
+              "english": "apple"
+            },
+            {
+              "wordId": "fr-a1u4-w18",
+              "target": "la banane",
+              "english": "banana"
+            },
+            {
+              "wordId": "fr-a1u4-w19",
+              "target": "l'orange",
+              "english": "orange"
+            },
+            {
+              "wordId": "fr-a1u4-w20",
+              "target": "la tomate",
+              "english": "tomato"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w19-te",
+          "type": "mc",
+          "prompt": "What does \"l'orange\" mean?",
+          "speak": "l'orange",
+          "options": [
+            "orange",
+            "apple",
+            "tomato",
+            "carrot"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w19"
+        },
+        {
+          "id": "fr-a1u4-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"tomato\"?",
+          "options": [
+            "la pomme de terre",
+            "la tomate",
+            "la banane",
+            "le citron"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w20"
+        },
+        {
+          "id": "fr-a1-u4-l5-s",
+          "type": "translate",
+          "prompt": "An apple, please",
+          "answer": [
+            "Une",
+            "pomme",
+            "s'il",
+            "vous",
+            "plaît"
+          ],
+          "bank": [
+            "s'il",
+            "tomate",
+            "pomme",
+            "Une",
+            "vous",
+            "banane",
+            "plaît"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la pomme",
+          "english": "apple"
+        },
+        {
+          "target": "la banane",
+          "english": "banana"
+        },
+        {
+          "target": "l'orange",
+          "english": "orange"
+        },
+        {
+          "target": "la tomate",
+          "english": "tomato"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l6",
+      "title": "Fruit and vegetables, part 2",
+      "theme": "fruit and vegetables",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w21-te",
+          "type": "mc",
+          "prompt": "What does \"la pomme de terre\" mean?",
+          "speak": "la pomme de terre",
+          "options": [
+            "tomato",
+            "banana",
+            "potato",
+            "orange"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w21"
+        },
+        {
+          "id": "fr-a1u4-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"carrot\"?",
+          "options": [
+            "la salade",
+            "l'orange",
+            "la carotte",
+            "la banane"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w22"
+        },
+        {
+          "id": "fr-a1-u4-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w21",
+              "target": "la pomme de terre",
+              "english": "potato"
+            },
+            {
+              "wordId": "fr-a1u4-w22",
+              "target": "la carotte",
+              "english": "carrot"
+            },
+            {
+              "wordId": "fr-a1u4-w23",
+              "target": "la salade",
+              "english": "salad"
+            },
+            {
+              "wordId": "fr-a1u4-w24",
+              "target": "le citron",
+              "english": "lemon"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w23-te",
+          "type": "mc",
+          "prompt": "What does \"la salade\" mean?",
+          "speak": "la salade",
+          "options": [
+            "apple",
+            "salad",
+            "carrot",
+            "orange"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w23"
+        },
+        {
+          "id": "fr-a1u4-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"lemon\"?",
+          "options": [
+            "la pomme de terre",
+            "la carotte",
+            "le citron",
+            "la salade"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w24"
+        },
+        {
+          "id": "fr-a1-u4-l6-s",
+          "type": "translate",
+          "prompt": "The banana is yellow",
+          "answer": [
+            "La",
+            "banane",
+            "est",
+            "jaune"
+          ],
+          "bank": [
+            "jaune",
+            "rouge",
+            "est",
+            "orange",
+            "banane",
+            "La"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la pomme de terre",
+          "english": "potato"
+        },
+        {
+          "target": "la carotte",
+          "english": "carrot"
+        },
+        {
+          "target": "la salade",
+          "english": "salad"
+        },
+        {
+          "target": "le citron",
+          "english": "lemon"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l7",
+      "title": "At the table, part 1",
+      "theme": "at the table",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w25-te",
+          "type": "mc",
+          "prompt": "What does \"j'ai faim\" mean?",
+          "speak": "j'ai faim",
+          "options": [
+            "it is good",
+            "the bill",
+            "the menu",
+            "I am hungry"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w25"
+        },
+        {
+          "id": "fr-a1u4-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"I am thirsty\"?",
+          "options": [
+            "l'addition",
+            "délicieux",
+            "j'ai soif",
+            "le menu"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w26"
+        },
+        {
+          "id": "fr-a1-u4-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w25",
+              "target": "j'ai faim",
+              "english": "I am hungry"
+            },
+            {
+              "wordId": "fr-a1u4-w26",
+              "target": "j'ai soif",
+              "english": "I am thirsty"
+            },
+            {
+              "wordId": "fr-a1u4-w27",
+              "target": "je voudrais",
+              "english": "I would like"
+            },
+            {
+              "wordId": "fr-a1u4-w28",
+              "target": "l'addition",
+              "english": "the bill"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w27-te",
+          "type": "mc",
+          "prompt": "What does \"je voudrais\" mean?",
+          "speak": "je voudrais",
+          "options": [
+            "delicious",
+            "it is good",
+            "I would like",
+            "the bill"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w27"
+        },
+        {
+          "id": "fr-a1u4-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"the bill\"?",
+          "options": [
+            "j'ai soif",
+            "l'addition",
+            "délicieux",
+            "j'ai faim"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w28"
+        },
+        {
+          "id": "fr-a1-u4-l7-s",
+          "type": "translate",
+          "prompt": "I am hungry",
+          "answer": [
+            "J'ai",
+            "faim"
+          ],
+          "bank": [
+            "soif",
+            "voudrais",
+            "faim",
+            "J'ai"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "j'ai faim",
+          "english": "I am hungry"
+        },
+        {
+          "target": "j'ai soif",
+          "english": "I am thirsty"
+        },
+        {
+          "target": "je voudrais",
+          "english": "I would like"
+        },
+        {
+          "target": "l'addition",
+          "english": "the bill"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l8",
+      "title": "At the table, part 2",
+      "theme": "at the table",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w29-te",
+          "type": "mc",
+          "prompt": "What does \"le menu\" mean?",
+          "speak": "le menu",
+          "options": [
+            "I am thirsty",
+            "it is good",
+            "delicious",
+            "the menu"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w29"
+        },
+        {
+          "id": "fr-a1u4-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"delicious\"?",
+          "options": [
+            "bon appétit",
+            "l'addition",
+            "délicieux",
+            "le menu"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w30"
+        },
+        {
+          "id": "fr-a1-u4-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w29",
+              "target": "le menu",
+              "english": "the menu"
+            },
+            {
+              "wordId": "fr-a1u4-w30",
+              "target": "délicieux",
+              "english": "delicious"
+            },
+            {
+              "wordId": "fr-a1u4-w31",
+              "target": "c'est bon",
+              "english": "it is good"
+            },
+            {
+              "wordId": "fr-a1u4-w32",
+              "target": "bon appétit",
+              "english": "enjoy your meal"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w31-te",
+          "type": "mc",
+          "prompt": "What does \"c'est bon\" mean?",
+          "speak": "c'est bon",
+          "options": [
+            "enjoy your meal",
+            "I am thirsty",
+            "it is good",
+            "delicious"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w31"
+        },
+        {
+          "id": "fr-a1u4-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"enjoy your meal\"?",
+          "options": [
+            "c'est bon",
+            "bon appétit",
+            "l'addition",
+            "j'ai soif"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w32"
+        },
+        {
+          "id": "fr-a1-u4-l8-s",
+          "type": "translate",
+          "prompt": "The bill, please",
+          "answer": [
+            "L'addition",
+            "s'il",
+            "vous",
+            "plaît"
+          ],
+          "bank": [
+            "menu",
+            "merci",
+            "L'addition",
+            "vous",
+            "plaît",
+            "s'il"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le menu",
+          "english": "the menu"
+        },
+        {
+          "target": "délicieux",
+          "english": "delicious"
+        },
+        {
+          "target": "c'est bon",
+          "english": "it is good"
+        },
+        {
+          "target": "bon appétit",
+          "english": "enjoy your meal"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l9",
+      "title": "Likes, part 1",
+      "theme": "likes",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w33-te",
+          "type": "mc",
+          "prompt": "What does \"j'aime\" mean?",
+          "speak": "j'aime",
+          "options": [
+            "also",
+            "I like",
+            "with",
+            "I don't like"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w33"
+        },
+        {
+          "id": "fr-a1u4-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"I don't like\"?",
+          "options": [
+            "aussi",
+            "j'aime",
+            "j'adore",
+            "je n'aime pas"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w34"
+        },
+        {
+          "id": "fr-a1-u4-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w33",
+              "target": "j'aime",
+              "english": "I like"
+            },
+            {
+              "wordId": "fr-a1u4-w34",
+              "target": "je n'aime pas",
+              "english": "I don't like"
+            },
+            {
+              "wordId": "fr-a1u4-w35",
+              "target": "j'adore",
+              "english": "I love"
+            },
+            {
+              "wordId": "fr-a1u4-w36",
+              "target": "un peu",
+              "english": "a little"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w35-te",
+          "type": "mc",
+          "prompt": "What does \"j'adore\" mean?",
+          "speak": "j'adore",
+          "options": [
+            "without",
+            "I love",
+            "also",
+            "a lot"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u4-w35"
+        },
+        {
+          "id": "fr-a1u4-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"a little\"?",
+          "options": [
+            "aussi",
+            "j'adore",
+            "un peu",
+            "beaucoup"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u4-w36"
+        },
+        {
+          "id": "fr-a1-u4-l9-s",
+          "type": "translate",
+          "prompt": "I like coffee a lot",
+          "answer": [
+            "J'aime",
+            "beaucoup",
+            "le",
+            "café"
+          ],
+          "bank": [
+            "beaucoup",
+            "peu",
+            "J'aime",
+            "café",
+            "thé",
+            "le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "j'aime",
+          "english": "I like"
+        },
+        {
+          "target": "je n'aime pas",
+          "english": "I don't like"
+        },
+        {
+          "target": "j'adore",
+          "english": "I love"
+        },
+        {
+          "target": "un peu",
+          "english": "a little"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u4-l10",
+      "title": "Likes, part 2",
+      "theme": "likes",
+      "exercises": [
+        {
+          "id": "fr-a1u4-w37-te",
+          "type": "mc",
+          "prompt": "What does \"beaucoup\" mean?",
+          "speak": "beaucoup",
+          "options": [
+            "I don't like",
+            "I like",
+            "with",
+            "a lot"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u4-w37"
+        },
+        {
+          "id": "fr-a1u4-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"with\"?",
+          "options": [
+            "avec",
+            "aussi",
+            "j'aime",
+            "sans"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w38"
+        },
+        {
+          "id": "fr-a1-u4-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u4-w37",
+              "target": "beaucoup",
+              "english": "a lot"
+            },
+            {
+              "wordId": "fr-a1u4-w38",
+              "target": "avec",
+              "english": "with"
+            },
+            {
+              "wordId": "fr-a1u4-w39",
+              "target": "sans",
+              "english": "without"
+            },
+            {
+              "wordId": "fr-a1u4-w40",
+              "target": "aussi",
+              "english": "also"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u4-w39-te",
+          "type": "mc",
+          "prompt": "What does \"sans\" mean?",
+          "speak": "sans",
+          "options": [
+            "without",
+            "I love",
+            "I like",
+            "a lot"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w39"
+        },
+        {
+          "id": "fr-a1u4-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"also\"?",
+          "options": [
+            "aussi",
+            "beaucoup",
+            "je n'aime pas",
+            "j'aime"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u4-w40"
+        },
+        {
+          "id": "fr-a1-u4-l10-s",
+          "type": "translate",
+          "prompt": "I don't like fish",
+          "answer": [
+            "Je",
+            "n'aime",
+            "pas",
+            "le",
+            "poisson"
+          ],
+          "bank": [
+            "le",
+            "poisson",
+            "pas",
+            "n'aime",
+            "riz",
+            "Je",
+            "adore"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "beaucoup",
+          "english": "a lot"
+        },
+        {
+          "target": "avec",
+          "english": "with"
+        },
+        {
+          "target": "sans",
+          "english": "without"
+        },
+        {
+          "target": "aussi",
+          "english": "also"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "fr-a1-u4-cp",
+    "title": "Unit 4 checkpoint",
+    "pool": [
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w1",
+        "type": "mc",
+        "prompt": "What does \"l'eau\" mean?",
+        "speak": "l'eau",
+        "options": [
+          "it is good",
+          "also",
+          "without",
+          "water"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w1"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w2",
+        "type": "mc",
+        "prompt": "How do you say \"coffee\"?",
+        "options": [
+          "c'est bon",
+          "le café",
+          "je voudrais",
+          "le riz"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u4-w2"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w3",
+        "type": "mc",
+        "prompt": "What does \"le thé\" mean?",
+        "speak": "le thé",
+        "options": [
+          "tea",
+          "beer",
+          "without",
+          "apple"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w3"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w4",
+        "type": "mc",
+        "prompt": "How do you say \"milk\"?",
+        "options": [
+          "la pomme de terre",
+          "le lait",
+          "le riz",
+          "le poulet"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u4-w4"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w5",
+        "type": "mc",
+        "prompt": "What does \"le jus\" mean?",
+        "speak": "le jus",
+        "options": [
+          "juice",
+          "tomato",
+          "delicious",
+          "lemonade"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w5"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w6",
+        "type": "mc",
+        "prompt": "How do you say \"wine\"?",
+        "options": [
+          "le vin",
+          "la carotte",
+          "le thé",
+          "le riz"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w6"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w7",
+        "type": "mc",
+        "prompt": "What does \"la bière\" mean?",
+        "speak": "la bière",
+        "options": [
+          "I love",
+          "carrot",
+          "tea",
+          "beer"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w7"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w8",
+        "type": "mc",
+        "prompt": "How do you say \"lemonade\"?",
+        "options": [
+          "la limonade",
+          "je voudrais",
+          "la viande",
+          "le citron"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w8"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w9",
+        "type": "mc",
+        "prompt": "What does \"le pain\" mean?",
+        "speak": "le pain",
+        "options": [
+          "bread",
+          "orange",
+          "I don't like",
+          "fish"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w9"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w10",
+        "type": "mc",
+        "prompt": "How do you say \"rice\"?",
+        "options": [
+          "j'ai faim",
+          "avec",
+          "l'œuf",
+          "le riz"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w10"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w11",
+        "type": "mc",
+        "prompt": "What does \"le fromage\" mean?",
+        "speak": "le fromage",
+        "options": [
+          "apple",
+          "without",
+          "I don't like",
+          "cheese"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w11"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w12",
+        "type": "mc",
+        "prompt": "How do you say \"egg\"?",
+        "options": [
+          "j'adore",
+          "l'œuf",
+          "la bière",
+          "l'eau"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u4-w12"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w13",
+        "type": "mc",
+        "prompt": "What does \"le poulet\" mean?",
+        "speak": "le poulet",
+        "options": [
+          "cheese",
+          "enjoy your meal",
+          "coffee",
+          "chicken"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w13"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w14",
+        "type": "mc",
+        "prompt": "How do you say \"fish\"?",
+        "options": [
+          "le poisson",
+          "la limonade",
+          "la pomme de terre",
+          "j'ai faim"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w14"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w15",
+        "type": "mc",
+        "prompt": "What does \"la viande\" mean?",
+        "speak": "la viande",
+        "options": [
+          "salad",
+          "delicious",
+          "meat",
+          "bread"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w15"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w16",
+        "type": "mc",
+        "prompt": "How do you say \"soup\"?",
+        "options": [
+          "le thé",
+          "la banane",
+          "la soupe",
+          "j'ai faim"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w16"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w17",
+        "type": "mc",
+        "prompt": "What does \"la pomme\" mean?",
+        "speak": "la pomme",
+        "options": [
+          "apple",
+          "tea",
+          "potato",
+          "beer"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w17"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w18",
+        "type": "mc",
+        "prompt": "How do you say \"banana\"?",
+        "options": [
+          "la banane",
+          "l'orange",
+          "délicieux",
+          "la limonade"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w18"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w19",
+        "type": "mc",
+        "prompt": "What does \"l'orange\" mean?",
+        "speak": "l'orange",
+        "options": [
+          "I am thirsty",
+          "carrot",
+          "without",
+          "orange"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w19"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w20",
+        "type": "mc",
+        "prompt": "How do you say \"tomato\"?",
+        "options": [
+          "le poisson",
+          "la bière",
+          "l'eau",
+          "la tomate"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w20"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w21",
+        "type": "mc",
+        "prompt": "What does \"la pomme de terre\" mean?",
+        "speak": "la pomme de terre",
+        "options": [
+          "the bill",
+          "I would like",
+          "tea",
+          "potato"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w21"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w22",
+        "type": "mc",
+        "prompt": "How do you say \"carrot\"?",
+        "options": [
+          "j'ai faim",
+          "la carotte",
+          "la viande",
+          "sans"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u4-w22"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w23",
+        "type": "mc",
+        "prompt": "What does \"la salade\" mean?",
+        "speak": "la salade",
+        "options": [
+          "I would like",
+          "tea",
+          "salad",
+          "a little"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w23"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w24",
+        "type": "mc",
+        "prompt": "How do you say \"lemon\"?",
+        "options": [
+          "sans",
+          "la carotte",
+          "je voudrais",
+          "le citron"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w24"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w25",
+        "type": "mc",
+        "prompt": "What does \"j'ai faim\" mean?",
+        "speak": "j'ai faim",
+        "options": [
+          "I am hungry",
+          "milk",
+          "the menu",
+          "delicious"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w25"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w26",
+        "type": "mc",
+        "prompt": "How do you say \"I am thirsty\"?",
+        "options": [
+          "l'eau",
+          "je n'aime pas",
+          "j'ai soif",
+          "la viande"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w26"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w27",
+        "type": "mc",
+        "prompt": "What does \"je voudrais\" mean?",
+        "speak": "je voudrais",
+        "options": [
+          "carrot",
+          "lemon",
+          "bread",
+          "I would like"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w27"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w28",
+        "type": "mc",
+        "prompt": "How do you say \"the bill\"?",
+        "options": [
+          "sans",
+          "l'addition",
+          "je n'aime pas",
+          "la limonade"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u4-w28"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w29",
+        "type": "mc",
+        "prompt": "What does \"le menu\" mean?",
+        "speak": "le menu",
+        "options": [
+          "rice",
+          "with",
+          "the menu",
+          "milk"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w29"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w30",
+        "type": "mc",
+        "prompt": "How do you say \"delicious\"?",
+        "options": [
+          "le lait",
+          "la pomme de terre",
+          "délicieux",
+          "j'aime"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w30"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w31",
+        "type": "mc",
+        "prompt": "What does \"c'est bon\" mean?",
+        "speak": "c'est bon",
+        "options": [
+          "I don't like",
+          "I love",
+          "salad",
+          "it is good"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w31"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w32",
+        "type": "mc",
+        "prompt": "How do you say \"enjoy your meal\"?",
+        "options": [
+          "l'œuf",
+          "bon appétit",
+          "la soupe",
+          "la pomme"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u4-w32"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w33",
+        "type": "mc",
+        "prompt": "What does \"j'aime\" mean?",
+        "speak": "j'aime",
+        "options": [
+          "I like",
+          "lemon",
+          "bread",
+          "meat"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w33"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w34",
+        "type": "mc",
+        "prompt": "How do you say \"I don't like\"?",
+        "options": [
+          "la pomme de terre",
+          "la viande",
+          "la pomme",
+          "je n'aime pas"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w34"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w35",
+        "type": "mc",
+        "prompt": "What does \"j'adore\" mean?",
+        "speak": "j'adore",
+        "options": [
+          "rice",
+          "fish",
+          "I love",
+          "apple"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w35"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w36",
+        "type": "mc",
+        "prompt": "How do you say \"a little\"?",
+        "options": [
+          "la banane",
+          "un peu",
+          "la bière",
+          "j'ai faim"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u4-w36"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w37",
+        "type": "mc",
+        "prompt": "What does \"beaucoup\" mean?",
+        "speak": "beaucoup",
+        "options": [
+          "it is good",
+          "also",
+          "a lot",
+          "beer"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u4-w37"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w38",
+        "type": "mc",
+        "prompt": "How do you say \"with\"?",
+        "options": [
+          "avec",
+          "un peu",
+          "le riz",
+          "le poulet"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w38"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w39",
+        "type": "mc",
+        "prompt": "What does \"sans\" mean?",
+        "speak": "sans",
+        "options": [
+          "without",
+          "soup",
+          "lemon",
+          "milk"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u4-w39"
+      },
+      {
+        "id": "fr-a1-u4-cp-fr-a1u4-w40",
+        "type": "mc",
+        "prompt": "How do you say \"also\"?",
+        "options": [
+          "l'œuf",
+          "le lait",
+          "l'addition",
+          "aussi"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u4-w40"
+      },
+      {
+        "id": "fr-a1-u4-cp-l1-s1",
+        "type": "translate",
+        "prompt": "I would like some water",
+        "answer": [
+          "Je",
+          "voudrais",
+          "de",
+          "l'eau"
+        ],
+        "bank": [
+          "café",
+          "de",
+          "thé",
+          "Je",
+          "l'eau",
+          "voudrais"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l1-s2",
+        "type": "translate",
+        "prompt": "A coffee, please",
+        "answer": [
+          "Un",
+          "café",
+          "s'il",
+          "vous",
+          "plaît"
+        ],
+        "bank": [
+          "lait",
+          "s'il",
+          "café",
+          "thé",
+          "Un",
+          "vous",
+          "plaît"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l1-s3",
+        "type": "translate",
+        "prompt": "The tea is hot",
+        "answer": [
+          "Le",
+          "thé",
+          "est",
+          "chaud"
+        ],
+        "bank": [
+          "thé",
+          "froid",
+          "chaud",
+          "est",
+          "jus",
+          "Le"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I like rice",
+        "answer": [
+          "J'aime",
+          "le",
+          "riz"
+        ],
+        "bank": [
+          "le",
+          "soupe",
+          "riz",
+          "J'aime",
+          "pain"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l2-s2",
+        "type": "translate",
+        "prompt": "The chicken is good",
+        "answer": [
+          "Le",
+          "poulet",
+          "est",
+          "bon"
+        ],
+        "bank": [
+          "est",
+          "poisson",
+          "mauvais",
+          "poulet",
+          "Le",
+          "bon"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l2-s3",
+        "type": "translate",
+        "prompt": "Bread and cheese",
+        "answer": [
+          "Du",
+          "pain",
+          "et",
+          "du",
+          "fromage"
+        ],
+        "bank": [
+          "pain",
+          "œuf",
+          "riz",
+          "fromage",
+          "du",
+          "et",
+          "Du"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l3-s1",
+        "type": "translate",
+        "prompt": "An apple, please",
+        "answer": [
+          "Une",
+          "pomme",
+          "s'il",
+          "vous",
+          "plaît"
+        ],
+        "bank": [
+          "s'il",
+          "vous",
+          "plaît",
+          "pomme",
+          "Une",
+          "banane",
+          "tomate"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l3-s2",
+        "type": "translate",
+        "prompt": "The banana is yellow",
+        "answer": [
+          "La",
+          "banane",
+          "est",
+          "jaune"
+        ],
+        "bank": [
+          "est",
+          "La",
+          "orange",
+          "jaune",
+          "banane",
+          "rouge"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l3-s3",
+        "type": "translate",
+        "prompt": "I like salad",
+        "answer": [
+          "J'aime",
+          "la",
+          "salade"
+        ],
+        "bank": [
+          "citron",
+          "carotte",
+          "la",
+          "salade",
+          "J'aime"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l4-s1",
+        "type": "translate",
+        "prompt": "I am hungry",
+        "answer": [
+          "J'ai",
+          "faim"
+        ],
+        "bank": [
+          "soif",
+          "voudrais",
+          "faim",
+          "J'ai"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l4-s2",
+        "type": "translate",
+        "prompt": "The bill, please",
+        "answer": [
+          "L'addition",
+          "s'il",
+          "vous",
+          "plaît"
+        ],
+        "bank": [
+          "L'addition",
+          "s'il",
+          "plaît",
+          "menu",
+          "vous",
+          "merci"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l4-s3",
+        "type": "translate",
+        "prompt": "It is delicious",
+        "answer": [
+          "C'est",
+          "délicieux"
+        ],
+        "bank": [
+          "délicieux",
+          "C'est",
+          "appétit",
+          "bon"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l5-s1",
+        "type": "translate",
+        "prompt": "I like coffee a lot",
+        "answer": [
+          "J'aime",
+          "beaucoup",
+          "le",
+          "café"
+        ],
+        "bank": [
+          "beaucoup",
+          "thé",
+          "café",
+          "peu",
+          "le",
+          "J'aime"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l5-s2",
+        "type": "translate",
+        "prompt": "I don't like fish",
+        "answer": [
+          "Je",
+          "n'aime",
+          "pas",
+          "le",
+          "poisson"
+        ],
+        "bank": [
+          "pas",
+          "n'aime",
+          "poisson",
+          "le",
+          "riz",
+          "Je",
+          "adore"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-l5-s3",
+        "type": "translate",
+        "prompt": "A coffee without milk",
+        "answer": [
+          "Un",
+          "café",
+          "sans",
+          "lait"
+        ],
+        "bank": [
+          "café",
+          "Un",
+          "lait",
+          "sans",
+          "thé",
+          "avec"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u4-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u4-w5",
+            "target": "le jus",
+            "english": "juice"
+          },
+          {
+            "wordId": "fr-a1u4-w8",
+            "target": "la limonade",
+            "english": "lemonade"
+          },
+          {
+            "wordId": "fr-a1u4-w1",
+            "target": "l'eau",
+            "english": "water"
+          },
+          {
+            "wordId": "fr-a1u4-w2",
+            "target": "le café",
+            "english": "coffee"
+          },
+          {
+            "wordId": "fr-a1u4-w4",
+            "target": "le lait",
+            "english": "milk"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u4-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u4-w16",
+            "target": "la soupe",
+            "english": "soup"
+          },
+          {
+            "wordId": "fr-a1u4-w11",
+            "target": "le fromage",
+            "english": "cheese"
+          },
+          {
+            "wordId": "fr-a1u4-w9",
+            "target": "le pain",
+            "english": "bread"
+          },
+          {
+            "wordId": "fr-a1u4-w14",
+            "target": "le poisson",
+            "english": "fish"
+          },
+          {
+            "wordId": "fr-a1u4-w10",
+            "target": "le riz",
+            "english": "rice"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u4-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u4-w22",
+            "target": "la carotte",
+            "english": "carrot"
+          },
+          {
+            "wordId": "fr-a1u4-w17",
+            "target": "la pomme",
+            "english": "apple"
+          },
+          {
+            "wordId": "fr-a1u4-w23",
+            "target": "la salade",
+            "english": "salad"
+          },
+          {
+            "wordId": "fr-a1u4-w18",
+            "target": "la banane",
+            "english": "banana"
+          },
+          {
+            "wordId": "fr-a1u4-w19",
+            "target": "l'orange",
+            "english": "orange"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u4-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u4-w29",
+            "target": "le menu",
+            "english": "the menu"
+          },
+          {
+            "wordId": "fr-a1u4-w28",
+            "target": "l'addition",
+            "english": "the bill"
+          },
+          {
+            "wordId": "fr-a1u4-w25",
+            "target": "j'ai faim",
+            "english": "I am hungry"
+          },
+          {
+            "wordId": "fr-a1u4-w26",
+            "target": "j'ai soif",
+            "english": "I am thirsty"
+          },
+          {
+            "wordId": "fr-a1u4-w30",
+            "target": "délicieux",
+            "english": "delicious"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u4-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u4-w36",
+            "target": "un peu",
+            "english": "a little"
+          },
+          {
+            "wordId": "fr-a1u4-w37",
+            "target": "beaucoup",
+            "english": "a lot"
+          },
+          {
+            "wordId": "fr-a1u4-w34",
+            "target": "je n'aime pas",
+            "english": "I don't like"
+          },
+          {
+            "wordId": "fr-a1u4-w40",
+            "target": "aussi",
+            "english": "also"
+          },
+          {
+            "wordId": "fr-a1u4-w35",
+            "target": "j'adore",
+            "english": "I love"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

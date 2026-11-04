@@ -2,205 +2,1212 @@
   "lang": "fr",
   "unit": 1,
   "level": "A1",
-  "title": "French, Unit 1",
+  "title": "First words",
+  "blurb": "Say hello, be polite and introduce yourself.",
   "speechLang": "fr-FR",
   "lessons": [
     {
-      "id": "fr-u1-l1",
-      "title": "Greetings, part 1",
-      "theme": "greetings",
+      "id": "fr-a1-u1-l1",
+      "title": "Hello and goodbye, part 1",
+      "theme": "hello and goodbye",
       "exercises": [
         {
-          "id": "fr-w1-te",
+          "id": "fr-a1u1-w1-te",
           "type": "mc",
           "prompt": "What does \"bonjour\" mean?",
           "speak": "bonjour",
           "options": [
-            "please",
-            "thank you",
             "goodbye",
+            "good night",
+            "hi",
             "hello"
           ],
           "answer": 3,
-          "wordId": "fr-w1"
+          "wordId": "fr-a1u1-w1"
         },
         {
-          "id": "fr-w2-et",
+          "id": "fr-a1u1-w2-et",
           "type": "mc",
-          "prompt": "How do you say \"good evening\"?",
+          "prompt": "How do you say \"hi\"?",
           "options": [
-            "s'il vous plaît",
-            "bonsoir",
-            "bonjour",
-            "merci"
+            "salut",
+            "à demain",
+            "à bientôt",
+            "bonne nuit"
           ],
-          "answer": 1,
-          "wordId": "fr-w2"
+          "answer": 0,
+          "wordId": "fr-a1u1-w2"
         },
         {
-          "id": "fr-l1-m",
+          "id": "fr-a1-u1-l1-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "fr-w1",
+              "wordId": "fr-a1u1-w1",
               "target": "bonjour",
               "english": "hello"
             },
             {
-              "wordId": "fr-w2",
-              "target": "bonsoir",
-              "english": "good evening"
-            },
-            {
-              "wordId": "fr-w3",
+              "wordId": "fr-a1u1-w2",
               "target": "salut",
               "english": "hi"
             },
             {
-              "wordId": "fr-w4",
-              "target": "merci",
-              "english": "thank you"
+              "wordId": "fr-a1u1-w3",
+              "target": "bonsoir",
+              "english": "good evening"
+            },
+            {
+              "wordId": "fr-a1u1-w4",
+              "target": "bonne nuit",
+              "english": "good night"
             }
           ]
         },
         {
-          "id": "fr-w3-te",
+          "id": "fr-a1u1-w3-te",
           "type": "mc",
-          "prompt": "What does \"salut\" mean?",
-          "speak": "salut",
+          "prompt": "What does \"bonsoir\" mean?",
+          "speak": "bonsoir",
           "options": [
-            "no",
-            "please",
             "hi",
-            "good evening"
+            "good evening",
+            "goodbye",
+            "see you tomorrow"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w3"
+        },
+        {
+          "id": "fr-a1u1-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"good night\"?",
+          "options": [
+            "salut",
+            "à bientôt",
+            "bonne nuit",
+            "bienvenue"
           ],
           "answer": 2,
-          "wordId": "fr-w3"
+          "wordId": "fr-a1u1-w4"
         },
         {
-          "id": "fr-w4-et",
-          "type": "mc",
-          "prompt": "How do you say \"thank you\"?",
-          "options": [
-            "oui",
-            "bonsoir",
-            "non",
-            "merci"
-          ],
-          "answer": 3,
-          "wordId": "fr-w4"
-        },
-        {
-          "id": "fr-l1-s1",
+          "id": "fr-a1-u1-l1-s",
           "type": "translate",
-          "prompt": "Hello, my name is Amara",
+          "prompt": "Good evening and good night",
           "answer": [
-            "Bonjour",
-            "je",
-            "m'appelle",
-            "Amara"
+            "Bonsoir",
+            "et",
+            "bonne",
+            "nuit"
           ],
           "bank": [
-            "tu",
-            "m'appelle",
-            "suis",
-            "Amara",
-            "je",
-            "Bonjour"
+            "salut",
+            "bonne",
+            "Bonsoir",
+            "bientôt",
+            "nuit",
+            "et"
           ],
           "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "bonjour",
+          "english": "hello"
+        },
+        {
+          "target": "salut",
+          "english": "hi"
+        },
+        {
+          "target": "bonsoir",
+          "english": "good evening"
+        },
+        {
+          "target": "bonne nuit",
+          "english": "good night"
         }
       ]
     },
     {
-      "id": "fr-u1-l2",
-      "title": "Greetings, part 2",
-      "theme": "greetings",
+      "id": "fr-a1-u1-l2",
+      "title": "Hello and goodbye, part 2",
+      "theme": "hello and goodbye",
       "exercises": [
         {
-          "id": "fr-w5-te",
+          "id": "fr-a1u1-w5-te",
           "type": "mc",
-          "prompt": "What does \"s'il vous plaît\" mean?",
-          "speak": "s'il vous plaît",
+          "prompt": "What does \"au revoir\" mean?",
+          "speak": "au revoir",
           "options": [
-            "hello",
-            "please",
-            "good evening",
-            "thank you"
-          ],
-          "answer": 1,
-          "wordId": "fr-w5"
-        },
-        {
-          "id": "fr-w6-et",
-          "type": "mc",
-          "prompt": "How do you say \"goodbye\"?",
-          "options": [
-            "non",
-            "s'il vous plaît",
-            "oui",
-            "au revoir"
+            "see you soon",
+            "hi",
+            "welcome",
+            "goodbye"
           ],
           "answer": 3,
-          "wordId": "fr-w6"
+          "wordId": "fr-a1u1-w5"
         },
         {
-          "id": "fr-l2-m",
+          "id": "fr-a1u1-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"see you soon\"?",
+          "options": [
+            "bonne nuit",
+            "bonjour",
+            "à bientôt",
+            "au revoir"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w6"
+        },
+        {
+          "id": "fr-a1-u1-l2-m",
           "type": "match",
           "prompt": "Match the pairs",
           "pairs": [
             {
-              "wordId": "fr-w5",
-              "target": "s'il vous plaît",
-              "english": "please"
-            },
-            {
-              "wordId": "fr-w6",
+              "wordId": "fr-a1u1-w5",
               "target": "au revoir",
               "english": "goodbye"
             },
             {
-              "wordId": "fr-w7",
-              "target": "oui",
-              "english": "yes"
+              "wordId": "fr-a1u1-w6",
+              "target": "à bientôt",
+              "english": "see you soon"
             },
             {
-              "wordId": "fr-w8",
-              "target": "non",
-              "english": "no"
+              "wordId": "fr-a1u1-w7",
+              "target": "à demain",
+              "english": "see you tomorrow"
+            },
+            {
+              "wordId": "fr-a1u1-w8",
+              "target": "bienvenue",
+              "english": "welcome"
             }
           ]
         },
         {
-          "id": "fr-w7-te",
+          "id": "fr-a1u1-w7-te",
+          "type": "mc",
+          "prompt": "What does \"à demain\" mean?",
+          "speak": "à demain",
+          "options": [
+            "see you tomorrow",
+            "goodbye",
+            "see you soon",
+            "hi"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w7"
+        },
+        {
+          "id": "fr-a1u1-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"welcome\"?",
+          "options": [
+            "bonne nuit",
+            "à demain",
+            "bienvenue",
+            "à bientôt"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w8"
+        },
+        {
+          "id": "fr-a1-u1-l2-s",
+          "type": "translate",
+          "prompt": "Goodbye, see you tomorrow",
+          "answer": [
+            "Au",
+            "revoir",
+            "à",
+            "demain"
+          ],
+          "bank": [
+            "nuit",
+            "à",
+            "Au",
+            "revoir",
+            "bonsoir",
+            "demain"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "au revoir",
+          "english": "goodbye"
+        },
+        {
+          "target": "à bientôt",
+          "english": "see you soon"
+        },
+        {
+          "target": "à demain",
+          "english": "see you tomorrow"
+        },
+        {
+          "target": "bienvenue",
+          "english": "welcome"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l3",
+      "title": "Please and thank you, part 1",
+      "theme": "please and thank you",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w9-te",
+          "type": "mc",
+          "prompt": "What does \"s'il vous plaît\" mean?",
+          "speak": "s'il vous plaît",
+          "options": [
+            "thank you very much",
+            "thank you",
+            "please",
+            "excuse me"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w9"
+        },
+        {
+          "id": "fr-a1u1-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"thank you\"?",
+          "options": [
+            "merci",
+            "de rien",
+            "merci beaucoup",
+            "excusez-moi"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w10"
+        },
+        {
+          "id": "fr-a1-u1-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w9",
+              "target": "s'il vous plaît",
+              "english": "please"
+            },
+            {
+              "wordId": "fr-a1u1-w10",
+              "target": "merci",
+              "english": "thank you"
+            },
+            {
+              "wordId": "fr-a1u1-w11",
+              "target": "merci beaucoup",
+              "english": "thank you very much"
+            },
+            {
+              "wordId": "fr-a1u1-w12",
+              "target": "de rien",
+              "english": "you're welcome"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w11-te",
+          "type": "mc",
+          "prompt": "What does \"merci beaucoup\" mean?",
+          "speak": "merci beaucoup",
+          "options": [
+            "with pleasure",
+            "thank you",
+            "excuse me",
+            "thank you very much"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u1-w11"
+        },
+        {
+          "id": "fr-a1u1-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"you're welcome\"?",
+          "options": [
+            "de rien",
+            "avec plaisir",
+            "merci",
+            "merci beaucoup"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w12"
+        },
+        {
+          "id": "fr-a1-u1-l3-s",
+          "type": "translate",
+          "prompt": "Thank you very much",
+          "answer": [
+            "Merci",
+            "beaucoup"
+          ],
+          "bank": [
+            "pardon",
+            "Merci",
+            "rien",
+            "beaucoup"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "s'il vous plaît",
+          "english": "please"
+        },
+        {
+          "target": "merci",
+          "english": "thank you"
+        },
+        {
+          "target": "merci beaucoup",
+          "english": "thank you very much"
+        },
+        {
+          "target": "de rien",
+          "english": "you're welcome"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l4",
+      "title": "Please and thank you, part 2",
+      "theme": "please and thank you",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w13-te",
+          "type": "mc",
+          "prompt": "What does \"excusez-moi\" mean?",
+          "speak": "excusez-moi",
+          "options": [
+            "sorry",
+            "excuse me",
+            "thank you",
+            "you're welcome"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w13"
+        },
+        {
+          "id": "fr-a1u1-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"sorry\"?",
+          "options": [
+            "de rien",
+            "pardon",
+            "s'il vous plaît",
+            "ce n'est pas grave"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w14"
+        },
+        {
+          "id": "fr-a1-u1-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w13",
+              "target": "excusez-moi",
+              "english": "excuse me"
+            },
+            {
+              "wordId": "fr-a1u1-w14",
+              "target": "pardon",
+              "english": "sorry"
+            },
+            {
+              "wordId": "fr-a1u1-w15",
+              "target": "ce n'est pas grave",
+              "english": "it's okay"
+            },
+            {
+              "wordId": "fr-a1u1-w16",
+              "target": "avec plaisir",
+              "english": "with pleasure"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w15-te",
+          "type": "mc",
+          "prompt": "What does \"ce n'est pas grave\" mean?",
+          "speak": "ce n'est pas grave",
+          "options": [
+            "with pleasure",
+            "thank you very much",
+            "it's okay",
+            "sorry"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w15"
+        },
+        {
+          "id": "fr-a1u1-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"with pleasure\"?",
+          "options": [
+            "avec plaisir",
+            "de rien",
+            "excusez-moi",
+            "s'il vous plaît"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w16"
+        },
+        {
+          "id": "fr-a1-u1-l4-s",
+          "type": "translate",
+          "prompt": "You're welcome",
+          "answer": [
+            "De",
+            "rien"
+          ],
+          "bank": [
+            "plaisir",
+            "De",
+            "rien",
+            "merci"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "excusez-moi",
+          "english": "excuse me"
+        },
+        {
+          "target": "pardon",
+          "english": "sorry"
+        },
+        {
+          "target": "ce n'est pas grave",
+          "english": "it's okay"
+        },
+        {
+          "target": "avec plaisir",
+          "english": "with pleasure"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l5",
+      "title": "Yes and no, part 1",
+      "theme": "yes and no",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w17-te",
           "type": "mc",
           "prompt": "What does \"oui\" mean?",
           "speak": "oui",
           "options": [
-            "goodbye",
-            "thank you",
             "yes",
-            "hi"
+            "of course",
+            "I don't know",
+            "maybe"
           ],
-          "answer": 2,
-          "wordId": "fr-w7"
+          "answer": 0,
+          "wordId": "fr-a1u1-w17"
         },
         {
-          "id": "fr-w8-et",
+          "id": "fr-a1u1-w18-et",
           "type": "mc",
           "prompt": "How do you say \"no\"?",
           "options": [
-            "bonjour",
-            "s'il vous plaît",
+            "bien sûr",
+            "peut-être",
+            "oui",
+            "non"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u1-w18"
+        },
+        {
+          "id": "fr-a1-u1-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w17",
+              "target": "oui",
+              "english": "yes"
+            },
+            {
+              "wordId": "fr-a1u1-w18",
+              "target": "non",
+              "english": "no"
+            },
+            {
+              "wordId": "fr-a1u1-w19",
+              "target": "peut-être",
+              "english": "maybe"
+            },
+            {
+              "wordId": "fr-a1u1-w20",
+              "target": "d'accord",
+              "english": "okay"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w19-te",
+          "type": "mc",
+          "prompt": "What does \"peut-être\" mean?",
+          "speak": "peut-être",
+          "options": [
+            "of course",
+            "I don't understand",
+            "maybe",
+            "yes"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w19"
+        },
+        {
+          "id": "fr-a1u1-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"okay\"?",
+          "options": [
+            "d'accord",
+            "je ne sais pas",
             "non",
             "oui"
           ],
-          "answer": 2,
-          "wordId": "fr-w8"
+          "answer": 0,
+          "wordId": "fr-a1u1-w20"
         },
         {
-          "id": "fr-l1-s2",
+          "id": "fr-a1-u1-l5-s",
+          "type": "translate",
+          "prompt": "No, thank you",
+          "answer": [
+            "Non",
+            "merci"
+          ],
+          "bank": [
+            "oui",
+            "merci",
+            "rien",
+            "Non"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "oui",
+          "english": "yes"
+        },
+        {
+          "target": "non",
+          "english": "no"
+        },
+        {
+          "target": "peut-être",
+          "english": "maybe"
+        },
+        {
+          "target": "d'accord",
+          "english": "okay"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l6",
+      "title": "Yes and no, part 2",
+      "theme": "yes and no",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w21-te",
+          "type": "mc",
+          "prompt": "What does \"bien sûr\" mean?",
+          "speak": "bien sûr",
+          "options": [
+            "no",
+            "of course",
+            "maybe",
+            "okay"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w21"
+        },
+        {
+          "id": "fr-a1u1-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"I don't know\"?",
+          "options": [
+            "je ne comprends pas",
+            "non",
+            "je ne sais pas",
+            "oui"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w22"
+        },
+        {
+          "id": "fr-a1-u1-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w21",
+              "target": "bien sûr",
+              "english": "of course"
+            },
+            {
+              "wordId": "fr-a1u1-w22",
+              "target": "je ne sais pas",
+              "english": "I don't know"
+            },
+            {
+              "wordId": "fr-a1u1-w23",
+              "target": "je comprends",
+              "english": "I understand"
+            },
+            {
+              "wordId": "fr-a1u1-w24",
+              "target": "je ne comprends pas",
+              "english": "I don't understand"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w23-te",
+          "type": "mc",
+          "prompt": "What does \"je comprends\" mean?",
+          "speak": "je comprends",
+          "options": [
+            "of course",
+            "okay",
+            "I understand",
+            "I don't understand"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w23"
+        },
+        {
+          "id": "fr-a1u1-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"I don't understand\"?",
+          "options": [
+            "je comprends",
+            "non",
+            "je ne comprends pas",
+            "je ne sais pas"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w24"
+        },
+        {
+          "id": "fr-a1-u1-l6-s",
+          "type": "translate",
+          "prompt": "Yes, of course",
+          "answer": [
+            "Oui",
+            "bien",
+            "sûr"
+          ],
+          "bank": [
+            "bien",
+            "non",
+            "merci",
+            "sûr",
+            "Oui"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "bien sûr",
+          "english": "of course"
+        },
+        {
+          "target": "je ne sais pas",
+          "english": "I don't know"
+        },
+        {
+          "target": "je comprends",
+          "english": "I understand"
+        },
+        {
+          "target": "je ne comprends pas",
+          "english": "I don't understand"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l7",
+      "title": "My name is, part 1",
+      "theme": "my name is",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w25-te",
+          "type": "mc",
+          "prompt": "What does \"je m'appelle\" mean?",
+          "speak": "je m'appelle",
+          "options": [
+            "nice to meet you",
+            "me",
+            "my name is",
+            "and you"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w25"
+        },
+        {
+          "id": "fr-a1u1-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"what is your name\"?",
+          "options": [
+            "moi",
+            "comment vous appelez-vous",
+            "voici",
+            "madame"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w26"
+        },
+        {
+          "id": "fr-a1-u1-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w25",
+              "target": "je m'appelle",
+              "english": "my name is"
+            },
+            {
+              "wordId": "fr-a1u1-w26",
+              "target": "comment vous appelez-vous",
+              "english": "what is your name"
+            },
+            {
+              "wordId": "fr-a1u1-w27",
+              "target": "enchanté",
+              "english": "nice to meet you"
+            },
+            {
+              "wordId": "fr-a1u1-w28",
+              "target": "moi",
+              "english": "me"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w27-te",
+          "type": "mc",
+          "prompt": "What does \"enchanté\" mean?",
+          "speak": "enchanté",
+          "options": [
+            "madam",
+            "nice to meet you",
+            "me",
+            "sir"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w27"
+        },
+        {
+          "id": "fr-a1u1-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"me\"?",
+          "options": [
+            "moi",
+            "je m'appelle",
+            "enchanté",
+            "madame"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w28"
+        },
+        {
+          "id": "fr-a1-u1-l7-s",
+          "type": "translate",
+          "prompt": "What is your name",
+          "answer": [
+            "Comment",
+            "vous",
+            "appelez-vous"
+          ],
+          "bank": [
+            "vous",
+            "ami",
+            "je",
+            "Comment",
+            "appelez-vous"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "je m'appelle",
+          "english": "my name is"
+        },
+        {
+          "target": "comment vous appelez-vous",
+          "english": "what is your name"
+        },
+        {
+          "target": "enchanté",
+          "english": "nice to meet you"
+        },
+        {
+          "target": "moi",
+          "english": "me"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l8",
+      "title": "My name is, part 2",
+      "theme": "my name is",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w29-te",
+          "type": "mc",
+          "prompt": "What does \"et toi\" mean?",
+          "speak": "et toi",
+          "options": [
+            "sir",
+            "here is",
+            "what is your name",
+            "and you"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u1-w29"
+        },
+        {
+          "id": "fr-a1u1-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"here is\"?",
+          "options": [
+            "comment vous appelez-vous",
+            "voici",
+            "je m'appelle",
+            "madame"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w30"
+        },
+        {
+          "id": "fr-a1-u1-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w29",
+              "target": "et toi",
+              "english": "and you"
+            },
+            {
+              "wordId": "fr-a1u1-w30",
+              "target": "voici",
+              "english": "here is"
+            },
+            {
+              "wordId": "fr-a1u1-w31",
+              "target": "madame",
+              "english": "madam"
+            },
+            {
+              "wordId": "fr-a1u1-w32",
+              "target": "monsieur",
+              "english": "sir"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w31-te",
+          "type": "mc",
+          "prompt": "What does \"madame\" mean?",
+          "speak": "madame",
+          "options": [
+            "my name is",
+            "and you",
+            "madam",
+            "what is your name"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w31"
+        },
+        {
+          "id": "fr-a1u1-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"sir\"?",
+          "options": [
+            "monsieur",
+            "et toi",
+            "comment vous appelez-vous",
+            "moi"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w32"
+        },
+        {
+          "id": "fr-a1-u1-l8-s",
+          "type": "translate",
+          "prompt": "My name is Léa",
+          "answer": [
+            "Je",
+            "m'appelle",
+            "Léa"
+          ],
+          "bank": [
+            "toi",
+            "suis",
+            "m'appelle",
+            "Je",
+            "Léa"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "et toi",
+          "english": "and you"
+        },
+        {
+          "target": "voici",
+          "english": "here is"
+        },
+        {
+          "target": "madame",
+          "english": "madam"
+        },
+        {
+          "target": "monsieur",
+          "english": "sir"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l9",
+      "title": "How are you, part 1",
+      "theme": "how are you",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w33-te",
+          "type": "mc",
+          "prompt": "What does \"comment allez-vous\" mean?",
+          "speak": "comment allez-vous",
+          "options": [
+            "and you (polite)",
+            "how are you",
+            "I am fine",
+            "how is it going"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w33"
+        },
+        {
+          "id": "fr-a1u1-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"how is it going\"?",
+          "options": [
+            "je vais bien",
+            "ça va",
+            "comme ci comme ça",
+            "ça va bien"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w34"
+        },
+        {
+          "id": "fr-a1-u1-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w33",
+              "target": "comment allez-vous",
+              "english": "how are you"
+            },
+            {
+              "wordId": "fr-a1u1-w34",
+              "target": "ça va",
+              "english": "how is it going"
+            },
+            {
+              "wordId": "fr-a1u1-w35",
+              "target": "ça va bien",
+              "english": "it is going well"
+            },
+            {
+              "wordId": "fr-a1u1-w36",
+              "target": "très bien",
+              "english": "very well"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w35-te",
+          "type": "mc",
+          "prompt": "What does \"ça va bien\" mean?",
+          "speak": "ça va bien",
+          "options": [
+            "how are you",
+            "how is it going",
+            "it is going well",
+            "so-so"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u1-w35"
+        },
+        {
+          "id": "fr-a1u1-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"very well\"?",
+          "options": [
+            "ça va",
+            "comme ci comme ça",
+            "et vous",
+            "très bien"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u1-w36"
+        },
+        {
+          "id": "fr-a1-u1-l9-s",
+          "type": "translate",
+          "prompt": "It is going well",
+          "answer": [
+            "Ça",
+            "va",
+            "bien"
+          ],
+          "bank": [
+            "va",
+            "bien",
+            "mal",
+            "Ça",
+            "très"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "comment allez-vous",
+          "english": "how are you"
+        },
+        {
+          "target": "ça va",
+          "english": "how is it going"
+        },
+        {
+          "target": "ça va bien",
+          "english": "it is going well"
+        },
+        {
+          "target": "très bien",
+          "english": "very well"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u1-l10",
+      "title": "How are you, part 2",
+      "theme": "how are you",
+      "exercises": [
+        {
+          "id": "fr-a1u1-w37-te",
+          "type": "mc",
+          "prompt": "What does \"comme ci comme ça\" mean?",
+          "speak": "comme ci comme ça",
+          "options": [
+            "so-so",
+            "how are you",
+            "how is it going",
+            "and you (polite)"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w37"
+        },
+        {
+          "id": "fr-a1u1-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"bad\"?",
+          "options": [
+            "mal",
+            "ça va bien",
+            "comment allez-vous",
+            "comme ci comme ça"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u1-w38"
+        },
+        {
+          "id": "fr-a1-u1-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u1-w37",
+              "target": "comme ci comme ça",
+              "english": "so-so"
+            },
+            {
+              "wordId": "fr-a1u1-w38",
+              "target": "mal",
+              "english": "bad"
+            },
+            {
+              "wordId": "fr-a1u1-w39",
+              "target": "et vous",
+              "english": "and you (polite)"
+            },
+            {
+              "wordId": "fr-a1u1-w40",
+              "target": "je vais bien",
+              "english": "I am fine"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u1-w39-te",
+          "type": "mc",
+          "prompt": "What does \"et vous\" mean?",
+          "speak": "et vous",
+          "options": [
+            "how are you",
+            "very well",
+            "bad",
+            "and you (polite)"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u1-w39"
+        },
+        {
+          "id": "fr-a1u1-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"I am fine\"?",
+          "options": [
+            "mal",
+            "je vais bien",
+            "ça va bien",
+            "très bien"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u1-w40"
+        },
+        {
+          "id": "fr-a1-u1-l10-s",
           "type": "translate",
           "prompt": "How are you",
           "answer": [
@@ -208,1454 +1215,638 @@
             "allez-vous"
           ],
           "bank": [
-            "allez-vous",
             "Comment",
-            "merci",
-            "où"
+            "et",
+            "allez-vous",
+            "bien"
           ],
           "wordIds": []
         }
-      ]
-    },
-    {
-      "id": "fr-u1-l3",
-      "title": "Numbers, part 1",
-      "theme": "numbers",
-      "exercises": [
+      ],
+      "intro": [
         {
-          "id": "fr-w9-te",
-          "type": "mc",
-          "prompt": "What does \"un\" mean?",
-          "speak": "un",
-          "options": [
-            "one",
-            "ten",
-            "two",
-            "six"
-          ],
-          "answer": 0,
-          "wordId": "fr-w9"
+          "target": "comme ci comme ça",
+          "english": "so-so"
         },
         {
-          "id": "fr-w10-et",
-          "type": "mc",
-          "prompt": "How do you say \"two\"?",
-          "options": [
-            "deux",
-            "six",
-            "quatre",
-            "dix"
-          ],
-          "answer": 0,
-          "wordId": "fr-w10"
+          "target": "mal",
+          "english": "bad"
         },
         {
-          "id": "fr-l3-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w9",
-              "target": "un",
-              "english": "one"
-            },
-            {
-              "wordId": "fr-w10",
-              "target": "deux",
-              "english": "two"
-            },
-            {
-              "wordId": "fr-w11",
-              "target": "trois",
-              "english": "three"
-            },
-            {
-              "wordId": "fr-w12",
-              "target": "quatre",
-              "english": "four"
-            }
-          ]
+          "target": "et vous",
+          "english": "and you (polite)"
         },
         {
-          "id": "fr-w11-te",
-          "type": "mc",
-          "prompt": "What does \"trois\" mean?",
-          "speak": "trois",
-          "options": [
-            "six",
-            "one",
-            "three",
-            "four"
-          ],
-          "answer": 2,
-          "wordId": "fr-w11"
-        },
-        {
-          "id": "fr-w12-et",
-          "type": "mc",
-          "prompt": "How do you say \"four\"?",
-          "options": [
-            "deux",
-            "un",
-            "dix",
-            "quatre"
-          ],
-          "answer": 3,
-          "wordId": "fr-w12"
-        },
-        {
-          "id": "fr-l2-s1",
-          "type": "translate",
-          "prompt": "I have two brothers",
-          "answer": [
-            "J'ai",
-            "deux",
-            "frères"
-          ],
-          "bank": [
-            "frères",
-            "sœurs",
-            "deux",
-            "J'ai",
-            "trois"
-          ],
-          "wordIds": []
-        }
-      ]
-    },
-    {
-      "id": "fr-u1-l4",
-      "title": "Numbers, part 2",
-      "theme": "numbers",
-      "exercises": [
-        {
-          "id": "fr-w13-te",
-          "type": "mc",
-          "prompt": "What does \"cinq\" mean?",
-          "speak": "cinq",
-          "options": [
-            "five",
-            "three",
-            "two",
-            "four"
-          ],
-          "answer": 0,
-          "wordId": "fr-w13"
-        },
-        {
-          "id": "fr-w14-et",
-          "type": "mc",
-          "prompt": "How do you say \"six\"?",
-          "options": [
-            "cinq",
-            "six",
-            "un",
-            "vingt"
-          ],
-          "answer": 1,
-          "wordId": "fr-w14"
-        },
-        {
-          "id": "fr-l4-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w13",
-              "target": "cinq",
-              "english": "five"
-            },
-            {
-              "wordId": "fr-w14",
-              "target": "six",
-              "english": "six"
-            },
-            {
-              "wordId": "fr-w15",
-              "target": "dix",
-              "english": "ten"
-            },
-            {
-              "wordId": "fr-w16",
-              "target": "vingt",
-              "english": "twenty"
-            }
-          ]
-        },
-        {
-          "id": "fr-w15-te",
-          "type": "mc",
-          "prompt": "What does \"dix\" mean?",
-          "speak": "dix",
-          "options": [
-            "five",
-            "ten",
-            "six",
-            "one"
-          ],
-          "answer": 1,
-          "wordId": "fr-w15"
-        },
-        {
-          "id": "fr-w16-et",
-          "type": "mc",
-          "prompt": "How do you say \"twenty\"?",
-          "options": [
-            "trois",
-            "deux",
-            "un",
-            "vingt"
-          ],
-          "answer": 3,
-          "wordId": "fr-w16"
-        },
-        {
-          "id": "fr-l2-s2",
-          "type": "translate",
-          "prompt": "It is three o'clock",
-          "answer": [
-            "Il",
-            "est",
-            "trois",
-            "heures"
-          ],
-          "bank": [
-            "jours",
-            "quatre",
-            "Il",
-            "trois",
-            "est",
-            "heures"
-          ],
-          "wordIds": []
-        }
-      ]
-    },
-    {
-      "id": "fr-u1-l5",
-      "title": "Market and money, part 1",
-      "theme": "market and money",
-      "exercises": [
-        {
-          "id": "fr-w17-te",
-          "type": "mc",
-          "prompt": "What does \"le marché\" mean?",
-          "speak": "le marché",
-          "options": [
-            "cheap",
-            "expensive",
-            "the market",
-            "the price"
-          ],
-          "answer": 2,
-          "wordId": "fr-w17"
-        },
-        {
-          "id": "fr-w18-et",
-          "type": "mc",
-          "prompt": "How do you say \"how much\"?",
-          "options": [
-            "le prix",
-            "combien",
-            "l'argent",
-            "acheter"
-          ],
-          "answer": 1,
-          "wordId": "fr-w18"
-        },
-        {
-          "id": "fr-l5-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w17",
-              "target": "le marché",
-              "english": "the market"
-            },
-            {
-              "wordId": "fr-w18",
-              "target": "combien",
-              "english": "how much"
-            },
-            {
-              "wordId": "fr-w19",
-              "target": "cher",
-              "english": "expensive"
-            },
-            {
-              "wordId": "fr-w20",
-              "target": "pas cher",
-              "english": "cheap"
-            }
-          ]
-        },
-        {
-          "id": "fr-w19-te",
-          "type": "mc",
-          "prompt": "What does \"cher\" mean?",
-          "speak": "cher",
-          "options": [
-            "how much",
-            "to buy",
-            "expensive",
-            "cheap"
-          ],
-          "answer": 2,
-          "wordId": "fr-w19"
-        },
-        {
-          "id": "fr-w20-et",
-          "type": "mc",
-          "prompt": "How do you say \"cheap\"?",
-          "options": [
-            "payer",
-            "pas cher",
-            "le prix",
-            "cher"
-          ],
-          "answer": 1,
-          "wordId": "fr-w20"
-        },
-        {
-          "id": "fr-l3-s1",
-          "type": "translate",
-          "prompt": "How much does it cost",
-          "answer": [
-            "Combien",
-            "ça",
-            "coûte"
-          ],
-          "bank": [
-            "achète",
-            "cher",
-            "coûte",
-            "ça",
-            "Combien"
-          ],
-          "wordIds": []
-        }
-      ]
-    },
-    {
-      "id": "fr-u1-l6",
-      "title": "Market and money, part 2",
-      "theme": "market and money",
-      "exercises": [
-        {
-          "id": "fr-w21-te",
-          "type": "mc",
-          "prompt": "What does \"l'argent\" mean?",
-          "speak": "l'argent",
-          "options": [
-            "the market",
-            "expensive",
-            "the price",
-            "money"
-          ],
-          "answer": 3,
-          "wordId": "fr-w21"
-        },
-        {
-          "id": "fr-w22-et",
-          "type": "mc",
-          "prompt": "How do you say \"to buy\"?",
-          "options": [
-            "acheter",
-            "cher",
-            "combien",
-            "le marché"
-          ],
-          "answer": 0,
-          "wordId": "fr-w22"
-        },
-        {
-          "id": "fr-l6-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w21",
-              "target": "l'argent",
-              "english": "money"
-            },
-            {
-              "wordId": "fr-w22",
-              "target": "acheter",
-              "english": "to buy"
-            },
-            {
-              "wordId": "fr-w23",
-              "target": "payer",
-              "english": "to pay"
-            },
-            {
-              "wordId": "fr-w24",
-              "target": "le prix",
-              "english": "the price"
-            }
-          ]
-        },
-        {
-          "id": "fr-w23-te",
-          "type": "mc",
-          "prompt": "What does \"payer\" mean?",
-          "speak": "payer",
-          "options": [
-            "expensive",
-            "to pay",
-            "how much",
-            "to buy"
-          ],
-          "answer": 1,
-          "wordId": "fr-w23"
-        },
-        {
-          "id": "fr-w24-et",
-          "type": "mc",
-          "prompt": "How do you say \"the price\"?",
-          "options": [
-            "combien",
-            "payer",
-            "cher",
-            "le prix"
-          ],
-          "answer": 3,
-          "wordId": "fr-w24"
-        },
-        {
-          "id": "fr-l3-s2",
-          "type": "translate",
-          "prompt": "It is too expensive",
-          "answer": [
-            "C'est",
-            "trop",
-            "cher"
-          ],
-          "bank": [
-            "cher",
-            "C'est",
-            "bon",
-            "trop",
-            "peu"
-          ],
-          "wordIds": []
-        }
-      ]
-    },
-    {
-      "id": "fr-u1-l7",
-      "title": "Directions, part 1",
-      "theme": "directions",
-      "exercises": [
-        {
-          "id": "fr-w25-te",
-          "type": "mc",
-          "prompt": "What does \"à gauche\" mean?",
-          "speak": "à gauche",
-          "options": [
-            "on the right",
-            "the station",
-            "on the left",
-            "far"
-          ],
-          "answer": 2,
-          "wordId": "fr-w25"
-        },
-        {
-          "id": "fr-w26-et",
-          "type": "mc",
-          "prompt": "How do you say \"on the right\"?",
-          "options": [
-            "près",
-            "la gare",
-            "à droite",
-            "la rue"
-          ],
-          "answer": 2,
-          "wordId": "fr-w26"
-        },
-        {
-          "id": "fr-l7-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w25",
-              "target": "à gauche",
-              "english": "on the left"
-            },
-            {
-              "wordId": "fr-w26",
-              "target": "à droite",
-              "english": "on the right"
-            },
-            {
-              "wordId": "fr-w27",
-              "target": "tout droit",
-              "english": "straight ahead"
-            },
-            {
-              "wordId": "fr-w28",
-              "target": "la rue",
-              "english": "the street"
-            }
-          ]
-        },
-        {
-          "id": "fr-w27-te",
-          "type": "mc",
-          "prompt": "What does \"tout droit\" mean?",
-          "speak": "tout droit",
-          "options": [
-            "on the left",
-            "straight ahead",
-            "the station",
-            "the street"
-          ],
-          "answer": 1,
-          "wordId": "fr-w27"
-        },
-        {
-          "id": "fr-w28-et",
-          "type": "mc",
-          "prompt": "How do you say \"the street\"?",
-          "options": [
-            "la gare",
-            "la rue",
-            "à droite",
-            "tout droit"
-          ],
-          "answer": 1,
-          "wordId": "fr-w28"
-        },
-        {
-          "id": "fr-l4-s1",
-          "type": "translate",
-          "prompt": "Where is the station",
-          "answer": [
-            "Où",
-            "est",
-            "la",
-            "gare"
-          ],
-          "bank": [
-            "gare",
-            "loin",
-            "est",
-            "Où",
-            "la",
-            "rue"
-          ],
-          "wordIds": []
-        }
-      ]
-    },
-    {
-      "id": "fr-u1-l8",
-      "title": "Directions, part 2",
-      "theme": "directions",
-      "exercises": [
-        {
-          "id": "fr-w29-te",
-          "type": "mc",
-          "prompt": "What does \"près\" mean?",
-          "speak": "près",
-          "options": [
-            "near",
-            "far",
-            "the station",
-            "on the left"
-          ],
-          "answer": 0,
-          "wordId": "fr-w29"
-        },
-        {
-          "id": "fr-w30-et",
-          "type": "mc",
-          "prompt": "How do you say \"far\"?",
-          "options": [
-            "la gare",
-            "loin",
-            "à droite",
-            "tout droit"
-          ],
-          "answer": 1,
-          "wordId": "fr-w30"
-        },
-        {
-          "id": "fr-l8-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w29",
-              "target": "près",
-              "english": "near"
-            },
-            {
-              "wordId": "fr-w30",
-              "target": "loin",
-              "english": "far"
-            },
-            {
-              "wordId": "fr-w31",
-              "target": "où",
-              "english": "where"
-            },
-            {
-              "wordId": "fr-w32",
-              "target": "la gare",
-              "english": "the station"
-            }
-          ]
-        },
-        {
-          "id": "fr-w31-te",
-          "type": "mc",
-          "prompt": "What does \"où\" mean?",
-          "speak": "où",
-          "options": [
-            "where",
-            "the street",
-            "straight ahead",
-            "on the right"
-          ],
-          "answer": 0,
-          "wordId": "fr-w31"
-        },
-        {
-          "id": "fr-w32-et",
-          "type": "mc",
-          "prompt": "How do you say \"the station\"?",
-          "options": [
-            "près",
-            "loin",
-            "à gauche",
-            "la gare"
-          ],
-          "answer": 3,
-          "wordId": "fr-w32"
-        },
-        {
-          "id": "fr-l4-s2",
-          "type": "translate",
-          "prompt": "Turn left",
-          "answer": [
-            "Tournez",
-            "à",
-            "gauche"
-          ],
-          "bank": [
-            "Tournez",
-            "à",
-            "droite",
-            "tout",
-            "gauche"
-          ],
-          "wordIds": []
-        }
-      ]
-    },
-    {
-      "id": "fr-u1-l9",
-      "title": "Food, part 1",
-      "theme": "food",
-      "exercises": [
-        {
-          "id": "fr-w33-te",
-          "type": "mc",
-          "prompt": "What does \"le pain\" mean?",
-          "speak": "le pain",
-          "options": [
-            "chicken",
-            "fish",
-            "I am hungry",
-            "bread"
-          ],
-          "answer": 3,
-          "wordId": "fr-w33"
-        },
-        {
-          "id": "fr-w34-et",
-          "type": "mc",
-          "prompt": "How do you say \"water\"?",
-          "options": [
-            "le café",
-            "l'eau",
-            "le poisson",
-            "le poulet"
-          ],
-          "answer": 1,
-          "wordId": "fr-w34"
-        },
-        {
-          "id": "fr-l9-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w33",
-              "target": "le pain",
-              "english": "bread"
-            },
-            {
-              "wordId": "fr-w34",
-              "target": "l'eau",
-              "english": "water"
-            },
-            {
-              "wordId": "fr-w35",
-              "target": "le riz",
-              "english": "rice"
-            },
-            {
-              "wordId": "fr-w36",
-              "target": "le poulet",
-              "english": "chicken"
-            }
-          ]
-        },
-        {
-          "id": "fr-w35-te",
-          "type": "mc",
-          "prompt": "What does \"le riz\" mean?",
-          "speak": "le riz",
-          "options": [
-            "bread",
-            "rice",
-            "fish",
-            "chicken"
-          ],
-          "answer": 1,
-          "wordId": "fr-w35"
-        },
-        {
-          "id": "fr-w36-et",
-          "type": "mc",
-          "prompt": "How do you say \"chicken\"?",
-          "options": [
-            "le pain",
-            "le poisson",
-            "le poulet",
-            "le café"
-          ],
-          "answer": 2,
-          "wordId": "fr-w36"
-        },
-        {
-          "id": "fr-l5-s1",
-          "type": "translate",
-          "prompt": "I would like some water",
-          "answer": [
-            "Je",
-            "voudrais",
-            "de",
-            "l'eau"
-          ],
-          "bank": [
-            "Je",
-            "de",
-            "tu",
-            "l'eau",
-            "voudrais",
-            "pain"
-          ],
-          "wordIds": []
-        }
-      ]
-    },
-    {
-      "id": "fr-u1-l10",
-      "title": "Food, part 2",
-      "theme": "food",
-      "exercises": [
-        {
-          "id": "fr-w37-te",
-          "type": "mc",
-          "prompt": "What does \"le poisson\" mean?",
-          "speak": "le poisson",
-          "options": [
-            "fish",
-            "coffee",
-            "rice",
-            "bread"
-          ],
-          "answer": 0,
-          "wordId": "fr-w37"
-        },
-        {
-          "id": "fr-w38-et",
-          "type": "mc",
-          "prompt": "How do you say \"banana\"?",
-          "options": [
-            "la banane",
-            "le poisson",
-            "j'ai faim",
-            "le pain"
-          ],
-          "answer": 0,
-          "wordId": "fr-w38"
-        },
-        {
-          "id": "fr-l10-m",
-          "type": "match",
-          "prompt": "Match the pairs",
-          "pairs": [
-            {
-              "wordId": "fr-w37",
-              "target": "le poisson",
-              "english": "fish"
-            },
-            {
-              "wordId": "fr-w38",
-              "target": "la banane",
-              "english": "banana"
-            },
-            {
-              "wordId": "fr-w39",
-              "target": "le café",
-              "english": "coffee"
-            },
-            {
-              "wordId": "fr-w40",
-              "target": "j'ai faim",
-              "english": "I am hungry"
-            }
-          ]
-        },
-        {
-          "id": "fr-w39-te",
-          "type": "mc",
-          "prompt": "What does \"le café\" mean?",
-          "speak": "le café",
-          "options": [
-            "bread",
-            "water",
-            "rice",
-            "coffee"
-          ],
-          "answer": 3,
-          "wordId": "fr-w39"
-        },
-        {
-          "id": "fr-w40-et",
-          "type": "mc",
-          "prompt": "How do you say \"I am hungry\"?",
-          "options": [
-            "j'ai faim",
-            "la banane",
-            "l'eau",
-            "le poisson"
-          ],
-          "answer": 0,
-          "wordId": "fr-w40"
-        },
-        {
-          "id": "fr-l5-s2",
-          "type": "translate",
-          "prompt": "The fish is good",
-          "answer": [
-            "Le",
-            "poisson",
-            "est",
-            "bon"
-          ],
-          "bank": [
-            "bon",
-            "Le",
-            "est",
-            "riz",
-            "poisson",
-            "mauvais"
-          ],
-          "wordIds": []
+          "target": "je vais bien",
+          "english": "I am fine"
         }
       ]
     }
   ],
   "checkpoint": {
-    "id": "fr-u1-cp",
+    "id": "fr-a1-u1-cp",
     "title": "Unit 1 checkpoint",
     "pool": [
       {
-        "id": "fr-cp-fr-w1",
+        "id": "fr-a1-u1-cp-fr-a1u1-w1",
         "type": "mc",
         "prompt": "What does \"bonjour\" mean?",
         "speak": "bonjour",
         "options": [
-          "six",
-          "the station",
+          "I am fine",
           "hello",
-          "hi"
+          "madam",
+          "maybe"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w1"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w2",
+        "type": "mc",
+        "prompt": "How do you say \"hi\"?",
+        "options": [
+          "ça va",
+          "oui",
+          "salut",
+          "non"
         ],
         "answer": 2,
-        "wordId": "fr-w1"
+        "wordId": "fr-a1u1-w2"
       },
       {
-        "id": "fr-cp-fr-w2",
+        "id": "fr-a1-u1-cp-fr-a1u1-w3",
         "type": "mc",
-        "prompt": "How do you say \"good evening\"?",
+        "prompt": "What does \"bonsoir\" mean?",
+        "speak": "bonsoir",
         "options": [
-          "bonsoir",
-          "trois",
-          "bonjour",
-          "vingt"
+          "I understand",
+          "good evening",
+          "I am fine",
+          "it is going well"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w3"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w4",
+        "type": "mc",
+        "prompt": "How do you say \"good night\"?",
+        "options": [
+          "je m'appelle",
+          "bonne nuit",
+          "comment allez-vous",
+          "avec plaisir"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w4"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w5",
+        "type": "mc",
+        "prompt": "What does \"au revoir\" mean?",
+        "speak": "au revoir",
+        "options": [
+          "what is your name",
+          "nice to meet you",
+          "hello",
+          "goodbye"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u1-w5"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w6",
+        "type": "mc",
+        "prompt": "How do you say \"see you soon\"?",
+        "options": [
+          "à bientôt",
+          "comme ci comme ça",
+          "je m'appelle",
+          "bien sûr"
         ],
         "answer": 0,
-        "wordId": "fr-w2"
+        "wordId": "fr-a1u1-w6"
       },
       {
-        "id": "fr-cp-fr-w3",
+        "id": "fr-a1-u1-cp-fr-a1u1-w7",
         "type": "mc",
-        "prompt": "What does \"salut\" mean?",
-        "speak": "salut",
+        "prompt": "What does \"à demain\" mean?",
+        "speak": "à demain",
         "options": [
-          "hi",
-          "yes",
-          "the station",
-          "the street"
+          "see you tomorrow",
+          "maybe",
+          "very well",
+          "here is"
         ],
         "answer": 0,
-        "wordId": "fr-w3"
+        "wordId": "fr-a1u1-w7"
       },
       {
-        "id": "fr-cp-fr-w4",
+        "id": "fr-a1-u1-cp-fr-a1u1-w8",
         "type": "mc",
-        "prompt": "How do you say \"thank you\"?",
+        "prompt": "How do you say \"welcome\"?",
         "options": [
-          "s'il vous plaît",
-          "la banane",
-          "merci",
-          "salut"
+          "à demain",
+          "je vais bien",
+          "bienvenue",
+          "très bien"
         ],
         "answer": 2,
-        "wordId": "fr-w4"
+        "wordId": "fr-a1u1-w8"
       },
       {
-        "id": "fr-cp-fr-w5",
+        "id": "fr-a1-u1-cp-fr-a1u1-w9",
         "type": "mc",
         "prompt": "What does \"s'il vous plaît\" mean?",
         "speak": "s'il vous plaît",
         "options": [
-          "one",
-          "hello",
-          "expensive",
+          "with pleasure",
+          "welcome",
+          "of course",
           "please"
         ],
         "answer": 3,
-        "wordId": "fr-w5"
+        "wordId": "fr-a1u1-w9"
       },
       {
-        "id": "fr-cp-fr-w6",
+        "id": "fr-a1-u1-cp-fr-a1u1-w10",
         "type": "mc",
-        "prompt": "How do you say \"goodbye\"?",
+        "prompt": "How do you say \"thank you\"?",
         "options": [
-          "au revoir",
-          "près",
-          "à droite",
-          "quatre"
+          "s'il vous plaît",
+          "merci",
+          "de rien",
+          "très bien"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w10"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w11",
+        "type": "mc",
+        "prompt": "What does \"merci beaucoup\" mean?",
+        "speak": "merci beaucoup",
+        "options": [
+          "excuse me",
+          "how is it going",
+          "good evening",
+          "thank you very much"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u1-w11"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w12",
+        "type": "mc",
+        "prompt": "How do you say \"you're welcome\"?",
+        "options": [
+          "de rien",
+          "comme ci comme ça",
+          "mal",
+          "salut"
         ],
         "answer": 0,
-        "wordId": "fr-w6"
+        "wordId": "fr-a1u1-w12"
       },
       {
-        "id": "fr-cp-fr-w7",
+        "id": "fr-a1-u1-cp-fr-a1u1-w13",
+        "type": "mc",
+        "prompt": "What does \"excusez-moi\" mean?",
+        "speak": "excusez-moi",
+        "options": [
+          "I understand",
+          "excuse me",
+          "what is your name",
+          "I don't know"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w13"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w14",
+        "type": "mc",
+        "prompt": "How do you say \"sorry\"?",
+        "options": [
+          "je vais bien",
+          "pardon",
+          "peut-être",
+          "je ne sais pas"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w14"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w15",
+        "type": "mc",
+        "prompt": "What does \"ce n'est pas grave\" mean?",
+        "speak": "ce n'est pas grave",
+        "options": [
+          "nice to meet you",
+          "it's okay",
+          "how are you",
+          "yes"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w15"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w16",
+        "type": "mc",
+        "prompt": "How do you say \"with pleasure\"?",
+        "options": [
+          "comment allez-vous",
+          "bonjour",
+          "je m'appelle",
+          "avec plaisir"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u1-w16"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w17",
         "type": "mc",
         "prompt": "What does \"oui\" mean?",
         "speak": "oui",
         "options": [
-          "hello",
+          "no",
+          "it is going well",
           "yes",
-          "banana",
-          "two"
+          "goodbye"
         ],
-        "answer": 1,
-        "wordId": "fr-w7"
+        "answer": 2,
+        "wordId": "fr-a1u1-w17"
       },
       {
-        "id": "fr-cp-fr-w8",
+        "id": "fr-a1-u1-cp-fr-a1u1-w18",
         "type": "mc",
         "prompt": "How do you say \"no\"?",
         "options": [
-          "payer",
-          "la gare",
-          "non",
-          "acheter"
+          "je ne sais pas",
+          "ce n'est pas grave",
+          "bienvenue",
+          "non"
         ],
-        "answer": 2,
-        "wordId": "fr-w8"
+        "answer": 3,
+        "wordId": "fr-a1u1-w18"
       },
       {
-        "id": "fr-cp-fr-w9",
+        "id": "fr-a1-u1-cp-fr-a1u1-w19",
         "type": "mc",
-        "prompt": "What does \"un\" mean?",
-        "speak": "un",
+        "prompt": "What does \"peut-être\" mean?",
+        "speak": "peut-être",
         "options": [
-          "rice",
-          "one",
-          "chicken",
-          "good evening"
+          "here is",
+          "I understand",
+          "nice to meet you",
+          "maybe"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u1-w19"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w20",
+        "type": "mc",
+        "prompt": "How do you say \"okay\"?",
+        "options": [
+          "je m'appelle",
+          "d'accord",
+          "ce n'est pas grave",
+          "je vais bien"
         ],
         "answer": 1,
-        "wordId": "fr-w9"
+        "wordId": "fr-a1u1-w20"
       },
       {
-        "id": "fr-cp-fr-w10",
+        "id": "fr-a1-u1-cp-fr-a1u1-w21",
         "type": "mc",
-        "prompt": "How do you say \"two\"?",
+        "prompt": "What does \"bien sûr\" mean?",
+        "speak": "bien sûr",
         "options": [
-          "deux",
-          "la rue",
-          "le café",
-          "le poisson"
-        ],
-        "answer": 0,
-        "wordId": "fr-w10"
-      },
-      {
-        "id": "fr-cp-fr-w11",
-        "type": "mc",
-        "prompt": "What does \"trois\" mean?",
-        "speak": "trois",
-        "options": [
-          "yes",
-          "three",
           "thank you",
-          "the price"
+          "thank you very much",
+          "sorry",
+          "of course"
         ],
-        "answer": 1,
-        "wordId": "fr-w11"
+        "answer": 3,
+        "wordId": "fr-a1u1-w21"
       },
       {
-        "id": "fr-cp-fr-w12",
+        "id": "fr-a1-u1-cp-fr-a1u1-w22",
         "type": "mc",
-        "prompt": "How do you say \"four\"?",
+        "prompt": "How do you say \"I don't know\"?",
         "options": [
-          "tout droit",
-          "le poisson",
-          "quatre",
-          "salut"
-        ],
-        "answer": 2,
-        "wordId": "fr-w12"
-      },
-      {
-        "id": "fr-cp-fr-w13",
-        "type": "mc",
-        "prompt": "What does \"cinq\" mean?",
-        "speak": "cinq",
-        "options": [
-          "no",
-          "five",
-          "banana",
-          "coffee"
-        ],
-        "answer": 1,
-        "wordId": "fr-w13"
-      },
-      {
-        "id": "fr-cp-fr-w14",
-        "type": "mc",
-        "prompt": "How do you say \"six\"?",
-        "options": [
-          "l'eau",
-          "six",
-          "deux",
+          "enchanté",
+          "avec plaisir",
+          "je ne sais pas",
           "au revoir"
         ],
-        "answer": 1,
-        "wordId": "fr-w14"
+        "answer": 2,
+        "wordId": "fr-a1u1-w22"
       },
       {
-        "id": "fr-cp-fr-w15",
+        "id": "fr-a1-u1-cp-fr-a1u1-w23",
         "type": "mc",
-        "prompt": "What does \"dix\" mean?",
-        "speak": "dix",
+        "prompt": "What does \"je comprends\" mean?",
+        "speak": "je comprends",
         "options": [
-          "expensive",
-          "three",
-          "ten",
-          "coffee"
+          "I don't understand",
+          "see you soon",
+          "I understand",
+          "me"
         ],
         "answer": 2,
-        "wordId": "fr-w15"
+        "wordId": "fr-a1u1-w23"
       },
       {
-        "id": "fr-cp-fr-w16",
+        "id": "fr-a1-u1-cp-fr-a1u1-w24",
         "type": "mc",
-        "prompt": "How do you say \"twenty\"?",
+        "prompt": "How do you say \"I don't understand\"?",
         "options": [
-          "vingt",
-          "quatre",
-          "j'ai faim",
-          "dix"
-        ],
-        "answer": 0,
-        "wordId": "fr-w16"
-      },
-      {
-        "id": "fr-cp-fr-w17",
-        "type": "mc",
-        "prompt": "What does \"le marché\" mean?",
-        "speak": "le marché",
-        "options": [
-          "the market",
-          "fish",
-          "where",
-          "rice"
-        ],
-        "answer": 0,
-        "wordId": "fr-w17"
-      },
-      {
-        "id": "fr-cp-fr-w18",
-        "type": "mc",
-        "prompt": "How do you say \"how much\"?",
-        "options": [
-          "cher",
-          "acheter",
-          "combien",
-          "le pain"
+          "comment allez-vous",
+          "moi",
+          "je ne comprends pas",
+          "très bien"
         ],
         "answer": 2,
-        "wordId": "fr-w18"
+        "wordId": "fr-a1u1-w24"
       },
       {
-        "id": "fr-cp-fr-w19",
+        "id": "fr-a1-u1-cp-fr-a1u1-w25",
         "type": "mc",
-        "prompt": "What does \"cher\" mean?",
-        "speak": "cher",
+        "prompt": "What does \"je m'appelle\" mean?",
+        "speak": "je m'appelle",
         "options": [
-          "money",
-          "expensive",
-          "good evening",
-          "the market"
-        ],
-        "answer": 1,
-        "wordId": "fr-w19"
-      },
-      {
-        "id": "fr-cp-fr-w20",
-        "type": "mc",
-        "prompt": "How do you say \"cheap\"?",
-        "options": [
-          "loin",
-          "deux",
-          "le pain",
-          "pas cher"
-        ],
-        "answer": 3,
-        "wordId": "fr-w20"
-      },
-      {
-        "id": "fr-cp-fr-w21",
-        "type": "mc",
-        "prompt": "What does \"l'argent\" mean?",
-        "speak": "l'argent",
-        "options": [
-          "to buy",
-          "three",
-          "chicken",
-          "money"
-        ],
-        "answer": 3,
-        "wordId": "fr-w21"
-      },
-      {
-        "id": "fr-cp-fr-w22",
-        "type": "mc",
-        "prompt": "How do you say \"to buy\"?",
-        "options": [
-          "trois",
-          "vingt",
-          "acheter",
-          "le marché"
-        ],
-        "answer": 2,
-        "wordId": "fr-w22"
-      },
-      {
-        "id": "fr-cp-fr-w23",
-        "type": "mc",
-        "prompt": "What does \"payer\" mean?",
-        "speak": "payer",
-        "options": [
-          "near",
-          "to pay",
-          "thank you",
-          "coffee"
-        ],
-        "answer": 1,
-        "wordId": "fr-w23"
-      },
-      {
-        "id": "fr-cp-fr-w24",
-        "type": "mc",
-        "prompt": "How do you say \"the price\"?",
-        "options": [
-          "le prix",
-          "le marché",
-          "le riz",
-          "deux"
-        ],
-        "answer": 0,
-        "wordId": "fr-w24"
-      },
-      {
-        "id": "fr-cp-fr-w25",
-        "type": "mc",
-        "prompt": "What does \"à gauche\" mean?",
-        "speak": "à gauche",
-        "options": [
-          "the market",
-          "two",
+          "it's okay",
+          "sir",
           "please",
-          "on the left"
+          "my name is"
         ],
         "answer": 3,
-        "wordId": "fr-w25"
+        "wordId": "fr-a1u1-w25"
       },
       {
-        "id": "fr-cp-fr-w26",
+        "id": "fr-a1-u1-cp-fr-a1u1-w26",
         "type": "mc",
-        "prompt": "How do you say \"on the right\"?",
+        "prompt": "How do you say \"what is your name\"?",
         "options": [
-          "la rue",
-          "pas cher",
-          "trois",
-          "à droite"
-        ],
-        "answer": 3,
-        "wordId": "fr-w26"
-      },
-      {
-        "id": "fr-cp-fr-w27",
-        "type": "mc",
-        "prompt": "What does \"tout droit\" mean?",
-        "speak": "tout droit",
-        "options": [
-          "coffee",
-          "goodbye",
-          "straight ahead",
-          "on the right"
-        ],
-        "answer": 2,
-        "wordId": "fr-w27"
-      },
-      {
-        "id": "fr-cp-fr-w28",
-        "type": "mc",
-        "prompt": "How do you say \"the street\"?",
-        "options": [
-          "la rue",
-          "à droite",
-          "le poisson",
-          "au revoir"
+          "comment vous appelez-vous",
+          "à bientôt",
+          "salut",
+          "bien sûr"
         ],
         "answer": 0,
-        "wordId": "fr-w28"
+        "wordId": "fr-a1u1-w26"
       },
       {
-        "id": "fr-cp-fr-w29",
+        "id": "fr-a1-u1-cp-fr-a1u1-w27",
         "type": "mc",
-        "prompt": "What does \"près\" mean?",
-        "speak": "près",
+        "prompt": "What does \"enchanté\" mean?",
+        "speak": "enchanté",
         "options": [
-          "how much",
-          "near",
-          "thank you",
+          "nice to meet you",
+          "how is it going",
+          "of course",
+          "see you tomorrow"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u1-w27"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w28",
+        "type": "mc",
+        "prompt": "How do you say \"me\"?",
+        "options": [
+          "salut",
+          "bien sûr",
+          "bonjour",
+          "moi"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u1-w28"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w29",
+        "type": "mc",
+        "prompt": "What does \"et toi\" mean?",
+        "speak": "et toi",
+        "options": [
+          "and you",
+          "it's okay",
+          "see you soon",
+          "very well"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u1-w29"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w30",
+        "type": "mc",
+        "prompt": "How do you say \"here is\"?",
+        "options": [
+          "je ne sais pas",
+          "comment vous appelez-vous",
+          "voici",
+          "mal"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u1-w30"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w31",
+        "type": "mc",
+        "prompt": "What does \"madame\" mean?",
+        "speak": "madame",
+        "options": [
+          "please",
+          "madam",
+          "good evening",
+          "no"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w31"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w32",
+        "type": "mc",
+        "prompt": "How do you say \"sir\"?",
+        "options": [
+          "comme ci comme ça",
+          "monsieur",
+          "je ne comprends pas",
+          "peut-être"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w32"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w33",
+        "type": "mc",
+        "prompt": "What does \"comment allez-vous\" mean?",
+        "speak": "comment allez-vous",
+        "options": [
+          "sorry",
+          "how are you",
+          "my name is",
+          "it is going well"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w33"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w34",
+        "type": "mc",
+        "prompt": "How do you say \"how is it going\"?",
+        "options": [
+          "merci",
+          "ce n'est pas grave",
+          "peut-être",
+          "ça va"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u1-w34"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w35",
+        "type": "mc",
+        "prompt": "What does \"ça va bien\" mean?",
+        "speak": "ça va bien",
+        "options": [
+          "hi",
+          "with pleasure",
+          "it is going well",
+          "no"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u1-w35"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w36",
+        "type": "mc",
+        "prompt": "How do you say \"very well\"?",
+        "options": [
+          "je m'appelle",
+          "moi",
+          "peut-être",
+          "très bien"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u1-w36"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w37",
+        "type": "mc",
+        "prompt": "What does \"comme ci comme ça\" mean?",
+        "speak": "comme ci comme ça",
+        "options": [
+          "so-so",
+          "see you soon",
+          "sorry",
+          "how are you"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u1-w37"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w38",
+        "type": "mc",
+        "prompt": "How do you say \"bad\"?",
+        "options": [
+          "d'accord",
+          "mal",
+          "je ne comprends pas",
+          "bien sûr"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u1-w38"
+      },
+      {
+        "id": "fr-a1-u1-cp-fr-a1u1-w39",
+        "type": "mc",
+        "prompt": "What does \"et vous\" mean?",
+        "speak": "et vous",
+        "options": [
+          "hello",
+          "and you (polite)",
+          "sorry",
           "yes"
         ],
         "answer": 1,
-        "wordId": "fr-w29"
+        "wordId": "fr-a1u1-w39"
       },
       {
-        "id": "fr-cp-fr-w30",
+        "id": "fr-a1-u1-cp-fr-a1u1-w40",
         "type": "mc",
-        "prompt": "How do you say \"far\"?",
+        "prompt": "How do you say \"I am fine\"?",
         "options": [
-          "loin",
-          "la banane",
-          "un",
-          "s'il vous plaît"
-        ],
-        "answer": 0,
-        "wordId": "fr-w30"
-      },
-      {
-        "id": "fr-cp-fr-w31",
-        "type": "mc",
-        "prompt": "What does \"où\" mean?",
-        "speak": "où",
-        "options": [
-          "the price",
-          "one",
-          "where",
-          "straight ahead"
-        ],
-        "answer": 2,
-        "wordId": "fr-w31"
-      },
-      {
-        "id": "fr-cp-fr-w32",
-        "type": "mc",
-        "prompt": "How do you say \"the station\"?",
-        "options": [
-          "la banane",
-          "s'il vous plaît",
-          "près",
-          "la gare"
+          "ce n'est pas grave",
+          "bonjour",
+          "avec plaisir",
+          "je vais bien"
         ],
         "answer": 3,
-        "wordId": "fr-w32"
+        "wordId": "fr-a1u1-w40"
       },
       {
-        "id": "fr-cp-fr-w33",
-        "type": "mc",
-        "prompt": "What does \"le pain\" mean?",
-        "speak": "le pain",
-        "options": [
-          "yes",
-          "twenty",
-          "five",
-          "bread"
-        ],
-        "answer": 3,
-        "wordId": "fr-w33"
-      },
-      {
-        "id": "fr-cp-fr-w34",
-        "type": "mc",
-        "prompt": "How do you say \"water\"?",
-        "options": [
-          "l'eau",
-          "dix",
-          "non",
-          "j'ai faim"
-        ],
-        "answer": 0,
-        "wordId": "fr-w34"
-      },
-      {
-        "id": "fr-cp-fr-w35",
-        "type": "mc",
-        "prompt": "What does \"le riz\" mean?",
-        "speak": "le riz",
-        "options": [
-          "rice",
-          "hi",
-          "chicken",
-          "goodbye"
-        ],
-        "answer": 0,
-        "wordId": "fr-w35"
-      },
-      {
-        "id": "fr-cp-fr-w36",
-        "type": "mc",
-        "prompt": "How do you say \"chicken\"?",
-        "options": [
-          "cinq",
-          "dix",
-          "le poulet",
-          "le prix"
-        ],
-        "answer": 2,
-        "wordId": "fr-w36"
-      },
-      {
-        "id": "fr-cp-fr-w37",
-        "type": "mc",
-        "prompt": "What does \"le poisson\" mean?",
-        "speak": "le poisson",
-        "options": [
-          "four",
-          "fish",
-          "the street",
-          "bread"
-        ],
-        "answer": 1,
-        "wordId": "fr-w37"
-      },
-      {
-        "id": "fr-cp-fr-w38",
-        "type": "mc",
-        "prompt": "How do you say \"banana\"?",
-        "options": [
-          "cinq",
-          "la banane",
-          "oui",
-          "le café"
-        ],
-        "answer": 1,
-        "wordId": "fr-w38"
-      },
-      {
-        "id": "fr-cp-fr-w39",
-        "type": "mc",
-        "prompt": "What does \"le café\" mean?",
-        "speak": "le café",
-        "options": [
-          "ten",
-          "far",
-          "money",
-          "coffee"
-        ],
-        "answer": 3,
-        "wordId": "fr-w39"
-      },
-      {
-        "id": "fr-cp-fr-w40",
-        "type": "mc",
-        "prompt": "How do you say \"I am hungry\"?",
-        "options": [
-          "au revoir",
-          "j'ai faim",
-          "le café",
-          "non"
-        ],
-        "answer": 1,
-        "wordId": "fr-w40"
-      },
-      {
-        "id": "fr-cp-l1-s1",
+        "id": "fr-a1-u1-cp-l1-s1",
         "type": "translate",
-        "prompt": "Hello, my name is Amara",
+        "prompt": "Hello and welcome",
         "answer": [
           "Bonjour",
-          "je",
-          "m'appelle",
-          "Amara"
+          "et",
+          "bienvenue"
         ],
         "bank": [
-          "suis",
-          "je",
-          "Amara",
-          "m'appelle",
-          "tu",
-          "Bonjour"
+          "et",
+          "salut",
+          "Bonjour",
+          "bienvenue",
+          "demain"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l1-s2",
+        "id": "fr-a1-u1-cp-l1-s2",
         "type": "translate",
-        "prompt": "How are you",
+        "prompt": "Goodbye, see you tomorrow",
         "answer": [
-          "Comment",
-          "allez-vous"
+          "Au",
+          "revoir",
+          "à",
+          "demain"
         ],
         "bank": [
-          "où",
-          "allez-vous",
-          "Comment",
-          "merci"
+          "à",
+          "nuit",
+          "bonsoir",
+          "Au",
+          "revoir",
+          "demain"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l1-s3",
+        "id": "fr-a1-u1-cp-l1-s3",
+        "type": "translate",
+        "prompt": "Good evening and good night",
+        "answer": [
+          "Bonsoir",
+          "et",
+          "bonne",
+          "nuit"
+        ],
+        "bank": [
+          "nuit",
+          "et",
+          "Bonsoir",
+          "salut",
+          "bientôt",
+          "bonne"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u1-cp-l2-s1",
         "type": "translate",
         "prompt": "Thank you very much",
         "answer": [
@@ -1664,393 +1855,365 @@
         ],
         "bank": [
           "Merci",
-          "bonjour",
+          "rien",
           "beaucoup",
-          "peu"
+          "pardon"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l2-s1",
+        "id": "fr-a1-u1-cp-l2-s2",
         "type": "translate",
-        "prompt": "I have two brothers",
+        "prompt": "You're welcome",
         "answer": [
-          "J'ai",
-          "deux",
-          "frères"
+          "De",
+          "rien"
         ],
         "bank": [
-          "deux",
-          "sœurs",
-          "J'ai",
-          "trois",
-          "frères"
+          "plaisir",
+          "De",
+          "merci",
+          "rien"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l2-s2",
+        "id": "fr-a1-u1-cp-l2-s3",
         "type": "translate",
-        "prompt": "It is three o'clock",
+        "prompt": "Excuse me, please",
         "answer": [
-          "Il",
-          "est",
-          "trois",
-          "heures"
+          "Excusez-moi",
+          "s'il",
+          "vous",
+          "plaît"
         ],
         "bank": [
-          "jours",
-          "quatre",
-          "Il",
-          "heures",
-          "trois",
-          "est"
+          "merci",
+          "s'il",
+          "Excusez-moi",
+          "vous",
+          "plaît",
+          "rien"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l2-s3",
+        "id": "fr-a1-u1-cp-l3-s1",
         "type": "translate",
-        "prompt": "I am ten years old",
+        "prompt": "Yes, of course",
         "answer": [
-          "J'ai",
-          "dix",
-          "ans"
+          "Oui",
+          "bien",
+          "sûr"
         ],
         "bank": [
-          "J'ai",
-          "dix",
-          "vingt",
-          "ans",
-          "mois"
+          "sûr",
+          "Oui",
+          "non",
+          "merci",
+          "bien"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l3-s1",
+        "id": "fr-a1-u1-cp-l3-s2",
         "type": "translate",
-        "prompt": "How much does it cost",
+        "prompt": "No, thank you",
         "answer": [
-          "Combien",
-          "ça",
-          "coûte"
+          "Non",
+          "merci"
         ],
         "bank": [
-          "Combien",
-          "ça",
-          "cher",
-          "achète",
-          "coûte"
+          "Non",
+          "oui",
+          "merci",
+          "rien"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l3-s2",
+        "id": "fr-a1-u1-cp-l3-s3",
         "type": "translate",
-        "prompt": "It is too expensive",
-        "answer": [
-          "C'est",
-          "trop",
-          "cher"
-        ],
-        "bank": [
-          "cher",
-          "trop",
-          "bon",
-          "C'est",
-          "peu"
-        ],
-        "wordIds": []
-      },
-      {
-        "id": "fr-cp-l3-s3",
-        "type": "translate",
-        "prompt": "I would like to pay",
+        "prompt": "I don't understand",
         "answer": [
           "Je",
-          "voudrais",
-          "payer"
+          "ne",
+          "comprends",
+          "pas"
         ],
         "bank": [
-          "tu",
-          "acheter",
-          "payer",
+          "pas",
+          "ne",
           "Je",
-          "voudrais"
+          "sais",
+          "oui",
+          "comprends"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l4-s1",
+        "id": "fr-a1-u1-cp-l4-s1",
         "type": "translate",
-        "prompt": "Where is the station",
-        "answer": [
-          "Où",
-          "est",
-          "la",
-          "gare"
-        ],
-        "bank": [
-          "loin",
-          "rue",
-          "gare",
-          "est",
-          "la",
-          "Où"
-        ],
-        "wordIds": []
-      },
-      {
-        "id": "fr-cp-l4-s2",
-        "type": "translate",
-        "prompt": "Turn left",
-        "answer": [
-          "Tournez",
-          "à",
-          "gauche"
-        ],
-        "bank": [
-          "Tournez",
-          "tout",
-          "à",
-          "gauche",
-          "droite"
-        ],
-        "wordIds": []
-      },
-      {
-        "id": "fr-cp-l4-s3",
-        "type": "translate",
-        "prompt": "It is far from here",
-        "answer": [
-          "C'est",
-          "loin",
-          "d'ici"
-        ],
-        "bank": [
-          "C'est",
-          "d'ici",
-          "loin",
-          "près",
-          "où"
-        ],
-        "wordIds": []
-      },
-      {
-        "id": "fr-cp-l5-s1",
-        "type": "translate",
-        "prompt": "I would like some water",
+        "prompt": "My name is Léa",
         "answer": [
           "Je",
-          "voudrais",
-          "de",
-          "l'eau"
+          "m'appelle",
+          "Léa"
         ],
         "bank": [
-          "pain",
+          "toi",
           "Je",
-          "voudrais",
-          "de",
-          "tu",
-          "l'eau"
+          "m'appelle",
+          "Léa",
+          "suis"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l5-s2",
+        "id": "fr-a1-u1-cp-l4-s2",
         "type": "translate",
-        "prompt": "The fish is good",
+        "prompt": "Nice to meet you, Léa",
         "answer": [
-          "Le",
-          "poisson",
-          "est",
-          "bon"
+          "Enchanté",
+          "Léa"
         ],
         "bank": [
-          "bon",
-          "mauvais",
-          "poisson",
-          "est",
-          "Le",
-          "riz"
+          "Enchanté",
+          "voici",
+          "moi",
+          "Léa"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-l5-s3",
+        "id": "fr-a1-u1-cp-l4-s3",
         "type": "translate",
-        "prompt": "I like rice",
+        "prompt": "What is your name",
         "answer": [
-          "J'aime",
-          "le",
-          "riz"
+          "Comment",
+          "vous",
+          "appelez-vous"
         ],
         "bank": [
-          "le",
-          "poulet",
-          "J'aime",
-          "riz",
-          "la"
+          "je",
+          "appelez-vous",
+          "ami",
+          "Comment",
+          "vous"
         ],
         "wordIds": []
       },
       {
-        "id": "fr-cp-m1",
+        "id": "fr-a1-u1-cp-l5-s1",
+        "type": "translate",
+        "prompt": "It is going well",
+        "answer": [
+          "Ça",
+          "va",
+          "bien"
+        ],
+        "bank": [
+          "Ça",
+          "va",
+          "bien",
+          "mal",
+          "très"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u1-cp-l5-s2",
+        "type": "translate",
+        "prompt": "How are you",
+        "answer": [
+          "Comment",
+          "allez-vous"
+        ],
+        "bank": [
+          "et",
+          "allez-vous",
+          "bien",
+          "Comment"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u1-cp-l5-s3",
+        "type": "translate",
+        "prompt": "Very well, and you",
+        "answer": [
+          "Très",
+          "bien",
+          "et",
+          "vous"
+        ],
+        "bank": [
+          "et",
+          "Très",
+          "vous",
+          "bien",
+          "mal",
+          "va"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u1-cp-m1",
         "type": "match",
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-w6",
+            "wordId": "fr-a1u1-w3",
+            "target": "bonsoir",
+            "english": "good evening"
+          },
+          {
+            "wordId": "fr-a1u1-w8",
+            "target": "bienvenue",
+            "english": "welcome"
+          },
+          {
+            "wordId": "fr-a1u1-w1",
+            "target": "bonjour",
+            "english": "hello"
+          },
+          {
+            "wordId": "fr-a1u1-w5",
             "target": "au revoir",
             "english": "goodbye"
           },
           {
-            "wordId": "fr-w3",
-            "target": "salut",
-            "english": "hi"
+            "wordId": "fr-a1u1-w4",
+            "target": "bonne nuit",
+            "english": "good night"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u1-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u1-w13",
+            "target": "excusez-moi",
+            "english": "excuse me"
           },
           {
-            "wordId": "fr-w8",
+            "wordId": "fr-a1u1-w12",
+            "target": "de rien",
+            "english": "you're welcome"
+          },
+          {
+            "wordId": "fr-a1u1-w14",
+            "target": "pardon",
+            "english": "sorry"
+          },
+          {
+            "wordId": "fr-a1u1-w10",
+            "target": "merci",
+            "english": "thank you"
+          },
+          {
+            "wordId": "fr-a1u1-w16",
+            "target": "avec plaisir",
+            "english": "with pleasure"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u1-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u1-w24",
+            "target": "je ne comprends pas",
+            "english": "I don't understand"
+          },
+          {
+            "wordId": "fr-a1u1-w18",
             "target": "non",
             "english": "no"
           },
           {
-            "wordId": "fr-w5",
-            "target": "s'il vous plaît",
-            "english": "please"
+            "wordId": "fr-a1u1-w20",
+            "target": "d'accord",
+            "english": "okay"
           },
           {
-            "wordId": "fr-w2",
-            "target": "bonsoir",
-            "english": "good evening"
+            "wordId": "fr-a1u1-w17",
+            "target": "oui",
+            "english": "yes"
+          },
+          {
+            "wordId": "fr-a1u1-w22",
+            "target": "je ne sais pas",
+            "english": "I don't know"
           }
         ]
       },
       {
-        "id": "fr-cp-m2",
+        "id": "fr-a1-u1-cp-m4",
         "type": "match",
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-w13",
-            "target": "cinq",
-            "english": "five"
+            "wordId": "fr-a1u1-w32",
+            "target": "monsieur",
+            "english": "sir"
           },
           {
-            "wordId": "fr-w15",
-            "target": "dix",
-            "english": "ten"
+            "wordId": "fr-a1u1-w28",
+            "target": "moi",
+            "english": "me"
           },
           {
-            "wordId": "fr-w10",
-            "target": "deux",
-            "english": "two"
+            "wordId": "fr-a1u1-w27",
+            "target": "enchanté",
+            "english": "nice to meet you"
           },
           {
-            "wordId": "fr-w12",
-            "target": "quatre",
-            "english": "four"
+            "wordId": "fr-a1u1-w29",
+            "target": "et toi",
+            "english": "and you"
           },
           {
-            "wordId": "fr-w14",
-            "target": "six",
-            "english": "six"
+            "wordId": "fr-a1u1-w30",
+            "target": "voici",
+            "english": "here is"
           }
         ]
       },
       {
-        "id": "fr-cp-m3",
+        "id": "fr-a1-u1-cp-m5",
         "type": "match",
         "prompt": "Match the pairs",
         "pairs": [
           {
-            "wordId": "fr-w19",
-            "target": "cher",
-            "english": "expensive"
+            "wordId": "fr-a1u1-w39",
+            "target": "et vous",
+            "english": "and you (polite)"
           },
           {
-            "wordId": "fr-w20",
-            "target": "pas cher",
-            "english": "cheap"
+            "wordId": "fr-a1u1-w35",
+            "target": "ça va bien",
+            "english": "it is going well"
           },
           {
-            "wordId": "fr-w23",
-            "target": "payer",
-            "english": "to pay"
+            "wordId": "fr-a1u1-w34",
+            "target": "ça va",
+            "english": "how is it going"
           },
           {
-            "wordId": "fr-w18",
-            "target": "combien",
-            "english": "how much"
+            "wordId": "fr-a1u1-w40",
+            "target": "je vais bien",
+            "english": "I am fine"
           },
           {
-            "wordId": "fr-w24",
-            "target": "le prix",
-            "english": "the price"
-          }
-        ]
-      },
-      {
-        "id": "fr-cp-m4",
-        "type": "match",
-        "prompt": "Match the pairs",
-        "pairs": [
-          {
-            "wordId": "fr-w30",
-            "target": "loin",
-            "english": "far"
-          },
-          {
-            "wordId": "fr-w32",
-            "target": "la gare",
-            "english": "the station"
-          },
-          {
-            "wordId": "fr-w29",
-            "target": "près",
-            "english": "near"
-          },
-          {
-            "wordId": "fr-w25",
-            "target": "à gauche",
-            "english": "on the left"
-          },
-          {
-            "wordId": "fr-w26",
-            "target": "à droite",
-            "english": "on the right"
-          }
-        ]
-      },
-      {
-        "id": "fr-cp-m5",
-        "type": "match",
-        "prompt": "Match the pairs",
-        "pairs": [
-          {
-            "wordId": "fr-w38",
-            "target": "la banane",
-            "english": "banana"
-          },
-          {
-            "wordId": "fr-w35",
-            "target": "le riz",
-            "english": "rice"
-          },
-          {
-            "wordId": "fr-w36",
-            "target": "le poulet",
-            "english": "chicken"
-          },
-          {
-            "wordId": "fr-w37",
-            "target": "le poisson",
-            "english": "fish"
-          },
-          {
-            "wordId": "fr-w34",
-            "target": "l'eau",
-            "english": "water"
+            "wordId": "fr-a1u1-w33",
+            "target": "comment allez-vous",
+            "english": "how are you"
           }
         ]
       }

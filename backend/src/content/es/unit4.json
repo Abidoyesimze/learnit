@@ -1,0 +1,2265 @@
+{
+  "lang": "es",
+  "unit": 4,
+  "level": "A1",
+  "title": "Food and drink",
+  "blurb": "Order a drink, a meal and say what you like.",
+  "speechLang": "es-ES",
+  "lessons": [
+    {
+      "id": "es-a1-u4-l1",
+      "title": "Drinks, part 1",
+      "theme": "drinks",
+      "exercises": [
+        {
+          "id": "es-a1u4-w1-te",
+          "type": "mc",
+          "prompt": "What does \"el agua\" mean?",
+          "speak": "el agua",
+          "options": [
+            "milk",
+            "water",
+            "tea",
+            "juice"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w1"
+        },
+        {
+          "id": "es-a1u4-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"coffee\"?",
+          "options": [
+            "la cerveza",
+            "el jugo",
+            "la limonada",
+            "el café"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w2"
+        },
+        {
+          "id": "es-a1-u4-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w1",
+              "target": "el agua",
+              "english": "water"
+            },
+            {
+              "wordId": "es-a1u4-w2",
+              "target": "el café",
+              "english": "coffee"
+            },
+            {
+              "wordId": "es-a1u4-w3",
+              "target": "el té",
+              "english": "tea"
+            },
+            {
+              "wordId": "es-a1u4-w4",
+              "target": "la leche",
+              "english": "milk"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w3-te",
+          "type": "mc",
+          "prompt": "What does \"el té\" mean?",
+          "speak": "el té",
+          "options": [
+            "lemonade",
+            "wine",
+            "beer",
+            "tea"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w3"
+        },
+        {
+          "id": "es-a1u4-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"milk\"?",
+          "options": [
+            "el agua",
+            "el café",
+            "la leche",
+            "el vino"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w4"
+        },
+        {
+          "id": "es-a1-u4-l1-s",
+          "type": "translate",
+          "prompt": "A coffee, please",
+          "answer": [
+            "Un",
+            "café",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "por",
+            "café",
+            "té",
+            "Un",
+            "leche",
+            "favor"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el agua",
+          "english": "water"
+        },
+        {
+          "target": "el café",
+          "english": "coffee"
+        },
+        {
+          "target": "el té",
+          "english": "tea"
+        },
+        {
+          "target": "la leche",
+          "english": "milk"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l2",
+      "title": "Drinks, part 2",
+      "theme": "drinks",
+      "exercises": [
+        {
+          "id": "es-a1u4-w5-te",
+          "type": "mc",
+          "prompt": "What does \"el jugo\" mean?",
+          "speak": "el jugo",
+          "options": [
+            "lemonade",
+            "wine",
+            "juice",
+            "milk"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w5"
+        },
+        {
+          "id": "es-a1u4-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"wine\"?",
+          "options": [
+            "la cerveza",
+            "el agua",
+            "el vino",
+            "el café"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w6"
+        },
+        {
+          "id": "es-a1-u4-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w5",
+              "target": "el jugo",
+              "english": "juice"
+            },
+            {
+              "wordId": "es-a1u4-w6",
+              "target": "el vino",
+              "english": "wine"
+            },
+            {
+              "wordId": "es-a1u4-w7",
+              "target": "la cerveza",
+              "english": "beer"
+            },
+            {
+              "wordId": "es-a1u4-w8",
+              "target": "la limonada",
+              "english": "lemonade"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w7-te",
+          "type": "mc",
+          "prompt": "What does \"la cerveza\" mean?",
+          "speak": "la cerveza",
+          "options": [
+            "milk",
+            "lemonade",
+            "tea",
+            "beer"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w7"
+        },
+        {
+          "id": "es-a1u4-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"lemonade\"?",
+          "options": [
+            "el agua",
+            "la leche",
+            "el café",
+            "la limonada"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w8"
+        },
+        {
+          "id": "es-a1-u4-l2-s",
+          "type": "translate",
+          "prompt": "The tea is hot",
+          "answer": [
+            "El",
+            "té",
+            "está",
+            "caliente"
+          ],
+          "bank": [
+            "jugo",
+            "té",
+            "caliente",
+            "está",
+            "El",
+            "frío"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el jugo",
+          "english": "juice"
+        },
+        {
+          "target": "el vino",
+          "english": "wine"
+        },
+        {
+          "target": "la cerveza",
+          "english": "beer"
+        },
+        {
+          "target": "la limonada",
+          "english": "lemonade"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l3",
+      "title": "Basic foods, part 1",
+      "theme": "basic foods",
+      "exercises": [
+        {
+          "id": "es-a1u4-w9-te",
+          "type": "mc",
+          "prompt": "What does \"el pan\" mean?",
+          "speak": "el pan",
+          "options": [
+            "soup",
+            "cheese",
+            "bread",
+            "chicken"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w9"
+        },
+        {
+          "id": "es-a1u4-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"rice\"?",
+          "options": [
+            "el queso",
+            "el arroz",
+            "el pescado",
+            "el huevo"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w10"
+        },
+        {
+          "id": "es-a1-u4-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w9",
+              "target": "el pan",
+              "english": "bread"
+            },
+            {
+              "wordId": "es-a1u4-w10",
+              "target": "el arroz",
+              "english": "rice"
+            },
+            {
+              "wordId": "es-a1u4-w11",
+              "target": "el queso",
+              "english": "cheese"
+            },
+            {
+              "wordId": "es-a1u4-w12",
+              "target": "el huevo",
+              "english": "egg"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w11-te",
+          "type": "mc",
+          "prompt": "What does \"el queso\" mean?",
+          "speak": "el queso",
+          "options": [
+            "rice",
+            "meat",
+            "soup",
+            "cheese"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w11"
+        },
+        {
+          "id": "es-a1u4-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"egg\"?",
+          "options": [
+            "el pollo",
+            "el huevo",
+            "el pan",
+            "la carne"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w12"
+        },
+        {
+          "id": "es-a1-u4-l3-s",
+          "type": "translate",
+          "prompt": "Bread and cheese",
+          "answer": [
+            "Pan",
+            "y",
+            "queso"
+          ],
+          "bank": [
+            "queso",
+            "huevo",
+            "Pan",
+            "arroz",
+            "y"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el pan",
+          "english": "bread"
+        },
+        {
+          "target": "el arroz",
+          "english": "rice"
+        },
+        {
+          "target": "el queso",
+          "english": "cheese"
+        },
+        {
+          "target": "el huevo",
+          "english": "egg"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l4",
+      "title": "Basic foods, part 2",
+      "theme": "basic foods",
+      "exercises": [
+        {
+          "id": "es-a1u4-w13-te",
+          "type": "mc",
+          "prompt": "What does \"el pollo\" mean?",
+          "speak": "el pollo",
+          "options": [
+            "bread",
+            "chicken",
+            "meat",
+            "fish"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w13"
+        },
+        {
+          "id": "es-a1u4-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"fish\"?",
+          "options": [
+            "el queso",
+            "el pescado",
+            "el pollo",
+            "la carne"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w14"
+        },
+        {
+          "id": "es-a1-u4-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w13",
+              "target": "el pollo",
+              "english": "chicken"
+            },
+            {
+              "wordId": "es-a1u4-w14",
+              "target": "el pescado",
+              "english": "fish"
+            },
+            {
+              "wordId": "es-a1u4-w15",
+              "target": "la carne",
+              "english": "meat"
+            },
+            {
+              "wordId": "es-a1u4-w16",
+              "target": "la sopa",
+              "english": "soup"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w15-te",
+          "type": "mc",
+          "prompt": "What does \"la carne\" mean?",
+          "speak": "la carne",
+          "options": [
+            "rice",
+            "fish",
+            "bread",
+            "meat"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w15"
+        },
+        {
+          "id": "es-a1u4-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"soup\"?",
+          "options": [
+            "la carne",
+            "la sopa",
+            "el pan",
+            "el pescado"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w16"
+        },
+        {
+          "id": "es-a1-u4-l4-s",
+          "type": "translate",
+          "prompt": "I like rice",
+          "answer": [
+            "Me",
+            "gusta",
+            "el",
+            "arroz"
+          ],
+          "bank": [
+            "el",
+            "sopa",
+            "Me",
+            "arroz",
+            "gusta",
+            "pan"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el pollo",
+          "english": "chicken"
+        },
+        {
+          "target": "el pescado",
+          "english": "fish"
+        },
+        {
+          "target": "la carne",
+          "english": "meat"
+        },
+        {
+          "target": "la sopa",
+          "english": "soup"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l5",
+      "title": "Fruit and vegetables, part 1",
+      "theme": "fruit and vegetables",
+      "exercises": [
+        {
+          "id": "es-a1u4-w17-te",
+          "type": "mc",
+          "prompt": "What does \"la manzana\" mean?",
+          "speak": "la manzana",
+          "options": [
+            "tomato",
+            "orange",
+            "apple",
+            "banana"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w17"
+        },
+        {
+          "id": "es-a1u4-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"banana\"?",
+          "options": [
+            "la banana",
+            "la zanahoria",
+            "la naranja",
+            "el limón"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u4-w18"
+        },
+        {
+          "id": "es-a1-u4-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w17",
+              "target": "la manzana",
+              "english": "apple"
+            },
+            {
+              "wordId": "es-a1u4-w18",
+              "target": "la banana",
+              "english": "banana"
+            },
+            {
+              "wordId": "es-a1u4-w19",
+              "target": "la naranja",
+              "english": "orange"
+            },
+            {
+              "wordId": "es-a1u4-w20",
+              "target": "el tomate",
+              "english": "tomato"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w19-te",
+          "type": "mc",
+          "prompt": "What does \"la naranja\" mean?",
+          "speak": "la naranja",
+          "options": [
+            "carrot",
+            "lemon",
+            "orange",
+            "apple"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w19"
+        },
+        {
+          "id": "es-a1u4-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"tomato\"?",
+          "options": [
+            "el limón",
+            "la zanahoria",
+            "la manzana",
+            "el tomate"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w20"
+        },
+        {
+          "id": "es-a1-u4-l5-s",
+          "type": "translate",
+          "prompt": "An apple, please",
+          "answer": [
+            "Una",
+            "manzana",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "Una",
+            "favor",
+            "banana",
+            "manzana",
+            "tomate",
+            "por"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la manzana",
+          "english": "apple"
+        },
+        {
+          "target": "la banana",
+          "english": "banana"
+        },
+        {
+          "target": "la naranja",
+          "english": "orange"
+        },
+        {
+          "target": "el tomate",
+          "english": "tomato"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l6",
+      "title": "Fruit and vegetables, part 2",
+      "theme": "fruit and vegetables",
+      "exercises": [
+        {
+          "id": "es-a1u4-w21-te",
+          "type": "mc",
+          "prompt": "What does \"la papa\" mean?",
+          "speak": "la papa",
+          "options": [
+            "lemon",
+            "banana",
+            "tomato",
+            "potato"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w21"
+        },
+        {
+          "id": "es-a1u4-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"carrot\"?",
+          "options": [
+            "la zanahoria",
+            "el limón",
+            "la papa",
+            "la ensalada"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u4-w22"
+        },
+        {
+          "id": "es-a1-u4-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w21",
+              "target": "la papa",
+              "english": "potato"
+            },
+            {
+              "wordId": "es-a1u4-w22",
+              "target": "la zanahoria",
+              "english": "carrot"
+            },
+            {
+              "wordId": "es-a1u4-w23",
+              "target": "la ensalada",
+              "english": "salad"
+            },
+            {
+              "wordId": "es-a1u4-w24",
+              "target": "el limón",
+              "english": "lemon"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w23-te",
+          "type": "mc",
+          "prompt": "What does \"la ensalada\" mean?",
+          "speak": "la ensalada",
+          "options": [
+            "apple",
+            "carrot",
+            "salad",
+            "banana"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w23"
+        },
+        {
+          "id": "es-a1u4-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"lemon\"?",
+          "options": [
+            "la banana",
+            "la naranja",
+            "la zanahoria",
+            "el limón"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w24"
+        },
+        {
+          "id": "es-a1-u4-l6-s",
+          "type": "translate",
+          "prompt": "I like salad",
+          "answer": [
+            "Me",
+            "gusta",
+            "la",
+            "ensalada"
+          ],
+          "bank": [
+            "zanahoria",
+            "limón",
+            "la",
+            "gusta",
+            "Me",
+            "ensalada"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la papa",
+          "english": "potato"
+        },
+        {
+          "target": "la zanahoria",
+          "english": "carrot"
+        },
+        {
+          "target": "la ensalada",
+          "english": "salad"
+        },
+        {
+          "target": "el limón",
+          "english": "lemon"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l7",
+      "title": "At the table, part 1",
+      "theme": "at the table",
+      "exercises": [
+        {
+          "id": "es-a1u4-w25-te",
+          "type": "mc",
+          "prompt": "What does \"tengo hambre\" mean?",
+          "speak": "tengo hambre",
+          "options": [
+            "I am thirsty",
+            "I am hungry",
+            "the bill",
+            "delicious"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w25"
+        },
+        {
+          "id": "es-a1u4-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"I am thirsty\"?",
+          "options": [
+            "tengo hambre",
+            "tengo sed",
+            "la cuenta",
+            "quisiera"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w26"
+        },
+        {
+          "id": "es-a1-u4-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w25",
+              "target": "tengo hambre",
+              "english": "I am hungry"
+            },
+            {
+              "wordId": "es-a1u4-w26",
+              "target": "tengo sed",
+              "english": "I am thirsty"
+            },
+            {
+              "wordId": "es-a1u4-w27",
+              "target": "quisiera",
+              "english": "I would like"
+            },
+            {
+              "wordId": "es-a1u4-w28",
+              "target": "la cuenta",
+              "english": "the bill"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w27-te",
+          "type": "mc",
+          "prompt": "What does \"quisiera\" mean?",
+          "speak": "quisiera",
+          "options": [
+            "I am thirsty",
+            "I would like",
+            "it is tasty",
+            "enjoy your meal"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w27"
+        },
+        {
+          "id": "es-a1u4-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"the bill\"?",
+          "options": [
+            "el menú",
+            "delicioso",
+            "está rico",
+            "la cuenta"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w28"
+        },
+        {
+          "id": "es-a1-u4-l7-s",
+          "type": "translate",
+          "prompt": "I am hungry",
+          "answer": [
+            "Tengo",
+            "hambre"
+          ],
+          "bank": [
+            "Tengo",
+            "hambre",
+            "sed",
+            "quisiera"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "tengo hambre",
+          "english": "I am hungry"
+        },
+        {
+          "target": "tengo sed",
+          "english": "I am thirsty"
+        },
+        {
+          "target": "quisiera",
+          "english": "I would like"
+        },
+        {
+          "target": "la cuenta",
+          "english": "the bill"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l8",
+      "title": "At the table, part 2",
+      "theme": "at the table",
+      "exercises": [
+        {
+          "id": "es-a1u4-w29-te",
+          "type": "mc",
+          "prompt": "What does \"el menú\" mean?",
+          "speak": "el menú",
+          "options": [
+            "the menu",
+            "it is tasty",
+            "I would like",
+            "delicious"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u4-w29"
+        },
+        {
+          "id": "es-a1u4-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"delicious\"?",
+          "options": [
+            "el menú",
+            "tengo sed",
+            "buen provecho",
+            "delicioso"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w30"
+        },
+        {
+          "id": "es-a1-u4-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w29",
+              "target": "el menú",
+              "english": "the menu"
+            },
+            {
+              "wordId": "es-a1u4-w30",
+              "target": "delicioso",
+              "english": "delicious"
+            },
+            {
+              "wordId": "es-a1u4-w31",
+              "target": "está rico",
+              "english": "it is tasty"
+            },
+            {
+              "wordId": "es-a1u4-w32",
+              "target": "buen provecho",
+              "english": "enjoy your meal"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w31-te",
+          "type": "mc",
+          "prompt": "What does \"está rico\" mean?",
+          "speak": "está rico",
+          "options": [
+            "it is tasty",
+            "the bill",
+            "I am hungry",
+            "the menu"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u4-w31"
+        },
+        {
+          "id": "es-a1u4-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"enjoy your meal\"?",
+          "options": [
+            "el menú",
+            "la cuenta",
+            "tengo hambre",
+            "buen provecho"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w32"
+        },
+        {
+          "id": "es-a1-u4-l8-s",
+          "type": "translate",
+          "prompt": "The bill, please",
+          "answer": [
+            "La",
+            "cuenta",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "cuenta",
+            "por",
+            "menú",
+            "favor",
+            "La",
+            "gracias"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el menú",
+          "english": "the menu"
+        },
+        {
+          "target": "delicioso",
+          "english": "delicious"
+        },
+        {
+          "target": "está rico",
+          "english": "it is tasty"
+        },
+        {
+          "target": "buen provecho",
+          "english": "enjoy your meal"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l9",
+      "title": "Likes, part 1",
+      "theme": "likes",
+      "exercises": [
+        {
+          "id": "es-a1u4-w33-te",
+          "type": "mc",
+          "prompt": "What does \"me gusta\" mean?",
+          "speak": "me gusta",
+          "options": [
+            "with",
+            "without",
+            "also",
+            "I like"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w33"
+        },
+        {
+          "id": "es-a1u4-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"I don't like\"?",
+          "options": [
+            "mucho",
+            "me encanta",
+            "no me gusta",
+            "me gusta"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w34"
+        },
+        {
+          "id": "es-a1-u4-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w33",
+              "target": "me gusta",
+              "english": "I like"
+            },
+            {
+              "wordId": "es-a1u4-w34",
+              "target": "no me gusta",
+              "english": "I don't like"
+            },
+            {
+              "wordId": "es-a1u4-w35",
+              "target": "me encanta",
+              "english": "I love"
+            },
+            {
+              "wordId": "es-a1u4-w36",
+              "target": "un poco",
+              "english": "a little"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w35-te",
+          "type": "mc",
+          "prompt": "What does \"me encanta\" mean?",
+          "speak": "me encanta",
+          "options": [
+            "without",
+            "I love",
+            "a lot",
+            "a little"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w35"
+        },
+        {
+          "id": "es-a1u4-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"a little\"?",
+          "options": [
+            "también",
+            "un poco",
+            "me gusta",
+            "me encanta"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w36"
+        },
+        {
+          "id": "es-a1-u4-l9-s",
+          "type": "translate",
+          "prompt": "I like coffee a lot",
+          "answer": [
+            "Me",
+            "gusta",
+            "mucho",
+            "el",
+            "café"
+          ],
+          "bank": [
+            "el",
+            "té",
+            "poco",
+            "gusta",
+            "mucho",
+            "Me",
+            "café"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "me gusta",
+          "english": "I like"
+        },
+        {
+          "target": "no me gusta",
+          "english": "I don't like"
+        },
+        {
+          "target": "me encanta",
+          "english": "I love"
+        },
+        {
+          "target": "un poco",
+          "english": "a little"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u4-l10",
+      "title": "Likes, part 2",
+      "theme": "likes",
+      "exercises": [
+        {
+          "id": "es-a1u4-w37-te",
+          "type": "mc",
+          "prompt": "What does \"mucho\" mean?",
+          "speak": "mucho",
+          "options": [
+            "also",
+            "I don't like",
+            "a lot",
+            "with"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u4-w37"
+        },
+        {
+          "id": "es-a1u4-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"with\"?",
+          "options": [
+            "mucho",
+            "no me gusta",
+            "también",
+            "con"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u4-w38"
+        },
+        {
+          "id": "es-a1-u4-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u4-w37",
+              "target": "mucho",
+              "english": "a lot"
+            },
+            {
+              "wordId": "es-a1u4-w38",
+              "target": "con",
+              "english": "with"
+            },
+            {
+              "wordId": "es-a1u4-w39",
+              "target": "sin",
+              "english": "without"
+            },
+            {
+              "wordId": "es-a1u4-w40",
+              "target": "también",
+              "english": "also"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u4-w39-te",
+          "type": "mc",
+          "prompt": "What does \"sin\" mean?",
+          "speak": "sin",
+          "options": [
+            "a little",
+            "without",
+            "a lot",
+            "with"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u4-w39"
+        },
+        {
+          "id": "es-a1u4-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"also\"?",
+          "options": [
+            "también",
+            "sin",
+            "no me gusta",
+            "un poco"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u4-w40"
+        },
+        {
+          "id": "es-a1-u4-l10-s",
+          "type": "translate",
+          "prompt": "I don't like fish",
+          "answer": [
+            "No",
+            "me",
+            "gusta",
+            "el",
+            "pescado"
+          ],
+          "bank": [
+            "gusta",
+            "el",
+            "encanta",
+            "me",
+            "No",
+            "pescado",
+            "arroz"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "mucho",
+          "english": "a lot"
+        },
+        {
+          "target": "con",
+          "english": "with"
+        },
+        {
+          "target": "sin",
+          "english": "without"
+        },
+        {
+          "target": "también",
+          "english": "also"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "es-a1-u4-cp",
+    "title": "Unit 4 checkpoint",
+    "pool": [
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w1",
+        "type": "mc",
+        "prompt": "What does \"el agua\" mean?",
+        "speak": "el agua",
+        "options": [
+          "I don't like",
+          "salad",
+          "water",
+          "delicious"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u4-w1"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w2",
+        "type": "mc",
+        "prompt": "How do you say \"coffee\"?",
+        "options": [
+          "con",
+          "el café",
+          "el agua",
+          "me gusta"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w2"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w3",
+        "type": "mc",
+        "prompt": "What does \"el té\" mean?",
+        "speak": "el té",
+        "options": [
+          "the menu",
+          "the bill",
+          "juice",
+          "tea"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w3"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w4",
+        "type": "mc",
+        "prompt": "How do you say \"milk\"?",
+        "options": [
+          "está rico",
+          "la leche",
+          "la banana",
+          "la sopa"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w4"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w5",
+        "type": "mc",
+        "prompt": "What does \"el jugo\" mean?",
+        "speak": "el jugo",
+        "options": [
+          "tea",
+          "juice",
+          "chicken",
+          "apple"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w5"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w6",
+        "type": "mc",
+        "prompt": "How do you say \"wine\"?",
+        "options": [
+          "me gusta",
+          "también",
+          "el vino",
+          "sin"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u4-w6"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w7",
+        "type": "mc",
+        "prompt": "What does \"la cerveza\" mean?",
+        "speak": "la cerveza",
+        "options": [
+          "beer",
+          "it is tasty",
+          "rice",
+          "bread"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w7"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w8",
+        "type": "mc",
+        "prompt": "How do you say \"lemonade\"?",
+        "options": [
+          "el menú",
+          "sin",
+          "también",
+          "la limonada"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w8"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w9",
+        "type": "mc",
+        "prompt": "What does \"el pan\" mean?",
+        "speak": "el pan",
+        "options": [
+          "fish",
+          "bread",
+          "chicken",
+          "lemon"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w9"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w10",
+        "type": "mc",
+        "prompt": "How do you say \"rice\"?",
+        "options": [
+          "el tomate",
+          "no me gusta",
+          "el arroz",
+          "la cerveza"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u4-w10"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w11",
+        "type": "mc",
+        "prompt": "What does \"el queso\" mean?",
+        "speak": "el queso",
+        "options": [
+          "juice",
+          "I would like",
+          "cheese",
+          "orange"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u4-w11"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w12",
+        "type": "mc",
+        "prompt": "How do you say \"egg\"?",
+        "options": [
+          "el huevo",
+          "el arroz",
+          "el menú",
+          "me gusta"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w12"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w13",
+        "type": "mc",
+        "prompt": "What does \"el pollo\" mean?",
+        "speak": "el pollo",
+        "options": [
+          "enjoy your meal",
+          "chicken",
+          "egg",
+          "milk"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w13"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w14",
+        "type": "mc",
+        "prompt": "How do you say \"fish\"?",
+        "options": [
+          "sin",
+          "el pescado",
+          "la manzana",
+          "el vino"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w14"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w15",
+        "type": "mc",
+        "prompt": "What does \"la carne\" mean?",
+        "speak": "la carne",
+        "options": [
+          "bread",
+          "egg",
+          "juice",
+          "meat"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w15"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w16",
+        "type": "mc",
+        "prompt": "How do you say \"soup\"?",
+        "options": [
+          "la zanahoria",
+          "la sopa",
+          "tengo hambre",
+          "la limonada"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w16"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w17",
+        "type": "mc",
+        "prompt": "What does \"la manzana\" mean?",
+        "speak": "la manzana",
+        "options": [
+          "banana",
+          "apple",
+          "carrot",
+          "rice"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w17"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w18",
+        "type": "mc",
+        "prompt": "How do you say \"banana\"?",
+        "options": [
+          "el pollo",
+          "buen provecho",
+          "la cuenta",
+          "la banana"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w18"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w19",
+        "type": "mc",
+        "prompt": "What does \"la naranja\" mean?",
+        "speak": "la naranja",
+        "options": [
+          "potato",
+          "beer",
+          "orange",
+          "rice"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u4-w19"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w20",
+        "type": "mc",
+        "prompt": "How do you say \"tomato\"?",
+        "options": [
+          "el pescado",
+          "el tomate",
+          "la manzana",
+          "la carne"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w20"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w21",
+        "type": "mc",
+        "prompt": "What does \"la papa\" mean?",
+        "speak": "la papa",
+        "options": [
+          "coffee",
+          "potato",
+          "juice",
+          "chicken"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w21"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w22",
+        "type": "mc",
+        "prompt": "How do you say \"carrot\"?",
+        "options": [
+          "la zanahoria",
+          "la naranja",
+          "con",
+          "el pollo"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w22"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w23",
+        "type": "mc",
+        "prompt": "What does \"la ensalada\" mean?",
+        "speak": "la ensalada",
+        "options": [
+          "banana",
+          "egg",
+          "salad",
+          "soup"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u4-w23"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w24",
+        "type": "mc",
+        "prompt": "How do you say \"lemon\"?",
+        "options": [
+          "con",
+          "el limón",
+          "la carne",
+          "la ensalada"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w24"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w25",
+        "type": "mc",
+        "prompt": "What does \"tengo hambre\" mean?",
+        "speak": "tengo hambre",
+        "options": [
+          "enjoy your meal",
+          "tea",
+          "I love",
+          "I am hungry"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w25"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w26",
+        "type": "mc",
+        "prompt": "How do you say \"I am thirsty\"?",
+        "options": [
+          "quisiera",
+          "tengo sed",
+          "el café",
+          "el jugo"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w26"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w27",
+        "type": "mc",
+        "prompt": "What does \"quisiera\" mean?",
+        "speak": "quisiera",
+        "options": [
+          "I am hungry",
+          "lemonade",
+          "a lot",
+          "I would like"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w27"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w28",
+        "type": "mc",
+        "prompt": "How do you say \"the bill\"?",
+        "options": [
+          "la cuenta",
+          "el pescado",
+          "un poco",
+          "tengo hambre"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w28"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w29",
+        "type": "mc",
+        "prompt": "What does \"el menú\" mean?",
+        "speak": "el menú",
+        "options": [
+          "the menu",
+          "I don't like",
+          "chicken",
+          "enjoy your meal"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w29"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w30",
+        "type": "mc",
+        "prompt": "How do you say \"delicious\"?",
+        "options": [
+          "me gusta",
+          "delicioso",
+          "un poco",
+          "quisiera"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w30"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w31",
+        "type": "mc",
+        "prompt": "What does \"está rico\" mean?",
+        "speak": "está rico",
+        "options": [
+          "it is tasty",
+          "I would like",
+          "potato",
+          "wine"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w31"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w32",
+        "type": "mc",
+        "prompt": "How do you say \"enjoy your meal\"?",
+        "options": [
+          "buen provecho",
+          "con",
+          "la naranja",
+          "está rico"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w32"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w33",
+        "type": "mc",
+        "prompt": "What does \"me gusta\" mean?",
+        "speak": "me gusta",
+        "options": [
+          "cheese",
+          "I like",
+          "enjoy your meal",
+          "chicken"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w33"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w34",
+        "type": "mc",
+        "prompt": "How do you say \"I don't like\"?",
+        "options": [
+          "no me gusta",
+          "me gusta",
+          "la ensalada",
+          "la papa"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w34"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w35",
+        "type": "mc",
+        "prompt": "What does \"me encanta\" mean?",
+        "speak": "me encanta",
+        "options": [
+          "I love",
+          "fish",
+          "cheese",
+          "salad"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u4-w35"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w36",
+        "type": "mc",
+        "prompt": "How do you say \"a little\"?",
+        "options": [
+          "la banana",
+          "no me gusta",
+          "un poco",
+          "está rico"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u4-w36"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w37",
+        "type": "mc",
+        "prompt": "What does \"mucho\" mean?",
+        "speak": "mucho",
+        "options": [
+          "potato",
+          "a lot",
+          "I am thirsty",
+          "lemon"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w37"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w38",
+        "type": "mc",
+        "prompt": "How do you say \"with\"?",
+        "options": [
+          "el café",
+          "con",
+          "el tomate",
+          "el menú"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u4-w38"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w39",
+        "type": "mc",
+        "prompt": "What does \"sin\" mean?",
+        "speak": "sin",
+        "options": [
+          "I like",
+          "also",
+          "I am hungry",
+          "without"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w39"
+      },
+      {
+        "id": "es-a1-u4-cp-es-a1u4-w40",
+        "type": "mc",
+        "prompt": "How do you say \"also\"?",
+        "options": [
+          "la leche",
+          "la naranja",
+          "la cuenta",
+          "también"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u4-w40"
+      },
+      {
+        "id": "es-a1-u4-cp-l1-s1",
+        "type": "translate",
+        "prompt": "I want water",
+        "answer": [
+          "Quiero",
+          "agua"
+        ],
+        "bank": [
+          "café",
+          "agua",
+          "té",
+          "Quiero"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l1-s2",
+        "type": "translate",
+        "prompt": "A coffee, please",
+        "answer": [
+          "Un",
+          "café",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "té",
+          "por",
+          "favor",
+          "café",
+          "leche",
+          "Un"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l1-s3",
+        "type": "translate",
+        "prompt": "The tea is hot",
+        "answer": [
+          "El",
+          "té",
+          "está",
+          "caliente"
+        ],
+        "bank": [
+          "té",
+          "frío",
+          "El",
+          "jugo",
+          "caliente",
+          "está"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I like rice",
+        "answer": [
+          "Me",
+          "gusta",
+          "el",
+          "arroz"
+        ],
+        "bank": [
+          "Me",
+          "gusta",
+          "pan",
+          "arroz",
+          "el",
+          "sopa"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l2-s2",
+        "type": "translate",
+        "prompt": "The chicken is tasty",
+        "answer": [
+          "El",
+          "pollo",
+          "está",
+          "rico"
+        ],
+        "bank": [
+          "está",
+          "pescado",
+          "rico",
+          "pollo",
+          "malo",
+          "El"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l2-s3",
+        "type": "translate",
+        "prompt": "Bread and cheese",
+        "answer": [
+          "Pan",
+          "y",
+          "queso"
+        ],
+        "bank": [
+          "y",
+          "arroz",
+          "Pan",
+          "queso",
+          "huevo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l3-s1",
+        "type": "translate",
+        "prompt": "An apple, please",
+        "answer": [
+          "Una",
+          "manzana",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "banana",
+          "manzana",
+          "Una",
+          "favor",
+          "tomate",
+          "por"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l3-s2",
+        "type": "translate",
+        "prompt": "The banana is yellow",
+        "answer": [
+          "La",
+          "banana",
+          "es",
+          "amarilla"
+        ],
+        "bank": [
+          "amarilla",
+          "es",
+          "naranja",
+          "La",
+          "banana",
+          "roja"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l3-s3",
+        "type": "translate",
+        "prompt": "I like salad",
+        "answer": [
+          "Me",
+          "gusta",
+          "la",
+          "ensalada"
+        ],
+        "bank": [
+          "ensalada",
+          "gusta",
+          "limón",
+          "zanahoria",
+          "Me",
+          "la"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l4-s1",
+        "type": "translate",
+        "prompt": "I am hungry",
+        "answer": [
+          "Tengo",
+          "hambre"
+        ],
+        "bank": [
+          "sed",
+          "quisiera",
+          "Tengo",
+          "hambre"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l4-s2",
+        "type": "translate",
+        "prompt": "The bill, please",
+        "answer": [
+          "La",
+          "cuenta",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "favor",
+          "por",
+          "gracias",
+          "menú",
+          "cuenta",
+          "La"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l4-s3",
+        "type": "translate",
+        "prompt": "It is delicious",
+        "answer": [
+          "Está",
+          "delicioso"
+        ],
+        "bank": [
+          "rico",
+          "Está",
+          "delicioso",
+          "provecho"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l5-s1",
+        "type": "translate",
+        "prompt": "I like coffee a lot",
+        "answer": [
+          "Me",
+          "gusta",
+          "mucho",
+          "el",
+          "café"
+        ],
+        "bank": [
+          "mucho",
+          "gusta",
+          "té",
+          "café",
+          "Me",
+          "poco",
+          "el"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l5-s2",
+        "type": "translate",
+        "prompt": "I don't like fish",
+        "answer": [
+          "No",
+          "me",
+          "gusta",
+          "el",
+          "pescado"
+        ],
+        "bank": [
+          "encanta",
+          "No",
+          "pescado",
+          "arroz",
+          "el",
+          "gusta",
+          "me"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-l5-s3",
+        "type": "translate",
+        "prompt": "A coffee without milk",
+        "answer": [
+          "Un",
+          "café",
+          "sin",
+          "leche"
+        ],
+        "bank": [
+          "sin",
+          "café",
+          "té",
+          "leche",
+          "con",
+          "Un"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u4-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u4-w6",
+            "target": "el vino",
+            "english": "wine"
+          },
+          {
+            "wordId": "es-a1u4-w3",
+            "target": "el té",
+            "english": "tea"
+          },
+          {
+            "wordId": "es-a1u4-w7",
+            "target": "la cerveza",
+            "english": "beer"
+          },
+          {
+            "wordId": "es-a1u4-w1",
+            "target": "el agua",
+            "english": "water"
+          },
+          {
+            "wordId": "es-a1u4-w4",
+            "target": "la leche",
+            "english": "milk"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u4-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u4-w16",
+            "target": "la sopa",
+            "english": "soup"
+          },
+          {
+            "wordId": "es-a1u4-w14",
+            "target": "el pescado",
+            "english": "fish"
+          },
+          {
+            "wordId": "es-a1u4-w11",
+            "target": "el queso",
+            "english": "cheese"
+          },
+          {
+            "wordId": "es-a1u4-w10",
+            "target": "el arroz",
+            "english": "rice"
+          },
+          {
+            "wordId": "es-a1u4-w13",
+            "target": "el pollo",
+            "english": "chicken"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u4-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u4-w23",
+            "target": "la ensalada",
+            "english": "salad"
+          },
+          {
+            "wordId": "es-a1u4-w24",
+            "target": "el limón",
+            "english": "lemon"
+          },
+          {
+            "wordId": "es-a1u4-w17",
+            "target": "la manzana",
+            "english": "apple"
+          },
+          {
+            "wordId": "es-a1u4-w19",
+            "target": "la naranja",
+            "english": "orange"
+          },
+          {
+            "wordId": "es-a1u4-w20",
+            "target": "el tomate",
+            "english": "tomato"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u4-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u4-w32",
+            "target": "buen provecho",
+            "english": "enjoy your meal"
+          },
+          {
+            "wordId": "es-a1u4-w25",
+            "target": "tengo hambre",
+            "english": "I am hungry"
+          },
+          {
+            "wordId": "es-a1u4-w28",
+            "target": "la cuenta",
+            "english": "the bill"
+          },
+          {
+            "wordId": "es-a1u4-w31",
+            "target": "está rico",
+            "english": "it is tasty"
+          },
+          {
+            "wordId": "es-a1u4-w26",
+            "target": "tengo sed",
+            "english": "I am thirsty"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u4-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u4-w39",
+            "target": "sin",
+            "english": "without"
+          },
+          {
+            "wordId": "es-a1u4-w37",
+            "target": "mucho",
+            "english": "a lot"
+          },
+          {
+            "wordId": "es-a1u4-w40",
+            "target": "también",
+            "english": "also"
+          },
+          {
+            "wordId": "es-a1u4-w38",
+            "target": "con",
+            "english": "with"
+          },
+          {
+            "wordId": "es-a1u4-w33",
+            "target": "me gusta",
+            "english": "I like"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

@@ -9,7 +9,7 @@ import { fmtGD } from "@learnit/backend/format";
 import { LessonSkeleton } from "./Skeletons";
 import { playCorrect, playWrong, soundEnabled, setSoundEnabled } from "@/lib/sounds";
 
-type Loaded = { id: string; title: string; speechLang: string; token: string; exercises: PublicExercise[] };
+type Loaded = { id: string; title: string; speechLang: string; token: string; intro?: { target: string; english: string }[]; exercises: PublicExercise[] };
 type Pair = { target: string; english: string };
 type Ans = number | string[] | Pair[];
 type Feedback = { correct: boolean; answer: unknown };
@@ -38,6 +38,7 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
   const [result, setResult] = useState<Result | null>(null);
   const missed = useRef<number[]>([]);
   const firstRef = useRef<Record<string, Ans>>({}); // mirrors `first` so submit never reads a stale value
+  const [introSeen, setIntroSeen] = useState(false);
   const [sound, setSound] = useState(true);
   useEffect(() => setSound(soundEnabled()), []);
   const base = isCheckpoint(id) ? `/api/checkpoints/${id}` : `/api/lessons/${id}`;
@@ -47,7 +48,7 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
   }, [api, base]);
 
   const ex = data && queue[pos] !== undefined ? data.exercises[queue[pos]] : null;
-  useEffect(() => { if (ex?.type === "mc" && ex.speak && data) speak(ex.speak, data.speechLang); }, [ex, data]);
+  useEffect(() => { if (ex?.type === "mc" && ex.speak && data && (introSeen || !data.intro?.length)) speak(ex.speak, data.speechLang); }, [ex, data, introSeen]);
 
   const record = useCallback((exId: string, answer: Ans) => {
     if (exId in firstRef.current) return;
@@ -100,6 +101,7 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
   if (err && !data) return <p role="alert" className="p-6 text-sm">{err} <Link className="underline" href="/learn">Back</Link></p>;
   if (!data) return <LessonSkeleton />;
   if (result) return <Results r={result} id={id} />;
+  if (data.intro?.length && !introSeen) return <Intro words={data.intro} lang={data.speechLang} title={data.title} onStart={() => setIntroSeen(true)} />;
   if (!ex) return <p className="p-6 text-sm">Submitting...</p>;
 
   const total = data.exercises.length;
@@ -245,6 +247,33 @@ function Results({ r, id }: { r: Result; id: string }) {
         {r.passed && !pending && !voucher && review && <p className="rounded-card border border-line p-4 text-center text-sm text-muted">Your reward is being reviewed. It will show up in Earn once that clears.</p>}
         <Link href="/learn" className="rounded-full bg-yellow px-5 py-4 text-center font-semibold text-[#111]">{r.passed ? "Continue" : "Back to lessons"}</Link>
       </div>
+    </main>
+  );
+}
+
+/** Shown before the questions so a complete beginner meets each word, and hears it, before being asked about it. */
+function Intro({ words, lang, title, onStart }: { words: { target: string; english: string }[]; lang: string; title: string; onStart: () => void }) {
+  return (
+    <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col px-4 pb-6 pt-4">
+      <header className="flex items-center gap-3">
+        <Link href="/learn" aria-label="Quit lesson" className="p-2"><Cancel01Icon size={22} strokeWidth={1.75} /></Link>
+        <p className="font-mono text-xs uppercase tracking-wider text-muted">{title}</p>
+      </header>
+      <section className="flex flex-1 flex-col justify-center py-6">
+        <h1 className="text-3xl font-bold tracking-tighter">New words</h1>
+        <p className="mt-1 text-muted">Tap a word to hear it. Then you will practise them.</p>
+        <ul className="mt-6 grid gap-3">
+          {words.map((w) => (
+            <li key={w.target}>
+              <button onClick={() => speak(w.target, lang)} className="flex w-full items-center justify-between rounded-card border border-line p-4 text-left transition active:scale-[0.98]">
+                <span><span className="block text-xl font-semibold">{w.target}</span><span className="text-muted">{w.english}</span></span>
+                <VolumeHighIcon size={22} strokeWidth={1.75} />
+              </button>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <button onClick={onStart} className="w-full rounded-full bg-ink px-5 py-4 font-semibold text-paper transition active:scale-[0.98]">Start practice</button>
     </main>
   );
 }

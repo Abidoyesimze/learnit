@@ -6,7 +6,7 @@ const tag = `check-${Date.now()}`;
 const user = await db.user.create({ data: { privyUserId: tag, wallet: `0x${tag.padEnd(40, "0").slice(0, 40)}` } });
 try {
   await db.ubiClaim.create({ data: { userId: user.id, txHash: `0x${tag}`, amount: "1000" } });
-  const a = await db.lessonAttempt.create({ data: { userId: user.id, lessonId: "fr-u1-l1", score: 0.9, durationS: 120, passed: true, localDate: "2026-11-03", startKey: tag } });
+  const a = await db.lessonAttempt.create({ data: { userId: user.id, lessonId: "fr-a1-u1-l1", score: 0.9, durationS: 120, passed: true, localDate: "2026-11-03", startKey: tag } });
   await db.streakDay.create({ data: { userId: user.id, date: "2026-11-03" } });
   await db.voucher.create({ data: { root: user.wallet, amount: "500", nonce: tag, expiry: 1, reason: "lesson", sourceId: a.id, signature: "0x" } });
   await db.cohort.upsert({ where: { id: 999999 }, create: { id: 999999, startAt: new Date(), endAt: new Date(), minStake: "1", maxStake: "2" }, update: {} });

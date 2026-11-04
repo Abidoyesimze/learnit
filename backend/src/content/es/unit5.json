@@ -1,0 +1,2265 @@
+{
+  "lang": "es",
+  "unit": 5,
+  "level": "A1",
+  "title": "Around town",
+  "blurb": "Find places, ask the way and ask questions.",
+  "speechLang": "es-ES",
+  "lessons": [
+    {
+      "id": "es-a1-u5-l1",
+      "title": "Places, part 1",
+      "theme": "places",
+      "exercises": [
+        {
+          "id": "es-a1u5-w1-te",
+          "type": "mc",
+          "prompt": "What does \"la casa\" mean?",
+          "speak": "la casa",
+          "options": [
+            "market",
+            "bank",
+            "house",
+            "restaurant"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w1"
+        },
+        {
+          "id": "es-a1u5-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"school\"?",
+          "options": [
+            "la tienda",
+            "la escuela",
+            "el banco",
+            "el hospital"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w2"
+        },
+        {
+          "id": "es-a1-u5-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w1",
+              "target": "la casa",
+              "english": "house"
+            },
+            {
+              "wordId": "es-a1u5-w2",
+              "target": "la escuela",
+              "english": "school"
+            },
+            {
+              "wordId": "es-a1u5-w3",
+              "target": "la tienda",
+              "english": "shop"
+            },
+            {
+              "wordId": "es-a1u5-w4",
+              "target": "el restaurante",
+              "english": "restaurant"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w3-te",
+          "type": "mc",
+          "prompt": "What does \"la tienda\" mean?",
+          "speak": "la tienda",
+          "options": [
+            "bank",
+            "hospital",
+            "shop",
+            "park"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w3"
+        },
+        {
+          "id": "es-a1u5-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"restaurant\"?",
+          "options": [
+            "la tienda",
+            "el banco",
+            "la casa",
+            "el restaurante"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w4"
+        },
+        {
+          "id": "es-a1-u5-l1-s",
+          "type": "translate",
+          "prompt": "The restaurant is here",
+          "answer": [
+            "El",
+            "restaurante",
+            "está",
+            "aquí"
+          ],
+          "bank": [
+            "banco",
+            "restaurante",
+            "aquí",
+            "está",
+            "El",
+            "mercado"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la casa",
+          "english": "house"
+        },
+        {
+          "target": "la escuela",
+          "english": "school"
+        },
+        {
+          "target": "la tienda",
+          "english": "shop"
+        },
+        {
+          "target": "el restaurante",
+          "english": "restaurant"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l2",
+      "title": "Places, part 2",
+      "theme": "places",
+      "exercises": [
+        {
+          "id": "es-a1u5-w5-te",
+          "type": "mc",
+          "prompt": "What does \"el hospital\" mean?",
+          "speak": "el hospital",
+          "options": [
+            "shop",
+            "restaurant",
+            "park",
+            "hospital"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w5"
+        },
+        {
+          "id": "es-a1u5-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"bank\"?",
+          "options": [
+            "la casa",
+            "el banco",
+            "el restaurante",
+            "la tienda"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w6"
+        },
+        {
+          "id": "es-a1-u5-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w5",
+              "target": "el hospital",
+              "english": "hospital"
+            },
+            {
+              "wordId": "es-a1u5-w6",
+              "target": "el banco",
+              "english": "bank"
+            },
+            {
+              "wordId": "es-a1u5-w7",
+              "target": "el mercado",
+              "english": "market"
+            },
+            {
+              "wordId": "es-a1u5-w8",
+              "target": "el parque",
+              "english": "park"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w7-te",
+          "type": "mc",
+          "prompt": "What does \"el mercado\" mean?",
+          "speak": "el mercado",
+          "options": [
+            "shop",
+            "school",
+            "bank",
+            "market"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w7"
+        },
+        {
+          "id": "es-a1u5-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"park\"?",
+          "options": [
+            "la tienda",
+            "el restaurante",
+            "el parque",
+            "la casa"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w8"
+        },
+        {
+          "id": "es-a1-u5-l2-s",
+          "type": "translate",
+          "prompt": "She is at school",
+          "answer": [
+            "Ella",
+            "está",
+            "en",
+            "la",
+            "escuela"
+          ],
+          "bank": [
+            "la",
+            "está",
+            "hospital",
+            "en",
+            "tienda",
+            "Ella",
+            "escuela"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el hospital",
+          "english": "hospital"
+        },
+        {
+          "target": "el banco",
+          "english": "bank"
+        },
+        {
+          "target": "el mercado",
+          "english": "market"
+        },
+        {
+          "target": "el parque",
+          "english": "park"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l3",
+      "title": "Getting around, part 1",
+      "theme": "getting around",
+      "exercises": [
+        {
+          "id": "es-a1u5-w9-te",
+          "type": "mc",
+          "prompt": "What does \"la calle\" mean?",
+          "speak": "la calle",
+          "options": [
+            "bus",
+            "street",
+            "bicycle",
+            "station"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w9"
+        },
+        {
+          "id": "es-a1u5-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"station\"?",
+          "options": [
+            "el taxi",
+            "el coche",
+            "la bicicleta",
+            "la estación"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w10"
+        },
+        {
+          "id": "es-a1-u5-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w9",
+              "target": "la calle",
+              "english": "street"
+            },
+            {
+              "wordId": "es-a1u5-w10",
+              "target": "la estación",
+              "english": "station"
+            },
+            {
+              "wordId": "es-a1u5-w11",
+              "target": "el aeropuerto",
+              "english": "airport"
+            },
+            {
+              "wordId": "es-a1u5-w12",
+              "target": "el autobús",
+              "english": "bus"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w11-te",
+          "type": "mc",
+          "prompt": "What does \"el aeropuerto\" mean?",
+          "speak": "el aeropuerto",
+          "options": [
+            "airport",
+            "station",
+            "street",
+            "car"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u5-w11"
+        },
+        {
+          "id": "es-a1u5-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"bus\"?",
+          "options": [
+            "el tren",
+            "el autobús",
+            "la bicicleta",
+            "la estación"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w12"
+        },
+        {
+          "id": "es-a1-u5-l3-s",
+          "type": "translate",
+          "prompt": "A taxi, please",
+          "answer": [
+            "Un",
+            "taxi",
+            "por",
+            "favor"
+          ],
+          "bank": [
+            "favor",
+            "Un",
+            "autobús",
+            "taxi",
+            "tren",
+            "por"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la calle",
+          "english": "street"
+        },
+        {
+          "target": "la estación",
+          "english": "station"
+        },
+        {
+          "target": "el aeropuerto",
+          "english": "airport"
+        },
+        {
+          "target": "el autobús",
+          "english": "bus"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l4",
+      "title": "Getting around, part 2",
+      "theme": "getting around",
+      "exercises": [
+        {
+          "id": "es-a1u5-w13-te",
+          "type": "mc",
+          "prompt": "What does \"el taxi\" mean?",
+          "speak": "el taxi",
+          "options": [
+            "station",
+            "bicycle",
+            "taxi",
+            "car"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w13"
+        },
+        {
+          "id": "es-a1u5-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"train\"?",
+          "options": [
+            "el taxi",
+            "el aeropuerto",
+            "el tren",
+            "la bicicleta"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w14"
+        },
+        {
+          "id": "es-a1-u5-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w13",
+              "target": "el taxi",
+              "english": "taxi"
+            },
+            {
+              "wordId": "es-a1u5-w14",
+              "target": "el tren",
+              "english": "train"
+            },
+            {
+              "wordId": "es-a1u5-w15",
+              "target": "el coche",
+              "english": "car"
+            },
+            {
+              "wordId": "es-a1u5-w16",
+              "target": "la bicicleta",
+              "english": "bicycle"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w15-te",
+          "type": "mc",
+          "prompt": "What does \"el coche\" mean?",
+          "speak": "el coche",
+          "options": [
+            "train",
+            "taxi",
+            "bus",
+            "car"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w15"
+        },
+        {
+          "id": "es-a1u5-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"bicycle\"?",
+          "options": [
+            "el tren",
+            "la bicicleta",
+            "la calle",
+            "el aeropuerto"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w16"
+        },
+        {
+          "id": "es-a1-u5-l4-s",
+          "type": "translate",
+          "prompt": "The train is here",
+          "answer": [
+            "El",
+            "tren",
+            "está",
+            "aquí"
+          ],
+          "bank": [
+            "coche",
+            "aquí",
+            "está",
+            "tren",
+            "estación",
+            "El"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el taxi",
+          "english": "taxi"
+        },
+        {
+          "target": "el tren",
+          "english": "train"
+        },
+        {
+          "target": "el coche",
+          "english": "car"
+        },
+        {
+          "target": "la bicicleta",
+          "english": "bicycle"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l5",
+      "title": "Directions, part 1",
+      "theme": "directions",
+      "exercises": [
+        {
+          "id": "es-a1u5-w17-te",
+          "type": "mc",
+          "prompt": "What does \"a la izquierda\" mean?",
+          "speak": "a la izquierda",
+          "options": [
+            "opposite",
+            "on the left",
+            "far",
+            "straight ahead"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w17"
+        },
+        {
+          "id": "es-a1u5-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"on the right\"?",
+          "options": [
+            "allí",
+            "aquí",
+            "a la derecha",
+            "enfrente de"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w18"
+        },
+        {
+          "id": "es-a1-u5-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w17",
+              "target": "a la izquierda",
+              "english": "on the left"
+            },
+            {
+              "wordId": "es-a1u5-w18",
+              "target": "a la derecha",
+              "english": "on the right"
+            },
+            {
+              "wordId": "es-a1u5-w19",
+              "target": "todo recto",
+              "english": "straight ahead"
+            },
+            {
+              "wordId": "es-a1u5-w20",
+              "target": "cerca",
+              "english": "near"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w19-te",
+          "type": "mc",
+          "prompt": "What does \"todo recto\" mean?",
+          "speak": "todo recto",
+          "options": [
+            "straight ahead",
+            "here",
+            "on the left",
+            "there"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u5-w19"
+        },
+        {
+          "id": "es-a1u5-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"near\"?",
+          "options": [
+            "enfrente de",
+            "cerca",
+            "allí",
+            "a la izquierda"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w20"
+        },
+        {
+          "id": "es-a1-u5-l5-s",
+          "type": "translate",
+          "prompt": "It is straight ahead",
+          "answer": [
+            "Está",
+            "todo",
+            "recto"
+          ],
+          "bank": [
+            "allí",
+            "Está",
+            "todo",
+            "recto",
+            "cerca"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "a la izquierda",
+          "english": "on the left"
+        },
+        {
+          "target": "a la derecha",
+          "english": "on the right"
+        },
+        {
+          "target": "todo recto",
+          "english": "straight ahead"
+        },
+        {
+          "target": "cerca",
+          "english": "near"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l6",
+      "title": "Directions, part 2",
+      "theme": "directions",
+      "exercises": [
+        {
+          "id": "es-a1u5-w21-te",
+          "type": "mc",
+          "prompt": "What does \"lejos\" mean?",
+          "speak": "lejos",
+          "options": [
+            "on the right",
+            "near",
+            "far",
+            "on the left"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w21"
+        },
+        {
+          "id": "es-a1u5-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"here\"?",
+          "options": [
+            "todo recto",
+            "a la izquierda",
+            "aquí",
+            "cerca"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w22"
+        },
+        {
+          "id": "es-a1-u5-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w21",
+              "target": "lejos",
+              "english": "far"
+            },
+            {
+              "wordId": "es-a1u5-w22",
+              "target": "aquí",
+              "english": "here"
+            },
+            {
+              "wordId": "es-a1u5-w23",
+              "target": "allí",
+              "english": "there"
+            },
+            {
+              "wordId": "es-a1u5-w24",
+              "target": "enfrente de",
+              "english": "opposite"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w23-te",
+          "type": "mc",
+          "prompt": "What does \"allí\" mean?",
+          "speak": "allí",
+          "options": [
+            "near",
+            "there",
+            "straight ahead",
+            "here"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w23"
+        },
+        {
+          "id": "es-a1u5-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"opposite\"?",
+          "options": [
+            "a la derecha",
+            "enfrente de",
+            "aquí",
+            "a la izquierda"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w24"
+        },
+        {
+          "id": "es-a1-u5-l6-s",
+          "type": "translate",
+          "prompt": "The station is far from here",
+          "answer": [
+            "La",
+            "estación",
+            "está",
+            "lejos",
+            "de",
+            "aquí"
+          ],
+          "bank": [
+            "estación",
+            "enfrente",
+            "aquí",
+            "lejos",
+            "La",
+            "de",
+            "cerca",
+            "está"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "lejos",
+          "english": "far"
+        },
+        {
+          "target": "aquí",
+          "english": "here"
+        },
+        {
+          "target": "allí",
+          "english": "there"
+        },
+        {
+          "target": "enfrente de",
+          "english": "opposite"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l7",
+      "title": "Where is it, part 1",
+      "theme": "where is it",
+      "exercises": [
+        {
+          "id": "es-a1u5-w25-te",
+          "type": "mc",
+          "prompt": "What does \"dónde\" mean?",
+          "speak": "dónde",
+          "options": [
+            "village",
+            "where",
+            "there is",
+            "city"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w25"
+        },
+        {
+          "id": "es-a1u5-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"there is\"?",
+          "options": [
+            "el país",
+            "el pueblo",
+            "hay",
+            "dónde"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w26"
+        },
+        {
+          "id": "es-a1-u5-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w25",
+              "target": "dónde",
+              "english": "where"
+            },
+            {
+              "wordId": "es-a1u5-w26",
+              "target": "hay",
+              "english": "there is"
+            },
+            {
+              "wordId": "es-a1u5-w27",
+              "target": "la ciudad",
+              "english": "city"
+            },
+            {
+              "wordId": "es-a1u5-w28",
+              "target": "el pueblo",
+              "english": "village"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w27-te",
+          "type": "mc",
+          "prompt": "What does \"la ciudad\" mean?",
+          "speak": "la ciudad",
+          "options": [
+            "where",
+            "it is",
+            "city",
+            "village"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w27"
+        },
+        {
+          "id": "es-a1u5-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"village\"?",
+          "options": [
+            "hay",
+            "el pueblo",
+            "es",
+            "dónde"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w28"
+        },
+        {
+          "id": "es-a1-u5-l7-s",
+          "type": "translate",
+          "prompt": "Where is the station",
+          "answer": [
+            "Dónde",
+            "está",
+            "la",
+            "estación"
+          ],
+          "bank": [
+            "ciudad",
+            "está",
+            "Dónde",
+            "mapa",
+            "la",
+            "estación"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "dónde",
+          "english": "where"
+        },
+        {
+          "target": "hay",
+          "english": "there is"
+        },
+        {
+          "target": "la ciudad",
+          "english": "city"
+        },
+        {
+          "target": "el pueblo",
+          "english": "village"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l8",
+      "title": "Where is it, part 2",
+      "theme": "where is it",
+      "exercises": [
+        {
+          "id": "es-a1u5-w29-te",
+          "type": "mc",
+          "prompt": "What does \"el país\" mean?",
+          "speak": "el país",
+          "options": [
+            "village",
+            "country",
+            "it is",
+            "city centre"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w29"
+        },
+        {
+          "id": "es-a1u5-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"city centre\"?",
+          "options": [
+            "el mapa",
+            "el centro",
+            "la ciudad",
+            "dónde"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w30"
+        },
+        {
+          "id": "es-a1-u5-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w29",
+              "target": "el país",
+              "english": "country"
+            },
+            {
+              "wordId": "es-a1u5-w30",
+              "target": "el centro",
+              "english": "city centre"
+            },
+            {
+              "wordId": "es-a1u5-w31",
+              "target": "el mapa",
+              "english": "map"
+            },
+            {
+              "wordId": "es-a1u5-w32",
+              "target": "es",
+              "english": "it is"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w31-te",
+          "type": "mc",
+          "prompt": "What does \"el mapa\" mean?",
+          "speak": "el mapa",
+          "options": [
+            "city",
+            "city centre",
+            "it is",
+            "map"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w31"
+        },
+        {
+          "id": "es-a1u5-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"it is\"?",
+          "options": [
+            "dónde",
+            "el mapa",
+            "es",
+            "el centro"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w32"
+        },
+        {
+          "id": "es-a1-u5-l8-s",
+          "type": "translate",
+          "prompt": "There is a park",
+          "answer": [
+            "Hay",
+            "un",
+            "parque"
+          ],
+          "bank": [
+            "pueblo",
+            "parque",
+            "Hay",
+            "país",
+            "un"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "el país",
+          "english": "country"
+        },
+        {
+          "target": "el centro",
+          "english": "city centre"
+        },
+        {
+          "target": "el mapa",
+          "english": "map"
+        },
+        {
+          "target": "es",
+          "english": "it is"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l9",
+      "title": "Question words, part 1",
+      "theme": "question words",
+      "exercises": [
+        {
+          "id": "es-a1u5-w33-te",
+          "type": "mc",
+          "prompt": "What does \"quién\" mean?",
+          "speak": "quién",
+          "options": [
+            "why",
+            "how",
+            "who",
+            "how much"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w33"
+        },
+        {
+          "id": "es-a1u5-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"what\"?",
+          "options": [
+            "de dónde",
+            "qué",
+            "cuánto",
+            "cuándo"
+          ],
+          "answer": 1,
+          "wordId": "es-a1u5-w34"
+        },
+        {
+          "id": "es-a1-u5-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w33",
+              "target": "quién",
+              "english": "who"
+            },
+            {
+              "wordId": "es-a1u5-w34",
+              "target": "qué",
+              "english": "what"
+            },
+            {
+              "wordId": "es-a1u5-w35",
+              "target": "cuándo",
+              "english": "when"
+            },
+            {
+              "wordId": "es-a1u5-w36",
+              "target": "por qué",
+              "english": "why"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w35-te",
+          "type": "mc",
+          "prompt": "What does \"cuándo\" mean?",
+          "speak": "cuándo",
+          "options": [
+            "why",
+            "which",
+            "when",
+            "who"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w35"
+        },
+        {
+          "id": "es-a1u5-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"why\"?",
+          "options": [
+            "cuándo",
+            "cómo",
+            "por qué",
+            "cuánto"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w36"
+        },
+        {
+          "id": "es-a1-u5-l9-s",
+          "type": "translate",
+          "prompt": "Who is it",
+          "answer": [
+            "Quién",
+            "es"
+          ],
+          "bank": [
+            "qué",
+            "Quién",
+            "cuándo",
+            "es"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "quién",
+          "english": "who"
+        },
+        {
+          "target": "qué",
+          "english": "what"
+        },
+        {
+          "target": "cuándo",
+          "english": "when"
+        },
+        {
+          "target": "por qué",
+          "english": "why"
+        }
+      ]
+    },
+    {
+      "id": "es-a1-u5-l10",
+      "title": "Question words, part 2",
+      "theme": "question words",
+      "exercises": [
+        {
+          "id": "es-a1u5-w37-te",
+          "type": "mc",
+          "prompt": "What does \"cómo\" mean?",
+          "speak": "cómo",
+          "options": [
+            "which",
+            "how much",
+            "how",
+            "when"
+          ],
+          "answer": 2,
+          "wordId": "es-a1u5-w37"
+        },
+        {
+          "id": "es-a1u5-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"how much\"?",
+          "options": [
+            "cuánto",
+            "cómo",
+            "de dónde",
+            "quién"
+          ],
+          "answer": 0,
+          "wordId": "es-a1u5-w38"
+        },
+        {
+          "id": "es-a1-u5-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "es-a1u5-w37",
+              "target": "cómo",
+              "english": "how"
+            },
+            {
+              "wordId": "es-a1u5-w38",
+              "target": "cuánto",
+              "english": "how much"
+            },
+            {
+              "wordId": "es-a1u5-w39",
+              "target": "cuál",
+              "english": "which"
+            },
+            {
+              "wordId": "es-a1u5-w40",
+              "target": "de dónde",
+              "english": "from where"
+            }
+          ]
+        },
+        {
+          "id": "es-a1u5-w39-te",
+          "type": "mc",
+          "prompt": "What does \"cuál\" mean?",
+          "speak": "cuál",
+          "options": [
+            "when",
+            "from where",
+            "why",
+            "which"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w39"
+        },
+        {
+          "id": "es-a1u5-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"from where\"?",
+          "options": [
+            "cuánto",
+            "qué",
+            "por qué",
+            "de dónde"
+          ],
+          "answer": 3,
+          "wordId": "es-a1u5-w40"
+        },
+        {
+          "id": "es-a1-u5-l10-s",
+          "type": "translate",
+          "prompt": "When does the train leave",
+          "answer": [
+            "Cuándo",
+            "sale",
+            "el",
+            "tren"
+          ],
+          "bank": [
+            "Cuándo",
+            "sale",
+            "tren",
+            "cómo",
+            "quién",
+            "el"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "cómo",
+          "english": "how"
+        },
+        {
+          "target": "cuánto",
+          "english": "how much"
+        },
+        {
+          "target": "cuál",
+          "english": "which"
+        },
+        {
+          "target": "de dónde",
+          "english": "from where"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "es-a1-u5-cp",
+    "title": "Unit 5 checkpoint",
+    "pool": [
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w1",
+        "type": "mc",
+        "prompt": "What does \"la casa\" mean?",
+        "speak": "la casa",
+        "options": [
+          "near",
+          "map",
+          "bank",
+          "house"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w1"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w2",
+        "type": "mc",
+        "prompt": "How do you say \"school\"?",
+        "options": [
+          "es",
+          "a la derecha",
+          "la escuela",
+          "la ciudad"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w2"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w3",
+        "type": "mc",
+        "prompt": "What does \"la tienda\" mean?",
+        "speak": "la tienda",
+        "options": [
+          "restaurant",
+          "school",
+          "car",
+          "shop"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w3"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w4",
+        "type": "mc",
+        "prompt": "How do you say \"restaurant\"?",
+        "options": [
+          "cuánto",
+          "el país",
+          "el restaurante",
+          "la ciudad"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w4"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w5",
+        "type": "mc",
+        "prompt": "What does \"el hospital\" mean?",
+        "speak": "el hospital",
+        "options": [
+          "which",
+          "city centre",
+          "hospital",
+          "taxi"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w5"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w6",
+        "type": "mc",
+        "prompt": "How do you say \"bank\"?",
+        "options": [
+          "el banco",
+          "la calle",
+          "todo recto",
+          "a la izquierda"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u5-w6"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w7",
+        "type": "mc",
+        "prompt": "What does \"el mercado\" mean?",
+        "speak": "el mercado",
+        "options": [
+          "straight ahead",
+          "market",
+          "train",
+          "there is"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w7"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w8",
+        "type": "mc",
+        "prompt": "How do you say \"park\"?",
+        "options": [
+          "la bicicleta",
+          "de dónde",
+          "qué",
+          "el parque"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w8"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w9",
+        "type": "mc",
+        "prompt": "What does \"la calle\" mean?",
+        "speak": "la calle",
+        "options": [
+          "street",
+          "there",
+          "bicycle",
+          "school"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u5-w9"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w10",
+        "type": "mc",
+        "prompt": "How do you say \"station\"?",
+        "options": [
+          "dónde",
+          "la tienda",
+          "el coche",
+          "la estación"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w10"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w11",
+        "type": "mc",
+        "prompt": "What does \"el aeropuerto\" mean?",
+        "speak": "el aeropuerto",
+        "options": [
+          "who",
+          "airport",
+          "straight ahead",
+          "why"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w11"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w12",
+        "type": "mc",
+        "prompt": "How do you say \"bus\"?",
+        "options": [
+          "el taxi",
+          "el mercado",
+          "hay",
+          "el autobús"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w12"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w13",
+        "type": "mc",
+        "prompt": "What does \"el taxi\" mean?",
+        "speak": "el taxi",
+        "options": [
+          "hospital",
+          "street",
+          "straight ahead",
+          "taxi"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w13"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w14",
+        "type": "mc",
+        "prompt": "How do you say \"train\"?",
+        "options": [
+          "es",
+          "qué",
+          "a la izquierda",
+          "el tren"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w14"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w15",
+        "type": "mc",
+        "prompt": "What does \"el coche\" mean?",
+        "speak": "el coche",
+        "options": [
+          "train",
+          "how much",
+          "car",
+          "why"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w15"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w16",
+        "type": "mc",
+        "prompt": "How do you say \"bicycle\"?",
+        "options": [
+          "el coche",
+          "la bicicleta",
+          "cómo",
+          "quién"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w16"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w17",
+        "type": "mc",
+        "prompt": "What does \"a la izquierda\" mean?",
+        "speak": "a la izquierda",
+        "options": [
+          "country",
+          "on the left",
+          "where",
+          "shop"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w17"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w18",
+        "type": "mc",
+        "prompt": "How do you say \"on the right\"?",
+        "options": [
+          "el restaurante",
+          "a la derecha",
+          "el hospital",
+          "por qué"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w18"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w19",
+        "type": "mc",
+        "prompt": "What does \"todo recto\" mean?",
+        "speak": "todo recto",
+        "options": [
+          "straight ahead",
+          "on the right",
+          "from where",
+          "shop"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u5-w19"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w20",
+        "type": "mc",
+        "prompt": "How do you say \"near\"?",
+        "options": [
+          "la escuela",
+          "enfrente de",
+          "el restaurante",
+          "cerca"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w20"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w21",
+        "type": "mc",
+        "prompt": "What does \"lejos\" mean?",
+        "speak": "lejos",
+        "options": [
+          "which",
+          "restaurant",
+          "street",
+          "far"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w21"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w22",
+        "type": "mc",
+        "prompt": "How do you say \"here\"?",
+        "options": [
+          "el restaurante",
+          "la tienda",
+          "aquí",
+          "cerca"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w22"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w23",
+        "type": "mc",
+        "prompt": "What does \"allí\" mean?",
+        "speak": "allí",
+        "options": [
+          "on the left",
+          "why",
+          "straight ahead",
+          "there"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w23"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w24",
+        "type": "mc",
+        "prompt": "How do you say \"opposite\"?",
+        "options": [
+          "el taxi",
+          "todo recto",
+          "enfrente de",
+          "el mapa"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w24"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w25",
+        "type": "mc",
+        "prompt": "What does \"dónde\" mean?",
+        "speak": "dónde",
+        "options": [
+          "here",
+          "car",
+          "city",
+          "where"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w25"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w26",
+        "type": "mc",
+        "prompt": "How do you say \"there is\"?",
+        "options": [
+          "hay",
+          "cuánto",
+          "el autobús",
+          "qué"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u5-w26"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w27",
+        "type": "mc",
+        "prompt": "What does \"la ciudad\" mean?",
+        "speak": "la ciudad",
+        "options": [
+          "on the left",
+          "city",
+          "there",
+          "village"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w27"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w28",
+        "type": "mc",
+        "prompt": "How do you say \"village\"?",
+        "options": [
+          "lejos",
+          "el pueblo",
+          "la estación",
+          "el parque"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w28"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w29",
+        "type": "mc",
+        "prompt": "What does \"el país\" mean?",
+        "speak": "el país",
+        "options": [
+          "far",
+          "country",
+          "bicycle",
+          "taxi"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w29"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w30",
+        "type": "mc",
+        "prompt": "How do you say \"city centre\"?",
+        "options": [
+          "el centro",
+          "de dónde",
+          "por qué",
+          "lejos"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u5-w30"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w31",
+        "type": "mc",
+        "prompt": "What does \"el mapa\" mean?",
+        "speak": "el mapa",
+        "options": [
+          "city centre",
+          "restaurant",
+          "there",
+          "map"
+        ],
+        "answer": 3,
+        "wordId": "es-a1u5-w31"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w32",
+        "type": "mc",
+        "prompt": "How do you say \"it is\"?",
+        "options": [
+          "a la izquierda",
+          "de dónde",
+          "es",
+          "hay"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w32"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w33",
+        "type": "mc",
+        "prompt": "What does \"quién\" mean?",
+        "speak": "quién",
+        "options": [
+          "why",
+          "where",
+          "who",
+          "train"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w33"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w34",
+        "type": "mc",
+        "prompt": "How do you say \"what\"?",
+        "options": [
+          "a la izquierda",
+          "qué",
+          "cuál",
+          "el hospital"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w34"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w35",
+        "type": "mc",
+        "prompt": "What does \"cuándo\" mean?",
+        "speak": "cuándo",
+        "options": [
+          "on the right",
+          "house",
+          "when",
+          "bicycle"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w35"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w36",
+        "type": "mc",
+        "prompt": "How do you say \"why\"?",
+        "options": [
+          "el aeropuerto",
+          "por qué",
+          "la casa",
+          "cuál"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w36"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w37",
+        "type": "mc",
+        "prompt": "What does \"cómo\" mean?",
+        "speak": "cómo",
+        "options": [
+          "on the right",
+          "taxi",
+          "how",
+          "bus"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w37"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w38",
+        "type": "mc",
+        "prompt": "How do you say \"how much\"?",
+        "options": [
+          "dónde",
+          "el tren",
+          "cuánto",
+          "el hospital"
+        ],
+        "answer": 2,
+        "wordId": "es-a1u5-w38"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w39",
+        "type": "mc",
+        "prompt": "What does \"cuál\" mean?",
+        "speak": "cuál",
+        "options": [
+          "which",
+          "how much",
+          "house",
+          "country"
+        ],
+        "answer": 0,
+        "wordId": "es-a1u5-w39"
+      },
+      {
+        "id": "es-a1-u5-cp-es-a1u5-w40",
+        "type": "mc",
+        "prompt": "How do you say \"from where\"?",
+        "options": [
+          "el centro",
+          "de dónde",
+          "cerca",
+          "el parque"
+        ],
+        "answer": 1,
+        "wordId": "es-a1u5-w40"
+      },
+      {
+        "id": "es-a1-u5-cp-l1-s1",
+        "type": "translate",
+        "prompt": "I am at home",
+        "answer": [
+          "Estoy",
+          "en",
+          "casa"
+        ],
+        "bank": [
+          "escuela",
+          "en",
+          "casa",
+          "parque",
+          "Estoy"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l1-s2",
+        "type": "translate",
+        "prompt": "The restaurant is here",
+        "answer": [
+          "El",
+          "restaurante",
+          "está",
+          "aquí"
+        ],
+        "bank": [
+          "aquí",
+          "banco",
+          "está",
+          "mercado",
+          "El",
+          "restaurante"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l1-s3",
+        "type": "translate",
+        "prompt": "She is at school",
+        "answer": [
+          "Ella",
+          "está",
+          "en",
+          "la",
+          "escuela"
+        ],
+        "bank": [
+          "hospital",
+          "Ella",
+          "escuela",
+          "en",
+          "está",
+          "tienda",
+          "la"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l2-s1",
+        "type": "translate",
+        "prompt": "A taxi, please",
+        "answer": [
+          "Un",
+          "taxi",
+          "por",
+          "favor"
+        ],
+        "bank": [
+          "favor",
+          "por",
+          "Un",
+          "tren",
+          "autobús",
+          "taxi"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l2-s2",
+        "type": "translate",
+        "prompt": "The train is here",
+        "answer": [
+          "El",
+          "tren",
+          "está",
+          "aquí"
+        ],
+        "bank": [
+          "estación",
+          "tren",
+          "está",
+          "coche",
+          "El",
+          "aquí"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l2-s3",
+        "type": "translate",
+        "prompt": "I take the bus",
+        "answer": [
+          "Tomo",
+          "el",
+          "autobús"
+        ],
+        "bank": [
+          "taxi",
+          "Tomo",
+          "autobús",
+          "bicicleta",
+          "el"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l3-s1",
+        "type": "translate",
+        "prompt": "Turn left",
+        "answer": [
+          "Gire",
+          "a",
+          "la",
+          "izquierda"
+        ],
+        "bank": [
+          "lejos",
+          "Gire",
+          "la",
+          "derecha",
+          "a",
+          "izquierda"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l3-s2",
+        "type": "translate",
+        "prompt": "It is straight ahead",
+        "answer": [
+          "Está",
+          "todo",
+          "recto"
+        ],
+        "bank": [
+          "Está",
+          "recto",
+          "allí",
+          "todo",
+          "cerca"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l3-s3",
+        "type": "translate",
+        "prompt": "The station is far from here",
+        "answer": [
+          "La",
+          "estación",
+          "está",
+          "lejos",
+          "de",
+          "aquí"
+        ],
+        "bank": [
+          "aquí",
+          "enfrente",
+          "estación",
+          "cerca",
+          "La",
+          "de",
+          "está",
+          "lejos"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l4-s1",
+        "type": "translate",
+        "prompt": "Where is the station",
+        "answer": [
+          "Dónde",
+          "está",
+          "la",
+          "estación"
+        ],
+        "bank": [
+          "está",
+          "mapa",
+          "estación",
+          "ciudad",
+          "Dónde",
+          "la"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l4-s2",
+        "type": "translate",
+        "prompt": "There is a park",
+        "answer": [
+          "Hay",
+          "un",
+          "parque"
+        ],
+        "bank": [
+          "parque",
+          "país",
+          "un",
+          "Hay",
+          "pueblo"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l4-s3",
+        "type": "translate",
+        "prompt": "The map is here",
+        "answer": [
+          "El",
+          "mapa",
+          "está",
+          "aquí"
+        ],
+        "bank": [
+          "dónde",
+          "El",
+          "está",
+          "aquí",
+          "país",
+          "mapa"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l5-s1",
+        "type": "translate",
+        "prompt": "Who is it",
+        "answer": [
+          "Quién",
+          "es"
+        ],
+        "bank": [
+          "qué",
+          "cuándo",
+          "Quién",
+          "es"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l5-s2",
+        "type": "translate",
+        "prompt": "How much does it cost",
+        "answer": [
+          "Cuánto",
+          "cuesta"
+        ],
+        "bank": [
+          "Cuánto",
+          "cuesta",
+          "por",
+          "cuál"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-l5-s3",
+        "type": "translate",
+        "prompt": "When does the train leave",
+        "answer": [
+          "Cuándo",
+          "sale",
+          "el",
+          "tren"
+        ],
+        "bank": [
+          "tren",
+          "cómo",
+          "Cuándo",
+          "el",
+          "sale",
+          "quién"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "es-a1-u5-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u5-w8",
+            "target": "el parque",
+            "english": "park"
+          },
+          {
+            "wordId": "es-a1u5-w5",
+            "target": "el hospital",
+            "english": "hospital"
+          },
+          {
+            "wordId": "es-a1u5-w1",
+            "target": "la casa",
+            "english": "house"
+          },
+          {
+            "wordId": "es-a1u5-w4",
+            "target": "el restaurante",
+            "english": "restaurant"
+          },
+          {
+            "wordId": "es-a1u5-w2",
+            "target": "la escuela",
+            "english": "school"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u5-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u5-w9",
+            "target": "la calle",
+            "english": "street"
+          },
+          {
+            "wordId": "es-a1u5-w15",
+            "target": "el coche",
+            "english": "car"
+          },
+          {
+            "wordId": "es-a1u5-w14",
+            "target": "el tren",
+            "english": "train"
+          },
+          {
+            "wordId": "es-a1u5-w13",
+            "target": "el taxi",
+            "english": "taxi"
+          },
+          {
+            "wordId": "es-a1u5-w12",
+            "target": "el autobús",
+            "english": "bus"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u5-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u5-w18",
+            "target": "a la derecha",
+            "english": "on the right"
+          },
+          {
+            "wordId": "es-a1u5-w19",
+            "target": "todo recto",
+            "english": "straight ahead"
+          },
+          {
+            "wordId": "es-a1u5-w20",
+            "target": "cerca",
+            "english": "near"
+          },
+          {
+            "wordId": "es-a1u5-w17",
+            "target": "a la izquierda",
+            "english": "on the left"
+          },
+          {
+            "wordId": "es-a1u5-w22",
+            "target": "aquí",
+            "english": "here"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u5-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u5-w31",
+            "target": "el mapa",
+            "english": "map"
+          },
+          {
+            "wordId": "es-a1u5-w32",
+            "target": "es",
+            "english": "it is"
+          },
+          {
+            "wordId": "es-a1u5-w26",
+            "target": "hay",
+            "english": "there is"
+          },
+          {
+            "wordId": "es-a1u5-w30",
+            "target": "el centro",
+            "english": "city centre"
+          },
+          {
+            "wordId": "es-a1u5-w29",
+            "target": "el país",
+            "english": "country"
+          }
+        ]
+      },
+      {
+        "id": "es-a1-u5-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "es-a1u5-w34",
+            "target": "qué",
+            "english": "what"
+          },
+          {
+            "wordId": "es-a1u5-w36",
+            "target": "por qué",
+            "english": "why"
+          },
+          {
+            "wordId": "es-a1u5-w35",
+            "target": "cuándo",
+            "english": "when"
+          },
+          {
+            "wordId": "es-a1u5-w37",
+            "target": "cómo",
+            "english": "how"
+          },
+          {
+            "wordId": "es-a1u5-w40",
+            "target": "de dónde",
+            "english": "from where"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}

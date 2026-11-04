@@ -1,0 +1,2257 @@
+{
+  "lang": "fr",
+  "unit": 8,
+  "level": "A1",
+  "title": "Shopping and travel",
+  "blurb": "Shop, travel and get help when you need it.",
+  "speechLang": "fr-FR",
+  "lessons": [
+    {
+      "id": "fr-a1-u8-l1",
+      "title": "Prices, part 1",
+      "theme": "prices",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w1-te",
+          "type": "mc",
+          "prompt": "What does \"le prix\" mean?",
+          "speak": "le prix",
+          "options": [
+            "money",
+            "price",
+            "expensive",
+            "card"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w1"
+        },
+        {
+          "id": "fr-a1u8-w2-et",
+          "type": "mc",
+          "prompt": "How do you say \"expensive\"?",
+          "options": [
+            "payer",
+            "cher",
+            "l'argent",
+            "la carte"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w2"
+        },
+        {
+          "id": "fr-a1-u8-l1-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w1",
+              "target": "le prix",
+              "english": "price"
+            },
+            {
+              "wordId": "fr-a1u8-w2",
+              "target": "cher",
+              "english": "expensive"
+            },
+            {
+              "wordId": "fr-a1u8-w3",
+              "target": "pas cher",
+              "english": "cheap"
+            },
+            {
+              "wordId": "fr-a1u8-w4",
+              "target": "acheter",
+              "english": "to buy"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w3-te",
+          "type": "mc",
+          "prompt": "What does \"pas cher\" mean?",
+          "speak": "pas cher",
+          "options": [
+            "expensive",
+            "cheap",
+            "price",
+            "money"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w3"
+        },
+        {
+          "id": "fr-a1u8-w4-et",
+          "type": "mc",
+          "prompt": "How do you say \"to buy\"?",
+          "options": [
+            "le prix",
+            "acheter",
+            "cher",
+            "la carte"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w4"
+        },
+        {
+          "id": "fr-a1-u8-l1-s",
+          "type": "translate",
+          "prompt": "How much does it cost",
+          "answer": [
+            "Combien",
+            "ça",
+            "coûte"
+          ],
+          "bank": [
+            "coûte",
+            "cher",
+            "Combien",
+            "prix",
+            "ça"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le prix",
+          "english": "price"
+        },
+        {
+          "target": "cher",
+          "english": "expensive"
+        },
+        {
+          "target": "pas cher",
+          "english": "cheap"
+        },
+        {
+          "target": "acheter",
+          "english": "to buy"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l2",
+      "title": "Prices, part 2",
+      "theme": "prices",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w5-te",
+          "type": "mc",
+          "prompt": "What does \"payer\" mean?",
+          "speak": "payer",
+          "options": [
+            "to pay",
+            "money",
+            "change",
+            "expensive"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w5"
+        },
+        {
+          "id": "fr-a1u8-w6-et",
+          "type": "mc",
+          "prompt": "How do you say \"money\"?",
+          "options": [
+            "l'argent",
+            "la monnaie",
+            "la carte",
+            "cher"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w6"
+        },
+        {
+          "id": "fr-a1-u8-l2-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w5",
+              "target": "payer",
+              "english": "to pay"
+            },
+            {
+              "wordId": "fr-a1u8-w6",
+              "target": "l'argent",
+              "english": "money"
+            },
+            {
+              "wordId": "fr-a1u8-w7",
+              "target": "la carte",
+              "english": "card"
+            },
+            {
+              "wordId": "fr-a1u8-w8",
+              "target": "la monnaie",
+              "english": "change"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w7-te",
+          "type": "mc",
+          "prompt": "What does \"la carte\" mean?",
+          "speak": "la carte",
+          "options": [
+            "cheap",
+            "money",
+            "price",
+            "card"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w7"
+        },
+        {
+          "id": "fr-a1u8-w8-et",
+          "type": "mc",
+          "prompt": "How do you say \"change\"?",
+          "options": [
+            "le prix",
+            "la carte",
+            "acheter",
+            "la monnaie"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w8"
+        },
+        {
+          "id": "fr-a1-u8-l2-s",
+          "type": "translate",
+          "prompt": "It is too expensive",
+          "answer": [
+            "C'est",
+            "trop",
+            "cher"
+          ],
+          "bank": [
+            "bon",
+            "trop",
+            "C'est",
+            "pas",
+            "cher"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "payer",
+          "english": "to pay"
+        },
+        {
+          "target": "l'argent",
+          "english": "money"
+        },
+        {
+          "target": "la carte",
+          "english": "card"
+        },
+        {
+          "target": "la monnaie",
+          "english": "change"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l3",
+      "title": "Clothes, part 1",
+      "theme": "clothes",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w9-te",
+          "type": "mc",
+          "prompt": "What does \"la chemise\" mean?",
+          "speak": "la chemise",
+          "options": [
+            "shoes",
+            "socks",
+            "hat",
+            "shirt"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w9"
+        },
+        {
+          "id": "fr-a1u8-w10-et",
+          "type": "mc",
+          "prompt": "How do you say \"trousers\"?",
+          "options": [
+            "le pantalon",
+            "le chapeau",
+            "la chemise",
+            "les chaussures"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w10"
+        },
+        {
+          "id": "fr-a1-u8-l3-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w9",
+              "target": "la chemise",
+              "english": "shirt"
+            },
+            {
+              "wordId": "fr-a1u8-w10",
+              "target": "le pantalon",
+              "english": "trousers"
+            },
+            {
+              "wordId": "fr-a1u8-w11",
+              "target": "la robe",
+              "english": "dress"
+            },
+            {
+              "wordId": "fr-a1u8-w12",
+              "target": "les chaussures",
+              "english": "shoes"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w11-te",
+          "type": "mc",
+          "prompt": "What does \"la robe\" mean?",
+          "speak": "la robe",
+          "options": [
+            "trousers",
+            "dress",
+            "hat",
+            "socks"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w11"
+        },
+        {
+          "id": "fr-a1u8-w12-et",
+          "type": "mc",
+          "prompt": "How do you say \"shoes\"?",
+          "options": [
+            "le chapeau",
+            "les chaussures",
+            "le pantalon",
+            "la veste"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w12"
+        },
+        {
+          "id": "fr-a1-u8-l3-s",
+          "type": "translate",
+          "prompt": "I would like some shoes",
+          "answer": [
+            "Je",
+            "voudrais",
+            "des",
+            "chaussures"
+          ],
+          "bank": [
+            "pantalon",
+            "chaussettes",
+            "chaussures",
+            "des",
+            "Je",
+            "voudrais"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la chemise",
+          "english": "shirt"
+        },
+        {
+          "target": "le pantalon",
+          "english": "trousers"
+        },
+        {
+          "target": "la robe",
+          "english": "dress"
+        },
+        {
+          "target": "les chaussures",
+          "english": "shoes"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l4",
+      "title": "Clothes, part 2",
+      "theme": "clothes",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w13-te",
+          "type": "mc",
+          "prompt": "What does \"le chapeau\" mean?",
+          "speak": "le chapeau",
+          "options": [
+            "shirt",
+            "trousers",
+            "shoes",
+            "hat"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w13"
+        },
+        {
+          "id": "fr-a1u8-w14-et",
+          "type": "mc",
+          "prompt": "How do you say \"coat\"?",
+          "options": [
+            "le chapeau",
+            "la veste",
+            "le manteau",
+            "les chaussettes"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u8-w14"
+        },
+        {
+          "id": "fr-a1-u8-l4-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w13",
+              "target": "le chapeau",
+              "english": "hat"
+            },
+            {
+              "wordId": "fr-a1u8-w14",
+              "target": "le manteau",
+              "english": "coat"
+            },
+            {
+              "wordId": "fr-a1u8-w15",
+              "target": "la veste",
+              "english": "jacket"
+            },
+            {
+              "wordId": "fr-a1u8-w16",
+              "target": "les chaussettes",
+              "english": "socks"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w15-te",
+          "type": "mc",
+          "prompt": "What does \"la veste\" mean?",
+          "speak": "la veste",
+          "options": [
+            "trousers",
+            "coat",
+            "shirt",
+            "jacket"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w15"
+        },
+        {
+          "id": "fr-a1u8-w16-et",
+          "type": "mc",
+          "prompt": "How do you say \"socks\"?",
+          "options": [
+            "les chaussures",
+            "la chemise",
+            "les chaussettes",
+            "le pantalon"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u8-w16"
+        },
+        {
+          "id": "fr-a1-u8-l4-s",
+          "type": "translate",
+          "prompt": "The coat is black",
+          "answer": [
+            "Le",
+            "manteau",
+            "est",
+            "noir"
+          ],
+          "bank": [
+            "noir",
+            "Le",
+            "manteau",
+            "chapeau",
+            "rouge",
+            "est"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "le chapeau",
+          "english": "hat"
+        },
+        {
+          "target": "le manteau",
+          "english": "coat"
+        },
+        {
+          "target": "la veste",
+          "english": "jacket"
+        },
+        {
+          "target": "les chaussettes",
+          "english": "socks"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l5",
+      "title": "Hotel and travel, part 1",
+      "theme": "hotel and travel",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w17-te",
+          "type": "mc",
+          "prompt": "What does \"l'hôtel\" mean?",
+          "speak": "l'hôtel",
+          "options": [
+            "hotel",
+            "suitcase",
+            "trip",
+            "to leave"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w17"
+        },
+        {
+          "id": "fr-a1u8-w18-et",
+          "type": "mc",
+          "prompt": "How do you say \"booking\"?",
+          "options": [
+            "le voyage",
+            "l'hôtel",
+            "la réservation",
+            "arriver"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u8-w18"
+        },
+        {
+          "id": "fr-a1-u8-l5-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w17",
+              "target": "l'hôtel",
+              "english": "hotel"
+            },
+            {
+              "wordId": "fr-a1u8-w18",
+              "target": "la réservation",
+              "english": "booking"
+            },
+            {
+              "wordId": "fr-a1u8-w19",
+              "target": "le passeport",
+              "english": "passport"
+            },
+            {
+              "wordId": "fr-a1u8-w20",
+              "target": "le billet",
+              "english": "ticket"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w19-te",
+          "type": "mc",
+          "prompt": "What does \"le passeport\" mean?",
+          "speak": "le passeport",
+          "options": [
+            "hotel",
+            "passport",
+            "suitcase",
+            "to arrive"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w19"
+        },
+        {
+          "id": "fr-a1u8-w20-et",
+          "type": "mc",
+          "prompt": "How do you say \"ticket\"?",
+          "options": [
+            "arriver",
+            "le billet",
+            "la valise",
+            "le voyage"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w20"
+        },
+        {
+          "id": "fr-a1-u8-l5-s",
+          "type": "translate",
+          "prompt": "The train leaves tomorrow",
+          "answer": [
+            "Le",
+            "train",
+            "part",
+            "demain"
+          ],
+          "bank": [
+            "voyage",
+            "train",
+            "part",
+            "arrive",
+            "demain",
+            "Le"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "l'hôtel",
+          "english": "hotel"
+        },
+        {
+          "target": "la réservation",
+          "english": "booking"
+        },
+        {
+          "target": "le passeport",
+          "english": "passport"
+        },
+        {
+          "target": "le billet",
+          "english": "ticket"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l6",
+      "title": "Hotel and travel, part 2",
+      "theme": "hotel and travel",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w21-te",
+          "type": "mc",
+          "prompt": "What does \"la valise\" mean?",
+          "speak": "la valise",
+          "options": [
+            "passport",
+            "suitcase",
+            "hotel",
+            "booking"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w21"
+        },
+        {
+          "id": "fr-a1u8-w22-et",
+          "type": "mc",
+          "prompt": "How do you say \"trip\"?",
+          "options": [
+            "l'hôtel",
+            "le voyage",
+            "le billet",
+            "partir"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w22"
+        },
+        {
+          "id": "fr-a1-u8-l6-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w21",
+              "target": "la valise",
+              "english": "suitcase"
+            },
+            {
+              "wordId": "fr-a1u8-w22",
+              "target": "le voyage",
+              "english": "trip"
+            },
+            {
+              "wordId": "fr-a1u8-w23",
+              "target": "arriver",
+              "english": "to arrive"
+            },
+            {
+              "wordId": "fr-a1u8-w24",
+              "target": "partir",
+              "english": "to leave"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w23-te",
+          "type": "mc",
+          "prompt": "What does \"arriver\" mean?",
+          "speak": "arriver",
+          "options": [
+            "trip",
+            "suitcase",
+            "hotel",
+            "to arrive"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w23"
+        },
+        {
+          "id": "fr-a1u8-w24-et",
+          "type": "mc",
+          "prompt": "How do you say \"to leave\"?",
+          "options": [
+            "le passeport",
+            "le voyage",
+            "l'hôtel",
+            "partir"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w24"
+        },
+        {
+          "id": "fr-a1-u8-l6-s",
+          "type": "translate",
+          "prompt": "I have a booking",
+          "answer": [
+            "J'ai",
+            "une",
+            "réservation"
+          ],
+          "bank": [
+            "billet",
+            "J'ai",
+            "réservation",
+            "valise",
+            "une"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la valise",
+          "english": "suitcase"
+        },
+        {
+          "target": "le voyage",
+          "english": "trip"
+        },
+        {
+          "target": "arriver",
+          "english": "to arrive"
+        },
+        {
+          "target": "partir",
+          "english": "to leave"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l7",
+      "title": "Getting help, part 1",
+      "theme": "getting help",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w25-te",
+          "type": "mc",
+          "prompt": "What does \"au secours\" mean?",
+          "speak": "au secours",
+          "options": [
+            "I am lost",
+            "help",
+            "police",
+            "emergency"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w25"
+        },
+        {
+          "id": "fr-a1u8-w26-et",
+          "type": "mc",
+          "prompt": "How do you say \"help me\"?",
+          "options": [
+            "aidez-moi",
+            "la police",
+            "l'urgence",
+            "au secours"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w26"
+        },
+        {
+          "id": "fr-a1-u8-l7-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w25",
+              "target": "au secours",
+              "english": "help"
+            },
+            {
+              "wordId": "fr-a1u8-w26",
+              "target": "aidez-moi",
+              "english": "help me"
+            },
+            {
+              "wordId": "fr-a1u8-w27",
+              "target": "je suis perdu",
+              "english": "I am lost"
+            },
+            {
+              "wordId": "fr-a1u8-w28",
+              "target": "le médecin",
+              "english": "doctor"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w27-te",
+          "type": "mc",
+          "prompt": "What does \"je suis perdu\" mean?",
+          "speak": "je suis perdu",
+          "options": [
+            "help",
+            "do you speak English",
+            "police",
+            "I am lost"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w27"
+        },
+        {
+          "id": "fr-a1u8-w28-et",
+          "type": "mc",
+          "prompt": "How do you say \"doctor\"?",
+          "options": [
+            "la police",
+            "je suis perdu",
+            "le médecin",
+            "aidez-moi"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u8-w28"
+        },
+        {
+          "id": "fr-a1-u8-l7-s",
+          "type": "translate",
+          "prompt": "Help me, please",
+          "answer": [
+            "Aidez-moi",
+            "s'il",
+            "vous",
+            "plaît"
+          ],
+          "bank": [
+            "plaît",
+            "secours",
+            "vous",
+            "police",
+            "s'il",
+            "Aidez-moi"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "au secours",
+          "english": "help"
+        },
+        {
+          "target": "aidez-moi",
+          "english": "help me"
+        },
+        {
+          "target": "je suis perdu",
+          "english": "I am lost"
+        },
+        {
+          "target": "le médecin",
+          "english": "doctor"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l8",
+      "title": "Getting help, part 2",
+      "theme": "getting help",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w29-te",
+          "type": "mc",
+          "prompt": "What does \"la police\" mean?",
+          "speak": "la police",
+          "options": [
+            "I am lost",
+            "help",
+            "police",
+            "do you speak English"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u8-w29"
+        },
+        {
+          "id": "fr-a1u8-w30-et",
+          "type": "mc",
+          "prompt": "How do you say \"emergency\"?",
+          "options": [
+            "je suis perdu",
+            "l'urgence",
+            "aidez-moi",
+            "parlez-vous anglais"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w30"
+        },
+        {
+          "id": "fr-a1-u8-l8-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w29",
+              "target": "la police",
+              "english": "police"
+            },
+            {
+              "wordId": "fr-a1u8-w30",
+              "target": "l'urgence",
+              "english": "emergency"
+            },
+            {
+              "wordId": "fr-a1u8-w31",
+              "target": "j'ai besoin de",
+              "english": "I need"
+            },
+            {
+              "wordId": "fr-a1u8-w32",
+              "target": "parlez-vous anglais",
+              "english": "do you speak English"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w31-te",
+          "type": "mc",
+          "prompt": "What does \"j'ai besoin de\" mean?",
+          "speak": "j'ai besoin de",
+          "options": [
+            "help",
+            "I am lost",
+            "I need",
+            "do you speak English"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u8-w31"
+        },
+        {
+          "id": "fr-a1u8-w32-et",
+          "type": "mc",
+          "prompt": "How do you say \"do you speak English\"?",
+          "options": [
+            "je suis perdu",
+            "au secours",
+            "j'ai besoin de",
+            "parlez-vous anglais"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w32"
+        },
+        {
+          "id": "fr-a1-u8-l8-s",
+          "type": "translate",
+          "prompt": "I am lost",
+          "answer": [
+            "Je",
+            "suis",
+            "perdu"
+          ],
+          "bank": [
+            "perdu",
+            "Je",
+            "urgence",
+            "besoin",
+            "suis"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "la police",
+          "english": "police"
+        },
+        {
+          "target": "l'urgence",
+          "english": "emergency"
+        },
+        {
+          "target": "j'ai besoin de",
+          "english": "I need"
+        },
+        {
+          "target": "parlez-vous anglais",
+          "english": "do you speak English"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l9",
+      "title": "Getting by, part 1",
+      "theme": "getting by",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w33-te",
+          "type": "mc",
+          "prompt": "What does \"parlez lentement\" mean?",
+          "speak": "parlez lentement",
+          "options": [
+            "speak slowly",
+            "I am looking for",
+            "that is all",
+            "good luck"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w33"
+        },
+        {
+          "id": "fr-a1u8-w34-et",
+          "type": "mc",
+          "prompt": "How do you say \"please repeat\"?",
+          "options": [
+            "répétez s'il vous plaît",
+            "bonne chance",
+            "comment dit-on",
+            "je cherche"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w34"
+        },
+        {
+          "id": "fr-a1-u8-l9-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w33",
+              "target": "parlez lentement",
+              "english": "speak slowly"
+            },
+            {
+              "wordId": "fr-a1u8-w34",
+              "target": "répétez s'il vous plaît",
+              "english": "please repeat"
+            },
+            {
+              "wordId": "fr-a1u8-w35",
+              "target": "qu'est-ce que c'est",
+              "english": "what is this"
+            },
+            {
+              "wordId": "fr-a1u8-w36",
+              "target": "comment dit-on",
+              "english": "how do you say"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w35-te",
+          "type": "mc",
+          "prompt": "What does \"qu'est-ce que c'est\" mean?",
+          "speak": "qu'est-ce que c'est",
+          "options": [
+            "please repeat",
+            "what is this",
+            "can you help me",
+            "speak slowly"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w35"
+        },
+        {
+          "id": "fr-a1u8-w36-et",
+          "type": "mc",
+          "prompt": "How do you say \"how do you say\"?",
+          "options": [
+            "je cherche",
+            "qu'est-ce que c'est",
+            "comment dit-on",
+            "parlez lentement"
+          ],
+          "answer": 2,
+          "wordId": "fr-a1u8-w36"
+        },
+        {
+          "id": "fr-a1-u8-l9-s",
+          "type": "translate",
+          "prompt": "Speak slowly, please",
+          "answer": [
+            "Parlez",
+            "lentement",
+            "s'il",
+            "vous",
+            "plaît"
+          ],
+          "bank": [
+            "répétez",
+            "plaît",
+            "Parlez",
+            "cherche",
+            "vous",
+            "s'il",
+            "lentement"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "parlez lentement",
+          "english": "speak slowly"
+        },
+        {
+          "target": "répétez s'il vous plaît",
+          "english": "please repeat"
+        },
+        {
+          "target": "qu'est-ce que c'est",
+          "english": "what is this"
+        },
+        {
+          "target": "comment dit-on",
+          "english": "how do you say"
+        }
+      ]
+    },
+    {
+      "id": "fr-a1-u8-l10",
+      "title": "Getting by, part 2",
+      "theme": "getting by",
+      "exercises": [
+        {
+          "id": "fr-a1u8-w37-te",
+          "type": "mc",
+          "prompt": "What does \"je cherche\" mean?",
+          "speak": "je cherche",
+          "options": [
+            "that is all",
+            "I am looking for",
+            "good luck",
+            "what is this"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w37"
+        },
+        {
+          "id": "fr-a1u8-w38-et",
+          "type": "mc",
+          "prompt": "How do you say \"that is all\"?",
+          "options": [
+            "c'est tout",
+            "répétez s'il vous plaît",
+            "je cherche",
+            "parlez lentement"
+          ],
+          "answer": 0,
+          "wordId": "fr-a1u8-w38"
+        },
+        {
+          "id": "fr-a1-u8-l10-m",
+          "type": "match",
+          "prompt": "Match the pairs",
+          "pairs": [
+            {
+              "wordId": "fr-a1u8-w37",
+              "target": "je cherche",
+              "english": "I am looking for"
+            },
+            {
+              "wordId": "fr-a1u8-w38",
+              "target": "c'est tout",
+              "english": "that is all"
+            },
+            {
+              "wordId": "fr-a1u8-w39",
+              "target": "bonne chance",
+              "english": "good luck"
+            },
+            {
+              "wordId": "fr-a1u8-w40",
+              "target": "pouvez-vous m'aider",
+              "english": "can you help me"
+            }
+          ]
+        },
+        {
+          "id": "fr-a1u8-w39-te",
+          "type": "mc",
+          "prompt": "What does \"bonne chance\" mean?",
+          "speak": "bonne chance",
+          "options": [
+            "how do you say",
+            "good luck",
+            "that is all",
+            "please repeat"
+          ],
+          "answer": 1,
+          "wordId": "fr-a1u8-w39"
+        },
+        {
+          "id": "fr-a1u8-w40-et",
+          "type": "mc",
+          "prompt": "How do you say \"can you help me\"?",
+          "options": [
+            "je cherche",
+            "répétez s'il vous plaît",
+            "parlez lentement",
+            "pouvez-vous m'aider"
+          ],
+          "answer": 3,
+          "wordId": "fr-a1u8-w40"
+        },
+        {
+          "id": "fr-a1-u8-l10-s",
+          "type": "translate",
+          "prompt": "I am looking for the station",
+          "answer": [
+            "Je",
+            "cherche",
+            "la",
+            "gare"
+          ],
+          "bank": [
+            "cherche",
+            "Je",
+            "tout",
+            "la",
+            "gare",
+            "chance"
+          ],
+          "wordIds": []
+        }
+      ],
+      "intro": [
+        {
+          "target": "je cherche",
+          "english": "I am looking for"
+        },
+        {
+          "target": "c'est tout",
+          "english": "that is all"
+        },
+        {
+          "target": "bonne chance",
+          "english": "good luck"
+        },
+        {
+          "target": "pouvez-vous m'aider",
+          "english": "can you help me"
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "id": "fr-a1-u8-cp",
+    "title": "Unit 8 checkpoint",
+    "pool": [
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w1",
+        "type": "mc",
+        "prompt": "What does \"le prix\" mean?",
+        "speak": "le prix",
+        "options": [
+          "price",
+          "dress",
+          "I am lost",
+          "to buy"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w1"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w2",
+        "type": "mc",
+        "prompt": "How do you say \"expensive\"?",
+        "options": [
+          "le manteau",
+          "je suis perdu",
+          "cher",
+          "répétez s'il vous plaît"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w2"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w3",
+        "type": "mc",
+        "prompt": "What does \"pas cher\" mean?",
+        "speak": "pas cher",
+        "options": [
+          "how do you say",
+          "cheap",
+          "card",
+          "good luck"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w3"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w4",
+        "type": "mc",
+        "prompt": "How do you say \"to buy\"?",
+        "options": [
+          "j'ai besoin de",
+          "le manteau",
+          "acheter",
+          "la valise"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w4"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w5",
+        "type": "mc",
+        "prompt": "What does \"payer\" mean?",
+        "speak": "payer",
+        "options": [
+          "to pay",
+          "doctor",
+          "good luck",
+          "coat"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w5"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w6",
+        "type": "mc",
+        "prompt": "How do you say \"money\"?",
+        "options": [
+          "la robe",
+          "bonne chance",
+          "le chapeau",
+          "l'argent"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w6"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w7",
+        "type": "mc",
+        "prompt": "What does \"la carte\" mean?",
+        "speak": "la carte",
+        "options": [
+          "to pay",
+          "trousers",
+          "shoes",
+          "card"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w7"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w8",
+        "type": "mc",
+        "prompt": "How do you say \"change\"?",
+        "options": [
+          "l'urgence",
+          "le manteau",
+          "la monnaie",
+          "bonne chance"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w8"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w9",
+        "type": "mc",
+        "prompt": "What does \"la chemise\" mean?",
+        "speak": "la chemise",
+        "options": [
+          "good luck",
+          "cheap",
+          "shirt",
+          "to arrive"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w9"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w10",
+        "type": "mc",
+        "prompt": "How do you say \"trousers\"?",
+        "options": [
+          "payer",
+          "le pantalon",
+          "pouvez-vous m'aider",
+          "je cherche"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w10"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w11",
+        "type": "mc",
+        "prompt": "What does \"la robe\" mean?",
+        "speak": "la robe",
+        "options": [
+          "dress",
+          "emergency",
+          "shirt",
+          "expensive"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w11"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w12",
+        "type": "mc",
+        "prompt": "How do you say \"shoes\"?",
+        "options": [
+          "les chaussures",
+          "l'argent",
+          "payer",
+          "le médecin"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w12"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w13",
+        "type": "mc",
+        "prompt": "What does \"le chapeau\" mean?",
+        "speak": "le chapeau",
+        "options": [
+          "police",
+          "ticket",
+          "hat",
+          "can you help me"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w13"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w14",
+        "type": "mc",
+        "prompt": "How do you say \"coat\"?",
+        "options": [
+          "la police",
+          "parlez lentement",
+          "les chaussures",
+          "le manteau"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w14"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w15",
+        "type": "mc",
+        "prompt": "What does \"la veste\" mean?",
+        "speak": "la veste",
+        "options": [
+          "jacket",
+          "ticket",
+          "booking",
+          "hotel"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w15"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w16",
+        "type": "mc",
+        "prompt": "How do you say \"socks\"?",
+        "options": [
+          "cher",
+          "le pantalon",
+          "l'argent",
+          "les chaussettes"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w16"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w17",
+        "type": "mc",
+        "prompt": "What does \"l'hôtel\" mean?",
+        "speak": "l'hôtel",
+        "options": [
+          "hotel",
+          "can you help me",
+          "doctor",
+          "I am looking for"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w17"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w18",
+        "type": "mc",
+        "prompt": "How do you say \"booking\"?",
+        "options": [
+          "la valise",
+          "la réservation",
+          "comment dit-on",
+          "j'ai besoin de"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w18"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w19",
+        "type": "mc",
+        "prompt": "What does \"le passeport\" mean?",
+        "speak": "le passeport",
+        "options": [
+          "I am lost",
+          "cheap",
+          "passport",
+          "hat"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w19"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w20",
+        "type": "mc",
+        "prompt": "How do you say \"ticket\"?",
+        "options": [
+          "le billet",
+          "les chaussettes",
+          "la monnaie",
+          "je cherche"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w20"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w21",
+        "type": "mc",
+        "prompt": "What does \"la valise\" mean?",
+        "speak": "la valise",
+        "options": [
+          "cheap",
+          "help",
+          "suitcase",
+          "to leave"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w21"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w22",
+        "type": "mc",
+        "prompt": "How do you say \"trip\"?",
+        "options": [
+          "comment dit-on",
+          "le voyage",
+          "qu'est-ce que c'est",
+          "le passeport"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w22"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w23",
+        "type": "mc",
+        "prompt": "What does \"arriver\" mean?",
+        "speak": "arriver",
+        "options": [
+          "to arrive",
+          "change",
+          "price",
+          "shirt"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w23"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w24",
+        "type": "mc",
+        "prompt": "How do you say \"to leave\"?",
+        "options": [
+          "répétez s'il vous plaît",
+          "la chemise",
+          "le voyage",
+          "partir"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w24"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w25",
+        "type": "mc",
+        "prompt": "What does \"au secours\" mean?",
+        "speak": "au secours",
+        "options": [
+          "coat",
+          "help",
+          "emergency",
+          "good luck"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w25"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w26",
+        "type": "mc",
+        "prompt": "How do you say \"help me\"?",
+        "options": [
+          "le passeport",
+          "je cherche",
+          "les chaussettes",
+          "aidez-moi"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w26"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w27",
+        "type": "mc",
+        "prompt": "What does \"je suis perdu\" mean?",
+        "speak": "je suis perdu",
+        "options": [
+          "jacket",
+          "emergency",
+          "I am lost",
+          "that is all"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w27"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w28",
+        "type": "mc",
+        "prompt": "How do you say \"doctor\"?",
+        "options": [
+          "acheter",
+          "le passeport",
+          "le médecin",
+          "répétez s'il vous plaît"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w28"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w29",
+        "type": "mc",
+        "prompt": "What does \"la police\" mean?",
+        "speak": "la police",
+        "options": [
+          "socks",
+          "police",
+          "that is all",
+          "jacket"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w29"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w30",
+        "type": "mc",
+        "prompt": "How do you say \"emergency\"?",
+        "options": [
+          "la chemise",
+          "le manteau",
+          "l'urgence",
+          "la police"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w30"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w31",
+        "type": "mc",
+        "prompt": "What does \"j'ai besoin de\" mean?",
+        "speak": "j'ai besoin de",
+        "options": [
+          "coat",
+          "to leave",
+          "trousers",
+          "I need"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w31"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w32",
+        "type": "mc",
+        "prompt": "How do you say \"do you speak English\"?",
+        "options": [
+          "parlez-vous anglais",
+          "parlez lentement",
+          "la veste",
+          "j'ai besoin de"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w32"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w33",
+        "type": "mc",
+        "prompt": "What does \"parlez lentement\" mean?",
+        "speak": "parlez lentement",
+        "options": [
+          "speak slowly",
+          "that is all",
+          "help",
+          "shoes"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w33"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w34",
+        "type": "mc",
+        "prompt": "How do you say \"please repeat\"?",
+        "options": [
+          "la robe",
+          "les chaussures",
+          "répétez s'il vous plaît",
+          "payer"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w34"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w35",
+        "type": "mc",
+        "prompt": "What does \"qu'est-ce que c'est\" mean?",
+        "speak": "qu'est-ce que c'est",
+        "options": [
+          "emergency",
+          "I am looking for",
+          "I need",
+          "what is this"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w35"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w36",
+        "type": "mc",
+        "prompt": "How do you say \"how do you say\"?",
+        "options": [
+          "comment dit-on",
+          "la carte",
+          "l'urgence",
+          "au secours"
+        ],
+        "answer": 0,
+        "wordId": "fr-a1u8-w36"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w37",
+        "type": "mc",
+        "prompt": "What does \"je cherche\" mean?",
+        "speak": "je cherche",
+        "options": [
+          "money",
+          "to pay",
+          "shoes",
+          "I am looking for"
+        ],
+        "answer": 3,
+        "wordId": "fr-a1u8-w37"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w38",
+        "type": "mc",
+        "prompt": "How do you say \"that is all\"?",
+        "options": [
+          "j'ai besoin de",
+          "c'est tout",
+          "parlez-vous anglais",
+          "arriver"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w38"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w39",
+        "type": "mc",
+        "prompt": "What does \"bonne chance\" mean?",
+        "speak": "bonne chance",
+        "options": [
+          "that is all",
+          "good luck",
+          "socks",
+          "cheap"
+        ],
+        "answer": 1,
+        "wordId": "fr-a1u8-w39"
+      },
+      {
+        "id": "fr-a1-u8-cp-fr-a1u8-w40",
+        "type": "mc",
+        "prompt": "How do you say \"can you help me\"?",
+        "options": [
+          "l'hôtel",
+          "la veste",
+          "pouvez-vous m'aider",
+          "la chemise"
+        ],
+        "answer": 2,
+        "wordId": "fr-a1u8-w40"
+      },
+      {
+        "id": "fr-a1-u8-cp-l1-s1",
+        "type": "translate",
+        "prompt": "How much does it cost",
+        "answer": [
+          "Combien",
+          "ça",
+          "coûte"
+        ],
+        "bank": [
+          "ça",
+          "coûte",
+          "cher",
+          "prix",
+          "Combien"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l1-s2",
+        "type": "translate",
+        "prompt": "It is too expensive",
+        "answer": [
+          "C'est",
+          "trop",
+          "cher"
+        ],
+        "bank": [
+          "C'est",
+          "cher",
+          "pas",
+          "trop",
+          "bon"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l1-s3",
+        "type": "translate",
+        "prompt": "I want to pay",
+        "answer": [
+          "Je",
+          "veux",
+          "payer"
+        ],
+        "bank": [
+          "acheter",
+          "payer",
+          "Je",
+          "argent",
+          "veux"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l2-s1",
+        "type": "translate",
+        "prompt": "I like this dress",
+        "answer": [
+          "J'aime",
+          "cette",
+          "robe"
+        ],
+        "bank": [
+          "chemise",
+          "robe",
+          "J'aime",
+          "veste",
+          "cette"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l2-s2",
+        "type": "translate",
+        "prompt": "The coat is black",
+        "answer": [
+          "Le",
+          "manteau",
+          "est",
+          "noir"
+        ],
+        "bank": [
+          "Le",
+          "rouge",
+          "noir",
+          "est",
+          "manteau",
+          "chapeau"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l2-s3",
+        "type": "translate",
+        "prompt": "I would like some shoes",
+        "answer": [
+          "Je",
+          "voudrais",
+          "des",
+          "chaussures"
+        ],
+        "bank": [
+          "des",
+          "chaussures",
+          "voudrais",
+          "Je",
+          "chaussettes",
+          "pantalon"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l3-s1",
+        "type": "translate",
+        "prompt": "I have a booking",
+        "answer": [
+          "J'ai",
+          "une",
+          "réservation"
+        ],
+        "bank": [
+          "J'ai",
+          "billet",
+          "une",
+          "valise",
+          "réservation"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l3-s2",
+        "type": "translate",
+        "prompt": "Here is my passport",
+        "answer": [
+          "Voici",
+          "mon",
+          "passeport"
+        ],
+        "bank": [
+          "Voici",
+          "passeport",
+          "mon",
+          "hôtel",
+          "billet"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l3-s3",
+        "type": "translate",
+        "prompt": "The train leaves tomorrow",
+        "answer": [
+          "Le",
+          "train",
+          "part",
+          "demain"
+        ],
+        "bank": [
+          "voyage",
+          "part",
+          "Le",
+          "arrive",
+          "train",
+          "demain"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l4-s1",
+        "type": "translate",
+        "prompt": "Help me, please",
+        "answer": [
+          "Aidez-moi",
+          "s'il",
+          "vous",
+          "plaît"
+        ],
+        "bank": [
+          "Aidez-moi",
+          "plaît",
+          "vous",
+          "secours",
+          "s'il",
+          "police"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l4-s2",
+        "type": "translate",
+        "prompt": "I am lost",
+        "answer": [
+          "Je",
+          "suis",
+          "perdu"
+        ],
+        "bank": [
+          "Je",
+          "perdu",
+          "urgence",
+          "besoin",
+          "suis"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l4-s3",
+        "type": "translate",
+        "prompt": "I need a doctor",
+        "answer": [
+          "J'ai",
+          "besoin",
+          "d'un",
+          "médecin"
+        ],
+        "bank": [
+          "besoin",
+          "perdu",
+          "J'ai",
+          "police",
+          "médecin",
+          "d'un"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l5-s1",
+        "type": "translate",
+        "prompt": "I am looking for the station",
+        "answer": [
+          "Je",
+          "cherche",
+          "la",
+          "gare"
+        ],
+        "bank": [
+          "cherche",
+          "tout",
+          "chance",
+          "la",
+          "gare",
+          "Je"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l5-s2",
+        "type": "translate",
+        "prompt": "Speak slowly, please",
+        "answer": [
+          "Parlez",
+          "lentement",
+          "s'il",
+          "vous",
+          "plaît"
+        ],
+        "bank": [
+          "plaît",
+          "Parlez",
+          "répétez",
+          "cherche",
+          "s'il",
+          "vous",
+          "lentement"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-l5-s3",
+        "type": "translate",
+        "prompt": "What is this",
+        "answer": [
+          "Qu'est-ce",
+          "que",
+          "c'est"
+        ],
+        "bank": [
+          "c'est",
+          "tout",
+          "comment",
+          "que",
+          "Qu'est-ce"
+        ],
+        "wordIds": []
+      },
+      {
+        "id": "fr-a1-u8-cp-m1",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u8-w2",
+            "target": "cher",
+            "english": "expensive"
+          },
+          {
+            "wordId": "fr-a1u8-w8",
+            "target": "la monnaie",
+            "english": "change"
+          },
+          {
+            "wordId": "fr-a1u8-w3",
+            "target": "pas cher",
+            "english": "cheap"
+          },
+          {
+            "wordId": "fr-a1u8-w1",
+            "target": "le prix",
+            "english": "price"
+          },
+          {
+            "wordId": "fr-a1u8-w4",
+            "target": "acheter",
+            "english": "to buy"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u8-cp-m2",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u8-w16",
+            "target": "les chaussettes",
+            "english": "socks"
+          },
+          {
+            "wordId": "fr-a1u8-w10",
+            "target": "le pantalon",
+            "english": "trousers"
+          },
+          {
+            "wordId": "fr-a1u8-w15",
+            "target": "la veste",
+            "english": "jacket"
+          },
+          {
+            "wordId": "fr-a1u8-w13",
+            "target": "le chapeau",
+            "english": "hat"
+          },
+          {
+            "wordId": "fr-a1u8-w14",
+            "target": "le manteau",
+            "english": "coat"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u8-cp-m3",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u8-w24",
+            "target": "partir",
+            "english": "to leave"
+          },
+          {
+            "wordId": "fr-a1u8-w22",
+            "target": "le voyage",
+            "english": "trip"
+          },
+          {
+            "wordId": "fr-a1u8-w23",
+            "target": "arriver",
+            "english": "to arrive"
+          },
+          {
+            "wordId": "fr-a1u8-w20",
+            "target": "le billet",
+            "english": "ticket"
+          },
+          {
+            "wordId": "fr-a1u8-w21",
+            "target": "la valise",
+            "english": "suitcase"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u8-cp-m4",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u8-w31",
+            "target": "j'ai besoin de",
+            "english": "I need"
+          },
+          {
+            "wordId": "fr-a1u8-w26",
+            "target": "aidez-moi",
+            "english": "help me"
+          },
+          {
+            "wordId": "fr-a1u8-w25",
+            "target": "au secours",
+            "english": "help"
+          },
+          {
+            "wordId": "fr-a1u8-w29",
+            "target": "la police",
+            "english": "police"
+          },
+          {
+            "wordId": "fr-a1u8-w30",
+            "target": "l'urgence",
+            "english": "emergency"
+          }
+        ]
+      },
+      {
+        "id": "fr-a1-u8-cp-m5",
+        "type": "match",
+        "prompt": "Match the pairs",
+        "pairs": [
+          {
+            "wordId": "fr-a1u8-w34",
+            "target": "répétez s'il vous plaît",
+            "english": "please repeat"
+          },
+          {
+            "wordId": "fr-a1u8-w35",
+            "target": "qu'est-ce que c'est",
+            "english": "what is this"
+          },
+          {
+            "wordId": "fr-a1u8-w37",
+            "target": "je cherche",
+            "english": "I am looking for"
+          },
+          {
+            "wordId": "fr-a1u8-w38",
+            "target": "c'est tout",
+            "english": "that is all"
+          },
+          {
+            "wordId": "fr-a1u8-w39",
+            "target": "bonne chance",
+            "english": "good luck"
+          }
+        ]
+      }
+    ],
+    "draw": 20
+  }
+}
