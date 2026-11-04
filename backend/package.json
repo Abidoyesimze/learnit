@@ -20,15 +20,19 @@
     "cohort:finalize": "tsx --env-file=../.env scripts/finalize-cohort.mts",
     "league:finalize": "tsx --env-file=../.env scripts/finalize-league.mts"
   },
-  "prisma": { "schema": "prisma/schema.prisma" },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
   "dependencies": {
     "@prisma/client": "^6.0.0",
     "@privy-io/server-auth": "^1.32.5",
     "viem": "2.57.5",
+    "web-push": "^3.6.7",
     "zod": "^3.23.0"
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/web-push": "^3.6.4",
     "dotenv-cli": "^7.4.0",
     "prisma": "^6.0.0",
     "tsx": "^4.19.0",

@@ -8,6 +8,7 @@ import { useMe } from "@/lib/useMe";
 import { langOf } from "@/lib/languages";
 import { short } from "@learnit/backend/format";
 import { ProfileEditor } from "@/components/ProfileEditor";
+import { ReminderCard } from "@/components/ReminderCard";
 import { ProfileSkeleton } from "@/components/Skeletons";
 import { TabBar } from "@/components/TabBar";
 import { useAuthGate } from "@/components/useAuthGate";
@@ -32,6 +33,8 @@ export default function Profile() {
       <h1 className="mt-2 text-3xl font-bold tracking-tighter">Profile</h1>
 
       <div className="mt-6"><ProfileEditor /></div>
+
+      <ReminderCard />
 
       <section className="mt-10 border-t border-line pt-6" aria-labelledby="account">
         <h2 id="account" className="text-lg font-bold tracking-tight">Account</h2>

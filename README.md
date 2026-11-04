@@ -94,6 +94,8 @@ If `db:push` fails with "Can't reach database server", the database is waking up
 | `VAULT_DEPLOY_BLOCK` | Block the `StreakVault` was deployed at (for reading Staked events) |
 | `LEAGUE_BONUS_1_G`, `LEAGUE_BONUS_2_G`, `LEAGUE_BONUS_3_G` | Weekly league bonus for rank 1, 2, 3 in a group (G$) |
 | `NEXT_PUBLIC_NETWORK` | `mainnet` (default) or `testnet` (Celo Alfajores) |
+| `NEXT_PUBLIC_VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` | Web push keys for daily reminders. Generate with `npx web-push generate-vapid-keys`. The subject is a URL you control, not a personal email |
+| `CRON_SECRET` | Random string. Vercel Cron sends it as a bearer token to `/api/cron/reminders` |
 | `NEXT_PUBLIC_CELO_RPC_URL` | Celo RPC endpoint |
 | `NEXT_PUBLIC_REWARDS_POOL_ADDRESS`, `NEXT_PUBLIC_STREAK_VAULT_ADDRESS` | Deployed contracts |
 | `NEXT_PUBLIC_GOODDOLLAR_TOKEN_ADDRESS`, `NEXT_PUBLIC_IDENTITY_ADDRESS`, `NEXT_PUBLIC_UBI_SCHEME_ADDRESS` | G$, GoodDollar Identity and the UBI scheme (defaults are Celo mainnet; required with no default on testnet) |
@@ -130,6 +132,7 @@ Then fund the pool (`approve` + `deposit`), call `createCohort(start, min, max)`
 - **Finalise a stake cohort** after it ends: `npm run cohort:finalize -w @learnit/backend -- <id>` prints who finished all 7 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
 - **Finalise a league week** after it ends: `npm run league:finalize -w @learnit/backend -- <weekKey>` prints each group's top 3 (dry run); `weekKey` is the Monday the week started (e.g. `2026-10-27`), defaults to last week. Add `--send` to sign and record bonus vouchers.
 - **Review flagged accounts**: rows in `abuse_flags` (reason `boundary-timed-perfect-streak` or `high-velocity`) mark a reward that was withheld pending review; nothing is automated beyond withholding the voucher, so check `AbuseFlag`/`User.flagged` manually (e.g. via `db:studio`) before deciding whether to pay it out some other way.
+- **Daily reminders:** `frontend/vercel.json` runs `/api/cron/reminders` every hour. Vercel's Hobby plan only allows one cron run per day, so hourly reminders need the Pro plan (or an external scheduler that calls the endpoint with `Authorization: Bearer $CRON_SECRET`). Try it locally with `curl -H "Authorization: Bearer $CRON_SECRET" localhost:3000/api/cron/reminders`.
 - **Known MVP limits:** lesson answers are checked one at a time for instant feedback, so a determined user could probe answers; the 80% and 40-second rules, the per-lesson daily reward limit, the anomaly checks and the pool's caps bound the damage. The signer key lives in an env var; move it to a KMS before raising limits.
 
 ## Contributing

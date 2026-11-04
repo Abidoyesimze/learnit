@@ -34,6 +34,7 @@ model User {
   leagueMemberships LeagueMembership[]
   abuseFlags      AbuseFlag[]
   avatar          Avatar?
+  pushSubscriptions PushSubscription[]
 
   @@map("users")
 }
@@ -169,4 +170,20 @@ model Avatar {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("avatars")
+}
+
+/// One row per browser or device that opted in to the daily reminder.
+model PushSubscription {
+  id           String   @id @default(cuid())
+  userId       String
+  endpoint     String   @unique
+  p256dh       String
+  auth         String
+  reminderHour Int      @default(18) // 0-23, in the user's own timezone
+  lastSentDate String?  // local YYYY-MM-DD of the last reminder, so one day never gets two
+  createdAt    DateTime @default(now())
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([reminderHour])
+  @@map("push_subscriptions")
 }
