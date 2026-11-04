@@ -15,6 +15,7 @@
     "db:studio": "dotenv -e ../.env -- prisma studio",
     "latency": "tsx --env-file=../.env scripts/latency.mts",
     "check:speed": "tsx --env-file=../.env scripts/check-speed.mts",
+    "profile:check": "tsx --env-file=../.env scripts/profile-check.mts",
     "neon:check": "tsx --env-file=../.env scripts/neon-check.mts",
     "cohort:finalize": "tsx --env-file=../.env scripts/finalize-cohort.mts",
     "league:finalize": "tsx --env-file=../.env scripts/finalize-league.mts"
