@@ -127,9 +127,9 @@ function HeroPreview() {
         <div className="mt-6 grid h-12 place-items-center rounded-btn bg-ink text-[15px] font-semibold text-white">Continue</div>
       </Card>
 
-      <Card className="absolute -left-4 -top-7 hidden items-center gap-3 px-4 py-3 shadow-raised sm:flex md:-left-10">
+      <Card className="absolute -left-4 -top-7 hidden items-center gap-2 px-4 py-3 shadow-raised sm:flex md:-left-10">
         <span className="grid h-9 w-9 place-items-center rounded-full bg-coral-50 text-coral-600"><Flame size={18} /></span>
-        <span><span className="block text-[11px] font-medium uppercase tracking-wider text-muted">Streak</span><span className="block text-sm font-semibold text-ink tabular">12 days</span></span>
+        <span className="text-lg font-semibold text-ink tabular"><span className="sr-only">Streak: </span>12</span>
       </Card>
       <Card className="absolute -bottom-5 -right-3 flex items-center gap-3 px-4 py-3 shadow-raised md:-right-8">
         <span className="grid h-9 w-9 place-items-center rounded-full bg-sage-100 text-xs font-semibold text-sage-700">G$</span>

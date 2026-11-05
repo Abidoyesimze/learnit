@@ -25,7 +25,7 @@ export default function Learn() {
         description="Work through each unit in order. Pass every lesson, then clear the checkpoint to open the next unit."
         action={
           <div className="flex items-center gap-2">
-            <Badge tone="coral" icon={Flame} className="px-3 py-1 text-sm">{data.streak} day streak</Badge>
+            <Badge tone="coral" icon={Flame} className="px-3 py-1 text-sm tabular"><span className="sr-only">Streak: </span>{data.streak}</Badge>
             {data.freezesRemaining > 0 && <Badge tone="outline" icon={Snowflake} className="px-3 py-1 text-sm" ><span className="sr-only">Streak freezes: </span>{data.freezesRemaining}</Badge>}
           </div>
         }
