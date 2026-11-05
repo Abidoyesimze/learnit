@@ -1,21 +1,25 @@
 "use client";
 import Link from "next/link";
-import { ArrowDown01Icon } from "hugeicons-react";
+import { ChevronDown } from "lucide-react";
 import { useMe } from "@/lib/useMe";
-import { Sk } from "./Skeletons";
 import { langOf } from "@/lib/languages";
+import { cn } from "@/lib/cn";
+import { Flag } from "./Flag";
+import { Sk } from "./Skeletons";
 
-/** Shows the language being learned. Tapping it opens the change-language page. */
-export function LanguageChip() {
+/** Shows the language being learned. Opens the change-language page. */
+export function LanguageChip({ block = false }: { block?: boolean }) {
   const { data: me } = useMe();
-  if (!me) return <Sk className="h-9 w-32 rounded-full" />;
+  if (!me) return <Sk className={cn("h-9 rounded-full", block ? "w-full rounded-btn" : "w-[104px]")} />;
   const l = langOf(me.course);
   return (
-    <Link href="/language" aria-label={`Learning ${l.native}. Change language`} className="inline-flex items-center gap-2 rounded-full border border-line py-1.5 pl-2 pr-3 transition active:scale-[0.98]">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={l.flag} alt="" width={28} height={20} className="h-5 w-7 rounded-sm object-cover" />
-      <span lang={l.code} className="font-semibold">{l.native}</span>
-      <ArrowDown01Icon size={16} strokeWidth={1.75} />
+    <Link href="/language" aria-label={`Learning ${l.english}. Change language`}
+      className={cn("inline-flex items-center gap-2 border border-line bg-surface text-sm font-medium text-ink shadow-card transition hover:border-line-strong",
+        block ? "w-full rounded-btn px-3 py-2.5" : "h-9 rounded-full pl-1.5 pr-2.5")}>
+      <Flag code={l.code} size={block ? 22 : 24} />
+      <span lang={l.code} className={cn(block ? "flex-1" : "max-sm:sr-only")}>{l.native}</span>
+      {block && <span className="text-xs font-normal text-muted">Change</span>}
+      {!block && <ChevronDown size={14} strokeWidth={2.25} className="text-muted" aria-hidden />}
     </Link>
   );
 }

@@ -18,13 +18,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") navigator.serviceWorker.register("/sw.js").catch(() => {});
   }, []);
   const appId = process.env.NEXT_PUBLIC_PRIVY_APP_ID;
-  if (!appId) return <p className="p-6 text-sm">Set NEXT_PUBLIC_PRIVY_APP_ID in .env to start.</p>;
+  if (!appId) return <p className="p-6 text-sm text-ink-2">Set NEXT_PUBLIC_PRIVY_APP_ID in .env to start.</p>;
   return (
     <PrivyProvider
       appId={appId}
       config={{
         loginMethods: ["email", "wallet"],
-        appearance: { theme: "light", accentColor: "#FFD60A", walletList: ["detected_wallets", "wallet_connect"] },
+        appearance: { theme: "light", accentColor: "#0F172A", landingHeader: "Welcome to LearnIt", walletList: ["detected_wallets", "wallet_connect"] },
         embeddedWallets: { ethereum: { createOnLogin: "users-without-wallets" } },
         defaultChain: CHAIN,
         supportedChains: [CHAIN],

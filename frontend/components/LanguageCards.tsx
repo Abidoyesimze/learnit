@@ -1,20 +1,28 @@
 "use client";
-import { Tick02Icon } from "hugeicons-react";
+import { Check } from "lucide-react";
 import { LANGS, type Course } from "@/lib/languages";
+import { cn } from "@/lib/cn";
+import { Flag } from "./Flag";
 
-/** The French / Español picker, shared by onboarding and the change-language page. */
+/** The French / Spanish picker, shared by onboarding and the change-language page. */
 export function LanguageCards({ value, onSelect, disabled }: { value: Course | null; onSelect: (c: Course) => void; disabled?: boolean }) {
   return (
-    <div role="radiogroup" aria-label="Language" className="grid gap-3">
+    <div role="radiogroup" aria-label="Language" className="grid gap-3 sm:grid-cols-2">
       {LANGS.map((l) => {
         const on = value === l.code;
         return (
           <button key={l.code} role="radio" aria-checked={on} disabled={disabled} onClick={() => onSelect(l.code)}
-            className={`flex items-center gap-4 rounded-card border p-4 text-left transition active:scale-[0.99] disabled:opacity-60 ${on ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={l.flag} alt="" width={64} height={48} className="h-12 w-16 shrink-0 rounded-md border border-black/10 object-cover" />
-            <span lang={l.code} className="flex-1 text-2xl font-bold tracking-tight">{l.native}</span>
-            {on && <Tick02Icon size={22} strokeWidth={2} />}
+            className={cn("group relative flex flex-col rounded-card border bg-surface p-5 text-left shadow-card transition duration-200 ease-soft disabled:opacity-60",
+              on ? "border-ink ring-4 ring-ink/5" : "border-line hover:-translate-y-px hover:border-line-strong hover:shadow-raised")}>
+            <div className="flex items-center justify-between">
+              <Flag code={l.code} size={40} />
+              <span className={cn("grid h-6 w-6 place-items-center rounded-full border transition", on ? "border-ink bg-ink text-white" : "border-line-strong")}>
+                {on && <Check size={14} strokeWidth={3} aria-hidden />}
+              </span>
+            </div>
+            <span lang={l.code} className="mt-5 text-2xl font-semibold tracking-[-0.02em] text-ink">{l.native}</span>
+            <span className="text-sm text-muted">{l.english} · <span lang={l.code}>{l.greeting}</span></span>
+            <span className="mt-3 text-pretty text-sm leading-relaxed text-ink-2">{l.speakers}.</span>
           </button>
         );
       })}

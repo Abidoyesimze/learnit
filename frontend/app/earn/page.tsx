@@ -2,13 +2,16 @@
 import { useEffect, useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAccount, useWriteContract, usePublicClient } from "wagmi";
-import { Loading03Icon, PauseIcon } from "hugeicons-react";
+import { BookOpen, CheckCircle2, Clock, ExternalLink, Gift, Trophy } from "lucide-react";
 import { useApi } from "@/lib/useApi";
 import { friendlyError, STALE_ERRORS } from "@/lib/txErrors";
 import { rewardsPoolAbi } from "@learnit/backend/abis";
 import { ADDR } from "@learnit/backend/chain";
 import { fmtGD } from "@learnit/backend/format";
-import { TabBar } from "@/components/TabBar";
+import { AppShell } from "@/components/AppShell";
+import { RewardsTabs } from "@/components/RewardsTabs";
+import { Badge, Button, ButtonLink, Card, EmptyState, GMark, Notice, PageHeader, Progress } from "@/components/ui";
+import { cn } from "@/lib/cn";
 import { useAuthGate } from "@/components/useAuthGate";
 import { EarnSkeleton } from "@/components/Skeletons";
 
@@ -16,7 +19,14 @@ type V = { id: string; root: `0x${string}`; amount: string; nonce: string; expir
 type Data = { verified: boolean; vouchers: V[]; earnedToday: string; dailyCap: string; capRemaining: string };
 type Step = null | "checking" | "wallet" | "confirming";
 
-const REASON: Record<string, string> = { lesson: "Lesson passed", checkpoint: "Checkpoint passed", league: "League bonus" };
+const REASON: Record<string, { label: string; Icon: typeof BookOpen }> = { lesson: { label: "Lesson passed", Icon: BookOpen }, checkpoint: { label: "Checkpoint passed", Icon: CheckCircle2 }, league: { label: "League bonus", Icon: Trophy } };
+
+function expiresIn(expiry: number) {
+  const s = expiry - Math.floor(Date.now() / 1000);
+  if (s <= 0) return "Expired";
+  const h = Math.floor(s / 3600), d = Math.floor(h / 24);
+  return d >= 1 ? `Expires in ${d} day${d === 1 ? "" : "s"}` : h >= 1 ? `Expires in ${h}h` : "Expires soon";
+}
 const STEP_LABEL: Record<Exclude<Step, null>, string> = { checking: "Checking...", wallet: "Confirm in your wallet", confirming: "Waiting for confirmation" };
 const toArg = (v: V) => ({ root: v.root, amount: BigInt(v.amount), nonce: BigInt(v.nonce), expiry: BigInt(v.expiry) });
 
@@ -78,51 +88,87 @@ export default function Earn() {
     } finally { setStep(null); }
   }
 
+  const cap = BigInt(data.dailyCap);
+  const earned = BigInt(data.earnedToday);
+
   return (
-    <main className="mx-auto max-w-md px-4 pb-28 pt-6">
-      <h1 className="text-3xl font-bold tracking-tighter">Earn</h1>
-      <section className="mt-4 rounded-card border border-line p-5">
-        <p className="text-sm text-muted">Earned today</p>
-        <p className="font-mono text-4xl font-semibold tracking-tight">{fmtGD(data.earnedToday)} <span className="text-base text-muted">G$</span></p>
-        <p className="mt-1 text-sm text-muted">{fmtGD(data.capRemaining)} G$ left under today&apos;s cap</p>
-      </section>
+    <AppShell>
+      <PageHeader eyebrow="Staking & Rewards" title="Rewards" description="G$ you earn from lessons, checkpoints and the weekly league. Claim to your wallet whenever you like, before each reward expires." action={<RewardsTabs />} />
 
-      {!data.verified && <p className="mt-4 rounded-card border border-ink p-4 text-sm">Verify with GoodDollar on the home screen to earn.</p>}
-      {!live && <p className="mt-4 rounded-card border border-line p-4 text-sm text-muted">Rewards are not live yet.</p>}
-      {isPaused && (
-        <p role="status" className="mt-4 flex items-center gap-2 rounded-card border border-ink p-4 text-sm font-medium"><PauseIcon size={18} strokeWidth={1.75} /> Rewards are paused right now. Your rewards are safe and will be here when they resume.</p>
-      )}
+      <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <Card className="grain relative overflow-hidden bg-ink p-6 text-white sm:col-span-1">
+          <p className="text-sm font-medium text-white/70">Ready to claim</p>
+          <p className="tabular mt-3 text-[2.25rem] font-semibold leading-none tracking-[-0.03em]">{fmtGD(total)} <span className="text-base font-medium text-white/60">G$</span></p>
+          <p className="mt-2 text-sm text-white/60">{ready.length} reward{ready.length === 1 ? "" : "s"} waiting</p>
+        </Card>
+        <Card className="p-6">
+          <p className="text-sm font-medium text-muted">Earned today</p>
+          <p className="tabular mt-3 text-[1.75rem] font-semibold leading-none tracking-[-0.025em] text-ink">{fmtGD(data.earnedToday)} <span className="text-sm font-medium text-muted">G$</span></p>
+          <Progress className="mt-4" value={cap > 0n ? Number((earned * 1000n) / cap) / 1000 : 0} label="Share of today's cap earned" />
+        </Card>
+        <Card className="p-6">
+          <p className="text-sm font-medium text-muted">Left under today&apos;s cap</p>
+          <p className="tabular mt-3 text-[1.75rem] font-semibold leading-none tracking-[-0.025em] text-ink">{fmtGD(data.capRemaining)} <span className="text-sm font-medium text-muted">G$</span></p>
+          <p className="mt-4 text-xs text-muted">Daily cap: <span className="tabular">{fmtGD(data.dailyCap)}</span> G$. Resets each day.</p>
+        </Card>
+      </div>
 
-      <h2 className="mt-8 text-lg font-bold">Ready to claim</h2>
-      {data.verified && list.length === 0 && <p className="mt-2 text-sm text-muted">Pass a lesson to earn G$. Rewards show up here.</p>}
-      <ul className="mt-3 grid gap-3">
-        {list.map((v) => {
-          const st = stateOf(v);
-          return (
-            <li key={v.id} className="flex items-center justify-between gap-3 rounded-card border border-line p-4">
-              <div>
-                <p className="font-mono text-lg font-semibold">{fmtGD(v.amount)} G$</p>
-                <p className="text-sm text-muted">{REASON[v.reason] ?? "Reward"}</p>
-              </div>
-              {st === "ready" && !isPaused && <button disabled={busy || !live} onClick={() => claim([v])} className="rounded-full bg-yellow px-5 py-2 font-semibold text-[#111] transition active:scale-[0.98] disabled:opacity-50">Claim</button>}
-              {st === "ready" && isPaused && <span className="text-sm text-muted">Paused</span>}
-              {st === "expired" && <span className="text-sm font-medium text-muted">Expired</span>}
-              {st === "claimed" && <span className="text-sm font-medium text-muted">Already claimed</span>}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="mt-6 grid gap-3">
+        {!data.verified && <Notice tone="warning" title="Verify to earn" action={<ButtonLink href="/" variant="outline" size="sm">Go to verification</ButtonLink>}>Rewards need a quick GoodDollar face check. You can keep learning in the meantime.</Notice>}
+        {!live && <Notice tone="info">Rewards aren&apos;t live yet. Anything you earn will be kept here.</Notice>}
+        {isPaused && <Notice tone="paused" title="Rewards are paused">Your rewards are safe and will be here when claiming resumes.</Notice>}
+      </div>
 
-      {ready.length > 1 && !isPaused && (
-        <button disabled={busy || !live} onClick={() => claim(ready)} className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-ink px-5 py-4 font-semibold text-paper transition active:scale-[0.98] disabled:opacity-50">
-          {busy && <Loading03Icon className="animate-spin" size={18} strokeWidth={1.75} />}
-          {busy ? STEP_LABEL[step!] : `Claim all (${fmtGD(total)} G$)`}
-        </button>
-      )}
-      {busy && ready.length <= 1 && <p role="status" className="mt-3 flex items-center gap-2 text-sm"><Loading03Icon className="animate-spin" size={16} strokeWidth={1.75} /> {STEP_LABEL[step!]}</p>}
-      {tx && <p className="mt-3 break-all text-xs text-muted">Transaction <a className="font-mono underline" href={`https://celoscan.io/tx/${tx}`} target="_blank" rel="noreferrer">{tx.slice(0, 12)}...{tx.slice(-6)}</a></p>}
-      {err && <p role="alert" className="mt-3 text-sm font-medium">{err}</p>}
-      <TabBar />
-    </main>
+      <Card className="mt-8 overflow-hidden">
+        <div className="flex flex-col gap-3 border-b border-line px-6 py-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-[15px] font-semibold text-ink">Your rewards</h2>
+            <p className="mt-0.5 text-sm text-muted">Each one is a signed voucher, paid out by the rewards pool contract.</p>
+          </div>
+          {ready.length > 1 && !isPaused && (
+            <Button onClick={() => claim(ready)} loading={busy} disabled={!live}>{busy ? STEP_LABEL[step!] : `Claim all · ${fmtGD(total)} G$`}</Button>
+          )}
+        </div>
+
+        {list.length === 0 ? (
+          <EmptyState icon={Gift} title="No rewards yet" className="m-6 border-line" action={<ButtonLink href="/learn" variant="outline" size="sm">Go to your lessons</ButtonLink>}>
+            {data.verified ? "Pass a lesson to earn G$. New rewards show up here straight away." : "Once you're verified, every lesson you pass earns G$ here."}
+          </EmptyState>
+        ) : (
+          <ul className="divide-y divide-line">
+            {list.map((v) => {
+              const st = stateOf(v);
+              const reason = REASON[v.reason] ?? { label: "Reward", Icon: Gift };
+              return (
+                <li key={v.id} className={cn("flex items-center gap-4 px-6 py-4", st !== "ready" && "bg-canvas/50")}>
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-input bg-sunken text-ink-2"><reason.Icon size={18} strokeWidth={1.85} aria-hidden /></span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-ink">{reason.label}</p>
+                    <p className="mt-0.5 flex items-center gap-1 text-xs text-muted"><Clock size={12} aria-hidden />{st === "claimed" ? "Claimed" : expiresIn(v.expiry)}</p>
+                  </div>
+                  <p className="tabular flex items-center gap-2 text-[15px] font-semibold text-ink"><GMark size={20} />{fmtGD(v.amount)}</p>
+                  <div className="w-[96px] text-right">
+                    {st === "ready" && !isPaused && <Button size="sm" variant={ready.length > 1 ? "outline" : "primary"} disabled={busy || !live} onClick={() => claim([v])}>Claim</Button>}
+                    {st === "ready" && isPaused && <Badge tone="outline">Paused</Badge>}
+                    {st === "expired" && <Badge tone="neutral">Expired</Badge>}
+                    {st === "claimed" && <Badge tone="sage" icon={CheckCircle2}>Claimed</Badge>}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </Card>
+
+      <div className="mt-4 grid gap-3" aria-live="polite">
+        {busy && ready.length <= 1 && <Notice tone="info">{STEP_LABEL[step!]}</Notice>}
+        {tx && (
+          <p className="text-sm text-muted">Transaction{" "}
+            <a className="inline-flex items-center gap-1 font-mono text-ink underline-offset-2 hover:underline" href={`https://celoscan.io/tx/${tx}`} target="_blank" rel="noreferrer">{tx.slice(0, 10)}...{tx.slice(-6)} <ExternalLink size={12} aria-hidden /></a>
+          </p>
+        )}
+        {err && <Notice tone="danger">{err}</Notice>}
+      </div>
+    </AppShell>
   );
 }

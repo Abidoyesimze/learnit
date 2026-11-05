@@ -2,12 +2,14 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
-import { ArrowLeft01Icon } from "hugeicons-react";
+import { ArrowLeft } from "lucide-react";
 import { useApi } from "@/lib/useApi";
 import { useMe } from "@/lib/useMe";
+import { AppShell } from "@/components/AppShell";
 import { LanguageCards } from "@/components/LanguageCards";
 import { useAuthGate } from "@/components/useAuthGate";
 import { LanguageSkeleton } from "@/components/Skeletons";
+import { Button, Notice, PageHeader } from "@/components/ui";
 import type { Course } from "@/lib/languages";
 
 export default function ChangeLanguage() {
@@ -31,12 +33,11 @@ export default function ChangeLanguage() {
 
   if (!ok || !me) return <LanguageSkeleton />;
   return (
-    <main className="mx-auto max-w-md px-4 pb-24 pt-6">
-      <button onClick={() => router.back()} aria-label="Back" className="-ml-2 p-2"><ArrowLeft01Icon size={24} strokeWidth={1.75} /></button>
-      <h1 className="mt-4 text-3xl font-bold tracking-tighter">Change language</h1>
-      <p className="mt-2 text-sm text-muted">Your progress in each language is kept.</p>
-      <div className="mt-6"><LanguageCards value={me?.course ?? null} onSelect={pick} disabled={busy || !me} /></div>
-      {err && <p role="alert" className="mt-3 text-sm font-medium">{err}</p>}
-    </main>
+    <AppShell width="narrow">
+      <Button variant="ghost" size="sm" icon={ArrowLeft} onClick={() => router.back()} className="-ml-3 mb-4">Back</Button>
+      <PageHeader title="Change language" description="Your progress in each language is kept, so you can switch back any time." />
+      <div className="mt-8"><LanguageCards value={me?.course ?? null} onSelect={pick} disabled={busy || !me} /></div>
+      {err && <Notice tone="danger" className="mt-4">{err}</Notice>}
+    </AppShell>
   );
 }

@@ -2,29 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  LearnIt design tokens.
+  Navy ink on a warm off-white canvas, sage for progress and success, coral for the one action on a screen.
+  Text colours are checked against WCAG AA on the surfaces they sit on.
+*/
 :root {
-  --paper: #fafafa;
-  --ink: #111111;
-  --yellow: #ffd60a;
-  --line: #e4e4e0;
-  --muted: #5c5c57;
+  --canvas: #f8f6f1;      /* page background, warm off-white */
+  --surface: #ffffff;     /* cards */
+  --sunken: #f1eee7;      /* wells, inactive tracks, input fills */
+  --ink: #0f172a;         /* headings and primary text, deep navy */
+  --ink-2: #334155;       /* body text */
+  --muted: #5b6577;       /* secondary text, 5.4:1 on canvas */
+  --line: #e7e2d8;        /* hairline borders */
+  --line-strong: #d6cfc2;
+
+  --sage-50: #eef3ef;
+  --sage-100: #dce6de;
+  --sage-300: #a9c0b0;
+  --sage-500: #6f8f7a;
+  --sage-600: #5a7a65;
+  --sage-700: #46624f;    /* sage text on light, 6.7:1 on sage-50 */
+
+  --coral-50: #fbefea;
+  --coral-100: #f6dbd1;
+  --coral-300: #eaa48f;
+  --coral-500: #d9775c;   /* decorative coral */
+  --coral-600: #b9563e;   /* CTA fill, white text 4.7:1 */
+  --coral-700: #a24a35;   /* CTA hover, coral text on light */
+
+  --danger: #b3412f;
+  --focus: #0f172a;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #111111;
-    --ink: #fafafa;
-    --line: #2a2a28;
-    --muted: #a3a39d;
-  }
+
+html { background: var(--canvas); color: var(--ink); }
+body {
+  min-height: 100dvh;
+  font-family: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
+  font-feature-settings: "cv11", "ss01", "ss03";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
-html { background: var(--paper); color: var(--ink); }
-body { min-height: 100dvh; font-family: var(--font-geist-sans), system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+::selection { background: var(--sage-100); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+@layer utilities {
+  .tabular { font-variant-numeric: tabular-nums; }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+}
 
 /* Loading skeletons: a soft sweep, off under prefers-reduced-motion (rule above). */
-.skeleton { position: relative; overflow: hidden; background: color-mix(in srgb, var(--ink) 10%, var(--paper)); }
-.skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--paper) 55%, transparent), transparent); animation: skeleton-sweep 1.4s ease-in-out infinite; }
-.skeleton-on-yellow { background: rgb(0 0 0 / 0.1); }
-.skeleton-on-yellow::after { background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.35), transparent); }
+.skeleton { position: relative; overflow: hidden; background: var(--sunken); }
+.skeleton::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.65), transparent);
+  animation: skeleton-sweep 1.6s ease-in-out infinite;
+}
+.skeleton-on-dark { background: rgb(255 255 255 / 0.1); }
+.skeleton-on-dark::after { background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.12), transparent); }
 @keyframes skeleton-sweep { to { transform: translateX(100%); } }
+
+/* A faint paper grain for large hero surfaces, so flat colour doesn't feel digital. */
+.grain { position: relative; isolation: isolate; }
+.grain::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0.35; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.06 0 0 0 0 0.09 0 0 0 0 0.16 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}

@@ -49,7 +49,7 @@ The backend still deploys with the frontend: Next.js route handlers call into `@
 | Contracts | Solidity 0.8.x, Foundry, OpenZeppelin |
 | Identity and UBI | `@goodsdks/citizen-sdk`, GoodDollar Identity contract on Celo |
 
-Design: white, black and one yellow accent. Geist type. Hugeicons. Mobile first.
+Design: deep navy on a warm off-white, sage for progress, muted coral for the main action. Inter type, Lucide icons. Mobile first, with a sidebar layout on desktop. Tokens live in `frontend/app/globals.css`, shared UI pieces in `frontend/components/ui`.
 
 ## Setup
 
@@ -149,7 +149,7 @@ Ground rules:
 - **No secrets** in commits, issues or screenshots.
 - **Grading stays on the server.** The client never decides pass or fail.
 - **Contracts:** every state change emits an event, and changes need Foundry tests (fuzz where there is math).
-- **Design:** white, black and yellow only. Yellow is a fill behind black text, never text on white. One icon set (Hugeicons). Respect `prefers-reduced-motion`.
+- **Design:** use the tokens in `frontend/app/globals.css` (navy, warm off-white, sage, coral) and the pieces in `frontend/components/ui`. White text only on `coral-600` or darker. One icon set (Lucide). Respect `prefers-reduced-motion`.
 - **Copy:** plain and short. No em dashes.
 - **Lesson content:** follow the typed schema in `backend/src/content/schema.ts`. Spanish is Latin American Spanish. Native-speaker review is required before merge.
 
