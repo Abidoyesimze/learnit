@@ -27,17 +27,17 @@ type TotalRow = { claims: bigint; claimers: bigint; total: string | null };
 /** G$ claimed through LearnIt (claims the app recorded), per UTC day for the last 30 days plus all-time. Amounts are wei strings. */
 export async function GET(req: Request) {
   try {
-    // The admin page has no Privy login: the wallet signs "LearnIt admin <ms timestamp>", valid for 5 minutes.
+    // The admin page has no Privy login: the wallet signs "LearnIt admin <ms timestamp>", valid for 30 minutes.
     const addr = req.headers.get("x-admin-address") ?? "";
     const ts = Number(req.headers.get("x-admin-ts"));
     const sig = req.headers.get("x-admin-sig") ?? "";
-    if (!isAddress(addr) || !Number.isFinite(ts) || Math.abs(Date.now() - ts) > 5 * 60_000 || !sig.startsWith("0x"))
+    if (!isAddress(addr) || !Number.isFinite(ts) || Math.abs(Date.now() - ts) > 30 * 60_000 || !sig.startsWith("0x"))
       return Response.json({ error: "Sign in with your wallet" }, { status: 401 });
     const signed = await verifyMessage({ address: addr, message: `LearnIt admin ${ts}`, signature: sig as `0x${string}` }).catch(() => false);
     if (!signed) return Response.json({ error: "Bad signature" }, { status: 401 });
     if (!(await isAdmin(addr))) return Response.json({ error: "Not an admin" }, { status: 403 });
 
-    const [days, all, today] = await Promise.all([
+    const [days, all] = await Promise.all([
       db.$queryRaw<DayRow[]>`
         SELECT date_trunc('day', "claimedAt" AT TIME ZONE 'UTC') AS day,
                COUNT(*) AS claims, COUNT(DISTINCT "userId") AS claimers,
@@ -47,15 +47,14 @@ export async function GET(req: Request) {
         GROUP BY 1 ORDER BY 1 DESC`,
       db.$queryRaw<TotalRow[]>`
         SELECT COUNT(*) AS claims, COUNT(DISTINCT "userId") AS claimers, SUM(amount::numeric)::text AS total FROM ubi_claims`,
-      db.$queryRaw<TotalRow[]>`
-        SELECT COUNT(*) AS claims, COUNT(DISTINCT "userId") AS claimers, SUM(amount::numeric)::text AS total
-        FROM ubi_claims WHERE "claimedAt" >= date_trunc('day', NOW() AT TIME ZONE 'UTC') AT TIME ZONE 'UTC'`,
     ]);
     const n = (r: TotalRow) => ({ claims: Number(r.claims), claimers: Number(r.claimers), total: (r.total ?? "0").split(".")[0] });
+    const rows = days.map((d) => ({ day: d.day.toISOString().slice(0, 10), ...n(d) }));
+    const todayKey = new Date().toISOString().slice(0, 10);
     return Response.json({
       allTime: n(all[0]),
-      today: n(today[0]),
-      days: days.map((d) => ({ day: d.day.toISOString().slice(0, 10), ...n(d) })),
+      today: rows.find((d) => d.day === todayKey) ?? { claims: 0, claimers: 0, total: "0" },
+      days: rows,
     });
   } catch (e) {
     return authFail(e);
