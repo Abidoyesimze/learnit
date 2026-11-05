@@ -140,8 +140,8 @@ export default function Stake() {
       <ol className="mt-5 grid gap-5">
         {[
           { Icon: PiggyBank, t: "Put G$ behind it", b: c ? `Choose an amount between ${fmtGD(c.min, 0)} and ${fmtGD(c.max, 0)} G$ while the challenge is open.` : "Choose an amount while a challenge is open." },
-          { Icon: Flame, t: "Show up for 7 days", b: "Pass at least one lesson on each of the 7 days, in your own timezone." },
-          { Icon: Trophy, t: "Get it back", b: "Finish all 7 days and withdraw your stake." },
+          { Icon: Flame, t: `Show up for ${days} days`, b: `Pass at least one lesson on each of the ${days} days, in your own timezone.` },
+          { Icon: Trophy, t: "Get it back", b: `Finish all ${days} days and withdraw your stake.` },
         ].map(({ Icon, t, b }, i) => (
           <li key={t} className="flex gap-4">
             <span className="relative grid h-9 w-9 shrink-0 place-items-center rounded-full bg-sunken text-ink-2">
@@ -158,13 +158,13 @@ export default function Stake() {
 
   return (
     <AppShell>
-      <PageHeader eyebrow="Staking & Rewards" title="Stay committed" description="Commit to 7 days in a row and put G$ behind it. Learn every day and you get your stake back. Miss a day and it is shared with the people who finished." action={<RewardsTabs />} />
+      <PageHeader eyebrow="Staking & Rewards" title="Stay committed" description={`Commit to ${days} days in a row and put G$ behind it. Learn every day and you get your stake back. Miss a day and it is shared with the people who finished.`} action={<RewardsTabs />} />
 
       {isPaused && <Notice tone="paused" className="mt-6" title="Staking is paused">Your stake is safe. Joining and withdrawing will resume shortly.</Notice>}
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-8">
         <div className="grid content-start gap-6">
-          {!c && <EmptyState icon={CalendarDays} title="No open challenge right now">A new 7-day challenge opens every week. Check back soon, and keep your streak going in the meantime.</EmptyState>}
+          {!c && <EmptyState icon={CalendarDays} title="No open challenge right now">A new challenge opens regularly. Check back soon, and keep your streak going in the meantime.</EmptyState>}
 
           {c && (
             <Card className="overflow-hidden">
@@ -187,9 +187,9 @@ export default function Stake() {
                         <p className="text-sm font-medium text-muted">Your stake</p>
                         <p className="tabular mt-1 flex items-center gap-2 text-[2rem] font-semibold leading-none tracking-[-0.03em] text-ink"><GMark size={26} />{fmtGD(c.mine!.stake)}</p>
                       </div>
-                      <p className="text-sm text-muted"><span className="tabular font-semibold text-ink">{c.progress.completed}</span> of 7 days complete</p>
+                      <p className="text-sm text-muted"><span className="tabular font-semibold text-ink">{c.progress.completed}</span> of {days} days complete</p>
                     </div>
-                    <Progress className="mt-5" value={c.progress.completed / 7} label="Challenge progress" />
+                    <Progress className="mt-5" value={c.progress.completed / days} label="Challenge progress" />
                     <ol className="mt-5 grid grid-cols-7 gap-2" aria-label="Daily progress">
                       {c.progress.done.map((d, i) => (
                         <li key={i} className="flex flex-col items-center gap-1.5">
@@ -235,11 +235,11 @@ export default function Stake() {
                     </p>
                     {amt ? (
                       <dl className="mt-5 grid gap-px overflow-hidden rounded-input border border-line bg-line text-sm sm:grid-cols-2">
-                        <div className="bg-sage-50 px-4 py-3"><dt className="text-xs font-medium text-sage-700">If you finish all 7 days</dt><dd className="tabular mt-0.5 font-semibold text-ink">{amt} G$ back</dd></div>
+                        <div className="bg-sage-50 px-4 py-3"><dt className="text-xs font-medium text-sage-700">If you finish all {days} days</dt><dd className="tabular mt-0.5 font-semibold text-ink">{amt} G$ back</dd></div>
                         <div className="bg-coral-50 px-4 py-3"><dt className="text-xs font-medium text-coral-700">If you miss a day</dt><dd className="mt-0.5 font-semibold text-ink">You lose the stake</dd></div>
                       </dl>
                     ) : (
-                      <p className="mt-5 rounded-input bg-sunken px-4 py-3 text-sm leading-relaxed text-ink-2">Pass a lesson on all 7 days to get your stake back. Miss one and you lose it.</p>
+                      <p className="mt-5 rounded-input bg-sunken px-4 py-3 text-sm leading-relaxed text-ink-2">Pass a lesson on all {days} days to get your stake back. Miss one and you lose it.</p>
                     )}
                     <Button type="submit" loading={busy} disabled={!!blocker || wei === null || outOfBounds} size="lg" block className="mt-4">
                       {busy ? STEP_LABEL[step!] : amt ? `Stake ${amt} G$` : "Stake G$"}
@@ -252,7 +252,7 @@ export default function Stake() {
                 {/* After settlement. */}
                 {staked && c.settled && c.mine!.finished && !c.mine!.withdrawn && (
                   <div className="mt-6 rounded-card bg-sage-50 p-5 ring-1 ring-inset ring-sage-100">
-                    <p className="font-semibold text-sage-700">You kept your word: 7 days out of 7</p>
+                    <p className="font-semibold text-sage-700">You kept your word: {days} days out of {days}</p>
                     <p className="mt-1 text-sm text-ink-2">Your stake is ready to withdraw, including your share of the stakes from people who missed a day.</p>
                     <Button onClick={withdraw} loading={busy} size="lg" block className="mt-4">{busy ? STEP_LABEL[step!] : `Withdraw ${fmtGD(c.mine!.payout)} G$`}</Button>
                   </div>

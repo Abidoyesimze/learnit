@@ -14,7 +14,7 @@ export async function GET(req: Request) {
       const mine = await myState(id, user);
       const joinable = now < c.start + 86400;
       if (!joinable && !(mine && BigInt(mine.stake) > 0n)) continue;
-      out.push({ ...c, joinable, members: await memberCount(id), mine, progress: mine && BigInt(mine.stake) > 0n ? await progressFor(user, c.start) : null });
+      out.push({ ...c, joinable, members: await memberCount(id), mine, progress: mine && BigInt(mine.stake) > 0n ? await progressFor(user, c.start, c.end) : null });
     }
     return Response.json({ cohorts: out.reverse() });
   } catch (e) { return authFail(e); }
