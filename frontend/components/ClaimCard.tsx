@@ -2,11 +2,12 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { Loading03Icon } from "hugeicons-react";
+import { ArrowRight, CheckCircle2, ExternalLink } from "lucide-react";
 import { useApi } from "@/lib/useApi";
 import { useGoodSdk } from "@/lib/useGoodSdk";
 import { fmtGD } from "@learnit/backend/format";
 import { ClaimCardSkeleton } from "./Skeletons";
+import { Button } from "./ui";
 
 type Status = { claimable: string; canClaim: boolean; nextClaimAt: number | null; lastClaimTx: string | null };
 
@@ -52,25 +53,35 @@ export function ClaimCard() {
   if (isLoading || !data) return <ClaimCardSkeleton />;
 
   return (
-    <section className="rounded-card bg-yellow p-5 text-[#111]">
-      <p className="text-sm font-medium">Daily G$</p>
-      {data.canClaim ? (
-        <>
-          <p className="mt-1 font-mono text-5xl font-semibold tracking-tight">{fmtGD(data.claimable)}</p>
-          <p className="text-sm">ready to claim today</p>
-          <button onClick={claim} disabled={busy || !sdk} className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#111] px-5 py-4 font-semibold text-[#fafafa] transition active:scale-[0.98] disabled:opacity-60">
-            {busy && <Loading03Icon className="animate-spin" size={18}  strokeWidth={1.75} />} {busy ? "Claiming..." : "Claim"}
-          </button>
-        </>
-      ) : (
-        <>
-          <p className="mt-1 text-2xl font-bold tracking-tight">Claimed for today</p>
-          <p className="mt-1 text-sm">Next claim in <span className="font-mono font-semibold">{cd.text}</span></p>
-          <button onClick={() => router.push("/learn")} className="mt-4 w-full rounded-full bg-[#111] px-5 py-4 font-semibold text-[#fafafa] transition active:scale-[0.98]">Go to today&apos;s lesson</button>
-        </>
-      )}
-      {tx && <p className="mt-3 break-all font-mono text-xs">tx {tx}</p>}
-      {err && <p role="alert" className="mt-3 text-sm font-medium">{err}</p>}
+    <section aria-labelledby="ubi-title" className="grain relative overflow-hidden rounded-card bg-ink p-6 text-white shadow-raised">
+      <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-sage-500/20 blur-2xl" />
+      <div className="relative">
+        <div className="flex items-center justify-between">
+          <p id="ubi-title" className="text-sm font-medium text-white/70">Daily GoodDollar</p>
+          <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-2.5 py-0.5 text-[11px] font-medium text-white/80">UBI</span>
+        </div>
+        {data.canClaim ? (
+          <>
+            <p className="tabular mt-4 text-[2.5rem] font-semibold leading-none tracking-[-0.03em]">{fmtGD(data.claimable)} <span className="text-lg font-medium text-white/60">G$</span></p>
+            <p className="mt-2 text-sm text-white/70">Ready to claim today</p>
+            <Button onClick={claim} loading={busy} disabled={!sdk} size="lg" block className="mt-6">
+              {busy ? "Claiming..." : "Claim G$"}
+            </Button>
+          </>
+        ) : (
+          <>
+            <p className="mt-4 flex items-center gap-2 text-xl font-semibold tracking-[-0.02em]"><CheckCircle2 size={20} className="text-sage-300" aria-hidden /> Claimed for today</p>
+            <p className="mt-2 text-sm text-white/70">Next claim in <span className="tabular font-mono font-medium text-white">{cd.text}</span></p>
+            <Button onClick={() => router.push("/learn")} variant="inverse" size="lg" block iconRight={ArrowRight} className="mt-6">Go to today&apos;s lesson</Button>
+          </>
+        )}
+        {tx && (
+          <a href={`https://celoscan.io/tx/${tx}`} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-1.5 font-mono text-xs text-white/60 underline-offset-2 hover:text-white hover:underline">
+            {tx.slice(0, 10)}...{tx.slice(-6)} <ExternalLink size={12} aria-hidden />
+          </a>
+        )}
+        {err && <p role="alert" className="mt-4 rounded-input bg-white/10 px-3 py-2 text-sm text-white">{err}</p>}
+      </div>
     </section>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
-import { SecurityCheckIcon } from "hugeicons-react";
+import { ScanFace } from "lucide-react";
 import { useGoodSdk } from "@/lib/useGoodSdk";
 import { CHAIN_ID } from "@learnit/backend/chain";
+import { Button, Card } from "./ui";
 
 export function VerifyCard() {
   const sdk = useGoodSdk();
@@ -21,14 +22,17 @@ export function VerifyCard() {
     }
   }
   return (
-    <section className="rounded-card border border-ink p-5">
-      <SecurityCheckIcon size={28} strokeWidth={1.75} />
-      <h2 className="mt-3 text-xl font-bold tracking-tight">Verify to claim and earn</h2>
-      <p className="mt-1 text-sm text-muted">A quick face check proves you are one person. Lessons stay free either way.</p>
-      <button onClick={go} disabled={!sdk || busy} className="mt-4 w-full rounded-full bg-yellow px-5 py-4 font-semibold text-[#111] transition active:scale-[0.98] disabled:opacity-50">
-        {busy ? "Opening..." : "Verify with GoodDollar"}
-      </button>
-      {err && <p role="alert" className="mt-2 text-sm">{err}</p>}
-    </section>
+    <Card className="overflow-hidden">
+      <div className="bg-sage-50 px-6 pb-5 pt-6">
+        <span className="grid h-11 w-11 place-items-center rounded-input bg-surface text-sage-700 shadow-card ring-1 ring-sage-100"><ScanFace size={22} strokeWidth={1.75} aria-hidden /></span>
+        <h2 className="mt-4 text-lg font-semibold tracking-[-0.015em] text-ink">Verify to claim and earn</h2>
+        <p className="mt-1 text-pretty text-sm leading-relaxed text-ink-2">A quick GoodDollar face check proves you&apos;re one person. It unlocks daily G$, lesson rewards and staking.</p>
+      </div>
+      <div className="p-6 pt-5">
+        <Button onClick={go} loading={busy} disabled={!sdk} block>{busy ? "Opening GoodDollar..." : "Verify with GoodDollar"}</Button>
+        <p className="mt-3 text-center text-xs text-muted">Lessons stay free either way.</p>
+        {err && <p role="alert" className="mt-2 text-sm text-danger">{err}</p>}
+      </div>
+    </Card>
   );
 }

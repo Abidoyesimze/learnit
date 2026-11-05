@@ -1,12 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { Camera01Icon, Delete02Icon, Loading03Icon, Tick02Icon } from "hugeicons-react";
+import { Camera, Check, Loader2, Trash2 } from "lucide-react";
 import { validateUsername, BIO_MAX, NAME_MAX } from "@learnit/backend/profile";
 import { useApi } from "@/lib/useApi";
 import { useMe } from "@/lib/useMe";
 import { toAvatarBlob } from "@/lib/resizeImage";
 import { Avatar } from "./Avatar";
+import { Button, Label, Notice, fieldClass } from "./ui";
+import { cn } from "@/lib/cn";
 
 type Check = { state: "idle" | "checking" | "ok" | "bad"; reason?: string };
 
@@ -84,55 +86,60 @@ export function ProfileEditor({ submitLabel = "Save", onDone, allowSkipSave = fa
   }
 
   const shownName = displayName.trim() || (username ? `@${username}` : "You");
-  const field = "mt-2 w-full rounded-input border border-line bg-transparent px-4 py-3 text-base focus:border-ink";
   return (
     <div>
-      <div className="flex flex-col items-center">
-        <button type="button" onClick={() => file.current?.click()} disabled={photoBusy} aria-label="Change profile photo" className="relative rounded-full transition active:scale-[0.97]">
-          <Avatar src={me?.avatarUrl} name={shownName} size={96} />
-          <span className="absolute -bottom-1 -right-1 grid h-9 w-9 place-items-center rounded-full border-2 border-paper bg-ink text-paper">
-            {photoBusy ? <Loading03Icon className="animate-spin" size={18} strokeWidth={1.75} /> : <Camera01Icon size={18} strokeWidth={1.75} />}
-          </span>
+      <div className="flex items-center gap-5">
+        <button type="button" onClick={() => file.current?.click()} disabled={photoBusy} aria-label="Change profile photo" className="group relative shrink-0 rounded-full transition active:scale-[0.97]">
+          <Avatar src={me?.avatarUrl} name={shownName} size={80} />
+          <span className="absolute inset-0 grid place-items-center rounded-full bg-ink/0 text-white opacity-0 transition group-hover:bg-ink/40 group-hover:opacity-100"><Camera size={20} aria-hidden /></span>
+          {photoBusy && <span className="absolute inset-0 grid place-items-center rounded-full bg-ink/50 text-white"><Loader2 size={20} className="animate-spin" aria-hidden /></span>}
         </button>
         <input ref={file} type="file" accept="image/jpeg,image/png,image/webp,image/*" className="sr-only" tabIndex={-1} onChange={(e) => void pickPhoto(e.target.files?.[0])} />
-        <div className="mt-3 flex items-center gap-4 text-sm">
-          <button type="button" onClick={() => file.current?.click()} disabled={photoBusy} className="font-medium underline underline-offset-4">{me?.avatarUrl ? "Change photo" : "Add a photo"}</button>
-          {me?.avatarUrl && <button type="button" onClick={removePhoto} disabled={photoBusy} className="inline-flex items-center gap-1 text-muted"><Delete02Icon size={16} strokeWidth={1.75} /> Remove</button>}
+        <div>
+          <p className="text-sm font-semibold text-ink">Profile photo</p>
+          <p className="mt-0.5 text-xs text-muted">JPG, PNG or WebP. We resize it for you.</p>
+          <div className="mt-2.5 flex items-center gap-2">
+            <Button type="button" size="sm" variant="outline" icon={Camera} onClick={() => file.current?.click()} disabled={photoBusy}>{me?.avatarUrl ? "Change" : "Upload"}</Button>
+            {me?.avatarUrl && <Button type="button" size="sm" variant="ghost" icon={Trash2} onClick={removePhoto} disabled={photoBusy}>Remove</Button>}
+          </div>
         </div>
       </div>
 
       <div className="mt-8 grid gap-5">
         <div>
-          <label htmlFor="username" className="text-sm font-medium">Username</label>
-          <div className="relative">
-            <span aria-hidden className="pointer-events-none absolute left-4 top-[calc(50%+4px)] -translate-y-1/2 text-muted">@</span>
+          <Label htmlFor="username">Username</Label>
+          <div className="relative mt-2">
+            <span aria-hidden className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted">@</span>
             <input id="username" value={username} onChange={(e) => setUsername(e.target.value)} autoCapitalize="none" autoCorrect="off" spellCheck={false} maxLength={20} autoComplete="off"
-              aria-describedby="username-help" aria-invalid={check.state === "bad"} className={`${field} pl-9`} placeholder="yourname" />
+              aria-describedby="username-help" aria-invalid={check.state === "bad"} className={cn(fieldClass, "pl-9")} placeholder="yourname" />
+            {check.state === "checking" && <Loader2 size={16} className="absolute right-4 top-1/2 -translate-y-1/2 animate-spin text-muted" aria-hidden />}
+            {check.state === "ok" && <Check size={16} strokeWidth={2.5} className="absolute right-4 top-1/2 -translate-y-1/2 text-sage-600" aria-hidden />}
           </div>
-          <p id="username-help" className="mt-1.5 min-h-5 text-sm" aria-live="polite">
-            {check.state === "checking" && <span className="text-muted">Checking...</span>}
-            {check.state === "ok" && <span className="inline-flex items-center gap-1"><Tick02Icon size={16} strokeWidth={2} /> Available</span>}
-            {check.state === "bad" && <span className="font-medium">{check.reason}</span>}
+          <p id="username-help" className="mt-1.5 min-h-5 text-[13px]" aria-live="polite">
+            {check.state === "checking" && <span className="text-muted">Checking availability...</span>}
+            {check.state === "ok" && <span className="font-medium text-sage-700">Available</span>}
+            {check.state === "bad" && <span className="font-medium text-danger">{check.reason}</span>}
             {check.state === "idle" && <span className="text-muted">3 to 20 letters, numbers or underscores.</span>}
           </p>
         </div>
         <div>
-          <label htmlFor="display" className="text-sm font-medium">Display name</label>
-          <input id="display" value={displayName} onChange={(e) => setDisplayName(e.target.value)} maxLength={NAME_MAX} autoComplete="name" className={field} placeholder="How you appear to others" />
+          <Label htmlFor="display">Display name</Label>
+          <input id="display" value={displayName} onChange={(e) => setDisplayName(e.target.value)} maxLength={NAME_MAX} autoComplete="name" className={cn(fieldClass, "mt-2")} placeholder="How you appear to others" />
         </div>
         <div>
-          <label htmlFor="bio" className="text-sm font-medium">About you</label>
-          <textarea id="bio" value={bio} onChange={(e) => setBio(e.target.value)} maxLength={BIO_MAX} rows={3} className={`${field} resize-none`} placeholder="Why are you learning?" />
-          <p className="mt-1 text-right font-mono text-xs text-muted">{bio.length}/{BIO_MAX}</p>
+          <div className="flex items-baseline justify-between">
+            <Label htmlFor="bio">About you</Label>
+            <span className="tabular text-xs text-muted">{bio.length}/{BIO_MAX}</span>
+          </div>
+          <textarea id="bio" value={bio} onChange={(e) => setBio(e.target.value)} maxLength={BIO_MAX} rows={3} className={cn(fieldClass, "mt-2 resize-none")} placeholder="Why are you learning?" />
         </div>
       </div>
 
-      {err && <p role="alert" className="mt-4 text-sm font-medium">{err}</p>}
-      <button type="button" onClick={save} disabled={saving || !me || blocked || (!dirty && !allowSkipSave)}
-        className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-yellow px-5 py-4 font-semibold text-[#111] transition active:scale-[0.98] disabled:opacity-40">
-        {saving && <Loading03Icon className="animate-spin" size={18} strokeWidth={1.75} />}
+      {err && <Notice tone="danger" className="mt-5">{err}</Notice>}
+      <Button type="button" onClick={save} loading={saving} disabled={!me || blocked || (!dirty && !allowSkipSave)} size="lg" block className="mt-6"
+        icon={saved && !dirty ? Check : undefined} variant={saved && !dirty ? "subtle" : "primary"}>
         {saved && !dirty ? "Saved" : submitLabel}
-      </button>
+      </Button>
     </div>
   );
 }

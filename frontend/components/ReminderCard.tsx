@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { Notification01Icon, Loading03Icon } from "hugeicons-react";
+import { Bell, ChevronDown, Loader2 } from "lucide-react";
 import { useApi } from "@/lib/useApi";
 import { needsInstallFirst, pushSupported, PermissionDenied, subscribeThisDevice, unsubscribeThisDevice } from "@/lib/push";
 import { Sk } from "./Skeletons";
+import { Card, Label, Notice, fieldClass } from "./ui";
+import { cn } from "@/lib/cn";
 
 type Settings = { available: boolean; subscribed: boolean; reminderHour: number };
 const HOURS = Array.from({ length: 24 }, (_, h) => ({ h, label: new Date(2000, 0, 1, h).toLocaleTimeString("en", { hour: "numeric", minute: "2-digit" }) }));
@@ -17,8 +19,9 @@ export function ReminderCard() {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
-  if (isError) return <section className="mt-10 border-t border-line pt-6"><h2 className="flex items-center gap-2 text-lg font-bold tracking-tight"><Notification01Icon size={20} strokeWidth={1.75} /> Daily reminder</h2><p className="mt-3 text-sm text-muted">Reminders are not available right now.</p></section>;
-  if (!data) return <Sk className="mt-10 h-28 w-full rounded-card" />;
+  const head = <h2 id="reminder" className="flex items-center gap-2 text-[15px] font-semibold text-ink"><Bell size={17} strokeWidth={2} aria-hidden /> Daily reminder</h2>;
+  if (isError) return <Card className="p-6">{head}<p className="mt-3 text-sm text-muted">Reminders aren&apos;t available right now.</p></Card>;
+  if (!data) return <Sk className="h-[200px] w-full rounded-card" />;
 
   const supported = pushSupported();
   const installFirst = needsInstallFirst();
@@ -46,38 +49,41 @@ export function ReminderCard() {
   }
 
   return (
-    <section className="mt-10 border-t border-line pt-6" aria-labelledby="reminder">
-      <h2 id="reminder" className="flex items-center gap-2 text-lg font-bold tracking-tight"><Notification01Icon size={20} strokeWidth={1.75} /> Daily reminder</h2>
+    <Card className="p-6" aria-labelledby="reminder" role="region">
+      {head}
       {!data.available ? (
-        <p className="mt-3 text-sm text-muted">Reminders are not available right now.</p>
+        <p className="mt-3 text-sm text-muted">Reminders aren&apos;t available right now.</p>
       ) : installFirst ? (
-        <p className="mt-3 text-sm text-muted">On iPhone, add LearnIt to your Home Screen first (Share, then Add to Home Screen). Then come back here to turn on reminders.</p>
+        <p className="mt-3 text-pretty text-sm leading-relaxed text-muted">On iPhone, add LearnIt to your Home Screen first (Share, then Add to Home Screen). Then come back here to turn on reminders.</p>
       ) : !supported ? (
-        <p className="mt-3 text-sm text-muted">This browser does not support notifications.</p>
+        <p className="mt-3 text-sm text-muted">This browser doesn&apos;t support notifications.</p>
       ) : (
         <>
           <div className="mt-4 flex items-center justify-between gap-4">
             <div>
-              <p className="font-medium">Remind me to learn</p>
-              <p className="text-sm text-muted">One short nudge a day. Skipped if you already learned.</p>
+              <p className="text-sm font-medium text-ink">Remind me to learn</p>
+              <p className="mt-0.5 text-pretty text-sm text-muted">One short nudge a day. Skipped if you&apos;ve already learned.</p>
             </div>
             <button role="switch" aria-checked={data.subscribed} aria-label="Daily reminder" disabled={busy} onClick={() => (data.subscribed ? turnOff() : turnOn())}
-              className={`relative h-8 w-14 shrink-0 rounded-full border transition ${data.subscribed ? "border-ink bg-yellow" : "border-line bg-transparent"} disabled:opacity-60`}>
-              <span className={`absolute top-1 grid h-6 w-6 place-items-center rounded-full bg-ink transition-[left] ${data.subscribed ? "left-7" : "left-1"}`}>
-                {busy && <Loading03Icon className="animate-spin text-paper" size={14} strokeWidth={2} />}
+              className={cn("relative h-7 w-12 shrink-0 rounded-full transition-colors duration-200 disabled:opacity-60", data.subscribed ? "bg-sage-600" : "bg-line-strong")}>
+              <span className={cn("absolute top-0.5 grid h-6 w-6 place-items-center rounded-full bg-white shadow-card transition-[left] duration-200 ease-soft", data.subscribed ? "left-[22px]" : "left-0.5")}>
+                {busy && <Loader2 className="animate-spin text-muted" size={13} aria-hidden />}
               </span>
             </button>
           </div>
-          <div className="mt-4">
-            <label htmlFor="remind-at" className="text-sm font-medium">Time</label>
-            <select id="remind-at" value={hour} onChange={(e) => void changeHour(Number(e.target.value))} className="mt-2 w-full rounded-input border border-line bg-transparent px-4 py-3">
-              {HOURS.map(({ h, label }) => <option key={h} value={h}>{label}</option>)}
-            </select>
-            <p className="mt-1 text-xs text-muted">In your own timezone.</p>
+          <div className="mt-5">
+            <Label htmlFor="remind-at">Time</Label>
+            <div className="relative mt-2">
+              <select id="remind-at" value={hour} onChange={(e) => void changeHour(Number(e.target.value))} className={cn(fieldClass, "appearance-none pr-10")}>
+                {HOURS.map(({ h, label }) => <option key={h} value={h}>{label}</option>)}
+              </select>
+              <ChevronDown size={16} className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-muted" aria-hidden />
+            </div>
+            <p className="mt-1.5 text-xs text-muted">In your own timezone.</p>
           </div>
         </>
       )}
-      {err && <p role="alert" className="mt-3 text-sm font-medium">{err}</p>}
-    </section>
+      {err && <Notice tone="danger" className="mt-4">{err}</Notice>}
+    </Card>
   );
 }

@@ -1,8 +1,10 @@
 "use client";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { motion, useReducedMotion } from "motion/react";
-import { VolumeHighIcon, VolumeOffIcon, Tick02Icon, Cancel01Icon } from "hugeicons-react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+import { ArrowRight, Check, Clock, Flame, RotateCcw, Target, Volume2, VolumeX, X } from "lucide-react";
+import { cn } from "@/lib/cn";
+import { Button, ButtonLink, Card, Notice, ProgressRing } from "./ui";
 import { useApi } from "@/lib/useApi";
 import type { PublicExercise } from "@learnit/backend/lessons";
 import { fmtGD } from "@learnit/backend/format";
@@ -39,6 +41,7 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
   const missed = useRef<number[]>([]);
   const firstRef = useRef<Record<string, Ans>>({}); // mirrors `first` so submit never reads a stale value
   const [introSeen, setIntroSeen] = useState(false);
+  const [round, setRound] = useState(1); // 2 and up: retrying missed exercises
   const [sound, setSound] = useState(true);
   useEffect(() => setSound(soundEnabled()), []);
   const base = isCheckpoint(id) ? `/api/checkpoints/${id}` : `/api/lessons/${id}`;
@@ -86,7 +89,7 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
     // End of round: retry the exercises that were missed until all are right.
     const again = missed.current;
     missed.current = [];
-    if (again.length) { setQueue(again); setPos(0); return; }
+    if (again.length) { setQueue(again); setPos(0); setRound((n) => n + 1); return; }
     void submit(firstRef.current);
   }, [data, pos, queue, submit]);
 
@@ -98,47 +101,108 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
     next();
   }, [ex, record, queue, pos, next]);
 
-  if (err && !data) return <p role="alert" className="p-6 text-sm">{err} <Link className="underline" href="/learn">Back</Link></p>;
+  // Enter checks the answer, then continues. Ignored while typing in a field.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Enter" || e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (fb) { e.preventDefault(); next(); }
+      else if (cur !== null && !busy && ex && ex.type !== "match") { e.preventDefault(); void check(); }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [fb, cur, busy, ex, next, check]);
+
+  if (err && !data) return (
+    <main className="mx-auto grid min-h-[100dvh] max-w-md place-items-center px-5">
+      <Notice tone="danger" title="This lesson couldn't load" action={<ButtonLink href="/learn" variant="outline" size="sm">Back to your path</ButtonLink>}>{err}</Notice>
+    </main>
+  );
   if (!data) return <LessonSkeleton />;
   if (result) return <Results r={result} id={id} />;
   if (data.intro?.length && !introSeen) return <Intro words={data.intro} lang={data.speechLang} title={data.title} onStart={() => setIntroSeen(true)} />;
-  if (!ex) return <p className="p-6 text-sm">Submitting...</p>;
+  if (!ex) return <LessonSkeleton label="Submitting your answers" />;
 
   const total = data.exercises.length;
   const done = Math.min(total, Object.keys(first).length);
+  const retry = round > 1;
   return (
-    <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col px-4 pb-6 pt-4">
-      <header className="flex items-center gap-3">
-        <Link href="/learn" aria-label="Quit lesson" className="p-2"><Cancel01Icon size={22} strokeWidth={1.75} /></Link>
-        <div className="h-3 flex-1 overflow-hidden rounded-full bg-line" role="progressbar" aria-valuenow={done} aria-valuemax={total}>
-          <div className="h-full rounded-full bg-yellow transition-[width] duration-300" style={{ width: `${(done / total) * 100}%` }} />
+    <div className="flex min-h-[100dvh] flex-col bg-canvas">
+      <LessonTopBar title={data.title} done={done} total={total} sound={sound} onSound={() => { const on = !sound; setSound(on); setSoundEnabled(on); if (on) playCorrect(); }} />
+
+      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col px-5 pb-40 pt-8 sm:pt-14">
+        <motion.section key={`${ex.id}-${pos}`} initial={reduce ? false : { opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}>
+          <p className="flex items-center gap-2 text-eyebrow uppercase text-muted">
+            {retry ? <><RotateCcw size={13} aria-hidden /> One more try</> : ex.type === "match" ? "Match the pairs" : ex.type === "translate" ? "Translate" : "Choose the answer"}
+          </p>
+          <h1 className="mt-3 text-balance text-[1.75rem] font-semibold leading-tight tracking-[-0.025em] text-ink sm:text-[2rem]">{ex.type === "translate" ? "Translate this sentence" : ex.prompt}</h1>
+          {ex.type === "mc" && ex.speak && (
+            <button onClick={() => speak(ex.speak!, data.speechLang)} className="mt-5 inline-flex items-center gap-2.5 rounded-full border border-line-strong bg-surface py-2 pl-2 pr-4 text-[15px] font-medium text-ink shadow-card transition hover:border-ink/30">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-sage-100 text-sage-700"><Volume2 size={16} aria-hidden /></span> Listen again
+            </button>
+          )}
+          {ex.type === "translate" && (
+            <Card className="mt-5 inline-flex px-5 py-4 text-lg font-medium text-ink-2 shadow-none">{ex.prompt}</Card>
+          )}
+          <div className="mt-8">
+            {ex.type === "mc" && <Mc key={ex.id} ex={ex} onChange={setCur} locked={!!fb} result={fb} />}
+            {ex.type === "translate" && <Translate key={ex.id} ex={ex} onChange={setCur} locked={!!fb} />}
+            {ex.type === "match" && <Match key={ex.id} ex={ex} onFinish={matchDone} />}
+          </div>
+          {err && <Notice tone="danger" className="mt-6">{err}</Notice>}
+        </motion.section>
+      </main>
+
+      {/* Bottom bar: the Check button, or the feedback panel once an answer is checked. */}
+      <div className="fixed inset-x-0 bottom-0 z-20">
+        <AnimatePresence mode="wait" initial={false}>
+          {fb ? (
+            <motion.div key="fb" role="status" initial={reduce ? false : { y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 40, opacity: 0 }} transition={{ type: "spring", stiffness: 320, damping: 30 }}
+              className={cn("border-t pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-5", fb.correct ? "border-sage-100 bg-sage-50" : "border-coral-100 bg-coral-50")}>
+              <div className="mx-auto flex max-w-2xl flex-col gap-4 px-5 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-start gap-3">
+                  <span className={cn("grid h-10 w-10 shrink-0 place-items-center rounded-full text-white", fb.correct ? "bg-sage-600" : "bg-coral-600")}>
+                    {fb.correct ? <Check size={20} strokeWidth={3} aria-hidden /> : <X size={20} strokeWidth={3} aria-hidden />}
+                  </span>
+                  <div>
+                    <p className={cn("text-lg font-semibold tracking-[-0.015em]", fb.correct ? "text-sage-700" : "text-coral-700")}>{fb.correct ? "Well done" : "Not quite"}</p>
+                    {!fb.correct && <p className="mt-0.5 text-[15px] text-ink-2">Correct answer: <span className="font-semibold text-ink">{fmtAnswer(ex, fb.answer)}</span></p>}
+                    {fb.correct && <p className="mt-0.5 text-[15px] text-ink-2">That&apos;s right.</p>}
+                  </div>
+                </div>
+                <Button onClick={next} size="lg" variant={fb.correct ? "secondary" : "primary"} iconRight={ArrowRight} className="sm:min-w-[180px]" autoFocus>Continue</Button>
+              </div>
+            </motion.div>
+          ) : ex.type !== "match" ? (
+            <motion.div key="check" initial={false} className="border-t border-line bg-surface/90 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-5 backdrop-blur-md">
+              <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 px-5">
+                <p className="hidden text-sm text-muted sm:block">{cur === null ? "Pick an answer to continue" : <>Press <kbd className="rounded border border-line-strong bg-canvas px-1.5 py-0.5 font-sans text-xs">Enter</kbd> to check</>}</p>
+                <Button onClick={check} disabled={cur === null} loading={busy} size="lg" variant="secondary" className="max-sm:w-full sm:min-w-[180px]">Check</Button>
+              </div>
+            </motion.div>
+          ) : null}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
+
+function LessonTopBar({ title, done, total, sound, onSound }: { title: string; done: number; total: number; sound: boolean; onSound: () => void }) {
+  return (
+    <header className="sticky top-0 z-20 border-b border-line/70 bg-canvas/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-2xl items-center gap-4 px-3 sm:px-5">
+        <Link href="/learn" aria-label="Quit lesson" className="grid h-10 w-10 place-items-center rounded-full text-ink-2 transition hover:bg-sunken hover:text-ink"><X size={20} aria-hidden /></Link>
+        <div className="min-w-0 flex-1">
+          <p className="mb-1.5 truncate text-xs font-medium text-muted">{title}</p>
+          <div className="h-2 overflow-hidden rounded-full bg-sunken" role="progressbar" aria-label="Lesson progress" aria-valuenow={done} aria-valuemin={0} aria-valuemax={total}>
+            <div className="h-full rounded-full bg-sage-500 transition-[width] duration-500 ease-soft" style={{ width: `${(done / total) * 100}%` }} />
+          </div>
         </div>
-        <button onClick={() => { const on = !sound; setSound(on); setSoundEnabled(on); if (on) playCorrect(); }} aria-label={sound ? "Mute sounds" : "Turn sounds on"} aria-pressed={!sound} className="p-2">
-          {sound ? <VolumeHighIcon size={20} strokeWidth={1.75} /> : <VolumeOffIcon size={20} strokeWidth={1.75} />}
+        <span className="tabular w-10 text-right text-sm font-medium text-muted">{done}/{total}</span>
+        <button onClick={onSound} aria-label={sound ? "Mute sounds" : "Turn sounds on"} aria-pressed={!sound} className="grid h-10 w-10 place-items-center rounded-full text-ink-2 transition hover:bg-sunken hover:text-ink">
+          {sound ? <Volume2 size={19} aria-hidden /> : <VolumeX size={19} aria-hidden />}
         </button>
-      </header>
-      <section className="flex flex-1 flex-col justify-center py-6">
-        <h1 className="text-2xl font-bold leading-tight tracking-tight">{ex.type === "translate" ? "Translate this sentence" : ex.prompt}</h1>
-        {ex.type === "mc" && ex.speak && (
-          <button onClick={() => speak(ex.speak!, data.speechLang)} className="mt-3 inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-2 text-sm"><VolumeHighIcon size={18} strokeWidth={1.75} /> Listen</button>
-        )}
-        {ex.type === "translate" && <p className="mt-2 text-lg text-muted">{ex.prompt}</p>}
-        <div className="mt-6">
-          {ex.type === "mc" && <Mc key={ex.id} ex={ex} onChange={setCur} locked={!!fb} />}
-          {ex.type === "translate" && <Translate key={ex.id} ex={ex} onChange={setCur} locked={!!fb} />}
-          {ex.type === "match" && <Match key={ex.id} ex={ex} onFinish={matchDone} />}
-        </div>
-      </section>
-      {!fb && ex.type !== "match" && <button onClick={check} disabled={cur === null || busy} className="w-full rounded-full bg-ink px-5 py-4 font-semibold text-paper transition active:scale-[0.98] disabled:opacity-30">Check</button>}
-      {fb && (
-        <motion.div initial={reduce ? false : { y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ type: "spring", stiffness: 260, damping: 26 }}
-          className={`-mx-4 -mb-6 rounded-t-card p-5 pb-8 ${fb.correct ? "bg-yellow text-[#111]" : "bg-ink text-paper"}`} role="status">
-          <p className="flex items-center gap-2 text-lg font-bold">{fb.correct ? <Tick02Icon size={22} strokeWidth={1.75} /> : <Cancel01Icon size={22} strokeWidth={1.75} />}{fb.correct ? "Correct" : "Not quite"}</p>
-          {!fb.correct && <p className="mt-1 text-sm">Answer: {fmtAnswer(ex, fb.answer)}</p>}
-          <button onClick={next} className={`mt-4 w-full rounded-full px-5 py-4 font-semibold transition active:scale-[0.98] ${fb.correct ? "bg-[#111] text-[#fafafa]" : "bg-yellow text-[#111]"}`}>Continue</button>
-        </motion.div>
-      )}
-    </main>
+      </div>
+    </header>
   );
 }
 
@@ -148,14 +212,42 @@ function fmtAnswer(ex: PublicExercise, a: unknown): string {
   return (a as Pair[]).map((p) => `${p.target} = ${p.english}`).join(", ");
 }
 
-function Mc({ ex, onChange, locked }: { ex: Extract<PublicExercise, { type: "mc" }>; onChange: (a: Ans) => void; locked: boolean }) {
+const KEYS = ["A", "B", "C", "D", "E", "F"];
+
+function Mc({ ex, onChange, locked, result }: { ex: Extract<PublicExercise, { type: "mc" }>; onChange: (a: Ans) => void; locked: boolean; result: Feedback | null }) {
   const [sel, setSel] = useState<number | null>(null);
+  // Number keys 1 to 4 pick an option.
+  useEffect(() => {
+    if (locked) return;
+    const onKey = (e: KeyboardEvent) => {
+      const n = Number(e.key) - 1;
+      if (Number.isInteger(n) && n >= 0 && n < ex.options.length) { setSel(n); onChange(n); }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [locked, ex.options.length, onChange]);
   return (
-    <div className="grid gap-3">
-      {ex.options.map((o, i) => (
-        <button key={i} disabled={locked} aria-pressed={sel === i} onClick={() => { setSel(i); onChange(i); }}
-          className={`rounded-card border px-4 py-4 text-left text-lg font-medium transition active:scale-[0.99] ${sel === i ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>{o}</button>
-      ))}
+    <div role="radiogroup" aria-label="Answers" className="grid gap-3">
+      {ex.options.map((o, i) => {
+        const picked = sel === i;
+        const right = !!result && result.answer === i;
+        const wrong = !!result && picked && !result.correct;
+        return (
+          <button key={i} role="radio" aria-checked={picked} disabled={locked} onClick={() => { setSel(i); onChange(i); }}
+            className={cn("group flex items-center gap-4 rounded-card border bg-surface px-4 py-4 text-left text-[17px] font-medium text-ink shadow-card transition duration-150 ease-soft",
+              !locked && "hover:border-ink/30 hover:shadow-raised active:scale-[0.995]",
+              picked && !result && "border-ink ring-4 ring-ink/5",
+              right && "border-sage-500 bg-sage-50 text-sage-700",
+              wrong && "border-coral-300 bg-coral-50 text-coral-700",
+              !picked && !right && "border-line", locked && !right && !wrong && "opacity-60")}>
+            <span className={cn("grid h-8 w-8 shrink-0 place-items-center rounded-lg border text-xs font-semibold transition",
+              picked && !result ? "border-ink bg-ink text-white" : right ? "border-sage-600 bg-sage-600 text-white" : wrong ? "border-coral-600 bg-coral-600 text-white" : "border-line-strong text-muted group-hover:border-ink/30")}>
+              {right ? <Check size={15} strokeWidth={3} aria-hidden /> : wrong ? <X size={15} strokeWidth={3} aria-hidden /> : KEYS[i]}
+            </span>
+            {o}
+          </button>
+        );
+      })}
     </div>
   );
 }
@@ -163,13 +255,23 @@ function Mc({ ex, onChange, locked }: { ex: Extract<PublicExercise, { type: "mc"
 function Translate({ ex, onChange, locked }: { ex: Extract<PublicExercise, { type: "translate" }>; onChange: (a: Ans) => void; locked: boolean }) {
   const [picked, setPicked] = useState<number[]>([]);
   const set = (p: number[]) => { setPicked(p); if (p.length) onChange(p.map((i) => ex.bank[i])); };
+  const chip = "rounded-input border px-4 py-2.5 text-[16px] font-medium shadow-card transition duration-150 ease-soft";
   return (
     <div>
-      <div className="flex min-h-[64px] flex-wrap gap-2 border-b border-line pb-3" aria-label="Your answer">
-        {picked.map((i, k) => <button key={k} disabled={locked} onClick={() => set(picked.filter((_, j) => j !== k))} className="rounded-full bg-yellow px-4 py-2 font-medium text-[#111]">{ex.bank[i]}</button>)}
+      <div className="flex min-h-[76px] flex-wrap content-start gap-2 rounded-card border border-dashed border-line-strong bg-surface/60 p-3" aria-label="Your answer">
+        {picked.length === 0 && <p className="px-1 py-2 text-sm text-muted">Tap the words below in order</p>}
+        {picked.map((i, k) => (
+          <motion.button layout key={`${i}-${k}`} disabled={locked} onClick={() => set(picked.filter((_, j) => j !== k))} className={cn(chip, "border-ink/20 bg-surface text-ink hover:border-ink/40")}>{ex.bank[i]}</motion.button>
+        ))}
       </div>
-      <div className="mt-4 flex flex-wrap gap-2">
-        {ex.bank.map((w, i) => <button key={i} disabled={locked || picked.includes(i)} onClick={() => set([...picked, i])} className="rounded-full border border-line px-4 py-2 font-medium disabled:opacity-25">{w}</button>)}
+      <div className="mt-5 flex flex-wrap gap-2">
+        {ex.bank.map((w, i) => {
+          const used = picked.includes(i);
+          return (
+            <button key={i} disabled={locked || used} onClick={() => set([...picked, i])}
+              className={cn(chip, used ? "border-transparent bg-sunken text-transparent shadow-none" : "border-line bg-surface text-ink hover:-translate-y-px hover:border-ink/30")}>{w}</button>
+          );
+        })}
       </div>
     </div>
   );
@@ -199,19 +301,25 @@ function Match({ ex, onFinish }: { ex: Extract<PublicExercise, { type: "match" }
       setTimeout(() => setWrong(null), 450);
     }
   }
+  const tile = "min-h-[56px] rounded-card border bg-surface px-4 py-3 text-[16px] font-medium shadow-card transition duration-150 ease-soft";
   return (
-    <div className="grid grid-cols-2 gap-3">
-      <div className="grid gap-3">
-        {ex.left.map((l) => {
-          const ok = matched.includes(l);
-          return <button key={l} disabled={ok} onClick={() => setLeft(l)} aria-pressed={left === l} className={`rounded-card border px-3 py-3 font-medium transition active:scale-[0.98] ${ok ? "border-ink bg-yellow text-[#111] opacity-60" : left === l ? "border-ink bg-yellow text-[#111]" : "border-line"}`}>{l}</button>;
-        })}
-      </div>
-      <div className="grid gap-3">
-        {ex.right.map((r) => {
-          const ok = doneRight.has(r);
-          return <button key={r} disabled={ok || !left} onClick={() => pickRight(r)} className={`rounded-card border px-3 py-3 font-medium transition active:scale-[0.98] disabled:opacity-40 ${ok ? "border-ink bg-yellow text-[#111] opacity-60" : wrong === r ? "border-ink bg-ink text-paper" : "border-line"}`}>{r}</button>;
-        })}
+    <div>
+      <p className="mb-4 text-sm text-muted">Pick a word on the left, then its meaning on the right.</p>
+      <div className="grid grid-cols-2 gap-3">
+        <div className="grid gap-3">
+          {ex.left.map((l) => {
+            const ok = matched.includes(l);
+            return <button key={l} disabled={ok} onClick={() => setLeft(l)} aria-pressed={left === l}
+              className={cn(tile, ok ? "border-sage-100 bg-sage-50 text-sage-700 shadow-none" : left === l ? "border-ink text-ink ring-4 ring-ink/5" : "border-line text-ink hover:border-ink/30")}>{l}</button>;
+          })}
+        </div>
+        <div className="grid gap-3">
+          {ex.right.map((r) => {
+            const ok = doneRight.has(r);
+            return <button key={r} disabled={ok || !left} onClick={() => pickRight(r)}
+              className={cn(tile, ok ? "border-sage-100 bg-sage-50 text-sage-700 shadow-none" : wrong === r ? "border-coral-300 bg-coral-50 text-coral-700" : "border-line text-ink enabled:hover:border-ink/30 disabled:text-ink-2")}>{r}</button>;
+          })}
+        </div>
       </div>
     </div>
   );
@@ -219,6 +327,7 @@ function Match({ ex, onFinish }: { ex: Extract<PublicExercise, { type: "match" }
 
 function Results({ r, id }: { r: Result; id: string }) {
   const api = useApi();
+  const reduce = useReducedMotion();
   const [voucher, setVoucher] = useState<{ amount: string } | null>(null);
   const [pending, setPending] = useState(r.voucherPending);
   const [review, setReview] = useState(r.reviewPending);
@@ -231,49 +340,86 @@ function Results({ r, id }: { r: Result; id: string }) {
       .finally(() => { if (!dead) setPending(false); });
     return () => { dead = true; };
   }, [api, r]);
+  const pct = Math.round(r.accuracy * 100);
+  const mins = Math.floor(r.durationS / 60), secs = Math.round(r.durationS % 60);
+  const title = r.passed ? (isCheckpoint(id) ? "Checkpoint cleared" : "Lesson complete") : r.tooFast ? "A little too fast" : "Almost there";
+  const body = r.passed
+    ? `Your streak is now ${r.streak} day${r.streak === 1 ? "" : "s"}. Nicely done.`
+    : r.tooFast ? `You got it right, but a pass needs at least ${r.minSeconds} seconds. Slow down and listen to each word.`
+    : "You need 80% to pass. Try again and the words you missed will come up first.";
   return (
-    <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col justify-between px-4 pb-8 pt-16">
-      <div>
-        <p className="text-sm text-muted">{isCheckpoint(id) ? "Checkpoint" : "Lesson"} complete</p>
-        <h1 className="mt-2 text-5xl font-bold tracking-tighter">{r.passed ? "Passed" : r.tooFast ? "Too fast" : "Not this time"}</h1>
-        <p className="mt-3 font-mono text-3xl">{Math.round(r.accuracy * 100)}%</p>
-        <p className="mt-2 max-w-[34ch] text-muted">
-          {r.passed ? `Streak: ${r.streak} day${r.streak === 1 ? "" : "s"}.` : r.tooFast ? `You got it right, but a pass needs at least ${r.minSeconds} seconds. Slow down and listen to each word.` : "You need 80% to pass. Try again, the words you missed will come up first."}
-        </p>
-      </div>
-      <div className="grid gap-3">
-        {pending && <p className="rounded-card border border-line p-4 text-center text-sm text-muted">Working out your reward...</p>}
-        {voucher && <Link href="/earn" className="rounded-card border border-ink p-4 text-center font-semibold">You earned {fmtGD(voucher.amount)} G$. Claim it</Link>}
-        {r.passed && !pending && !voucher && review && <p className="rounded-card border border-line p-4 text-center text-sm text-muted">Your reward is being reviewed. It will show up in Earn once that clears.</p>}
-        <Link href="/learn" className="rounded-full bg-yellow px-5 py-4 text-center font-semibold text-[#111]">{r.passed ? "Continue" : "Back to lessons"}</Link>
-      </div>
+    <main className="mx-auto flex min-h-[100dvh] max-w-lg flex-col justify-center px-5 py-12">
+      <motion.div initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
+        <Card className="overflow-hidden text-center">
+          <div className={cn("px-6 pb-8 pt-10", r.passed ? "bg-sage-50" : "bg-canvas")}>
+            <ProgressRing value={r.accuracy} size={120} stroke={8} tone={r.passed ? "sage" : "coral"} label={`${pct}% accuracy`}>
+              <span className="tabular text-3xl font-semibold tracking-[-0.03em] text-ink">{pct}<span className="text-lg text-muted">%</span></span>
+            </ProgressRing>
+            <p className="mt-6 text-eyebrow uppercase text-muted">{isCheckpoint(id) ? "Checkpoint" : "Lesson"} result</p>
+            <h1 className="mt-2 text-display-md text-ink">{title}</h1>
+            <p className="mx-auto mt-2 max-w-[36ch] text-pretty leading-relaxed text-ink-2">{body}</p>
+          </div>
+          <dl className="grid grid-cols-3 divide-x divide-line border-y border-line">
+            {[
+              { Icon: Target, k: "Accuracy", v: `${pct}%` },
+              { Icon: Clock, k: "Time", v: mins ? `${mins}m ${secs}s` : `${secs}s` },
+              { Icon: Flame, k: "Streak", v: `${r.streak}` },
+            ].map(({ Icon, k, v }) => (
+              <div key={k} className="px-3 py-4">
+                <dt className="flex items-center justify-center gap-1 text-xs font-medium text-muted"><Icon size={13} aria-hidden />{k}</dt>
+                <dd className="tabular mt-1 text-lg font-semibold text-ink">{v}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="grid gap-3 p-6">
+            {pending && <div className="flex items-center justify-center gap-2 rounded-input bg-sunken px-4 py-3 text-sm text-muted"><span className="h-2 w-2 animate-pulse rounded-full bg-sage-500" /> Working out your reward...</div>}
+            {voucher && (
+              <ButtonLink href="/earn" variant="subtle" size="lg" block className="justify-between px-5">
+                <span className="flex items-center gap-2.5"><span className="grid h-7 w-7 place-items-center rounded-full bg-sage-600 text-[10px] font-semibold text-white">G$</span>You earned {fmtGD(voucher.amount)} G$</span>
+                <span className="flex items-center gap-1 text-sm">Claim <ArrowRight size={15} aria-hidden /></span>
+              </ButtonLink>
+            )}
+            {r.passed && !pending && !voucher && review && <Notice tone="info">Your reward is being reviewed. It will show up in Rewards once that clears.</Notice>}
+            <ButtonLink href="/learn" size="lg" block variant={voucher ? "secondary" : "primary"} iconRight={ArrowRight}>{r.passed ? "Continue" : "Back to your path"}</ButtonLink>
+          </div>
+        </Card>
+      </motion.div>
     </main>
   );
 }
 
 /** Shown before the questions so a complete beginner meets each word, and hears it, before being asked about it. */
 function Intro({ words, lang, title, onStart }: { words: { target: string; english: string }[]; lang: string; title: string; onStart: () => void }) {
+  const reduce = useReducedMotion();
   return (
-    <main className="mx-auto flex min-h-[100dvh] max-w-md flex-col px-4 pb-6 pt-4">
-      <header className="flex items-center gap-3">
-        <Link href="/learn" aria-label="Quit lesson" className="p-2"><Cancel01Icon size={22} strokeWidth={1.75} /></Link>
-        <p className="font-mono text-xs uppercase tracking-wider text-muted">{title}</p>
+    <div className="flex min-h-[100dvh] flex-col bg-canvas">
+      <header className="sticky top-0 z-20 border-b border-line/70 bg-canvas/85 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-2xl items-center gap-3 px-3 sm:px-5">
+          <Link href="/learn" aria-label="Quit lesson" className="grid h-10 w-10 place-items-center rounded-full text-ink-2 transition hover:bg-sunken hover:text-ink"><X size={20} aria-hidden /></Link>
+          <p className="truncate text-sm font-medium text-ink-2">{title}</p>
+        </div>
       </header>
-      <section className="flex flex-1 flex-col justify-center py-6">
-        <h1 className="text-3xl font-bold tracking-tighter">New words</h1>
-        <p className="mt-1 text-muted">Tap a word to hear it. Then you will practise them.</p>
-        <ul className="mt-6 grid gap-3">
-          {words.map((w) => (
-            <li key={w.target}>
-              <button onClick={() => speak(w.target, lang)} className="flex w-full items-center justify-between rounded-card border border-line p-4 text-left transition active:scale-[0.98]">
-                <span><span className="block text-xl font-semibold">{w.target}</span><span className="text-muted">{w.english}</span></span>
-                <VolumeHighIcon size={22} strokeWidth={1.75} />
+      <main className="mx-auto w-full max-w-2xl flex-1 px-5 pb-36 pt-10 sm:pt-14">
+        <p className="text-eyebrow uppercase text-sage-700">New words</p>
+        <h1 className="mt-3 text-display-md text-ink sm:text-[2rem]">Meet the words first</h1>
+        <p className="mt-2 text-[15px] text-muted">Tap a word to hear it. Then you&apos;ll practise them.</p>
+        <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+          {words.map((w, i) => (
+            <motion.li key={w.target} initial={reduce ? false : { opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}>
+              <button onClick={() => speak(w.target, lang)} className="group flex w-full items-center justify-between gap-4 rounded-card border border-line bg-surface p-5 text-left shadow-card transition duration-150 ease-soft hover:border-ink/25 hover:shadow-raised">
+                <span><span lang={lang} className="block text-xl font-semibold tracking-[-0.015em] text-ink">{w.target}</span><span className="mt-0.5 block text-[15px] text-muted">{w.english}</span></span>
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-sage-50 text-sage-700 transition group-hover:bg-sage-100"><Volume2 size={18} aria-hidden /></span>
               </button>
-            </li>
+            </motion.li>
           ))}
         </ul>
-      </section>
-      <button onClick={onStart} className="w-full rounded-full bg-ink px-5 py-4 font-semibold text-paper transition active:scale-[0.98]">Start practice</button>
-    </main>
+      </main>
+      <div className="fixed inset-x-0 bottom-0 border-t border-line bg-surface/90 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-5 backdrop-blur-md">
+        <div className="mx-auto flex max-w-2xl items-center justify-between gap-4 px-5">
+          <p className="hidden text-sm text-muted sm:block">{words.length} new word{words.length === 1 ? "" : "s"}</p>
+          <Button onClick={onStart} size="lg" variant="secondary" iconRight={ArrowRight} className="max-sm:w-full sm:min-w-[180px]">Start practice</Button>
+        </div>
+      </div>
+    </div>
   );
 }
