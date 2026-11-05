@@ -214,7 +214,7 @@ function Languages({ onStart }: { onStart: () => void }) {
 const TRUST = [
   { Icon: ScanFace, title: "One person, one account", body: "Rewards need a quick GoodDollar face check, so they go to real learners and not bots. Lessons stay free either way." },
   { Icon: ShieldCheck, title: "Paid on-chain, on Celo", body: "Rewards are signed vouchers you claim from the LearnIt rewards pool contract. Every claim is a transaction anyone can look up." },
-  { Icon: PiggyBank, title: "Optional streak staking", body: "Put G$ behind a 7-day challenge. Finish all seven days and take your stake back, plus a share of what others forfeit." },
+  { Icon: PiggyBank, title: "Stake to stay committed", body: "Optional. Put G$ behind a 7-day challenge. Pass a lesson on all seven days to get your stake back. Miss a day and it is shared with the people who finished." },
   { Icon: Lock, title: "Fair by design", body: "A daily cap on rewards, a minimum time per lesson and contracts that can be paused if anything looks wrong." },
 ];
 
@@ -255,7 +255,7 @@ const FAQ = [
   { q: "Do I need a crypto wallet?", a: "No. Sign in with email and LearnIt creates a wallet for you. If you already use GoodDollar, connect that wallet instead." },
   { q: "Is it really free?", a: "Yes. Every lesson is free. Claiming rewards and staking need a one-time GoodDollar face check, and a small amount of CELO for network fees, which we send you once." },
   { q: "How much can I earn?", a: "Each passed lesson and checkpoint earns a set G$ reward, up to a daily cap. The amounts are shown in the app before you claim, and the cap keeps things fair for everyone." },
-  { q: "What happens if I miss a day while staking?", a: "Your stake in that week's challenge goes to the learners who finished. You can always choose not to stake. Learning and earning work without it." },
+  { q: "What happens if I miss a day while staking?", a: "You lose that stake: it is shared with the people who finished. Staking is optional, and learning and rewards work without it." },
 ];
 
 function Faq() {

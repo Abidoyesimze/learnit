@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { Fuel } from "lucide-react";
+import { ExternalLink, Fuel } from "lucide-react";
+import { CELO_HELP_URL } from "@/lib/links";
 import { useApi } from "@/lib/useApi";
 import { Button, Card } from "./ui";
 
@@ -26,6 +27,10 @@ export function GasCard() {
       </div>
       <Button onClick={go} loading={busy} variant="outline" block className="mt-5">Get CELO for fees</Button>
       {err && <p role="alert" className="mt-2 text-sm text-danger">{err}</p>}
+      <p className="mt-4 text-sm text-muted">
+        Need more later?{" "}
+        <a href={CELO_HELP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 font-medium text-ink underline underline-offset-4">Get CELO in our Telegram group <ExternalLink size={13} aria-hidden /></a>
+      </p>
     </Card>
   );
 }

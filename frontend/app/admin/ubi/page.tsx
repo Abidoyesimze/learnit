@@ -64,7 +64,7 @@ export default function Ubi() {
                       <th scope="row" className="px-5 py-2.5 font-medium">{label(d.day)}</th>
                       <td className="px-3 py-2.5 text-right">{d.claims}</td>
                       <td className="px-3 py-2.5 text-right">{d.claimers}</td>
-                      <td className="px-5 py-2.5 text-right font-medium">{fmtGD(d.total)}</td>
+                      <td className="px-5 py-2.5 text-right font-medium">{fmtGD(d.total, 2, false)}</td>
                     </tr>
                   ))}
                 </tbody>

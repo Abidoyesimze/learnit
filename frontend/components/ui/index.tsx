@@ -120,7 +120,7 @@ export function Progress({ value, className, tone = "sage", label }: { value: nu
   const fill = tone === "coral" ? "bg-coral-500" : tone === "navy" ? "bg-ink" : "bg-sage-500";
   return (
     <div role="progressbar" aria-label={label} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(pct)} className={cn("h-2 overflow-hidden rounded-full bg-sunken", className)}>
-      <motion.div className={cn("h-full rounded-full", fill)} initial={reduce ? false : { width: 0 }} animate={{ width: `${pct}%` }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} />
+      <motion.div className={cn("h-full w-full origin-left rounded-full", fill)} initial={reduce ? false : { scaleX: 0 }} animate={{ scaleX: pct / 100 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} />
     </div>
   );
 }
@@ -174,7 +174,7 @@ export function Notice({ tone = "info", title, children, className, action }: { 
 
 export const fieldClass =
   "w-full rounded-input border border-line-strong bg-surface px-4 py-3 text-[15px] text-ink placeholder:text-muted/70 transition duration-150 " +
-  "hover:border-ink/30 focus:border-ink focus:outline-none focus:ring-4 focus:ring-ink/5 disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-70 " +
+  "hover:border-ink/30 focus:border-ink focus:outline-none focus:ring-4 focus:ring-ink/15 disabled:cursor-not-allowed disabled:bg-sunken disabled:opacity-70 " +
   "aria-[invalid=true]:border-danger aria-[invalid=true]:focus:ring-danger/10";
 
 export function Label({ className, ...rest }: ComponentProps<"label">) {

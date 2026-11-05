@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAccount, useWriteContract, usePublicClient } from "wagmi";
-import { BookOpen, CheckCircle2, Clock, ExternalLink, Gift, Trophy } from "lucide-react";
+import { BookOpen, CheckCircle2, ChevronDown, Clock, ExternalLink, Gift, Trophy } from "lucide-react";
 import { useApi } from "@/lib/useApi";
 import { friendlyError, STALE_ERRORS } from "@/lib/txErrors";
 import { rewardsPoolAbi } from "@learnit/backend/abis";
@@ -27,7 +27,7 @@ function expiresIn(expiry: number) {
   const h = Math.floor(s / 3600), d = Math.floor(h / 24);
   return d >= 1 ? `Expires in ${d} day${d === 1 ? "" : "s"}` : h >= 1 ? `Expires in ${h}h` : "Expires soon";
 }
-const STEP_LABEL: Record<Exclude<Step, null>, string> = { checking: "Checking...", wallet: "Confirm in your wallet", confirming: "Waiting for confirmation" };
+const STEP_LABEL: Record<Exclude<Step, null>, string> = { checking: "Checking…", wallet: "Confirm in your wallet", confirming: "Waiting for confirmation" };
 const toArg = (v: V) => ({ root: v.root, amount: BigInt(v.amount), nonce: BigInt(v.nonce), expiry: BigInt(v.expiry) });
 
 export default function Earn() {
@@ -40,6 +40,8 @@ export default function Earn() {
   const [step, setStep] = useState<Step>(null);
   const [err, setErr] = useState<string | null>(null);
   const [tx, setTx] = useState<string | null>(null);
+  const [done, setDone] = useState<string | null>(null);
+  const [showHistory, setShowHistory] = useState(false);
   const live = Boolean(ADDR.rewardsPool);
   const busy = step !== null;
 
@@ -68,7 +70,7 @@ export default function Earn() {
 
   async function claim(batch: V[]) {
     if (!pc || !address || !live) return setErr("Rewards are not live yet.");
-    setErr(null); setTx(null); setStep("checking");
+    setErr(null); setTx(null); setDone(null); setStep("checking");
     try {
       const call = batch.length === 1
         ? { functionName: "claim", args: [toArg(batch[0]), batch[0].signature] }
@@ -81,6 +83,7 @@ export default function Earn() {
       const receipt = await pc.waitForTransactionReceipt({ hash });
       if (receipt.status !== "success") throw new Error("The transaction failed on the network.");
       await qc.invalidateQueries({ queryKey: ["vouchers"] });
+      setDone(`${fmtGD(batch.reduce((n, v) => n + BigInt(v.amount), 0n))} G$ is in your wallet.`);
     } catch (e) {
       const msg = friendlyError(e);
       setErr(msg);
@@ -90,6 +93,31 @@ export default function Earn() {
 
   const cap = BigInt(data.dailyCap);
   const earned = BigInt(data.earnedToday);
+  // The pool counts UTC days. Show the reset in the person's own time.
+  const resetAt = new Date((Math.floor(Date.now() / 86_400_000) + 1) * 86_400_000).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+  const history = list.filter((v) => stateOf(v) !== "ready");
+
+  const row = (v: V) => {
+    const st = stateOf(v);
+    const reason = REASON[v.reason] ?? { label: "Reward", Icon: Gift };
+    const soon = st === "ready" && v.expiry - now < 86_400;
+    return (
+      <li key={v.id} className={cn("flex items-center gap-4 px-6 py-4", st !== "ready" && "bg-canvas/50")}>
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-input bg-sunken text-ink-2"><reason.Icon size={18} strokeWidth={1.85} aria-hidden /></span>
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-semibold text-ink">{reason.label}</p>
+          <p className={cn("mt-0.5 flex items-center gap-1 text-xs", soon ? "font-medium text-coral-700" : "text-muted")}><Clock size={12} aria-hidden />{st === "claimed" ? "Paid to your wallet" : st === "expired" ? "Not claimed in time" : expiresIn(v.expiry)}</p>
+        </div>
+        <p className="tabular flex items-center gap-2 text-[15px] font-semibold text-ink"><GMark size={20} />{fmtGD(v.amount)}</p>
+        <div className="w-[96px] text-right">
+          {st === "ready" && !isPaused && <Button size="sm" variant={ready.length > 1 ? "outline" : "primary"} disabled={busy || !live} onClick={() => claim([v])} aria-label={`Claim ${reason.label.toLowerCase()}, ${fmtGD(v.amount)} G$`}>Claim</Button>}
+          {st === "ready" && isPaused && <Badge tone="outline">Paused</Badge>}
+          {st === "expired" && <Badge tone="neutral">Expired</Badge>}
+          {st === "claimed" && <Badge tone="sage" icon={CheckCircle2}>Claimed</Badge>}
+        </div>
+      </li>
+    );
+  };
 
   return (
     <AppShell>
@@ -101,15 +129,11 @@ export default function Earn() {
           <p className="tabular mt-3 text-[2.25rem] font-semibold leading-none tracking-[-0.03em]">{fmtGD(total)} <span className="text-base font-medium text-white/60">G$</span></p>
           <p className="mt-2 text-sm text-white/60">{ready.length} reward{ready.length === 1 ? "" : "s"} waiting</p>
         </Card>
-        <Card className="p-6">
-          <p className="text-sm font-medium text-muted">Earned today</p>
-          <p className="tabular mt-3 text-[1.75rem] font-semibold leading-none tracking-[-0.025em] text-ink">{fmtGD(data.earnedToday)} <span className="text-sm font-medium text-muted">G$</span></p>
-          <Progress className="mt-4" value={cap > 0n ? Number((earned * 1000n) / cap) / 1000 : 0} label="Share of today's cap earned" />
-        </Card>
-        <Card className="p-6">
-          <p className="text-sm font-medium text-muted">Left under today&apos;s cap</p>
-          <p className="tabular mt-3 text-[1.75rem] font-semibold leading-none tracking-[-0.025em] text-ink">{fmtGD(data.capRemaining)} <span className="text-sm font-medium text-muted">G$</span></p>
-          <p className="mt-4 text-xs text-muted">Daily cap: <span className="tabular">{fmtGD(data.dailyCap)}</span> G$. Resets each day.</p>
+        <Card className="p-6 sm:col-span-2">
+          <p className="text-sm font-medium text-muted">Today&apos;s limit</p>
+          <p className="tabular mt-3 text-[1.75rem] font-semibold leading-none tracking-[-0.025em] text-ink">{fmtGD(data.earnedToday)} <span className="text-sm font-medium text-muted">of {fmtGD(data.dailyCap)} G$ earned</span></p>
+          <Progress className="mt-4" value={cap > 0n ? Number((earned * 1000n) / cap) / 1000 : 0} label="Share of today's limit earned" />
+          <p className="mt-3 text-xs text-muted"><span className="tabular">{fmtGD(data.capRemaining)}</span> G$ left. Resets at {resetAt}.</p>
         </Card>
       </div>
 
@@ -135,36 +159,28 @@ export default function Earn() {
             {data.verified ? "Pass a lesson to earn G$. New rewards show up here straight away." : "Once you're verified, every lesson you pass earns G$ here."}
           </EmptyState>
         ) : (
-          <ul className="divide-y divide-line">
-            {list.map((v) => {
-              const st = stateOf(v);
-              const reason = REASON[v.reason] ?? { label: "Reward", Icon: Gift };
-              return (
-                <li key={v.id} className={cn("flex items-center gap-4 px-6 py-4", st !== "ready" && "bg-canvas/50")}>
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-input bg-sunken text-ink-2"><reason.Icon size={18} strokeWidth={1.85} aria-hidden /></span>
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm font-semibold text-ink">{reason.label}</p>
-                    <p className="mt-0.5 flex items-center gap-1 text-xs text-muted"><Clock size={12} aria-hidden />{st === "claimed" ? "Claimed" : expiresIn(v.expiry)}</p>
-                  </div>
-                  <p className="tabular flex items-center gap-2 text-[15px] font-semibold text-ink"><GMark size={20} />{fmtGD(v.amount)}</p>
-                  <div className="w-[96px] text-right">
-                    {st === "ready" && !isPaused && <Button size="sm" variant={ready.length > 1 ? "outline" : "primary"} disabled={busy || !live} onClick={() => claim([v])}>Claim</Button>}
-                    {st === "ready" && isPaused && <Badge tone="outline">Paused</Badge>}
-                    {st === "expired" && <Badge tone="neutral">Expired</Badge>}
-                    {st === "claimed" && <Badge tone="sage" icon={CheckCircle2}>Claimed</Badge>}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+          <>
+            {ready.length > 0 ? <ul className="divide-y divide-line">{ready.map(row)}</ul> : <p className="px-6 py-5 text-sm text-muted">Nothing to claim right now.</p>}
+            {history.length > 0 && (
+              <div className="border-t border-line">
+                <button type="button" onClick={() => setShowHistory((v) => !v)} aria-expanded={showHistory}
+                  className="flex w-full items-center justify-between px-6 py-3.5 text-left text-sm font-medium text-ink-2 transition hover:bg-canvas">
+                  History ({history.length})
+                  <ChevronDown size={16} aria-hidden className={cn("transition-transform duration-200", showHistory && "rotate-180")} />
+                </button>
+                {showHistory && <ul className="divide-y divide-line border-t border-line">{history.map(row)}</ul>}
+              </div>
+            )}
+          </>
         )}
       </Card>
 
       <div className="mt-4 grid gap-3" aria-live="polite">
         {busy && ready.length <= 1 && <Notice tone="info">{STEP_LABEL[step!]}</Notice>}
+        {done && <Notice tone="success">{done}</Notice>}
         {tx && (
           <p className="text-sm text-muted">Transaction{" "}
-            <a className="inline-flex items-center gap-1 font-mono text-ink underline-offset-2 hover:underline" href={`https://celoscan.io/tx/${tx}`} target="_blank" rel="noreferrer">{tx.slice(0, 10)}...{tx.slice(-6)} <ExternalLink size={12} aria-hidden /></a>
+            <a className="inline-flex items-center gap-1 font-mono text-ink underline-offset-2 hover:underline" href={`https://celoscan.io/tx/${tx}`} target="_blank" rel="noreferrer">{tx.slice(0, 10)}…{tx.slice(-6)} <ExternalLink size={12} aria-hidden /></a>
           </p>
         )}
         {err && <Notice tone="danger">{err}</Notice>}
