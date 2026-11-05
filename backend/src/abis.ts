@@ -23,6 +23,12 @@ export const streakVaultAbi = parseAbi([
   "function finished(uint256 id, address user) view returns (bool)",
   "function withdrawn(uint256 id, address user) view returns (bool)",
   "function payoutOf(uint256 id, address user) view returns (uint256)",
+  // admin: create challenges, pause, and check who holds which role
+  "function createCohort(uint64 start, uint128 min, uint128 max) returns (uint256 id)",
+  "function pause()", "function unpause()",
+  "function hasRole(bytes32 role, address account) view returns (bool)",
+  "function DEFAULT_ADMIN_ROLE() view returns (bytes32)", "function GUARDIAN_ROLE() view returns (bytes32)",
+  "error AccessControlUnauthorizedAccount(address account, bytes32 neededRole)", "error ExpectedPause()",
   "error NotVerified()", "error VerificationEndsBeforeCohort()", "error JoinClosed()", "error AlreadyStaked()", "error OutOfBounds()", "error BadParams()",
   "error NotSettled()", "error NotFinisher()", "error AlreadyWithdrawn()", "error EnforcedPause()",
   "event Staked(uint256 indexed id, address indexed user, address indexed root, uint256 requested, uint256 received)",

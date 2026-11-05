@@ -22,6 +22,9 @@ const MESSAGES: Record<string, string> = {
   NotSettled: "This challenge has not been settled yet.",
   NotFinisher: "Only people who finished every day can withdraw.",
   AlreadyWithdrawn: "You have already withdrawn.",
+  // Admin
+  AccessControlUnauthorizedAccount: "This wallet does not have permission to do that. Connect the admin wallet.",
+  ExpectedPause: "Staking is not paused.",
 };
 
 /** Turns wallet and contract failures into a sentence a person can act on. */
