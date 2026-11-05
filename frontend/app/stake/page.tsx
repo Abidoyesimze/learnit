@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAccount, useWriteContract, usePublicClient } from "wagmi";
 import { erc20Abi, parseUnits } from "viem";
-import { CalendarDays, Check, ExternalLink, Flame, Lock, ShieldCheck, Trophy, Users, PiggyBank } from "lucide-react";
+import { CalendarDays, Check, Flame, Lock, Trophy, Users, PiggyBank } from "lucide-react";
 import { useApi } from "@/lib/useApi";
 import { useMe } from "@/lib/useMe";
 import { friendlyError } from "@/lib/txErrors";
@@ -241,19 +241,6 @@ export default function Stake() {
                 </li>
               ))}
             </ol>
-          </Card>
-          <Card className="p-6">
-            <h2 className="flex items-center gap-2 text-[15px] font-semibold text-ink"><ShieldCheck size={17} className="text-sage-600" aria-hidden /> Good to know</h2>
-            <ul className="mt-4 grid gap-3 text-pretty text-sm leading-relaxed text-ink-2">
-              <li>There&apos;s no fixed APY. What you gain depends on how many members miss a day.</li>
-              <li>Stakes are held by the StreakVault contract, not by LearnIt.</li>
-              <li>The contract can be paused if anything looks wrong. Paused stakes stay safe.</li>
-            </ul>
-            {live && (
-              <a href={`https://celoscan.io/address/${ADDR.streakVault}`} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-ink underline-offset-4 hover:underline">
-                View the contract <ExternalLink size={13} aria-hidden />
-              </a>
-            )}
           </Card>
         </aside>
       </div>
