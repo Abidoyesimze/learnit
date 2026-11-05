@@ -9,14 +9,14 @@ import { LanguageChip } from "./LanguageChip";
 import { ProfileMenu } from "./ProfileMenu";
 
 export const NAV: { href: string; label: string; Icon: LucideIcon }[] = [
-  { href: "/", label: "Home", Icon: Home },
+  { href: "/home", label: "Home", Icon: Home },
   { href: "/learn", label: "Learn", Icon: BookOpen },
   { href: "/league", label: "League", Icon: Trophy },
   { href: "/earn", label: "Rewards", Icon: Coins },
   { href: "/stake", label: "Stake", Icon: PiggyBank },
 ];
 
-const isOn = (path: string, href: string) => (href === "/" ? path === "/" : path.startsWith(href));
+const isOn = (path: string, href: string) => path === href || path.startsWith(href + "/");
 
 /**
  * The signed-in frame. Desktop: a quiet sidebar on the left. Mobile: a top bar and a bottom tab bar.
@@ -30,7 +30,7 @@ export function AppShell({ children, width = "wide", topRight }: { children: Rea
 
       {/* Desktop sidebar */}
       <aside className="sticky top-0 hidden h-[100dvh] flex-col border-r border-line bg-surface/60 px-4 py-6 backdrop-blur lg:flex">
-        <Link href="/" className="px-2" aria-label="LearnIt home"><Logo /></Link>
+        <Link href="/home" className="px-2" aria-label="LearnIt home"><Logo /></Link>
         <nav aria-label="Main" className="mt-10">
           <ul className="grid gap-0.5">
             {NAV.map(({ href, label, Icon }) => {
@@ -58,7 +58,7 @@ export function AppShell({ children, width = "wide", topRight }: { children: Rea
         {/* Mobile top bar */}
         <header className="sticky top-0 z-30 border-b border-line/70 bg-canvas/85 backdrop-blur-md lg:hidden">
           <div className="mx-auto flex h-14 max-w-2xl items-center justify-between gap-3 px-4">
-            <Link href="/" aria-label="LearnIt home"><Logo compact /></Link>
+            <Link href="/home" aria-label="LearnIt home"><Logo compact /></Link>
             <div className="flex items-center gap-2">
               {topRight}
               <LanguageChip />
@@ -81,7 +81,7 @@ export function AppShell({ children, width = "wide", topRight }: { children: Rea
 export function TabBar() {
   const path = usePathname();
   return (
-    <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md lg:hidden">
+    <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md [transform:translateZ(0)] lg:hidden">
       <ul className="mx-auto grid max-w-lg grid-cols-5">
         {NAV.map(({ href, label, Icon }) => {
           const on = isOn(path, href);

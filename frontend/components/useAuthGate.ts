@@ -9,6 +9,6 @@ export function useAuthGate() {
   const router = useRouter();
   const { data: me } = useMe();
   useEffect(() => { if (ready && !authenticated) router.replace("/"); }, [ready, authenticated, router]);
-  useEffect(() => { if (me && !me.onboarded) router.replace("/"); }, [me, router]);
+  useEffect(() => { if (me && !me.onboarded) router.replace("/home"); }, [me, router]);
   return ready && authenticated;
 }

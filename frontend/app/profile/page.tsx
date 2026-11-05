@@ -116,7 +116,7 @@ export default function Profile() {
                 <dt className="text-muted">GoodDollar</dt>
                 <dd>{me.verified
                   ? <span className="inline-flex items-center gap-1.5 font-medium text-sage-700"><BadgeCheck size={16} aria-hidden /> Verified</span>
-                  : <Link href="/" className="inline-flex items-center gap-1.5 font-medium text-coral-700 underline-offset-4 hover:underline"><ScanFace size={16} aria-hidden /> Verify now</Link>}</dd>
+                  : <Link href="/home" className="inline-flex items-center gap-1.5 font-medium text-coral-700 underline-offset-4 hover:underline"><ScanFace size={16} aria-hidden /> Verify now</Link>}</dd>
               </div>
               <div className="flex items-center justify-between gap-4 px-6 py-4">
                 <dt className="text-muted">Learning</dt>

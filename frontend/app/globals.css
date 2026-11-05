@@ -35,9 +35,10 @@
   --focus: #0f172a;
 }
 
-html { background: var(--canvas); color: var(--ink); }
+html { background: var(--canvas); color: var(--ink); overflow-x: clip; }
 body {
   min-height: 100dvh;
+  overflow-x: clip; /* nothing may pan the page sideways: on phones that makes fixed bars slide with it */
   font-family: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
   font-feature-settings: "cv11", "ss01", "ss03";
   -webkit-font-smoothing: antialiased;
