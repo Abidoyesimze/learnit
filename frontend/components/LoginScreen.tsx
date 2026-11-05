@@ -253,7 +253,7 @@ function Rewards() {
 
 const FAQ = [
   { q: "Do I need a crypto wallet?", a: "No. Sign in with email and LearnIt creates a wallet for you. If you already use GoodDollar, connect that wallet instead." },
-  { q: "Is it really free?", a: "Yes. Every lesson is free. Claiming rewards and staking need a one-time GoodDollar face check, and a small amount of CELO for network fees, which we send you once." },
+  { q: "Is it really free?", a: "Yes. Every lesson is free. Claiming rewards and staking need a one-time GoodDollar face check, and a little CELO for network fees, which you can get free in our Telegram group." },
   { q: "How much can I earn?", a: "Each passed lesson and checkpoint earns a set G$ reward, up to a daily cap. The amounts are shown in the app before you claim, and the cap keeps things fair for everyone." },
   { q: "What happens if I miss a day while staking?", a: "You lose that stake: it is shared with the people who finished. Staking is optional, and learning and rewards work without it." },
 ];

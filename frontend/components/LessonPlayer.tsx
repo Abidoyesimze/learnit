@@ -9,7 +9,7 @@ import { useApi } from "@/lib/useApi";
 import type { PublicExercise } from "@learnit/backend/lessons";
 import { fmtGD } from "@learnit/backend/format";
 import { LessonSkeleton } from "./Skeletons";
-import { playCorrect, playWrong, soundEnabled, setSoundEnabled } from "@/lib/sounds";
+import { playCorrect, playTap, playWrong, soundEnabled, setSoundEnabled } from "@/lib/sounds";
 
 type Loaded = { id: string; title: string; speechLang: string; token: string; intro?: { target: string; english: string }[]; exercises: PublicExercise[] };
 type Pair = { target: string; english: string };
@@ -56,6 +56,7 @@ export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) 
 
   const check = useCallback(async () => {
     if (!data || !ex || cur === null) return;
+    playTap(); // inside the press, so the browser allows audio
     setBusy(true);
     try {
       // Plain fetch: this endpoint needs no login token, only the signed start token, so it skips the auth round trip.
