@@ -1,6 +1,6 @@
 // Minimal service worker: cache the app shell so the PWA installs and opens offline.
-const CACHE = "learnit-v2";
-self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["/", "/manifest.webmanifest", "/icon.svg"]))); self.skipWaiting(); });
+const CACHE = "learnit-v3";
+self.addEventListener("install", (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(["/", "/home", "/manifest.webmanifest", "/icon.svg"]))); self.skipWaiting(); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k))))); self.clients.claim(); });
 self.addEventListener("fetch", (e) => {
   const u = new URL(e.request.url);
@@ -18,14 +18,14 @@ self.addEventListener("push", (e) => {
     badge: "/icon-192.png",
     tag: data.tag || "daily-reminder",
     renotify: false,
-    data: { url: data.url || "/" },
+    data: { url: data.url || "/home" },
   }));
 });
 
 // Tapping the notification opens (or focuses) the app on the right screen.
 self.addEventListener("notificationclick", (e) => {
   e.notification.close();
-  const url = (e.notification.data && e.notification.data.url) || "/";
+  const url = (e.notification.data && e.notification.data.url) || "/home";
   e.waitUntil((async () => {
     const all = await self.clients.matchAll({ type: "window", includeUncontrolled: true });
     for (const c of all) { if ("focus" in c) { await c.focus(); if ("navigate" in c) { try { await c.navigate(url); } catch {} } return; } }

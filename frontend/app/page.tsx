@@ -1,16 +1,21 @@
-"use client";
-import { usePrivy } from "@privy-io/react-auth";
+import type { Metadata } from "next";
 import { LoginScreen } from "@/components/LoginScreen";
-import { Home } from "@/components/Home";
-import { Onboarding } from "@/components/Onboarding";
-import { BootSkeleton } from "@/components/Skeletons";
-import { useMe } from "@/lib/useMe";
+import { RedirectIfSignedIn } from "@/components/RedirectIfSignedIn";
 
-export default function Page() {
-  const { ready, authenticated } = usePrivy();
-  const { data: me } = useMe();
-  if (!ready) return <BootSkeleton />;
-  if (!authenticated) return <LoginScreen />;
-  if (me && !me.onboarded) return <Onboarding />;
-  return <Home />;
+const description = "Ten calm minutes a day of French or Spanish, from zero. Pass a lesson, keep your streak, and earn GoodDollar (G$) rewards on Celo.";
+export const metadata: Metadata = {
+  title: "LearnIt: learn French or Spanish, earn G$",
+  description,
+  openGraph: { title: "LearnIt: learn French or Spanish, earn G$", description, type: "website", siteName: "LearnIt" },
+  twitter: { card: "summary", title: "LearnIt: learn French or Spanish, earn G$", description },
+};
+
+/** The public landing page. The app itself lives at /home. */
+export default function Landing() {
+  return (
+    <>
+      <RedirectIfSignedIn />
+      <LoginScreen />
+    </>
+  );
 }

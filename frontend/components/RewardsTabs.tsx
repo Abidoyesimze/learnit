@@ -9,7 +9,7 @@ export function RewardsTabs() {
   const path = usePathname();
   const tabs = [
     { href: "/earn", label: "Rewards", Icon: Coins },
-    { href: "/stake", label: "Streak stake", Icon: PiggyBank },
+    { href: "/stake", label: "Stake", Icon: PiggyBank },
   ];
   return (
     <nav aria-label="Rewards sections" className="inline-flex rounded-btn bg-sunken p-1 ring-1 ring-inset ring-line">

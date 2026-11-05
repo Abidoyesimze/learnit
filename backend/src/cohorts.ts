@@ -20,10 +20,28 @@ export async function listCohortIds() {
   return Array.from({ length: Number(next) - 1 }, (_, i) => i + 1);
 }
 
+const CHUNK = 5_000n; // public Celo RPCs reject eth_getLogs over wide block ranges
+const seen = new Map<number, { upTo: bigint; users: Set<string> }>(); // per cohort: how far we scanned, so later calls only read the new blocks
+
+/** Distinct stakers in a cohort. Scans Staked logs in chunks from VAULT_DEPLOY_BLOCK. A failed scan returns what was found so far instead of breaking the page. */
 export async function memberCount(id: number) {
   const v = vault(); if (!v) return 0;
-  const logs = await publicClient.getContractEvents({ address: v, abi: streakVaultAbi, eventName: "Staked", args: { id: BigInt(id) }, fromBlock: BigInt(process.env.VAULT_DEPLOY_BLOCK || 0), toBlock: "latest" });
-  return new Set(logs.map((l) => l.args.user)).size;
+  const entry = seen.get(id) ?? { upTo: BigInt(process.env.VAULT_DEPLOY_BLOCK || 0) - 1n, users: new Set<string>() };
+  seen.set(id, entry);
+  try {
+    const latest = await publicClient.getBlockNumber();
+    const ranges: [bigint, bigint][] = [];
+    for (let from = entry.upTo + 1n; from <= latest; from += CHUNK) ranges.push([from, from + CHUNK - 1n > latest ? latest : from + CHUNK - 1n]);
+    for (let i = 0; i < ranges.length; i += 6) { // a few chunks at a time
+      const batch = ranges.slice(i, i + 6);
+      const res = await Promise.all(batch.map(([fromBlock, toBlock]) => publicClient.getContractEvents({ address: v, abi: streakVaultAbi, eventName: "Staked", args: { id: BigInt(id) }, fromBlock, toBlock })));
+      for (const logs of res) for (const l of logs) entry.users.add(l.args.user as string);
+      entry.upTo = batch[batch.length - 1][1];
+    }
+  } catch (e) {
+    console.error("memberCount scan failed", id, e instanceof Error ? e.message.split("\n")[0] : e);
+  }
+  return entry.users.size;
 }
 
 export async function myState(id: number, user: User) {

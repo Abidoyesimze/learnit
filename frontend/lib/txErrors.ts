@@ -1,4 +1,5 @@
 import { BaseError, ContractFunctionRevertedError, UserRejectedRequestError } from "viem";
+import { CELO_HELP_URL } from "./links";
 
 const MESSAGES: Record<string, string> = {
   // RewardsPool
@@ -37,7 +38,7 @@ export function friendlyError(e: unknown): string {
     const rev = e.walk((x) => x instanceof ContractFunctionRevertedError) as ContractFunctionRevertedError | null;
     const name = rev?.data?.errorName;
     if (name && MESSAGES[name]) return MESSAGES[name];
-    if (/insufficient funds|exceeds the balance/i.test(e.shortMessage)) return "Not enough CELO to pay the network fee. Tap Get CELO for fees on the home screen.";
+    if (/insufficient funds|exceeds the balance/i.test(e.shortMessage)) return `Not enough CELO to pay the network fee. Get more in our Telegram group: ${CELO_HELP_URL}`;
     if (/allowance/i.test(e.shortMessage)) return "G$ spending was not approved. Try again and approve when your wallet asks.";
     if (/transfer amount exceeds balance|insufficient balance/i.test(e.shortMessage)) return "You do not have enough G$ for that amount.";
     return e.shortMessage;

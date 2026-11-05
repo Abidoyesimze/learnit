@@ -1,0 +1,174 @@
+"use client";
+import { useMemo, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
+import { useAccount, usePublicClient, useWriteContract } from "wagmi";
+import { encodeFunctionData } from "viem";
+import { ExternalLink, Flame, PauseCircle, PlayCircle, Plus } from "lucide-react";
+import { friendlyError } from "@/lib/txErrors";
+import { streakVaultAbi } from "@learnit/backend/abis";
+import { ADDR } from "@learnit/backend/chain";
+import { fmtGD } from "@learnit/backend/format";
+import { Badge, Button, Card, CardHeader, EmptyState, Label, Notice, PageHeader, fieldClass } from "@/components/ui";
+import { Sk } from "@/components/ui/Sk";
+import { useAdmin } from "@/components/admin/AdminProvider";
+import { DAY, cohortStatus, useCohorts, useVaultPaused, type CohortStatus } from "@/components/admin/data";
+import { SafeTx, parseG, when } from "@/components/admin/bits";
+
+const MIN_LEAD = 10 * 60; // the contract needs a future start when the transaction lands
+const toLocalInput = (d: Date) => new Date(d.getTime() - d.getTimezoneOffset() * 60_000).toISOString().slice(0, 16);
+const STATUS: Record<CohortStatus, { label: string; tone: "sage" | "coral" | "neutral" | "navy" }> = {
+  upcoming: { label: "Upcoming", tone: "navy" }, open: { label: "Open to join", tone: "sage" }, running: { label: "Running", tone: "sage" },
+  finalize: { label: "Needs finalizing", tone: "coral" }, settled: { label: "Settled", tone: "neutral" },
+};
+
+export default function Challenges() {
+  const qc = useQueryClient();
+  const pc = usePublicClient();
+  const { address } = useAccount();
+  const { writeContractAsync } = useWriteContract();
+  const { roles } = useAdmin();
+  const vault = ADDR.streakVault;
+  const cohorts = useCohorts();
+  const paused = useVaultPaused();
+  const isAdmin = roles?.admin === true, isGuardian = roles?.guardian === true;
+
+  const defaultStart = useMemo(() => { const d = new Date(Date.now() + DAY * 1000); d.setMinutes(0, 0, 0); return toLocalInput(d); }, []);
+  const [start, setStart] = useState(defaultStart);
+  const [min, setMin] = useState("");
+  const [max, setMax] = useState("");
+  const [busy, setBusy] = useState<null | "create" | "pause">(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [done, setDone] = useState<{ text: string; hash: `0x${string}` } | null>(null);
+
+  const startSec = Math.floor(new Date(start).getTime() / 1000);
+  const minWei = parseG(min), maxWei = parseG(max);
+  const now = Math.floor(Date.now() / 1000);
+  const touched = min !== "" || max !== "";
+  const problem =
+    !Number.isFinite(startSec) ? "Pick a start date and time."
+    : startSec < now + MIN_LEAD ? "The start must be at least 10 minutes from now."
+    : minWei === null || minWei === 0n ? "Enter a minimum stake above 0."
+    : maxWei === null || maxWei < minWei ? "The maximum must be at least the minimum."
+    : null;
+
+  async function send(kind: "create" | "pause", fn: "createCohort" | "pause" | "unpause", args: readonly unknown[], text: string) {
+    if (!pc || !address) return;
+    setBusy(kind); setErr(null); setDone(null);
+    try {
+      // Simulate first: a wrong wallet or bad value fails here with a readable reason, before any gas is spent.
+      const { request } = await pc.simulateContract({ account: address, address: vault, abi: streakVaultAbi, functionName: fn, args } as never);
+      const hash = await writeContractAsync(request);
+      await pc.waitForTransactionReceipt({ hash });
+      setDone({ text, hash });
+      await qc.invalidateQueries({ queryKey: ["admin"] });
+    } catch (e) { setErr(friendlyError(e)); } finally { setBusy(null); }
+  }
+
+  if (!vault) {
+    return (
+      <div className="grid gap-6">
+        <PageHeader title="Challenges" />
+        <Notice tone="info" title="The StreakVault is not set up yet">Set NEXT_PUBLIC_STREAK_VAULT_ADDRESS after you deploy the contracts, then reload.</Notice>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid gap-8">
+      <PageHeader title="Challenges" description="Seven-day streak challenges. People can join until the first day is over." />
+
+      {err && <Notice tone="danger">{err}</Notice>}
+      {done && (
+        <Notice tone="success" title="Done" action={<a className="inline-flex items-center gap-1 font-medium underline underline-offset-4" href={`https://celoscan.io/tx/${done.hash}`} target="_blank" rel="noreferrer">View transaction <ExternalLink size={13} aria-hidden /></a>}>
+          {done.text}
+        </Notice>
+      )}
+
+      <div className="grid gap-6 xl:grid-cols-[1.15fr_1fr]">
+        <Card className="p-6">
+          <CardHeader title="Create a challenge" description={isAdmin ? "Sent from your wallet. The contract checks your role." : "Your wallet is not the admin, so this prepares a transaction for the Safe."} />
+          <div className="mt-5 grid gap-4">
+            <div>
+              <Label htmlFor="start">Starts</Label>
+              <input id="start" type="datetime-local" value={start} onChange={(e) => setStart(e.target.value)} className={`${fieldClass} mt-1.5`} />
+              {Number.isFinite(startSec) && <p className="mt-1.5 text-sm text-muted">Joining closes {when(startSec + DAY)}. It ends {when(startSec + 7 * DAY)}.</p>}
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <Label htmlFor="min">Minimum stake (G$)</Label>
+                <input id="min" inputMode="decimal" value={min} onChange={(e) => setMin(e.target.value)} placeholder="100" className={`${fieldClass} mt-1.5`} />
+              </div>
+              <div>
+                <Label htmlFor="max">Maximum stake (G$)</Label>
+                <input id="max" inputMode="decimal" value={max} onChange={(e) => setMax(e.target.value)} placeholder="3000" className={`${fieldClass} mt-1.5`} />
+              </div>
+            </div>
+            {problem && touched && <p className="text-sm text-danger" role="alert">{problem}</p>}
+            {isAdmin ? (
+              <Button onClick={() => { if (!problem) void send("create", "createCohort", [BigInt(startSec), minWei!, maxWei!], `Challenge created. It starts ${when(startSec)} and runs for 7 days.`); }}
+                disabled={!!problem} loading={busy === "create"} icon={Plus} block>
+                {busy === "create" ? "Confirm in your wallet..." : "Create challenge"}
+              </Button>
+            ) : problem ? (
+              <p className="text-sm text-muted">Fill in the fields to get the Safe transaction.</p>
+            ) : (
+              <SafeTx to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: "createCohort", args: [BigInt(startSec), minWei!, maxWei!] })}
+                note="In the Safe app, open New transaction, then Transaction builder. Paste the address and data, keep the value at 0, and send it for signing. It must run before the start time." />
+            )}
+          </div>
+        </Card>
+
+        <Card className="p-6 xl:self-start">
+          <CardHeader title="Staking" description="Pausing stops new stakes. Stakes already in stay safe." />
+          <div className="mt-4 flex items-center justify-between gap-3">
+            {paused.isLoading ? <Sk className="h-6 w-20 rounded-full" /> : <Badge tone={paused.data ? "coral" : "sage"}>{paused.data ? "Paused" : "Running"}</Badge>}
+            {isGuardian && (
+              <Button variant="outline" size="sm" loading={busy === "pause"} icon={paused.data ? PlayCircle : PauseCircle}
+                onClick={() => send("pause", paused.data ? "unpause" : "pause", [], paused.data ? "Staking is running again." : "Staking is paused.")}>
+                {paused.data ? "Resume staking" : "Pause staking"}
+              </Button>
+            )}
+          </div>
+          {!isGuardian && paused.data !== undefined && (
+            <div className="mt-4">
+              <SafeTx to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: paused.data ? "unpause" : "pause" })}
+                note={`Only the guardian (the Safe) can ${paused.data ? "resume" : "pause"} staking. Send this from the Safe.`} />
+            </div>
+          )}
+        </Card>
+      </div>
+
+      <section aria-labelledby="all-challenges">
+        <h2 id="all-challenges" className="text-[15px] font-semibold text-ink">All challenges</h2>
+        <div className="mt-3">
+          {cohorts.isLoading ? (
+            <Card className="grid gap-4 p-6">{[0, 1, 2].map((i) => <Sk key={i} className="h-12 rounded-input" />)}</Card>
+          ) : !cohorts.data?.length ? (
+            <EmptyState icon={Flame} title="No challenges yet">Create the first one above.</EmptyState>
+          ) : (
+            <Card>
+              <ul className="divide-y divide-line">
+                {cohorts.data.map((c) => {
+                  const st = STATUS[cohortStatus(c, now)];
+                  return (
+                    <li key={c.id} className="grid gap-1 px-5 py-4">
+                      <div className="flex items-center justify-between gap-3">
+                        <p className="font-semibold text-ink">Challenge {c.id}</p>
+                        <Badge tone={st.tone}>{st.label}</Badge>
+                      </div>
+                      <p className="text-sm text-muted">{when(c.start)} to {when(c.end)}</p>
+                      <p className="tabular text-sm text-ink-2">Stake {fmtGD(c.min)} to {fmtGD(c.max)} G$. Pot {fmtGD(c.pot)} G$.</p>
+                      {cohortStatus(c, now) === "finalize" && (
+                        <p className="mt-1 overflow-x-auto rounded-input bg-sunken px-3 py-2 font-mono text-xs text-ink-2">From the backend folder: npx tsx --env-file=.env scripts/finalize-cohort.mts {c.id} --send</p>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </Card>
+          )}
+        </div>
+      </section>
+    </div>
+  );
+}

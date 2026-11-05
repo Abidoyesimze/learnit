@@ -1,31 +1,30 @@
 "use client";
-import { useState } from "react";
-import { useQueryClient } from "@tanstack/react-query";
-import { Fuel } from "lucide-react";
-import { useApi } from "@/lib/useApi";
-import { Button, Card } from "./ui";
+import { useEffect, useState } from "react";
+import { ExternalLink, Fuel, X } from "lucide-react";
+import { CELO_HELP_URL } from "@/lib/links";
+import { ButtonLink, Card } from "./ui";
 
+const KEY = "learnit.gas-card-dismissed";
+
+/** Points new wallets at the Telegram group for free CELO (network fees). People who already have CELO can dismiss it. */
 export function GasCard() {
-  const api = useApi();
-  const qc = useQueryClient();
-  const [busy, setBusy] = useState(false);
-  const [err, setErr] = useState<string | null>(null);
-  async function go() {
-    setBusy(true); setErr(null);
-    try { await api("/api/gas/topup", { method: "POST" }); await qc.invalidateQueries({ queryKey: ["me"] }); }
-    catch (e) { setErr(e instanceof Error ? e.message : "Top-up failed"); } finally { setBusy(false); }
-  }
+  const [hidden, setHidden] = useState(false);
+  useEffect(() => { try { setHidden(localStorage.getItem(KEY) === "1"); } catch { /* private window: show it */ } }, []);
+  if (hidden) return null;
+  const dismiss = () => { setHidden(true); try { localStorage.setItem(KEY, "1"); } catch { /* ignore */ } };
   return (
     <Card className="p-6">
       <div className="flex gap-4">
         <span className="grid h-10 w-10 shrink-0 place-items-center rounded-input bg-sunken text-ink-2"><Fuel size={18} strokeWidth={1.85} aria-hidden /></span>
-        <div>
-          <h2 className="text-sm font-semibold text-ink">One more step</h2>
-          <p className="mt-1 text-pretty text-sm leading-relaxed text-muted">Your wallet needs a little CELO to pay network fees for claims and stakes. We send a small amount, once.</p>
+        <div className="min-w-0 flex-1">
+          <h2 className="text-sm font-semibold text-ink">Get free CELO for fees</h2>
+          <p className="mt-1 text-pretty text-sm leading-relaxed text-muted">Claims and stakes need a little CELO to pay network fees. Ask for some in our Telegram group. It is free.</p>
         </div>
+        <button type="button" onClick={dismiss} aria-label="Dismiss, I already have CELO" className="-mr-2 -mt-2 grid h-10 w-10 shrink-0 place-items-center rounded-full text-muted transition hover:bg-sunken hover:text-ink">
+          <X size={16} aria-hidden />
+        </button>
       </div>
-      <Button onClick={go} loading={busy} variant="outline" block className="mt-5">Get CELO for fees</Button>
-      {err && <p role="alert" className="mt-2 text-sm text-danger">{err}</p>}
+      <ButtonLink href={CELO_HELP_URL} target="_blank" rel="noreferrer" variant="outline" block icon={ExternalLink} className="mt-5">Get free CELO on Telegram</ButtonLink>
     </Card>
   );
 }

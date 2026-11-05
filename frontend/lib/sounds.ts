@@ -32,6 +32,13 @@ function tone(freq: number, start: number, dur: number, type: OscillatorType, ga
   o.start(t0); o.stop(t0 + dur + 0.02);
 }
 
+/** Soft, very short tick the moment Check is pressed, so the button answers before the network does. */
+export function playTap() {
+  if (!soundEnabled()) return;
+  tone(440, 0, 0.05, "sine", 0.1);
+  tone(660, 0.012, 0.05, "sine", 0.06);
+}
+
 /** Bright rising two-note chime. */
 export function playCorrect() {
   if (!soundEnabled()) return;

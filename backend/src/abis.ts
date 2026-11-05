@@ -7,6 +7,11 @@ export const rewardsPoolAbi = parseAbi([
   "function nonceUsed(address root, uint256 nonce) view returns (bool)",
   "function paused() view returns (bool)",
   "function dailyCap() view returns (uint256)",
+  "function weeklyCap() view returns (uint256)",
+  "function dailyBudget() view returns (uint256)",
+  "function spentOnDay(uint256 day) view returns (uint256)",
+  "function signer() view returns (address)",
+  "function pause()", "function unpause()",
   "function claimedOnDay(address root, uint256 day) view returns (uint256)",
   // custom errors, so a failed simulation decodes into a name we can explain
   "error NotVerified()", "error WrongRoot()", "error Expired()", "error NonceUsed()", "error BadSignature()",
