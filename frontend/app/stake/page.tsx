@@ -119,13 +119,13 @@ export default function Stake() {
 
   return (
     <AppShell>
-      <PageHeader eyebrow="Staking & Rewards" title="Streak stake" description="Put G$ behind a 7-day streak. Keep your streak and take your stake back, plus a share of what others forfeit. Miss a day and your stake goes to the finishers." action={<RewardsTabs />} />
+      <PageHeader eyebrow="Staking & Rewards" title="Streak stake" description="Put G$ behind a streak challenge. Keep your streak and take your stake back, plus a share of what others forfeit. Miss a day and your stake goes to the finishers." action={<RewardsTabs />} />
 
       {isPaused && <Notice tone="paused" className="mt-6" title="Staking is paused">Your stake is safe. Joining and withdrawing will resume shortly.</Notice>}
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-8">
         <div className="grid content-start gap-6">
-          {!c && <EmptyState icon={CalendarDays} title="No open challenge right now">A new 7-day challenge opens every week. Check back soon, and keep your streak going in the meantime.</EmptyState>}
+          {!c && <EmptyState icon={CalendarDays} title="No open challenge right now">A new challenge opens regularly. Check back soon, and keep your streak going in the meantime.</EmptyState>}
 
           {c && (
             <Card className="overflow-hidden">
@@ -160,9 +160,9 @@ export default function Stake() {
                         <p className="text-sm font-medium text-muted">Your stake</p>
                         <p className="tabular mt-1 flex items-center gap-2 text-[2rem] font-semibold leading-none tracking-[-0.03em] text-ink"><GMark size={26} />{fmtGD(c.mine!.stake)}</p>
                       </div>
-                      <p className="text-sm text-muted"><span className="tabular font-semibold text-ink">{c.progress.completed}</span> of 7 days complete</p>
+                      <p className="text-sm text-muted"><span className="tabular font-semibold text-ink">{c.progress.completed}</span> of {days} days complete</p>
                     </div>
-                    <Progress className="mt-5" value={c.progress.completed / 7} label="Challenge progress" />
+                    <Progress className="mt-5" value={c.progress.completed / days} label="Challenge progress" />
                     <ol className="mt-5 grid grid-cols-7 gap-2" aria-label="Daily progress">
                       {c.progress.done.map((d, i) => (
                         <li key={i} className="flex flex-col items-center gap-1.5">
@@ -209,7 +209,7 @@ export default function Stake() {
                 {/* After settlement. */}
                 {staked && c.settled && c.mine!.finished && !c.mine!.withdrawn && (
                   <div className="mt-6 rounded-card bg-sage-50 p-5 ring-1 ring-inset ring-sage-100">
-                    <p className="font-semibold text-sage-700">You finished all 7 days</p>
+                    <p className="font-semibold text-sage-700">You finished all {days} days</p>
                     <p className="mt-1 text-sm text-ink-2">Your payout, including your share of forfeited stakes, is ready.</p>
                     <Button onClick={withdraw} loading={busy} size="lg" block className="mt-4">{busy ? STEP_LABEL[step!] : `Withdraw ${fmtGD(c.mine!.payout)} G$`}</Button>
                   </div>
@@ -229,7 +229,7 @@ export default function Stake() {
             <ol className="mt-5 grid gap-5">
               {[
                 { Icon: PiggyBank, t: "Stake G$", b: c ? `Choose an amount between ${fmtGD(c.min, 0)} and ${fmtGD(c.max, 0)} G$ while the challenge is open.` : "Choose an amount while a challenge is open." },
-                { Icon: Flame, t: "Learn every day", b: "Pass at least one lesson on each of the 7 days, in your own timezone." },
+                { Icon: Flame, t: "Learn every day", b: c ? `Pass at least one lesson on each of the ${days} days, in your own timezone.` : "Pass at least one lesson every day of the challenge, in your own timezone." },
                 { Icon: Trophy, t: "Withdraw", b: "Finish and take back your stake plus a share of stakes forfeited by others." },
               ].map(({ Icon, t, b }, i) => (
                 <li key={t} className="flex gap-4">

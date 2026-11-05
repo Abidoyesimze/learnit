@@ -25,6 +25,9 @@ const MESSAGES: Record<string, string> = {
   // Admin
   AccessControlUnauthorizedAccount: "This wallet does not have permission to do that. Connect the admin wallet.",
   ExpectedPause: "Staking is not paused.",
+  UnsupportedLength: "Challenges can only run 7, 14 or 30 days.",
+  InsufficientBonusReserve: "The bonus reserve does not hold enough G$ to cover this challenge's bonus. Fund it first.",
+  BonusCapExceeded: "That bonus rate is above the 50% cap.",
 };
 
 /** Turns wallet and contract failures into a sentence a person can act on. */

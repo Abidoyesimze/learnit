@@ -38,13 +38,15 @@ export async function myState(id: number, user: User) {
   return { stake: stake.toString(), finished: fin, withdrawn: wd, payout: payout.toString() };
 }
 
-/** The 7 local dates a user must have a passed lesson on, starting with the local date of the cohort start. */
-export function requiredDates(startSec: number, timeZone: string) {
-  return Array.from({ length: 7 }, (_, i) => localDate(new Date((startSec + i * 86400) * 1000), timeZone));
+/** The local dates a user must have a passed lesson on, one per day of the cohort's actual length
+ *  (7, 14 or 30), starting with the local date of the cohort start. */
+export function requiredDates(startSec: number, endSec: number, timeZone: string) {
+  const days = Math.round((endSec - startSec) / 86400);
+  return Array.from({ length: days }, (_, i) => localDate(new Date((startSec + i * 86400) * 1000), timeZone));
 }
 
-export async function progressFor(user: User, startSec: number) {
-  const required = requiredDates(startSec, user.timezone);
+export async function progressFor(user: User, startSec: number, endSec: number) {
+  const required = requiredDates(startSec, endSec, user.timezone);
   const days = await db.streakDay.findMany({ where: { userId: user.id, date: { in: required } }, select: { date: true } });
   const have = new Set(days.map((d) => d.date));
   const done = required.map((d) => have.has(d));

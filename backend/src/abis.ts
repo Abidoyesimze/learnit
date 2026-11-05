@@ -24,12 +24,21 @@ export const streakVaultAbi = parseAbi([
   "function withdrawn(uint256 id, address user) view returns (bool)",
   "function payoutOf(uint256 id, address user) view returns (uint256)",
   // admin: create challenges, pause, and check who holds which role
-  "function createCohort(uint64 start, uint128 min, uint128 max) returns (uint256 id)",
+  "function createCohort(uint64 start, uint32 lengthDays, uint128 min, uint128 max) returns (uint256 id)",
   "function pause()", "function unpause()",
   "function hasRole(bytes32 role, address account) view returns (bool)",
   "function DEFAULT_ADMIN_ROLE() view returns (bytes32)", "function GUARDIAN_ROLE() view returns (bytes32)",
+  // length bonus: an admin-tunable bps-of-finished-stake bonus, by cohort length (7, 14 or 30 days),
+  // paid from a reserve that is funded separately from stakes and never overcommitted at settle()
+  "function bonusBpsFor(uint32 lengthDays) view returns (uint16)",
+  "function bonusReserve() view returns (uint256)",
+  "function setBonusBps(uint32 lengthDays, uint16 bps)",
+  "function fundBonusReserve(uint256 amount)",
+  "function MAX_BONUS_BPS() view returns (uint16)",
   "error AccessControlUnauthorizedAccount(address account, bytes32 neededRole)", "error ExpectedPause()",
   "error NotVerified()", "error VerificationEndsBeforeCohort()", "error JoinClosed()", "error AlreadyStaked()", "error OutOfBounds()", "error BadParams()",
   "error NotSettled()", "error NotFinisher()", "error AlreadyWithdrawn()", "error EnforcedPause()",
+  "error UnsupportedLength()", "error InsufficientBonusReserve()", "error BonusCapExceeded()",
   "event Staked(uint256 indexed id, address indexed user, address indexed root, uint256 requested, uint256 received)",
+  "event BonusBpsUpdated(uint32 lengthDays, uint16 bps)",
 ]);

@@ -9,6 +9,6 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     const c = await readCohort(id);
     if (!c) return Response.json({ error: "Not found" }, { status: 404 });
     const mine = await myState(id, user);
-    return Response.json({ ...c, members: await memberCount(id), mine, progress: await progressFor(user, c.start) });
+    return Response.json({ ...c, members: await memberCount(id), mine, progress: await progressFor(user, c.start, c.end) });
   } catch (e) { return authFail(e); }
 }
