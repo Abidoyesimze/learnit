@@ -17,14 +17,9 @@ type Ans = number | string[] | Pair[];
 type Feedback = { correct: boolean; answer: unknown };
 type Result = { passed: boolean; accuracy: number; durationS: number; minSeconds: number; tooFast: boolean; missedWordIds: string[]; streak: number; attemptId: string; voucherPending: boolean; reviewPending: boolean };
 
-const isCheckpoint = (id: string) => id.endsWith("-cp");
+import { speak } from "@/lib/speech";
 
-function speak(text: string, lang: string) {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
-  window.speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text); u.lang = lang; u.rate = 0.9;
-  window.speechSynthesis.speak(u);
-}
+const isCheckpoint = (id: string) => id.endsWith("-cp");
 
 export function LessonPlayer({ id, onDone }: { id: string; onDone?: (r: Result) => void }) {
   const api = useApi();

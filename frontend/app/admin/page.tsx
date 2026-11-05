@@ -1,21 +1,21 @@
 "use client";
 import { useMemo, useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { useAccount, usePublicClient, useWriteContract } from "wagmi";
-import { keccak256, parseUnits, toBytes, zeroHash } from "viem";
-import { ExternalLink, PauseCircle, PlayCircle, Plus, ShieldCheck } from "lucide-react";
+import { useAccount, useConnect, useDisconnect, usePublicClient, useSignMessage, useWriteContract } from "wagmi";
+import { encodeFunctionData, keccak256, parseUnits, toBytes, zeroHash } from "viem";
+import { Copy, ExternalLink, PauseCircle, PlayCircle, Plus, ShieldCheck } from "lucide-react";
 import { friendlyError } from "@/lib/txErrors";
 import { streakVaultAbi } from "@learnit/backend/abis";
 import { ADDR } from "@learnit/backend/chain";
 import { fmtGD } from "@learnit/backend/format";
-import { AppShell } from "@/components/AppShell";
 import { Badge, Button, Card, CardHeader, EmptyState, Label, Notice, PageHeader, fieldClass } from "@/components/ui";
-import { useAuthGate } from "@/components/useAuthGate";
-import { StakeSkeleton } from "@/components/Skeletons";
 
 const GUARDIAN = keccak256(toBytes("GUARDIAN_ROLE"));
 const DAY = 86_400;
 const MIN_LEAD = 10 * 60; // the contract needs a start in the future when the transaction lands, so leave some room
+
+type UbiDay = { day: string; claims: number; claimers: number; total: string };
+type UbiStats = { allTime: Omit<UbiDay, "day">; today: Omit<UbiDay, "day">; days: UbiDay[] };
 
 type Row = { id: number; start: number; end: number; min: bigint; max: bigint; pot: bigint; finishedStake: bigint; settled: boolean };
 
@@ -35,12 +35,31 @@ function statusOf(c: Row, now: number): { label: string; tone: "sage" | "coral" 
   return { label: "Ended, needs finalizing", tone: "coral" };
 }
 
+/** For wallets without the role (the Safe is the admin): the exact transaction to paste into the Safe app's Transaction Builder. */
+function SafeTx({ to, data, note }: { to: string; data: `0x${string}`; note: string }) {
+  const [copied, setCopied] = useState(false);
+  const copy = (t: string) => { void navigator.clipboard?.writeText(t).then(() => { setCopied(true); setTimeout(() => setCopied(false), 1500); }).catch(() => {}); };
+  return (
+    <div className="grid gap-2 rounded-input bg-sunken p-3 text-sm">
+      <p className="text-ink-2">{note}</p>
+      <p className="text-xs text-muted">To address</p>
+      <p className="break-all font-mono text-xs text-ink">{to}</p>
+      <p className="text-xs text-muted">Data (hex)</p>
+      <p className="break-all font-mono text-xs text-ink">{data}</p>
+      <Button variant="outline" size="sm" icon={Copy} onClick={() => copy(data)}>{copied ? "Copied" : "Copy data"}</Button>
+    </div>
+  );
+}
+
 export default function Admin() {
-  const ok = useAuthGate();
   const qc = useQueryClient();
   const pc = usePublicClient();
   const { address } = useAccount();
   const { writeContractAsync } = useWriteContract();
+  const { connect, connectors, isPending: connecting } = useConnect();
+  const { disconnect } = useDisconnect();
+  const { signMessageAsync } = useSignMessage();
+  const ok = true; // no login gate: the contract checks the wallet's role, the API checks a signed message
   const live = Boolean(ADDR.streakVault);
   const vault = ADDR.streakVault;
 
@@ -76,10 +95,20 @@ export default function Admin() {
     },
   });
 
-  if (!ok) return <StakeSkeleton />;
+  // Server checks the admin role on-chain; a non-admin gets a 403 and the card shows nothing.
+  const ubi = useQuery({ queryKey: ["admin", "ubi", address], enabled: !!address, staleTime: 30_000, retry: false,
+    queryFn: async () => {
+      // Prove wallet ownership with a signature; the server checks it and the on-chain admin role.
+      const ts = Date.now();
+      const signature = await signMessageAsync({ message: `LearnIt admin ${ts}` });
+      const res = await fetch("/api/admin/ubi", { headers: { "x-admin-address": address!, "x-admin-ts": String(ts), "x-admin-sig": signature } });
+      if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error ?? `HTTP ${res.status}`);
+      return res.json() as Promise<UbiStats>;
+    } });
 
   const isAdmin = roles.data?.admin === true;
   const isGuardian = roles.data?.guardian === true;
+  const isViewer = !!ubi.data; // the server let this wallet read stats (admin role or on the viewer list)
   const startSec = Math.floor(new Date(start).getTime() / 1000);
   const minWei = parseG(min), maxWei = parseG(max);
   const now = Math.floor(Date.now() / 1000);
@@ -106,7 +135,7 @@ export default function Admin() {
   const create = () => { if (!problem) void send("create", "createCohort", [BigInt(startSec), minWei!, maxWei!], `Challenge created. It starts ${when(startSec)} and runs for 7 days.`); };
 
   return (
-    <AppShell>
+    <div className="mx-auto max-w-5xl px-4 py-8">
       <PageHeader title="Admin" description="Create streak challenges and pause staking. Everything here is a transaction signed by your wallet, and the contract checks your role." />
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
@@ -114,16 +143,20 @@ export default function Admin() {
           {!live ? (
             <Notice tone="info" title="The StreakVault is not set up yet">Set NEXT_PUBLIC_STREAK_VAULT_ADDRESS after you deploy the contracts, then reload.</Notice>
           ) : !address ? (
-            <Notice tone="info" title="No wallet connected">Connect the admin wallet to continue.</Notice>
+            <Notice tone="info" title="No wallet connected" action={
+              <Button size="sm" loading={connecting} onClick={() => connect({ connector: connectors[0] })}>Connect wallet</Button>}>
+              Connect the admin wallet to continue.
+            </Notice>
           ) : roles.isLoading ? (
             <Notice tone="info">Checking this wallet's role...</Notice>
           ) : !isAdmin && !isGuardian ? (
-            <Notice tone="warning" title="This wallet is not an admin">
-              <span className="break-all">{address}</span> has no admin or guardian role on the StreakVault. Connect the wallet that deployed it.
+            <Notice tone={isViewer ? "info" : "warning"} title={isViewer ? "View only" : "This wallet is not an admin"}>
+              <span className="break-all">{address}</span> has no admin or guardian role on the StreakVault
+              {isViewer ? ", so it can see the stats. Create and pause go through the Safe: use the transaction data below." : ". Only the Safe can create challenges or pause."}
             </Notice>
           ) : null}
 
-          {live && isAdmin && (
+          {live && (
             <Card className="p-6">
               <CardHeader title="Create a challenge" description="A 7-day streak challenge. People can join until the first day is over." />
               <div className="mt-5 grid gap-4">
@@ -143,13 +176,52 @@ export default function Admin() {
                   </div>
                 </div>
                 {problem && (min || max) && <p className="text-sm text-danger" role="alert">{problem}</p>}
-                <Button onClick={create} disabled={!!problem} loading={busy === "create"} icon={Plus} block>
-                  {busy === "create" ? "Confirm in your wallet..." : "Create challenge"}
-                </Button>
+                {isAdmin ? (
+                  <Button onClick={create} disabled={!!problem} loading={busy === "create"} icon={Plus} block>
+                    {busy === "create" ? "Confirm in your wallet..." : "Create challenge"}
+                  </Button>
+                ) : problem ? (
+                  <p className="text-sm text-muted">Fill in the fields above to get the Safe transaction.</p>
+                ) : (
+                  <SafeTx to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: "createCohort", args: [BigInt(startSec), minWei!, maxWei!] })}
+                    note="In the Safe app, open New transaction, then Transaction builder, paste this address and data, and send it for signing. Value is 0." />
+                )}
               </div>
             </Card>
           )}
 
+
+          {ubi.data && (
+            <Card className="p-6">
+              <CardHeader title="Daily UBI claims" description="G$ claimed through LearnIt, by UTC day. Only claims made in this app are counted." />
+              <dl className="mt-4 grid grid-cols-3 gap-3">
+                {([["Today", ubi.data.today], ["All time", ubi.data.allTime]] as const).map(([label, v]) => (
+                  <div key={label} className="rounded-input bg-sunken px-3 py-2">
+                    <dt className="text-xs text-muted">{label}</dt>
+                    <dd className="font-semibold text-ink tabular">{fmtGD(v.total)} G$</dd>
+                    <dd className="text-xs text-muted tabular">{v.claims} claims, {v.claimers} people</dd>
+                  </div>
+                ))}
+                <div className="rounded-input bg-sunken px-3 py-2">
+                  <dt className="text-xs text-muted">Last 30 days</dt>
+                  <dd className="font-semibold text-ink tabular">{fmtGD(ubi.data.days.reduce((s, d) => s + BigInt(d.total), 0n))} G$</dd>
+                </div>
+              </dl>
+              {ubi.data.days.length > 0 && (
+                <ul className="mt-4 grid divide-y divide-line text-sm tabular">
+                  {ubi.data.days.map((d) => (
+                    <li key={d.day} className="flex items-center justify-between gap-3 py-2">
+                      <span className="text-ink-2">{new Date(d.day + "T00:00:00Z").toLocaleDateString("en", { month: "short", day: "numeric", timeZone: "UTC" })}</span>
+                      <span className="text-muted">{d.claimers} people</span>
+                      <span className="font-medium text-ink">{fmtGD(d.total)} G$</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Card>
+          )}
+
+          {address && <p className="text-sm text-muted">Connected: <span className="break-all font-mono">{address}</span> <button className="underline underline-offset-4" onClick={() => disconnect()}>Disconnect</button></p>}
           {err && <Notice tone="danger">{err}</Notice>}
           {done && (
             <Notice tone="success" title="Done" action={<a className="inline-flex items-center gap-1 font-medium underline underline-offset-4" href={`https://celoscan.io/tx/${done.hash}`} target="_blank" rel="noreferrer">View transaction <ExternalLink size={13} aria-hidden /></a>}>
@@ -199,8 +271,14 @@ export default function Admin() {
                     onClick={() => send("pause", paused.data ? "unpause" : "pause", [], paused.data ? "Staking is running again." : "Staking is paused.")}>
                     {paused.data ? "Resume staking" : "Pause staking"}
                   </Button>
-                ) : <span className="text-sm text-muted">Needs the guardian role</span>}
+                ) : null}
               </div>
+              {!isGuardian && (
+                <div className="mt-3">
+                  <SafeTx to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: paused.data ? "unpause" : "pause" })}
+                    note={`Only the guardian (the Safe) can ${paused.data ? "resume" : "pause"} staking. Send this from the Safe.`} />
+                </div>
+              )}
             </Card>
             <Card className="p-6">
               <CardHeader title="Finalizing" description="After a challenge ends, the backend script marks who finished all 7 days and settles it. It runs from a machine that holds the signer key, never from this page." />
@@ -208,6 +286,6 @@ export default function Admin() {
           </aside>
         )}
       </div>
-    </AppShell>
+    </div>
   );
 }
