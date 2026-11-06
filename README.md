@@ -88,8 +88,6 @@ If `db:push` fails with "Can't reach database server", the database is waking up
 | `PRIVY_APP_SECRET` | Privy app secret (server only) |
 | `APP_SECRET` | Random string used to sign lesson start tokens |
 | `SIGNER_PRIVATE_KEY` | Key that signs reward vouchers and marks finishers. Server only. Never commit it |
-| `GASDROP_PRIVATE_KEY` | Funded wallet that sends the one-time CELO top-up. Tiny balance only |
-| `GAS_TOPUP_CELO` | CELO sent per verified user, once (default 0.05) |
 | `LESSON_REWARD_G`, `CHECKPOINT_REWARD_G`, `DAILY_CAP_G` | Reward sizes in G$. Keep `DAILY_CAP_G` equal to the pool's `dailyCap` |
 | `VAULT_DEPLOY_BLOCK` | Block the `StreakVault` was deployed at (for reading Staked events) |
 | `LEAGUE_BONUS_1_G`, `LEAGUE_BONUS_2_G`, `LEAGUE_BONUS_3_G` | Weekly league bonus for rank 1, 2, 3 in a group (G$) |

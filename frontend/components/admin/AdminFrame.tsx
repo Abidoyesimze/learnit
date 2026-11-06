@@ -19,7 +19,7 @@ const NAV = [
 export function AdminFrame({ children }: { children: ReactNode }) {
   const path = usePathname();
   const a = useAdmin();
-  const role = a.roles?.admin ? "Admin" : a.roles?.guardian ? "Guardian" : a.unlocked || a.ubi.data ? "Viewer" : null;
+  const role = a.roles?.admin ? "Admin" : a.roles?.guardian ? "Guardian" : a.address && !a.rolesLoading ? "Read only" : null;
   const on = (href: string) => (href === "/admin" ? path === "/admin" : path.startsWith(href));
 
   return (
@@ -29,16 +29,16 @@ export function AdminFrame({ children }: { children: ReactNode }) {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
           <div className="flex items-center gap-3">
             <Link href="/admin" aria-label="Admin home"><Logo compact /></Link>
-            <Badge tone="navy">Admin</Badge>
+            <Badge tone="navy">Dashboard</Badge>
           </div>
           {a.address ? (
             <div className="flex items-center gap-2">
-              {role && <Badge tone={role === "Viewer" ? "outline" : "sage"} className="hidden sm:inline-flex">{role}</Badge>}
+              {role && <Badge tone={role === "Read only" ? "outline" : "sage"} className="hidden sm:inline-flex">{role}</Badge>}
               <span className="rounded-full border border-line-strong bg-surface px-3 py-1.5 font-mono text-xs text-ink-2">{shortAddr(a.address)}</span>
               <Button variant="ghost" size="sm" icon={LogOut} onClick={a.disconnect} aria-label="Disconnect wallet"><span className="hidden sm:inline">Disconnect</span></Button>
             </div>
           ) : (
-            <Button size="sm" icon={Wallet} loading={a.connecting} onClick={a.connect} disabled={!a.hasInjected}>Connect wallet</Button>
+            <Button size="sm" variant="outline" icon={Wallet} loading={a.connecting} onClick={a.connect} disabled={!a.hasInjected}>Admin sign-in</Button>
           )}
         </div>
       </header>

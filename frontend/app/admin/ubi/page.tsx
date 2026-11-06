@@ -1,11 +1,10 @@
 "use client";
-import { Download } from "lucide-react";
+import { Coins, Download } from "lucide-react";
 import { fmtGD } from "@learnit/backend/format";
 import { Button, Card, CardHeader, EmptyState, PageHeader, Stat } from "@/components/ui";
-import { Coins } from "lucide-react";
 import { Sk } from "@/components/ui/Sk";
-import { useAdmin, type UbiDay } from "@/components/admin/AdminProvider";
-import { DayBars, ErrorNote, Unlock, fillDays } from "@/components/admin/bits";
+import { usePublicStats, type UbiDay } from "@/components/admin/data";
+import { DayBars, ErrorNote, fillDays } from "@/components/admin/bits";
 
 const label = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en", { month: "short", day: "numeric", timeZone: "UTC" });
 
@@ -18,28 +17,27 @@ function csv(days: UbiDay[]) {
 }
 
 export default function Ubi() {
-  const { ubi, unlocked } = useAdmin();
-  const data = ubi.data;
-  const days = data ? fillDays(data.days, 30) : [];
+  const { data, isLoading, error } = usePublicStats();
+  const ubi = data?.ubi;
+  const days = ubi ? fillDays(ubi.days, 30) : [];
   const total30 = days.reduce((s, d) => s + BigInt(d.total), 0n);
   const active = days.filter((d) => d.claims > 0).length;
 
   return (
     <div className="grid gap-8">
-      <PageHeader title="UBI claims" description="G$ claimed through LearnIt, by UTC day. Claims made in other apps are not counted."
-        action={data && <Button variant="outline" size="sm" icon={Download} onClick={() => csv(data.days)}>Export CSV</Button>} />
+      <PageHeader title="UBI claims" description="G$ claimed through LearnIt, by UTC day. Claims made in other apps are not counted. Totals only: no names or wallets."
+        action={ubi && <Button variant="outline" size="sm" icon={Download} onClick={() => csv(ubi.days)}>Export CSV</Button>} />
 
-      {!data && !ubi.isLoading && <Unlock what="UBI claim totals" />}
-      {unlocked && ubi.isLoading && <Card className="grid gap-4 p-6"><Sk className="h-6 w-40" /><Sk className="h-32" /></Card>}
-      {unlocked && !ubi.isLoading && <ErrorNote error={ubi.error && !/sign in|signature|Not an admin/.test(ubi.error.message) ? ubi.error : null} />}
+      <ErrorNote error={error} />
+      {isLoading && <Card className="grid gap-4 p-6"><Sk className="h-6 w-40" /><Sk className="h-32" /></Card>}
 
-      {data && (
+      {ubi && (
         <>
           <Card className="grid gap-6 p-6 sm:grid-cols-2 lg:grid-cols-4">
-            <Stat label="Today" value={fmtGD(data.today.total)} unit="G$" hint={`${data.today.claims} claims, ${data.today.claimers} people`} />
+            <Stat label="Today" value={fmtGD(ubi.today.total)} unit="G$" hint={`${ubi.today.claims} claims, ${ubi.today.claimers} people`} />
             <Stat label="Last 30 days" value={fmtGD(total30)} unit="G$" hint={`${active} active days`} />
-            <Stat label="All time" value={fmtGD(data.allTime.total)} unit="G$" hint={`${data.allTime.claims} claims`} />
-            <Stat label="People who claimed" value={data.allTime.claimers.toLocaleString("en")} hint="All time" />
+            <Stat label="All time" value={fmtGD(ubi.allTime.total)} unit="G$" hint={`${ubi.allTime.claims} claims`} />
+            <Stat label="People who claimed" value={ubi.allTime.claimers.toLocaleString("en")} hint="All time" />
           </Card>
 
           <Card className="p-6">
@@ -49,7 +47,7 @@ export default function Ubi() {
             </div>
           </Card>
 
-          {data.allTime.claims === 0 ? (
+          {ubi.allTime.claims === 0 ? (
             <EmptyState icon={Coins} title="No claims recorded yet">Claims appear here after someone claims from the LearnIt home screen.</EmptyState>
           ) : (
             <Card className="overflow-hidden">
@@ -71,6 +69,7 @@ export default function Ubi() {
               </table>
             </Card>
           )}
+          <p className="text-xs text-muted">Updated {new Date(data!.generatedAt).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}. Refreshes every few minutes.</p>
         </>
       )}
     </div>

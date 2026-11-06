@@ -85,6 +85,11 @@ export default function Challenges() {
       )}
 
       <div className="grid gap-6 xl:grid-cols-[1.15fr_1fr]">
+        {!address ? (
+          <Card className="p-6">
+            <CardHeader title="Create a challenge" description="Only the admin Safe can create challenges. Use Admin sign-in (top right) with an authorised wallet to make changes." />
+          </Card>
+        ) : (
         <Card className="p-6">
           <CardHeader title="Create a challenge" description={isAdmin ? "Sent from your wallet. The contract checks your role." : "Your wallet is not the admin, so this prepares a transaction for the Safe."} />
           <div className="mt-5 grid gap-4">
@@ -117,6 +122,7 @@ export default function Challenges() {
             )}
           </div>
         </Card>
+        )}
 
         <Card className="p-6 xl:self-start">
           <CardHeader title="Staking" description="Pausing stops new stakes. Stakes already in stay safe." />
@@ -129,7 +135,7 @@ export default function Challenges() {
               </Button>
             )}
           </div>
-          {!isGuardian && paused.data !== undefined && (
+          {!!address && !isGuardian && paused.data !== undefined && (
             <div className="mt-4">
               <SafeTx to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: paused.data ? "unpause" : "pause" })}
                 note={`Only the guardian (the Safe) can ${paused.data ? "resume" : "pause"} staking. Send this from the Safe.`} />

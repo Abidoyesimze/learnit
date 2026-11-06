@@ -59,3 +59,23 @@ export function usePool() {
     },
   });
 }
+
+export type UbiDay = { day: string; claims: number; claimers: number; total: string };
+export type PublicStats = {
+  generatedAt: string;
+  users: { total: number; newLast7d: number; active1d: number; active7d: number; active30d: number; verified: number | null };
+  learning: { attempts: number; passed: number; learnersWithPass: number };
+  ubi: { allTime: Omit<UbiDay, "day">; today: Omit<UbiDay, "day">; days: UbiDay[] };
+};
+
+/** Aggregate numbers anyone may read (no sign-in). Served from a five-minute cache. */
+export function usePublicStats() {
+  return useQuery({
+    queryKey: ["admin", "public-stats"], staleTime: 60_000, refetchInterval: 5 * 60_000,
+    queryFn: async () => {
+      const res = await fetch("/api/public/stats");
+      if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error ?? `HTTP ${res.status}`);
+      return (await res.json()) as PublicStats;
+    },
+  });
+}

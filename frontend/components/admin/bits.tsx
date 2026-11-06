@@ -1,9 +1,9 @@
 "use client";
 import { useState, type ReactNode } from "react";
-import { Copy, Check, Lock, PenLine, Wallet } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { parseUnits } from "viem";
-import { Button, EmptyState, Notice } from "@/components/ui";
-import { useAdmin, type UbiDay } from "./AdminProvider";
+import { Button, Notice } from "@/components/ui";
+import type { UbiDay } from "./data";
 
 export const when = (s: number) => new Date(s * 1000).toLocaleString("en", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
 export const shortAddr = (a: string) => `${a.slice(0, 6)}...${a.slice(-4)}`;
@@ -30,28 +30,6 @@ export function SafeTx({ to, data, note }: { to: string; data: `0x${string}`; no
       </div>
       <Button variant="outline" size="sm" icon={copied ? Check : Copy} onClick={copy} className="justify-self-start">{copied ? "Copied" : "Copy data"}</Button>
     </div>
-  );
-}
-
-/** Shown where data needs a wallet and a signature. Connect first, then sign once for the session. */
-export function Unlock({ what }: { what: string }) {
-  const a = useAdmin();
-  if (!a.address) {
-    return (
-      <EmptyState icon={Wallet} title="Connect your wallet"
-        action={a.hasInjected ? <Button onClick={a.connect} loading={a.connecting} icon={Wallet}>Connect wallet</Button> : undefined}>
-        {a.hasInjected ? `Connect a wallet to see ${what}.` : "No browser wallet found. Install MetaMask or Rabby and reload."}
-      </EmptyState>
-    );
-  }
-  return (
-    <EmptyState icon={a.ubi.error && !/sign in|signature/i.test(a.ubi.error.message) ? Lock : PenLine} title={a.ubi.error && /Not an admin/.test(a.ubi.error.message) ? "This wallet cannot see this" : "Sign to view"}
-      action={a.ubi.error && /Not an admin/.test(a.ubi.error.message) ? undefined : <Button onClick={() => void a.unlock()} loading={a.unlocking} icon={PenLine}>Sign message</Button>}>
-      {a.ubi.error && /Not an admin/.test(a.ubi.error.message)
-        ? `${shortAddr(a.address)} is not an admin, guardian or approved viewer. Add it to ADMIN_VIEWER_ADDRESSES to let it see ${what}.`
-        : `${what[0].toUpperCase()}${what.slice(1)} are private. Signing proves you own this wallet. It is free and sends no transaction, and lasts 25 minutes.`}
-      {a.unlockError && <span className="mt-2 block text-danger" role="alert">{a.unlockError}</span>}
-    </EmptyState>
   );
 }
 
