@@ -167,7 +167,7 @@ function RewardsCard({ verified }: { verified: boolean }) {
 
 function QuickLinks() {
   const links = [
-    { href: "/stake", Icon: PiggyBank, title: "Streak challenge", body: "Stake G$ on a 7-day streak" },
+    { href: "/stake", Icon: PiggyBank, title: "Streak challenge", body: "Stake G$ on a daily streak challenge" },
     { href: "/league", Icon: Trophy, title: "Weekly league", body: "Top 3 share a G$ bonus" },
     { href: "/earn", Icon: Coins, title: "Rewards", body: "Claim what you've earned" },
   ];

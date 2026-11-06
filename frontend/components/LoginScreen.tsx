@@ -214,7 +214,7 @@ function Languages({ onStart }: { onStart: () => void }) {
 const TRUST = [
   { Icon: ScanFace, title: "One person, one account", body: "Rewards need a quick GoodDollar face check, so they go to real learners and not bots. Lessons stay free either way." },
   { Icon: ShieldCheck, title: "Paid on-chain, on Celo", body: "Rewards are signed vouchers you claim from the LearnIt rewards pool contract. Every claim is a transaction anyone can look up." },
-  { Icon: PiggyBank, title: "Stake to stay committed", body: "Optional. Put G$ behind a 7-day challenge. Pass a lesson on all seven days to get your stake back. Miss a day and it is shared with the people who finished." },
+  { Icon: PiggyBank, title: "Stake to stay committed", body: "Optional. Put G$ behind a 7, 14 or 30 day challenge. Pass a lesson every day to get your stake back. Miss a day and it is shared with the people who finished." },
   { Icon: Lock, title: "Fair by design", body: "A daily cap on rewards, a minimum time per lesson and contracts that can be paused if anything looks wrong." },
 ];
 

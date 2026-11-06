@@ -14,7 +14,7 @@ import type { Course } from "@/lib/languages";
 const HOW: { Icon: typeof Coins; title: string; body: string }[] = [
   { Icon: Coins, title: "Claim your daily G$", body: "Verified GoodDollar users claim their UBI here, then start a lesson." },
   { Icon: BookOpen, title: "Learn a little each day", body: "Short lessons. Pass at 80% to keep your streak and earn G$." },
-  { Icon: PiggyBank, title: "Stake on your streak", body: "Optional. Put G$ behind a 7-day challenge and get it back when you finish." },
+  { Icon: PiggyBank, title: "Stake on your streak", body: "Optional. Put G$ behind a 7, 14 or 30 day challenge and get it back when you finish." },
 ];
 
 export function Onboarding() {
