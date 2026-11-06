@@ -14,6 +14,7 @@ import { useAdmin } from "@/components/admin/AdminProvider";
 import { DAY, cohortStatus, useCohorts, useVaultPaused, type CohortStatus } from "@/components/admin/data";
 import { SafeTx, parseG, when } from "@/components/admin/bits";
 
+const LENGTHS = [7, 14, 30] as const; // the contract only accepts these
 const MIN_LEAD = 10 * 60; // the contract needs a future start when the transaction lands
 const toLocalInput = (d: Date) => new Date(d.getTime() - d.getTimezoneOffset() * 60_000).toISOString().slice(0, 16);
 const STATUS: Record<CohortStatus, { label: string; tone: "sage" | "coral" | "neutral" | "navy" }> = {
@@ -34,6 +35,7 @@ export default function Challenges() {
 
   const defaultStart = useMemo(() => { const d = new Date(Date.now() + DAY * 1000); d.setMinutes(0, 0, 0); return toLocalInput(d); }, []);
   const [start, setStart] = useState(defaultStart);
+  const [lengthDays, setLengthDays] = useState<number>(7);
   const [min, setMin] = useState("");
   const [max, setMax] = useState("");
   const [busy, setBusy] = useState<null | "create" | "pause">(null);
@@ -75,7 +77,7 @@ export default function Challenges() {
 
   return (
     <div className="grid gap-8">
-      <PageHeader title="Challenges" description="Seven-day streak challenges. People can join until the first day is over." />
+      <PageHeader title="Challenges" description="Streak challenges of 7, 14 or 30 days. People can join until the first day is over." />
 
       {err && <Notice tone="danger">{err}</Notice>}
       {done && (
@@ -96,7 +98,13 @@ export default function Challenges() {
             <div>
               <Label htmlFor="start">Starts</Label>
               <input id="start" type="datetime-local" value={start} onChange={(e) => setStart(e.target.value)} className={`${fieldClass} mt-1.5`} />
-              {Number.isFinite(startSec) && <p className="mt-1.5 text-sm text-muted">Joining closes {when(startSec + DAY)}. It ends {when(startSec + 7 * DAY)}.</p>}
+              {Number.isFinite(startSec) && <p className="mt-1.5 text-sm text-muted">Joining closes {when(startSec + DAY)}. It ends {when(startSec + lengthDays * DAY)}.</p>}
+            </div>
+            <div>
+              <Label htmlFor="len">Length</Label>
+              <select id="len" value={lengthDays} onChange={(e) => setLengthDays(Number(e.target.value))} className={`${fieldClass} mt-1.5`}>
+                {LENGTHS.map((d) => <option key={d} value={d}>{d} days</option>)}
+              </select>
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
@@ -110,14 +118,14 @@ export default function Challenges() {
             </div>
             {problem && touched && <p className="text-sm text-danger" role="alert">{problem}</p>}
             {isAdmin ? (
-              <Button onClick={() => { if (!problem) void send("create", "createCohort", [BigInt(startSec), minWei!, maxWei!], `Challenge created. It starts ${when(startSec)} and runs for 7 days.`); }}
+              <Button onClick={() => { if (!problem) void send("create", "createCohort", [BigInt(startSec), lengthDays, minWei!, maxWei!], `Challenge created. It starts ${when(startSec)} and runs for ${lengthDays} days.`); }}
                 disabled={!!problem} loading={busy === "create"} icon={Plus} block>
                 {busy === "create" ? "Confirm in your wallet..." : "Create challenge"}
               </Button>
             ) : problem ? (
               <p className="text-sm text-muted">Fill in the fields to get the Safe transaction.</p>
             ) : (
-              <SafeTx to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: "createCohort", args: [BigInt(startSec), minWei!, maxWei!] })}
+              <SafeTx to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: "createCohort", args: [BigInt(startSec), lengthDays, minWei!, maxWei!] })}
                 note="In the Safe app, open New transaction, then Transaction builder. Paste the address and data, keep the value at 0, and send it for signing. It must run before the start time." />
             )}
           </div>
