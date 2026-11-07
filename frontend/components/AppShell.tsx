@@ -2,21 +2,24 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import { BookOpen, Coins, Home, Trophy, PiggyBank, type LucideIcon } from "lucide-react";
+import { BookOpen, Coins, Home, MessageCircle, Trophy, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { Logo } from "./Logo";
 import { LanguageChip } from "./LanguageChip";
 import { ProfileMenu } from "./ProfileMenu";
 
-export const NAV: { href: string; label: string; Icon: LucideIcon }[] = [
+type NavItem = { href: string; label: string; Icon: LucideIcon; /** other paths that belong under this menu item */ match?: string[]; soon?: boolean };
+
+export const NAV: NavItem[] = [
   { href: "/home", label: "Home", Icon: Home },
   { href: "/learn", label: "Learn", Icon: BookOpen },
+  { href: "/chat", label: "Chat", Icon: MessageCircle, soon: true },
   { href: "/league", label: "League", Icon: Trophy },
-  { href: "/earn", label: "Rewards", Icon: Coins },
-  { href: "/stake", label: "Stake", Icon: PiggyBank },
+  // One menu for money: Rewards and Stake are two tabs inside it (see RewardsTabs).
+  { href: "/earn", label: "Rewards", Icon: Coins, match: ["/stake"] },
 ];
 
-const isOn = (path: string, href: string) => path === href || path.startsWith(href + "/");
+const isOn = (path: string, item: NavItem) => [item.href, ...(item.match ?? [])].some((p) => path === p || path.startsWith(p + "/"));
 
 /**
  * The signed-in frame. Desktop: a quiet sidebar on the left. Mobile: a top bar and a bottom tab bar.
@@ -33,8 +36,9 @@ export function AppShell({ children, width = "wide", topRight }: { children: Rea
         <Link href="/home" className="px-2" aria-label="LearnIt home"><Logo /></Link>
         <nav aria-label="Main" className="mt-10">
           <ul className="grid gap-0.5">
-            {NAV.map(({ href, label, Icon }) => {
-              const on = isOn(path, href);
+            {NAV.map((item) => {
+              const { href, label, Icon, soon } = item;
+              const on = isOn(path, item);
               return (
                 <li key={href}>
                   <Link href={href} aria-current={on ? "page" : undefined}
@@ -42,6 +46,7 @@ export function AppShell({ children, width = "wide", topRight }: { children: Rea
                       on ? "bg-ink text-white shadow-card" : "text-ink-2 hover:bg-sunken hover:text-ink")}>
                     <Icon size={18} strokeWidth={on ? 2.25 : 1.85} aria-hidden />
                     {label}
+                    {soon && <span className={cn("ml-auto rounded-full px-2 py-0.5 text-[11px] font-medium", on ? "bg-white/15 text-white" : "bg-sunken text-muted")}>Soon</span>}
                   </Link>
                 </li>
               );
@@ -83,8 +88,9 @@ export function TabBar() {
   return (
     <nav aria-label="Main" className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-surface/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md [transform:translateZ(0)] lg:hidden">
       <ul className="mx-auto grid max-w-lg grid-cols-5">
-        {NAV.map(({ href, label, Icon }) => {
-          const on = isOn(path, href);
+        {NAV.map((item) => {
+          const { href, label, Icon } = item;
+          const on = isOn(path, item);
           return (
             <li key={href}>
               <Link href={href} aria-current={on ? "page" : undefined}
