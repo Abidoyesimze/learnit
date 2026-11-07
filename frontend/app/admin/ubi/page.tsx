@@ -1,12 +1,20 @@
 "use client";
-import { Coins, Download } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, Coins, Download } from "lucide-react";
 import { fmtGD } from "@learnit/backend/format";
 import { Button, Card, CardHeader, EmptyState, PageHeader, Stat } from "@/components/ui";
 import { Sk } from "@/components/ui/Sk";
 import { usePublicStats, type UbiDay } from "@/components/admin/data";
-import { DayBars, ErrorNote, fillDays } from "@/components/admin/bits";
+import { ErrorNote, dayLabel as label, fillDays, gdNum } from "@/components/admin/bits";
+import { BarChart } from "@/components/admin/charts";
+import { cn } from "@/lib/cn";
 
-const label = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en", { month: "short", day: "numeric", timeZone: "UTC" });
+const SERIES = {
+  gd: { name: "G$", caption: "claimed", pick: (d: UbiDay) => gdNum(d.total), format: (v: number) => `${v.toLocaleString("en", { maximumFractionDigits: v < 10 ? 2 : 0 })} G$` },
+  claims: { name: "Claims", caption: "claims", pick: (d: UbiDay) => d.claims, format: (v: number) => `${v.toLocaleString("en")} ${v === 1 ? "claim" : "claims"}` },
+  people: { name: "People", caption: "people", pick: (d: UbiDay) => d.claimers, format: (v: number) => `${v.toLocaleString("en")} ${v === 1 ? "person" : "people"}` },
+} as const;
+type SeriesKey = keyof typeof SERIES;
 
 function csv(days: UbiDay[]) {
   const rows = ["date_utc,claims,people,g_dollars", ...days.map((d) => `${d.day},${d.claims},${d.claimers},${(Number(BigInt(d.total) / 10n ** 14n) / 10_000).toFixed(4)}`)];
@@ -18,6 +26,7 @@ function csv(days: UbiDay[]) {
 
 export default function Ubi() {
   const { data, isLoading, error } = usePublicStats();
+  const [series, setSeries] = useState<SeriesKey>("gd");
   const ubi = data?.ubi;
   const days = ubi ? fillDays(ubi.days, 30) : [];
   const total30 = days.reduce((s, d) => s + BigInt(d.total), 0n);
@@ -41,9 +50,18 @@ export default function Ubi() {
           </Card>
 
           <Card className="p-6">
-            <CardHeader title="Last 30 days" description="G$ claimed per day." />
+            <CardHeader title="Last 30 days"
+              description={series === "gd" ? "G$ claimed per day." : series === "claims" ? "Claims made per day." : "Different people who claimed, per day."}
+              action={
+                <div role="radiogroup" aria-label="Chart shows" className="inline-flex shrink-0 rounded-btn bg-sunken p-0.5">
+                  {(Object.keys(SERIES) as SeriesKey[]).map((k) => (
+                    <button key={k} type="button" role="radio" aria-checked={series === k} onClick={() => setSeries(k)}
+                      className={cn("h-8 rounded-[10px] px-3 text-sm font-medium transition duration-150", series === k ? "bg-surface text-ink shadow-card" : "text-muted hover:text-ink")}>{SERIES[k].name}</button>
+                  ))}
+                </div>
+              } />
             <div className="mt-5">
-              <DayBars values={days.map((d) => BigInt(d.total))} labels={days.map((d) => label(d.day))} format={(v) => fmtGD(v)} />
+              <BarChart key={series} values={days.map(SERIES[series].pick)} labels={days.map((d) => label(d.day))} format={SERIES[series].format} caption={SERIES[series].caption} height={200} />
             </div>
           </Card>
 
@@ -51,9 +69,14 @@ export default function Ubi() {
             <EmptyState icon={Coins} title="No claims recorded yet">Claims appear here after someone claims from the LearnIt home screen.</EmptyState>
           ) : (
             <Card className="overflow-hidden">
+              <details className="group">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 text-sm font-medium text-ink [&::-webkit-details-marker]:hidden">
+                  View as a table
+                  <ChevronDown size={16} aria-hidden className="text-muted transition-transform duration-150 group-open:rotate-180" />
+                </summary>
               <table className="tabular w-full text-left text-sm">
                 <caption className="sr-only">G$ claimed per UTC day, last 30 days</caption>
-                <thead className="border-b border-line bg-sunken/60 text-xs text-muted">
+                <thead className="border-y border-line bg-sunken/60 text-xs text-muted">
                   <tr><th scope="col" className="px-5 py-3 font-medium">Day</th><th scope="col" className="px-3 py-3 text-right font-medium">Claims</th><th scope="col" className="px-3 py-3 text-right font-medium">People</th><th scope="col" className="px-5 py-3 text-right font-medium">G$</th></tr>
                 </thead>
                 <tbody className="divide-y divide-line">
@@ -67,6 +90,7 @@ export default function Ubi() {
                   ))}
                 </tbody>
               </table>
+              </details>
             </Card>
           )}
           <p className="text-xs text-muted">Updated {new Date(data!.generatedAt).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" })}. Refreshes every few minutes.</p>

@@ -3,13 +3,17 @@ import { encodeFunctionData } from "viem";
 import { rewardsPoolAbi } from "@learnit/backend/abis";
 import { ADDR } from "@learnit/backend/chain";
 import { fmtGD } from "@learnit/backend/format";
-import { Badge, Card, CardHeader, Notice, PageHeader, Progress, Stat } from "@/components/ui";
+import { Badge, Card, CardHeader, Notice, PageHeader, Stat } from "@/components/ui";
 import { Sk } from "@/components/ui/Sk";
-import { usePool } from "@/components/admin/data";
-import { ErrorNote, SafeTx, shortAddr } from "@/components/admin/bits";
+import { usePool, usePoolHistory } from "@/components/admin/data";
+import { ErrorNote, SafeTx, dayLabel, gdNum, shortAddr } from "@/components/admin/bits";
+import { BarChart, LineChart } from "@/components/admin/charts";
+
+const gdText = (v: number) => `${v.toLocaleString("en", { maximumFractionDigits: v < 10 ? 2 : 0 })} G$`;
 
 export default function Pool() {
   const pool = usePool();
+  const history = usePoolHistory(14);
   const addr = ADDR.rewardsPool;
   const d = pool.data;
 
@@ -22,8 +26,17 @@ export default function Pool() {
     );
   }
 
-  const usedPct = d && d.dailyBudget > 0n ? Number((d.spentToday * 1000n) / d.dailyBudget) / 1000 : 0;
   const daysLeft = d && d.dailyBudget > 0n ? Number(d.balance / d.dailyBudget) : null;
+
+  // Worst case: everyone earns the full daily budget every day. Real spending is usually lower, so this is the earliest the pool could run dry.
+  const runway = (() => {
+    if (!d || d.dailyBudget === 0n) return null;
+    const horizon = Math.min(30, Math.max(7, Math.ceil(Number(d.balance) / Number(d.dailyBudget)) + 3));
+    const bal = gdNum(d.balance), budget = gdNum(d.dailyBudget);
+    const points = Array.from({ length: horizon + 1 }, (_, i) => Math.max(0, bal - budget * i));
+    const labels = points.map((_, i) => (i === 0 ? "Today" : dayLabel(new Date(Date.now() + i * 86_400_000).toISOString().slice(0, 10))));
+    return { points, labels };
+  })();
 
   return (
     <div className="grid gap-8">
@@ -36,26 +49,34 @@ export default function Pool() {
         <Notice tone="warning" title="The pool holds less than one day's budget">Rewards will start failing once it runs out. Send more G$ from the Safe with approve, then deposit.</Notice>
       )}
 
-      <Card className="grid gap-6 p-6 sm:grid-cols-2 lg:grid-cols-4">
-        {pool.isLoading ? [0, 1, 2, 3].map((i) => <Sk key={i} className="h-14 rounded-input" />) : d && (
+      <Card className="grid gap-6 p-6 sm:grid-cols-3">
+        {pool.isLoading ? [0, 1, 2].map((i) => <Sk key={i} className="h-14 rounded-input" />) : d && (
           <>
             <Stat label="Balance" value={fmtGD(d.balance)} unit="G$" hint={daysLeft === null ? undefined : `About ${daysLeft} days at the daily budget`} />
-            <Stat label="Daily budget" value={fmtGD(d.dailyBudget)} unit="G$" hint="Across everyone" />
-            <Stat label="Per person, daily" value={fmtGD(d.dailyCap)} unit="G$" />
-            <Stat label="Per person, weekly" value={fmtGD(d.weeklyCap)} unit="G$" />
+            <Stat label="Paid out today" value={fmtGD(d.spentToday)} unit="G$" hint={`of ${fmtGD(d.dailyBudget)} G$ daily budget`} />
+            <Stat label="Status" value={d.paused ? "Paused" : "Paying out"} hint="Today resets at midnight UTC" />
           </>
         )}
       </Card>
 
       {d && (
-        <Card className="p-6">
-          <CardHeader title="Paid out today" description="UTC day. Resets at midnight UTC." />
-          <div className="mt-4 flex items-baseline justify-between gap-3 tabular">
-            <p className="text-2xl font-semibold tracking-[-0.02em] text-ink">{fmtGD(d.spentToday)} <span className="text-sm font-medium text-muted">G$</span></p>
-            <p className="text-sm text-muted">of {fmtGD(d.dailyBudget)} G$</p>
-          </div>
-          <Progress className="mt-3" value={usedPct} tone={usedPct > 0.9 ? "coral" : "sage"} label="Share of today's budget paid out" />
-        </Card>
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Card className="p-6">
+            <CardHeader title="Paid out per day" description="Last 14 days (UTC). The dashed line is the daily budget." />
+            <div className="mt-5">
+              {history.data ? (
+                <BarChart values={history.data.map((h) => gdNum(h.spent))} labels={history.data.map((h) => dayLabel(h.day))} format={gdText} caption="paid out"
+                  limit={d.dailyBudget > 0n ? { value: gdNum(d.dailyBudget), label: "Budget" } : undefined} />
+              ) : history.isLoading ? <Sk className="h-48" /> : <p className="text-sm text-muted">Payout history is unavailable right now.</p>}
+            </div>
+          </Card>
+          <Card className="p-6">
+            <CardHeader title="How long the pool lasts" description="Balance if every day pays out the full budget. Real spending is usually lower." />
+            <div className="mt-5">
+              {runway ? <LineChart points={runway.points} labels={runway.labels} format={gdText} caption="balance" zeroLabel="Runs out" /> : <p className="text-sm text-muted">Set a daily budget to see how long the balance lasts.</p>}
+            </div>
+          </Card>
+        </div>
       )}
 
       <div className="grid gap-6 lg:grid-cols-2">
@@ -64,6 +85,13 @@ export default function Pool() {
           <dl className="mt-4 grid gap-3 text-sm">
             <div><dt className="text-xs font-medium text-muted">Pool address</dt><dd className="mt-0.5 break-all font-mono text-xs text-ink">{addr}</dd></div>
             {d && <div><dt className="text-xs font-medium text-muted">Voucher signer</dt><dd className="mt-0.5 font-mono text-xs text-ink">{shortAddr(d.signer)}</dd></div>}
+            {d && (
+              <div className="tabular grid grid-cols-3 gap-3 border-t border-line pt-3">
+                <div><dt className="text-xs font-medium text-muted">Daily budget</dt><dd className="mt-0.5 text-ink">{fmtGD(d.dailyBudget)} G$</dd></div>
+                <div><dt className="text-xs font-medium text-muted">Per person, daily</dt><dd className="mt-0.5 text-ink">{fmtGD(d.dailyCap)} G$</dd></div>
+                <div><dt className="text-xs font-medium text-muted">Per person, weekly</dt><dd className="mt-0.5 text-ink">{fmtGD(d.weeklyCap)} G$</dd></div>
+              </div>
+            )}
           </dl>
         </Card>
         {d && (

@@ -60,11 +60,28 @@ export function usePool() {
   });
 }
 
+/** G$ paid out per UTC day for the last `n` days, oldest first. One multicall. */
+export function usePoolHistory(n = 14) {
+  const pc = usePublicClient();
+  const pool = ADDR.rewardsPool;
+  return useQuery({
+    queryKey: ["admin", "pool-history", n], enabled: !!pool && !!pc, staleTime: 60_000,
+    queryFn: async () => {
+      const today = Math.floor(Date.now() / 1000 / DAY);
+      const days = Array.from({ length: n }, (_, i) => today - (n - 1 - i));
+      const res = await pc!.multicall({ allowFailure: false, contracts: days.map((day) => ({ address: pool, abi: rewardsPoolAbi, functionName: "spentOnDay" as const, args: [BigInt(day)] as const })) });
+      return days.map((day, i) => ({ day: new Date(day * DAY * 1000).toISOString().slice(0, 10), spent: res[i] as bigint }));
+    },
+  });
+}
+
 export type UbiDay = { day: string; claims: number; claimers: number; total: string };
+export type ActivityDay = { day: string; signups: number; active: number; passed: number };
 export type PublicStats = {
   generatedAt: string;
   users: { total: number; newLast7d: number; active1d: number; active7d: number; active30d: number; verified: number | null };
   learning: { attempts: number; passed: number; learnersWithPass: number };
+  activity?: ActivityDay[]; // newest first; absent until the backend is redeployed
   ubi: { allTime: Omit<UbiDay, "day">; today: Omit<UbiDay, "day">; days: UbiDay[] };
 };
 
