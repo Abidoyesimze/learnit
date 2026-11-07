@@ -3,7 +3,7 @@ import { useState, type ReactNode } from "react";
 import { Copy, Check } from "lucide-react";
 import { parseUnits } from "viem";
 import { Button, Notice } from "@/components/ui";
-import type { UbiDay } from "./data";
+import type { ActivityDay, UbiDay } from "./data";
 
 export const when = (s: number) => new Date(s * 1000).toLocaleString("en", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
 export const shortAddr = (a: string) => `${a.slice(0, 6)}...${a.slice(-4)}`;
@@ -33,26 +33,6 @@ export function SafeTx({ to, data, note }: { to: string; data: `0x${string}`; no
   );
 }
 
-/** Vertical bars, one per day, newest on the right. The data also lives in a table on the UBI page, so this is a summary for sighted users. */
-export function DayBars({ values, labels, format }: { values: bigint[]; labels: string[]; format: (v: bigint) => string }) {
-  const max = values.reduce((m, v) => (v > m ? v : m), 0n);
-  return (
-    <div role="img" aria-label={`Daily totals, ${labels[0]} to ${labels[labels.length - 1]}. Highest day ${format(max)} G$.`}>
-      <div className="flex h-32 items-end gap-1.5">
-        {values.map((v, i) => {
-          const h = max === 0n ? 0 : Number((v * 1000n) / max) / 10;
-          return (
-            <div key={labels[i]} className="group relative flex h-full flex-1 items-end" title={`${labels[i]}: ${format(v)} G$`}>
-              <div className="w-full rounded-t-[6px] bg-sage-500 transition-colors duration-150 group-hover:bg-sage-700" style={{ height: `${Math.max(v > 0n ? 4 : 1, h)}%`, opacity: v > 0n ? 1 : 0.25 }} />
-            </div>
-          );
-        })}
-      </div>
-      <div className="mt-2 flex justify-between text-xs text-muted tabular"><span>{labels[0]}</span><span>{labels[labels.length - 1]}</span></div>
-    </div>
-  );
-}
-
 export function ErrorNote({ error }: { error: unknown }) {
   if (!error) return null;
   return <Notice tone="danger">{error instanceof Error ? error.message : "Something went wrong."}</Notice>;
@@ -69,3 +49,30 @@ export function fillDays(days: UbiDay[], n: number): UbiDay[] {
   return out;
 }
 
+
+/** Whole G$ as a plain number, for charts. Precision below a thousandth is irrelevant at chart scale. */
+export const gdNum = (wei: bigint | string) => Number(BigInt(wei) / 10n ** 14n) / 10_000;
+
+/** "Mar 4" for a UTC date key. */
+export const dayLabel = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en", { month: "short", day: "numeric", timeZone: "UTC" });
+
+/** The last `n` UTC days of the activity series, oldest first, with zeros for any day the server left out. */
+export function fillActivity(rows: ActivityDay[], n: number): ActivityDay[] {
+  const by = new Map(rows.map((r) => [r.day, r]));
+  return Array.from({ length: n }, (_, i) => {
+    const k = new Date(Date.now() - (n - 1 - i) * 86_400_000).toISOString().slice(0, 10);
+    return by.get(k) ?? { day: k, signups: 0, active: 0, passed: 0 };
+  });
+}
+
+/** A command to run in a terminal: shown in full, one click copies it. */
+export function CopyCommand({ command }: { command: string }) {
+  const [copied, setCopied] = useState(false);
+  const copy = () => { void navigator.clipboard?.writeText(command).then(() => { setCopied(true); setTimeout(() => setCopied(false), 1500); }).catch(() => {}); };
+  return (
+    <div className="flex items-center gap-2 rounded-input bg-sunken py-1.5 pl-3 pr-1.5">
+      <code className="min-w-0 flex-1 overflow-x-auto whitespace-nowrap font-mono text-xs text-ink-2">{command}</code>
+      <Button variant="ghost" size="sm" icon={copied ? Check : Copy} onClick={copy} aria-label="Copy command">{copied ? "Copied" : "Copy"}</Button>
+    </div>
+  );
+}

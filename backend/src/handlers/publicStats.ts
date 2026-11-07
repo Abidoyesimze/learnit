@@ -4,6 +4,7 @@ import { ADDR, identityAbi } from "../chain";
 
 type DayRow = { day: Date; claims: bigint; claimers: bigint; total: string | null };
 type TotalRow = { claims: bigint; claimers: bigint; total: string | null };
+type ActivityRow = { day: Date; signups: bigint; active: bigint; passed: bigint };
 type LearnRow = { a1: bigint; a7: bigint; a30: bigint; attempts: bigint; passed: bigint; learners: bigint };
 
 const DAYS = 30;
@@ -30,7 +31,7 @@ export async function GET() {
   try {
     if (cache && Date.now() - cache.at < TTL_MS) return json(cache.body);
 
-    const [wallets, signups7, days, all, learn] = await Promise.all([
+    const [wallets, signups7, days, all, learn, activity] = await Promise.all([
       db.user.findMany({ select: { wallet: true } }),
       db.user.count({ where: { createdAt: { gte: new Date(Date.now() - 7 * 86_400_000) } } }),
       db.$queryRaw<DayRow[]>`
@@ -46,6 +47,14 @@ export async function GET() {
                COUNT(*) AS attempts, COUNT(*) FILTER (WHERE passed) AS passed,
                COUNT(DISTINCT "userId") FILTER (WHERE passed) AS learners
         FROM lesson_attempts`,
+      // One row per UTC day for the trend charts: new people, people who attempted a lesson, lessons passed.
+      db.$queryRaw<ActivityRow[]>`
+        SELECT d.day AS day,
+               COALESCE((SELECT COUNT(*) FROM users u WHERE date_trunc('day', u."createdAt" AT TIME ZONE 'UTC') = d.day), 0) AS signups,
+               COALESCE((SELECT COUNT(DISTINCT a."userId") FROM lesson_attempts a WHERE date_trunc('day', a."createdAt" AT TIME ZONE 'UTC') = d.day), 0) AS active,
+               COALESCE((SELECT COUNT(*) FROM lesson_attempts a WHERE a.passed AND date_trunc('day', a."createdAt" AT TIME ZONE 'UTC') = d.day), 0) AS passed
+        FROM generate_series(date_trunc('day', NOW() AT TIME ZONE 'UTC') - ${DAYS - 1} * INTERVAL '1 day', date_trunc('day', NOW() AT TIME ZONE 'UTC'), INTERVAL '1 day') AS d(day)
+        ORDER BY 1 DESC`,
     ]);
     const verified = await verifiedCount(wallets.map((u) => u.wallet)).catch(() => null);
     const rows = days.map((d) => ({ day: d.day.toISOString().slice(0, 10), ...n(d) }));
@@ -55,6 +64,7 @@ export async function GET() {
       generatedAt: new Date().toISOString(),
       users: { total: wallets.length, newLast7d: signups7, active1d: Number(l.a1), active7d: Number(l.a7), active30d: Number(l.a30), verified },
       learning: { attempts: Number(l.attempts), passed: Number(l.passed), learnersWithPass: Number(l.learners) },
+      activity: activity.map((a) => ({ day: a.day.toISOString().slice(0, 10), signups: Number(a.signups), active: Number(a.active), passed: Number(a.passed) })),
       ubi: { allTime: n(all[0]), today: rows.find((d) => d.day === todayKey) ?? { claims: 0, claimers: 0, total: "0" }, days: rows },
     };
     cache = { at: Date.now(), body };
