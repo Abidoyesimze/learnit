@@ -1,6 +1,6 @@
 # LearnIt roadmap
 
-Last updated: 6 November 2026. The GoodBuilders season ends in about three months (early February 2027), so every dated deliverable below lands by 31 January 2027.
+Last updated: 10 November 2026. The GoodBuilders season ends in about three months (early February 2027), so every dated deliverable below lands by 31 January 2027.
 
 ## Direction
 
@@ -94,11 +94,11 @@ Stated in the GoodBuilders application. Baseline is today's numbers.
 |---|---|---|
 | Weekly retention | n/a at this size | 30% |
 | Users earning G$ | 0 | 50 |
-| G$ used inside the product | 100 | 2,000 |
+| G$ used inside the product | 100 | 3,000,000 |
 | Communities or partners onboarded | 0 | 3 |
-| GoodDollar-verified users | 2 | 100 |
-| Active users | 3 | 150 |
-| On-chain transactions | 5 | 1,500 |
+| GoodDollar-verified users | 2 | 700 |
+| Active users | 3 | 800 |
+| On-chain transactions | 5 | 15,000 |
 | Revenue | 0 | 0 |
 
 ## Later, not committed
