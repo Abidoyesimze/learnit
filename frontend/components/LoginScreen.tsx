@@ -229,7 +229,7 @@ function Rewards() {
               <div className="mt-10 rounded-card bg-white/[0.06] p-6 ring-1 ring-inset ring-white/10">
                 <p className="text-eyebrow uppercase text-white/60">Every day in LearnIt</p>
                 <ul className="mt-4 grid gap-3 text-[15px] text-white/85">
-                  {["Claim your daily GoodDollar UBI", "Pass a lesson to earn a G$ reward", "Clear a unit checkpoint for a bigger one", "Top 3 in your weekly league share a bonus"].map((t) => (
+                  {["Pass a lesson to earn a G$ reward", "Claim your daily GoodDollar UBI", "Clear a unit checkpoint for a bigger one", "Top 3 in your weekly league share a bonus"].map((t) => (
                     <li key={t} className="flex gap-3"><Sparkles size={17} className="mt-0.5 shrink-0 text-coral-300" aria-hidden />{t}</li>
                   ))}
                 </ul>
