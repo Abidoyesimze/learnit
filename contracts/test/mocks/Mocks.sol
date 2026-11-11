@@ -7,13 +7,16 @@ import {IIdentity} from "../../src/interfaces/IIdentity.sol";
 /// @dev G$-like token with an optional transfer fee (burned from the amount sent).
 contract MockGD is ERC20 {
     uint256 public feeBps;
+    mapping(address => bool) public blocked; // recipients that reject transfers
 
     constructor() ERC20("GoodDollar", "G$") {}
 
     function mint(address to, uint256 amount) external { _mint(to, amount); }
     function setFee(uint256 bps) external { feeBps = bps; }
+    function setBlocked(address who, bool on) external { blocked[who] = on; }
 
     function _update(address from, address to, uint256 value) internal override {
+        require(!blocked[to], "recipient rejects transfers");
         if (feeBps > 0 && from != address(0) && to != address(0)) {
             uint256 fee = value * feeBps / 10_000;
             super._update(from, address(0), fee);
@@ -41,4 +44,9 @@ contract MockIdentity is IIdentity {
     function getWhitelistedRoot(address a) external view returns (address) { return roots[a]; }
     function lastAuthenticated(address a) external view returns (uint256) { return last[a]; }
     function authenticationPeriod() external view returns (uint256) { return period; }
+}
+
+/// @dev A RewardsPool whose deposit always fails, e.g. a wrong address set by mistake.
+contract RejectingPool {
+    function deposit(uint256) external pure { revert("deposit rejected"); }
 }

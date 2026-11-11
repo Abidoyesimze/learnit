@@ -21,13 +21,14 @@ const MESSAGES: Record<string, string> = {
   OutOfBounds: "That amount is outside the allowed stake range.",
   BadParams: "That request was not valid.",
   NotSettled: "This challenge has not been settled yet.",
+  NotStaked: "You did not stake in this challenge.",
   NotFinisher: "Only people who finished every day can withdraw.",
   AlreadyWithdrawn: "You have already withdrawn.",
   // Admin
   AccessControlUnauthorizedAccount: "This wallet does not have permission to do that. Connect the admin wallet.",
   ExpectedPause: "Staking is not paused.",
   UnsupportedLength: "Challenges can only run 7, 14 or 30 days.",
-  InsufficientBonusReserve: "The bonus reserve does not hold enough G$ to cover this challenge's bonus. Fund it first.",
+  InsufficientBonusReserve: "This challenge cannot take new stakes right now, because its bonus is not fully funded yet. Nothing was taken from your wallet. Please try again later.",
   BonusCapExceeded: "That bonus rate is above the 50% cap.",
 };
 

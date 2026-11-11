@@ -102,7 +102,7 @@ model Cohort {
   endAt     DateTime
   minStake  String
   maxStake  String
-  status    String   @default("open") // open | running | ended | settled
+  status    String   @default("open") // open | running | ended | settled | voided | voided
   stakes    Stake[]
 
   @@map("cohorts")

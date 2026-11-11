@@ -8,7 +8,7 @@ import { CopyCommand, when } from "./bits";
 
 const STATUS: Record<CohortStatus, { label: string; tone: "sage" | "coral" | "neutral" | "navy" }> = {
   upcoming: { label: "Upcoming", tone: "navy" }, open: { label: "Open to join", tone: "sage" }, running: { label: "Running", tone: "sage" },
-  finalize: { label: "Needs finalizing", tone: "coral" }, settled: { label: "Settled", tone: "neutral" },
+  finalize: { label: "Needs finalizing", tone: "coral" }, settled: { label: "Settled", tone: "neutral" }, voided: { label: "Cancelled, stakes refundable", tone: "neutral" },
 };
 const SHOWN = 6;
 const axisDate = (s: number) => new Date(s * 1000).toLocaleDateString("en", { month: "short", day: "numeric" });
@@ -54,7 +54,7 @@ export function CohortTimeline({ cohorts, now }: { cohorts: Cohort[]; now: numbe
                   ) : (
                     <>
                       <div className={cn("absolute inset-y-0 rounded-l-full", status === "settled" ? "bg-line-strong" : "bg-sage-300")} style={{ left: x(c.start), width: w(c.start, joinEnd) }} />
-                      <div className={cn("absolute inset-y-0 rounded-r-full", status === "settled" ? "bg-muted" : status === "finalize" ? "bg-coral-500" : "bg-sage-600")} style={{ left: x(joinEnd), width: w(joinEnd, c.end) }} />
+                      <div className={cn("absolute inset-y-0 rounded-r-full", status === "settled" || status === "voided" ? "bg-muted" : status === "finalize" ? "bg-coral-500" : "bg-sage-600")} style={{ left: x(joinEnd), width: w(joinEnd, c.end) }} />
                     </>
                   )}
                   <div className="pointer-events-none absolute -inset-y-1 w-0.5 rounded-full bg-ink" style={{ left: x(now) }} aria-hidden />

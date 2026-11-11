@@ -212,7 +212,7 @@ export default function Challenges() {
       </div>
 
       <Card className="p-6">
-        <CardHeader title="Length bonus" description="An extra bonus for finishers, on top of the usual forfeit-sharing, by challenge length. Paid only from the reserve below, never from stakers' own principal." />
+        <CardHeader title="Length bonus" description="An extra bonus for finishers, on top of the usual forfeit-sharing, by challenge length. Paid only from the reserve below, never from stakers' own principal. A new rate applies to challenges created after it is saved. Fund the reserve before a challenge with a bonus opens: a stake is refused if the reserve cannot cover its bonus." />
         <div className="mt-5 grid gap-3 sm:grid-cols-3">
           {LENGTHS.map((d) => {
             const current = bonus.data?.bpsFor[d];
