@@ -2,8 +2,8 @@
 import { useMemo, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useAccount, usePublicClient, useWriteContract } from "wagmi";
-import { encodeFunctionData } from "viem";
-import { ExternalLink, Flame, PauseCircle, PlayCircle, Plus } from "lucide-react";
+import { encodeFunctionData, erc20Abi } from "viem";
+import { ExternalLink, Flame, PauseCircle, PlayCircle, Plus, Sparkles } from "lucide-react";
 import { friendlyError } from "@/lib/txErrors";
 import { streakVaultAbi } from "@learnit/backend/abis";
 import { ADDR } from "@learnit/backend/chain";
@@ -11,7 +11,7 @@ import { fmtGD } from "@learnit/backend/format";
 import { Badge, Button, Card, CardHeader, EmptyState, Label, Notice, PageHeader, fieldClass } from "@/components/ui";
 import { Sk } from "@/components/ui/Sk";
 import { useAdmin } from "@/components/admin/AdminProvider";
-import { DAY, cohortStatus, useCohorts, useVaultPaused } from "@/components/admin/data";
+import { DAY, cohortStatus, useBonus, useCohorts, useVaultPaused } from "@/components/admin/data";
 import { SafeTx, parseG, when } from "@/components/admin/bits";
 import { CohortTimeline } from "@/components/admin/CohortTimeline";
 import { HBars } from "@/components/admin/charts";
@@ -19,6 +19,14 @@ import { HBars } from "@/components/admin/charts";
 const LENGTHS = [7, 14, 30] as const; // the contract only accepts these
 const MIN_LEAD = 10 * 60; // the contract needs a future start when the transaction lands
 const toLocalInput = (d: Date) => new Date(d.getTime() - d.getTimezoneOffset() * 60_000).toISOString().slice(0, 16);
+/** "6" (percent, what an admin types) <-> 600 (bps, what the contract stores). */
+const pctToBps = (v: string): number | null => {
+  const t = v.trim();
+  if (!/^\d*\.?\d*$/.test(t) || t === "" || t === ".") return null;
+  const n = Math.round(parseFloat(t) * 100);
+  return Number.isFinite(n) && n >= 0 ? n : null;
+};
+const bpsToPct = (bps: number) => (bps / 100).toString();
 
 export default function Challenges() {
   const qc = useQueryClient();
@@ -29,6 +37,7 @@ export default function Challenges() {
   const vault = ADDR.streakVault;
   const cohorts = useCohorts();
   const paused = useVaultPaused();
+  const bonus = useBonus();
   const isAdmin = roles?.admin === true, isGuardian = roles?.guardian === true;
 
   const defaultStart = useMemo(() => { const d = new Date(Date.now() + DAY * 1000); d.setMinutes(0, 0, 0); return toLocalInput(d); }, []);
@@ -36,7 +45,9 @@ export default function Challenges() {
   const [lengthDays, setLengthDays] = useState<number>(7);
   const [min, setMin] = useState("");
   const [max, setMax] = useState("");
-  const [busy, setBusy] = useState<null | "create" | "pause">(null);
+  const [bonusPct, setBonusPct] = useState<Record<number, string>>({});
+  const [fundAmount, setFundAmount] = useState("");
+  const [busy, setBusy] = useState<null | "create" | "pause" | `bonus-${number}` | "fund">(null);
   const [err, setErr] = useState<string | null>(null);
   const [done, setDone] = useState<{ text: string; hash: `0x${string}` } | null>(null);
 
@@ -52,7 +63,7 @@ export default function Challenges() {
     : maxWei === null || maxWei < minWei ? "The maximum must be at least the minimum."
     : null;
 
-  async function send(kind: "create" | "pause", fn: "createCohort" | "pause" | "unpause", args: readonly unknown[], text: string) {
+  async function send(kind: NonNullable<typeof busy>, fn: string, args: readonly unknown[], text: string) {
     if (!pc || !address) return;
     setBusy(kind); setErr(null); setDone(null);
     try {
@@ -64,6 +75,32 @@ export default function Challenges() {
       await qc.invalidateQueries({ queryKey: ["admin"] });
     } catch (e) { setErr(friendlyError(e)); } finally { setBusy(null); }
   }
+
+  const saveBonus = (len: number) => {
+    const bps = pctToBps(bonusPct[len] ?? "");
+    if (bps === null || !bonus.data) return;
+    if (bps > bonus.data.capBps) { setErr(`That bonus rate is above the ${bonus.data.capBps / 100}% cap.`); return; }
+    void send(`bonus-${len}`, "setBonusBps", [len, bps], `${len}-day bonus set to ${bps / 100}%.`);
+  };
+
+  const fundReserve = async () => {
+    const wei = parseG(fundAmount);
+    if (!pc || !address || wei === null || wei === 0n) return;
+    setBusy("fund"); setErr(null); setDone(null);
+    try {
+      const allowance = await pc.readContract({ address: ADDR.gd, abi: erc20Abi, functionName: "allowance", args: [address, vault] });
+      if (allowance < wei) {
+        const h = await writeContractAsync({ address: ADDR.gd, abi: erc20Abi, functionName: "approve", args: [vault, wei] });
+        await pc.waitForTransactionReceipt({ hash: h });
+      }
+      const { request } = await pc.simulateContract({ account: address, address: vault, abi: streakVaultAbi, functionName: "fundBonusReserve", args: [wei] });
+      const hash = await writeContractAsync(request);
+      await pc.waitForTransactionReceipt({ hash });
+      setDone({ text: `Added ${fmtGD(wei)} G$ to the bonus reserve.`, hash });
+      setFundAmount("");
+      await qc.invalidateQueries({ queryKey: ["admin", "bonus"] });
+    } catch (e) { setErr(friendlyError(e)); } finally { setBusy(null); }
+  };
 
   if (!vault) {
     return (
@@ -173,6 +210,51 @@ export default function Challenges() {
         )}
         </div>
       </div>
+
+      <Card className="p-6">
+        <CardHeader title="Length bonus" description="An extra bonus for finishers, on top of the usual forfeit-sharing, by challenge length. Paid only from the reserve below, never from stakers' own principal." />
+        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          {LENGTHS.map((d) => {
+            const current = bonus.data?.bpsFor[d];
+            return (
+              <div key={d}>
+                <Label htmlFor={`bonus-${d}`}>{d}-day bonus</Label>
+                <div className="relative mt-1.5">
+                  <input id={`bonus-${d}`} inputMode="decimal" placeholder={current !== undefined ? bpsToPct(current) : "0"}
+                    value={bonusPct[d] ?? ""} onChange={(e) => setBonusPct((s) => ({ ...s, [d]: e.target.value }))}
+                    disabled={!isAdmin} className={`${fieldClass} pr-9`} />
+                  <span className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-sm font-semibold text-muted">%</span>
+                </div>
+                {isAdmin && <Button variant="outline" size="sm" className="mt-2 w-full" loading={busy === `bonus-${d}`} onClick={() => saveBonus(d)}>Save</Button>}
+              </div>
+            );
+          })}
+        </div>
+        <p className="mt-3 text-xs text-muted">Currently set: {LENGTHS.map((d) => `${d}d ${bonus.data ? bpsToPct(bonus.data.bpsFor[d]) : "..."}%`).join(" · ")}. Capped at {bonus.data ? bpsToPct(bonus.data.capBps) : "50"}%.</p>
+        {!isAdmin && !!address && bonus.data && (
+          <div className="mt-3 grid gap-3 sm:grid-cols-3">
+            {LENGTHS.map((d) => {
+              const bps = pctToBps(bonusPct[d] ?? "");
+              return bps === null ? null : (
+                <SafeTx key={d} to={vault} data={encodeFunctionData({ abi: streakVaultAbi, functionName: "setBonusBps", args: [d, bps] })}
+                  note={`Set the ${d}-day bonus to ${bps / 100}% from the Safe.`} />
+              );
+            })}
+          </div>
+        )}
+
+        {!!address && (
+          <div className="mt-6 border-t border-line pt-5">
+            <Label htmlFor="fund">Fund the bonus reserve</Label>
+            <p className="mt-1 text-xs text-muted">Current reserve: <span className="tabular font-medium text-ink-2">{bonus.data ? fmtGD(bonus.data.reserve) : "..."} G$</span>. Anyone can fund it, no admin role needed.</p>
+            <div className="mt-2 flex gap-3">
+              <input id="fund" inputMode="decimal" value={fundAmount} onChange={(e) => setFundAmount(e.target.value)} placeholder="Amount in G$" className={fieldClass} />
+              <Button variant="outline" icon={Sparkles} loading={busy === "fund"} onClick={fundReserve}>Fund</Button>
+            </div>
+            <p className="mt-2 text-xs text-muted">Two steps in your wallet if allowance is short: approve, then fund.</p>
+          </div>
+        )}
+      </Card>
 
     </div>
   );
