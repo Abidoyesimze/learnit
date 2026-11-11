@@ -103,7 +103,7 @@ Never commit `.env`. Only `.env.example` is tracked. Privy: enable **Email** log
 
 ### Testnet
 
-Setting `NEXT_PUBLIC_NETWORK=testnet` switches the app to Celo Alfajores: `useGoodSdk`, wagmi/Privy's chain config, and all on-chain reads point at Alfajores, and `GOODDOLLAR_SDK_ENV` defaults to `staging` for citizen-sdk. This repo does not guess GoodDollar's dev contract addresses (they change), so on testnet you must set `NEXT_PUBLIC_IDENTITY_ADDRESS`, `NEXT_PUBLIC_GOODDOLLAR_TOKEN_ADDRESS` and `NEXT_PUBLIC_UBI_SCHEME_ADDRESS` yourself from [GoodDollar's docs](https://docs.gooddollar.org), and deploy `RewardsPool`/`StreakVault` with `DeployTestnet.s.sol`'s `DEV_IDENTITY`. If `staging` turns out not to match what your installed `@goodsdks/citizen-sdk` version expects, override it with `NEXT_PUBLIC_GOODDOLLAR_SDK_ENV`.
+Setting `NEXT_PUBLIC_NETWORK=testnet` switches the app to Celo Alfajores: `useGoodSdk`, wagmi/Privy's chain config, and all on-chain reads point at Alfajores, and `GOODDOLLAR_SDK_ENV` defaults to `staging` for citizen-sdk. This repo does not guess GoodDollar's dev contract addresses (they change), so on testnet you must set `NEXT_PUBLIC_IDENTITY_ADDRESS`, `NEXT_PUBLIC_GOODDOLLAR_TOKEN_ADDRESS` and `NEXT_PUBLIC_UBI_SCHEME_ADDRESS` yourself from [GoodDollar's docs](https://docs.gooddollar.org), and deploy `RewardsPool`/`StreakVault` with `DeployTestnetUpgradeable.s.sol`'s `DEV_IDENTITY`. If `staging` turns out not to match what your installed `@goodsdks/citizen-sdk` version expects, override it with `NEXT_PUBLIC_GOODDOLLAR_SDK_ENV`.
 
 ### Contracts
 
@@ -113,21 +113,24 @@ forge build
 forge test
 ```
 
+Both contracts are UUPS upgradeable (OpenZeppelin `contracts-upgradeable`). Upgrade authority is `DEFAULT_ADMIN_ROLE` directly, no timelock - a deliberate tradeoff since `ADMIN` is meant to be a Safe multisig: one compromised Safe signer could replace either contract's entire logic instantly, so keep the Safe's threshold and signer hygiene accordingly.
+
 Deploy (Celo testnet with dev G$, or mainnet with tiny caps):
 
 ```bash
 export DEPLOYER_PRIVATE_KEY=... ADMIN=0x... GUARDIAN=0x... SIGNER=0x... UBI_ADDRESS=0x...
-forge script script/DeployTestnet.s.sol --rpc-url $CELO_TESTNET_RPC_URL --broadcast   # also needs DEV_IDENTITY
-forge script script/DeployMainnet.s.sol --rpc-url $CELO_RPC_URL --broadcast --verify
+forge script script/DeployTestnetUpgradeable.s.sol --rpc-url $CELO_TESTNET_RPC_URL --broadcast   # also needs DEV_IDENTITY
+forge script script/DeployMainnetUpgradeable.s.sol --rpc-url $CELO_RPC_URL --broadcast --verify
 ```
 
-Then fund the pool (`approve` + `deposit`), call `createCohort(start, min, max)` as admin, and put the printed addresses in `.env`. `ADMIN` and `GUARDIAN` should be a Safe multisig on mainnet.
+`initialize()` grants `ADMIN`/`GUARDIAN` directly - the deployer never holds admin at any point, unlike a typical constructor-based deploy. Then fund the pool (`approve` + `deposit`), call `createCohort(start, lengthDays, min, max)` as admin (`lengthDays` is 7, 14 or 30), and put the printed proxy addresses in `.env`. `ADMIN` and `GUARDIAN` should be a Safe multisig on mainnet.
 
-`RewardsPool` pays EIP-712 vouchers with daily and weekly caps per whitelisted root and a global daily budget. `StreakVault` runs 7-day cohorts; the signer marks finishers and settles 70% of forfeits to finishers, 20% to the pool, 10% to the UBI address. G$ transfer fees are handled by recording the amount actually received.
+`RewardsPool` pays EIP-712 vouchers with daily and weekly caps per whitelisted root and a global daily budget. `StreakVault` runs 7, 14 or 30-day cohorts (admin picks per cohort); the signer marks finishers and settles 70% of forfeits to finishers, 20% to the pool, 10% to the UBI address, plus an optional admin-tunable length bonus (`setBonusBps`, paid from a separately funded `fundBonusReserve`, never overcommitted). G$ transfer fees are handled by recording the amount actually received.
 
 ## Operations
 
-- **Finalise a stake cohort** after it ends: `npm run cohort:finalize -w @learnit/backend -- <id>` prints who finished all 7 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
+- **Finalise a stake cohort** after it ends: `npm run cohort:finalize -w @learnit/backend -- <id>` prints who finished all 7, 14 or 30 days (dry run). Add `--send` to call `markFinished` and `settle` with the signer key.
+- **Legacy contracts**: the original non-upgradeable `RewardsPool`/`StreakVault` (source removed from this repo) are still deployed and will exist on-chain forever - `RewardsPool` at `0x9267a8D2ee7b4B16707Ad0A8B66d549065127c23` (drained, 0 G$, not referenced by any env var) and `StreakVault` at `0x95751E6b79E4f0d715Cc590C7aFfF48566CD9f33`. The vault has one cohort still owed a finalize: cohort 2, 100 G$ staked, ends 2026-11-12 16:12 UTC. Once it has, run `cohort:finalize` against that address specifically (temporarily override `NEXT_PUBLIC_STREAK_VAULT_ADDRESS` to the legacy address for that one call) rather than the current upgradeable vault.
 - **Finalise a league week** after it ends: `npm run league:finalize -w @learnit/backend -- <weekKey>` prints each group's top 3 (dry run); `weekKey` is the Monday the week started (e.g. `2026-10-27`), defaults to last week. Add `--send` to sign and record bonus vouchers.
 - **Review flagged accounts**: rows in `abuse_flags` (reason `boundary-timed-perfect-streak` or `high-velocity`) mark a reward that was withheld pending review; nothing is automated beyond withholding the voucher, so check `AbuseFlag`/`User.flagged` manually (e.g. via `db:studio`) before deciding whether to pay it out some other way.
 - **Daily reminders:** `.github/workflows/reminders.yml` calls `/api/cron/reminders` every hour with `Authorization: Bearer $CRON_SECRET` (Vercel Hobby only allows daily crons, so GitHub Actions does the scheduling for free). In the GitHub repo add two Actions secrets: `APP_URL` (your deployed URL, e.g. `https://learnit.vercel.app`) and `CRON_SECRET` (same value as in Vercel). Run it by hand from the Actions tab to test. Locally: `curl -H "Authorization: Bearer $CRON_SECRET" localhost:3000/api/cron/reminders`.
