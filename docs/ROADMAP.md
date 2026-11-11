@@ -94,11 +94,11 @@ Stated in the GoodBuilders application. Baseline is today's numbers.
 |---|---|---|
 | Weekly retention | n/a at this size | 30% |
 | Users earning G$ | 0 | 50 |
-| G$ used inside the product | 100 | 3,000,000 |
+| G$ used inside the product | 100 | 5,000,000 |
 | Communities or partners onboarded | 0 | 3 |
-| GoodDollar-verified users | 2 | 700 |
-| Active users | 3 | 800 |
-| On-chain transactions | 5 | 15,000 |
+| GoodDollar-verified users | 2 | 800 |
+| Active users | 3 | 1,000 |
+| On-chain transactions | 5 | 20,000 |
 | Revenue | 0 | 0 |
 
 ## Later, not committed

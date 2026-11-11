@@ -41,8 +41,8 @@ export default function Chat() {
       />
 
       {!CHAT_ENABLED && (
-        <Notice tone="info" className="mt-6" title="Chat opens soon">
-          We are connecting the AI partner now. Here is how a conversation and its corrections will look.
+        <Notice tone="info" className="mt-6" title="Chat is not live yet">
+          The AI partner is not connected, so you can't send messages for now. This is a preview of how a conversation and its corrections will look.
         </Notice>
       )}
 
@@ -52,7 +52,7 @@ export default function Chat() {
             <span className="grid h-9 w-9 place-items-center rounded-full bg-sage-100 text-sage-700"><Sparkles size={16} aria-hidden /></span>
             <div>
               <p className="text-[15px] font-semibold text-ink">Your {lang.english} partner</p>
-              <p className="text-xs text-muted">Example conversation</p>
+              <p className="text-xs text-muted">Example conversation, not live</p>
             </div>
           </div>
         </div>
