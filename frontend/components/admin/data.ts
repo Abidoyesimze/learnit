@@ -39,6 +39,26 @@ export function useVaultPaused() {
     queryFn: () => pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "paused" }) });
 }
 
+/** The length-based staking bonus: an admin-tunable bps rate per cohort length (7, 14 or 30 days),
+ *  paid at settle() from a dedicated reserve funded separately from stakes. */
+export function useBonus() {
+  const pc = usePublicClient();
+  const vault = ADDR.streakVault;
+  return useQuery({
+    queryKey: ["admin", "bonus"], enabled: !!vault && !!pc, staleTime: 15_000,
+    queryFn: async () => {
+      const [bps7, bps14, bps30, reserve, capBps] = await Promise.all([
+        pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "bonusBpsFor", args: [7] }),
+        pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "bonusBpsFor", args: [14] }),
+        pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "bonusBpsFor", args: [30] }),
+        pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "bonusReserve" }),
+        pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "MAX_BONUS_BPS" }),
+      ]);
+      return { bpsFor: { 7: bps7, 14: bps14, 30: bps30 } as Record<7 | 14 | 30, number>, reserve, capBps };
+    },
+  });
+}
+
 export function usePool() {
   const pc = usePublicClient();
   const pool = ADDR.rewardsPool;
