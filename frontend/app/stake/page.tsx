@@ -18,7 +18,7 @@ import { useAuthGate } from "@/components/useAuthGate";
 import { StakeSkeleton } from "@/components/Skeletons";
 
 type Cohort = {
-  id: number; start: number; end: number; min: string; max: string; pot: string; settled: boolean; joinable: boolean; members: number;
+  id: number; start: number; end: number; min: string; max: string; pot: string; settled: boolean; voided: boolean; joinable: boolean; members: number;
   mine: { stake: string; finished: boolean; withdrawn: boolean; payout: string } | null;
   progress: { required: string[]; done: boolean[]; completed: number } | null;
 };
@@ -118,7 +118,7 @@ export default function Stake() {
   });
 
   const ended = !!c && c.end * 1000 < Date.now();
-  const status = !c ? null : c.settled ? { label: "Closed", tone: "neutral" as const } : ended ? { label: "Results pending", tone: "outline" as const } : c.joinable ? { label: "Open to join", tone: "sage" as const } : { label: "Running", tone: "coral" as const };
+  const status = !c ? null : c.voided ? { label: "Cancelled", tone: "neutral" as const } : c.settled ? { label: "Closed", tone: "neutral" as const } : ended ? { label: "Results pending", tone: "outline" as const } : c.joinable ? { label: "Open to join", tone: "sage" as const } : { label: "Running", tone: "coral" as const };
   const days = c ? Math.round((c.end - c.start) / 86400) : 7;
 
   const formShown = !staked && !!c?.joinable && !isPaused;
@@ -173,7 +173,7 @@ export default function Stake() {
           {owedOlder.length > 0 && (
             <section aria-labelledby="owed-title" className="rounded-card bg-sage-50 p-5 ring-1 ring-inset ring-sage-100 sm:p-6">
               <h2 id="owed-title" className="text-[15px] font-semibold text-ink">Money waiting for you</h2>
-              <p className="mt-1 text-sm text-ink-2">These challenges have closed and you finished them. Withdraw your stake whenever you like.</p>
+              <p className="mt-1 text-sm text-ink-2">These challenges have closed and you have G$ to collect. Withdraw whenever you like.</p>
               <ul className="mt-4 grid gap-3">
                 {owedOlder.map((o) => {
                   const len = Math.round((o.end - o.start) / 86400);
@@ -288,7 +288,14 @@ export default function Stake() {
                 )}
                 {staked && c.settled && !c.mine!.finished && <Notice tone="warning" className="mt-6" title="Challenge closed">A day was missed, so your stake went to the people who finished. You can commit again when the next challenge opens.</Notice>}
                 {staked && c.mine!.withdrawn && <Notice tone="success" className="mt-6" title="Withdrawn">Your payout is in your wallet.</Notice>}
-                {staked && !c.settled && ended && <Notice tone="info" className="mt-6">The challenge has ended. We are confirming who finished.</Notice>}
+                {staked && c.voided && !c.mine!.withdrawn && (
+                  <div className="mt-6 rounded-card bg-sunken p-5 ring-1 ring-inset ring-line">
+                    <p className="font-semibold text-ink">This challenge was cancelled</p>
+                    <p className="mt-1 text-sm text-ink-2">We could not confirm the results in time, so nobody loses anything. Everyone who joined gets their full stake back.</p>
+                    <Button onClick={() => withdraw(c.id)} loading={busy} size="lg" block className="mt-4">{busy ? STEP_LABEL[step!] : `Withdraw ${fmtGD(c.mine!.payout)} G$`}</Button>
+                  </div>
+                )}
+                {staked && !c.settled && !c.voided && ended && <Notice tone="info" className="mt-6">The challenge has ended. We are confirming who finished.</Notice>}
               </div>
               {staked && stats("border-t border-line")}
             </Card>

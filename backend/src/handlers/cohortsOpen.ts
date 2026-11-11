@@ -11,7 +11,7 @@ export async function GET(req: Request) {
     const recent = new Set(ids.slice(-6));
     for (const id of ids) {
       const mine = await myState(id, user);
-      const owed = !!mine && BigInt(mine.payout) > 0n; // settled, finished and not withdrawn yet
+      const owed = !!mine && BigInt(mine.payout) > 0n; // not withdrawn yet: finished a settled challenge, or staked in a cancelled one
       // Older challenges only matter while the person still has a payout to collect, so they never drop off the list.
       if (!recent.has(id) && !owed) continue;
       const c = await readCohort(id);

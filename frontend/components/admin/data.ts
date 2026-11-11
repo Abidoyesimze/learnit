@@ -6,10 +6,11 @@ import { rewardsPoolAbi, streakVaultAbi } from "@learnit/backend/abis";
 import { ADDR } from "@learnit/backend/chain";
 
 export const DAY = 86_400;
-export type Cohort = { id: number; start: number; end: number; min: bigint; max: bigint; pot: bigint; finishedStake: bigint; settled: boolean };
-export type CohortStatus = "upcoming" | "open" | "running" | "finalize" | "settled";
+export type Cohort = { id: number; start: number; end: number; min: bigint; max: bigint; pot: bigint; finishedStake: bigint; settled: boolean; voided: boolean };
+export type CohortStatus = "upcoming" | "open" | "running" | "finalize" | "settled" | "voided";
 
 export function cohortStatus(c: Cohort, now: number): CohortStatus {
+  if (c.voided) return "voided"; // results were never confirmed: cancelled, every staker takes their stake back
   if (c.settled) return "settled";
   if (now < c.start) return "upcoming";
   if (now < c.start + DAY) return "open";
@@ -27,7 +28,9 @@ export function useCohorts() {
       const ids = Array.from({ length: Math.max(0, next - 1) }, (_, i) => i + 1);
       if (!ids.length) return [];
       const res = await pc!.multicall({ allowFailure: false, contracts: ids.map((id) => ({ address: vault, abi: streakVaultAbi, functionName: "cohorts" as const, args: [BigInt(id)] as const })) });
-      return res.map((r, i) => ({ id: ids[i], start: Number(r[0]), end: Number(r[1]), min: r[2], max: r[3], pot: r[4], finishedStake: r[5], settled: r[7] })).reverse();
+      // A vault from before the settlement-review upgrade has no voided(); those calls fail and count as "not voided".
+      const voided = await pc!.multicall({ allowFailure: true, contracts: ids.map((id) => ({ address: vault, abi: streakVaultAbi, functionName: "voided" as const, args: [BigInt(id)] as const })) });
+      return res.map((r, i) => ({ id: ids[i], start: Number(r[0]), end: Number(r[1]), min: r[2], max: r[3], pot: r[4], finishedStake: r[5], settled: r[7], voided: voided[i].result === true })).reverse();
     },
   });
 }
@@ -40,7 +43,7 @@ export function useVaultPaused() {
 }
 
 /** The length-based staking bonus: an admin-tunable bps rate per cohort length (7, 14 or 30 days),
- *  paid at settle() from a dedicated reserve funded separately from stakes. */
+ *  paid from a dedicated reserve funded separately from stakes. A cohort keeps the rate it was created with. */
 export function useBonus() {
   const pc = usePublicClient();
   const vault = ADDR.streakVault;

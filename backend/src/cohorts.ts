@@ -11,7 +11,10 @@ export async function readCohort(id: number) {
   const v = vault(); if (!v) return null;
   const [start, end, min, max, totalStaked, finishedStake, , settled] = await publicClient.readContract({ address: v, abi: streakVaultAbi, functionName: "cohorts", args: [BigInt(id)] });
   if (start === 0n || !end) return null;
-  return { id, start: Number(start), end: Number(end), min: min.toString(), max: max.toString(), pot: totalStaked.toString(), finishedStake: finishedStake.toString(), settled };
+  // voided: results were never confirmed, so the challenge was cancelled and every staker can take their stake back.
+  // A vault from before that upgrade has no such function and can never be voided.
+  const voided = await publicClient.readContract({ address: v, abi: streakVaultAbi, functionName: "voided", args: [BigInt(id)] }).catch(() => false);
+  return { id, start: Number(start), end: Number(end), min: min.toString(), max: max.toString(), pot: totalStaked.toString(), finishedStake: finishedStake.toString(), settled, voided };
 }
 
 export async function listCohortIds() {
@@ -71,8 +74,8 @@ export async function progressFor(user: User, startSec: number, endSec: number) 
   return { required, done, completed: done.filter(Boolean).length };
 }
 
-export async function mirrorCohort(c: { id: number; start: number; end: number; min: string; max: string; settled: boolean }) {
-  const status = c.settled ? "settled" : Date.now() / 1000 >= c.end ? "ended" : Date.now() / 1000 >= c.start ? "running" : "open";
+export async function mirrorCohort(c: { id: number; start: number; end: number; min: string; max: string; settled: boolean; voided?: boolean }) {
+  const status = c.voided ? "voided" : c.settled ? "settled" : Date.now() / 1000 >= c.end ? "ended" : Date.now() / 1000 >= c.start ? "running" : "open";
   await db.cohort.upsert({
     where: { id: c.id },
     create: { id: c.id, startAt: new Date(c.start * 1000), endAt: new Date(c.end * 1000), minStake: c.min, maxStake: c.max, status },
