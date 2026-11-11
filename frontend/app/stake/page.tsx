@@ -47,6 +47,7 @@ export default function Stake() {
   const { writeContractAsync } = useWriteContract();
   const [amount, setAmount] = useState("");
   const [step, setStep] = useState<Step>(null);
+  const [paying, setPaying] = useState<number | null>(null); // which payout is being withdrawn, so only that row shows progress
   const [err, setErr] = useState<string | null>(null);
   const live = Boolean(ADDR.streakVault);
   const busy = step !== null;
@@ -60,6 +61,8 @@ export default function Stake() {
 
   const c = data.cohorts[0];
   const staked = !!c?.mine && BigInt(c.mine.stake) > 0n;
+  // Closed challenges where a payout is still waiting. They stay visible even after a newer challenge opens.
+  const owedOlder = data.cohorts.filter((x) => x.id !== c?.id && !!x.mine && BigInt(x.mine.payout) > 0n);
   const isPaused = paused.data === true;
 
   // Why the form cannot be used, in the order a person would fix them.
@@ -77,7 +80,7 @@ export default function Stake() {
     setErr(null);
     try { await fn(); await qc.invalidateQueries({ queryKey: ["cohorts"] }); }
     catch (e) { setErr(friendlyError(e)); await qc.invalidateQueries({ queryKey: ["cohorts"] }); }
-    finally { setStep(null); }
+    finally { setStep(null); setPaying(null); }
   }
 
   const stake = () => run(async () => {
@@ -103,10 +106,11 @@ export default function Stake() {
     setAmount("");
   });
 
-  const withdraw = () => run(async () => {
-    if (!c || !pc || !address) return;
+  const withdraw = (id: number | undefined = c?.id) => run(async () => {
+    if (id === undefined || !pc || !address) return;
+    setPaying(id);
     setStep("checking");
-    const { request } = await pc.simulateContract({ account: address, address: ADDR.streakVault, abi: streakVaultAbi, functionName: "withdraw", args: [BigInt(c.id)] });
+    const { request } = await pc.simulateContract({ account: address, address: ADDR.streakVault, abi: streakVaultAbi, functionName: "withdraw", args: [BigInt(id)] });
     setStep("withdraw");
     const h = await writeContractAsync(request);
     const r = await pc.waitForTransactionReceipt({ hash: h });
@@ -165,6 +169,31 @@ export default function Stake() {
       <div className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-8">
         <div className="grid content-start gap-6">
           {!c && <EmptyState icon={CalendarDays} title="No open challenge right now">A new challenge opens regularly. Check back soon, and keep your streak going in the meantime.</EmptyState>}
+
+          {owedOlder.length > 0 && (
+            <section aria-labelledby="owed-title" className="rounded-card bg-sage-50 p-5 ring-1 ring-inset ring-sage-100 sm:p-6">
+              <h2 id="owed-title" className="text-[15px] font-semibold text-ink">Money waiting for you</h2>
+              <p className="mt-1 text-sm text-ink-2">These challenges have closed and you finished them. Withdraw your stake whenever you like.</p>
+              <ul className="mt-4 grid gap-3">
+                {owedOlder.map((o) => {
+                  const len = Math.round((o.end - o.start) / 86400);
+                  const fmt = (t: number) => new Date(t * 1000).toLocaleDateString(undefined, { month: "short", day: "numeric", timeZone: "UTC" });
+                  const here = paying === o.id;
+                  return (
+                    <li key={o.id} className="grid gap-3 rounded-input bg-surface p-4 ring-1 ring-inset ring-line sm:grid-cols-[1fr_auto] sm:items-center sm:gap-4">
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-ink">{len} day challenge</p>
+                        <p className="mt-0.5 text-xs text-muted">{fmt(o.start)} to {fmt(o.end)}</p>
+                        <p className="mt-2 text-lg font-semibold text-ink"><span className="tabular">{fmtGD(o.mine!.payout)}</span> <span className="text-sm font-medium text-muted">G$</span></p>
+                      </div>
+                      <Button onClick={() => withdraw(o.id)} loading={here} disabled={busy && !here} block className="sm:w-auto">{here && step ? STEP_LABEL[step] : "Withdraw"}</Button>
+                    </li>
+                  );
+                })}
+              </ul>
+              {err && <Notice tone="danger" className="mt-4">{err}</Notice>}
+            </section>
+          )}
 
           {c && (
             <Card className="overflow-hidden">
@@ -254,7 +283,7 @@ export default function Stake() {
                   <div className="mt-6 rounded-card bg-sage-50 p-5 ring-1 ring-inset ring-sage-100">
                     <p className="font-semibold text-sage-700">You kept your word: {days} days out of {days}</p>
                     <p className="mt-1 text-sm text-ink-2">Your stake is ready to withdraw, including your share of the stakes from people who missed a day.</p>
-                    <Button onClick={withdraw} loading={busy} size="lg" block className="mt-4">{busy ? STEP_LABEL[step!] : `Withdraw ${fmtGD(c.mine!.payout)} G$`}</Button>
+                    <Button onClick={() => withdraw(c.id)} loading={busy} size="lg" block className="mt-4">{busy ? STEP_LABEL[step!] : `Withdraw ${fmtGD(c.mine!.payout)} G$`}</Button>
                   </div>
                 )}
                 {staked && c.settled && !c.mine!.finished && <Notice tone="warning" className="mt-6" title="Challenge closed">A day was missed, so your stake went to the people who finished. You can commit again when the next challenge opens.</Notice>}
@@ -264,7 +293,7 @@ export default function Stake() {
               {staked && stats("border-t border-line")}
             </Card>
           )}
-          {err && !formShown && <Notice tone="danger">{err}</Notice>}
+          {err && !formShown && owedOlder.length === 0 && <Notice tone="danger">{err}</Notice>}
         </div>
 
         <aside className="hidden content-start gap-6 lg:grid">

@@ -8,14 +8,19 @@ import { ADDR, CHAIN_ID } from "./chain";
 import { rewardsPoolAbi } from "./abis";
 
 const g = (name: string, d: string) => parseUnits(process.env[name] || d, 18);
-export const rewardConfig = () => ({
-  lesson: g("LESSON_REWARD_G", "0.25"),
-  checkpoint: g("CHECKPOINT_REWARD_G", "2"),
-  dailyCap: g("DAILY_CAP_G", "2"), // keep equal to RewardsPool.dailyCap
-  maxLessonsPerDay: 6,
-  expirySeconds: 7 * 86400,
-  leagueBonus: [g("LEAGUE_BONUS_1_G", "3"), g("LEAGUE_BONUS_2_G", "2"), g("LEAGUE_BONUS_3_G", "1")] as const, // rank 1, 2, 3
-});
+export const rewardConfig = () => {
+  const dailyCap = g("DAILY_CAP_G", "2"); // keep equal to RewardsPool.dailyCap
+  // A voucher can't be split across days, so none may exceed the daily cap or the pool would reject it every day.
+  const fit = (n: bigint) => (n > dailyCap ? dailyCap : n);
+  return {
+    lesson: g("LESSON_REWARD_G", "0.25"),
+    checkpoint: fit(g("CHECKPOINT_REWARD_G", "2")),
+    dailyCap,
+    maxLessonsPerDay: 6,
+    expirySeconds: 7 * 86400,
+    leagueBonus: [fit(g("LEAGUE_BONUS_1_G", "2")), fit(g("LEAGUE_BONUS_2_G", "1.5")), fit(g("LEAGUE_BONUS_3_G", "1"))] as const, // rank 1, 2, 3
+  };
+};
 
 const voucherTypes = {
   Voucher: [
