@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { useAccount, usePublicClient, useWriteContract } from "wagmi";
 import { encodeFunctionData, erc20Abi } from "viem";
-import { ExternalLink, Flame, PauseCircle, PlayCircle, Plus, Sparkles } from "lucide-react";
+import { ExternalLink, Flame, PauseCircle, PlayCircle, Plus, Send, Sparkles } from "lucide-react";
 import { friendlyError } from "@/lib/txErrors";
 import { streakVaultAbi } from "@learnit/backend/abis";
 import { ADDR } from "@learnit/backend/chain";
@@ -11,7 +11,7 @@ import { fmtGD } from "@learnit/backend/format";
 import { Badge, Button, Card, CardHeader, EmptyState, Label, Notice, PageHeader, fieldClass } from "@/components/ui";
 import { Sk } from "@/components/ui/Sk";
 import { useAdmin } from "@/components/admin/AdminProvider";
-import { DAY, cohortStatus, useBonus, useCohorts, useVaultPaused } from "@/components/admin/data";
+import { DAY, RESULTS_DEADLINE, useBonus, useCohorts, useVaultPaused, useVaultPending } from "@/components/admin/data";
 import { SafeTx, parseG, when } from "@/components/admin/bits";
 import { CohortTimeline } from "@/components/admin/CohortTimeline";
 import { HBars } from "@/components/admin/charts";
@@ -38,6 +38,8 @@ export default function Challenges() {
   const cohorts = useCohorts();
   const paused = useVaultPaused();
   const bonus = useBonus();
+  const pending = useVaultPending();
+  const pendingTotal = pending.data ? pending.data.rewards + pending.data.ubi : 0n;
   const isAdmin = roles?.admin === true, isGuardian = roles?.guardian === true;
 
   const defaultStart = useMemo(() => { const d = new Date(Date.now() + DAY * 1000); d.setMinutes(0, 0, 0); return toLocalInput(d); }, []);
@@ -47,7 +49,7 @@ export default function Challenges() {
   const [max, setMax] = useState("");
   const [bonusPct, setBonusPct] = useState<Record<number, string>>({});
   const [fundAmount, setFundAmount] = useState("");
-  const [busy, setBusy] = useState<null | "create" | "pause" | `bonus-${number}` | "fund">(null);
+  const [busy, setBusy] = useState<null | "create" | "pause" | `bonus-${number}` | "fund" | `settle-${number}` | `void-${number}` | "distribute">(null);
   const [err, setErr] = useState<string | null>(null);
   const [done, setDone] = useState<{ text: string; hash: `0x${string}` } | null>(null);
 
@@ -131,7 +133,19 @@ export default function Challenges() {
             ) : !cohorts.data?.length ? (
               <EmptyState icon={Flame} title="No challenges yet">Create the first one below.</EmptyState>
             ) : (
-              <CohortTimeline cohorts={cohorts.data} now={now} />
+              <CohortTimeline cohorts={cohorts.data} now={now} action={(c, status) => {
+                // Neither call needs a role: the contract lets anyone settle confirmed results, or cancel once the deadline has passed.
+                if (!address) return null;
+                if (status === "settle") return (
+                  <Button size="sm" className="justify-self-start" loading={busy === `settle-${c.id}`} disabled={busy !== null}
+                    onClick={() => send(`settle-${c.id}`, "settle", [BigInt(c.id)], `Challenge ${c.id} is settled. The people who finished can withdraw.`)}>Settle challenge {c.id}</Button>
+                );
+                if (status === "finalize" && now >= c.end + RESULTS_DEADLINE) return (
+                  <Button size="sm" variant="outline" className="justify-self-start" loading={busy === `void-${c.id}`} disabled={busy !== null}
+                    onClick={() => send(`void-${c.id}`, "voidCohort", [BigInt(c.id)], `Challenge ${c.id} is cancelled. Everyone who joined can take their stake back.`)}>Cancel challenge {c.id} and refund everyone</Button>
+                );
+                return null;
+              }} />
             )}
           </div>
         </Card>
@@ -202,6 +216,19 @@ export default function Challenges() {
             </div>
           )}
         </Card>
+        {pendingTotal > 0n && (
+          <Card className="p-6">
+            <CardHeader title="Forfeit shares to send on" description="Settling a challenge sets these aside in the vault. Sending them on is a separate step, so a problem with the destination can never hold up a withdrawal." />
+            <dl className="mt-4 grid grid-cols-2 gap-4 text-sm">
+              <div><dt className="text-muted">To the rewards pool</dt><dd className="tabular mt-0.5 font-semibold text-ink">{fmtGD(pending.data!.rewards)} G$</dd></div>
+              <div><dt className="text-muted">To UBI</dt><dd className="tabular mt-0.5 font-semibold text-ink">{fmtGD(pending.data!.ubi)} G$</dd></div>
+            </dl>
+            {address
+              ? <Button variant="outline" size="sm" className="mt-4" icon={Send} loading={busy === "distribute"} disabled={busy !== null}
+                  onClick={() => send("distribute", "distribute", [], `Sent ${fmtGD(pendingTotal)} G$ on to the rewards pool and UBI.`)}>Send them on</Button>
+              : <p className="mt-4 text-sm text-muted">Sign in with any wallet to send them. No role is needed.</p>}
+          </Card>
+        )}
         {settled.length > 0 && (
           <Card className="p-6">
             <CardHeader title="Who finishes" description="Share of the G$ staked that belonged to people who finished, per settled challenge." />

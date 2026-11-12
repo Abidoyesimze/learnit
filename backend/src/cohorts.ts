@@ -6,15 +6,30 @@ import { streakVaultAbi } from "./abis";
 import { localDate } from "./streak";
 
 const vault = () => (ADDR.streakVault || null) as `0x${string}` | null;
+/** Seconds after a challenge ends before anyone may cancel it for lack of results. Same as the vault's RESULTS_DEADLINE. */
+export const RESULTS_DEADLINE = 7 * 86400;
 
 export async function readCohort(id: number) {
   const v = vault(); if (!v) return null;
   const [start, end, min, max, totalStaked, finishedStake, , settled] = await publicClient.readContract({ address: v, abi: streakVaultAbi, functionName: "cohorts", args: [BigInt(id)] });
   if (start === 0n || !end) return null;
   // voided: results were never confirmed, so the challenge was cancelled and every staker can take their stake back.
-  // A vault from before that upgrade has no such function and can never be voided.
-  const voided = await publicClient.readContract({ address: v, abi: streakVaultAbi, functionName: "voided", args: [BigInt(id)] }).catch(() => false);
-  return { id, start: Number(start), end: Number(end), min: min.toString(), max: max.toString(), pot: totalStaked.toString(), finishedStake: finishedStake.toString(), settled, voided };
+  // resultsFinal: the signer has confirmed who finished, so the challenge can be settled.
+  // terms: the bonus rate locked for this challenge when it was created.
+  // A vault from before that upgrade has none of these: it can never be voided and pays no locked bonus.
+  const i = BigInt(id);
+  const [voided, resultsFinal, terms] = await Promise.all([
+    publicClient.readContract({ address: v, abi: streakVaultAbi, functionName: "voided", args: [i] }).catch(() => false),
+    publicClient.readContract({ address: v, abi: streakVaultAbi, functionName: "resultsFinal", args: [i] }).catch(() => null),
+    publicClient.readContract({ address: v, abi: streakVaultAbi, functionName: "termsOf", args: [i] }).catch(() => null),
+  ]);
+  return {
+    id, start: Number(start), end: Number(end), min: min.toString(), max: max.toString(), pot: totalStaked.toString(), finishedStake: finishedStake.toString(), settled, voided,
+    resultsFinal: resultsFinal === true,
+    bonusBps: terms?.[0] ? terms[3] : 0,
+    // From this time anyone may cancel the challenge if the results are still not confirmed. null: this vault cannot void.
+    voidableAt: resultsFinal === null ? null : Number(end) + RESULTS_DEADLINE,
+  };
 }
 
 export async function listCohortIds() {

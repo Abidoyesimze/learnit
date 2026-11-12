@@ -33,7 +33,7 @@ export default function Overview() {
   const s = stats.data;
 
   const live = (cohorts.data ?? []).filter((c) => ["open", "running"].includes(cohortStatus(c, now)));
-  const toFinalize = (cohorts.data ?? []).filter((c) => cohortStatus(c, now) === "finalize");
+  const toFinalize = (cohorts.data ?? []).filter((c) => ["finalize", "settle"].includes(cohortStatus(c, now)));
   const upcoming = (cohorts.data ?? []).filter((c) => cohortStatus(c, now) === "upcoming");
   const staked = live.reduce((t, c) => t + c.pot, 0n);
 

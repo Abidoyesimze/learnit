@@ -24,6 +24,12 @@ const MESSAGES: Record<string, string> = {
   NotStaked: "You did not stake in this challenge.",
   NotFinisher: "Only people who finished every day can withdraw.",
   AlreadyWithdrawn: "You have already withdrawn.",
+  IsVoided: "This challenge was already cancelled. Everyone who joined can take their stake back.",
+  CannotVoidYet: "This challenge cannot be cancelled yet. That opens 7 days after it ends, if the results are still not confirmed.",
+  ResultsAlreadyFinal: "The results of this challenge are already confirmed, so it can no longer be changed or cancelled.",
+  ResultsNotFinal: "The results of this challenge are not confirmed yet, so it cannot be settled.",
+  AlreadySettled: "This challenge is already settled.",
+  NotEnded: "This challenge has not ended yet.",
   // Admin
   AccessControlUnauthorizedAccount: "This wallet does not have permission to do that. Connect the admin wallet.",
   ExpectedPause: "Staking is not paused.",

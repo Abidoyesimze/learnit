@@ -6,8 +6,11 @@ import { rewardsPoolAbi, streakVaultAbi } from "@learnit/backend/abis";
 import { ADDR } from "@learnit/backend/chain";
 
 export const DAY = 86_400;
-export type Cohort = { id: number; start: number; end: number; min: bigint; max: bigint; pot: bigint; finishedStake: bigint; settled: boolean; voided: boolean };
-export type CohortStatus = "upcoming" | "open" | "running" | "finalize" | "settled" | "voided";
+/** After a challenge ends, the signer has this long to confirm the results. Past it, anyone may cancel the challenge. Same as the vault's RESULTS_DEADLINE. */
+export const RESULTS_DEADLINE = 7 * DAY;
+export type Cohort = { id: number; start: number; end: number; min: bigint; max: bigint; pot: bigint; finishedStake: bigint; settled: boolean; voided: boolean; resultsFinal: boolean };
+/** "finalize": ended, results not confirmed yet (the signer's job). "settle": results confirmed, waiting for anyone to call settle. */
+export type CohortStatus = "upcoming" | "open" | "running" | "finalize" | "settle" | "settled" | "voided";
 
 export function cohortStatus(c: Cohort, now: number): CohortStatus {
   if (c.voided) return "voided"; // results were never confirmed: cancelled, every staker takes their stake back
@@ -15,7 +18,7 @@ export function cohortStatus(c: Cohort, now: number): CohortStatus {
   if (now < c.start) return "upcoming";
   if (now < c.start + DAY) return "open";
   if (now < c.end) return "running";
-  return "finalize";
+  return c.resultsFinal ? "settle" : "finalize";
 }
 
 export function useCohorts() {
@@ -28,9 +31,28 @@ export function useCohorts() {
       const ids = Array.from({ length: Math.max(0, next - 1) }, (_, i) => i + 1);
       if (!ids.length) return [];
       const res = await pc!.multicall({ allowFailure: false, contracts: ids.map((id) => ({ address: vault, abi: streakVaultAbi, functionName: "cohorts" as const, args: [BigInt(id)] as const })) });
-      // A vault from before the settlement-review upgrade has no voided(); those calls fail and count as "not voided".
-      const voided = await pc!.multicall({ allowFailure: true, contracts: ids.map((id) => ({ address: vault, abi: streakVaultAbi, functionName: "voided" as const, args: [BigInt(id)] as const })) });
-      return res.map((r, i) => ({ id: ids[i], start: Number(r[0]), end: Number(r[1]), min: r[2], max: r[3], pot: r[4], finishedStake: r[5], settled: r[7], voided: voided[i].result === true })).reverse();
+      // A vault from before the settlement-review upgrade has no voided() or resultsFinal(); those calls fail and count as "no".
+      const [voided, final] = await Promise.all((["voided", "resultsFinal"] as const).map((functionName) =>
+        pc!.multicall({ allowFailure: true, contracts: ids.map((id) => ({ address: vault, abi: streakVaultAbi, functionName, args: [BigInt(id)] as const })) })));
+      return res.map((r, i) => ({ id: ids[i], start: Number(r[0]), end: Number(r[1]), min: r[2], max: r[3], pot: r[4], finishedStake: r[5], settled: r[7], voided: voided[i].result === true, resultsFinal: final[i].result === true })).reverse();
+    },
+  });
+}
+
+/** Forfeit shares that settle() has set aside and distribute() has not sent on yet. null on a vault from before that upgrade. */
+export function useVaultPending() {
+  const pc = usePublicClient();
+  const vault = ADDR.streakVault;
+  return useQuery({
+    queryKey: ["admin", "vault-pending"], enabled: !!vault && !!pc, staleTime: 15_000,
+    queryFn: async () => {
+      try {
+        const [rewards, ubi] = await Promise.all([
+          pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "pendingRewards" }),
+          pc!.readContract({ address: vault, abi: streakVaultAbi, functionName: "pendingUbi" }),
+        ]);
+        return { rewards, ubi };
+      } catch { return null; }
     },
   });
 }
