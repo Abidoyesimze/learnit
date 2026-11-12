@@ -18,11 +18,11 @@ import { useAuthGate } from "@/components/useAuthGate";
 import { StakeSkeleton } from "@/components/Skeletons";
 
 type Cohort = {
-  id: number; start: number; end: number; min: string; max: string; pot: string; settled: boolean; voided: boolean; joinable: boolean; members: number;
+  id: number; start: number; end: number; min: string; max: string; pot: string; settled: boolean; voided: boolean; resultsFinal: boolean; bonusBps: number; voidableAt: number | null; joinable: boolean; members: number;
   mine: { stake: string; finished: boolean; withdrawn: boolean; payout: string } | null;
   progress: { required: string[]; done: boolean[]; completed: number } | null;
 };
-type Step = null | "checking" | "approve" | "stake" | "withdraw";
+type Step = null | "checking" | "approve" | "stake" | "withdraw" | "cancel";
 
 const fmtDate = (s: number) => new Date(s * 1000).toLocaleDateString(undefined, { month: "short", day: "numeric" });
 const STEP_LABEL: Record<Exclude<Step, null>, string> = {
@@ -30,6 +30,7 @@ const STEP_LABEL: Record<Exclude<Step, null>, string> = {
   approve: "Step 1 of 2: allow G$ in your wallet",
   stake: "Step 2 of 2: confirm the stake in your wallet",
   withdraw: "Confirm the withdrawal in your wallet",
+  cancel: "Step 1 of 2: cancel the challenge in your wallet",
 };
 
 function parseAmount(v: string): bigint | null {
@@ -106,15 +107,33 @@ export default function Stake() {
     setAmount("");
   });
 
+  async function sendWithdraw(id: number) {
+    setStep("checking");
+    const { request } = await pc!.simulateContract({ account: address!, address: ADDR.streakVault, abi: streakVaultAbi, functionName: "withdraw", args: [BigInt(id)] });
+    setStep("withdraw");
+    const h = await writeContractAsync(request);
+    const r = await pc!.waitForTransactionReceipt({ hash: h });
+    if (r.status !== "success") throw new Error("The withdrawal didn't go through. Your payout is still waiting for you.");
+  }
+
   const withdraw = (id: number | undefined = c?.id) => run(async () => {
     if (id === undefined || !pc || !address) return;
     setPaying(id);
+    await sendWithdraw(id);
+  });
+
+  // Results were not confirmed in time. The contract lets anyone cancel the challenge then, after which every
+  // staker takes their own stake back. Two transactions: cancel, then withdraw.
+  const refund = (id: number) => run(async () => {
+    if (!pc || !address) throw new Error("Connect your wallet first.");
+    setPaying(id);
     setStep("checking");
-    const { request } = await pc.simulateContract({ account: address, address: ADDR.streakVault, abi: streakVaultAbi, functionName: "withdraw", args: [BigInt(id)] });
-    setStep("withdraw");
+    const { request } = await pc.simulateContract({ account: address, address: ADDR.streakVault, abi: streakVaultAbi, functionName: "voidCohort", args: [BigInt(id)] });
+    setStep("cancel");
     const h = await writeContractAsync(request);
     const r = await pc.waitForTransactionReceipt({ hash: h });
-    if (r.status !== "success") throw new Error("The withdrawal didn't go through. Your payout is still waiting for you.");
+    if (r.status !== "success") throw new Error("The cancellation didn't go through. Your stake is still in the challenge.");
+    await sendWithdraw(id);
   });
 
   const ended = !!c && c.end * 1000 < Date.now();
@@ -122,6 +141,10 @@ export default function Stake() {
   const days = c ? Math.round((c.end - c.start) / 86400) : 7;
 
   const formShown = !staked && !!c?.joinable && !isPaused;
+  // The bonus rate was locked when the challenge was created and each stake's bonus is set aside up front, so this is a floor, not an estimate.
+  const bonusBps = c?.bonusBps ?? 0;
+  const bonusWei = wei !== null && !outOfBounds && bonusBps > 0 ? (wei * BigInt(bonusBps)) / 10_000n : 0n;
+  const overdue = !!c && c.voidableAt !== null && Date.now() / 1000 >= c.voidableAt;
   const amt = wei !== null && !outOfBounds ? Number(formatUnits(wei, 18)).toLocaleString("en", { maximumFractionDigits: 4 }) : null;
   const stats = (cls: string) => c ? (
       <dl className={`grid grid-cols-2 divide-line sm:grid-cols-4 sm:divide-x ${cls}`}>
@@ -145,7 +168,7 @@ export default function Stake() {
         {[
           { Icon: PiggyBank, t: "Put G$ behind it", b: c ? `Choose an amount between ${fmtGD(c.min, 0)} and ${fmtGD(c.max, 0)} G$ while the challenge is open.` : "Choose an amount while a challenge is open." },
           { Icon: Flame, t: `Show up for ${days} days`, b: `Pass at least one lesson on each of the ${days} days, in your own timezone.` },
-          { Icon: Trophy, t: "Get it back", b: `Finish all ${days} days and withdraw your stake.` },
+          { Icon: Trophy, t: "Get it back", b: `Finish all ${days} days and withdraw your stake${bonusBps > 0 ? `, plus a ${bonusBps / 100}% bonus` : ""}.` },
         ].map(({ Icon, t, b }, i) => (
           <li key={t} className="flex gap-4">
             <span className="relative grid h-9 w-9 shrink-0 place-items-center rounded-full bg-sunken text-ink-2">
@@ -264,7 +287,7 @@ export default function Stake() {
                     </p>
                     {amt ? (
                       <dl className="mt-5 grid gap-px overflow-hidden rounded-input border border-line bg-line text-sm sm:grid-cols-2">
-                        <div className="bg-sage-50 px-4 py-3"><dt className="text-xs font-medium text-sage-700">If you finish all {days} days</dt><dd className="tabular mt-0.5 font-semibold text-ink">{amt} G$ back</dd></div>
+                        <div className="bg-sage-50 px-4 py-3"><dt className="text-xs font-medium text-sage-700">If you finish all {days} days</dt><dd className="tabular mt-0.5 font-semibold text-ink">{amt} G$ back{bonusWei > 0n && ` + ${fmtGD(bonusWei)} G$ bonus`}</dd></div>
                         <div className="bg-coral-50 px-4 py-3"><dt className="text-xs font-medium text-coral-700">If you miss a day</dt><dd className="mt-0.5 font-semibold text-ink">You lose the stake</dd></div>
                       </dl>
                     ) : (
@@ -295,7 +318,20 @@ export default function Stake() {
                     <Button onClick={() => withdraw(c.id)} loading={busy} size="lg" block className="mt-4">{busy ? STEP_LABEL[step!] : `Withdraw ${fmtGD(c.mine!.payout)} G$`}</Button>
                   </div>
                 )}
-                {staked && !c.settled && !c.voided && ended && <Notice tone="info" className="mt-6">The challenge has ended. We are confirming who finished.</Notice>}
+                {staked && !c.settled && !c.voided && ended && (c.resultsFinal ? (
+                  <Notice tone="info" className="mt-6">The results are confirmed. Payouts open shortly.</Notice>
+                ) : overdue ? (
+                  <div className="mt-6 rounded-card bg-sunken p-5 ring-1 ring-inset ring-line">
+                    <p className="font-semibold text-ink">The results were not confirmed in time</p>
+                    <p className="mt-1 text-sm text-ink-2">You can cancel this challenge now. Nobody loses anything: everyone who joined gets their full stake back. Your wallet asks twice, once to cancel and once to withdraw.</p>
+                    <Button onClick={() => refund(c.id)} loading={busy} size="lg" block className="mt-4">{busy ? STEP_LABEL[step!] : `Cancel and withdraw ${fmtGD(c.mine!.stake)} G$`}</Button>
+                  </div>
+                ) : (
+                  <Notice tone="info" className="mt-6">
+                    The challenge has ended. We are confirming who finished.
+                    {c.voidableAt !== null && ` If that is not done by ${new Date(c.voidableAt * 1000).toLocaleDateString(undefined, { month: "short", day: "numeric" })}, the challenge is cancelled and everyone gets their full stake back.`}
+                  </Notice>
+                ))}
               </div>
               {staked && stats("border-t border-line")}
             </Card>

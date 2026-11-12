@@ -1,14 +1,14 @@
 "use client";
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { fmtGD } from "@learnit/backend/format";
 import { Badge, Button } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { DAY, cohortStatus, type Cohort, type CohortStatus } from "./data";
+import { DAY, RESULTS_DEADLINE, cohortStatus, type Cohort, type CohortStatus } from "./data";
 import { CopyCommand, when } from "./bits";
 
 const STATUS: Record<CohortStatus, { label: string; tone: "sage" | "coral" | "neutral" | "navy" }> = {
   upcoming: { label: "Upcoming", tone: "navy" }, open: { label: "Open to join", tone: "sage" }, running: { label: "Running", tone: "sage" },
-  finalize: { label: "Needs finalizing", tone: "coral" }, settled: { label: "Settled", tone: "neutral" }, voided: { label: "Cancelled, stakes refundable", tone: "neutral" },
+  finalize: { label: "Needs finalizing", tone: "coral" }, settle: { label: "Results confirmed, needs settling", tone: "coral" }, settled: { label: "Settled", tone: "neutral" }, voided: { label: "Cancelled, stakes refundable", tone: "neutral" },
 };
 const SHOWN = 6;
 const axisDate = (s: number) => new Date(s * 1000).toLocaleDateString("en", { month: "short", day: "numeric" });
@@ -17,7 +17,7 @@ const axisDate = (s: number) => new Date(s * 1000).toLocaleDateString("en", { mo
  * One bar per challenge on a shared calendar, so overlaps, gaps and the length of each run are visible at a glance.
  * Light sage is the join window (first day), solid sage the rest of the run. Coral marks a challenge waiting to be finalized.
  */
-export function CohortTimeline({ cohorts, now }: { cohorts: Cohort[]; now: number }) {
+export function CohortTimeline({ cohorts, now, action }: { cohorts: Cohort[]; now: number; /** Buttons for a challenge that is waiting on someone, shown under its row. */ action?: (c: Cohort, status: CohortStatus) => ReactNode }) {
   const [all, setAll] = useState(false);
   const rows = all ? cohorts : cohorts.slice(0, SHOWN);
 
@@ -54,7 +54,7 @@ export function CohortTimeline({ cohorts, now }: { cohorts: Cohort[]; now: numbe
                   ) : (
                     <>
                       <div className={cn("absolute inset-y-0 rounded-l-full", status === "settled" ? "bg-line-strong" : "bg-sage-300")} style={{ left: x(c.start), width: w(c.start, joinEnd) }} />
-                      <div className={cn("absolute inset-y-0 rounded-r-full", status === "settled" || status === "voided" ? "bg-muted" : status === "finalize" ? "bg-coral-500" : "bg-sage-600")} style={{ left: x(joinEnd), width: w(joinEnd, c.end) }} />
+                      <div className={cn("absolute inset-y-0 rounded-r-full", status === "settled" || status === "voided" ? "bg-muted" : status === "finalize" || status === "settle" ? "bg-coral-500" : "bg-sage-600")} style={{ left: x(joinEnd), width: w(joinEnd, c.end) }} />
                     </>
                   )}
                   <div className="pointer-events-none absolute -inset-y-1 w-0.5 rounded-full bg-ink" style={{ left: x(now) }} aria-hidden />
@@ -62,7 +62,18 @@ export function CohortTimeline({ cohorts, now }: { cohorts: Cohort[]; now: numbe
                 <p className="tabular text-xs text-muted">
                   {when(c.start)} to {when(c.end)} ({length} days). Stake {fmtGD(c.min)} to {fmtGD(c.max)} G$.
                 </p>
-                {status === "finalize" && <CopyCommand command={`npx tsx --env-file=.env scripts/finalize-cohort.mts ${c.id} --send`} />}
+                {status === "finalize" && (
+                  <>
+                    <p className="text-xs text-ink-2">
+                      {now < c.end + RESULTS_DEADLINE
+                        ? `Confirm the results before ${when(c.end + RESULTS_DEADLINE)}. After that anyone can cancel the challenge, and every stake is refunded.`
+                        : "The results were not confirmed in time. Anyone can now cancel this challenge, and every stake is refunded."}
+                    </p>
+                    <CopyCommand command={`npx tsx --env-file=.env scripts/finalize-cohort.mts ${c.id} --send`} />
+                  </>
+                )}
+                {status === "settle" && <p className="text-xs text-ink-2">The results are confirmed. Settle it so the people who finished can withdraw. Anyone can do this.</p>}
+                {action?.(c, status)}
               </li>
             );
           })}
